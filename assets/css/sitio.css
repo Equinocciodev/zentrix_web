@@ -118,6 +118,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 @media (min-width: 768px) { .heroe { padding: 112px 0 120px; } }
 .heroe__z { position: absolute; right: -80px; bottom: -60px; width: min(520px, 60vw); opacity: .9; pointer-events: none; }
 @media (max-width: 767px) { .heroe__z { display: none; } }
+.heroe > .envoltura { position: relative; z-index: 1; }
 .heroe__texto { position: relative; max-width: 760px; }
 .heroe h1 { margin-bottom: 0; }
 .heroe .entradilla { margin-top: 0; }
