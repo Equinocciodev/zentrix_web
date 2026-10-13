@@ -16,9 +16,14 @@ Es un sitio estático: HTML, una hoja CSS y ninguna línea de JavaScript. No hay
 | `/sales/docs/` + 12 páginas `.html` | Manual del vendedor, migrado de vendooapp.com/docs. |
 | `/sales/privacidad/` · `/sales/soporte/` · `/sales/terminos/` · `/sales/contacto/` | Política, soporte, términos y contacto con el formulario de demostración (`assets/js/contacto.js` arma el correo). |
 | `/sales/en/` + `privacy.html`, `terms.html`, `support.html`, `contact.html` | Versión en inglés, migrada de vendooapp.com/en. |
+| `/ai/` · `/traza/` · `/logistica/` · `/cloud/` · `/labs/` · `/software/` | Los otros productos de la Presentación Corporativa: problema, para quién, beneficios, cómo funciona y contacto. Usan solo lo que dice la presentación. Ninguno tiene app publicada, así que no enlazan a tiendas: «Solicita una demostración», o «Próximamente» en logística, cuyo nombre comercial está por definir. |
 | `/404.html` | Página de error. |
 
 Las páginas de los manuales llevan, además de `sitio.css`, `manual-sales.css` o `manual-work.css`: son las hojas del manual de cada sitio anterior con los tokens de zentrix. Las capturas de los manuales están en `assets/img/sales/` y `assets/img/work/`, y algunas todavía muestran el diseño anterior de las apps.
+
+## Isotipos de los productos (pendiente)
+
+Mientras no estén los isotipos, cada producto se muestra con el wordmark provisional «zentrix <producto>»: el logotipo de zentrix más el nombre en Inter. Todas las instancias llevan `class="wordmark"` y `data-producto="<slug>"`. Cuando lleguen, se cambia `wordmark()` en las páginas, o se reemplaza ese `<span>` por `<img src="/assets/img/logos/zentrix-<slug>-positivo.svg">` o `-negativo.svg`.
 
 ## Correos de contacto
 

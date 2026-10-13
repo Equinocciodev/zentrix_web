@@ -297,3 +297,39 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .pasos-visita--cinco { counter-reset: paso; }
 @media (min-width: 900px) { .pasos-visita--cinco { grid-template-columns: repeat(5, 1fr); } .pasos-visita--cinco li { padding: 52px 16px 16px; } .pasos-visita--cinco li::before { top: 16px; left: 16px; } }
 .seccion--gris .pasos-visita li { background: var(--blanco); }
+
+/* Menú «Productos» (sin JavaScript: <details>) */
+.menu-productos { position: static; }
+.cabecera__fila { position: relative; }
+.menu-productos summary { list-style: none; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 12px; border-radius: var(--r-boton); font-weight: 500; font-size: .9375rem; cursor: pointer; }
+.menu-productos summary::-webkit-details-marker { display: none; }
+.menu-productos summary::after { content: ""; width: 8px; height: 8px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .15s; }
+.menu-productos[open] summary::after { transform: translateY(2px) rotate(-135deg); }
+.menu-productos summary:hover { background: var(--fondo); }
+.menu-productos summary.activo { color: var(--azul); font-weight: 600; }
+.menu-productos__lista { list-style: none; margin: 0; padding: 8px; position: absolute; right: var(--margen); top: calc(100% - 4px); width: min(360px, calc(100% - 2 * var(--margen))); background: var(--blanco); border: 1px solid var(--borde); border-radius: var(--r-tarjeta); box-shadow: 0 24px 48px -16px rgba(9, 13, 18, .25); display: grid !important; gap: 2px; z-index: 20; }
+.menu-productos__lista a { display: grid !important; gap: 0; padding: 10px 12px !important; min-height: 0 !important; border-radius: 10px; }
+.menu-productos__lista a b { font-weight: 600; }
+.menu-productos__lista a span { font-size: .8125rem; color: var(--texto-2); font-weight: 400; }
+.menu-productos__lista a[aria-current="page"] b { color: var(--azul); }
+
+/* Wordmark provisional «zentrix <producto>» (se cambia por el isotipo cuando exista) */
+.wordmark { display: inline-flex; align-items: flex-end; gap: 8px; line-height: 1; color: var(--negro); }
+.wordmark img { height: 24px; width: auto; }
+.wordmark__producto { font-weight: 700; font-size: 1.25rem; letter-spacing: -0.01em; color: var(--azul); transform: translateY(-1px); }
+.wordmark--negativo { color: var(--blanco); }
+.wordmark--negativo .wordmark__producto { color: var(--azul-claro); }
+.wordmark--traza { font-weight: 700; font-size: 2rem; letter-spacing: -0.03em; }
+.wordmark--traza sup { font-size: .4em; font-weight: 500; }
+.heroe-producto__marca { margin-bottom: 32px; }
+.heroe-producto__marca .wordmark img { height: 32px; }
+.heroe-producto__marca .wordmark__producto { font-size: 1.625rem; }
+.producto--oscuro { background: var(--negro-2); border-color: var(--borde-osc); color: var(--blanco); }
+.producto--oscuro p { color: var(--texto-osc-2); }
+.producto--oscuro:hover { border-color: var(--azul-claro); box-shadow: 0 0 0 1px var(--azul-claro); }
+.producto--oscuro .producto__ir { color: var(--azul-claro); }
+.producto--oscuro .etiqueta { background: rgba(255, 255, 255, .08); color: var(--texto-osc-2); }
+.etiqueta--pronto { background: var(--lima); color: var(--negro); font-weight: 700; }
+.oscuro .producto--oscuro { color: var(--blanco); text-decoration: none; }
+.menu-productos__lista { justify-content: stretch !important; grid-template-columns: 1fr; text-align: left; }
+.wordmark--traza { align-items: flex-start; gap: 2px; } .wordmark--traza sup { margin-top: .2em; }
