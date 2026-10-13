@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reparto a domicilio — Manual de Zentrix Work</title>
+  <meta name="description" content="Cómo se carga el viaje en la tienda, cómo se ordenan las paradas, cómo se navega, se cobra en la puerta y qué hacer si no se puede entregar.">
+  <link rel="canonical" href="https://zentrix.company/work/docs/reparto.html">
+  <meta name="theme-color" content="#090D12">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/sitio.css?v=5">
+  <link rel="stylesheet" href="/assets/css/manual-work.css?v=1">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="zentrix">
+  <meta property="og:locale" content="es_VE">
+  <meta property="og:title" content="Reparto a domicilio — Manual de Zentrix Work">
+  <meta property="og:description" content="Cómo se carga el viaje en la tienda, cómo se ordenan las paradas, cómo se navega, se cobra en la puerta y qué hacer si no se puede entregar.">
+  <meta property="og:url" content="https://zentrix.company/work/docs/reparto.html">
+  <meta property="og:image" content="https://zentrix.company/assets/img/og-work.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Reparto a domicilio — Manual de Zentrix Work">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="manual-zx">
+<a class="saltar" href="#principal">Saltar al contenido</a>
+<header class="cabecera">
+  <div class="envoltura cabecera__fila">
+    <a class="logo" href="/" aria-label="zentrix, inicio"><img src="/assets/img/logos/zentrix-negro.svg" alt="zentrix" width="110" height="22"></a>
+    <nav class="nav" aria-label="Principal">
+      <ul>
+        <li><a href="/work/" aria-current="page">Work</a></li>
+        <li><a href="/sales/">Sales</a></li>
+        <li><a href="/#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<nav class="producto-barra" aria-label="Zentrix Work">
+  <div class="envoltura">
+    <a class="producto-barra__logo" href="/work/"><img src="/assets/img/logos/zentrix_work_horizontal_positivo.svg" alt="zentrix work" width="117" height="18"></a>
+    <ul>
+      <li><a href="/work/">Producto</a></li>
+      <li><a href="/work/docs/" aria-current="page">Manual</a></li>
+      <li><a href="/work/privacidad/">Privacidad</a></li>
+      <li><a href="/work/soporte/">Soporte</a></li>
+    </ul>
+  </div>
+</nav>
+<main id="principal">
+<section class="seccion seccion--manual">
+  <div class="envoltura envoltura--manual">
+    <div class="manual">
+
+      <div class="manual__cabeza">
+        <nav class="miga" aria-label="Dónde estás">
+          <ol>
+          <li><a href="/work/">Zentrix Work</a></li>
+          <li><a href="/work/docs/">Manual del operador</a></li>
+          <li aria-current="page">Reparto a domicilio</li>
+          </ol>
+        </nav>
+        <h1>Reparto a domicilio</h1>
+        <p class="manual__entrada">Las paradas se cargan en la tienda, con el motor apagado. En la calle solo se reparte. Si te aprendes esa regla, no pierdes un viaje.</p>
+      </div>
+
+      <nav class="manual__aqui" aria-labelledby="rot-aqui">
+        <span class="carril__rotulo" id="rot-aqui">En esta página</span>
+        <ul class="aqui">
+          <li><a href="#dos-puertas">Tus dos puertas</a></li>
+          <li><a href="#cargar">Cargar el viaje</a></li>
+          <li><a href="#ordenar">Ponerlas en tu orden</a></li>
+          <li><a href="#sacar">Sacar una parada del viaje</a></li>
+          <li><a href="#parada-nueva">Una parada nueva mientras manejas</a></li>
+          <li><a href="#navegar">Navegar hasta el cliente</a></li>
+          <li><a href="#en-la-puerta">En la puerta del cliente</a></li>
+          <li><a href="#cobro">Cobrar contra entrega</a></li>
+          <li><a href="#no-pude">Si no puedes entregar</a></li>
+        </ul>
+      </nav>
+
+      <article class="manual__cuerpo">
+<h2 id="dos-puertas">Tus dos puertas</h2>
+<p>Si atiendes <strong>Reparto</strong>, con el turno encendido ves dos puertas en la pantalla principal:</p>
+<ul>
+  <li><span class="boton-app">Paradas</span> — <em>«Los pedidos que llevas a la calle»</em>. Es la tienda: lo que hay para cargar.</li>
+  <li><span class="boton-app">Mi viaje</span> — <em>«Lo que llevas, en tu orden»</em>. Es tu carro: solo lo tuyo.</li>
+</ul>
+<p>Una parada nueva también puede llegarte como <a href="/work/docs/llamada.html">llamada</a>. Ahí el control dice <span class="boton-app">Yo la llevo</span>.</p>
+
+<figure class="esquema">
+  <svg viewBox="0 0 520 170" role="img" aria-labelledby="esq-viaje-t">
+    <title id="esq-viaje-t">Esquema: las paradas de la tienda pasan a tu viaje con un toque, y tu viaje sale a la calle.</title>
+    <rect class="e-caja" x="10" y="20" width="150" height="130" rx="14"/>
+    <text class="e-texto" x="85" y="48" text-anchor="middle">Paradas</text>
+    <text class="e-suave" x="85" y="68" text-anchor="middle">en la tienda</text>
+    <rect class="e-caja" x="30" y="84" width="110" height="24" rx="8"/><text class="e-suave" x="85" y="100" text-anchor="middle">Pedido  +</text>
+    <rect class="e-caja" x="30" y="114" width="110" height="24" rx="8"/><text class="e-suave" x="85" y="130" text-anchor="middle">Pedido  +</text>
+    <path class="e-linea" d="M166 85 H200"/><path class="e-flecha" d="M200 79 L210 85 L200 91 Z"/>
+    <text class="e-suave" x="188" y="72" text-anchor="middle">un toque</text>
+    <rect class="e-cromo" x="215" y="20" width="150" height="130" rx="14"/>
+    <text class="e-texto" x="290" y="48" text-anchor="middle">Mi viaje</text>
+    <text class="e-suave" x="290" y="68" text-anchor="middle">Llevas 2 de 4</text>
+    <rect class="e-caja" x="235" y="84" width="110" height="24" rx="8"/><text class="e-suave" x="290" y="100" text-anchor="middle">1 · Parada  ≡</text>
+    <rect class="e-caja" x="235" y="114" width="110" height="24" rx="8"/><text class="e-suave" x="290" y="130" text-anchor="middle">2 · Parada  ≡</text>
+    <path class="e-linea" d="M371 85 H405"/><path class="e-flecha" d="M405 79 L415 85 L405 91 Z"/>
+    <rect class="e-caja" x="420" y="50" width="90" height="70" rx="14"/>
+    <text class="e-texto" x="465" y="82" text-anchor="middle">La calle</text>
+    <text class="e-suave" x="465" y="100" text-anchor="middle">solo repartir</text>
+  </svg>
+  <figcaption>Esquema, no captura: cargas en la tienda, repartes en la calle.</figcaption>
+</figure>
+
+<h2 id="cargar">Cargar el viaje</h2>
+<ol class="manual-pasos">
+  <li><b>Abre «Mi viaje».</b><p>Con el viaje vacío dice: <em>«Todavía no llevas nada. Carga las paradas aquí, en la tienda: en la calle no se hace.»</em></p></li>
+  <li><b>En «Para cargar», toca la parada que llevas.</b><p>Un toque y sube a tu viaje, al final de la lista.</p></li>
+  <li><b>Mira la barra de arriba.</b><p><em>«Llevas 2 de 4»</em> y <em>«caben 2 más»</em>. El tope lo pone la tienda, no tú.</p></li>
+</ol>
+<p>Cuando te llenas: <em>«Tu viaje está lleno. Sal a repartir: cuando cierres una parada, te cabe otra.»</em> El cupo se libera cerrando paradas.</p>
+<div class="nota nota--aviso">
+  <span class="nota__rotulo">Si no te deja cargarla</span>
+  <p>Puede decirte <em>«Esa parada ya tiene dueño»</em>. <em>«Desde aquí no se la puedes quitar: el relevo lo hace el encargado. Carga otra parada y sigue.»</em> Toca <span class="boton-app">Elegir otra parada</span>.</p>
+</div>
+
+<h2 id="ordenar">Ponerlas en tu orden</h2>
+<p>El orden lo pones tú. Se cambia <strong>arrastrando por las tres rayas (≡)</strong> de la derecha de cada parada.</p>
+<div class="nota nota--clave">
+  <span class="nota__rotulo">No te equivoques en esto</span>
+  <p>Mantener pulsada la tarjeta <strong>no la mueve</strong>. Y un toque en la tarjeta la abre. El asa son las tres rayas y nada más.</p>
+</div>
+<p>La parada número 1 es la activa. No hay que guardar: el orden queda al soltar.</p>
+
+<h2 id="sacar">Sacar una parada del viaje</h2>
+<p>Toca el botón <span class="boton-app">Sacarla del viaje</span> de la parada. La app pregunta <em>«¿Por qué la sacas?»</em> y te muestra los motivos que manda la tienda, o <span class="boton-app">Otro motivo</span> para escribirlo. La parada vuelve a la cola de la tienda. Si te arrepientes, <span class="boton-app">Sigo con ella</span>.</p>
+
+<h2 id="parada-nueva">Una parada nueva mientras manejas</h2>
+<p>Si te ofrecen una parada con el vehículo en marcha, <strong>la app no te tapa la pantalla</strong>. El teléfono vibra y te dice en voz alta <em>«Tienes una parada nueva. Se abre al detenerte.»</em></p>
+<p>Cuando te detienes, se abre sola. También puedes tocar el aviso <em>«Hay una parada nueva para ti»</em> en Mi viaje o en el mapa.</p>
+
+<h2 id="navegar">Navegar hasta el cliente</h2>
+<ol class="manual-pasos">
+  <li><b>En la parada, toca «Cómo llegar».</b><p>Está en la tarjeta de la dirección, <em>«A dónde va»</em>, con su referencia.</p></li>
+  <li><b>Toca «Navegar».</b><p>La guía corre dentro de la app. La primera vez te pide ubicación precisa y aceptar los términos de Google.</p></li>
+  <li><b>Sigue la guía.</b><p>Si sales de ella, vuelves con <span class="boton-app">Seguir navegando</span>.</p></li>
+</ol>
+<p>Siempre tienes también <span class="boton-app">Abrir en Google Maps</span>.</p>
+<ul>
+  <li><strong>La ruta es de carro, no de moto:</strong> Google todavía no da rutas de dos ruedas en Venezuela.</li>
+  <li><strong>Sin datos,</strong> el mapa guarda solo unos 15 o 20 minutos por delante. Después, la guía se calla.</li>
+  <li><strong>Dirección sin punto en el mapa:</strong> guíate por la calle y la referencia. Es lo normal, no es un error.</li>
+</ul>
+<h3 id="voz">Cuánto te habla</h3>
+<p>En el mapa eliges <strong>«Mudo»</strong>, <strong>«Solo avisos»</strong> o <strong>«Guía completa»</strong>. Con <strong>«Avisos de GUUAO»</strong> encendido te dice a qué pedido llegaste, cuánto cobrar y si pide cédula. La guía habla en español siempre.</p>
+<div class="nota">
+  <span class="nota__rotulo">Tu ubicación en el reparto</span>
+  <p>Viaja solo mientras tengas una parada abierta, con el aviso <strong>«Ruta en curso»</strong> encendido. Al cerrar la última se apaga. Lo guardado se borra a los 30 días.</p>
+</div>
+
+<h2 id="en-la-puerta">En la puerta del cliente</h2>
+<p>La pantalla de la parada es la misma de <a href="/work/docs/entregar.html">entregar en la tienda</a>: código de retiro, bultos, edad si hay licor, cobro y prueba. El botón de abajo siempre dice el paso que falta:</p>
+<p><span class="boton-app">Leer los bultos</span> → <span class="boton-app">Verificar mayoría de edad</span> → <span class="boton-app">Declarar el cobro</span> → <span class="boton-app">Tomar la foto de la prueba</span> → <span class="boton-app">Entregar</span></p>
+<p>Solo aparecen los pasos que ese pedido pide. Pídele siempre al cliente su <strong>código de retiro</strong> antes de soltar nada.</p>
+
+<h2 id="cobro">Cobrar contra entrega</h2>
+<p>Si el pedido se cobra en la puerta, ves <em>«Cobra … en la puerta»</em> con el monto y la forma de pago: <strong>Efectivo</strong> o <strong>Datáfono</strong>. El monto y la forma los pone el sistema; tú no calculas nada.</p>
+<ol class="manual-pasos">
+  <li><b>Cobra el monto exacto.</b><p>Si hay equivalente en bolívares, la app te lo muestra.</p></li>
+  <li><b>Toca «Declarar el cobro».</b><p>Con datáfono te puede pedir la <strong>Foto del voucher</strong> y la <strong>Referencia de la operación</strong> (el número que da el datáfono).</p></li>
+  <li><b>Toca «Ya cobré».</b><p>Se enciende cuando está lo que pide. Queda <em>«Cobro declarado. Queda a tu nombre hasta que lo entregues.»</em></p></li>
+</ol>
+<div class="nota nota--clave">
+  <span class="nota__rotulo">No te equivoques en esto</span>
+  <ul>
+    <li><strong>Nunca escribas el número de la tarjeta.</strong> Solo la referencia.</li>
+    <li><em>«Si el cliente no tiene el monto exacto, no cobres de menos: usa «No pude entregar».»</em></li>
+    <li>El dinero cobrado es tuyo hasta que lo entregas en la tienda. La app te recuerda cuánto llevas.</li>
+  </ul>
+</div>
+
+<h2 id="no-pude">Si no puedes entregar</h2>
+<p>Nadie abre, la dirección no existe, el cliente no lo quiere, no se pudo cobrar. No es tu culpa y no se resuelve esperando en la acera: <strong>se reporta</strong>.</p>
+<ol class="manual-pasos">
+  <li><b>Toca «No pude entregar».</b><p>Está en la misma pantalla de la parada.</p></li>
+  <li><b>Elige el motivo en «¿Qué pasó?».</b><p>Salen los tres más comunes. Los demás, en <span class="boton-app">Otro motivo</span>. La lista la manda la tienda.</p></li>
+  <li><b>Llena lo que te pida.</b><p>Según el motivo: una foto, o <em>«Qué pasó»</em> en pocas palabras. Si pide ubicación, préndela.</p></li>
+  <li><b>Toca «Reportarlo».</b><p>Se enciende cuando está todo. Si sí puedes entregar, <span class="boton-app">Sí puedo entregar</span>.</p></li>
+</ol>
+<div class="nota nota--aviso">
+  <span class="nota__rotulo">Zona insegura</span>
+  <p><em>«Para esto no hace falta foto. No te expongas sacando el teléfono: repórtalo y sigue.»</em> Tu seguridad va primero.</p>
+</div>
+<p>Después de reportar, la pantalla te dice qué hacer, con palabras de la tienda. <strong>Reportar no cancela el pedido ni toca el dinero</strong>: decide una persona. Mientras tanto, no entregues ni devuelvas nada por tu cuenta. Toca <span class="boton-app">Listo</span> y sigue con tu próxima parada.</p>
+
+<div class="nota nota--listo">
+  <span class="nota__rotulo">Quedó bien si…</span>
+  <p>Después de <span class="boton-app">Sí, entregar</span> ves <em>«Entregado.»</em> y la parada sale de tu viaje. Te cabe otra la próxima vez que pases por la tienda.</p>
+</div>
+<nav class="saltos" aria-label="Secciones vecinas">
+  <a class="salto salto--ant" href="/work/docs/entregar.html"><span>Anterior</span><b>Entregar en la tienda</b></a>
+  <a class="salto salto--sig" href="/work/docs/devoluciones.html"><span>Siguiente</span><b>Recibir una devolución</b></a>
+</nav>
+      </article>
+
+      <nav class="manual__arbol" aria-labelledby="rot-arbol">
+        <span class="carril__rotulo" id="rot-arbol">Todo el manual</span>
+        <ul class="arbol">
+          <li class="arbol__grupo">Empezar aquí</li>
+          <li><a href="/work/docs/"><span>Qué es Zentrix Work</span></a></li>
+          <li><a href="/work/docs/entrar.html"><span>Entrar: la primera vez y cada día</span></a></li>
+          <li><a href="/work/docs/permisos.html"><span>Permisos y sonido</span></a></li>
+          <li class="arbol__grupo">Tu turno</li>
+          <li><a href="/work/docs/turno.html"><span>El turno</span></a></li>
+          <li><a href="/work/docs/llamada.html"><span>La llamada</span></a></li>
+          <li class="arbol__grupo">El trabajo</li>
+          <li><a href="/work/docs/preparar.html"><span>Preparar un pedido</span></a></li>
+          <li><a href="/work/docs/entregar.html"><span>Entregar en la tienda</span></a></li>
+          <li><a href="/work/docs/reparto.html" aria-current="page"><span>Reparto a domicilio</span></a></li>
+          <li><a href="/work/docs/devoluciones.html"><span>Recibir una devolución</span></a></li>
+          <li class="arbol__grupo">Consultar</li>
+          <li><a href="/work/docs/tu-dia.html"><span>Tu día y tu desempeño</span></a></li>
+          <li><a href="/work/docs/ajustes.html"><span>Ajustes</span></a></li>
+          <li><a href="/work/docs/dudas.html"><span>Dudas rápidas</span></a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+</section>
+</main>
+<footer class="pie">
+  <div class="envoltura">
+    <div class="pie__reja">
+      <div>
+        <img class="pie__logo" src="/assets/img/logos/zentrix-blanco.svg" alt="zentrix" width="110" height="22" loading="lazy">
+        <p>La inteligencia se convierte en operación.</p>
+      </div>
+      <div>
+        <h2>Productos</h2>
+        <ul>
+          <li><a href="/work/">Zentrix Work</a></li>
+          <li><a href="/work/docs/">Manual de Zentrix Work</a></li>
+          <li><a href="/sales/">Zentrix Sales</a></li>
+          <li><a href="/sales/docs/">Manual de Zentrix Sales</a></li>
+          <li><a href="/sales/en/" lang="en">Zentrix Sales in English</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Legal y soporte</h2>
+        <ul>
+          <li><a href="/work/privacidad/">Privacidad de Zentrix Work</a></li>
+          <li><a href="/work/soporte/">Soporte de Zentrix Work</a></li>
+          <li><a href="/work/terminos/">Términos de Zentrix Work</a></li>
+          <li><a href="/sales/privacidad/">Privacidad de Zentrix Sales</a></li>
+          <li><a href="/sales/soporte/">Soporte de Zentrix Sales</a></li>
+          <li><a href="/sales/terminos/">Términos de Zentrix Sales</a></li>
+          <li><a href="/sales/contacto/">Contacto de Zentrix Sales</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contacto</h2>
+        <ul>
+          <li><a href="mailto:hola@zentrix.company">hola@zentrix.company</a></li>
+          <li><a href="mailto:soporte@zentrix.company">soporte@zentrix.company</a></li>
+          <li><a href="https://wa.me/584123469712">WhatsApp +58 412-346 9712</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pie__base">
+      <p>© 2026 zentrix®. Todos los derechos reservados.</p>
+      <p>Odoo® conserva su marca y propiedad.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

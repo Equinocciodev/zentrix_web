@@ -264,3 +264,36 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 /* 404 */
 .error { text-align: left; }
 .error__codigo { font-size: clamp(4rem, 3rem + 6vw, 8rem); font-weight: 700; letter-spacing: -0.04em; line-height: 1; color: var(--azul-claro); margin: 0 0 16px; }
+
+/* Los ocho pasos de la visita (Zentrix Sales) */
+.pasos-visita { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; counter-reset: paso; }
+@media (min-width: 560px) { .pasos-visita { grid-template-columns: repeat(2, 1fr); } }
+.pasos-visita li { counter-increment: paso; background: var(--fondo); border-radius: var(--r-boton); padding: 12px 16px 12px 52px; position: relative; color: var(--texto-2); }
+.pasos-visita li::before { content: counter(paso); position: absolute; left: 14px; top: 12px; width: 26px; height: 26px; border-radius: 8px; background: var(--azul); color: var(--blanco); font-weight: 700; font-size: .875rem; display: grid; place-items: center; }
+.pasos-visita b { display: block; color: var(--texto); }
+.lista-divisiones b span { color: var(--azul-claro); }
+
+/* Formulario de contacto (Zentrix Sales) */
+.formulario { display: grid; gap: 16px; }
+.formulario__fila { display: grid; gap: 16px; }
+@media (min-width: 640px) { .formulario__fila { grid-template-columns: 1fr 1fr; } }
+.campo { display: grid; gap: 6px; font-weight: 600; font-size: .9375rem; }
+.campo input, .campo select, .campo textarea { font: inherit; font-weight: 400; min-height: 48px; padding: 10px 14px; border: 1px solid #8E95A3; border-radius: var(--r-boton); background: var(--blanco); color: var(--texto); }
+.campo textarea { min-height: 120px; resize: vertical; }
+.campo input:focus-visible, .campo select:focus-visible, .campo textarea:focus-visible { outline: 2px solid var(--azul); outline-offset: 1px; }
+.formulario button { justify-self: start; cursor: pointer; }
+.formulario__nota { font-size: .875rem; color: var(--texto-2); margin: 0; }
+
+/* Portada: los dos productos destacados */
+.destacado { display: grid; gap: 32px; align-items: center; padding: 32px 0; border-top: 1px solid var(--borde); }
+.destacado:first-of-type { border-top: 0; padding-top: 0; }
+@media (min-width: 900px) { .destacado { grid-template-columns: 1.3fr .7fr; gap: 64px; padding: 48px 0; } .destacado--invertido .destacado__texto { order: 2; } }
+.destacado__logo { height: 28px; width: auto; margin-bottom: 24px; }
+.destacado h3 { font-size: .8125rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--azul); margin: 24px 0 8px; }
+.destacado__logo + h3 { margin-top: 0; }
+.destacado p { color: var(--texto-2); margin: 0; }
+.destacado .lista-check { margin-top: 8px; }
+.destacado__captura { justify-self: center; width: min(260px, 70vw); }
+.pasos-visita--cinco { counter-reset: paso; }
+@media (min-width: 900px) { .pasos-visita--cinco { grid-template-columns: repeat(5, 1fr); } .pasos-visita--cinco li { padding: 52px 16px 16px; } .pasos-visita--cinco li::before { top: 16px; left: 16px; } }
+.seccion--gris .pasos-visita li { background: var(--blanco); }

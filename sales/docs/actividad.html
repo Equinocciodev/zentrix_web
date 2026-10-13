@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tus pedidos y tu actividad — Manual de Zentrix Sales</title>
+  <meta name="description" content="La pestaña Actividad de Zentrix Sales: los borradores en «Abiertos», qué significa cada estado de un pedido, tus visitas y tus devoluciones.">
+  <link rel="canonical" href="https://zentrix.company/sales/docs/actividad.html">
+  <meta name="theme-color" content="#090D12">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/sitio.css?v=5">
+  <link rel="stylesheet" href="/assets/css/manual-sales.css?v=1">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="zentrix">
+  <meta property="og:locale" content="es_VE">
+  <meta property="og:title" content="Tus pedidos y tu actividad — Manual de Zentrix Sales">
+  <meta property="og:description" content="La pestaña Actividad de Zentrix Sales: los borradores en «Abiertos», qué significa cada estado de un pedido, tus visitas y tus devoluciones.">
+  <meta property="og:url" content="https://zentrix.company/sales/docs/actividad.html">
+  <meta property="og:image" content="https://zentrix.company/assets/img/og-sales.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tus pedidos y tu actividad — Manual de Zentrix Sales">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="manual-zx">
+<a class="saltar" href="#principal">Saltar al contenido</a>
+<header class="cabecera">
+  <div class="envoltura cabecera__fila">
+    <a class="logo" href="/" aria-label="zentrix, inicio"><img src="/assets/img/logos/zentrix-negro.svg" alt="zentrix" width="110" height="22"></a>
+    <nav class="nav" aria-label="Principal">
+      <ul>
+        <li><a href="/work/">Work</a></li>
+        <li><a href="/sales/" aria-current="page">Sales</a></li>
+        <li><a href="/#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<nav class="producto-barra" aria-label="Zentrix Sales">
+  <div class="envoltura">
+    <a class="producto-barra__logo" href="/sales/"><img src="/assets/img/logos/zentrix-sales-logotipo-positivo.svg" alt="zentrix sales" width="117" height="18"></a>
+    <ul>
+      <li><a href="/sales/">Producto</a></li>
+      <li><a href="/sales/docs/" aria-current="page">Manual</a></li>
+      <li><a href="/sales/privacidad/">Privacidad</a></li>
+      <li><a href="/sales/soporte/">Soporte</a></li>
+    </ul>
+  </div>
+</nav>
+<main id="principal">
+<section class="seccion seccion--manual">
+  <div class="envoltura envoltura--manual">
+    <div class="manual">
+
+      <div class="manual__cabeza">
+        <nav class="miga" aria-label="Dónde estás">
+          <ol>
+          <li><a href="/sales/">Zentrix Sales</a></li>
+          <li><a href="/sales/docs/">Manual del vendedor</a></li>
+          <li aria-current="page">Tus pedidos y tu actividad</li>
+          </ol>
+        </nav>
+        <span class="version">Manual de la versión <b>5.2.24</b></span>
+        <h1>Tus pedidos y tu actividad</h1>
+        <p class="manual__entrada">La pestaña <strong>«Actividad»</strong> de la barra de abajo guarda todo lo que hiciste: <strong>Pedidos</strong>, <strong>Visitas</strong> y <strong>Devoluciones</strong>.</p>
+      </div>
+
+      <nav class="manual__aqui" aria-labelledby="rot-aqui">
+        <span class="carril__rotulo" id="rot-aqui">En esta página</span>
+        <ul class="aqui">
+          <li><a href="#pantalla">Cómo se mueve la pantalla</a></li>
+          <li><a href="#abiertos">«Abiertos» son tus borradores</a></li>
+          <li><a href="#estados">Los estados de un pedido</a></li>
+          <li><a href="#que-puedo-hacer">Qué puedes hacerle a un pedido</a></li>
+          <li><a href="#visitas">Visitas</a></li>
+          <li><a href="#devoluciones">Devoluciones</a></li>
+        </ul>
+      </nav>
+
+      <article class="manual__cuerpo">
+<h2 id="pantalla">Cómo se mueve la pantalla</h2>
+
+<figure class="manual-fig">
+  <div class="captura__marco">
+    <picture>
+      <source type="image/webp" sizes="264px" srcset="/assets/img/sales/manual-actividad-360.webp 360w, /assets/img/sales/manual-actividad-620.webp 620w">
+      <img src="/assets/img/sales/manual-actividad.jpg" width="620" height="1295" loading="lazy" decoding="async" alt="Actividad › Pedidos en Zentrix Sales con el chip «Abiertos» tocado: un pedido a medio armar que dice «Lo empezaste hace 6 días · quedó en Pedido».">
+    </picture>
+  </div>
+  <figcaption>Actividad › Pedidos › «Abiertos». Acá están las visitas a medio armar.</figcaption>
+</figure>
+
+<p>Arriba están las tres sub-pestañas. Debajo, en las tres, tienes lo mismo:</p>
+<ul>
+  <li>Un <strong>buscador</strong>: escribe el cliente, el RIF o el número.</li>
+  <li>Los <strong>chips con conteo</strong>: cada uno dice cuántos hay y, al tocarlo, deja solo esos. El primero es «Todos» y trae todo de vuelta.</li>
+  <li>El botón <strong>«Filtros y orden»</strong>, a la derecha del buscador, para filtrar por cliente, por fecha o cambiar el orden.</li>
+</ul>
+<p>En «Pedidos», el botón de la esquina crea un pedido nuevo.</p>
+
+<h2 id="abiertos">«Abiertos» son tus borradores</h2>
+<p>El chip <strong>«Abiertos»</strong> junta los pedidos que empezaste y no terminaste. La tarjeta te dice desde cuándo y en qué paso quedaste: <em>«Lo empezaste hace 6 días · quedó en Pedido»</em>.</p>
+<p><strong>Tócala y sigues donde te quedaste</strong>, con todo lo que habías cargado. Nada se pierde. El botón del basurero lo descarta si ya no lo quieres.</p>
+
+<h2 id="estados">Los estados de un pedido</h2>
+<p>Cada pedido lleva su estado. Esto es lo que está pasando en cada uno:</p>
+
+<div class="manual-tabla">
+  <table>
+    <thead><tr><th>Dice</th><th>Qué está pasando</th><th>Qué haces tú</th></tr></thead>
+    <tbody>
+    <tr><td><strong>En tu teléfono</strong></td><td>Todavía no salió. Sale solo cuando haya señal.</td><td>Nada. Espera.</td></tr>
+    <tr><td><strong>Enviando</strong></td><td>Está viajando a la oficina en este momento.</td><td>Nada.</td></tr>
+    <tr><td><strong>Esperando analista</strong></td><td>Llegó a la oficina. Falta que lo aprueben.</td><td>Nada. Si urge, avisa.</td></tr>
+    <tr><td><strong>Retenido</strong></td><td>La oficina lo frenó por el crédito del cliente.</td><td>Cóbrale lo que debe y, si no lo hiciste en la visita, pide la autorización.</td></tr>
+    <tr><td><strong>Confirmado</strong></td><td>Aprobado. El pedido va a despacho.</td><td>Nada. Listo.</td></tr>
+    <tr><td><strong>Cancelado</strong></td><td>La oficina lo anuló.</td><td>Pregunta el motivo.</td></tr>
+    <tr><td><strong>Sin stock</strong></td><td>No hay suficiente de algún producto.</td><td>Ábrelo y decide qué hacer.</td></tr>
+    <tr><td><strong>Rechazado</strong></td><td>La oficina lo rechazó. Mandarlo otra vez da lo mismo. El pedido te muestra <strong>el motivo que dio Odoo</strong>, tal cual —por ejemplo, que esa empresa no deja mezclar licor con otros productos—, y el aviso que te llega dice lo mismo.</td><td>Lee el motivo y ármalo de nuevo como te dice.</td></tr>
+    <tr><td><strong>No se envió</strong></td><td>Se intentó muchas veces y no salió.</td><td>Toca «Reintentar» o avisa.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Los chips de arriba agrupan estos mismos estados: <strong>«Todos» · «Abiertos» · «En proceso» · «Con analista» · «Retenidos» · «Confirmados» · «Cancelados» · «No se enviaron»</strong>.</p>
+
+<div class="nota nota--aviso">
+  <span class="nota__rotulo">Ojo</span>
+  <p>Si un pedido dice <strong>«En tu teléfono»</strong> por mucho rato, <strong>no lo vuelvas a cargar</strong>. Ya existe. Conéctate un momento y sale solo.</p>
+</div>
+
+<h2 id="que-puedo-hacer">Qué puedes hacerle a un pedido</h2>
+<p>Tocas la tarjeta y se abre el detalle. Según en qué punto esté, abajo aparecen unos botones u otros.</p>
+
+<div class="manual-tabla">
+  <table>
+    <thead><tr><th>Acción</th><th>Cuándo aparece</th><th>Qué hace</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Repetir este pedido</strong></td><td>En cualquier pedido que ya esté en la oficina y tenga líneas.</td><td>Abre uno nuevo con los mismos productos y las mismas cantidades, para que lo ajustes y lo mandes. <strong>No duplica el viejo</strong>: es un pedido aparte.</td></tr>
+      <tr><td><strong>Editar pedido</strong></td><td><strong>Sólo mientras está «Con analista»</strong>.</td><td>Cambias cantidades y la nota. Una vez confirmado ya no se toca: eso lo decide la oficina.</td></tr>
+      <tr><td><strong>Cancelar pedido</strong></td><td>Mientras la oficina no lo haya confirmado.</td><td>Lo anula y libera la mercancía que tenía apartada.</td></tr>
+      <tr><td><strong>Nuevo pedido a este cliente</strong></td><td>Siempre.</td><td>Empieza uno desde cero con ese cliente, sin copiar nada.</td></tr>
+      <tr><td><strong>Conversación</strong></td><td>En todo pedido que ya llegó a la oficina.</td><td>Hablar con quien lo está revisando. Ver <a href="/sales/docs/conversacion.html">Hablar con la oficina</a>.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="nota nota--clave">
+  <span class="nota__rotulo">No te equivoques en esto</span>
+  <p>Cancelar <strong>no se deshace</strong>. Si el cliente lo quiere después, hay que montarlo de nuevo.</p>
+  <p>Y hay dos cancelaciones distintas, aunque el botón se llame igual:</p>
+  <ul>
+    <li>Si el pedido <strong>todavía está en tu teléfono</strong>, cancelarlo lo borra de ahí y la oficina nunca supo que existió.</li>
+    <li>Si <strong>ya llegó</strong>, queda anulado allá. Y si la oficina alcanzó a confirmarlo, <strong>no se va a poder</strong> — la aplicación te avisa en el momento.</li>
+  </ul>
+</div>
+
+<h3 id="rebotado-por-stock">Si rebotó por falta de mercancía</h3>
+<p>Cuando armas un pedido sin señal y al salir no hay tanto disponible como pediste, el pedido rebota. <strong>Casi nunca está perdido:</strong> la oficina te dice cuánto queda de cada producto.</p>
+<p>Desde <strong>Inicio › Ajuste de stock</strong> bajas las cantidades a lo que hay y lo reenvías. Pediste 20 y quedan 6: <strong>seis cajas vendidas son mejor que ninguna</strong>.</p>
+<ul>
+  <li><strong>Los precios no cambian.</strong> Siguen siendo los que le cantaste al cliente.</li>
+  <li><strong>Es el mismo pedido</strong>, con otras cantidades — no uno nuevo. Por eso no se duplica nada aunque se reenvíe.</li>
+</ul>
+
+<h2 id="visitas">Visitas</h2>
+<p>Acá está todo lo que visitaste. Los chips son <strong>«Todas» · «Hoy» · «Con pedido» · «Sin pedido» · «Abiertas»</strong>.</p>
+<p>Arriba de la lista van siempre las dos que dependen de ti:</p>
+<ul>
+  <li><strong>«Quedó abierta»</strong> — le hiciste llegada y no la cerraste. Tócala para terminarla.</li>
+  <li><strong>«Cerrada, por enviar»</strong> — la cerraste bien y está esperando señal para salir.</li>
+</ul>
+
+<h2 id="devoluciones">Devoluciones</h2>
+<p>La mercancía que te devolvió un cliente. Cada devolución nace en el <strong>paso 5 de una visita</strong> y aparece acá con su <strong>número de referencia</strong>, la fecha, los productos y cuántas unidades tiene.</p>
+
+<figure class="manual-fig manual-fig--ancha">
+  <div class="captura__marco">
+    <picture>
+      <source type="image/webp" sizes="(max-width: 480px) 88vw, 420px" srcset="/assets/img/sales/manual-devoluciones-360.webp 360w, /assets/img/sales/manual-devoluciones-620.webp 620w">
+      <img src="/assets/img/sales/manual-devoluciones.jpg" width="620" height="258" loading="lazy" decoding="async" alt="La cabecera de Actividad › Devoluciones en Zentrix Sales: el buscador por cliente, RIF, referencia o producto, y los contadores «Todas», «Por enviar», «En la oficina» y «Recibidas».">
+    </picture>
+  </div>
+  <figcaption>Los contadores de arriba: en qué punto está cada devolución.</figcaption>
+</figure>
+
+<p>Busca por <strong>cliente, RIF, referencia o producto</strong> — sirve para contestar «¿y aquella caja de whisky que te devolví?» sin salir de la pantalla. Los chips son <strong>«Todas» · «Por enviar» · «En la oficina» · «Recibidas» · «Canceladas»</strong>.</p>
+
+<div class="nota nota--clave">
+  <span class="nota__rotulo">No te equivoques en esto</span>
+  <p><strong>«En la oficina» no es «Recibida».</strong></p>
+<ul>
+  <li><strong>«En la oficina»</strong> quiere decir que la devolución llegó y está anotada, pero el almacén todavía no contó la mercancía.</li>
+  <li><strong>«Recibida»</strong> quiere decir que el almacén ya la revisó y la dio por buena.</li>
+</ul>
+<p>Mientras diga «En la oficina», <strong>no le prometas al cliente que ya le acreditaron nada</strong>.</p>
+</div>
+
+<h3 id="retiro">El retiro de la mercancía</h3>
+<p>Cuando la mercancía hay que ir a buscarla al cliente, la devolución lleva además <strong>el estado del retiro</strong>: una pastilla en la tarjeta y en el detalle que te dice en qué va. El recorrido es éste, y el nombre exacto de cada estado lo pone la oficina:</p>
+<div class="manual-tabla">
+  <table>
+    <thead><tr><th>Dice</th><th>Qué quiere decir</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Retiro por aprobar</strong></td><td>Lo pediste y está esperando que el Gerente de Ventas lo apruebe.</td></tr>
+      <tr><td><strong>Retiro rechazado</strong></td><td>No lo aprobaron. En el detalle, arriba y en rojo, está <strong>el motivo</strong>. Si la oficina no lo escribió, te lo dice y te manda a preguntarlo en la conversación.</td></tr>
+      <tr><td><strong>Retiro aprobado</strong></td><td>Aprobado. Falta que Logística lo programe.</td></tr>
+      <tr><td><strong>Retiro programado</strong></td><td>Ya tiene fecha para pasar por el negocio.</td></tr>
+      <tr><td><strong>Mercancía retirada</strong></td><td>Ya la recogieron del cliente.</td></tr>
+      <tr><td><strong>Recibida en almacén</strong> · <strong>Auditada</strong></td><td>Llegó al almacén y la están contando.</td></tr>
+      <tr><td><strong>Devuelta</strong></td><td>El almacén la dio por buena.</td></tr>
+      <tr><td><strong>Nota de crédito emitida</strong></td><td>Listo: al cliente ya le acreditaron. <strong>Ahora sí</strong> se lo puedes decir.</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Los colores ayudan a leerlo de un vistazo: <strong>rojo</strong> el rechazado, <strong>ámbar</strong> lo que va caminando, <strong>verde</strong> lo terminado.</p>
+<ul>
+  <li>Cuando lo aprueban o lo rechazan <strong>te llega un aviso</strong>, y al tocarlo se abre esa devolución.</li>
+  <li>En el filtro de la lista aparece la sección <strong>«Retiro»</strong>: <strong>«Por aprobar» · «Rechazado» · «En proceso» · «Devuelto o acreditado»</strong>. Sólo sale si alguna de tus devoluciones tiene retiro.</li>
+  <li>Si la oficina <strong>canceló</strong> la devolución, la tarjeta dice <strong>«Cancelada»</strong> en rojo, aunque el retiro se haya quedado en «aprobado». No esperes a ningún camión.</li>
+  <li>Las devoluciones que siguen <strong>en tu teléfono</strong> todavía no tienen retiro: eso empieza cuando llegan a la oficina.</li>
+</ul>
+
+<div class="nota ">
+  <span class="nota__rotulo">Un detalle que vale</span>
+  <p>Si algo dice <strong>«Por enviar»</strong> o <strong>«No se pudo enviar»</strong>, está todavía en tu teléfono. Lo primero se arregla solo con señal; lo segundo hay que mirarlo. Tocando la tarjeta ves el motivo.</p>
+</div>
+<nav class="saltos" aria-label="Secciones vecinas">
+  <a class="salto salto--ant" href="/sales/docs/facturas.html"><span>Anterior</span><b>Las facturas y lo que te deben</b></a>
+  <a class="salto salto--sig" href="/sales/docs/clientes.html"><span>Siguiente</span><b>Clientes nuevos y correcciones</b></a>
+</nav>
+      </article>
+
+      <nav class="manual__arbol" aria-labelledby="rot-arbol">
+        <span class="carril__rotulo" id="rot-arbol">Todo el manual</span>
+        <ul class="arbol">
+        <li class="arbol__grupo">Empezar aquí</li>
+        <li><a href="/sales/docs/"><span>Qué es Zentrix Sales</span></a></li>
+        <li><a href="/sales/docs/entrar.html"><span>Entrar y sincronizar</span></a></li>
+        <li><a href="/sales/docs/sin-internet.html"><span>Trabajar sin internet</span></a></li>
+        <li class="arbol__grupo">El día en la calle</li>
+        <li><a href="/sales/docs/inicio.html"><span>Tu Inicio</span></a></li>
+        <li><a href="/sales/docs/ruta.html"><span>La ruta del día</span></a></li>
+        <li><a href="/sales/docs/visita.html"><span>La visita, paso a paso</span></a></li>
+        <li class="arbol__grupo">Vender y cobrar</li>
+        <li><a href="/sales/docs/catalogo.html"><span>El catálogo</span></a></li>
+        <li><a href="/sales/docs/cobrar.html"><span>Cobrarle a un cliente</span></a></li>
+        <li><a href="/sales/docs/facturas.html"><span>Las facturas y lo que te deben</span></a></li>
+        <li class="arbol__grupo">Consultar</li>
+        <li><a href="/sales/docs/actividad.html" aria-current="page"><span>Tus pedidos y tu actividad</span></a></li>
+        <li><a href="/sales/docs/clientes.html"><span>Clientes nuevos y correcciones</span></a></li>
+        <li><a href="/sales/docs/conversacion.html"><span>Hablar con la oficina</span></a></li>
+        <li><a href="/sales/docs/dudas.html"><span>Dudas rápidas</span></a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+</section>
+</main>
+<footer class="pie">
+  <div class="envoltura">
+    <div class="pie__reja">
+      <div>
+        <img class="pie__logo" src="/assets/img/logos/zentrix-blanco.svg" alt="zentrix" width="110" height="22" loading="lazy">
+        <p>La inteligencia se convierte en operación.</p>
+      </div>
+      <div>
+        <h2>Productos</h2>
+        <ul>
+          <li><a href="/work/">Zentrix Work</a></li>
+          <li><a href="/work/docs/">Manual de Zentrix Work</a></li>
+          <li><a href="/sales/">Zentrix Sales</a></li>
+          <li><a href="/sales/docs/">Manual de Zentrix Sales</a></li>
+          <li><a href="/sales/en/" lang="en">Zentrix Sales in English</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Legal y soporte</h2>
+        <ul>
+          <li><a href="/work/privacidad/">Privacidad de Zentrix Work</a></li>
+          <li><a href="/work/soporte/">Soporte de Zentrix Work</a></li>
+          <li><a href="/work/terminos/">Términos de Zentrix Work</a></li>
+          <li><a href="/sales/privacidad/">Privacidad de Zentrix Sales</a></li>
+          <li><a href="/sales/soporte/">Soporte de Zentrix Sales</a></li>
+          <li><a href="/sales/terminos/">Términos de Zentrix Sales</a></li>
+          <li><a href="/sales/contacto/">Contacto de Zentrix Sales</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contacto</h2>
+        <ul>
+          <li><a href="mailto:hola@zentrix.company">hola@zentrix.company</a></li>
+          <li><a href="mailto:soporte@zentrix.company">soporte@zentrix.company</a></li>
+          <li><a href="https://wa.me/584123469712">WhatsApp +58 412-346 9712</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pie__base">
+      <p>© 2026 zentrix®. Todos los derechos reservados.</p>
+      <p>Odoo® conserva su marca y propiedad.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
