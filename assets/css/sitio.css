@@ -220,6 +220,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .aviso-marca { border-left: 4px solid var(--lima); background: var(--negro); color: var(--blanco); padding: 16px 20px; border-radius: 0 var(--r-boton) var(--r-boton) 0; margin: 24px 0; }
 .aviso-marca p { margin: 0; }
 .aviso-marca a { color: var(--azul-claro); }
+.aviso-marca code { background: rgba(255, 255, 255, .14); color: var(--blanco); }
 .ficha { background: var(--fondo); border-radius: var(--r-tarjeta); padding: 24px; margin: 24px 0; }
 .ficha dl { margin: 0; display: grid; gap: 4px 24px; }
 @media (min-width: 640px) { .ficha dl { grid-template-columns: max-content 1fr; } }
