@@ -117,7 +117,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .heroe { position: relative; overflow: hidden; padding: 64px 0 72px; }
 @media (min-width: 768px) { .heroe { padding: 112px 0 120px; } }
 .heroe__z { position: absolute; right: -80px; bottom: -60px; width: min(520px, 60vw); opacity: .9; pointer-events: none; }
-@media (max-width: 767px) { .heroe__z { width: 260px; right: -90px; bottom: -70px; opacity: .45; } }
+@media (max-width: 767px) { .heroe__z { display: none; } }
 .heroe__texto { position: relative; max-width: 760px; }
 .heroe h1 { margin-bottom: 0; }
 .heroe .entradilla { margin-top: 0; }
@@ -163,7 +163,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .franja li { font-size: .8125rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 8px 12px; border-radius: 999px; border: 1px solid var(--borde); background: var(--blanco); }
 .oscuro .franja li { border-color: var(--borde-osc); background: transparent; color: var(--blanco); }
 
-.pasos-fila { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; counter-reset: paso; }
+.pasos-fila { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; counter-reset: paso; }
 @media (min-width: 768px) { .pasos-fila { grid-template-columns: repeat(5, 1fr); } }
 .pasos-fila li { counter-increment: paso; padding: 20px; border-radius: var(--r-tarjeta); background: var(--blanco); font-weight: 700; font-size: 1.125rem; }
 .pasos-fila li::before { content: "0" counter(paso); display: block; font-size: .8125rem; font-weight: 600; color: var(--azul); letter-spacing: .08em; margin-bottom: 8px; }
