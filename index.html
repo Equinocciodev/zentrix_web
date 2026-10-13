@@ -12,7 +12,7 @@
   <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/sitio.css?v=5">
+  <link rel="stylesheet" href="/assets/css/sitio.css?v=7">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="zentrix">
   <meta property="og:locale" content="es_VE">
@@ -32,8 +32,7 @@
     <a class="logo" href="/" aria-label="zentrix, inicio"><img src="/assets/img/logos/zentrix-negro.svg" alt="zentrix" width="110" height="22"></a>
     <nav class="nav" aria-label="Principal">
       <ul>
-        <li><a href="/work/">Work</a></li>
-        <li><a href="/sales/">Sales</a></li>
+        <li><details class="menu-productos"><summary>Productos</summary><ul class="menu-productos__lista"><li><a href="/work/"><b>Zentrix Work</b><span>El equipo de tienda</span></a></li><li><a href="/sales/"><b>Zentrix Sales</b><span>La fuerza de ventas</span></a></li><li><a href="/ai/"><b>zentrix ai</b><span>Inteligencia aplicada</span></a></li><li><a href="/traza/"><b>traza</b><span>Trazabilidad</span></a></li><li><a href="/logistica/"><b>Operación logística</b><span>Próximamente</span></a></li><li><a href="/cloud/"><b>zentrix cloud</b><span>Infraestructura</span></a></li><li><a href="/labs/"><b>zentrix labs</b><span>Investigación</span></a></li><li><a href="/software/"><b>zentrix software</b><span>Implementación de Odoo®</span></a></li></ul></details></li>
         <li><a href="/#contacto">Contacto</a></li>
       </ul>
     </nav>
@@ -133,19 +132,45 @@
   </div>
 </section>
 
-<section class="seccion oscuro" aria-labelledby="divisiones-t">
+
+<section class="seccion oscuro" id="mas-productos" aria-labelledby="mas-t">
   <div class="envoltura">
     <div class="cabeza">
-      <span class="antetitulo">Todo lo que hacemos</span>
-      <h2 id="divisiones-t">Una marca, seis formas de ayudarte.</h2>
-      <p>Trabajamos con empresas de distribución, comercio, logística, servicios y gestión documental.</p>
+      <span class="antetitulo">Más soluciones de zentrix</span>
+      <h2 id="mas-t">Todo lo que podemos hacer por tu operación.</h2>
+      <p>Además de nuestras dos apps, te ayudamos con inteligencia aplicada, trazabilidad, logística, infraestructura, nuevos productos y la implementación de tu sistema de gestión.</p>
     </div>
-    <ul class="lista-divisiones">
-      <li><b>zentrix <span>software</span></b><em>Software empresarial</em><p>Creamos las apps con las que trabaja tu equipo, como zentrix® work, y adaptamos Odoo® a tu forma de operar.</p></li><li><b>zentrix <span>ai</span></b><em>Inteligencia aplicada</em><p>Conectores, asistentes y agentes que ponen la información de tu empresa al alcance de quien la necesita.</p></li><li><b>zentrix <span>automation</span></b><em>Procesos automáticos</em><p>zentrix® sales y las herramientas que llevan la venta y la logística del papel al sistema.</p></li><li><b>zentrix <span>cloud</span></b><em>Infraestructura</em><p>Hospedaje, monitoreo y respaldos para que tus aplicaciones y tus datos estén siempre disponibles.</p></li><li><b>zentrix <span>labs</span></b><em>Investigación</em><p>Prototipos y nuevos productos que probamos con clientes reales antes de lanzarlos.</p></li><li><b>zentrix <span>traceability</span></b><em>Trazabilidad</em><p>traza®: cada documento, producto o activo con su historia completa y verificable.</p></li>
-    </ul>
+    <div class="rejilla rejilla--3">
+      <a class="producto producto--oscuro" href="/ai/">
+        <span class="wordmark wordmark--negativo" data-producto="ai" role="img" aria-label="zentrix ai"><img src="/assets/img/logos/zentrix-blanco.svg" alt="" width="110" height="22"><span class="wordmark__producto">ai</span></span>
+        <p>Conectores, asistentes y agentes que ponen la información de tu empresa al servicio de cada decisión.</p>
+        <span class="producto__pie"><span class="etiqueta">Solicita una demostración</span><span class="producto__ir">Conocer más →</span></span>
+      </a><a class="producto producto--oscuro" href="/traza/">
+        <span class="wordmark wordmark--traza wordmark--negativo" data-producto="traza" role="img" aria-label="traza">traza<sup>®</sup></span>
+        <p>Documentos, productos y activos con un recorrido verificable: identificar, registrar, verificar y consultar.</p>
+        <span class="producto__pie"><span class="etiqueta">Solicita una demostración</span><span class="producto__ir">Conocer más →</span></span>
+      </a><a class="producto producto--oscuro" href="/logistica/">
+        <span class="wordmark wordmark--negativo" data-producto="logistica" role="img" aria-label="zentrix logística"><img src="/assets/img/logos/zentrix-blanco.svg" alt="" width="110" height="22"><span class="wordmark__producto">logística</span></span>
+        <p>Despachos, rutas, entregas y gestión de incidencias. Próximamente; el nombre comercial está por definir.</p>
+        <span class="producto__pie"><span class="etiqueta">Próximamente</span><span class="producto__ir">Conocer más →</span></span>
+      </a><a class="producto producto--oscuro" href="/cloud/">
+        <span class="wordmark wordmark--negativo" data-producto="cloud" role="img" aria-label="zentrix cloud"><img src="/assets/img/logos/zentrix-blanco.svg" alt="" width="110" height="22"><span class="wordmark__producto">cloud</span></span>
+        <p>Hospedaje, monitoreo y respaldos para que tus aplicaciones y tus datos estén siempre disponibles.</p>
+        <span class="producto__pie"><span class="etiqueta">Solicita una demostración</span><span class="producto__ir">Conocer más →</span></span>
+      </a><a class="producto producto--oscuro" href="/labs/">
+        <span class="wordmark wordmark--negativo" data-producto="labs" role="img" aria-label="zentrix labs"><img src="/assets/img/logos/zentrix-blanco.svg" alt="" width="110" height="22"><span class="wordmark__producto">labs</span></span>
+        <p>Investigación, prototipos y validación de nuevos productos para ampliar lo que podemos ofrecerte.</p>
+        <span class="producto__pie"><span class="etiqueta">Investigación</span><span class="producto__ir">Conocer más →</span></span>
+      </a><a class="producto producto--oscuro" href="/software/">
+        <span class="wordmark wordmark--negativo" data-producto="software" role="img" aria-label="zentrix software"><img src="/assets/img/logos/zentrix-blanco.svg" alt="" width="110" height="22"><span class="wordmark__producto">software</span></span>
+        <p>Implementación y personalización de Odoo®, del diagnóstico a la adopción, y el software de nuestros productos.</p>
+        <span class="producto__pie"><span class="etiqueta">Solicita una demostración</span><span class="producto__ir">Conocer más →</span></span>
+      </a>
+    </div>
     <p class="apagado" style="margin-top:24px">Odoo® conserva su marca y propiedad. traza® es un producto de zentrix®.</p>
   </div>
 </section>
+
 
 <section class="seccion" id="contacto" aria-labelledby="contacto-t">
   <div class="envoltura">
@@ -195,9 +220,8 @@
       <div>
         <h2>Productos</h2>
         <ul>
-          <li><a href="/work/">Zentrix Work</a></li>
+          <li><a href="/work/">Zentrix Work</a></li><li><a href="/sales/">Zentrix Sales</a></li><li><a href="/ai/">zentrix ai</a></li><li><a href="/traza/">traza</a></li><li><a href="/logistica/">Operación logística</a></li><li><a href="/cloud/">zentrix cloud</a></li><li><a href="/labs/">zentrix labs</a></li><li><a href="/software/">zentrix software</a></li>
           <li><a href="/work/docs/">Manual de Zentrix Work</a></li>
-          <li><a href="/sales/">Zentrix Sales</a></li>
           <li><a href="/sales/docs/">Manual de Zentrix Sales</a></li>
           <li><a href="/sales/en/" lang="en">Zentrix Sales in English</a></li>
         </ul>
