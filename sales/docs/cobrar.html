@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cobrarle a un cliente — Manual de Zentrix Sales</title>
+  <meta name="description" content="Cómo registrar un pago en Zentrix Sales: elegir el banco, el monto, la referencia y el comprobante, aplicarlo a facturas y seguir en qué estado quedó la solicitud.">
+  <link rel="canonical" href="https://zentrix.company/sales/docs/cobrar.html">
+  <meta name="theme-color" content="#090D12">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/sitio.css?v=5">
+  <link rel="stylesheet" href="/assets/css/manual-sales.css?v=1">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="zentrix">
+  <meta property="og:locale" content="es_VE">
+  <meta property="og:title" content="Cobrarle a un cliente — Manual de Zentrix Sales">
+  <meta property="og:description" content="Cómo registrar un pago en Zentrix Sales: elegir el banco, el monto, la referencia y el comprobante, aplicarlo a facturas y seguir en qué estado quedó la solicitud.">
+  <meta property="og:url" content="https://zentrix.company/sales/docs/cobrar.html">
+  <meta property="og:image" content="https://zentrix.company/assets/img/og-sales.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Cobrarle a un cliente — Manual de Zentrix Sales">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="manual-zx">
+<a class="saltar" href="#principal">Saltar al contenido</a>
+<header class="cabecera">
+  <div class="envoltura cabecera__fila">
+    <a class="logo" href="/" aria-label="zentrix, inicio"><img src="/assets/img/logos/zentrix-negro.svg" alt="zentrix" width="110" height="22"></a>
+    <nav class="nav" aria-label="Principal">
+      <ul>
+        <li><a href="/work/">Work</a></li>
+        <li><a href="/sales/" aria-current="page">Sales</a></li>
+        <li><a href="/#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<nav class="producto-barra" aria-label="Zentrix Sales">
+  <div class="envoltura">
+    <a class="producto-barra__logo" href="/sales/"><img src="/assets/img/logos/zentrix-sales-logotipo-positivo.svg" alt="zentrix sales" width="117" height="18"></a>
+    <ul>
+      <li><a href="/sales/">Producto</a></li>
+      <li><a href="/sales/docs/" aria-current="page">Manual</a></li>
+      <li><a href="/sales/privacidad/">Privacidad</a></li>
+      <li><a href="/sales/soporte/">Soporte</a></li>
+    </ul>
+  </div>
+</nav>
+<main id="principal">
+<section class="seccion seccion--manual">
+  <div class="envoltura envoltura--manual">
+    <div class="manual">
+
+      <div class="manual__cabeza">
+        <nav class="miga" aria-label="Dónde estás">
+          <ol>
+          <li><a href="/sales/">Zentrix Sales</a></li>
+          <li><a href="/sales/docs/">Manual del vendedor</a></li>
+          <li aria-current="page">Cobrarle a un cliente</li>
+          </ol>
+        </nav>
+        <span class="version">Manual de la versión <b>5.2.24</b></span>
+        <h1>Cobrarle a un cliente</h1>
+        <p class="manual__entrada">Cuando un cliente te paga, lo registras en la aplicación. Eso se llama una <strong>solicitud de pago</strong>: tú cargas lo que recibiste y Finanzas la revisa después.</p>
+      </div>
+
+      <nav class="manual__aqui" aria-labelledby="rot-aqui">
+        <span class="carril__rotulo" id="rot-aqui">En esta página</span>
+        <ul class="aqui">
+          <li><a href="#empezar">Por dónde se empieza</a></li>
+          <li><a href="#recorrido">El recorrido</a></li>
+          <li><a href="#monto-de-la-app">Si dejas el monto vacío, lo llena la aplicación</a></li>
+          <li><a href="#retencion">Cuando el cliente te retiene el IVA</a></li>
+          <li><a href="#sobra">Lo que sobra queda a favor del cliente</a></li>
+          <li><a href="#sin-senal">Se puede cobrar sin señal</a></li>
+          <li><a href="#estados">Cómo va tu solicitud</a></li>
+          <li><a href="#corregir">Corregir una solicitud</a></li>
+        </ul>
+      </nav>
+
+      <article class="manual__cuerpo">
+<div class="nota nota--clave">
+  <span class="nota__rotulo">No te equivoques en esto</span>
+  <p><strong>«Enviada» no quiere decir «Aprobada».</strong> Cuando tocas «Enviar solicitud», el pago le llega a Finanzas y ahí queda esperando. Una persona lo revisa contra el banco y recién entonces se descuenta de la deuda del cliente.</p>
+<p>Al cliente dile: <em>«ya lo reporté, Finanzas lo está revisando»</em>. No le digas que su factura ya quedó pagada, porque todavía no lo está.</p>
+</div>
+
+<h2 id="empezar">Por dónde se empieza</h2>
+<p>Hay cinco caminos y todos llegan a la misma pantalla, <strong>«Nueva solicitud»</strong>:</p>
+<ul>
+  <li>El botón <strong>«Cobrar»</strong> de la pantalla de Inicio.</li>
+  <li>El botón <strong>«Cobrarle»</strong> de la <strong>ficha del cliente</strong>. Entras con el cliente ya puesto, sin buscarlo en la lista.</li>
+  <li>El botón <strong>«Cobrarle»</strong> de la pantalla <strong>«¡Visita enviada!»</strong>, debajo de «Ir al inicio». Es para el cliente al que le acabas de cerrar la visita: si te pagó ahí mismo, lo cargas sin salir a buscarlo.</li>
+  <li>La pestaña <strong>«Cobranza»</strong> de abajo, sub-pestaña <strong>«Pagos»</strong>, y el botón <strong>+</strong> a la derecha del buscador.</li>
+  <li>El botón <strong>«Subir pago»</strong> de una factura, en <a href="/sales/docs/facturas.html">Cobranza › Facturas</a>. Así ya entras con el cliente puesto.</li>
+</ul>
+
+<h2 id="recorrido">El recorrido</h2>
+<ol class="manual-pasos">
+  <li><b>A quién le cobras</b><p>Si entraste por «Cobrar» o por el <strong>+</strong>, la aplicación te pregunta primero. Busca al cliente por nombre o por RIF. Arriba del todo verás su nombre y su RIF, para que confirmes que es el correcto.</p></li>
+  <li><b>«Cómo te pagaron»</b><p>Toca el campo y se abre una lista con los bancos y las cajas. <strong>Los bancos en bolívares salen de primero</strong> y los de dólares después. Arriba hay un buscador: escribe parte del nombre del banco y la lista se acorta.</p></li>
+  <li><b>«Monto que recibiste»</b><p>Escribe lo que el cliente te entregó, <strong>en la moneda del banco que elegiste</strong>. Debajo la aplicación te muestra la tasa del día, para que sepas a cuánto equivale.</p></li>
+  <li><b>«Referencia / Nº depósito»</b><p>Es <strong>obligatorio</strong> — tiene un asterisco. Es el número con el que Finanzas encuentra el pago en el banco. Sin él no puedes enviar.</p></li>
+  <li><b>El comprobante</b><p>Toca <strong>«Adjuntar Comprobantes»</strong> y toma la foto, o elige la captura que el cliente te mandó. Es la prueba del pago.</p></li>
+  <li><b>Fotos adicionales</b><p>Si hubo más de una transferencia, toca <strong>«Agregar»</strong> en «Fotos adicionales». Puedes poner hasta tres. Van a la conversación de la solicitud, donde Finanzas las ve.</p></li>
+  <li><b>A qué facturas se aplica</b><p>Más abajo está «Facturas pendientes». Marca las facturas que ese pago cancela y reparte el monto entre ellas. Al final la aplicación te muestra «Total asignado» y «Restante».</p></li>
+</ol>
+
+<h3 id="monto-de-la-app">Si dejas el monto vacío, lo llena la aplicación</h3>
+<p>En una factura con retención (ver <a href="#retencion">más abajo</a>) no hace falta que escribas primero «Monto que recibiste». Si lo dejas vacío y tocas <strong>«Cobrar el total»</strong> o <strong>«Retiene: cobrar»</strong>, la aplicación escribe ese monto por ti. Desde ahí, mientras el monto sea el que escribió ella, es siempre <strong>la suma de todo lo que repartiste</strong> entre las facturas: marcas otra, desmarcas una, corriges el monto de una factura, y el monto recibido se vuelve a sumar solo. Así lo recibido y lo repartido <strong>no pueden decir cosas distintas</strong>.</p>
+<ul>
+  <li>Si el banco es en bolívares, la suma se pasa a bolívares con la tasa que ves en el formulario.</li>
+  <li><strong>Si el monto lo escribiste tú, la aplicación no lo toca.</strong> Tú lo leíste del comprobante, y eso manda.</li>
+  <li>Si después cambias a un banco de otra moneda, el monto que habías escrito se borra y te lo dice —«Cambiaste a un diario en bolívares: escribe de nuevo el monto que recibiste.»—, porque ese número estaba en la otra moneda.</li>
+  <li>El botón <strong>«Auto»</strong> reparte lo recibido entre las facturas en el orden de siempre, respeta lo que ya tecleaste en una factura y <strong>desmarca</strong> las que se quedan sin nada.</li>
+</ul>
+
+<figure class="manual-fig">
+  <div class="captura__marco">
+    <picture>
+      <source type="image/webp" sizes="264px" srcset="/assets/img/sales/manual-cobranza-360.webp 360w, /assets/img/sales/manual-cobranza-620.webp 620w">
+      <img src="/assets/img/sales/manual-cobranza.jpg" width="620" height="1295" loading="lazy" decoding="async" alt="La parte de abajo del formulario de cobranza de Zentrix Sales: los comprobantes, las fotos adicionales y las facturas pendientes del cliente con su saldo.">
+    </picture>
+  </div>
+  <figcaption>La misma pantalla, más abajo: los comprobantes, las fotos adicionales y las facturas pendientes.</figcaption>
+</figure>
+
+<div class="nota nota--aviso">
+  <span class="nota__rotulo">Ojo</span>
+  <p>Si arriba te sale <strong>«Este cliente ya tiene 3 solicitudes sin aprobar»</strong>, revisa antes de enviar. Puede ser el mismo depósito que ya cargaste.</p>
+</div>
+
+<h2 id="retencion">Cuando el cliente te retiene el IVA</h2>
+<p>Algunos clientes retienen el IVA: te pagan <strong>menos</strong> de lo que dice la factura y te entregan un comprobante de retención. Hasta que ese papel llegue a la oficina, la factura sigue mostrando el saldo completo.</p>
+<p>En esas facturas la aplicación <strong>ya no rellena el monto por su cuenta</strong>. El campo «Monto a pagar» abre <strong>vacío</strong>, con la cuenta arriba para que la sigas con el dedo —saldo de la factura, menos la retención por aplicar, igual al saldo teórico— y dos botones debajo:</p>
+
+<div class="manual-tabla">
+  <table>
+    <thead><tr><th>Si tocas</th><th>Es porque</th></tr></thead>
+    <tbody>
+    <tr><td><strong>Cobrar el total</strong></td><td>El cliente te pagó la factura completa y no retuvo nada.</td></tr>
+    <tr><td><strong>Retiene: cobrar</strong></td><td>El cliente retuvo el IVA y te dio el comprobante. Ese botón ya trae la retención restada.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>El botón no te amarra: si te pagó otra cantidad, escríbela a mano. Y si todavía no escribiste «Monto que recibiste», el botón lo llena con su cifra — no tienes que subir a teclearlo.</p>
+
+<div class="nota nota--clave">
+  <span class="nota__rotulo">Por qué te lo pregunta</span>
+  <p><strong>Ninguna de las dos respuestas acierta siempre.</strong> Antes la aplicación elegía una, y de las retenciones de enero sólo la mitad terminó aplicándose — o sea que adivinaba mal una de cada dos veces, y «de no darte cuenta quedaba saldo».</p>
+  <p>Quien sabe si el cliente retuvo o no eres <strong>tú</strong>, que tienes el comprobante en la mano.</p>
+</div>
+
+<h2 id="sobra">Lo que sobra queda a favor del cliente</h2>
+<p>Si recibiste más de lo que aplicaste a las facturas, la aplicación te lo dice <strong>antes</strong> de enviar, en el renglón «Restante»:</p>
+<blockquote class="cita">Los $19,00 que sobran no van contra ninguna factura: le quedan al cliente a favor para su próxima compra.</blockquote>
+<p class="mt-sm">Esa plata no se pierde. <strong>Díselo al cliente ahí mismo</strong>, que es cuando sirve.</p>
+
+<h2 id="sin-senal">Se puede cobrar sin señal</h2>
+<p>Si no hay internet, el botón de abajo cambia y dice <strong>«Guardar cobranza sin señal»</strong>. La solicitud se guarda en tu teléfono con todo y foto, y <strong>sale sola</strong> cuando vuelva la red. <strong>No la vuelvas a cargar.</strong></p>
+<p>Mientras tanto la vas a ver en <em>Cobranza › Pagos</em> como <strong>«Por enviar»</strong>.</p>
+
+<h2 id="estados">Cómo va tu solicitud</h2>
+<p>Todas tus cobranzas están en <strong>Cobranza › Pagos</strong>. Cada una lleva su estado a la derecha:</p>
+
+<div class="manual-tabla">
+  <table>
+    <thead><tr><th>Dice</th><th>Qué está pasando</th></tr></thead>
+    <tbody>
+    <tr><td><strong>Por enviar</strong></td><td>Está en tu teléfono. Sale sola cuando haya señal.</td></tr>
+    <tr><td><strong>No se pudo enviar</strong></td><td>Se intentó varias veces y no salió. Avisa a tu analista.</td></tr>
+    <tr><td><strong>Enviada</strong></td><td>Llegó a la oficina. Está esperando que Finanzas la revise.</td></tr>
+    <tr><td><strong>Devuelta</strong></td><td>Finanzas encontró algo que corregir. Es tuya otra vez.</td></tr>
+    <tr><td><strong>Aprobada</strong></td><td>Listo. Ahora sí se descontó de la deuda del cliente.</td></tr>
+    <tr><td><strong>Cancelada</strong></td><td>La oficina la anuló. No se puede tocar.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Los chips de arriba te dejan filtrar: <strong>«Todas» · «En revisión» · «Devueltas» · «Canceladas» · «Aprobadas»</strong>.</p>
+
+<h2 id="corregir">Corregir una solicitud</h2>
+<p>Puedes corregir una solicitud <strong>«Enviada»</strong> y una <strong>«Devuelta»</strong>. Toca la solicitud para abrirla y usa <strong>«Corregir y reenviar»</strong>. En la devuelta el botón también sale en la lista, porque es algo que tienes pendiente.</p>
+
+<div class="nota nota--aviso">
+  <span class="nota__rotulo">Ojo</span>
+  <p>Una solicitud <strong>«Aprobada» o «Cancelada» no se puede corregir</strong>: ya es un movimiento contable de la oficina.</p>
+<p>Y para corregir <strong>hace falta señal</strong>. No se guarda para después, porque mientras tanto la analista pudo haberla tomado.</p>
+</div>
+
+<div class="nota ">
+  <span class="nota__rotulo">El comprobante no se vuelve a cargar</span>
+  <p>Al corregir verás el comprobante que ya mandaste. Si no adjuntas uno nuevo, <strong>se conserva ese</strong>. Solo vuelve a fotografiar si el problema <em>era</em> el comprobante.</p>
+</div>
+<nav class="saltos" aria-label="Secciones vecinas">
+  <a class="salto salto--ant" href="/sales/docs/catalogo.html"><span>Anterior</span><b>El catálogo</b></a>
+  <a class="salto salto--sig" href="/sales/docs/facturas.html"><span>Siguiente</span><b>Las facturas y lo que te deben</b></a>
+</nav>
+      </article>
+
+      <nav class="manual__arbol" aria-labelledby="rot-arbol">
+        <span class="carril__rotulo" id="rot-arbol">Todo el manual</span>
+        <ul class="arbol">
+        <li class="arbol__grupo">Empezar aquí</li>
+        <li><a href="/sales/docs/"><span>Qué es Zentrix Sales</span></a></li>
+        <li><a href="/sales/docs/entrar.html"><span>Entrar y sincronizar</span></a></li>
+        <li><a href="/sales/docs/sin-internet.html"><span>Trabajar sin internet</span></a></li>
+        <li class="arbol__grupo">El día en la calle</li>
+        <li><a href="/sales/docs/inicio.html"><span>Tu Inicio</span></a></li>
+        <li><a href="/sales/docs/ruta.html"><span>La ruta del día</span></a></li>
+        <li><a href="/sales/docs/visita.html"><span>La visita, paso a paso</span></a></li>
+        <li class="arbol__grupo">Vender y cobrar</li>
+        <li><a href="/sales/docs/catalogo.html"><span>El catálogo</span></a></li>
+        <li><a href="/sales/docs/cobrar.html" aria-current="page"><span>Cobrarle a un cliente</span></a></li>
+        <li><a href="/sales/docs/facturas.html"><span>Las facturas y lo que te deben</span></a></li>
+        <li class="arbol__grupo">Consultar</li>
+        <li><a href="/sales/docs/actividad.html"><span>Tus pedidos y tu actividad</span></a></li>
+        <li><a href="/sales/docs/clientes.html"><span>Clientes nuevos y correcciones</span></a></li>
+        <li><a href="/sales/docs/conversacion.html"><span>Hablar con la oficina</span></a></li>
+        <li><a href="/sales/docs/dudas.html"><span>Dudas rápidas</span></a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+</section>
+</main>
+<footer class="pie">
+  <div class="envoltura">
+    <div class="pie__reja">
+      <div>
+        <img class="pie__logo" src="/assets/img/logos/zentrix-blanco.svg" alt="zentrix" width="110" height="22" loading="lazy">
+        <p>La inteligencia se convierte en operación.</p>
+      </div>
+      <div>
+        <h2>Productos</h2>
+        <ul>
+          <li><a href="/work/">Zentrix Work</a></li>
+          <li><a href="/work/docs/">Manual de Zentrix Work</a></li>
+          <li><a href="/sales/">Zentrix Sales</a></li>
+          <li><a href="/sales/docs/">Manual de Zentrix Sales</a></li>
+          <li><a href="/sales/en/" lang="en">Zentrix Sales in English</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Legal y soporte</h2>
+        <ul>
+          <li><a href="/work/privacidad/">Privacidad de Zentrix Work</a></li>
+          <li><a href="/work/soporte/">Soporte de Zentrix Work</a></li>
+          <li><a href="/work/terminos/">Términos de Zentrix Work</a></li>
+          <li><a href="/sales/privacidad/">Privacidad de Zentrix Sales</a></li>
+          <li><a href="/sales/soporte/">Soporte de Zentrix Sales</a></li>
+          <li><a href="/sales/terminos/">Términos de Zentrix Sales</a></li>
+          <li><a href="/sales/contacto/">Contacto de Zentrix Sales</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contacto</h2>
+        <ul>
+          <li><a href="mailto:hola@zentrix.company">hola@zentrix.company</a></li>
+          <li><a href="mailto:soporte@zentrix.company">soporte@zentrix.company</a></li>
+          <li><a href="https://wa.me/584123469712">WhatsApp +58 412-346 9712</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pie__base">
+      <p>© 2026 zentrix®. Todos los derechos reservados.</p>
+      <p>Odoo® conserva su marca y propiedad.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

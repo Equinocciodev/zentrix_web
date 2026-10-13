@@ -8,25 +8,28 @@ Es un sitio estático: HTML, una hoja CSS y ninguna línea de JavaScript. No hay
 
 | Ruta | Página |
 |---|---|
-| `/` | Portada corporativa: qué es zentrix, los productos, las divisiones, el modelo y el contacto. Los textos vienen de la Presentación Corporativa. |
-| `/work/` | Zentrix Work. Enlace a Google Play: `com.leiros.guuaowork`. |
-| `/work/privacidad/` | La política de privacidad de work.guuao.com, cambiando solo el nombre. Conserva las anclas `#c1`…`#c11`; Play tiene declarada la `#c7`. |
-| `/work/soporte/` | Preguntas frecuentes y `#eliminar-datos`, la URL de eliminación de datos que pide Play. |
-| `/sales/` | Zentrix Sales. Enlaces a Google Play (`com.leiros.vendoo`) y App Store (`id6811065669`). |
-| `/sales/privacidad/` | La política de vendooapp.com, cambiando solo el nombre. Conserva las anclas `#c1`…`#c11`. |
-| `/sales/soporte/` | Contacto, soporte y `#eliminar-datos`. |
+| `/` | Portada de zentrix, la marca madre: qué hacemos, los dos productos destacados, cómo trabajamos, las divisiones y el contacto. |
+| `/work/` | Zentrix Work. Google Play: `com.leiros.guuaowork`. |
+| `/work/docs/` + 11 páginas `.html` | Manual del operador, migrado de work.guuao.com/docs. |
+| `/work/privacidad/` · `/work/soporte/` · `/work/terminos/` | Política (anclas `#c1`…`#c11`, Play declara `#c7`), soporte (`#eliminar-datos`) y términos. |
+| `/sales/` | Zentrix Sales. Google Play `com.leiros.vendoo`, App Store `id6811065669`. |
+| `/sales/docs/` + 12 páginas `.html` | Manual del vendedor, migrado de vendooapp.com/docs. |
+| `/sales/privacidad/` · `/sales/soporte/` · `/sales/terminos/` · `/sales/contacto/` | Política, soporte, términos y contacto con el formulario de demostración (`assets/js/contacto.js` arma el correo). |
+| `/sales/en/` + `privacy.html`, `terms.html`, `support.html`, `contact.html` | Versión en inglés, migrada de vendooapp.com/en. |
 | `/404.html` | Página de error. |
 
-Cada página es un `index.html` dentro de su carpeta. GitHub Pages sirve `/work/privacidad` con un 301 a `/work/privacidad/`, y esa URL devuelve 200.
+Las páginas de los manuales llevan, además de `sitio.css`, `manual-sales.css` o `manual-work.css`: son las hojas del manual de cada sitio anterior con los tokens de zentrix. Las capturas de los manuales están en `assets/img/sales/` y `assets/img/work/`, y algunas todavía muestran el diseño anterior de las apps.
 
-## Correos de contacto (provisionales)
+## Correos de contacto
 
-Mientras no haya buzones en zentrix.company, el sitio usa los correos actuales:
+- `hola@zentrix.company`: contacto general y Zentrix Sales. Teléfono/WhatsApp `+58 412-346 9712`.
+- `soporte@zentrix.company`: soporte y Zentrix Work.
 
-- **Zentrix Sales:** `hola@vendooapp.com` y el teléfono/WhatsApp `+58 412-346 9712`, los mismos de vendooapp.com y de la app.
-- **Zentrix Work:** `contacto@guuao.com`, el mismo de work.guuao.com y de la app (`WorkConfig.privacyEmail`).
+Los buzones se crearon el 13-10-2026. Las apps todavía llevan los correos anteriores (`hola@vendooapp.com` y `contacto@guuao.com`): hay que cambiarlos en la próxima versión.
 
-Cuando existan los buzones nuevos, hay que cambiarlos aquí, en las políticas (cláusulas 7 y 11) y en las apps, en la misma versión. Los términos de uso siguen en los sitios anteriores (`work.guuao.com/terminos.html` y `vendooapp.com/terminos.html`), y el manual del vendedor en `vendooapp.com/docs/`.
+## Nombres
+
+zentrix es la marca madre. En la portada, la navegación, las tarjetas y el pie no se nombran GUUAO ni los nombres anteriores de las apps. GUUAO LLC aparece solo donde la ley lo exige: en privacidad, soporte y términos, como responsable que publica las apps. Las notas de cambio de nombre se quedan en esas mismas páginas.
 
 ## Marca
 
