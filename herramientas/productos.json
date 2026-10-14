@@ -1,0 +1,15 @@
+{
+  "_nota": "Fuente única de las URL de tienda de las apps. La usan generar.py (insignias) y seo.py (JSON-LD). Comprobadas el 14-10-2026: Play responde 200 y App Store sale de itunes.apple.com/lookup?bundleId=… (trackViewUrl). Si una app no está en una tienda, su clave no existe y no se pone insignia.",
+  "work": {
+    "nombre": "Zentrix Work",
+    "android": "com.leiros.guuaowork",
+    "play": "https://play.google.com/store/apps/details?id=com.leiros.guuaowork"
+  },
+  "sales": {
+    "nombre": "Zentrix Sales",
+    "android": "com.leiros.vendoo",
+    "ios": "com.leiros.vendoo",
+    "play": "https://play.google.com/store/apps/details?id=com.leiros.vendoo",
+    "appstore": "https://apps.apple.com/us/app/vendoo/id6811065669"
+  }
+}

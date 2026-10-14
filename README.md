@@ -63,6 +63,10 @@ El español vive en la raíz y el inglés bajo `/en/`, con rutas espejo (`/en/wo
 - Los textos legales en inglés son traducciones de cortesía; la versión vinculante es la española.
 - Las rutas inglesas antiguas de Zentrix Sales (`/sales/en/…`) redirigen a `/en/sales/…` (ver `REDIRECCIONES.md`).
 
+## Insignias de las tiendas
+
+Las URL de Google Play y App Store de cada app están en `herramientas/productos.json` (fuente única; la usan `generar.py` y `seo.py`). Donde una página lleva `<!--TIENDAS:work-->` o `<!--TIENDAS:sales-->`, `generar.py` pone las insignias oficiales localizadas (`assets/img/tiendas/`: Google Play «Disponible en / Get it on», del generador de Google, recortada a su contorno; App Store «Descárgalo en el / Download on the», negra, de Apple Marketing Tools), a 48 px de alto las dos, sin texto encima y con `data-zx-store="play|appstore"` para la analítica. Si una app no está en una tienda, no se pone su insignia: Work solo está en Google Play.
+
 ## Movimiento e ilustraciones
 
 - La z madre del héroe de la portada se dibuja (trazo) y luego entra la pieza del corte diagonal; la geometría es la del maestro (`zentrix_z_azul.svg`).

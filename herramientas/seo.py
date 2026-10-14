@@ -31,9 +31,11 @@ SITIO = 'https://zentrix.company'
 ORG_ID = SITIO + '/#organizacion'
 WEB_ID = SITIO + '/#sitio'
 LOGO = SITIO + '/assets/img/icono-512.png'
-PLAY_WORK = 'https://play.google.com/store/apps/details?id=com.leiros.guuaowork'
-PLAY_SALES = 'https://play.google.com/store/apps/details?id=com.leiros.vendoo'
-APPSTORE_SALES = 'https://apps.apple.com/app/id6811065669'
+# URL de tienda: fuente única en herramientas/productos.json (también la usa generar.py)
+_TIENDAS = json.loads((RAIZ / 'herramientas' / 'productos.json').read_text(encoding='utf-8'))
+PLAY_WORK = _TIENDAS['work']['play']
+PLAY_SALES = _TIENDAS['sales']['play']
+APPSTORE_SALES = _TIENDAS['sales']['appstore']
 TRAZA_URL = 'https://traza.technology'
 
 # ruta → (palabra clave principal, title, description). Title ≤ 60, description 140–160.
