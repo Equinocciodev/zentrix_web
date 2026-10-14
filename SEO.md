@@ -21,6 +21,8 @@ python3 herramientas/verificar_seo.py --informe ~/Downloads/zentrix/web/seo/veri
 
 Una palabra clave principal por página, sin canibalizar: `/soluciones/odoo-venezuela/` trabaja «implementación de Odoo en Venezuela» y `/software/` «consultoría e integración de Odoo»; `/work/` lleva «app para el equipo de tienda y reparto» y `/logistics/` «gestión de despachos y entregas»; los manuales trabajan colas largas de su tema. Las legales no tienen palabra clave (—). Formato del title: «Producto — beneficio | Zentrix», sin repetir «| Zentrix» cuando el producto ya se llama Zentrix; ≤ 60 caracteres. Description: 140–160 caracteres, con contenido real de la página.
 
+En inglés, las mismas intenciones: «field sales app», «store team app», «Odoo implementation Venezuela» (solución) frente a «Odoo consulting and integration» (Zentrix Software), etc. (filas `/en/…`).
+
 Otras búsquedas que cubren las páginas como secundarias: «partner/consultoría Odoo» y «localización venezolana Odoo» (solución Odoo y Zentrix Software); «app para vendedores de campo», «preventa y cobranza», «app de ventas para Odoo» (Zentrix Sales, que tiene integración nativa con Odoo® 17, 18 y 19); «app para repartidores» (manual `reparto.html`); «trazabilidad» (Traza); «field sales app» (inglés).
 
 **No usadas, a propósito:** «partner Odoo» como afirmación, «facturación digital SENIAT Odoo» e «IGTF Odoo». El sitio no dice que Zentrix sea partner oficial de Odoo ni menciona SENIAT o IGTF (la solución de Odoo habla de libros, retenciones, numeración y doble moneda). Si Victor confirma esos datos, se añaden a `/soluciones/odoo-venezuela/` y se actualiza su title y description.
@@ -31,6 +33,36 @@ Otras búsquedas que cubren las páginas como secundarias: «partner/consultorí
 | `/clientes/` | clientes y casos de Zentrix | Clientes — Casos en distribución y comercio \| Zentrix | Grupo Leiros y GUUAO usan las apps de Zentrix cada día en distribución y comercio en Venezuela. Conoce sus casos y las empresas que nos acompañan. | BreadcrumbList |
 | `/cloud/` | hospedaje, monitoreo y respaldos para empresas | Zentrix Cloud — Hospedaje, monitoreo y respaldos | Zentrix Cloud se ocupa del hospedaje, el monitoreo y los respaldos de tus aplicaciones y tus datos, para que tu operación siga en marcha sin cuidar servidores. | Service, BreadcrumbList |
 | `/contacto/` | contacto Zentrix | Contacto — Proyectos, demostraciones y soporte \| Zentrix | Escribe a hola@zentrix.company por proyectos y demostraciones, a soporte@zentrix.company por soporte, o por WhatsApp. Te responde una persona. | BreadcrumbList |
+| `/en/about/` | software company Isla Margarita | About Zentrix — Engineering team in Venezuela | Zentrix is the new brand of Equinoccio (EQNIO), an engineering, AI and product team on Isla Margarita, Venezuela, working with clients across the Americas. | BreadcrumbList |
+| `/en/ai/` | AI for business | Zentrix AI — Applied artificial intelligence for business | Zentrix AI connects your company’s knowledge and systems to AI agents and assistants that query, analyze and act, with role-based permissions for each user. | Service, BreadcrumbList |
+| `/en/cloud/` | managed hosting and backups | Zentrix Cloud — Hosting, monitoring and backups | Zentrix Cloud takes care of hosting, monitoring and backups for your apps and data, so they stay available and your team can focus on the work itself. | Service, BreadcrumbList |
+| `/en/contact/` | contact Zentrix | Contact Zentrix — A person replies in one day | Write to hola@zentrix.company for projects and demos, soporte@zentrix.company for support, or use WhatsApp. A person replies within one business day. | BreadcrumbList |
+| `/en/customers/` | Zentrix customers | Customers and case studies \| Zentrix | Grupo Leiros and GUUAO run on Zentrix apps every day, in stores, on the street and in the office. Meet the companies and institutions we work alongside. | BreadcrumbList |
+| `/en/` | business software and apps in Venezuela | Zentrix — Business software and apps for Venezuela | Technology to work better: apps for your store team and field sales force, Odoo® with Venezuelan localization, and custom software built in Venezuela. | Organization, WebSite |
+| `/en/labs/` | product research and prototyping | Zentrix Labs — Research and new product validation | Zentrix Labs researches, prototypes and validates new products to expand what we can offer you, testing each idea before it joins the Zentrix suite. | Service, BreadcrumbList |
+| `/en/logistics/` | dispatch and delivery software | Zentrix Logistics — Dispatch and delivery, under control | Zentrix Logistics, coming soon: dispatch, routes, deliveries and incident handling in one place, so you keep every promise you make to your customers. | Service, BreadcrumbList |
+| `/en/privacy/` | — | Website privacy — Zentrix | What zentrix.company measures and with which tool, with no advertising, and how to withdraw cookie consent. The apps have their own privacy policies. | BreadcrumbList |
+| `/en/resources/` | Zentrix manuals and support | Resources: manuals, support and legal \| Zentrix | Zentrix Work and Zentrix Sales manuals, support pages, privacy policies and terms for every app, plus llms.txt and the sitemap for developers and AI. | BreadcrumbList |
+| `/en/sales/contact/` | field sales app demo | Contact — Zentrix Sales | Request a Zentrix Sales demo on your own data: tell us how your team sells today. Or write to us by email, phone or WhatsApp, no strings attached. | BreadcrumbList |
+| `/en/sales/docs/` | Zentrix Sales manual | Zentrix Sales manual — Step by step for field reps | The Zentrix Sales manual for field reps: route, visits, orders, collections, invoices and working without a signal. The chapters are written in Spanish. | BreadcrumbList |
+| `/en/sales/` | field sales app | Zentrix Sales — Field sales app for Android and iPhone | Zentrix Sales is the field sales app for Android and iPhone: route, orders, collections and proof of visit for your reps, with or without a signal. | SoftwareApplication, BreadcrumbList |
+| `/en/sales/privacy/` | — | Privacy policy — Zentrix Sales | What data Zentrix Sales, the field sales app, collects, why, where it is stored, how long it is kept and how to exercise your rights over it. | BreadcrumbList |
+| `/en/sales/support/` | — | Support — Zentrix Sales | Zentrix Sales support: a person replies in under one business day by email, phone or WhatsApp. And how to request access to or deletion of your data. | BreadcrumbList |
+| `/en/sales/terms/` | — | Terms of service — Zentrix Sales | Terms of service of Zentrix Sales, the field sales app for Android and iPhone: who contracts it, who uses it every day and which rules apply. | BreadcrumbList |
+| `/en/software/` | Odoo consulting and integration | Zentrix Software — Odoo® consulting and integration | Zentrix Software implements, configures and integrates Odoo® with your other systems and with Zentrix Work and Zentrix Sales, from diagnosis to adoption. | Service, BreadcrumbList |
+| `/en/solutions/computer-vision/` | computer vision video analytics | Computer vision and video analytics \| Zentrix | Real-time video analytics on the cameras you already have: event detection, biometric access control and alerts that reach the person who needs to act. | Service, BreadcrumbList |
+| `/en/solutions/high-availability-infrastructure/` | high availability infrastructure | High-availability infrastructure \| Zentrix | Servers on-premises or in the cloud with tested backups, Zero Trust access and containers, designed to keep your operation running through power outages. | Service, BreadcrumbList |
+| `/en/solutions/` | software solutions Venezuela | Solutions — Odoo®, software and infrastructure \| Zentrix | Odoo® with Venezuelan localization, custom software, technical audits, high-availability infrastructure, payments and computer vision, by the Zentrix team. | BreadcrumbList |
+| `/en/solutions/odoo-venezuela/` | Odoo implementation Venezuela | Odoo® implementation in Venezuela \| Zentrix | Odoo® implementation with Venezuelan localization: tax books, withholdings, dual currency and inventory to treasury in one system, with training for your team. | Service, BreadcrumbList |
+| `/en/solutions/payments-and-digital-commerce/` | POS and payment gateways | Payments and digital commerce \| Zentrix | Integrated point of sale, tills with shifts and cash counts, payment gateways with automatic reconciliation, and electronic receipts for your customers. | Service, BreadcrumbList |
+| `/en/solutions/software-development/` | custom software development | Custom software development \| Zentrix | Custom web and mobile apps built around your process: design and engineering in one team, an architecture that grows and continuous delivery you can try. | Service, BreadcrumbList |
+| `/en/solutions/technical-audit/` | technical audit and architecture | Technical audit and systems architecture \| Zentrix | An honest diagnosis of your systems, a roadmap with reasons, argued technology choices and a second opinion on third-party quotes before you sign anything. | Service, BreadcrumbList |
+| `/en/traza/` | product traceability | Traza — Traceability for documents, products and assets | Traza gives your documents, products and assets a verifiable journey: where they came from, where they went, who moved them and where they are now. | Service, BreadcrumbList |
+| `/en/work/docs/` | Zentrix Work manual | Zentrix Work manual — Step by step for store teams | The Zentrix Work manual for store teams: signing in, shifts, picking orders with the scanner, delivery, returns and settings. The chapters are in Spanish. | BreadcrumbList |
+| `/en/work/` | store team app | Zentrix Work — The app for store and delivery teams | Zentrix Work, the Android app for store teams: work lands on the phone to pick orders, deliver, run delivery routes and take returns during the shift. | SoftwareApplication, BreadcrumbList |
+| `/en/work/privacy/` | — | Privacy policy — Zentrix Work | What the Zentrix Work app collects, why, who sees it and for how long, how it is protected, and how to ask for access to your data or for its deletion. | BreadcrumbList |
+| `/en/work/support/` | — | Support — Zentrix Work | Help for Zentrix Work: signing in, common questions about shifts and orders, who to contact at your company, and how to request deletion of your data. | BreadcrumbList |
+| `/en/work/terms/` | — | Terms of use — Zentrix Work | The terms of use of the Zentrix Work app for store staff: what it is for, what you agree to when using it, the data involved and who provides the app. | BreadcrumbList |
 | `/` | software y apps para empresas en Venezuela | Zentrix — Software y apps para empresas en Venezuela | Tecnología para trabajar mejor: apps para tu equipo de tienda y tu fuerza de ventas, Odoo® con localización venezolana y software a la medida. | Organization, WebSite |
 | `/labs/` | prototipos y validación de productos | Zentrix Labs — Prototipos y validación de productos | En Zentrix Labs investigamos tu reto, construimos prototipos y los validamos antes de convertirlos en herramientas para tu equipo. Cuéntanos tu idea. | Service, BreadcrumbList |
 | `/logistics/` | gestión de despachos y entregas | Zentrix Logistics — Gestión de despachos y entregas | Zentrix Logistics, próximamente: despachos, rutas, entregas y gestión de incidencias en un mismo lugar, para cumplir lo que prometiste a tus clientes. | Service, BreadcrumbList |
@@ -51,11 +83,6 @@ Otras búsquedas que cubren las páginas como secundarias: «partner/consultorí
 | `/sales/docs/ruta.html` | — | La ruta del día — Manual de Zentrix Sales | Cómo planificar y recorrer tu ruta en Zentrix Sales: asignar clientes a un día, ordenar las paradas por cercanía, navegar y quitar a alguien del día. | BreadcrumbList |
 | `/sales/docs/sin-internet.html` | app de ventas sin internet | Trabajar sin internet — Manual de Zentrix Sales | En Zentrix Sales nada se pierde sin señal: qué significa cada color del punto de sincronización y qué hacer si algo dice «No se pudo enviar». | BreadcrumbList |
 | `/sales/docs/visita.html` | visita al cliente paso a paso | La visita paso a paso — Manual de Zentrix Sales | Los ocho pasos de una visita en Zentrix Sales: check-in, inventario, pedido, fotos, devoluciones, notas, firma y check-out, con lo que conviene saber. | BreadcrumbList |
-| `/sales/en/contact.html` | field sales app demo | Contact — Zentrix Sales | Request a Zentrix Sales demo on your own data: tell us how your team sells today. Or write to us by email, phone or WhatsApp, no strings attached. | BreadcrumbList |
-| `/sales/en/` | field sales app | Zentrix Sales — Field sales app for Android and iPhone | Zentrix Sales is the field sales app for Android and iPhone: route, orders, collections and proof of visit for your reps, with or without a signal. | SoftwareApplication, BreadcrumbList |
-| `/sales/en/privacy.html` | — | Privacy policy — Zentrix Sales | What data Zentrix Sales, the field sales app, collects, why, where it is stored, how long it is kept and how to exercise your rights over it. | BreadcrumbList |
-| `/sales/en/support.html` | — | Support — Zentrix Sales | Zentrix Sales support: a person replies in under one business day by email, phone or WhatsApp. And how to request access to or deletion of your data. | BreadcrumbList |
-| `/sales/en/terms.html` | — | Terms of service — Zentrix Sales | Terms of service of Zentrix Sales, the field sales app for Android and iPhone: who contracts it, who uses it every day and which rules apply. | BreadcrumbList |
 | `/sales/` | app de fuerza de ventas | Zentrix Sales — App de fuerza de ventas y cobranza | Zentrix Sales, app de fuerza de ventas para Android y iPhone: ruta, visitas, pedidos y cobranza de tus vendedores de campo, con o sin señal, conectada a Odoo®. | SoftwareApplication, BreadcrumbList |
 | `/sales/privacidad/` | — | Política de privacidad — Zentrix Sales | Qué datos recoge Zentrix Sales, la app de fuerza de ventas, para qué, dónde se almacenan, cuánto tiempo se conservan y cómo ejercer tus derechos. | BreadcrumbList |
 | `/sales/soporte/` | — | Soporte — Zentrix Sales | Soporte de Zentrix Sales: te contesta una persona en español en menos de un día hábil, por correo, teléfono o WhatsApp. Y cómo pedir tus datos o borrarlos. | BreadcrumbList |
@@ -100,19 +127,24 @@ Otras búsquedas que cubren las páginas como secundarias: «partner/consultorí
 ## Checklist
 
 - [x] `<title>` único ≤ 60 y `meta description` única de 140–160 en cada página indexable.
-- [x] `canonical`, `<html lang>`; `hreflang` es/en/x-default recíprocos donde hay traducción (hoy, Zentrix Sales en `/sales/en/`; con `/en/`, todo el sitio).
+- [x] `canonical`, `<html lang>`; `hreflang` es/en/x-default recíprocos en todo el sitio (`/` ↔ `/en/`); los capítulos de los manuales, solo en español, llevan es + x-default.
 - [x] `og:title`, `og:description`, `og:image` 1200×630 existente, `og:url`, `og:locale` (+ `og:locale:alternate` con traducción), `twitter:card`, `theme-color`, favicon y manifest.
 - [x] Un solo `<h1>` y sin saltos de nivel.
 - [x] 404 y redirecciones con `noindex`.
 - [x] `sitemap.xml` generado en el despliegue, con `lastmod` de git y alternativas por idioma; `robots.txt` con `Sitemap:`.
 - [x] JSON-LD validado por script (estructura y campos obligatorios por plantilla).
 - [x] Imágenes con `alt`, `width` y `height`; enlaces internos y anclas sin romper.
-- [x] `llms.txt` y `llms-full.txt`.
-- [x] Lighthouse SEO 100.
+- [x] `llms.txt` (y `/en/llms.txt`) según llmstxt.org, con enlaces Markdown y `## Optional`; `llms-full.txt` con los enlaces de cada página. Auditoría `llms-txt` de Lighthouse en verde.
+- [x] Lighthouse SEO 100 (texto de enlace descriptivo en el aviso de cookies y `Agentmap` como comentario en `robots.txt`, que Lighthouse marcaba como directiva desconocida).
+- [ ] Desactivar «Email Address Obfuscation» en Cloudflare (Victor, abajo).
 - [ ] Search Console y Bing Webmaster (Victor, abajo).
 - [ ] Cambio de dirección de eqnio.com (Victor, abajo).
 
 ## Pasos para Victor
+
+### 0. Cloudflare: desactivar «Email Address Obfuscation»
+
+zentrix.company ya pasa por el proxy de Cloudflare, y su ofuscación de correos cambia cada `mailto:` por `/cdn-cgi/l/email-protection#…` (404 sin JavaScript) y el texto del correo por «[email protected]». Los buscadores y los modelos dejan de ver hola@ y soporte@. En Cloudflare, zona `zentrix.company` → **Scrape Shield** (o **Security → Settings**) → **Email Address Obfuscation: Off**. `verificar_seo.py` lo marca como fallo global hasta que se apague.
 
 ### 1. Google Search Console (verificación por DNS en Cloudflare)
 

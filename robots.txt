@@ -28,4 +28,6 @@ Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 
 Sitemap: https://zentrix.company/sitemap.xml
-Agentmap: https://zentrix.company/.well-known/ai-catalog.json
+# Catálogo para agentes de IA (también enlazado en el <head> de cada página). Va como
+# comentario: «Agentmap» no es una directiva estándar y Lighthouse SEO lo marca como error.
+# Agentmap: https://zentrix.company/.well-known/ai-catalog.json

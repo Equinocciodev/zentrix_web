@@ -308,6 +308,8 @@ def verificar(base):
             if p.scheme in ('http', 'https') and p.netloc == urllib.parse.urlparse(PRODUCCION).netloc:
                 enlaces.setdefault(destino, set()).add(ruta)
                 limpio = p.path + ('?' + p.query if p.query else '')
+                if p.path.startswith('/cdn-cgi/'):
+                    continue
                 if not re.search(r'\.(png|jpe?g|webp|svg|pdf|xml|txt|ico|json|webmanifest|css|js)$', p.path):
                     if not p.query:
                         pendientes.append(limpio)
@@ -415,9 +417,19 @@ def verificar(base):
         if e:
             errores['Imágenes'] = e[:5] + (['… y %d más' % (len(e) - 5)] if len(e) > 5 else [])
 
-    # Enlaces internos y anclas
+    # Enlaces internos y anclas. Los de /cdn-cgi/l/email-protection los inserta Cloudflare
+    # («Email Address Obfuscation») al servir la página: no están en el HTML del repo y
+    # se informan una sola vez como fallo global de configuración.
+    protegidas = sorted({o for d, os_ in enlaces.items() if urllib.parse.urlparse(d).path.startswith('/cdn-cgi/')
+                         for o in os_})
+    if protegidas:
+        globales.append(('Cloudflare', 'Email Address Obfuscation activa: %d páginas cambian sus mailto: por '
+                         '/cdn-cgi/l/email-protection, que responde 404 sin JavaScript y oculta el correo a '
+                         'buscadores y modelos. Desactivarla (Scrape Shield) en la zona zentrix.company.' % len(protegidas)))
     for destino, origenes in enlaces.items():
         p = urllib.parse.urlparse(destino)
+        if p.path.startswith('/cdn-cgi/'):
+            continue
         ruta = p.path or '/'
         est, _, cuerpo, _ = cli.get(base + ruta + ('?' + p.query if p.query else ''))
         problema = None

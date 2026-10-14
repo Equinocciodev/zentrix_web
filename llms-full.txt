@@ -696,10 +696,7 @@ Para tu fuerza de ventas · Android y iPhone
 
 Zentrix Sales es la app de fuerza de ventas con la que tu equipo arma su ruta, visita a cada cliente, toma el pedido, cobra y deja constancia de todo desde el teléfono, aunque no haya señal.
 
-[Google Play](https://play.google.com/store/apps/details?id=com.leiros.vendoo)
-[App Store](https://apps.apple.com/app/id6811065669)
-
-[Pide una demostración con tus datos](https://zentrix.company/sales/contacto/#demo) · [English](https://zentrix.company/sales/en/)
+[Pide una demostración con tus datos](https://zentrix.company/sales/contacto/#demo) · [English](https://zentrix.company/en/sales/)
 
 Lo de hoy, a la vista.
 
@@ -853,9 +850,6 @@ La cuenta de cada vendedor la crea su empresa: la app no permite registrarse por
 
 Android 7.0 o superior e iOS 15 o superior. ¿Quieres verlo con tus datos? [Pide una demostración](https://zentrix.company/sales/contacto/#demo) o lee el [manual del vendedor](https://zentrix.company/sales/docs/).
 
-[Google Play](https://play.google.com/store/apps/details?id=com.leiros.vendoo)
-[App Store](https://apps.apple.com/app/id6811065669)
-
 
 ---
 
@@ -977,7 +971,6 @@ Para el equipo de tienda · Android
 
 Te enciendes al llegar a la tienda y el trabajo te llega solo: pedidos para preparar, entregas y devoluciones. Cuando terminas, te apagas y tu teléfono vuelve a ser tuyo.
 
-[Descargar en Google Play](https://play.google.com/store/apps/details?id=com.leiros.guuaowork)
 [Ver el manual](https://zentrix.company/work/docs/)
 
 Entras una vez. Después, con tu PIN o tu huella.
@@ -1072,7 +1065,6 @@ Para el personal de tienda de las empresas que usan Zentrix Work. No hay registr
 
 Para Android. ¿Tienes dudas? Escríbenos a [soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Soporte%20%E2%80%94%20Zentrix%20Work).
 
-[Google Play](https://play.google.com/store/apps/details?id=com.leiros.guuaowork)
 [Soporte](https://zentrix.company/work/soporte/)
 
 
@@ -2313,9 +2305,6 @@ Field sales · Android and iPhone
 
 The app your field sales team uses to build its route, take the order, collect payment and leave proof of every visit. With a signal or without one.
 
-[Google Play](https://play.google.com/store/apps/details?id=com.leiros.vendoo)
-[App Store](https://apps.apple.com/app/id6811065669)
-
 [Request a demo on your own data](https://zentrix.company/en/sales/contact/#demo) · [Versión en español](https://zentrix.company/sales/)
 
 Today, at a glance.
@@ -2425,9 +2414,6 @@ Each rep's account is created by their company: the app does not allow self sign
 ### Get Zentrix Sales
 
 Android 7.0 or later and iOS 15 or later. Want to see it on your own data? [Request a demo](https://zentrix.company/en/sales/contact/#demo).
-
-[Google Play](https://play.google.com/store/apps/details?id=com.leiros.vendoo)
-[App Store](https://apps.apple.com/app/id6811065669)
 
 [Privacy policy](https://zentrix.company/en/sales/privacy/) · [Terms of service](https://zentrix.company/en/sales/terms/) · [Support](https://zentrix.company/en/sales/support/) · [Contact](https://zentrix.company/en/sales/contact/)
 
@@ -2823,7 +2809,7 @@ Application
 Zentrix Sales (com.leiros.vendoo). Android 7.0 or later and iOS 15 or later.
 
 Download
-[Google Play](https://play.google.com/store/apps/details?id=com.leiros.vendoo) · [App Store](https://apps.apple.com/app/id6811065669)
+[Google Play](https://play.google.com/store/apps/details?id=com.leiros.vendoo) · [App Store](https://apps.apple.com/us/app/vendoo/id6811065669)
 
 Responsible for the app
 GUUAO LLC
@@ -3059,9 +3045,9 @@ Zentrix Sales
 
 ---
 
-## [Zentrix Software — Odoo® implementation and customization](https://zentrix.company/en/software/)
+## [Zentrix Software — Odoo® consulting and integration](https://zentrix.company/en/software/)
 
-Zentrix Software implements and customizes Odoo® in Venezuela, from diagnosis to adoption, with local tax localization and the software behind our apps.
+Zentrix Software implements, configures and integrates Odoo® with your other systems and with Zentrix Work and Zentrix Sales, from diagnosis to adoption.
 
 Business software · Odoo® implementation
 
@@ -3657,7 +3643,6 @@ For store teams · Android
 
 Clock in when you get to the store and the work comes to you: orders to pick, deliveries and returns. When you're done, clock out and your phone is yours again.
 
-[Get it on Google Play](https://play.google.com/store/apps/details?id=com.leiros.guuaowork)
 [Read the manual](https://zentrix.company/en/work/docs/)
 
 Sign in once. After that, use your PIN or fingerprint.
@@ -3752,7 +3737,6 @@ For store staff at companies that use Zentrix Work. There's no sign-up: your man
 
 For Android. Questions? Write to us at [soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Support%20%E2%80%94%20Zentrix%20Work).
 
-[Google Play](https://play.google.com/store/apps/details?id=com.leiros.guuaowork)
 [Support](https://zentrix.company/en/work/support/)
 
 
@@ -6753,7 +6737,7 @@ Aplicación
 Zentrix Sales (com.leiros.vendoo). Android 7.0 o superior e iOS 15 o superior.
 
 Descarga
-[Google Play](https://play.google.com/store/apps/details?id=com.leiros.vendoo) · [App Store](https://apps.apple.com/app/id6811065669)
+[Google Play](https://play.google.com/store/apps/details?id=com.leiros.vendoo) · [App Store](https://apps.apple.com/us/app/vendoo/id6811065669)
 
 Responsable
 GUUAO LLC
