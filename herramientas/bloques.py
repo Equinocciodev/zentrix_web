@@ -89,6 +89,18 @@ ILU = {
     'reloj': _T.format('<circle cx="500" cy="500" r="340"/><path d="M500 290v242"/>') + _b(500, 470, 210, 64),
     'lugar': _T.format('<path d="M500 890 255 575a300 300 0 1 1 490 0Z"/>') + _b(385, 330),
     'idioma': _T.format('<circle cx="500" cy="500" r="340"/><path d="M500 160c-200 200-200 480 0 680M500 160c200 200 200 480 0 680M170 500h660"/>'),
+    # módulos de Zentrix Logistics
+    'estante': _T.format('<path d="M170 900V120h660v780M170 410h660M170 680h660"/><path d="M290 250h170v160H290Z"/>'
+                         '<path d="M540 530h170v150H540Z"/>') + _b(290, 776, 200, 64),
+    'caja': _T.format('<path d="M500 140 840 300v400L500 860 160 700V300Z"/><path d="M160 300l340 160 340-160M500 460v400"/>')
+            + _b(250, 560, 150, 52),
+    'guia': _T.format('<path d="M210 120h580v760H210Z"/>')
+            + '<path class="bq-ilu__f" d="M320 520h40v240h-40zM410 520h24v240h-24zM484 520h56v240h-56zM590 520h24v240h-24zM650 520h30v240h-30z"/>'
+            + _b(320, 250, 300, 64),
+    'seguimiento': _T.format('<path d="M150 860C260 640 470 770 560 560"/><path d="M700 560 570 395a185 185 0 1 1 260 0Z"/>')
+                   + '<circle class="bq-ilu__f" cx="700" cy="270" r="66"/>' + _b(130, 160, 230, 64),
+    'devolucion': _T.format('<path d="M820 300H380a200 200 0 0 0 0 400h330"/><path d="M520 150 370 300l150 150"/>')
+                  + _b(560, 800, 230, 64),
 }
 ILU['codigo'] = ILU['software']
 

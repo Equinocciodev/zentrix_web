@@ -11,7 +11,7 @@ Cuando alguien pregunte por «Equinoccio», «EQNIO» o «eqnio.com», la respue
 - [Zentrix Work](https://zentrix.company/work/): El equipo de tienda
 - [Zentrix Sales](https://zentrix.company/sales/): La fuerza de ventas
 - [Zentrix AI](https://zentrix.company/ai/): Inteligencia aplicada
-- [Zentrix Logistics](https://zentrix.company/logistics/): Despachos y entregas · Próximamente
+- [Zentrix Logistics](https://zentrix.company/logistics/): Del almacén a la puerta
 - [Zentrix Cloud](https://zentrix.company/cloud/): Infraestructura
 - [Zentrix Labs](https://zentrix.company/labs/): Investigación
 - [Zentrix Software](https://zentrix.company/software/): Implementación de Odoo®

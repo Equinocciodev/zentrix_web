@@ -25,7 +25,7 @@ The site is mainly in Spanish; Zentrix Sales also has English pages under `https
 - **Zentrix Work**: Store teams. https://zentrix.company/work/
 - **Zentrix Sales**: Field sales. https://zentrix.company/sales/
 - **Zentrix AI**: Applied intelligence. https://zentrix.company/ai/
-- **Zentrix Logistics**: Dispatch and delivery · Coming soon. https://zentrix.company/logistics/
+- **Zentrix Logistics**: Warehouse to doorstep. https://zentrix.company/logistics/
 - **Zentrix Cloud**: Infrastructure. https://zentrix.company/cloud/
 - **Zentrix Labs**: Research. https://zentrix.company/labs/
 - **Zentrix Software**: Odoo® implementation. https://zentrix.company/software/

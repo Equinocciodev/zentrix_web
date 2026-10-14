@@ -493,7 +493,7 @@ BENEFICIO = {
     'ai': {'es': 'La información de tu empresa, al servicio de cada decisión.', 'en': 'Your company’s information, serving every decision.'},
     'cloud': {'es': 'Tus aplicaciones y tus datos, siempre disponibles.', 'en': 'Your applications and your data, always available.'},
     'labs': {'es': 'Nuevas ideas, probadas antes de llegar a tu operación.', 'en': 'New ideas, tested before they reach your operation.'},
-    'logistica': {'es': 'Del despacho a la entrega, con todo bajo control.', 'en': 'From dispatch to delivery, with everything under control.'},
+    'logistica': {'es': 'Del almacén a la puerta, sin perder el hilo.', 'en': 'From the warehouse to the door, without losing track.'},
     'software': {'es': 'Tu sistema de gestión, adaptado a cómo trabajas.', 'en': 'Your management system, adapted to how you work.'},
 }
 MOTIVO_PRODUCTO = {'work': 'pulso', 'sales': 'ruta', 'ai': 'onda', 'cloud': 'nube', 'labs': 'prisma',

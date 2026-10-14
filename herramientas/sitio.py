@@ -89,7 +89,7 @@ PRODUCTOS = [
     ('work', '/work/', 'Zentrix Work', 'El equipo de tienda', 'Store teams'),
     ('sales', '/sales/', 'Zentrix Sales', 'La fuerza de ventas', 'Field sales'),
     ('ai', '/ai/', 'Zentrix AI', 'Inteligencia aplicada', 'Applied intelligence'),
-    ('logistica', '/logistics/', 'Zentrix Logistics', 'Despachos y entregas · Próximamente', 'Dispatch and delivery · Coming soon'),
+    ('logistica', '/logistics/', 'Zentrix Logistics', 'Del almacén a la puerta', 'Warehouse to doorstep'),
     ('cloud', '/cloud/', 'Zentrix Cloud', 'Infraestructura', 'Infrastructure'),
     ('labs', '/labs/', 'Zentrix Labs', 'Investigación', 'Research'),
     ('software', '/software/', 'Zentrix Software', 'Implementación de Odoo®', 'Odoo® implementation'),
