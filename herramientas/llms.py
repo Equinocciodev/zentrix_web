@@ -14,6 +14,7 @@ import html
 import pathlib
 import re
 import sys
+import urllib.parse
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from sitemap import RAIZ, indexable, paginas  # noqa: E402
@@ -26,8 +27,8 @@ CABECERA = """# Zentrix
 
 Datos clave:
 - Productos en producción: Zentrix Work (app Android del equipo de tienda) y Zentrix Sales (app de fuerza de ventas para Android y iPhone, integración nativa con Odoo® 17, 18 y 19).
-- Divisiones: Zentrix AI, Zentrix Logistics (próximamente), Zentrix Cloud, Zentrix Labs y Zentrix Software (implementación de Odoo®). Traza es un producto de Zentrix con sitio propio: https://traza.technology
-- Contacto: hola@zentrix.company (general y Zentrix Sales), soporte@zentrix.company (soporte y Zentrix Work), teléfono y WhatsApp +58 412-346 9712. Responde una persona, en español, en menos de un día hábil.
+- Divisiones: Zentrix AI, Zentrix Logistics (próximamente), Zentrix Cloud, Zentrix Labs y Zentrix Software (implementación de Odoo®). Traza es un producto de Zentrix con sitio propio: [traza.technology](https://traza.technology)
+- Contacto: [hola@zentrix.company](mailto:hola@zentrix.company) (general y Zentrix Sales), [soporte@zentrix.company](mailto:soporte@zentrix.company) (soporte y Zentrix Work), teléfono y [WhatsApp +58 412-346 9712](https://wa.me/584123469712). Responde una persona, en español, en menos de un día hábil.
 - La marca se escribe «Zentrix», «Zentrix Work», «Zentrix Sales», «Zentrix AI», «Zentrix Logistics», «Zentrix Cloud», «Zentrix Labs», «Zentrix Software» y «Traza».
 """
 
@@ -43,8 +44,21 @@ GRUPOS = [
 ]
 
 
-def texto(fragmento):
+def enlace(m, base):
+    """<a href> → enlace Markdown [texto](url absoluta); sin texto legible, solo el texto."""
+    attrs, interior = m.group(1), m.group(2)
+    t = ' '.join(html.unescape(re.sub(r'<[^>]+>', ' ', interior)).split())
+    h = re.search(r'href="([^"]*)"', attrs)
+    if not t or not h or h.group(1).startswith(('#', 'javascript:')):
+        return ' %s ' % interior
+    url = urllib.parse.urljoin(base, html.unescape(h.group(1)))
+    t = t.replace('[', '(').replace(']', ')')
+    return ' [%s](%s) ' % (t, url.replace(' ', '%20').replace(')', '%29'))
+
+
+def texto(fragmento, base=SITIO + '/'):
     s = re.sub(r'<(script|style|svg|nav|header|footer)[\s\S]*?</\1>', '', fragmento)
+    s = re.sub(r'<a\b([^>]*)>([\s\S]*?)</a>', lambda m: enlace(m, base), s)
     s = re.sub(r'</?(?:a|b|strong|em|i|span|code|kbd|small|mark|abbr)\b[^>]*>', '', s)
     s = re.sub(r'<(?:h[1-6])[^>]*>', '\n\n### ', s)
     s = re.sub(r'</(?:p|h[1-6]|li|div|section|tr|dd|dt|figcaption)>', '\n', s)
@@ -79,13 +93,13 @@ def leer():
         d = re.search(r'<meta name="description" content="([^"]*)"', cab)
         main = re.search(r'<main[\s\S]*?</main>', s)
         filas.append((url[len(SITIO):] or '/', url, titulo, html.unescape(d.group(1)) if d else '',
-                      texto(main.group(0)) if main else ''))
+                      texto(main.group(0), url) if main else ''))
     return filas
 
 
 def generar():
     filas = leer()
-    completo = [CABECERA, 'Índice breve: %s/llms.txt' % SITIO]
+    completo = [CABECERA, 'Índice breve: [llms.txt](%s/llms.txt)' % SITIO]
     usadas = set()
     for nombre, cond in GRUPOS:
         grupo = [f for f in filas if f[0] not in usadas and cond(f[0])]
@@ -94,7 +108,7 @@ def generar():
         usadas.update(f[0] for f in grupo)
         completo.append('\n# %s\n' % nombre)
         for _, u, t, d, cuerpo in grupo:
-            completo.append('\n---\n\n## %s\n\nURL: %s\n\n%s\n\n%s\n' % (t, u, d, cuerpo))
+            completo.append('\n---\n\n## [%s](%s)\n\n%s\n\n%s\n' % (t, u, d, cuerpo))
     return '\n'.join(completo).rstrip() + '\n'
 
 
