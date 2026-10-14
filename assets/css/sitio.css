@@ -274,11 +274,9 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .pie__col--contacto { grid-area: cont; }
 .pie__col:not([class*="--"]) { grid-area: rec; }
 .pie__logo { display: block; height: 22px; width: auto; margin-bottom: 12px; }
-.pie__lema { margin: 0 0 20px; max-width: 30ch; }
-.pie__suite { display: flex; flex-wrap: nowrap; gap: 6px; }
-.pie__suite img { display: block; width: 22px; height: 22px; border-radius: 22%; }
+.pie__lema { margin: 0; max-width: 30ch; }
 /* Filete interior del sistema: sin él, las tejas negras («sl», «sw») se funden con el pie */
-.pie__suite img, .pie__productos img { outline: 1px solid rgba(255, 255, 255, .16); outline-offset: -1px; }
+.pie__productos img { outline: 1px solid rgba(255, 255, 255, .16); outline-offset: -1px; }
 .pie h2 { font-size: .8125rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--lima); margin: 0 0 14px; }
 .pie h3 { font-size: .8125rem; font-weight: 600; color: var(--texto-osc-2); margin: 0 0 4px; letter-spacing: .01em; }
 .pie__col li a { display: inline-flex; align-items: center; gap: 10px; min-height: 32px; padding: 2px 0; }
@@ -804,8 +802,11 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
   .pie__reja { grid-template-columns: repeat(3, 1fr); grid-template-areas: "marca marca marca" "prod emp rec" "prod legal legal" "cont cont cont"; }
 }
 @media (min-width: 1200px) {
-  .pie__reja { grid-template-columns: 1.25fr 1fr .8fr 1fr 1.2fr; grid-template-areas: "marca prod emp rec legal" "cont prod emp rec legal"; }
-  .pie__col--contacto { margin-top: 8px; }
+  /* La primera fila solo mide la marca: lo que sobra de las columnas altas va a la segunda, y
+     «Contacto» queda pegado al eslogan, sin hueco. */
+  .pie__reja { grid-template-columns: 1.25fr 1fr .8fr 1fr 1.2fr; grid-template-areas: "marca prod emp rec legal" "cont prod emp rec legal";
+    grid-template-rows: auto 1fr; }
+  .pie__col--contacto { margin-top: 8px; align-self: start; }
 }
 .nav { gap: 8px; }
 .nav__buscar:empty { display: none; }

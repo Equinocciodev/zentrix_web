@@ -117,6 +117,23 @@ Escríbenos por un proyecto, una demostración o una duda. Te responde una perso
 
 [Escribe a hola@zentrix.company](mailto:hola@zentrix.company?subject=Zentrix%3A%20hablemos)
 
+Escríbenos
+
+### ¿Sobre qué nos escribes?
+
+Elige el motivo y, si quieres, el producto: preparamos el asunto del correo o del WhatsApp para que llegue a la persona adecuada.
+
+Motivo Ventas o demostración Soporte de una app Alianzas Prensa
+
+Producto Varios o ninguno en concreto Zentrix Work Zentrix Sales Zentrix AI Zentrix Logistics Zentrix Cloud Zentrix Labs Zentrix Software
+Demostración con tus datos: tu catálogo, tu tarifa y tu ruta. Integración con tu ERP: con Odoo®, nativa; con los demás, a medida.
+Si ya usas una app, mira antes el [centro de soporte](https://zentrix.company/soporte/): preguntas frecuentes, acceso y cómo eliminar tu cuenta.
+Partners, integradores y proveedores: cuéntanos qué propones.
+Para entrevistas, notas y material de marca.
+
+[Escribir por correo](mailto:hola@zentrix.company?subject=Demostraci%C3%B3n%20%E2%80%94%20Zentrix&body=Nombre%3A%0AEmpresa%3A%0ATel%C3%A9fono%20%28opcional%29%3A%0ACu%C3%A9ntanos%20c%C3%B3mo%20trabaja%20hoy%20tu%20equipo%3A%0A)
+[Escribir por WhatsApp](https://wa.me/584123469712?text=Demostraci%C3%B3n%20%E2%80%94%20Zentrix)
+
 Canales
 
 ### Elige cómo prefieres escribirnos.
@@ -131,6 +148,7 @@ Escríbenos
 ¿Ya usas nuestras apps?
 
 [Soporte soporte@zentrix.company](mailto:soporte@zentrix.company)
+[Centro de soporte](https://zentrix.company/soporte/)
 [Manual de Zentrix Work](https://zentrix.company/work/docs/)
 [Manual de Zentrix Sales](https://zentrix.company/sales/docs/)
 
@@ -324,7 +342,7 @@ Más soluciones de Zentrix
 
 Además de nuestras dos apps, te ayudamos con inteligencia aplicada, trazabilidad, logística, infraestructura, nuevos productos y la implementación de tu sistema de gestión.
 
-[Conectores, asistentes y agentes que ponen la información de tu empresa al servicio de cada decisión. Solicita una demostración Conocer más →](https://zentrix.company/ai/) [Despachos, rutas, entregas y gestión de incidencias, en un mismo lugar. Próximamente. Próximamente Conocer más →](https://zentrix.company/logistics/) [Hospedaje, monitoreo y respaldos para que tus aplicaciones y tus datos estén siempre disponibles. Solicita una demostración Conocer más →](https://zentrix.company/cloud/) [Investigación, prototipos y validación de nuevos productos para ampliar lo que podemos ofrecerte. Investigación Conocer más →](https://zentrix.company/labs/) [Implementación y personalización de Odoo®, del diagnóstico a la adopción, y el software de nuestros productos. Solicita una demostración Conocer más →](https://zentrix.company/software/) [traza ® un producto de Documentos, productos y activos con un recorrido verificable: identificar, registrar, verificar y consultar. Tiene sitio propio. traza.technology Ir al sitio (se abre en otra pestaña)](https://traza.technology)
+[Conectores, asistentes y agentes que ponen la información de tu empresa al servicio de cada decisión. Disponible Conocer más →](https://zentrix.company/ai/) [Del almacén a la puerta: preparación, despacho, reparto con flota propia o de terceros y cobro contra entrega, sobre tu Odoo®. Disponible Conocer más →](https://zentrix.company/logistics/) [Hospedaje, monitoreo y respaldos para que tus aplicaciones y tus datos estén siempre disponibles. Disponible Conocer más →](https://zentrix.company/cloud/) [Investigación, prototipos y validación de nuevos productos para ampliar lo que podemos ofrecerte. Investigación Conocer más →](https://zentrix.company/labs/) [Implementación y personalización de Odoo®, del diagnóstico a la adopción, y el software de nuestros productos. Disponible Conocer más →](https://zentrix.company/software/) [traza ® un producto de Documentos, productos y activos con un recorrido verificable: identificar, registrar, verificar y consultar. Tiene sitio propio. traza.technology Ir al sitio (se abre en otra pestaña)](https://traza.technology)
 
 Odoo® conserva su marca y propiedad. Traza® es un producto de Zentrix®.
 
@@ -357,6 +375,7 @@ Escríbenos
 ¿Ya usas nuestras apps?
 
 [Soporte soporte@zentrix.company](mailto:soporte@zentrix.company)
+[Centro de soporte](https://zentrix.company/soporte/)
 [Manual de Zentrix Work](https://zentrix.company/work/docs/)
 [Manual de Zentrix Sales](https://zentrix.company/sales/docs/)
 
@@ -479,8 +498,8 @@ Soporte
 
 ### Cuando algo no funciona.
 
-- [Soporte de Zentrix Work Acceso, dudas frecuentes y cómo eliminar tus datos. Abrir](https://zentrix.company/work/soporte/)
-- [Soporte de Zentrix Sales Acceso, dudas frecuentes y cómo eliminar tus datos. Abrir](https://zentrix.company/sales/soporte/)
+- [Soporte de Zentrix Work Acceso, dudas frecuentes y cómo eliminar tu cuenta. Abrir](https://zentrix.company/soporte/#work)
+- [Soporte de Zentrix Sales Acceso, dudas frecuentes y cómo eliminar tu cuenta. Abrir](https://zentrix.company/soporte/#sales)
 - [Contacto Escribe a soporte@ o por WhatsApp: te responde una persona. Abrir](https://zentrix.company/contacto/)
 
 Legal
@@ -832,59 +851,191 @@ Te responde una persona, en español, en menos de un día hábil. Escríbenos a 
 
 ---
 
-## [Zentrix Logistics — Gestión de despachos y entregas](https://zentrix.company/logistics/)
+## [Zentrix Logistics — Software de logística y reparto](https://zentrix.company/logistics/)
 
-Zentrix Logistics, próximamente: despachos, rutas, entregas y gestión de incidencias en un mismo lugar, para cumplir lo que prometiste a tus clientes.
+Software de logística y reparto sobre Odoo®: preparación, despacho y última milla, control de flota de reparto en vivo, cobro contra entrega y devoluciones.
 
-Zentrix Logistics · Próximamente
+Zentrix Logistics · Logística y reparto
 
-### Del despacho a la entrega, con todo bajo control.
+### Del almacén a la puerta, sin perder el hilo.
 
-Estamos preparando Zentrix Logistics: despachos, rutas, entregas y gestión de incidencias en un mismo lugar.
+Abastecimiento, preparación, despacho, reparto, cobro y devoluciones sobre tu Odoo®, con tu equipo trabajando desde Zentrix Work. Ya mueve a diario los pedidos de GUUAO y de Grupo Leiros.
 
-[Avísame cuando esté lista](mailto:hola@zentrix.company?subject=Zentrix%20Logistics%3A%20quiero%20saber%20m%C3%A1s) Qué incluirá
-
-Próximamente
+[Hablemos](https://zentrix.company/contacto/) Ver el recorrido
 
 El problema que resuelve
 
-### Lo que cambia para tu equipo.
+### Entre el almacén y la puerta se pierde el hilo.
 
-Entre el almacén y la puerta de tu cliente pasan muchas cosas: el despacho, la ruta, la entrega y, a veces, una incidencia. Si cada una se gestiona por separado, se pierde el hilo del compromiso con tu cliente.
+El pedido sale del sistema, pero el bulto, la guía, quién lo lleva, lo que se cobró y lo que volvió terminan en hojas de cálculo, papeles y grupos de mensajería. Cuando el cliente pregunta, nadie sabe responder con certeza.
+Zentrix Logistics mantiene todo en un solo registro de Odoo y le pide a cada paso su evidencia: el escaneo, la etiqueta, el código de retiro, la foto y el comprobante.
 
 ### Para quién es
 
-Para empresas de distribución y logística que despachan, reparten y entregan cada día, y quieren cumplir lo que prometieron a sus clientes.
+Para empresas de retail, distribución y consumo masivo que preparan, despachan y reparten cada día, con Odoo® como sistema de inventario. Si aún no lo tienes, lo implantamos con Zentrix Software.
 
-Qué ganas
+Cómo funciona
 
-### Lo que Zentrix Logistics hará por ti.
+### Siete pasos, un solo registro.
+
+Cada paso escribe en Odoo en el momento y deja lista la siguiente tarea para quien la tiene que hacer.
 
 - 01
 
-### Despachos
-Lo que sale del almacén, organizado.
+### Abastecer
+Las reglas de reabastecimiento de Odoo, al día y sin frenar las ventas.
 
 - 02
 
-### Rutas
-Cada entrega en su recorrido.
+### Preparar
+El pedido suena en el teléfono, se escanea producto por producto y cada bulto va a su sitio en el rack.
 
 - 03
 
-### Entregas
-El compromiso con tu cliente, cumplido.
+### Empacar
+Ticket de preparación y etiqueta por bulto, impresos solos en la estación de la tienda.
 
 - 04
 
-### Gestión de incidencias
-Lo que no sale como estaba previsto, atendido.
+### Despachar
+Lote de despacho con conductor, vehículo y andén, y la guía que viaja hasta la factura.
 
-### ¿Te interesa? Te avisamos.
+- 05
 
-Zentrix Logistics llega pronto. Escríbenos a [hola@zentrix.company](mailto:hola@zentrix.company?subject=Zentrix%20Logistics%3A%20quiero%20saber%20m%C3%A1s) o por [WhatsApp +58 412-346 9712](https://wa.me/584123469712).
+### Repartir
+Con tu flota o con un courier externo. El conductor ordena sus paradas y navega por voz.
 
-[Avísame cuando esté lista](mailto:hola@zentrix.company?subject=Zentrix%20Logistics%3A%20quiero%20saber%20m%C3%A1s)
+- 06
+
+### Cobrar
+En la puerta, en efectivo o con datáfono, con foto del comprobante y la referencia.
+
+- 07
+
+### Devolver
+Lo que no se entregó vuelve con su motivo, y lo autorizado se recibe en la tienda.
+
+Módulos
+
+### Todo lo que pasa entre el estante y el cliente.
+
+Cada módulo dice si ya está en producción o en desarrollo. No vendemos lo que todavía no existe.
+
+- [Reparto con flota propia o de terceros Tus conductores trabajan desde Zentrix Work y el courier externo (hoy ARMI) se cotiza por cargas, se despacha y se sigue por webhook, todo en el mismo flujo. En producción Así reparte el conductor](https://zentrix.company/work/docs/reparto.html)
+
+### Abastecimiento
+Reabastecimiento con las reglas de Odoo, rápido aunque tengas miles de productos, y un inventario que no puede quedar en negativo. Mínimos y máximos sugeridos, en camino.
+En producciónEn desarrolloQué está listo
+- [Preparación y empaque Escáner de cámara, faltantes con equivalente, bultos en rack, etiqueta por bulto y FEFO en el punto de venta: sale primero el lote que vence primero. En producción Así se prepara](https://zentrix.company/work/docs/preparar.html)
+
+### Despacho y guías
+Lotes de despacho con conductor, vehículo y andén. Ningún bulto sale sin leer su etiqueta, y la guía llega a la factura. Guías por ruta automáticas, en desarrollo.
+En producciónEn desarrolloQué está listo
+
+### Seguimiento en vivo y puesto de control
+Pedidos por tienda, mapa de la flota e incidencias en una consola. Desde ahí se avisa al cliente de un retraso o se pausa una tienda.
+En producciónQué está listo
+- [Cobro contra entrega Cada cobro tiene dueño y reloj: se declara en la puerta, se concilia al cerrar el viaje y, si alguien lleva dinero más de 24 horas, no abre turno sin autorización. En producción Así se cobra en la puerta](https://zentrix.company/work/docs/reparto.html)
+- [Devoluciones En la tienda se recibe solo lo que Soporte autorizó, con foto obligatoria. En la calle, «No pude entregar» registra el motivo y el pedido vuelve. En producción Así se recibe una devolución](https://zentrix.company/work/docs/devoluciones.html)
+
+Integración
+
+### Tres capas que trabajan como una.
+
+Zentrix Logistics no es otro sistema que haya que sincronizar. Vive sobre el inventario de tu Odoo y le da a tu gente en la tienda y en la calle una app hecha para su trabajo.
+
+- Las personas
+
+### Zentrix Work
+Preparadores, entregadores, conductores y quien recibe devoluciones trabajan desde su teléfono, con turno, avisos que suenan, escáner y prueba de entrega.
+[Conocer Zentrix Work](https://zentrix.company/work/)
+
+- Las reglas y la calle
+
+### Zentrix Logistics
+Arma cargas y guías, conecta con los couriers, pide evidencia en cada paso y le da al puesto de control la vista de la calle.
+
+- El inventario
+
+### Odoo®
+Productos, lotes y vencimientos, almacenes, reabastecimiento, albaranes, facturas y pagos. La única fuente de la verdad.
+[Conocer Odoo®](https://zentrix.company/software/)
+
+Sectores
+
+### Hecho para quien mueve producto todos los días.
+
+### Retail y pedidos a domicilio
+Tiendas que preparan los pedidos en línea y los entregan en mostrador o en la puerta.
+- Preparación guiada con escáner y bultos en rack.
+- Retiro en tienda con código y verificación de edad si hay licor.
+- Reparto con tus conductores o con un courier externo.
+
+### Distribución mayorista
+Despachos por lotes y rutas, con choferes, vehículos y facturas que se entregan al cliente.
+- Lotes de despacho con conductor, vehículo y andén.
+- Guía de despacho hasta la factura y el pedido.
+- Crédito contado desde la entrega, no desde la factura.
+
+### Consumo masivo
+Producto con lote y vencimiento, mucha rotación y cobro en la calle.
+- FEFO: sale primero el lote que vence primero.
+- Inventario sin negativos y lotes que no se inventan.
+- Cobro contra entrega con custodia y conciliación.
+
+Casos reales
+
+### En producción, todos los días.
+
+Zentrix Logistics nace de dos operaciones reales que comparten un mismo Odoo®.
+
+G
+
+### GUUAO
+Retail y pedidos a domicilio · Venezuela
+Los pedidos de la app suenan en el teléfono del equipo de tienda, se preparan con el escáner, salen con una etiqueta por bulto y llegan a la puerta con conductores propios o con un courier externo. El puesto de control mira la calle en vivo y cada cobro contra entrega se concilia.
+- [Zentrix Work](https://zentrix.company/work/)
+- [Manual de reparto](https://zentrix.company/work/docs/reparto.html)
+GL
+
+### Grupo Leiros
+Distribución de licores · Venezuela
+Despacha por lotes con conductor, vehículo y andén. La guía de despacho viaja hasta la factura, los días de crédito se cuentan desde la entrega y los retiros que piden los vendedores en la calle se programan con chofer y vehículo.
+- [Zentrix Sales](https://zentrix.company/sales/)
+- [Clientes](https://zentrix.company/clientes/)
+
+Transparencia
+
+### Qué está en producción y qué está en desarrollo.
+
+Preferimos decírtelo claro desde el principio.
+
+### En producción En producción hoy
+- Preparación guiada con escáner, bultos en rack, ticket y etiqueta por bulto, y agentes de impresión por tienda.
+- FEFO y control de lotes en el punto de venta. Inventario sin negativos.
+- Reabastecimiento con las reglas de Odoo, sin frenar las ventas.
+- Lotes de despacho, guía hasta la factura, entrega de facturas y retiros programados con chofer y vehículo.
+- Reparto con conductores propios en Zentrix Work y con courier externo (ARMI, prepago).
+- Puesto de control: pedidos por tienda, mapa de flota, incidencias, aviso de retraso y pausa de tiendas.
+- Cobro contra entrega con custodia, conciliación y cierre de viaje.
+- Devoluciones autorizadas recibidas en tienda.
+
+### En desarrollo En desarrollo
+- Mínimos y máximos sugeridos, pronósticos y fecha de llegada de las compras.
+- Conteos cíclicos planificados, para que ningún producto pase más de 90 días sin contar.
+- Cruces de lote propuestos, que solo se aplican con aprobación.
+- Guías por ruta generadas en borrador.
+- Tarifa automática de la flota propia y vehículo según el peso.
+- Cobro contra entrega a través del courier externo.
+
+### Lo que no hace
+No optimiza rutas por su cuenta: el conductor ordena sus paradas. Tampoco tiene, por ahora, una página de seguimiento para el cliente final.
+
+### Hablemos de tu operación.
+
+Cuéntanos cómo despachas y repartes hoy, y te enseñamos cómo se vería con Zentrix Logistics sobre tu Odoo®.
+
+[Hablemos](https://zentrix.company/contacto/) [Escríbenos por WhatsApp](https://wa.me/584123469712)
 
 
 ---
@@ -899,7 +1050,7 @@ Para tu fuerza de ventas · Android y iPhone
 
 Zentrix Sales es la app de fuerza de ventas con la que tu equipo arma su ruta, visita a cada cliente, toma el pedido, cobra y deja constancia de todo desde el teléfono, aunque no haya señal.
 
-[Pide una demostración con tus datos](https://zentrix.company/sales/contacto/#demo) · [English](https://zentrix.company/en/sales/)
+[Pide una demostración con tus datos](https://zentrix.company/contacto/?producto=sales#motivo) · [English](https://zentrix.company/en/sales/)
 
 Lo de hoy, a la vista.
 
@@ -1035,7 +1186,7 @@ Zentrix Sales no es otro sistema con su propia verdad: es la forma en que la cal
 
 Con Odoo®, la integración es nativa y está en producción; con los demás sistemas, la construimos a la medida de tu operación. Las marcas pertenecen a sus titulares.
 
-[Quiero verlo con mis datos](https://zentrix.company/sales/contacto/#demo)
+[Quiero verlo con mis datos](https://zentrix.company/contacto/?producto=sales#motivo)
 
 Seguridad
 
@@ -1076,7 +1227,7 @@ La cuenta de cada vendedor la crea su empresa: la app no permite registrarse por
 
 ### Descarga Zentrix Sales
 
-Android 7.0 o superior e iOS 15 o superior. ¿Quieres verlo con tus datos? [Pide una demostración](https://zentrix.company/sales/contacto/#demo) o lee el [manual del vendedor](https://zentrix.company/sales/docs/).
+Android 7.0 o superior e iOS 15 o superior. ¿Quieres verlo con tus datos? [Pide una demostración](https://zentrix.company/contacto/?producto=sales#motivo) o lee el [manual del vendedor](https://zentrix.company/sales/docs/).
 
 
 ---
@@ -1360,7 +1511,7 @@ Para el personal de tienda de las empresas que usan Zentrix Work. No hay registr
 
 Para Android. ¿Tienes dudas? Escríbenos a [soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Soporte%20%E2%80%94%20Zentrix%20Work).
 
-[Soporte](https://zentrix.company/work/soporte/)
+[Soporte](https://zentrix.company/soporte/#work)
 
 
 # Soluciones
@@ -1550,7 +1701,7 @@ El pedido entra, el equipo de tienda lo prepara y lo entrega, y la caja cuadra a
 ### Distribución y venta en ruta
 Tus vendedores están en la calle, a veces sin señal, y la oficina necesita saber qué se vendió y qué se cobró.
 - [Zentrix Sales](https://zentrix.company/sales/): pedidos, visitas y cobranza aunque no haya señal, directo a tu sistema.
-- [Zentrix Logistics](https://zentrix.company/logistics/): despachos, rutas y entregas en un mismo lugar (próximamente).
+- [Zentrix Logistics](https://zentrix.company/logistics/): preparación, despacho, reparto y cobro contra entrega sobre tu Odoo®.
 - [Odoo® en Venezuela](https://zentrix.company/soluciones/odoo-venezuela/): el sistema de gestión que recibe los pedidos y los cobros.
 
 Cómo trabajamos
@@ -2281,6 +2432,23 @@ Write to us about a project, a demo or a question. A person from the team replie
 
 [Write to hola@zentrix.company](mailto:hola@zentrix.company?subject=Zentrix%3A%20let%E2%80%99s%20talk)
 
+Write to us
+
+### What are you writing about?
+
+Pick a reason and, if you like, a product: we fill in the email or WhatsApp subject so it reaches the right person.
+
+Reason Sales or a demo Support for an app Partnerships Press
+
+Product Several or none in particular Zentrix Work Zentrix Sales Zentrix AI Zentrix Logistics Zentrix Cloud Zentrix Labs Zentrix Software
+A demo on your own data: your catalog, your price list and your route. ERP integration: native with Odoo®, custom with the rest.
+If you already use an app, check the [support center](https://zentrix.company/en/support/) first: common questions, access and how to delete your account.
+Partners, integrators and suppliers: tell us what you have in mind.
+For interviews, articles and brand material.
+
+[Write by email](mailto:hola@zentrix.company?subject=Demo%20%E2%80%94%20Zentrix&body=Name%3A%0ACompany%3A%0APhone%20%28optional%29%3A%0ATell%20us%20how%20your%20team%20works%20today%3A%0A)
+[Write on WhatsApp](https://wa.me/584123469712?text=Demo%20%E2%80%94%20Zentrix)
+
 Channels
 
 ### Pick how you’d like to reach us.
@@ -2295,6 +2463,7 @@ Write to us
 Already using our apps?
 
 [Support soporte@zentrix.company](mailto:soporte@zentrix.company)
+[Support center](https://zentrix.company/en/support/)
 [Manual for Zentrix Work](https://zentrix.company/en/work/docs/)
 [Manual for Zentrix Sales](https://zentrix.company/en/sales/docs/)
 
@@ -2578,7 +2747,7 @@ More Zentrix solutions
 
 Beyond our two apps, we help you with applied intelligence, traceability, logistics, infrastructure, new products, and implementing your management system.
 
-[Connectors, assistants, and agents that put your company's information to work behind every decision. Request a demo Learn more →](https://zentrix.company/en/ai/) [Dispatch, routes, deliveries, and incident management, all in one place. Coming soon. Coming soon Learn more →](https://zentrix.company/en/logistics/) [Hosting, monitoring, and backups so your applications and your data are always available. Request a demo Learn more →](https://zentrix.company/en/cloud/) [Research, prototyping, and validation of new products to expand what we can offer you. Research Learn more →](https://zentrix.company/en/labs/) [Odoo® implementation and customization, from assessment to adoption, plus the software behind our products. Request a demo Learn more →](https://zentrix.company/en/software/) [traza ® a product of Documents, products, and assets with a verifiable trail: identify, record, verify, and look up. It has its own website. traza.technology Visit the site (opens in a new tab)](https://traza.technology)
+[Connectors, assistants, and agents that put your company's information to work behind every decision. Available Learn more →](https://zentrix.company/en/ai/) [From the warehouse to the door: picking, dispatch, delivery with your own fleet or a third party and cash on delivery, on top of your Odoo®. Available Learn more →](https://zentrix.company/en/logistics/) [Hosting, monitoring, and backups so your applications and your data are always available. Available Learn more →](https://zentrix.company/en/cloud/) [Research, prototyping, and validation of new products to expand what we can offer you. Research Learn more →](https://zentrix.company/en/labs/) [Odoo® implementation and customization, from assessment to adoption, plus the software behind our products. Available Learn more →](https://zentrix.company/en/software/) [traza ® a product of Documents, products, and assets with a verifiable trail: identify, record, verify, and look up. It has its own website. traza.technology Visit the site (opens in a new tab)](https://traza.technology)
 
 Odoo® remains the property of its owner. Traza® is a Zentrix® product.
 
@@ -2611,6 +2780,7 @@ Write to us
 Already using our apps?
 
 [Support soporte@zentrix.company](mailto:soporte@zentrix.company)
+[Support center](https://zentrix.company/en/support/)
 [Manual for Zentrix Work](https://zentrix.company/en/work/docs/)
 [Manual for Zentrix Sales](https://zentrix.company/en/sales/docs/)
 
@@ -2722,59 +2892,225 @@ A real person replies, in Spanish or English, within one business day. Email us 
 
 ---
 
-## [Zentrix Logistics — Dispatch and delivery, under control](https://zentrix.company/en/logistics/)
+## [Legal — Privacy and terms | Zentrix](https://zentrix.company/en/legal/)
 
-Zentrix Logistics, coming soon: dispatch, routes, deliveries and incident handling in one place, so you keep every promise you make to your customers.
+The privacy policies and terms of Zentrix Work and Zentrix Sales, plus the privacy and cookie policy of the zentrix.company website, in one index.
 
-Zentrix Logistics · Coming soon
+Legal
 
-### From dispatch to delivery, with everything under control.
+### Privacy and terms.
 
-We’re getting Zentrix Logistics ready: dispatches, routes, deliveries, and incident management, all in one place.
+Each app has its own privacy policy and terms, because each one handles different data. Here they all are, plus the one for this website.
 
-[Let me know when it’s ready](mailto:hola@zentrix.company?subject=Zentrix%20Logistics%3A%20I%27d%20like%20to%20know%20more) What it will include
+### Privacy policies
 
-Coming soon
+- [Zentrix Work What the store team app collects, why and for how long. →](https://zentrix.company/en/work/privacy/)
+- [Zentrix Sales What the field sales app collects, why and for how long. →](https://zentrix.company/en/sales/privacy/)
+- [Website and cookies What zentrix.company measures, with consent, and how to withdraw it. →](https://zentrix.company/en/privacy/)
+
+### Terms
+
+- [Zentrix Work Terms of use of the app. →](https://zentrix.company/en/work/terms/)
+- [Zentrix Sales Terms of service of the app. →](https://zentrix.company/en/sales/terms/)
+
+The English texts are courtesy translations; the Spanish version is the binding one.
+
+### Your data
+
+To see, correct or delete your account or your data in an app, follow the instructions on its support page:
+
+- [Delete your Zentrix Work account](https://zentrix.company/en/support/#delete-account-work)
+
+- [Delete your Zentrix Sales account](https://zentrix.company/en/support/#delete-account-sales)
+
+
+---
+
+## [Zentrix Logistics — Logistics and delivery software](https://zentrix.company/en/logistics/)
+
+Logistics and delivery software on Odoo®: picking, dispatch and last-mile delivery, live delivery fleet management, cash on delivery and returns.
+
+Zentrix Logistics · Logistics and delivery
+
+### From the warehouse to the door, without losing track.
+
+Replenishment, picking, dispatch, delivery, cash on delivery and returns on top of your Odoo®, with your team working from Zentrix Work. It already moves GUUAO’s and Grupo Leiros’s orders every day.
+
+[Let’s talk](https://zentrix.company/en/contact/) See the journey
 
 The problem it solves
 
-### What changes for your team.
+### Between the warehouse and the door, things get lost.
 
-A lot happens between your warehouse and your customer’s door: the dispatch, the route, the delivery, and sometimes an incident. When each one is handled separately, you lose track of what you promised your customer.
+The order leaves the system, but the parcels, the dispatch note, who carries it, what was collected and what came back end up in spreadsheets, paper and chat groups. When the customer asks, nobody can answer for sure.
+Zentrix Logistics keeps everything in a single Odoo record and asks every step for its proof: the scan, the label, the pickup code, the photo and the receipt.
 
-### Who it’s for
+### Who it is for
 
-For distribution and logistics companies that dispatch, route, and deliver every day, and want to keep their promises to their customers.
+For retail, distribution and consumer goods companies that pick, dispatch and deliver every day, with Odoo® as their inventory system. If you don’t have it yet, Zentrix Software implements it.
 
-What you get
+How it works
 
-### What Zentrix Logistics will do for you.
+### Seven steps, one record.
+
+Every step writes to Odoo as it happens and hands the next task to whoever has to do it.
 
 - 01
 
-### Dispatches
-Everything leaving the warehouse, organized.
+### Replenish
+Odoo’s replenishment rules, kept up to date without slowing down sales.
 
 - 02
 
-### Routes
-Every delivery on its route.
+### Pick
+The order rings on the phone, every item is scanned and every parcel gets its rack slot.
 
 - 03
 
-### Deliveries
-Your promise to your customer, kept.
+### Pack
+A picking ticket and a label per parcel, printed on their own at the store station.
 
 - 04
 
-### Incident management
-When things don’t go as planned, handled.
+### Dispatch
+A dispatch batch with driver, vehicle and dock, and a dispatch note that follows the invoice.
 
-### Interested? We’ll let you know.
+- 05
 
-Zentrix Logistics is coming soon. Email us at [hola@zentrix.company](mailto:hola@zentrix.company?subject=Zentrix%20Logistics%3A%20I%27d%20like%20to%20know%20more) or reach us on [WhatsApp +58 412-346 9712](https://wa.me/584123469712).
+### Deliver
+With your own fleet or an external courier. Drivers order their stops and navigate by voice.
 
-[Let me know when it’s ready](mailto:hola@zentrix.company?subject=Zentrix%20Logistics%3A%20I%27d%20like%20to%20know%20more)
+- 06
+
+### Collect
+At the door, in cash or by card terminal, with a photo of the receipt and its reference.
+
+- 07
+
+### Return
+What wasn’t delivered comes back with a reason, and authorized returns are received in store.
+
+Modules
+
+### Everything that happens between the shelf and the customer.
+
+Every module says whether it is in production or in development. We don’t sell what doesn’t exist yet.
+
+- [Delivery with your own fleet or a third party Your drivers work from Zentrix Work, and the external courier (ARMI today) is quoted by load, dispatched and tracked by webhook, all in the same flow. In production How drivers deliver](https://zentrix.company/en/work/docs/)
+
+### Replenishment
+Replenishment with Odoo’s rules, fast even with thousands of products, and stock that can’t go negative. Suggested minimums and maximums are on the way.
+In productionIn developmentWhat’s ready
+- [Picking and packing Camera scanner, shortages with a suggested substitute, parcels on the rack, a label per parcel and FEFO at the point of sale: the lot that expires first leaves first. In production How picking works](https://zentrix.company/en/work/docs/)
+
+### Dispatch and dispatch notes
+Dispatch batches with driver, vehicle and dock. No parcel leaves until its label is scanned, and the dispatch note reaches the invoice. Automatic route notes are in development.
+In productionIn developmentWhat’s ready
+
+### Live tracking and control room
+Orders per store, the fleet map and incidents in one console. From there you can warn a customer about a delay or pause a store.
+In productionWhat’s ready
+- [Cash on delivery Every payment has an owner and a clock: declared at the door, reconciled when the trip closes, and anyone holding cash for over 24 hours can’t start a shift without approval. In production How drivers collect](https://zentrix.company/en/work/docs/)
+- [Returns Stores receive only what Support authorized, with a mandatory photo. On the road, “Couldn’t deliver” records the reason and the order comes back. In production How returns work](https://zentrix.company/en/work/docs/)
+
+Integration
+
+### Three layers that work as one.
+
+Zentrix Logistics isn’t another system to sync. It lives on top of your Odoo inventory and gives your people in store and on the road an app built for their job.
+
+- The people
+
+### Zentrix Work
+Pickers, counter staff, drivers and whoever receives returns work from their phone, with shifts, alerts that ring, a scanner and proof of delivery.
+[Learn more Zentrix Work](https://zentrix.company/en/work/)
+
+- The rules and the road
+
+### Zentrix Logistics
+Builds loads and dispatch notes, connects to couriers, asks for proof at every step and gives the control room a view of the street.
+
+- The inventory
+
+### Odoo®
+Products, lots and expiry dates, warehouses, replenishment, transfers, invoices and payments. The single source of truth.
+[Learn more Odoo®](https://zentrix.company/en/software/)
+
+Industries
+
+### Built for companies that move product every day.
+
+### Retail and home delivery
+Stores that pick online orders and hand them over at the counter or at the door.
+- Guided picking with a scanner and parcels on the rack.
+- In-store pickup with a code, and age checks for orders with liquor.
+- Delivery with your drivers or an external courier.
+
+### Wholesale distribution
+Dispatch by batches and routes, with drivers, vehicles and invoices handed to the customer.
+- Dispatch batches with driver, vehicle and dock.
+- Dispatch notes that follow the invoice and the order.
+- Credit terms counted from delivery, not from the invoice.
+
+### Consumer goods
+Products with lots and expiry dates, high turnover and cash collected on the road.
+- FEFO: the lot that expires first leaves first.
+- No negative stock and no made-up lots.
+- Cash on delivery with custody and reconciliation.
+
+Real cases
+
+### In production, every day.
+
+Zentrix Logistics comes from two real operations that share the same Odoo®.
+
+G
+
+### GUUAO
+Retail and home delivery · Venezuela
+Orders from the app ring on the store team’s phones, get picked with the scanner, leave with a label on every parcel and reach the door with in-house drivers or an external courier. The control room watches the street live and every cash-on-delivery payment is reconciled.
+- [Zentrix Work](https://zentrix.company/en/work/)
+- [Zentrix Work manual](https://zentrix.company/en/work/docs/)
+GL
+
+### Grupo Leiros
+Beverage distribution · Venezuela
+It dispatches in batches with driver, vehicle and dock. The dispatch note follows the invoice, credit days are counted from delivery, and pickups requested by field reps are scheduled with a driver and a vehicle.
+- [Zentrix Sales](https://zentrix.company/en/sales/)
+- [Customers](https://zentrix.company/en/customers/)
+
+Transparency
+
+### What’s in production and what’s in development.
+
+We’d rather be clear from the start.
+
+### In production In production today
+- Guided picking with a scanner, parcels on the rack, a ticket and a label per parcel, and print agents in each store.
+- FEFO and lot control at the point of sale. No negative stock.
+- Replenishment with Odoo’s rules, without slowing down sales.
+- Dispatch batches, dispatch notes through to the invoice, invoice hand-over and pickups scheduled with driver and vehicle.
+- Delivery with in-house drivers on Zentrix Work and an external courier (ARMI, prepaid).
+- Control room: orders per store, fleet map, incidents, delay alerts and store pausing.
+- Cash on delivery with custody, reconciliation and trip closing.
+- Authorized returns received in store.
+
+### In development In development
+- Suggested minimums and maximums, forecasts and purchase arrival dates.
+- Planned cycle counts, so no product goes more than 90 days uncounted.
+- Proposed lot swaps, applied only with approval.
+- Route dispatch notes generated as drafts.
+- Automatic pricing for your own fleet and vehicle choice by weight.
+- Cash on delivery through the external courier.
+
+### What it doesn’t do
+It doesn’t optimize routes on its own: drivers order their stops. And, for now, there is no tracking page for the end customer.
+
+### Let’s talk about your operation.
+
+Tell us how you dispatch and deliver today, and we’ll show you how it would look with Zentrix Logistics on your Odoo®.
+
+[Let’s talk](https://zentrix.company/en/contact/) [Message us on WhatsApp](https://wa.me/584123469712)
 
 
 ---
@@ -2827,8 +3163,8 @@ Support
 
 ### When something doesn’t work.
 
-- [Zentrix Work support Access, common questions and how to delete your data. Open](https://zentrix.company/en/work/support/)
-- [Zentrix Sales support Access, common questions and how to delete your data. Open](https://zentrix.company/en/sales/support/)
+- [Zentrix Work support Access, common questions and how to delete your account. Open](https://zentrix.company/en/support/#work)
+- [Zentrix Sales support Access, common questions and how to delete your account. Open](https://zentrix.company/en/support/#sales)
 - [Contact Write to support@ or WhatsApp: a person replies. Open](https://zentrix.company/en/contact/)
 
 Legal
@@ -2853,51 +3189,6 @@ For developers and AI
 Write to us and a person will help you within one business day.
 
 [Write to us](mailto:hola@zentrix.company?subject=Zentrix%3A%20question) [Contact](https://zentrix.company/en/contact/)
-
-
----
-
-## [Contact — Zentrix Sales](https://zentrix.company/en/sales/contact/)
-
-Request a Zentrix Sales demo on your own data: tell us how your team sells today. Or write to us by email, phone or WhatsApp, no strings attached.
-
-Contact
-
-### Let's talk about your sales force.
-
-Tell us how your team sells today and we will show you Zentrix Sales running on your own data.
-
-### Request your demo
-
-Name
-Company
-
-Email
-Phone (optional)
-
-Reps out in the field (optional) Pick one 1 to 5 6 to 20 21 to 50 51 to 150 More than 150
-Message
-Show me Zentrix Sales
-Sending opens your email app with the message ready. No strings attached.
-
-The form needs JavaScript to put the email together. Without it, write to us directly at [hola@zentrix.company](mailto:hola@zentrix.company).
-
-### An answer in under one business day
-A person replies, not a bot.
-
-### A demo on your own data
-Your catalog, your price list and your route.
-
-### Integration with your ERP
-With Odoo®, native. With the rest, custom-built.
-
-Or write to us directly: [hola@zentrix.company](mailto:hola@zentrix.company) · [WhatsApp +58 412-346 9712](https://wa.me/584123469712)
-
-### Zentrix Sales support
-
-If you already use the app and need help, or want to see, correct or delete your data, go to the [support page](https://zentrix.company/en/sales/support/).
-
-[Go to support](https://zentrix.company/en/sales/support/)
 
 
 ---
@@ -2946,7 +3237,7 @@ Field sales · Android and iPhone
 
 The app your field sales team uses to build its route, take the order, collect payment and leave proof of every visit. With a signal or without one.
 
-[Request a demo on your own data](https://zentrix.company/en/sales/contact/#demo) · [Versión en español](https://zentrix.company/sales/)
+[Request a demo on your own data](https://zentrix.company/en/contact/?producto=sales#motivo) · [Versión en español](https://zentrix.company/sales/)
 
 Today, at a glance.
 
@@ -3087,9 +3378,9 @@ Each rep's account is created by their company: the app does not allow self sign
 
 ### Get Zentrix Sales
 
-Android 7.0 or later and iOS 15 or later. Want to see it on your own data? [Request a demo](https://zentrix.company/en/sales/contact/#demo).
+Android 7.0 or later and iOS 15 or later. Want to see it on your own data? [Request a demo](https://zentrix.company/en/contact/?producto=sales#motivo).
 
-[Privacy policy](https://zentrix.company/en/sales/privacy/) · [Terms of service](https://zentrix.company/en/sales/terms/) · [Support](https://zentrix.company/en/sales/support/) · [Contact](https://zentrix.company/en/sales/contact/)
+[Privacy policy](https://zentrix.company/en/sales/privacy/) · [Terms of service](https://zentrix.company/en/sales/terms/) · [Support](https://zentrix.company/en/support/#sales) · [Contact](https://zentrix.company/en/contact/?producto=sales#motivo)
 
 
 ---
@@ -3447,61 +3738,6 @@ Change note (13 October 2026). The app was renamed Zentrix Sales, and this polic
 GUUAO LLC [hola@zentrix.company](mailto:hola@zentrix.company)
 
 Zentrix Sales
-
-
----
-
-## [Support — Zentrix Sales](https://zentrix.company/en/sales/support/)
-
-Zentrix Sales support: a person replies in under one business day by email, phone or WhatsApp. And how to request access to or deletion of your data.
-
-Zentrix Sales
-
-### Zentrix Sales support
-
-A person on the Zentrix team replies in under one business day. Our working language is Spanish.
-
-[hola@zentrix.company](mailto:hola@zentrix.company?subject=Support%20%E2%80%94%20Zentrix%20Sales)
-
-Phone and WhatsApp: [+58 412-346 9712](https://wa.me/584123469712).
-
-### If you use Zentrix Sales out in the field
-
-Your account is created and handed to you by your employer: the app has no sign-up and there is no way to register from here. If you cannot get in, if something will not load, or if an order never arrived, write to us with your rep email address and your company's name.
-
-### If your company already runs Zentrix Sales
-
-Adding or removing reps, permissions, companies and warehouses, or the integration with your ERP. Write from the company address and tell us what you need changed.
-
-### Your data: access, correction and deletion
-
-What the app collects, what for and how long it is kept is in the [privacy policy](https://zentrix.company/en/sales/privacy/). To request access to, correction or deletion of your data, write to [hola@zentrix.company](mailto:hola@zentrix.company?subject=Data%20request%20%E2%80%94%20Zentrix%20Sales) with the subject Data request — Zentrix Sales. We answer within 30 business days; details in [clause 7](https://zentrix.company/en/sales/privacy/#c7). Signing out does not delete data from the server.
-
-### About the app
-
-Application
-Zentrix Sales (com.leiros.vendoo). Android 7.0 or later and iOS 15 or later.
-
-Download
-[Google Play](https://play.google.com/store/apps/details?id=com.leiros.vendoo) · [App Store](https://apps.apple.com/us/app/vendoo/id6811065669)
-
-Responsible for the app
-GUUAO LLC
-
-Legal address
-10302 NW South River Drive, Medley, FL 33178, United States
-
-Support email
-[hola@zentrix.company](mailto:hola@zentrix.company)
-
-Telephone
-+58 412-346 9712, also on [WhatsApp](https://wa.me/584123469712)
-
-Response time
-Under one business day.
-
-Documents
-[Privacy policy](https://zentrix.company/en/sales/privacy/) · [Terms of service](https://zentrix.company/en/sales/terms/) · [Contact](https://zentrix.company/en/sales/contact/)
 
 
 ---
@@ -4014,7 +4250,7 @@ The order comes in, your store team picks and delivers it, and the till balances
 ### Distribution and route sales
 Your reps are out in the field, sometimes without signal, and the office needs to know what was sold and collected.
 - [Zentrix Sales](https://zentrix.company/en/sales/): orders, visits and collections even without signal, straight into your system.
-- [Zentrix Logistics](https://zentrix.company/en/logistics/): dispatch, routes and deliveries in one place (coming soon).
+- [Zentrix Logistics](https://zentrix.company/en/logistics/): picking, dispatch, delivery and cash on delivery on top of your Odoo®.
 - [Odoo® in Venezuela](https://zentrix.company/en/solutions/odoo-venezuela/): the management system that receives orders and payments.
 
 How we work
@@ -4414,6 +4650,182 @@ Tell us what you need. A person replies within one business day, with no commitm
 
 ---
 
+## [Support — Questions, access and your data | Zentrix](https://zentrix.company/en/support/)
+
+Zentrix Work and Zentrix Sales support: common questions, access, manuals and how to delete your account or your data. A person replies within one business day.
+
+Support
+
+### How can we help?
+
+Common questions, access, manuals and your data for every Zentrix app, in one place. If you can’t find it, a person replies within one business day.
+
+Search the site Search
+
+### Pick your product
+
+- Work
+- Sales
+- AI
+- Logistics
+- Cloud
+- Labs
+- Software
+- [Traza (opens in a new tab)](https://traza.technology)
+
+Delete your account: Zentrix Work · Delete your account: Zentrix Sales
+
+### Zentrix Work
+Store teams · [Zentrix Work →](https://zentrix.company/en/work/)
+
+For almost everything, your first point of contact is your store manager: they set up your account, enable your tasks and can cut off access if you lose your phone. For anything else, write to us.
+
+[soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Support%20%E2%80%94%20Zentrix%20Work)
+
+Put Support — Zentrix Work in the subject line and tell us the email you use in the app, your store and what happened. If you can, add a screenshot.
+
+### Quick questions
+
+### I don’t have an account. How do I sign up?
+There is no sign-up: the app is only for the staff of companies that use Zentrix Work, and your manager creates your account. If you are a customer of the store, what you are looking for is that company’s customer app.
+
+### I forgot my PIN
+On the PIN screen, tap Forgot your PIN? You sign in again with your email and password and create a new PIN. You don’t lose your shift or any work you had in progress.
+
+### I forgot my password
+It is the same password as your company account. Ask your manager to reset it, or write to us.
+
+### My orders don’t make a sound
+Make sure you are clocked in at a store: when you are clocked out, the app never makes a sound. If you are clocked in, check that notifications for Zentrix Work are allowed and that the phone is not on “Do Not Disturb.” When you clock in, the app warns you if any of that is wrong.
+
+### It won’t let me clock in
+The server checks that you are at the store, that you have permission there and that the task is enabled. The message on screen tells you which of those failed. If you think it is a mistake, tell your manager.
+
+### My shift ended on its own
+This happens when the app has not heard from you for a long time: the phone has no signal or the app has not been used. It is on purpose, so your phone doesn’t keep ringing if you have left. Clock in again and carry on.
+
+### I lost my phone or got a new one
+Let your manager know so they can close your access on the old phone. On the new one, install the app and sign in with your email and password. What the app stored on the old phone is not copied to the new one, on purpose.
+
+### I no longer work at the company
+Your access is closed from the company’s system and the app stops working on your phone. You can uninstall it. To ask for your data to be deleted, see delete your account or your data.
+
+### Manual
+
+The [operator manual](https://zentrix.company/en/work/docs/) (in Spanish) explains shifts, orders, picking, delivery and returns step by step.
+
+### Delete your account or your data — Zentrix Work
+
+The app does not let you create accounts, so they are not deleted from it either: your company creates the account and your company closes it. To ask for this:
+
+- Write to [soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Data%20request%20%E2%80%94%20Zentrix%20Work) with the subject Data request — Zentrix Work, or tell your manager.
+
+- Include your name and your account email, and whether you want to see, correct or delete your data.
+
+- We respond within 30 business days at most.
+
+What is deleted, what is kept because of a legal obligation and for how long is explained in the [privacy policy, section 7](https://zentrix.company/en/work/privacy/#c7). Signing out or uninstalling the app does not delete anything from the server.
+
+### About the app
+Application
+Zentrix Work (com.leiros.guuaowork), for Android.
+Download
+[Google Play](https://play.google.com/store/apps/details?id=com.leiros.guuaowork)
+Responsible for the app
+GUUAO LLC
+Support email
+[soporte@zentrix.company](mailto:soporte@zentrix.company)
+Documents
+[Privacy policy](https://zentrix.company/en/work/privacy/) · [Terms of use](https://zentrix.company/en/work/terms/) · [Manual](https://zentrix.company/en/work/docs/)
+
+### Zentrix Sales
+Field sales · [Zentrix Sales →](https://zentrix.company/en/sales/)
+
+A person on the Zentrix team replies in under one business day. Our working language is Spanish.
+
+[hola@zentrix.company](mailto:hola@zentrix.company?subject=Support%20%E2%80%94%20Zentrix%20Sales)
+
+Phone and WhatsApp: [+58 412-346 9712](https://wa.me/584123469712).
+
+### If you use Zentrix Sales out in the field
+
+Your account is created and handed to you by your employer: the app has no sign-up and there is no way to register from here. If you cannot get in, if something will not load, or if an order never arrived, write to us with your rep email address and your company’s name.
+
+### Manual
+
+Before writing, check the [field rep manual](https://zentrix.company/en/sales/docs/) (in Spanish): it explains what each screen does.
+
+### If your company already runs Zentrix Sales
+
+Adding or removing reps, permissions, companies and warehouses, or the integration with your ERP. Write from the company address and tell us what you need changed.
+
+### Delete your account or your data — Zentrix Sales
+
+What the app collects, what for and how long it is kept is in the [privacy policy](https://zentrix.company/en/sales/privacy/). To request access to, correction or deletion of your data:
+
+- Write to [hola@zentrix.company](mailto:hola@zentrix.company?subject=Data%20request%20%E2%80%94%20Zentrix%20Sales) with the subject Data request — Zentrix Sales.
+
+- Include your name, your rep email (or your tax ID if you are a customer of a company that uses the app) and what you want: access, correction or deletion.
+
+- We respond within 30 business days at most.
+
+What is kept because of a legal obligation, and for how long, is in [clause 7 of the policy](https://zentrix.company/en/sales/privacy/#c7). Signing out does not delete data from the server.
+
+### About the app
+Application
+Zentrix Sales (com.leiros.vendoo). Android 7.0 or later and iOS 15 or later.
+Download
+[Google Play](https://play.google.com/store/apps/details?id=com.leiros.vendoo) · [App Store](https://apps.apple.com/us/app/vendoo/id6811065669)
+Responsible for the app
+GUUAO LLC
+Legal address
+10302 NW South River Drive, Medley, FL 33178, United States
+Support email
+[hola@zentrix.company](mailto:hola@zentrix.company)
+Telephone
++58 412-346 9712, also on [WhatsApp](https://wa.me/584123469712)
+Response time
+Under one business day.
+Documents
+[Privacy policy](https://zentrix.company/en/sales/privacy/) · [Terms of service](https://zentrix.company/en/sales/terms/) · [Field rep manual](https://zentrix.company/en/sales/docs/)
+
+The rest of the suite
+
+### No published app yet.
+
+These products have no app to install: we run them as a project with your team. For any question, write to us from the contact page.
+
+### Zentrix AI
+Applied intelligence. [Zentrix AI →](https://zentrix.company/en/ai/)
+[Write to us](https://zentrix.company/en/contact/?motivo=soporte&producto=ai#motivo)
+
+### Zentrix Logistics
+Warehouse to doorstep. [Zentrix Logistics →](https://zentrix.company/en/logistics/)
+[Write to us](https://zentrix.company/en/contact/?motivo=soporte&producto=logistics#motivo)
+
+### Zentrix Cloud
+Infrastructure. [Zentrix Cloud →](https://zentrix.company/en/cloud/)
+[Write to us](https://zentrix.company/en/contact/?motivo=soporte&producto=cloud#motivo)
+
+### Zentrix Labs
+Research. [Zentrix Labs →](https://zentrix.company/en/labs/)
+[Write to us](https://zentrix.company/en/contact/?motivo=soporte&producto=labs#motivo)
+
+### Zentrix Software
+Odoo® implementation. [Zentrix Software →](https://zentrix.company/en/software/)
+[Write to us](https://zentrix.company/en/contact/?motivo=soporte&producto=software#motivo)
+
+[Traza (opens in a new tab)](https://traza.technology) — It has its own site and support at traza.technology.
+
+### Can’t find what you’re looking for?
+
+A person replies, in Spanish or English, within one business day. If it is about an app, tell us which one and the email you sign in with.
+
+[soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Support%20%E2%80%94%20Zentrix) [WhatsApp +58 412-346 9712](https://wa.me/584123469712) [Every way to reach us](https://zentrix.company/en/contact/)
+
+
+---
+
 ## [Traza — Traceability for documents, products and assets](https://zentrix.company/en/traza/)
 
 Traza gives your documents, products and assets a verifiable journey: where they came from, where they went, who moved them and where they are now.
@@ -4621,7 +5033,7 @@ For store staff at companies that use Zentrix Work. There's no sign-up: your man
 
 For Android. Questions? Write to us at [soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Support%20%E2%80%94%20Zentrix%20Work).
 
-[Support](https://zentrix.company/en/work/support/)
+[Support](https://zentrix.company/en/support/#work)
 
 
 ---
@@ -4801,86 +5213,6 @@ Change note (October 13, 2026). The app was renamed Zentrix Work, the company th
 ### 11. Contact
 
 GUUAO LLC [soporte@zentrix.company](mailto:soporte@zentrix.company)
-
-
----
-
-## [Support — Zentrix Work](https://zentrix.company/en/work/support/)
-
-Help for Zentrix Work: signing in, common questions about shifts and orders, who to contact at your company, and how to request deletion of your data.
-
-Zentrix Work
-
-### Zentrix Work support
-
-For almost everything, your first point of contact is your store manager: they set up your account, enable your tasks and can cut off access if you lose your phone. For anything else, write to us.
-
-[soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Support%20%E2%80%94%20Zentrix%20Work)
-
-Put Support — Zentrix Work in the subject line and tell us the email you use in the app, your store and what happened. If you can, add a screenshot.
-
-### Quick questions
-
-### I don’t have an account. How do I sign up?
-
-There is no sign-up: the app is only for the staff of companies that use Zentrix Work, and your manager creates your account. If you are a customer of the store, what you are looking for is that company’s customer app.
-
-### I forgot my PIN
-
-On the PIN screen, tap Forgot your PIN? You sign in again with your email and password and create a new PIN. You don’t lose your shift or any work you had in progress.
-
-### I forgot my password
-
-It is the same password as your company account. Ask your manager to reset it, or write to us.
-
-### My orders don’t make a sound
-
-Make sure you are clocked in at a store: when you are clocked out, the app never makes a sound. If you are clocked in, check that notifications for Zentrix Work are allowed and that the phone is not on “Do Not Disturb.” When you clock in, the app warns you if any of that is wrong.
-
-### It won’t let me clock in
-
-The server checks that you are at the store, that you have permission there and that the task is enabled. The message on screen tells you which of those failed. If you think it is a mistake, tell your manager.
-
-### My shift ended on its own
-
-This happens when the app has not heard from you for a long time: the phone has no signal or the app has not been used. It is on purpose, so your phone doesn’t keep ringing if you have left. Clock in again and carry on.
-
-### I lost my phone or got a new one
-
-Let your manager know so they can close your access on the old phone. On the new one, install the app and sign in with your email and password. What the app stored on the old phone is not copied to the new one, on purpose.
-
-### I no longer work at the company
-
-Your access is closed from the company’s system and the app stops working on your phone. You can uninstall it. To ask for your data to be deleted, see below.
-
-### Delete your account or your data
-
-The app does not let you create accounts, so they are not deleted from it either: your company creates the account and your company closes it. To ask for this:
-
-- Write to [soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Data%20request%20%E2%80%94%20Zentrix%20Work) with the subject Data request — Zentrix Work, or tell your manager.
-
-- Include your name and your account email, and whether you want to see, correct or delete your data.
-
-- We respond within 30 business days at most.
-
-What is deleted, what is kept because of a legal obligation and for how long is explained in the [privacy policy, section 7](https://zentrix.company/en/work/privacy/#c7). Signing out or uninstalling the app does not delete anything from the server.
-
-### About the app
-
-Application
-Zentrix Work (com.leiros.guuaowork), for Android.
-
-Download
-[Google Play](https://play.google.com/store/apps/details?id=com.leiros.guuaowork)
-
-Responsible for the app
-GUUAO LLC
-
-Support email
-[soporte@zentrix.company](mailto:soporte@zentrix.company)
-
-Documents
-[Privacy policy](https://zentrix.company/en/work/privacy/) · [Terms of use](https://zentrix.company/en/work/terms/) · [Manual](https://zentrix.company/en/work/docs/)
 
 
 ---
@@ -5127,7 +5459,7 @@ Lo mínimo. La pantalla queda encendida solo con una tarea abierta, y apagado no
 
 Avísale a tu encargado. En el nuevo, instala la app y entra con el servidor, tu correo y tu contraseña.
 
-¿Nada de esto? Mira [Soporte](https://zentrix.company/work/soporte/).
+¿Nada de esto? Mira [Soporte](https://zentrix.company/soporte/#work).
 
 
 ---
@@ -5355,7 +5687,7 @@ Para que una tarea te suene hacen falta dos cosas: que tu encargado te la autori
 
 - [Dudas rápidas Lo que más se pregunta, resuelto en dos líneas.](https://zentrix.company/work/docs/dudas.html)
 
-¿No encuentras lo tuyo? Pregúntale a tu encargado o mira [Soporte](https://zentrix.company/work/soporte/).
+¿No encuentras lo tuyo? Pregúntale a tu encargado o mira [Soporte](https://zentrix.company/soporte/#work).
 
 
 ---
@@ -6438,7 +6770,7 @@ Desde la aplicación tienes Perfil › Acerca de › «Reportar un problema». C
 Ese formulario no te contesta
 Sirve para arreglar la aplicación, y nadie te va a responder por ahí. Si necesitas que alguien te resuelva algo hoy, escribe al soporte.
 
-El soporte de Zentrix Sales —correo, teléfono y WhatsApp— está en [la página de contacto](https://zentrix.company/sales/contacto/#soporte).
+El soporte de Zentrix Sales —correo, teléfono y WhatsApp— está en [la página de soporte](https://zentrix.company/soporte/#sales).
 
 
 ---
@@ -7176,6 +7508,38 @@ Recuerda
 
 ---
 
+## [Legal — Privacidad y términos | Zentrix](https://zentrix.company/legal/)
+
+Las políticas de privacidad y los términos de Zentrix Work y Zentrix Sales, y la privacidad y las cookies del sitio web zentrix.company, en un solo índice.
+
+Legal
+
+### Privacidad y términos.
+
+Cada app tiene su propia política de privacidad y sus términos, porque cada una trata datos distintos. Aquí están todas, y la del sitio web.
+
+### Políticas de privacidad
+
+- [Zentrix Work Qué recoge la app del equipo de tienda, para qué y por cuánto tiempo. →](https://zentrix.company/work/privacidad/)
+- [Zentrix Sales Qué recoge la app de fuerza de ventas, para qué y por cuánto tiempo. →](https://zentrix.company/sales/privacidad/)
+- [Sitio web y cookies Qué mide zentrix.company, con consentimiento, y cómo retirarlo. →](https://zentrix.company/privacidad/)
+
+### Términos
+
+- [Zentrix Work Términos de uso de la app. →](https://zentrix.company/work/terminos/)
+- [Zentrix Sales Términos de servicio de la app. →](https://zentrix.company/sales/terminos/)
+
+### Tus datos
+
+Para ver, corregir o eliminar tu cuenta o tus datos de una app, sigue las instrucciones de su página de soporte:
+
+- [Eliminar tu cuenta de Zentrix Work](https://zentrix.company/soporte/#eliminar-cuenta-work)
+
+- [Eliminar tu cuenta de Zentrix Sales](https://zentrix.company/soporte/#eliminar-cuenta-sales)
+
+
+---
+
 ## [Privacidad del sitio — Zentrix](https://zentrix.company/privacidad/)
 
 Qué mide zentrix.company y con qué herramienta, sin publicidad, y cómo retirar el consentimiento de cookies. Las apps tienen su propia política.
@@ -7197,51 +7561,6 @@ Sin publicidad. El sitio no muestra anuncios ni usa los datos para publicidad: e
 Si no aceptas. Hasta que pulses «Aceptar», el sitio no carga nada de Google ni pone cookies. Si rechazas, o si tu navegador envía «Do Not Track» o «Global Privacy Control», no se mide nada. Tu elección se guarda en el almacenamiento local del navegador (zx-consent), no sale de él y no es una cookie.
 
 Cómo retirar el consentimiento. Pulsa «Preferencias de cookies», al pie de cualquier página, y elige «Rechazar»: la medición se detiene y se borran las cookies _ga de este sitio. También puedes borrar los datos del sitio desde tu navegador. Para cualquier duda, escríbenos a [hola@zentrix.company](mailto:hola@zentrix.company).
-
-
----
-
-## [Contacto — Zentrix Sales](https://zentrix.company/sales/contacto/)
-
-Pide una demostración de Zentrix Sales con tus datos: cuéntanos cómo vende hoy tu equipo. O escríbenos por correo, teléfono o WhatsApp, sin compromiso.
-
-Contacto
-
-### Hablemos de tu fuerza de ventas.
-
-Cuéntanos cómo vende hoy tu equipo y te mostramos Zentrix Sales con tus datos.
-
-### Pide tu demostración
-
-Nombre
-Empresa
-
-Correo
-Teléfono (opcional)
-
-Vendedores en la calle (opcional) Elige una opción 1 a 5 6 a 20 21 a 50 51 a 150 Más de 150
-Mensaje
-Quiero ver Zentrix Sales
-Al enviar se abre tu correo con el mensaje listo. Sin compromiso.
-
-El formulario necesita JavaScript para armar el correo. Sin él, escríbenos directo a [hola@zentrix.company](mailto:hola@zentrix.company).
-
-### Respuesta en menos de un día hábil
-Te contesta una persona, no un bot.
-
-### Demostración con tus datos
-Tu catálogo, tu tarifa y tu ruta.
-
-### Integración con tu ERP
-Con Odoo®, nativa. Con los demás, a medida.
-
-O escríbenos directo: [hola@zentrix.company](mailto:hola@zentrix.company) · [WhatsApp +58 412-346 9712](https://wa.me/584123469712)
-
-### Soporte de Zentrix Sales
-
-Si ya usas la app y necesitas ayuda, o quieres ver, corregir o eliminar tus datos, ve a la [página de soporte](https://zentrix.company/sales/soporte/).
-
-[Ir al soporte](https://zentrix.company/sales/soporte/)
 
 
 ---
@@ -7577,73 +7896,6 @@ Zentrix Sales
 
 ---
 
-## [Soporte — Zentrix Sales](https://zentrix.company/sales/soporte/)
-
-Soporte de Zentrix Sales: te contesta una persona en español en menos de un día hábil, por correo, teléfono o WhatsApp. Y cómo pedir tus datos o borrarlos.
-
-Zentrix Sales
-
-### Soporte de Zentrix Sales
-
-Te contesta una persona del equipo de Zentrix, en español y en menos de un día hábil.
-
-[hola@zentrix.company](mailto:hola@zentrix.company?subject=Soporte%20%E2%80%94%20Zentrix%20Sales)
-
-Teléfono y WhatsApp: [+58 412-346 9712](https://wa.me/584123469712).
-
-### Si usas Zentrix Sales en la calle
-
-La cuenta te la crea y te la entrega tu empresa: la aplicación no permite registrarse y no hay forma de darse de alta desde aquí. Si no puedes entrar, si algo no te carga o si un pedido no llegó, escríbenos con tu correo de vendedor y el nombre de tu empresa.
-
-Desde la app también puedes escribirnos: en Perfil › Acerca de › Reportar un problema. Cuéntanos qué pasó y con qué cliente por su código, no por su nombre.
-
-Antes de escribir, mira el [manual del vendedor](https://zentrix.company/sales/docs/): explica pantalla por pantalla qué hace cada cosa.
-
-### Si tu empresa ya usa Zentrix Sales
-
-Altas y bajas de vendedores, permisos, empresas y almacenes, o la integración con tu ERP. Escríbenos desde el correo de la empresa y dinos qué necesitas cambiar.
-
-### Tus datos: ver, corregir o eliminar
-
-Qué recoge la aplicación, para qué y cuánto tiempo se guarda está en la [política de privacidad](https://zentrix.company/sales/privacidad/). Para pedir el acceso, la corrección o la eliminación de tus datos:
-
-- Escribe a [hola@zentrix.company](mailto:hola@zentrix.company?subject=Solicitud%20de%20datos%20%E2%80%94%20Zentrix%20Sales) con el asunto Solicitud de datos — Zentrix Sales.
-
-- Indica tu nombre, tu correo de vendedor o tu RIF si eres cliente de una empresa que usa la app, y qué quieres: ver, corregir o eliminar.
-
-- Te respondemos en un máximo de 30 días hábiles.
-
-Lo que se conserva por obligación legal, y por cuánto tiempo, está en la [cláusula 7 de la política](https://zentrix.company/sales/privacidad/#c7). Cerrar sesión no elimina datos del servidor: solo retira las credenciales del teléfono.
-
-### Datos de la app
-
-Aplicación
-Zentrix Sales (com.leiros.vendoo). Android 7.0 o superior e iOS 15 o superior.
-
-Descarga
-[Google Play](https://play.google.com/store/apps/details?id=com.leiros.vendoo) · [App Store](https://apps.apple.com/us/app/vendoo/id6811065669)
-
-Responsable
-GUUAO LLC
-
-Dirección legal
-10302 NW South River Drive, Medley, FL 33178, Estados Unidos
-
-Correo de soporte
-[hola@zentrix.company](mailto:hola@zentrix.company)
-
-Teléfono
-+58 412-346 9712, también por [WhatsApp](https://wa.me/584123469712)
-
-Tiempo de respuesta
-Menos de un día hábil.
-
-Documentos
-[Política de privacidad](https://zentrix.company/sales/privacidad/) · [Términos de servicio](https://zentrix.company/sales/terminos/) · [Manual del vendedor](https://zentrix.company/sales/docs/)
-
-
----
-
 ## [Términos de servicio — Zentrix Sales](https://zentrix.company/sales/terminos/)
 
 Términos de servicio de Zentrix Sales, la app de fuerza de ventas de campo para Android y iPhone: quién la contrata, quién la usa y qué reglas aplican.
@@ -7855,6 +8107,183 @@ Zentrix Sales
 
 ---
 
+## [Soporte — Preguntas, acceso y tus datos | Zentrix](https://zentrix.company/soporte/)
+
+Soporte de Zentrix Work y Zentrix Sales: preguntas frecuentes, acceso, manuales y cómo eliminar tu cuenta o tus datos. Te responde una persona en un día hábil.
+
+Soporte
+
+### ¿En qué te ayudamos?
+
+Preguntas frecuentes, acceso, manuales y tus datos, de todas las apps de Zentrix en un solo lugar. Si no lo encuentras, te responde una persona en menos de un día hábil.
+
+Buscar en el sitio Buscar
+
+### Elige tu producto
+
+- Work
+- Sales
+- AI
+- Logistics
+- Cloud
+- Labs
+- Software
+- [Traza (se abre en otra pestaña)](https://traza.technology)
+
+Eliminar tu cuenta: Zentrix Work · Eliminar tu cuenta: Zentrix Sales
+
+### Zentrix Work
+El equipo de tienda · [Zentrix Work →](https://zentrix.company/work/)
+
+Para casi todo, tu primer contacto es tu encargado de tienda: es quien te da de alta, te habilita las tareas y puede cortar el acceso si pierdes el teléfono. Para lo demás, escríbenos.
+
+[soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Soporte%20%E2%80%94%20Zentrix%20Work)
+
+Pon en el asunto Soporte — Zentrix Work y cuéntanos tu correo de la app, tu tienda y qué pasó. Si puedes, agrega una captura.
+
+### Preguntas rápidas
+
+### No tengo cuenta. ¿Cómo me registro?
+No hay registro: la app es solo para el personal de las empresas que usan Zentrix Work, y la cuenta la crea tu encargado. Si eres cliente de la tienda, lo que buscas es la app de clientes de esa empresa.
+
+### Olvidé mi PIN
+En la pantalla del PIN, toca ¿Olvidaste tu PIN? Vuelves a entrar con tu correo y tu contraseña y creas un PIN nuevo. No pierdes tu turno ni el trabajo que tenías a medias.
+
+### Olvidé mi contraseña
+Es la misma contraseña de tu cuenta de la empresa. Pídele a tu encargado que te la restablezca, o escríbenos.
+
+### No me suenan los pedidos
+Revisa que estés encendido en una tienda: apagado, la app no suena nunca. Si estás encendido, mira que las notificaciones de Zentrix Work estén permitidas y que el teléfono no esté en «No molestar». Al encenderte, la app te avisa si algo de eso está mal.
+
+### No me deja encenderme
+El servidor comprueba que estés en la tienda, que tengas permiso en ella y que esa tarea esté habilitada. El mensaje que ves en pantalla dice cuál de esas falló. Si crees que es un error, díselo a tu encargado.
+
+### Se me apagó el turno solo
+Pasa cuando la app lleva mucho rato sin saber de ti: el teléfono sin señal o la app sin usar. Es a propósito, para que tu teléfono no siga sonando si te fuiste. Vuelve a encenderte y sigues.
+
+### Perdí el teléfono o cambié de teléfono
+Avísale a tu encargado para que cierre tu acceso en el teléfono viejo. En el nuevo, instala la app y entra con tu correo y tu contraseña. Lo que la app guardaba en el teléfono viejo no se copia al nuevo, a propósito.
+
+### Dejé de trabajar en la empresa
+Tu acceso se cierra desde el sistema de la empresa y la app deja de funcionar en tu teléfono. Puedes desinstalarla. Para pedir que se borren tus datos, mira eliminar tu cuenta o tus datos.
+
+### Manual
+
+El [manual del operador](https://zentrix.company/work/docs/) explica paso a paso el turno, los pedidos, la preparación, la entrega y las devoluciones.
+
+### Eliminar tu cuenta o tus datos — Zentrix Work
+
+La app no permite crear cuentas, así que tampoco se borran desde ella: la cuenta la crea tu empresa y la cierra tu empresa. Para pedirlo:
+
+- Escribe a [soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Solicitud%20de%20datos%20%E2%80%94%20Zentrix%20Work) con el asunto Solicitud de datos — Zentrix Work, o díselo a tu encargado.
+
+- Indica tu nombre y el correo de tu cuenta, y si quieres ver, corregir o eliminar tus datos.
+
+- Te respondemos en un máximo de 30 días hábiles.
+
+Lo que se borra, lo que se conserva por obligación legal y por cuánto tiempo está en la [política de privacidad, cláusula 7](https://zentrix.company/work/privacidad/#c7). Cerrar sesión o desinstalar la app no borra nada del servidor.
+
+### Datos de la app
+Aplicación
+Zentrix Work (com.leiros.guuaowork), para Android.
+Descarga
+[Google Play](https://play.google.com/store/apps/details?id=com.leiros.guuaowork)
+Responsable
+GUUAO LLC
+Correo de soporte
+[soporte@zentrix.company](mailto:soporte@zentrix.company)
+Documentos
+[Política de privacidad](https://zentrix.company/work/privacidad/) · [Términos de uso](https://zentrix.company/work/terminos/) · [Manual](https://zentrix.company/work/docs/)
+
+### Zentrix Sales
+La fuerza de ventas · [Zentrix Sales →](https://zentrix.company/sales/)
+
+Te contesta una persona del equipo de Zentrix, en español y en menos de un día hábil.
+
+[hola@zentrix.company](mailto:hola@zentrix.company?subject=Soporte%20%E2%80%94%20Zentrix%20Sales)
+
+Teléfono y WhatsApp: [+58 412-346 9712](https://wa.me/584123469712).
+
+### Si usas Zentrix Sales en la calle
+
+La cuenta te la crea y te la entrega tu empresa: la aplicación no permite registrarse y no hay forma de darse de alta desde aquí. Si no puedes entrar, si algo no te carga o si un pedido no llegó, escríbenos con tu correo de vendedor y el nombre de tu empresa.
+Desde la app también puedes escribirnos: en Perfil › Acerca de › Reportar un problema. Cuéntanos qué pasó y con qué cliente por su código, no por su nombre.
+
+### Manual
+
+Antes de escribir, mira el [manual del vendedor](https://zentrix.company/sales/docs/): explica pantalla por pantalla qué hace cada cosa.
+
+### Si tu empresa ya usa Zentrix Sales
+
+Altas y bajas de vendedores, permisos, empresas y almacenes, o la integración con tu ERP. Escríbenos desde el correo de la empresa y dinos qué necesitas cambiar.
+
+### Eliminar tu cuenta o tus datos — Zentrix Sales
+
+Qué recoge la aplicación, para qué y cuánto tiempo se guarda está en la [política de privacidad](https://zentrix.company/sales/privacidad/). Para pedir el acceso, la corrección o la eliminación de tus datos:
+
+- Escribe a [hola@zentrix.company](mailto:hola@zentrix.company?subject=Solicitud%20de%20datos%20%E2%80%94%20Zentrix%20Sales) con el asunto Solicitud de datos — Zentrix Sales.
+
+- Indica tu nombre, tu correo de vendedor o tu RIF si eres cliente de una empresa que usa la app, y qué quieres: ver, corregir o eliminar.
+
+- Te respondemos en un máximo de 30 días hábiles.
+
+Lo que se conserva por obligación legal, y por cuánto tiempo, está en la [cláusula 7 de la política](https://zentrix.company/sales/privacidad/#c7). Cerrar sesión no elimina datos del servidor: solo retira las credenciales del teléfono.
+
+### Datos de la app
+Aplicación
+Zentrix Sales (com.leiros.vendoo). Android 7.0 o superior e iOS 15 o superior.
+Descarga
+[Google Play](https://play.google.com/store/apps/details?id=com.leiros.vendoo) · [App Store](https://apps.apple.com/us/app/vendoo/id6811065669)
+Responsable
+GUUAO LLC
+Dirección legal
+10302 NW South River Drive, Medley, FL 33178, Estados Unidos
+Correo de soporte
+[hola@zentrix.company](mailto:hola@zentrix.company)
+Teléfono
++58 412-346 9712, también por [WhatsApp](https://wa.me/584123469712)
+Tiempo de respuesta
+Menos de un día hábil.
+Documentos
+[Política de privacidad](https://zentrix.company/sales/privacidad/) · [Términos de servicio](https://zentrix.company/sales/terminos/) · [Manual del vendedor](https://zentrix.company/sales/docs/)
+
+Resto de la suite
+
+### Sin app publicada todavía.
+
+Estos productos no tienen app que instalar: se trabajan como proyecto con tu equipo. Para cualquier duda, escríbenos desde contacto.
+
+### Zentrix AI
+Inteligencia aplicada. [Zentrix AI →](https://zentrix.company/ai/)
+[Escribir](https://zentrix.company/contacto/?motivo=soporte&producto=ai#motivo)
+
+### Zentrix Logistics
+Del almacén a la puerta. [Zentrix Logistics →](https://zentrix.company/logistics/)
+[Escribir](https://zentrix.company/contacto/?motivo=soporte&producto=logistics#motivo)
+
+### Zentrix Cloud
+Infraestructura. [Zentrix Cloud →](https://zentrix.company/cloud/)
+[Escribir](https://zentrix.company/contacto/?motivo=soporte&producto=cloud#motivo)
+
+### Zentrix Labs
+Investigación. [Zentrix Labs →](https://zentrix.company/labs/)
+[Escribir](https://zentrix.company/contacto/?motivo=soporte&producto=labs#motivo)
+
+### Zentrix Software
+Implementación de Odoo®. [Zentrix Software →](https://zentrix.company/software/)
+[Escribir](https://zentrix.company/contacto/?motivo=soporte&producto=software#motivo)
+
+[Traza (se abre en otra pestaña)](https://traza.technology) — Tiene sitio y soporte propios en traza.technology.
+
+### ¿No encuentras lo que buscas?
+
+Te responde una persona, en español, en menos de un día hábil. Si es sobre una app, dinos cuál y desde qué correo entras.
+
+[soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Soporte%20%E2%80%94%20Zentrix) [WhatsApp +58 412-346 9712](https://wa.me/584123469712) [Todas las formas de contacto](https://zentrix.company/contacto/)
+
+
+---
+
 ## [Política de privacidad — Zentrix Work](https://zentrix.company/work/privacidad/)
 
 Qué datos trata Zentrix Work, la app del equipo de tienda, para qué, dónde se guardan, cuánto tiempo se conservan y cómo pedir su eliminación.
@@ -8030,86 +8459,6 @@ Nota de cambio (13 de octubre de 2026). La app pasó a llamarse Zentrix Work, la
 ### 11. Contacto
 
 GUUAO LLC [soporte@zentrix.company](mailto:soporte@zentrix.company)
-
-
----
-
-## [Soporte — Zentrix Work](https://zentrix.company/work/soporte/)
-
-Soporte de Zentrix Work, la app del equipo de tienda: preguntas frecuentes, cómo contactarnos y cómo eliminar tu cuenta o tus datos de la app.
-
-Zentrix Work
-
-### Soporte de Zentrix Work
-
-Para casi todo, tu primer contacto es tu encargado de tienda: es quien te da de alta, te habilita las tareas y puede cortar el acceso si pierdes el teléfono. Para lo demás, escríbenos.
-
-[soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Soporte%20%E2%80%94%20Zentrix%20Work)
-
-Pon en el asunto Soporte — Zentrix Work y cuéntanos tu correo de la app, tu tienda y qué pasó. Si puedes, agrega una captura.
-
-### Preguntas rápidas
-
-### No tengo cuenta. ¿Cómo me registro?
-
-No hay registro: la app es solo para el personal de las empresas que usan Zentrix Work, y la cuenta la crea tu encargado. Si eres cliente de la tienda, lo que buscas es la app de clientes de esa empresa.
-
-### Olvidé mi PIN
-
-En la pantalla del PIN, toca ¿Olvidaste tu PIN? Vuelves a entrar con tu correo y tu contraseña y creas un PIN nuevo. No pierdes tu turno ni el trabajo que tenías a medias.
-
-### Olvidé mi contraseña
-
-Es la misma contraseña de tu cuenta de la empresa. Pídele a tu encargado que te la restablezca, o escríbenos.
-
-### No me suenan los pedidos
-
-Revisa que estés encendido en una tienda: apagado, la app no suena nunca. Si estás encendido, mira que las notificaciones de Zentrix Work estén permitidas y que el teléfono no esté en «No molestar». Al encenderte, la app te avisa si algo de eso está mal.
-
-### No me deja encenderme
-
-El servidor comprueba que estés en la tienda, que tengas permiso en ella y que esa tarea esté habilitada. El mensaje que ves en pantalla dice cuál de esas falló. Si crees que es un error, díselo a tu encargado.
-
-### Se me apagó el turno solo
-
-Pasa cuando la app lleva mucho rato sin saber de ti: el teléfono sin señal o la app sin usar. Es a propósito, para que tu teléfono no siga sonando si te fuiste. Vuelve a encenderte y sigues.
-
-### Perdí el teléfono o cambié de teléfono
-
-Avísale a tu encargado para que cierre tu acceso en el teléfono viejo. En el nuevo, instala la app y entra con tu correo y tu contraseña. Lo que la app guardaba en el teléfono viejo no se copia al nuevo, a propósito.
-
-### Dejé de trabajar en la empresa
-
-Tu acceso se cierra desde el sistema de la empresa y la app deja de funcionar en tu teléfono. Puedes desinstalarla. Para pedir que se borren tus datos, mira abajo.
-
-### Eliminar tu cuenta o tus datos
-
-La app no permite crear cuentas, así que tampoco se borran desde ella: la cuenta la crea tu empresa y la cierra tu empresa. Para pedirlo:
-
-- Escribe a [soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Solicitud%20de%20datos%20%E2%80%94%20Zentrix%20Work) con el asunto Solicitud de datos — Zentrix Work, o díselo a tu encargado.
-
-- Indica tu nombre y el correo de tu cuenta, y si quieres ver, corregir o eliminar tus datos.
-
-- Te respondemos en un máximo de 30 días hábiles.
-
-Lo que se borra, lo que se conserva por obligación legal y por cuánto tiempo está en la [política de privacidad, cláusula 7](https://zentrix.company/work/privacidad/#c7). Cerrar sesión o desinstalar la app no borra nada del servidor.
-
-### Datos de la app
-
-Aplicación
-Zentrix Work (com.leiros.guuaowork), para Android.
-
-Descarga
-[Google Play](https://play.google.com/store/apps/details?id=com.leiros.guuaowork)
-
-Responsable
-GUUAO LLC
-
-Correo de soporte
-[soporte@zentrix.company](mailto:soporte@zentrix.company)
-
-Documentos
-[Política de privacidad](https://zentrix.company/work/privacidad/) · [Términos de uso](https://zentrix.company/work/terminos/) · [Manual](https://zentrix.company/work/docs/)
 
 
 ---

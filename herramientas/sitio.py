@@ -25,14 +25,11 @@ PARES = [
     ('/work/', '/en/work/'),
     ('/work/docs/', '/en/work/docs/'),
     ('/work/privacidad/', '/en/work/privacy/'),
-    ('/work/soporte/', '/en/work/support/'),
     ('/work/terminos/', '/en/work/terms/'),
     ('/sales/', '/en/sales/'),
     ('/sales/docs/', '/en/sales/docs/'),
     ('/sales/privacidad/', '/en/sales/privacy/'),
-    ('/sales/soporte/', '/en/sales/support/'),
     ('/sales/terminos/', '/en/sales/terms/'),
-    ('/sales/contacto/', '/en/sales/contact/'),
     ('/ai/', '/en/ai/'),
     ('/logistics/', '/en/logistics/'),
     ('/cloud/', '/en/cloud/'),
@@ -46,6 +43,8 @@ PARES = [
     ('/nosotros/', '/en/about/'),
     ('/contacto/', '/en/contact/'),
     ('/privacidad/', '/en/privacy/'),
+    ('/soporte/', '/en/support/'),
+    ('/legal/', '/en/legal/'),
     ('/404.html', '/en/404.html'),
 ]
 ES_A_EN = dict(PARES)
@@ -73,6 +72,11 @@ def es_capitulo_manual(ruta):
     return any(ruta.startswith(f'/{p}/docs/') and ruta != f'/{p}/docs/' for p in ('work', 'sales'))
 
 
+# Anclas que cambian de nombre en inglés (/soporte/ y /legal/)
+ANCLAS_EN = {'eliminar-cuenta-work': 'delete-account-work', 'eliminar-cuenta-sales': 'delete-account-sales',
+             'privacidad': 'privacy', 'terminos': 'terms', 'otros': 'others', 'contactar': 'reach-us'}
+
+
 def L(ruta_es, lang):
     """Ruta en el idioma pedido a partir de la española (anclas incluidas)."""
     base, _, ancla = ruta_es.partition('#')
@@ -80,6 +84,7 @@ def L(ruta_es, lang):
         base = ES_A_EN.get(base, base)
         if base == '/en/' and ancla == 'contacto':
             ancla = 'contact'
+        ancla = ANCLAS_EN.get(ancla, ancla)
     return base + ('#' + ancla if ancla else '')
 
 
@@ -89,7 +94,7 @@ PRODUCTOS = [
     ('work', '/work/', 'Zentrix Work', 'El equipo de tienda', 'Store teams'),
     ('sales', '/sales/', 'Zentrix Sales', 'La fuerza de ventas', 'Field sales'),
     ('ai', '/ai/', 'Zentrix AI', 'Inteligencia aplicada', 'Applied intelligence'),
-    ('logistica', '/logistics/', 'Zentrix Logistics', 'Despachos y entregas · Próximamente', 'Dispatch and delivery · Coming soon'),
+    ('logistica', '/logistics/', 'Zentrix Logistics', 'Del almacén a la puerta', 'Warehouse to doorstep'),
     ('cloud', '/cloud/', 'Zentrix Cloud', 'Infraestructura', 'Infrastructure'),
     ('labs', '/labs/', 'Zentrix Labs', 'Investigación', 'Research'),
     ('software', '/software/', 'Zentrix Software', 'Implementación de Odoo®', 'Odoo® implementation'),

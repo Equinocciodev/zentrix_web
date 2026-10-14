@@ -110,7 +110,8 @@ The site is mainly in Spanish; Zentrix Sales also has English pages under `{DOMI
 {productos}
 
 User manuals: Zentrix Work at {DOMINIO}/work/docs/ and Zentrix Sales at {DOMINIO}/sales/docs/.
-Support pages: {DOMINIO}/work/soporte/ and {DOMINIO}/sales/soporte/.
+Support center for every app, including how to delete a Zentrix Work or Zentrix Sales account:
+{DOMINIO}/soporte/ (English: {DOMINIO}/en/support/). Privacy policies and terms of each app: {DOMINIO}/legal/.
 
 ## Contact
 

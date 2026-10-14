@@ -36,7 +36,7 @@ PRODUCTOS = {
     'software': 'Zentrix Software',
     'traza': 'Traza',
 }
-LEGAL = {'privacidad', 'terminos', 'soporte', 'privacy', 'terms', 'support'}
+LEGAL = {'privacidad', 'terminos', 'soporte', 'privacy', 'terms', 'support', 'legal'}
 SOLUCIONES = {'soluciones', 'solutions'}
 # Prefijos que nunca se indexan (rutas relativas a la raíz del sitio).
 FUERA = ('eqnio/', 'logistica/', 'pagefind/', 'buscador/', 'herramientas/',

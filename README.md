@@ -2,7 +2,7 @@
 
 Sitio de **Zentrix®** en <https://zentrix.company>: la portada corporativa y las páginas de los dos productos, **Zentrix Work** (antes GUUAO® Work) y **Zentrix Sales** (antes Vendoo), con su privacidad y su soporte. Las URL de privacidad y soporte son las que declaran las apps y las fichas de Google Play y App Store.
 
-Es un sitio estático: HTML, una hoja CSS (`assets/css/sitio.css`) y un script pequeño (`assets/js/sitio.js`) que solo añade movimiento: la aparición de las secciones al hacer scroll (IntersectionObserver) y el conteo de las cifras. No hay paso de compilación ni dependencias. Sin JavaScript todo el contenido se ve igual, y con `prefers-reduced-motion` no se mueve nada. Las páginas de privacidad, términos, soporte y los manuales no cargan el script: se leen enteras sin JavaScript, que es como las revisan Google y Apple.
+Es un sitio estático: HTML, una hoja CSS (`assets/css/sitio.css`) y un script pequeño (`assets/js/sitio.js`) que solo añade movimiento: la aparición de las secciones al hacer scroll (IntersectionObserver) y el conteo de las cifras. No hay paso de compilación ni dependencias. Sin JavaScript todo el contenido se ve igual, y con `prefers-reduced-motion` no se mueve nada. Las páginas de privacidad, términos y los manuales no cargan el script: se leen enteras sin JavaScript, que es como las revisan Google y Apple. `/soporte/` sí lo carga (es una página generada), pero todo su contenido, incluidas las instrucciones de borrado de cuenta, se ve igual sin JavaScript.
 
 ## Rutas
 
@@ -11,12 +11,15 @@ Es un sitio estático: HTML, una hoja CSS (`assets/css/sitio.css`) y un script p
 | `/` | Portada de Zentrix, la marca madre: qué hacemos, los dos productos destacados, cómo trabajamos, las divisiones y el contacto. |
 | `/work/` | Zentrix Work. Google Play: `com.leiros.guuaowork`. |
 | `/work/docs/` + 11 páginas `.html` | Manual del operador, migrado de work.guuao.com/docs. |
-| `/work/privacidad/` · `/work/soporte/` · `/work/terminos/` | Política (anclas `#c1`…`#c11`, Play declara `#c7`), soporte (`#eliminar-datos`) y términos. |
+| `/work/privacidad/` · `/work/terminos/` | Política (anclas `#c1`…`#c11`, Play declara `#c7`) y términos. `/work/soporte/` redirige a `/soporte/#work`. |
 | `/sales/` | Zentrix Sales. Google Play `com.leiros.vendoo`, App Store `id6811065669`. |
 | `/sales/docs/` + 12 páginas `.html` | Manual del vendedor, migrado de vendooapp.com/docs. |
-| `/sales/privacidad/` · `/sales/soporte/` · `/sales/terminos/` · `/sales/contacto/` | Política, soporte, términos y contacto con el formulario de demostración (`assets/js/contacto.js` arma el correo). |
+| `/sales/privacidad/` · `/sales/terminos/` | Política y términos. `/sales/soporte/` y `/sales/contacto/` redirigen a `/soporte/#sales` y a `/contacto/?producto=sales#motivo`. |
+| `/soporte/` | Soporte unificado de la suite (`herramientas/ayuda.py`): buscador (Pagefind, el de la cabecera), chips por producto y una sección por app con preguntas rápidas, acceso, manual, **eliminación de cuenta** y datos de la app. Anclas estables que declaran las tiendas: `#eliminar-cuenta-work` y `#eliminar-cuenta-sales` (en inglés `/en/support/#delete-account-work` y `#delete-account-sales`). Los productos sin app (AI, Logistics, Cloud, Labs, Software) solo llevan a contacto. |
+| `/contacto/` | Contacto unificado: selector de motivo (ventas o demostración, soporte de una app, alianzas, prensa) y producto, que solo cambia el asunto del correo y del WhatsApp (`assets/js/contacto.js`; `?motivo=` y `?producto=` lo preseleccionan). La dirección postal vive aquí. |
+| `/legal/` | Índice de las políticas de privacidad y los términos de cada app y del sitio. El pie lleva aquí («Privacidad» → `#privacidad`, «Términos» → `#terminos`); las URL de las políticas no cambian. |
 | `/en/…` | Todo el sitio en inglés, con las mismas rutas (ver «Idiomas»). Las antiguas `/sales/en/…` redirigen. |
-| `/ai/` · `/logistics/` · `/cloud/` · `/labs/` · `/software/` | Los otros productos de la Presentación Corporativa: problema, para quién, beneficios, cómo funciona y contacto. Usan solo lo que dice la presentación. Ninguno tiene app publicada, así que no enlazan a tiendas: «Solicita una demostración», o «Próximamente» en Zentrix Logistics. |
+| `/ai/` · `/logistics/` · `/cloud/` · `/labs/` · `/software/` | Los otros productos de la Presentación Corporativa: problema, para quién, beneficios, cómo funciona y contacto. Usan solo lo que dice la presentación. Ninguno tiene app publicada, así que no enlazan a tiendas: «Solicita una demostración». Zentrix Logistics (desde el 14-10-2026) es la capa logística de la suite, del almacén a la puerta, con lo que ya está en producción en GUUAO y Grupo Leiros y lo que está en desarrollo marcado como tal; su CTA es «Hablemos». |
 | `/privacidad/` | Privacidad del sitio web: «Cookies y analítica» en español (`#cookies`) y en inglés (`#cookies-en`), en una sola página. Las de las apps siguen en cada producto. |
 | `/traza/` | Presentación breve de Traza®, que tiene sitio propio: el botón principal lleva a <https://traza.technology>. En el menú, la portada y el pie, Traza enlaza directamente a ese sitio (pestaña nueva, con indicador de enlace externo). |
 | `/404.html` | Página de error (ver «La 404»). |
@@ -39,6 +42,7 @@ Dirección A, aprobada por Victor el 14-10-2026: dos letras en minúscula y la b
 - `python3 herramientas/generar.py` escribe; `--check` comprueba que todo está al día; `--pares` lista los pares español/inglés y los huérfanos.
 - `python3 herramientas/enlaces.py` comprueba que ningún enlace interno da 404.
 - El menú móvil y el comportamiento del mega-menú están en `assets/js/nav.js`, que cargan todas las páginas. Sin JavaScript, los `<details>` siguen funcionando.
+- El pie: logo, eslogan (sin la fila de monogramas: ya están en la columna Productos), Productos, Empresa, Recursos, «Legal y soporte» (Soporte, Contacto, Privacidad y Términos; los dos últimos al índice `/legal/`) y Contacto.
 - Huecos para otros módulos: `<div id="zx-buscar">` en la cabecera (buscador) y el enlace `#zx-cookies` en el pie (preferencias de cookies).
 - Lo que viene de eqnio.com (servicios, filosofía, alianzas, equipo con sus fotos y cargos, partners) está en `contenido.py`, reescrito con el tono de Zentrix.
 
@@ -100,11 +104,11 @@ Zentrix es la marca madre. En la portada, la navegación, las tarjetas y el pie 
 
 ## Marca
 
-- Paleta: azul `#244DFF` para la acción, negro `#090D12` para el texto y los fondos inmersivos, y lima `#C7FA46` solo como acento. Nunca se usa lima como texto sobre blanco. Fondo `#F5F7FA`. Sobre negro, la acción va en `#A6B6FF`.
+- Paleta: azul `#244DFF` para la acción, negro `#090D12` para el texto y los fondos inmersivos, y lima `#C7FA46` solo como acento. Nunca se usa lima como texto sobre blanco. Fondo `#F5F7FA`. No hay lila: sobre negro, los enlaces y el texto de acción van en lima o blanco y el botón principal es lima con texto negro (el azul no llega a AA en texto normal sobre negro); sobre claro, la acción es azul.
 - Tipografía: **Geist** para los titulares (h1 y h2 en 800, h3 en 700, cifras, antetítulos y el titular de contacto, con tracking negativo de −0,03 a −0,042 em) e **Inter** 400/500/600/700 para texto, botones, menú y formularios. Geist (`geist@1.7.2`, OFL en `LICENSE-Geist.txt`) es un solo woff2 variable recortado a los pesos 500–800 y latín + latín extendido (`assets/fonts/geist-var.woff2`, 21 KB); la pila está en la variable `--display` de `sitio.css`. Todo se sirve desde `assets/fonts/` y no se cargan fuentes externas. Las páginas con héroe precargan Inter 400–700 y el Geist variable. Mientras llegan, «Inter reserva» y «Geist reserva» (Arial con las métricas de cada una) evitan saltos.
 - Logos: los SVG maestros de `guuao_work_app` (rama `feat/zentrix-work`, `assets/brand/`) y de `vendoo_app` (rama `feat/zentrix-sales`, `assets/marca/zentrix_sales/`), copiados en `assets/img/logos/`. `zentrix-negro.svg` y `zentrix-blanco.svg` salen del logotipo en `currentColor`.
 - En texto (titulares, párrafos, menús, botones, `alt`, `aria-label`, `title`, metadatos, pies, inglés y español) la marca va siempre con mayúscula inicial: «Zentrix», «Zentrix Work», «Zentrix Sales», «Zentrix AI», «Zentrix Cloud», «Zentrix Labs», «Zentrix Software», y «Traza». Solo el logotipo (los SVG y las firmas construidas en HTML que lo imitan, como `zentrix <b>work</b>` en la familia de la portada) va en minúsculas, como pide el manual. URLs, dominios, correos y nombres de archivo no cambian.
-- El contraste cumple AA: azul sobre blanco 5,9:1, texto secundario `#4A5363` sobre `#F5F7FA` 7,2:1, y `#A6B6FF` sobre negro 10:1.
+- El contraste cumple AA: azul sobre blanco 5,9:1, texto secundario `#4A5363` sobre `#F5F7FA` 7,2:1, lima `#C7FA46` sobre negro 15,9:1 y blanco sobre negro 19,5:1.
 - Las capturas son de `~/Downloads/zentrix/work_app` y `sales_app` (las «después»), en WebP.
 - Las imágenes Open Graph (`assets/img/og*.png`, 1200×630) se generaron con la paleta y el logo; cada producto tiene la suya (`og-<producto>.png`) con su firma y su monograma, y todas las páginas llevan `og:image` y `twitter:image`.
 - Favicon: `favicon.svg` (la z del maestro sobre teja azul), `favicon.ico` (16, 32 y 48), PNG de 16, 32, 192 y 512 y uno de 512 «maskable» en `assets/img/favicon/`, `apple-touch-icon.png` de 180 sin transparencia en la raíz, `safari-pinned-tab.svg` para Safari y `site.webmanifest`.

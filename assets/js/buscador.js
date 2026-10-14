@@ -610,7 +610,7 @@
   });
   pastilla.addEventListener('click', function () { abrir(); });
 
-  /* ---------- API para otros campos (el buscador de la 404) ---------- */
+  /* ---------- API para otros campos (el buscador de la 404 y el de /soporte/) ---------- */
   W.zxBuscar = { abrir: function (q) { abrir(q != null ? String(q).slice(0, 120) : null); } };
 
   /* ---------- ?q= (SearchAction) ---------- */

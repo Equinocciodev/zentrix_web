@@ -9,7 +9,7 @@ Slogan: «Technology to work better». eqnio.com redirects to zentrix.company. S
 - [Zentrix Work](https://zentrix.company/en/work/): Store teams
 - [Zentrix Sales](https://zentrix.company/en/sales/): Field sales
 - [Zentrix AI](https://zentrix.company/en/ai/): Applied intelligence
-- [Zentrix Logistics](https://zentrix.company/en/logistics/): Dispatch and delivery · Coming soon
+- [Zentrix Logistics](https://zentrix.company/en/logistics/): Warehouse to doorstep
 - [Zentrix Cloud](https://zentrix.company/en/cloud/): Infrastructure
 - [Zentrix Labs](https://zentrix.company/en/labs/): Research
 - [Zentrix Software](https://zentrix.company/en/software/): Odoo® implementation
@@ -44,7 +44,8 @@ Slogan: «Technology to work better». eqnio.com redirects to zentrix.company. S
 
 ## Contact
 
-- [Contact page](https://zentrix.company/en/contact/): a person replies in under one business day
+- [Contact page](https://zentrix.company/en/contact/): a person replies in under one business day; pick a reason (sales or demo, app support, partnerships, press)
+- [Support center](https://zentrix.company/en/support/): common questions, access, manuals and how to delete a Zentrix Work or Zentrix Sales account ([Zentrix Work](https://zentrix.company/en/support/#delete-account-work), [Zentrix Sales](https://zentrix.company/en/support/#delete-account-sales))
 - [Projects and demos: hola@zentrix.company](mailto:hola@zentrix.company)
 - [Support: soporte@zentrix.company](mailto:soporte@zentrix.company)
 - [WhatsApp +58 412-346 9712](https://wa.me/584123469712)
@@ -57,11 +58,10 @@ Slogan: «Technology to work better». eqnio.com redirects to zentrix.company. S
 ## Optional
 
 - [Full text of every page](https://zentrix.company/llms-full.txt)
+- [Legal index](https://zentrix.company/en/legal/): every privacy policy and terms
 - [Zentrix Work privacy policy](https://zentrix.company/en/work/privacy/)
-- [Zentrix Work support](https://zentrix.company/en/work/support/)
 - [Zentrix Work terms](https://zentrix.company/en/work/terms/)
 - [Zentrix Sales privacy policy](https://zentrix.company/en/sales/privacy/)
-- [Zentrix Sales support](https://zentrix.company/en/sales/support/)
 - [Zentrix Sales terms](https://zentrix.company/en/sales/terms/)
 - [Website privacy and cookies](https://zentrix.company/en/privacy/)
 - [Ajustes — Zentrix Work](https://zentrix.company/work/docs/ajustes.html)
