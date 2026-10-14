@@ -386,14 +386,28 @@
 .bq-pilares--texto .bq-pilar .bq-barra { margin-top: 0; }
 /* Manifiesto (portada, Qué es Zentrix): lista numerada con la barra lima */
 .bq-manifiesto { list-style: none; margin: 0; padding: 0; counter-reset: bq; border-top: 1px solid var(--borde); }
-.bq-manifiesto li { counter-increment: bq; display: grid; grid-template-columns: 64px 1fr; align-items: baseline; gap: 12px; padding: 20px 0;
-  border-bottom: 1px solid var(--borde); font-size: 1.125rem; color: var(--texto-2); position: relative; }
+.bq-manifiesto li { counter-increment: bq; display: grid; grid-template-columns: 64px minmax(0, 1fr); align-items: start; gap: 16px; padding: 28px 0;
+  border-bottom: 1px solid var(--borde); position: relative; }
 .bq-manifiesto li::before { content: counter(bq, decimal-leading-zero); font-size: 2.25rem; font-weight: 800; letter-spacing: -.05em; line-height: 1;
   color: transparent; -webkit-text-stroke: 1.5px var(--azul); transition: color .3s; }
 .bq-manifiesto li::after { content: ""; position: absolute; left: 0; bottom: -1px; width: 0; height: 3px; background: var(--lima); transition: width .5s var(--facil, ease); }
 .bq-manifiesto li:hover::before { color: var(--azul); }
 .bq-manifiesto li:hover::after { width: 64px; }
-.bq-manifiesto strong { color: var(--texto); font-weight: 700; }
+/* Número en su columna; título y frase juntos en la otra (un solo hijo del grid). */
+.bq-manifiesto__texto { display: flex; flex-direction: column; gap: 6px; min-width: 0; padding-top: 2px; }
+.bq-manifiesto__t { color: var(--texto); font-size: 1.25rem; font-weight: 700; letter-spacing: -.015em; line-height: 1.3; }
+.bq-manifiesto__d { color: var(--texto-2); font-size: 1.0625rem; line-height: 1.55; }
+@media (max-width: 599px) {
+  .bq-manifiesto li { grid-template-columns: 48px minmax(0, 1fr); gap: 12px; padding: 22px 0; }
+  .bq-manifiesto li::before { font-size: 1.75rem; }
+  .bq-manifiesto__t { font-size: 1.125rem; }
+}
+/* Dúo alineado arriba: el texto de la izquierda acompaña la lista al hacer scroll. */
+.duo--arriba { align-items: start; }
+@media (min-width: 900px) {
+  .duo--arriba { gap: 64px; }
+  .duo--arriba > .duo__fijo { position: sticky; top: 112px; }
+}
 /* Teselas con el color de su producto (manuales) */
 .bq-tesela--azul, .bq-tesela--negro { color: var(--blanco); min-height: 260px; }
 .bq-tesela--azul { background: var(--azul) !important; }

@@ -231,7 +231,9 @@ blockquote.cita footer { margin-top: 10px; font-size: .86rem; color: var(--tinta
 }
 .manual-tabla th { font-weight: 600; font-size: .82rem; letter-spacing: .04em; text-transform: uppercase; color: var(--tinta-suave); }
 .manual-tabla tbody tr:last-child td { border-bottom: 0; }
-.manual-tabla td strong { white-space: nowrap; }
+/* En móvil la etiqueta en negrita sin cortes se comía el ancho y dejaba
+   las otras dos columnas en ~75 px, una palabra por línea: ahí sí parte. */
+@media (min-width: 600px) { .manual-tabla td strong { white-space: nowrap; } }
 
 /* --- Los tres avisos ------------------------------------------------------ */
 /* Son los mismos tres del manual impreso y significan cosas distintas:
