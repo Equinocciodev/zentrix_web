@@ -314,6 +314,8 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .menu-productos__lista a[aria-current="page"] b { color: var(--azul); }
 
 /* Wordmark provisional «zentrix <producto>» (se cambia por el isotipo cuando exista) */
+.firma { display: block; align-self: flex-start; height: 36px; width: auto; max-width: 100%; }
+.heroe-producto__marca .firma { height: 40px; }
 .wordmark { display: inline-flex; align-items: flex-end; gap: 8px; line-height: 1; color: var(--negro); }
 .wordmark img { height: 24px; width: auto; }
 .wordmark__producto { font-weight: 700; font-size: 1.25rem; letter-spacing: -0.01em; color: var(--azul); transform: translateY(-1px); }
