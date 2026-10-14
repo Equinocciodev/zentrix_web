@@ -16,7 +16,7 @@ Es un sitio estático: HTML, una hoja CSS (`assets/css/sitio.css`) y un script p
 | `/sales/docs/` + 12 páginas `.html` | Manual del vendedor, migrado de vendooapp.com/docs. |
 | `/sales/privacidad/` · `/sales/soporte/` · `/sales/terminos/` · `/sales/contacto/` | Política, soporte, términos y contacto con el formulario de demostración (`assets/js/contacto.js` arma el correo). |
 | `/sales/en/` + `privacy.html`, `terms.html`, `support.html`, `contact.html` | Versión en inglés, migrada de vendooapp.com/en. |
-| `/ai/` · `/logistica/` · `/cloud/` · `/labs/` · `/software/` | Los otros productos de la Presentación Corporativa: problema, para quién, beneficios, cómo funciona y contacto. Usan solo lo que dice la presentación. Ninguno tiene app publicada, así que no enlazan a tiendas: «Solicita una demostración», o «Próximamente» en logística, cuyo nombre comercial está por definir. |
+| `/ai/` · `/logistica/` · `/cloud/` · `/labs/` · `/software/` | Los otros productos de la Presentación Corporativa: problema, para quién, beneficios, cómo funciona y contacto. Usan solo lo que dice la presentación. Ninguno tiene app publicada, así que no enlazan a tiendas: «Solicita una demostración», o «Próximamente» en Zentrix Logística. |
 | `/traza/` | Presentación breve de Traza®, que tiene sitio propio: el botón principal lleva a <https://traza.technology>. En el menú, la portada y el pie, Traza enlaza directamente a ese sitio (pestaña nueva, con indicador de enlace externo). |
 | `/404.html` | Página de error. |
 
@@ -24,12 +24,16 @@ Las páginas de los manuales llevan, además de `sitio.css`, `manual-sales.css` 
 
 ## Monogramas de los productos
 
-Dirección A, aprobada por Victor el 14-10-2026: dos letras en minúscula y la barra lima con el corte diagonal de la z. Sales usa «sl» (no «sa», 14-10-2026), generado con el mismo constructor que el resto de la suite. Los SVG están en `assets/img/logos/monogramas/<producto>_{icono,monocromo,firma_positivo,firma_negativo}.svg` para work, sales, ai, cloud, labs y software. `work-icono-512.png` y `sales-icono-512.png` salen de esos SVG con `rsvg-convert`.
+Dirección A, aprobada por Victor el 14-10-2026: dos letras en minúscula y la barra lima con el corte diagonal de la z. Sales usa «sl» (no «sa», 14-10-2026), generado con el mismo constructor que el resto de la suite. Logística usa «lg» (fondo lima, figura negra), rehecho el 14-10-2026 con el mismo constructor que «sl»: Inter ExtraBold a curvas, el conjunto (ascendente, descendente y barra de 230) centrado en el área viva 225–775. Los SVG están en `assets/img/logos/monogramas/<producto>_{icono,monocromo,firma_positivo,firma_negativo}.svg` para work, sales, ai, logistica, cloud, labs y software; los maestros y el constructor (`fuente/suite.py`, `fuente/lg.py`) en `~/Downloads/zentrix/isotipos/propuestas/`. `work-icono-512.png` y `sales-icono-512.png` salen de esos SVG con `rsvg-convert`.
 
 - En las páginas de producto la cabecera lleva la firma del producto (monograma + zentrix® + apellido) en lugar del logotipo madre, y enlaza a la portada. Work y Sales tienen debajo una barra fina, sin logo, con sus enlaces (producto, manual, privacidad, soporte).
 - El héroe de cada producto dibuja su monograma en línea (`<!--MONO:slug-->`) para animar la teja, las letras y la barra por separado.
-- Traza conserva su símbolo y su wordmark propios (manual, pág. 15) con el endoso «un producto de Zentrix®»; no lleva monograma. Logística sigue con el wordmark provisional «zentrix logística» hasta que tenga nombre comercial.
+- Traza conserva su símbolo y su wordmark propios (manual, pág. 15) con el endoso «un producto de Zentrix®»; no lleva monograma. Su icono es el de traza.technology (el wordmark blanco sobre el anillo de luz azul), recortado en la teja del sistema (radio 22 %): `assets/img/logos/traza/traza_icono-{40,64,192,208,512}.webp` y PNG de 192 y 512. Siempre enlaza a <https://traza.technology> en pestaña nueva, y en la suite, el menú y el pie va al final, como marca asociada.
 - El logotipo madre, el favicon y la z de la portada no cambian: son la marca madre.
+
+## Menú y pie: una sola fuente
+
+El menú «Productos» de la cabecera y el pie de página de las 47 páginas los escribe `herramientas/navegacion.py` (sin dependencias). Tras cambiar un producto, un enlace o un texto del pie, se ejecuta `python3 herramientas/navegacion.py` y se commitea el resultado; `--check` solo comprueba que todas las páginas están al día. Las páginas de `sales/en/` reciben la versión en inglés. El pie lleva la marca con la suite en miniatura, Productos (con su icono; Traza al final, externo), Recursos (los manuales), Legal y soporte agrupado por producto, Contacto, y en la barra inferior el copyright, el selector ES/EN y la nota de Odoo®.
 
 ## Movimiento e ilustraciones
 
