@@ -750,7 +750,7 @@ def pag_clientes(lang):
         tx = ('Case studies', 'Where Zentrix works.', 'Two companies, the same goal: knowing what happens in the operation and acting in time.',
               'Partners and allies', 'Companies that work alongside us.',
               'Brands and institutions we build, operate and grow with, in Venezuela and beyond.',
-              'Want to be the next case?', 'Tell us about your operation and we’ll show you the product working with your own data.', 'Zentrix: I’d like a demo')
+              'Want to be our next success story?', 'Tell us about your operation and we’ll show you the product working with your own data.', 'Zentrix: I’d like a demo')
         titulo = 'Customers — Zentrix'
         desc = 'Grupo Leiros and GUUAO run on Zentrix. Meet the companies and institutions we work alongside.'
     else:
@@ -761,7 +761,7 @@ def pag_clientes(lang):
         tx = ('Casos', 'Dónde trabaja Zentrix.', 'Dos empresas, un mismo objetivo: saber qué pasa en la operación y actuar a tiempo.',
               'Partners y aliados', 'Empresas que trabajan a nuestro lado.',
               'Marcas e instituciones con las que construimos, operamos y crecemos, en Venezuela y fuera de ella.',
-              '¿Quieres ser el próximo caso?', 'Cuéntanos cómo es tu operación y te mostramos el producto funcionando con tus propios datos.', 'Zentrix: quiero una demostración')
+              '¿Quieres ser el próximo caso de éxito?', 'Cuéntanos cómo es tu operación y te mostramos el producto funcionando con tus propios datos.', 'Zentrix: quiero una demostración')
         titulo = 'Clientes — Zentrix'
         desc = 'Grupo Leiros y GUUAO trabajan con Zentrix. Conoce las empresas e instituciones que nos acompañan.'
     cuerpo = f'''{h}
