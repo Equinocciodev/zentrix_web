@@ -337,8 +337,15 @@ def texto(fragmento):
     return re.sub(r' ([.,;:!?»)])', r'\1', s)
 
 
+def direccion():
+    """La misma dirección que publica /contacto/ (bloques.DIRECCION), como PostalAddress."""
+    from bloques import DIRECCION as d  # import tardío: bloques.py es del dueño de los bloques
+    return {'@type': 'PostalAddress', 'streetAddress': d['calle'], 'addressLocality': d['ciudad'],
+            'addressRegion': d['region'], 'postalCode': d['cp'], 'addressCountry': d['iso']}
+
+
 def org_ref():
-    return {'@type': 'Organization', '@id': ORG_ID, 'name': 'Zentrix', 'url': SITIO + '/'}
+    return {'@type': 'Organization', '@id': ORG_ID, 'name': 'Zentrix', 'url': SITIO + '/', 'address': direccion()}
 
 
 def organizacion():
@@ -351,6 +358,7 @@ def organizacion():
                        'sistema de gestión: Zentrix Work, Zentrix Sales e implementación de Odoo®.',
         'email': 'hola@zentrix.company',
         'telephone': '+58-412-346-9712',
+        'address': direccion(),
         'sameAs': [TRAZA_URL, PLAY_WORK, PLAY_SALES, APPSTORE_SALES],
         'contactPoint': [
             {'@type': 'ContactPoint', 'contactType': 'sales', 'email': 'hola@zentrix.company',

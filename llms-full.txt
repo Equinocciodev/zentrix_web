@@ -37,18 +37,16 @@ GL
 
 ### Grupo Leiros
 Distribución de licores · Venezuela
-
 Grupo Leiros es aliado de Zentrix desde su origen, cuando todavía nos llamábamos Equinoccio: aporta respaldo institucional, estructura legal y alcance comercial. Su operación de distribución es donde nacieron nuestras apps.
-- [Zentrix Sales →](https://zentrix.company/sales/)
-- [Odoo® en Venezuela →](https://zentrix.company/soluciones/odoo-venezuela/)
+- [Zentrix Sales](https://zentrix.company/sales/)
+- [Odoo® en Venezuela](https://zentrix.company/soluciones/odoo-venezuela/)
 G
 
 ### GUUAO
 Venezuela
-
 GUUAO LLC publica Zentrix Work y Zentrix Sales en las tiendas de aplicaciones. Zentrix Work nació para su equipo de tienda: el pedido suena en el bolsillo, se prepara con el escáner y se entrega con todo registrado.
-- [Zentrix Work →](https://zentrix.company/work/)
-- [Zentrix Sales →](https://zentrix.company/sales/)
+- [Zentrix Work](https://zentrix.company/work/)
+- [Zentrix Sales](https://zentrix.company/sales/)
 
 Partners y aliados
 
@@ -123,23 +121,37 @@ Canales
 
 ### Elige cómo prefieres escribirnos.
 
-[Proyectos y demostraciones hola@zentrix.company Productos, propuestas, alianzas o, simplemente, para ver si encajamos.](mailto:hola@zentrix.company) [Soporte soporte@zentrix.company Si ya usas Zentrix Work o Zentrix Sales y algo no funciona.](mailto:soporte@zentrix.company) [WhatsApp +58 412-346 9712 Para una consulta rápida.](https://wa.me/584123469712)
+Escríbenos
 
-Bueno saberlo
+### Una persona del equipo te responde.
 
-### Antes de escribir.
+Respondemos en menos de un día hábil. En español o en inglés. Nunca un bot.
 
-Tiempo de respuesta
-Menos de un día hábil. Siempre responde una persona, nunca un bot.
+[Escribir por WhatsApp +58 412-346 9712](https://wa.me/584123469712)
+[Escribir a hola@ hola@zentrix.company](mailto:hola@zentrix.company?subject=Zentrix%3A%20hablemos)
+
+Soporte de las apps
+[soporte@zentrix.company](mailto:soporte@zentrix.company)
+
+Manuales
+[Zentrix Work](https://zentrix.company/work/docs/) · [Zentrix Sales](https://zentrix.company/sales/docs/)
+
+### Dirección
+
+10302 NW South River Drive
+Medley, FL 33178
+Estados Unidos
+
+Cómo llegar: [Google Maps](https://www.google.com/maps/search/?api=1&query=10302%20NW%20South%20River%20Drive%2C%20Medley%2C%20FL%2033178) [Apple Maps](https://maps.apple.com/?q=10302%20NW%20South%20River%20Drive%2C%20Medley%2C%20FL%2033178)
 
 Horario
-De lunes a viernes, de 9:00 a 19:00 (UTC−4). Lo que llega fuera de horario se atiende el siguiente día hábil.
-
-Ubicación
-Isla Margarita, Nueva Esparta, Venezuela. Los proyectos se trabajan en remoto, así que la zona horaria no es un problema.
+Lunes a viernes, 9:00 a 19:00 (UTC−4). Lo que llega fuera de horario se atiende el siguiente día hábil.
 
 Idiomas
-Español e inglés.
+Español e inglés
+
+Equipo
+Isla Margarita, Nueva Esparta, Venezuela. Los proyectos se trabajan en remoto, así que la zona horaria no es un problema.
 
 
 ---
@@ -339,21 +351,16 @@ Contacto
 
 Te responde una persona, en español, en menos de un día hábil. Si quieres, te mostramos el producto funcionando con tus propios datos.
 
-### Escríbenos
+Escríbenos
 
-Para conocer los productos, pedir una demostración o hablar de tu proyecto.
+### Una persona del equipo te responde.
 
-Correo
-[hola@zentrix.company](mailto:hola@zentrix.company)
+Respondemos en menos de un día hábil. En español o en inglés. Nunca un bot.
 
-Teléfono y WhatsApp
-[+58 412-346 9712](https://wa.me/584123469712)
+[Escribir por WhatsApp +58 412-346 9712](https://wa.me/584123469712)
+[Escribir a hola@ hola@zentrix.company](mailto:hola@zentrix.company?subject=Zentrix%3A%20hablemos)
 
-### Si ya usas nuestras apps
-
-Accesos, dudas de uso y datos personales. También tienes el manual de cada app.
-
-Soporte
+Soporte de las apps
 [soporte@zentrix.company](mailto:soporte@zentrix.company)
 
 Manuales
@@ -361,10 +368,20 @@ Manuales
 
 ### Dirección
 
-10302 NW South River Drive, Medley, FL 33178, Estados Unidos.
+10302 NW South River Drive
+Medley, FL 33178
+Estados Unidos
 
-Respuesta
-Menos de un día hábil.
+Cómo llegar: [Google Maps](https://www.google.com/maps/search/?api=1&query=10302%20NW%20South%20River%20Drive%2C%20Medley%2C%20FL%2033178) [Apple Maps](https://maps.apple.com/?q=10302%20NW%20South%20River%20Drive%2C%20Medley%2C%20FL%2033178)
+
+Horario
+Lunes a viernes, 9:00 a 19:00 (UTC−4)
+
+Idiomas
+Español e inglés
+
+Equipo
+Isla Margarita, Venezuela, en remoto para todo el mundo
 
 
 ---
@@ -383,22 +400,22 @@ Conoce al equipo [Hablemos](https://zentrix.company/contacto/)
 
 ### Nuestra historia
 
-Origen
+- 01Origen
 
 ### Una célula, no una agencia.
 Equinoccio se formó alrededor de un grupo pequeño de ingenieros y operadores que ya trabajaban juntos en productos, infraestructura y agentes de IA. Los clientes que valoraban la velocidad y el criterio técnico necesitaban una sola contraparte responsable de toda la entrega, no una cadena de freelancers desconectados. Hoy ese equipo firma como Zentrix: las mismas personas, con productos propios.
 
-Cómo trabajamos
+- 02Cómo trabajamos
 
 ### Resultados, no horas.
 Trabajamos con la intensidad de un equipo de producto interno y la libertad de uno distribuido. Nos comprometemos con hitos y sistemas en producción, y cuando algo no funciona lo decimos antes de que lo descubras. Te ayudamos a definir qué construir, lo documentamos en una semana y empezamos a entregar en dos. Trabajamos de forma asíncrona: las llamadas son para decidir, no para reportar.
 
-Qué nos diferencia
+- 03Qué nos diferencia
 
 ### Vendemos criterio.
 Si nos pides un panel de administración, no lo recibirás antes de que entendamos por qué lo necesitas, qué decisiones se toman desde ahí y qué pasa si no existe. Esa conversación corta evita meses de retrabajo. La capa de ingeniería es pequeña a propósito, con personas que construyen y operan sistemas, no solo los escriben.
 
-Dónde estamos
+- 04Dónde estamos
 
 ### Desde el Caribe, sin bajar el estándar.
 Trabajamos desde Isla Margarita, Nueva Esparta, Venezuela, por decisión. El huso UTC−4 nos alinea con todo el continente americano y nos da media jornada con Europa. Trabajamos con clientes y aliados en Estados Unidos, Europa y Latinoamérica, en remoto desde el primer día.
@@ -443,8 +460,12 @@ Alianzas
 
 ### Con quién construimos.
 
+- 01
+
 ### BrandIA AI
 Aliado en investigación aplicada y agentes de IA. Cuando un proyecto pide capacidad especializada en modelos, evaluación o despliegue a escala, lo abordamos juntos.
+
+- 02
 
 ### Grupo Leiros
 Aliado en inversión, estructura legal y alcance comercial regional: respaldo institucional cuando el proyecto lo pide, sin perder la agilidad de un equipo pequeño.
@@ -474,25 +495,33 @@ Manuales
 
 ### Aprende a usar las apps.
 
-[Manual de Zentrix Work Turno, pedidos, preparación, entrega, devoluciones y ajustes, para el equipo de tienda. Abrir →](https://zentrix.company/work/docs/) [Manual de Zentrix Sales Ruta, visitas, pedidos, cobranza y trabajo sin señal, para el vendedor. Abrir →](https://zentrix.company/sales/docs/)
+- [Manual de Zentrix Work Turno, pedidos, preparación, entrega, devoluciones y ajustes, para el equipo de tienda. Abrir](https://zentrix.company/work/docs/)
+- [Manual de Zentrix Sales Ruta, visitas, pedidos, cobranza y trabajo sin señal, para el vendedor. Abrir](https://zentrix.company/sales/docs/)
 
 Soporte
 
 ### Cuando algo no funciona.
 
-[Soporte de Zentrix Work Acceso, dudas frecuentes y cómo eliminar tus datos. Abrir →](https://zentrix.company/work/soporte/) [Soporte de Zentrix Sales Acceso, dudas frecuentes y cómo eliminar tus datos. Abrir →](https://zentrix.company/sales/soporte/) [Contacto Escribe a soporte@ o por WhatsApp: te responde una persona. Abrir →](https://zentrix.company/contacto/)
+- [Soporte de Zentrix Work Acceso, dudas frecuentes y cómo eliminar tus datos. Abrir](https://zentrix.company/work/soporte/)
+- [Soporte de Zentrix Sales Acceso, dudas frecuentes y cómo eliminar tus datos. Abrir](https://zentrix.company/sales/soporte/)
+- [Contacto Escribe a soporte@ o por WhatsApp: te responde una persona. Abrir](https://zentrix.company/contacto/)
 
 Legal
 
 ### Qué hacemos con los datos, en palabras claras.
 
-[Privacidad de Zentrix Work Qué recoge la app, para qué y por cuánto tiempo. Abrir →](https://zentrix.company/work/privacidad/) [Términos de Zentrix Work Las reglas de uso de la app. Abrir →](https://zentrix.company/work/terminos/) [Privacidad de Zentrix Sales Qué recoge la app, para qué y por cuánto tiempo. Abrir →](https://zentrix.company/sales/privacidad/) [Términos de Zentrix Sales Las reglas de uso de la app. Abrir →](https://zentrix.company/sales/terminos/) [Privacidad del sitio web Cookies y analítica de zentrix.company, y cómo retirar el consentimiento. Abrir →](https://zentrix.company/privacidad/)
+- [Privacidad de Zentrix Work Qué recoge la app, para qué y por cuánto tiempo. Abrir](https://zentrix.company/work/privacidad/)
+- [Términos de Zentrix Work Las reglas de uso de la app. Abrir](https://zentrix.company/work/terminos/)
+- [Privacidad de Zentrix Sales Qué recoge la app, para qué y por cuánto tiempo. Abrir](https://zentrix.company/sales/privacidad/)
+- [Términos de Zentrix Sales Las reglas de uso de la app. Abrir](https://zentrix.company/sales/terminos/)
+- [Privacidad del sitio web Cookies y analítica de zentrix.company, y cómo retirar el consentimiento. Abrir](https://zentrix.company/privacidad/)
 
 Para desarrolladores e IA
 
 ### Documentación que leen las máquinas.
 
-[llms.txt Quién es Zentrix y qué hace, escrito para modelos de lenguaje. Abrir →](https://zentrix.company/llms.txt) [sitemap.xml Todas las páginas del sitio. Abrir →](https://zentrix.company/sitemap.xml)
+- [llms.txt Quién es Zentrix y qué hace, escrito para modelos de lenguaje. Abrir](https://zentrix.company/llms.txt)
+- [sitemap.xml Todas las páginas del sitio. Abrir](https://zentrix.company/sitemap.xml)
 
 ### ¿No encontraste lo que buscabas?
 
@@ -1522,7 +1551,12 @@ Por necesidad
 
 Seis líneas de trabajo, cada una con su página.
 
-[Odoo en Venezuela Digitalizamos tu empresa desde adentro: Odoo® adaptado a la realidad fiscal y operativa del país, con los procesos unificados y cada recurso bajo control. Conocer más →](https://zentrix.company/soluciones/odoo-venezuela/) [Desarrollo de software De la idea a la pantalla: diseño, arquitectura y desarrollo en un mismo equipo, sin perder contexto entre fases. Producto que escala desde el primer día. Conocer más →](https://zentrix.company/soluciones/desarrollo-de-software/) [Auditoría técnica No vendemos horas: te damos dirección. Auditoría, hoja de ruta y decisiones de tecnología para que sepas qué construir, en qué orden y por qué. Conocer más →](https://zentrix.company/soluciones/auditoria-tecnica/) [Alta disponibilidad Sistemas pensados para cuando se va la luz: servidores propios o en la nube, acceso Zero Trust y datos que no se pierden. Tu operación no se detiene. Conocer más →](https://zentrix.company/soluciones/infraestructura-alta-disponibilidad/) [Pagos y comercio digital Del punto de venta físico a la transacción en línea: cajas, pasarelas de pago, comprobantes electrónicos y, cuando el proyecto lo pide, contratos inteligentes en blockchain. Conocer más →](https://zentrix.company/soluciones/pagos-y-comercio-digital/) [Visión computacional Inteligencia artificial que cuida, no que vigila: analítica sobre tus cámaras para proteger personas y espacios en tiempo real, con criterio humano. Conocer más →](https://zentrix.company/soluciones/vision-computacional/)
+- [Odoo en Venezuela Digitalizamos tu empresa desde adentro: Odoo® adaptado a la realidad fiscal y operativa del país, con los procesos unificados y cada recurso bajo control. Conocer más](https://zentrix.company/soluciones/odoo-venezuela/)
+- [Desarrollo de software De la idea a la pantalla: diseño, arquitectura y desarrollo en un mismo equipo, sin perder contexto entre fases. Producto que escala desde el primer día. Conocer más](https://zentrix.company/soluciones/desarrollo-de-software/)
+- [Auditoría técnica No vendemos horas: te damos dirección. Auditoría, hoja de ruta y decisiones de tecnología para que sepas qué construir, en qué orden y por qué. Conocer más](https://zentrix.company/soluciones/auditoria-tecnica/)
+- [Alta disponibilidad Sistemas pensados para cuando se va la luz: servidores propios o en la nube, acceso Zero Trust y datos que no se pierden. Tu operación no se detiene. Conocer más](https://zentrix.company/soluciones/infraestructura-alta-disponibilidad/)
+- [Pagos y comercio digital Del punto de venta físico a la transacción en línea: cajas, pasarelas de pago, comprobantes electrónicos y, cuando el proyecto lo pide, contratos inteligentes en blockchain. Conocer más](https://zentrix.company/soluciones/pagos-y-comercio-digital/)
+- [Visión computacional Inteligencia artificial que cuida, no que vigila: analítica sobre tus cámaras para proteger personas y espacios en tiempo real, con criterio humano. Conocer más](https://zentrix.company/soluciones/vision-computacional/)
 
 Por sector
 
@@ -1899,22 +1933,22 @@ Meet the team [Let’s talk](https://zentrix.company/en/contact/)
 
 ### Our story
 
-Origin
+- 01Origin
 
 ### A cell, not an agency.
 Equinoccio formed around a small group of engineers and operators who were already working together across products, infrastructure and AI agents. Clients who valued speed and technical judgment needed one accountable counterpart for the whole delivery, not a chain of disconnected freelancers. Today that team signs as Zentrix: the same people, with products of their own.
 
-How we work
+- 02How we work
 
 ### Results, not hours.
 We work with the intensity of an in-house product team and the freedom of a distributed one. We commit to milestones and systems in production, and when something doesn’t work we say so before you find out. We help you define what to build, document it in a week and start delivering in two. We work async-first: calls are for decisions, not status reports.
 
-What sets us apart
+- 03What sets us apart
 
 ### We sell judgment.
 Ask us for an admin panel and you won’t get one until we understand why you need it, which decisions are made from it and what happens if it doesn’t exist. That short conversation saves months of rework. The engineering layer stays small on purpose, with people who build and operate systems, not just write them.
 
-Where we are
+- 04Where we are
 
 ### From the Caribbean, without lowering the bar.
 We operate from Isla Margarita, Nueva Esparta, Venezuela, by choice. UTC−4 overlaps with the whole American continent and gives us half a working day with Europe. We work with clients and partners in the United States, Europe and Latin America, remotely from day one.
@@ -1959,8 +1993,12 @@ Partnerships
 
 ### Who we build with.
 
+- 01
+
 ### BrandIA AI
 Our partner in applied research and AI agents. When a project needs specialized capability in models, evaluation or deployment at scale, we take it on together.
+
+- 02
 
 ### Grupo Leiros
 Our partner in investment, legal structure and regional commercial reach: institutional backing when a project needs it, without losing a small team’s agility.
@@ -2205,23 +2243,37 @@ Channels
 
 ### Pick how you’d like to reach us.
 
-[Projects and demos hola@zentrix.company Products, proposals, partnerships, or just to see whether we’re a fit.](mailto:hola@zentrix.company) [Support soporte@zentrix.company If you already use Zentrix Work or Zentrix Sales and something isn’t working.](mailto:soporte@zentrix.company) [WhatsApp +58 412-346 9712 For a quick question.](https://wa.me/584123469712)
+Write to us
 
-Good to know
+### A person from the team replies.
 
-### Before you write.
+We reply within one business day. In Spanish or English. Never a bot.
 
-Response time
-Within one business day. A person always replies, never a bot.
+[Message us on WhatsApp +58 412-346 9712](https://wa.me/584123469712)
+[Write to hola@ hola@zentrix.company](mailto:hola@zentrix.company?subject=Zentrix%3A%20let%E2%80%99s%20talk)
+
+App support
+[soporte@zentrix.company](mailto:soporte@zentrix.company)
+
+Manuals
+[Zentrix Work](https://zentrix.company/en/work/docs/) · [Zentrix Sales](https://zentrix.company/en/sales/docs/)
+
+### Address
+
+10302 NW South River Drive
+Medley, FL 33178
+United States
+
+Get directions: [Google Maps](https://www.google.com/maps/search/?api=1&query=10302%20NW%20South%20River%20Drive%2C%20Medley%2C%20FL%2033178) [Apple Maps](https://maps.apple.com/?q=10302%20NW%20South%20River%20Drive%2C%20Medley%2C%20FL%2033178)
 
 Hours
 Monday to Friday, 9:00 to 19:00 (UTC−4). Messages sent outside these hours are answered the next business day.
 
-Location
-Isla Margarita, Nueva Esparta, Venezuela. Projects run remotely, so time zones are not a problem.
-
 Languages
-Spanish and English.
+Spanish and English
+
+Team
+Isla Margarita, Nueva Esparta, Venezuela. Projects run remotely, so time zones are not a problem.
 
 
 ---
@@ -2248,18 +2300,16 @@ GL
 
 ### Grupo Leiros
 Beverage distribution · Venezuela
-
 Grupo Leiros has been a Zentrix ally since the beginning, back when we were still called Equinoccio: it brings institutional backing, legal structure and commercial reach. Its distribution operation is where our apps were born.
-- [Zentrix Sales →](https://zentrix.company/en/sales/)
-- [Odoo® in Venezuela →](https://zentrix.company/en/solutions/odoo-venezuela/)
+- [Zentrix Sales](https://zentrix.company/en/sales/)
+- [Odoo® in Venezuela](https://zentrix.company/en/solutions/odoo-venezuela/)
 G
 
 ### GUUAO
 Venezuela
-
 GUUAO LLC publishes Zentrix Work and Zentrix Sales on the app stores. Zentrix Work was born for its store team: the order buzzes in their pocket, gets picked with the scanner and is delivered with everything on record.
-- [Zentrix Work →](https://zentrix.company/en/work/)
-- [Zentrix Sales →](https://zentrix.company/en/sales/)
+- [Zentrix Work](https://zentrix.company/en/work/)
+- [Zentrix Sales](https://zentrix.company/en/sales/)
 
 Partners and allies
 
@@ -2513,21 +2563,16 @@ Contact
 
 A real person gets back to you, in Spanish or English, in less than one business day. If you'd like, we'll show you the product running on your own data.
 
-### Write to us
+Write to us
 
-To learn about our products, request a demo, or talk about your project.
+### A person from the team replies.
 
-Email
-[hola@zentrix.company](mailto:hola@zentrix.company)
+We reply within one business day. In Spanish or English. Never a bot.
 
-Phone and WhatsApp
-[+58 412-346 9712](https://wa.me/584123469712)
+[Message us on WhatsApp +58 412-346 9712](https://wa.me/584123469712)
+[Write to hola@ hola@zentrix.company](mailto:hola@zentrix.company?subject=Zentrix%3A%20let%E2%80%99s%20talk)
 
-### If you already use our apps
-
-Access, how-to questions, and personal data. You also have a manual for each app.
-
-Support
+App support
 [soporte@zentrix.company](mailto:soporte@zentrix.company)
 
 Manuals
@@ -2535,10 +2580,20 @@ Manuals
 
 ### Address
 
-10302 NW South River Drive, Medley, FL 33178, United States.
+10302 NW South River Drive
+Medley, FL 33178
+United States
 
-Response time
-Less than one business day.
+Get directions: [Google Maps](https://www.google.com/maps/search/?api=1&query=10302%20NW%20South%20River%20Drive%2C%20Medley%2C%20FL%2033178) [Apple Maps](https://maps.apple.com/?q=10302%20NW%20South%20River%20Drive%2C%20Medley%2C%20FL%2033178)
+
+Hours
+Monday to Friday, 9:00 to 19:00 (UTC−4)
+
+Languages
+Spanish and English
+
+Team
+Isla Margarita, Venezuela, working remotely worldwide
 
 
 ---
@@ -2746,25 +2801,33 @@ Manuals
 
 ### Learn to use the apps.
 
-[Zentrix Work manual (in Spanish) Shifts, orders, picking, delivery, returns and settings, for store teams. Open →](https://zentrix.company/en/work/docs/) [Zentrix Sales manual (in Spanish) Route, visits, orders, collections and working offline, for field reps. Open →](https://zentrix.company/en/sales/docs/)
+- [Zentrix Work manual (in Spanish) Shifts, orders, picking, delivery, returns and settings, for store teams. Open](https://zentrix.company/en/work/docs/)
+- [Zentrix Sales manual (in Spanish) Route, visits, orders, collections and working offline, for field reps. Open](https://zentrix.company/en/sales/docs/)
 
 Support
 
 ### When something doesn’t work.
 
-[Zentrix Work support Access, common questions and how to delete your data. Open →](https://zentrix.company/en/work/support/) [Zentrix Sales support Access, common questions and how to delete your data. Open →](https://zentrix.company/en/sales/support/) [Contact Write to support@ or WhatsApp: a person replies. Open →](https://zentrix.company/en/contact/)
+- [Zentrix Work support Access, common questions and how to delete your data. Open](https://zentrix.company/en/work/support/)
+- [Zentrix Sales support Access, common questions and how to delete your data. Open](https://zentrix.company/en/sales/support/)
+- [Contact Write to support@ or WhatsApp: a person replies. Open](https://zentrix.company/en/contact/)
 
 Legal
 
 ### What we do with data, in plain words.
 
-[Zentrix Work privacy What the app collects, why and for how long. Open →](https://zentrix.company/en/work/privacy/) [Zentrix Work terms The rules for using the app. Open →](https://zentrix.company/en/work/terms/) [Zentrix Sales privacy What the app collects, why and for how long. Open →](https://zentrix.company/en/sales/privacy/) [Zentrix Sales terms The rules for using the app. Open →](https://zentrix.company/en/sales/terms/) [Website privacy Cookies and analytics on zentrix.company, and how to withdraw consent. Open →](https://zentrix.company/en/privacy/#cookies)
+- [Zentrix Work privacy What the app collects, why and for how long. Open](https://zentrix.company/en/work/privacy/)
+- [Zentrix Work terms The rules for using the app. Open](https://zentrix.company/en/work/terms/)
+- [Zentrix Sales privacy What the app collects, why and for how long. Open](https://zentrix.company/en/sales/privacy/)
+- [Zentrix Sales terms The rules for using the app. Open](https://zentrix.company/en/sales/terms/)
+- [Website privacy Cookies and analytics on zentrix.company, and how to withdraw consent. Open](https://zentrix.company/en/privacy/#cookies)
 
 For developers and AI
 
 ### Machine-readable documentation.
 
-[llms.txt Who Zentrix is and what it does, written for language models. Open →](https://zentrix.company/llms.txt) [sitemap.xml Every page on the site, in both languages. Open →](https://zentrix.company/sitemap.xml)
+- [llms.txt Who Zentrix is and what it does, written for language models. Open](https://zentrix.company/llms.txt)
+- [sitemap.xml Every page on the site, in both languages. Open](https://zentrix.company/sitemap.xml)
 
 ### Didn’t find what you were looking for?
 
@@ -3910,7 +3973,12 @@ By need
 
 Six lines of work, each with its own page.
 
-[Odoo in Venezuela We digitize your company from the inside: Odoo® adapted to Venezuela’s tax and operating reality, with unified processes and every resource under control. Learn more →](https://zentrix.company/en/solutions/odoo-venezuela/) [Software development From idea to screen: design, architecture and development in one team, with no context lost between phases. A product that scales from day one. Learn more →](https://zentrix.company/en/solutions/software-development/) [Technical audit We don’t sell hours; we give you direction. An audit, a roadmap and technology decisions so you know what to build, in what order and why. Learn more →](https://zentrix.company/en/solutions/technical-audit/) [High availability Systems designed for when the power goes out: your own servers or the cloud, Zero Trust access and data that is never lost. Your operation keeps going. Learn more →](https://zentrix.company/en/solutions/high-availability-infrastructure/) [Payments and digital commerce From the physical point of sale to the online transaction: tills, payment gateways, electronic receipts and, when the project calls for it, smart contracts on blockchain. Learn more →](https://zentrix.company/en/solutions/payments-and-digital-commerce/) [Computer vision AI that looks after people rather than watching them: analytics on your cameras to protect people and spaces in real time, with human judgment. Learn more →](https://zentrix.company/en/solutions/computer-vision/)
+- [Odoo in Venezuela We digitize your company from the inside: Odoo® adapted to Venezuela’s tax and operating reality, with unified processes and every resource under control. Learn more](https://zentrix.company/en/solutions/odoo-venezuela/)
+- [Software development From idea to screen: design, architecture and development in one team, with no context lost between phases. A product that scales from day one. Learn more](https://zentrix.company/en/solutions/software-development/)
+- [Technical audit We don’t sell hours; we give you direction. An audit, a roadmap and technology decisions so you know what to build, in what order and why. Learn more](https://zentrix.company/en/solutions/technical-audit/)
+- [High availability Systems designed for when the power goes out: your own servers or the cloud, Zero Trust access and data that is never lost. Your operation keeps going. Learn more](https://zentrix.company/en/solutions/high-availability-infrastructure/)
+- [Payments and digital commerce From the physical point of sale to the online transaction: tills, payment gateways, electronic receipts and, when the project calls for it, smart contracts on blockchain. Learn more](https://zentrix.company/en/solutions/payments-and-digital-commerce/)
+- [Computer vision AI that looks after people rather than watching them: analytics on your cameras to protect people and spaces in real time, with human judgment. Learn more](https://zentrix.company/en/solutions/computer-vision/)
 
 By industry
 

@@ -32,6 +32,7 @@ PRODUCCION = 'https://zentrix.company'
 AGENTE = 'zentrix-verificar-seo/1.0'
 REDIRECCIONES = ['/logistica/']
 SOLUCIONES = ['/ai/', '/cloud/', '/labs/', '/logistics/', '/software/', '/traza/']
+DIRECCIONES = set()  # PostalAddress de Organization vistas en el JSON-LD
 APPS = ['/work/', '/sales/', '/sales/en/', '/en/work/', '/en/sales/']
 
 
@@ -168,6 +169,14 @@ def validar_jsonld(pag, ruta, url):
                 for cp in n.get('contactPoint', []):
                     if not cp.get('contactType') or not (cp.get('email') or cp.get('telephone')):
                         errores.append('ContactPoint incompleto')
+            if 'Organization' in t:
+                ad = n.get('address')
+                if not isinstance(ad, dict) or ad.get('@type') != 'PostalAddress' or \
+                        [c for c in ('streetAddress', 'addressLocality', 'addressRegion', 'postalCode', 'addressCountry') if not ad.get(c)]:
+                    errores.append('Organization sin PostalAddress completa')
+                else:
+                    encontrados.add('PostalAddress')
+                    DIRECCIONES.add(tuple(ad.get(c) for c in ('streetAddress', 'addressLocality', 'addressRegion', 'postalCode', 'addressCountry')))
             if 'WebSite' in t:
                 pa = n.get('potentialAction') or {}
                 tgt = pa.get('target')
@@ -441,6 +450,19 @@ def verificar(base):
             for o in origenes:
                 if o in filas:
                     filas[o]['errores'].setdefault('Enlaces', []).append(problema)
+
+    # La dirección del JSON-LD debe ser la misma que /contacto/ publica en microdatos
+    for r in ('/contacto/', '/en/contact/'):
+        if r in paginas:
+            _, _, c, _ = cli.get(base + r)
+            c = c.decode('utf-8', 'replace')
+            m = re.search(r'itemtype="https://schema.org/PostalAddress">([\s\S]*?)</address>', c)
+            if m:
+                md = {k: html.unescape(v).strip() for k, v in re.findall(r'itemprop="(\w+)"(?: content="([^"]*)")?', m.group(1)) and
+                      [(k, cont or val) for k, cont, val in re.findall(r'itemprop="(\w+)"(?: content="([^"]*)")?>([^<]*)<', m.group(1))]}
+                vista = tuple(md.get(k) for k in ('streetAddress', 'addressLocality', 'addressRegion', 'postalCode', 'addressCountry'))
+                if DIRECCIONES and DIRECCIONES != {vista}:
+                    filas[r]['errores'].setdefault('JSON-LD', []).append('PostalAddress del JSON-LD ≠ la de la página: %s' % (vista,))
 
     # Reciprocidad de hreflang
     for ruta, fila in filas.items():
