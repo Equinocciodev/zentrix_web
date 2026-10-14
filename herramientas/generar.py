@@ -21,6 +21,7 @@ from sitio import (DOMINIO, MONO, TRAZA_URL, TRAZA_ICONO, PRODUCTOS, SOLUCIONES,
 import contenido as C  # noqa: E402
 import seo  # noqa: E402  — title, description y JSON-LD (último paso de cada página)
 import sitemap as mapa  # noqa: E402  — sitemap.xml desde el HTML, con lastmod de git
+import agentes  # noqa: E402  — robots.txt, /.well-known/ y <link> para agentes de IA
 
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 MULTI = (RAIZ / 'en' / 'index.html').exists()  # fase 3: el sitio completo en inglés bajo /en/
@@ -302,7 +303,7 @@ def procesar(s, ruta):
     s = RE_SOL.sub(lambda m: bloque_soluciones(lang_de(ruta)), s)
     s = RE_NAV.sub(lambda m: nav(ruta), s, count=1)
     s = RE_PIE.sub(lambda m: pie(ruta), s, count=1)
-    return seo.aplicar(ajustar_head(s, ruta), ruta)
+    return agentes.head(seo.aplicar(ajustar_head(s, ruta), ruta))
 
 
 # ── Plantilla de las páginas generadas ──────────────────────────────────────
@@ -1119,6 +1120,9 @@ def main():
     escribir(RAIZ / 'llms.txt', llms())
     escribir(RAIZ / 'REDIRECCIONES.md', redirecciones_md())
     escribir(RAIZ / 'manifest.json', (RAIZ / 'site.webmanifest').read_text(encoding='utf-8'))
+    # 4) robots.txt y /.well-known/ (agentes de IA)
+    for rel, contenido in agentes.ficheros().items():
+        escribir(RAIZ / rel, contenido)
     print(('difieren: ' if check else 'escritos: ') + str(len(cambios)))
     if check and cambios:
         print('\n'.join(cambios))

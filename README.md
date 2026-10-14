@@ -119,6 +119,18 @@ DNS en Cloudflare (cuenta de GitHub Pages: la organización **Equinocciodev**, e
 
 Para emitir el certificado, los registros tienen que estar en «DNS only». Una vez emitido se pueden pasar a «Proxied», con SSL en «Full (strict)».
 
+## Agentes de IA (agent readiness)
+
+Lo mide https://isitagentready.com/zentrix.company. `herramientas/agentes.py` (lo llama `generar.py`) escribe:
+
+- `robots.txt` (no se edita a mano): `User-agent: *` más un grupo con los crawlers de IA nombrados (búsqueda: OAI-SearchBot, Claude-SearchBot, PerplexityBot; a petición: ChatGPT-User, Claude-User, Perplexity-User; entrenamiento: GPTBot, ClaudeBot, Google-Extended, Applebot-Extended, CCBot, Bytespider, Amazonbot), todos con `Allow: /`, y la línea `Content-Signal` (https://contentsignals.org/).
+- **Decisión de Victor, 14-10-2026:** `Content-Signal: search=yes, ai-input=yes, ai-train=yes`. Es contenido público de marketing y se permite todo, también el entrenamiento; no se bloquea a ningún crawler de IA. Para cambiarlo, la constante `CONTENT_SIGNAL` de `agentes.py` (y, si se quiere bloquear a alguno, sacarlo de `CRAWLERS_IA` a un grupo con `Disallow: /`).
+- `/.well-known/agent-skills/index.json` y `/.well-known/agent-skills/zentrix/SKILL.md` (Agent Skills Discovery v0.2.0): una skill que explica a un agente dónde está la información pública de Zentrix y qué citar. El `digest` se calcula al generar.
+- `/.well-known/ai-catalog.json` (ARD / AI Catalog), también anunciado con `Agentmap:` en `robots.txt` y `<link rel="ai-catalog">`: solo lista esa skill.
+- En el `<head>` de cada página: `<link rel="describedby">` a `/llms.txt`, `<link rel="sitemap">` y `<link rel="ai-catalog">`, equivalentes a las cabeceras `Link`.
+
+Zentrix **no** tiene API pública, servidor MCP ni agente A2A, así que no se publican `api-catalog` (RFC 9727), OAuth, `auth.md`, MCP Server Card, WebMCP ni registros DNS-AID: anunciarlos sería falso. Las cabeceras `Link`, la negociación de Markdown y DNSSEC necesitan que Cloudflare haga de proxy delante de GitHub Pages (hoy solo lleva el DNS); los pasos están en la instrucción para la IA de Cloudflare (`INSTRUCCION_AGENT_READY_CLOUDFLARE.md`, fuera del repo).
+
 ## Cómo editar
 
 La cabecera, la barra de producto y el pie se repiten en cada `index.html`. Si cambias uno, cambia los ocho (`grep -l 'class="pie"' -r .`). Para probar en local:
