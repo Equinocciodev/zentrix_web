@@ -104,10 +104,10 @@
 @media (max-width: 639px) { .bq-tesela--prota { min-height: 420px; } .bq-tesela--prota .bq-mock { width: 86%; right: 16px; top: 24px; } }
 /* sobre azul */
 .bq-bento--azul .bq-tesela { background: rgba(255, 255, 255, .1); color: var(--blanco); }
-.bq-bento--azul .bq-tesela__p { color: var(--blanco); opacity: .92; }
+.bq-bento--azul .bq-tesela__p { color: var(--blanco); } /* opacidad 1: blanco sobre el azul teñido de la tesela, 4,9:1 (AA) */
 .bq-bento--azul .bq-tesela__ir { color: var(--blanco); }
 .bq-bento--azul .bq-ilu { color: var(--blanco); }
-.bq-bento--azul .bq-tesela:not(.bq-tesela--prota):hover { background: rgba(255, 255, 255, .16); }
+.bq-bento--azul .bq-tesela:not(.bq-tesela--prota):hover { background: rgba(255, 255, 255, .14); }
 .bq-bento--azul .bq-brillo::after { background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 30%), rgba(255, 255, 255, .16), transparent 62%); }
 .bq-bento--azul .bq-tesela:focus-visible { outline-color: var(--lima); }
 /* sobre negro */
