@@ -17,6 +17,7 @@ Es un sitio estático: HTML, una hoja CSS (`assets/css/sitio.css`) y un script p
 | `/sales/privacidad/` · `/sales/soporte/` · `/sales/terminos/` · `/sales/contacto/` | Política, soporte, términos y contacto con el formulario de demostración (`assets/js/contacto.js` arma el correo). |
 | `/sales/en/` + `privacy.html`, `terms.html`, `support.html`, `contact.html` | Versión en inglés, migrada de vendooapp.com/en. |
 | `/ai/` · `/logistics/` · `/cloud/` · `/labs/` · `/software/` | Los otros productos de la Presentación Corporativa: problema, para quién, beneficios, cómo funciona y contacto. Usan solo lo que dice la presentación. Ninguno tiene app publicada, así que no enlazan a tiendas: «Solicita una demostración», o «Próximamente» en Zentrix Logistics. |
+| `/privacidad/` | Privacidad del sitio web: «Cookies y analítica» en español (`#cookies`) y en inglés (`#cookies-en`), en una sola página. Las de las apps siguen en cada producto. |
 | `/traza/` | Presentación breve de Traza®, que tiene sitio propio: el botón principal lleva a <https://traza.technology>. En el menú, la portada y el pie, Traza enlaza directamente a ese sitio (pestaña nueva, con indicador de enlace externo). |
 | `/404.html` | Página de error. |
 
@@ -73,6 +74,17 @@ Zentrix es la marca madre. En la portada, la navegación, las tarjetas y el pie 
 - Las imágenes Open Graph (`assets/img/og*.png`, 1200×630) se generaron con la paleta y el logo; cada producto tiene la suya (`og-<producto>.png`) con su firma y su monograma, y todas las páginas llevan `og:image` y `twitter:image`.
 - Favicon: `favicon.svg` (la z del maestro sobre teja azul), `favicon.ico` (16, 32 y 48), PNG de 16, 32, 192 y 512 y uno de 512 «maskable» en `assets/img/favicon/`, `apple-touch-icon.png` de 180 sin transparencia en la raíz, `safari-pinned-tab.svg` para Safari y `site.webmanifest`.
 
+## Analítica
+
+`assets/js/analitica.js` mide con **GA4** en la propiedad del proyecto de Firebase de GUUAO (`G-H0HG8XPTES`); todos los eventos llevan `site: "zentrix"` para filtrarlos dentro de esa propiedad. `generar.py` lo pone con `defer` en el `<head>` de cada página (no en las redirecciones; en `404.html` con `data-grupo="error"`).
+
+- No se pide nada a Google hasta que la persona pulsa «Aceptar» en el aviso. «Rechazar», o «Do Not Track» / «Global Privacy Control» sin elección guardada, no envían nada.
+- Consent Mode v2: `analytics_storage` denegado hasta aceptar; `ad_storage`, `ad_user_data` y `ad_personalization` siempre denegados; Google Signals apagado.
+- La elección se guarda en `localStorage` (`zx-consent`). El enlace «Preferencias de cookies» del pie (`#zx-cookies`) reabre el aviso; sin JavaScript lleva a `/privacidad/#cookies`. Retirar el consentimiento borra las cookies `_ga`.
+- Eventos: `page_view` con `content_group` (producto o sección, p. ej. `sales/docs`), `click` con `link_type` (`contacto`, `correo`, `whatsapp`, `tienda`, `traza`), `link_url` sin consulta y `outbound`, y `language_change`. Nada de formularios.
+- Otros scripts miden con `window.zxAnalytics.track(nombre, params)`: encola hasta el consentimiento y descarta si se rechaza.
+- gtag.js se carga tras la primera interacción o cuando el navegador está ocioso.
+
 ## Publicación
 
 El sitio se publica con **GitHub Pages** desde **GitHub Actions**: `.github/workflows/pages.yml` es la plantilla oficial «Static HTML» y se dispara con cada push a `main` o a mano. No se publica con Cloudflare Pages; Cloudflare solo lleva el DNS.
@@ -105,4 +117,4 @@ python3 -m http.server 8765
 # http://127.0.0.1:8765/
 ```
 
-Las dos políticas reutilizan el texto vigente. Solo cambian el nombre de la app, una nota de cambio fechada el 13-10-2026 y el párrafo sobre el sitio web, porque este sitio no usa analítica ni formularios. La revisión legal de la entidad responsable (GUUAO LLC) sigue pendiente, como señala el assessment de rebranding.
+Las dos políticas reutilizan el texto vigente. Solo cambian el nombre de la app, una nota de cambio fechada el 13-10-2026 y el párrafo sobre el sitio web, que desde el 14-10-2026 remite a `/privacidad/#cookies` (el sitio mide visitas solo con consentimiento). La revisión legal de la entidad responsable (GUUAO LLC) sigue pendiente, como señala el assessment de rebranding.
