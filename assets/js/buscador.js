@@ -609,10 +609,8 @@
     }
   });
   pastilla.addEventListener('click', function () { abrir(); });
-  /* Otros buscadores de la página (p. ej. el de /soporte/) abren esta misma ventana. */
-  W.zxBuscar = function (q) { abrir(q == null ? '' : String(q).slice(0, 120)); };
 
-  /* ---------- API para otros campos (el buscador de la 404) ---------- */
+  /* ---------- API para otros campos (el buscador de la 404 y el de /soporte/) ---------- */
   W.zxBuscar = { abrir: function (q) { abrir(q != null ? String(q).slice(0, 120) : null); } };
 
   /* ---------- ?q= (SearchAction) ---------- */

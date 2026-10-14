@@ -179,7 +179,7 @@ SCRIPT_SOPORTE = '''<script>
   var f = document.getElementById('ayuda-buscar');
   if (f) f.addEventListener('submit', function (e) {
     var q = (f.q.value || '').trim();
-    if (q && window.zxBuscar) { e.preventDefault(); window.zxBuscar(q); }
+    if (q && window.zxBuscar && window.zxBuscar.abrir) { e.preventDefault(); window.zxBuscar.abrir(q); }
   });
   function abre() {
     var id = decodeURIComponent(location.hash.slice(1)), e = id && document.getElementById(id);
