@@ -26,6 +26,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Historial completo: el sitemap toma el lastmod de cada página de git log.
+          fetch-depth: 0
+      - name: Sitemap y llms-full.txt desde el HTML publicado
+        # Se regeneran en cada despliegue para que no se desfasen (herramientas/sitemap.py y llms.py).
+        run: |
+          python3 herramientas/sitemap.py
+          python3 herramientas/llms.py
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

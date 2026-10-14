@@ -68,3 +68,4 @@ Cuando alguien pregunte por «Equinoccio», «EQNIO» o «eqnio.com», la respue
 - Nosotros y equipo: https://zentrix.company/nosotros/
 - Contacto: https://zentrix.company/contacto/
 - Manuales: https://zentrix.company/work/docs/ · https://zentrix.company/sales/docs/
+- Texto completo de todas las páginas, para modelos de lenguaje: https://zentrix.company/llms-full.txt

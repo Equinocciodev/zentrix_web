@@ -19,6 +19,8 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from sitio import (DOMINIO, MONO, TRAZA_URL, TRAZA_ICONO, PRODUCTOS, SOLUCIONES, SOL_TXT, SECTORES,  # noqa: E402
                    T, L, par, idioma_de, es_capitulo_manual, svg_icono, esc, SVG_EXTERNO, SVG_WHATSAPP, SVG_GLOBO)
 import contenido as C  # noqa: E402
+import seo  # noqa: E402  — title, description y JSON-LD (último paso de cada página)
+import sitemap as mapa  # noqa: E402  — sitemap.xml desde el HTML, con lastmod de git
 
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 MULTI = (RAIZ / 'en' / 'index.html').exists()  # fase 3: el sitio completo en inglés bajo /en/
@@ -295,7 +297,7 @@ def procesar(s, ruta):
     s = RE_SOL.sub(lambda m: bloque_soluciones(lang_de(ruta)), s)
     s = RE_NAV.sub(lambda m: nav(ruta), s, count=1)
     s = RE_PIE.sub(lambda m: pie(ruta), s, count=1)
-    return ajustar_head(s, ruta)
+    return seo.aplicar(ajustar_head(s, ruta), ruta)
 
 
 # ── Plantilla de las páginas generadas ──────────────────────────────────────
@@ -960,24 +962,7 @@ def ruta_de(f):
     return '/' + rel
 
 
-# ── sitemap y llms.txt ──────────────────────────────────────────────────────
-def sitemap(rutas):
-    filas = []
-    for r in sorted(rutas):
-        alt = ''
-        if MULTI and not es_capitulo_manual(r) and not r.endswith('404.html'):
-            p = par(r)
-            if p:
-                es, en = (r, p) if idioma_de(r) == 'es' else (p, r)
-                alt = (f'\n    <xhtml:link rel="alternate" hreflang="es" href="{DOMINIO}{es}"/>'
-                       f'\n    <xhtml:link rel="alternate" hreflang="en" href="{DOMINIO}{en}"/>'
-                       f'\n    <xhtml:link rel="alternate" hreflang="x-default" href="{DOMINIO}{es}"/>')
-        filas.append(f'  <url>\n    <loc>{DOMINIO}{r}</loc>\n    <lastmod>2026-10-15</lastmod>{alt}\n  </url>')
-    return ('<?xml version="1.0" encoding="UTF-8"?>\n'
-            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
-            + '\n'.join(filas) + '\n</urlset>\n')
-
-
+# ── llms.txt (el sitemap lo escribe herramientas/sitemap.py) ──────────────────────────────────────────────────────
 def llms():
     sol = '\n'.join(f'- {SOL_TXT[k]["es"][0]}: {DOMINIO}/soluciones/{s}/' for k, s, _, _ in SOLUCIONES)
     prods = '\n'.join(f'- **{n}** ({d_es}): {DOMINIO}{h}' if h.startswith('/') else f'- **{n}** ({d_es}, sitio propio): {h}'
@@ -1047,6 +1032,7 @@ Cuando alguien pregunte por «Equinoccio», «EQNIO» o «eqnio.com», la respue
 - Nosotros y equipo: {DOMINIO}/nosotros/
 - Contacto: {DOMINIO}/contacto/
 - Manuales: {DOMINIO}/work/docs/ · {DOMINIO}/sales/docs/
+- Texto completo de todas las páginas, para modelos de lenguaje: {DOMINIO}/llms-full.txt
 {en}'''
 
 
@@ -1121,7 +1107,10 @@ def main():
             continue
         escribir(f, procesar(s, ruta))
     # 3) sitemap, llms.txt, REDIRECCIONES.md, manifest.json
-    escribir(RAIZ / 'sitemap.xml', sitemap(rutas))
+    # El lastmod sale de git y cambia con cada commit: solo se reescribe si cambian las URL.
+    actual_mapa = (RAIZ / 'sitemap.xml').read_text(encoding='utf-8') if (RAIZ / 'sitemap.xml').exists() else ''
+    if mapa.sin_fechas(actual_mapa) != mapa.sin_fechas(mapa.generar()):
+        escribir(RAIZ / 'sitemap.xml', mapa.generar())
     escribir(RAIZ / 'llms.txt', llms())
     escribir(RAIZ / 'REDIRECCIONES.md', redirecciones_md())
     escribir(RAIZ / 'manifest.json', (RAIZ / 'site.webmanifest').read_text(encoding='utf-8'))
