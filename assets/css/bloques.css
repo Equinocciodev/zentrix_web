@@ -86,7 +86,7 @@
 .bq-tesela__p { margin: 0; color: var(--texto-2); }
 .bq-tesela__ir { display: inline-flex; align-items: center; gap: 8px; margin-top: auto; padding-top: 16px; font-weight: 600; color: var(--azul); }
 .bq-tesela:hover .bq-flecha, .bq-tesela:focus-visible .bq-flecha, .bq-cta:hover .bq-flecha, .bq-enlace:hover .bq-flecha,
-.bq-canal:hover .bq-flecha, .bq-contacto__llegar a:hover .bq-flecha { transform: translateX(5px); }
+.bq-contacto__llegar a:hover .bq-flecha { transform: translateX(5px); }
 .bq-tesela:hover .bq-flecha--externo { transform: translate(3px, -3px); }
 .bq-tesela:focus-visible { outline: 3px solid var(--azul); outline-offset: 3px; clip-path: none; }
 /* protagonista */
@@ -227,39 +227,53 @@
 }
 
 /* ── 6. Contacto ─────────────────────────────────────────────────────────── */
-.bq-contacto { display: grid; gap: 16px; }
-@media (min-width: 1024px) { .bq-contacto { grid-template-columns: 7fr 5fr; gap: 24px; } }
-.bq-contacto__panel { position: relative; overflow: hidden; padding: 32px 24px; background: var(--negro); color: var(--blanco);
+/* Banda «hablemos»: titular a la izquierda, acciones a la derecha (BLOQUES.md, 6). Sin dirección. */
+.bq-hablemos { position: relative; overflow: hidden; display: grid; gap: 36px; padding: 40px 24px;
   clip-path: polygon(0 0, calc(100% - 40px) 0, 100% 40px, 100% 100%, 0 100%); }
-@media (min-width: 768px) { .bq-contacto__panel { padding: 48px; } }
-.bq-contacto__panel .bq-zfondo { color: var(--blanco); opacity: .05; width: 520px; right: -160px; }
-.bq-contacto__panel > *:not(.bq-zfondo) { position: relative; z-index: 1; }
-.bq-contacto__t { font-size: clamp(1.75rem, 1.3rem + 1.8vw, 2.5rem); font-weight: 800; letter-spacing: -.035em; margin: 0 0 28px; max-width: 16ch; }
-.bq-promesa { display: grid; grid-template-columns: auto 1fr; column-gap: 14px; align-items: center; margin: 0 0 32px; }
-.bq-promesa .bq-barra { grid-row: span 2; width: 40px; height: 40px; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); background: none; position: relative; }
-.bq-promesa .bq-barra::before { content: ""; position: absolute; left: 0; top: 15px; width: 40px; height: 10px; background: var(--lima); clip-path: polygon(0 0, 100% 0, calc(100% - 11.4px) 100%, 0 100%); }
-.bq-promesa b { font-size: 1.25rem; font-weight: 700; }
-.bq-promesa span { color: var(--texto-osc-2); }
-.bq-contacto__botones { display: grid; gap: 12px; }
-@media (min-width: 640px) { .bq-contacto__botones { grid-template-columns: 1fr 1fr; } }
-.bq-canal { display: flex; align-items: center; gap: 14px; min-height: 72px; padding: 14px 20px; text-decoration: none; color: var(--blanco) !important;
-  border: 1px solid rgba(255, 255, 255, .32); border-radius: var(--r-boton, 12px); transition: background-color .2s, border-color .2s, transform .3s var(--facil, ease); }
-.bq-canal:hover { background: rgba(255, 255, 255, .08); border-color: var(--blanco); }
-.bq-canal .bq-ico { width: 30px; height: 30px; color: var(--blanco); }
-.bq-canal span { display: flex; flex-direction: column; line-height: 1.3; }
-.bq-canal b { font-size: 1.0625rem; }
-.bq-canal small { font-size: .9375rem; opacity: .85; }
-.bq-canal--lima { background: var(--lima); border-color: var(--lima); color: var(--negro) !important; }
-.bq-canal--lima .bq-ico { color: var(--negro); }
-.bq-canal--lima .bq-ilu__l { fill: var(--blanco); }
-.bq-canal--lima:hover { background: var(--blanco); border-color: var(--blanco); }
-.bq-canal:focus-visible { outline: 3px solid var(--lima); outline-offset: 3px; }
-.bq-canal--lima:focus-visible { outline-color: var(--blanco); }
-.bq-contacto__otros { display: flex; flex-wrap: wrap; gap: 16px 40px; margin: 32px 0 0; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, .14); }
-.bq-contacto__otros dt { font-size: .8125rem; color: var(--texto-osc-2); }
-.bq-contacto__otros dd { margin: 2px 0 0; font-weight: 600; }
-.bq-contacto__otros a { color: var(--blanco) !important; }
+@media (min-width: 768px) { .bq-hablemos { padding: 56px; gap: 44px; } }
+@media (min-width: 1024px) { .bq-hablemos { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); align-items: center; gap: 64px; padding: 72px 64px; } }
+.bq-hablemos .bq-zfondo { color: var(--blanco); opacity: .05; width: 560px; right: -200px; }
+.bq-hablemos > *:not(.bq-zfondo) { position: relative; z-index: 1; }
+.bq-hablemos__t { font-size: clamp(2.125rem, 1.4rem + 3vw, 3.5rem); font-weight: 800; letter-spacing: -.04em; line-height: 1.04; margin: 12px 0 24px; max-width: 13ch; }
+.bq-hablemos__apoyo { display: block; margin: 0; font-size: 1.125rem; line-height: 1.45; color: var(--texto-osc-2); max-width: 40ch; }
+.bq-hablemos__apoyo .bq-barra { margin-bottom: 20px; }
+.bq-hablemos__acciones { display: grid; gap: 28px; }
+.bq-hablemos__grupo { margin: 0; }
+.bq-hablemos__grupo--sec { padding-top: 24px; border-top: 1px solid var(--borde-osc); }
+.bq-hablemos__g { margin: 0 0 12px; font-size: .8125rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--blanco); }
+.bq-hablemos__grupo--sec .bq-hablemos__g { color: var(--texto-osc-2); }
+.bq-hablemos__botones { display: grid; gap: 12px; }
+.bq-hablemos__botones { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+.bq-hablemos__botones--sec { display: flex; flex-wrap: wrap; gap: 10px; }
+.bq-hablemos__botones--sec .bq-btn--suave { flex: 1 1 100%; }
+
+/* Botones de la banda: área táctil ≥ 48 px, foco lima (blanco sobre el lima) */
+.bq-btn { display: flex; align-items: center; gap: 14px; min-height: 64px; padding: 12px 18px; border: 1.5px solid transparent;
+  border-radius: var(--r-boton, 12px); text-decoration: none; font-weight: 600; line-height: 1.25;
+  transition: background-color .2s, border-color .2s, color .2s, transform .3s var(--facil, ease); }
+.bq-btn span { display: flex; flex-direction: column; min-width: 0; }
+.bq-btn small { font-size: .8125rem; font-weight: 600; letter-spacing: .02em; opacity: .8; }
+.bq-btn b { font-size: 1.0625rem; font-weight: 700; overflow-wrap: anywhere; }
+.bq-btn .bq-ico { width: 28px; height: 28px; }
+.bq-btn:focus-visible { outline: 3px solid var(--lima); outline-offset: 3px; }
+.oscuro a.bq-btn { color: var(--blanco); }
+.oscuro a.bq-btn--lima { background: var(--lima); border-color: var(--lima); color: var(--negro); }
+.bq-btn--lima .bq-ico { color: var(--negro); }
+.bq-btn--lima .bq-ilu__l { fill: var(--blanco); }
+.oscuro a.bq-btn--lima:hover { background: var(--blanco); border-color: var(--blanco); }
+.bq-btn--lima:focus-visible { outline-color: var(--blanco); }
+.bq-btn--contorno { border-color: rgba(255, 255, 255, .5); }
+.bq-btn--contorno .bq-ico { color: var(--blanco); }
+.bq-btn--contorno:hover, .bq-btn--suave:hover, .bq-btn--chip:hover { background: rgba(255, 255, 255, .1); border-color: var(--blanco); }
+.bq-btn--suave { min-height: 56px; background: var(--negro-2); border-color: var(--borde-osc); }
+.bq-btn--chip { min-height: 48px; padding: 8px 16px; gap: 8px; font-size: .9375rem; border-color: var(--borde-osc); border-radius: 999px; }
+.bq-btn--chip .bq-flecha { width: 16px; height: 16px; }
+.bq-btn:hover .bq-flecha { transform: translateX(4px); }
+
+/* /contacto/: debajo de la banda, el lugar (mapa y dirección) y los datos */
+.bq-contacto { display: grid; gap: 16px; margin-top: 24px; }
 .bq-contacto__lugar { display: flex; flex-direction: column; background: var(--bq-gris); overflow: hidden; }
+@media (min-width: 768px) { .bq-contacto__lugar { flex-direction: row; } .bq-contacto__mapa { flex: 1 1 55%; } .bq-contacto__dir { flex: 1 1 45%; align-self: center; } }
 .seccion--gris .bq-contacto__lugar { background: var(--blanco); }
 .bq-contacto__mapa { position: relative; aspect-ratio: 5 / 3; min-height: 200px; }
 .bq-mapa { position: absolute; inset: 0; width: 100%; height: 100%; }
@@ -343,7 +357,7 @@
   .bq-pilar, .bq-tesela, .bq-sector, .bq-caso { transition: transform .45s var(--facil, ease), background-color .3s; }
   .bq-pilar:hover, .bq-tesela:hover, .bq-caso:hover { transform: translateY(-6px); }
   .bq-pilar:hover .bq-pilar__num { transform: translateX(-6px); }
-  .bq-canal:hover { transform: translateY(-2px); }
+  .bq-btn:hover { transform: translateY(-2px); }
 }
 @media (prefers-reduced-motion: reduce) {
   .bq-flecha, .bq-pilar__num, .bq-banda__mono, .bq-mock, .bq-stack__logo { transition: none !important; }

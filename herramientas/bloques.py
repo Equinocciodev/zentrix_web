@@ -8,7 +8,8 @@ Seis variantes con prefijo `bq-`, todas con su CSS en assets/css/bloques.css y u
     3. stack()    · fila de tecnologías con los logotipos oficiales en una sola tinta
     4. banda()    · banda a todo el ancho (producto relacionado) y cierre() (llamada final)
     5. pasos()    · pasos con un trazo que se dibuja, y cifras() con contadores
-    6. contacto() · panel de contacto: canales, promesa de respuesta, dirección y mapa
+    6. hablemos() · banda de contacto que se repite: titular, escríbenos y soporte (sin dirección)
+       contacto() · la de /contacto/: la misma banda más el lugar (dirección y mapa) y los datos
 
 `aplicar(s, ruta)` lo llama generar.py en cada página: enlaza la hoja y el script, rellena
 los marcadores `<!--BQ:…-->` y convierte el marcado antiguo de las páginas escritas a mano
@@ -294,18 +295,18 @@ _Q = quote('10302 NW South River Drive, Medley, FL 33178')
 MAPAS = {'google': f'https://www.google.com/maps/search/?api=1&query={_Q}', 'apple': f'https://maps.apple.com/?q={_Q}'}
 
 CONTACTO_TXT = {
-    'es': {'ante': 'Escríbenos', 'titulo': 'Una persona del equipo te responde.',
-           'promesa': 'Respondemos en menos de un día hábil.', 'promesa_p': 'En español o en inglés. Nunca un bot.',
-           'wa': 'Escribir por WhatsApp', 'correo': 'Escribir a hola@', 'asunto': 'Zentrix: hablemos',
-           'otros': 'Otros canales', 'soporte': 'Soporte de las apps', 'manuales': 'Manuales',
+    'es': {'ante': 'Contacto', 'titulo': 'Cuéntanos cómo trabaja tu equipo.',
+           'apoyo': 'Te responde una persona, en español, en menos de un día hábil.',
+           'g1': 'Escríbenos', 'correo': 'Correo', 'wa': 'WhatsApp', 'asunto': 'Zentrix: hablemos',
+           'g2': '¿Ya usas nuestras apps?', 'soporte': 'Soporte', 'manual': 'Manual de',
            'dir_t': 'Dirección', 'llegar': 'Cómo llegar', 'en_google': 'Google Maps', 'en_apple': 'Apple Maps',
            'horario_t': 'Horario', 'horario': 'Lunes a viernes, 9:00 a 19:00 (UTC−4)',
            'base_t': 'Equipo', 'base': 'Isla Margarita, Venezuela, en remoto para todo el mundo',
            'idiomas_t': 'Idiomas', 'idiomas': 'Español e inglés', 'mapa': 'Mapa ilustrado de la zona de la dirección'},
-    'en': {'ante': 'Write to us', 'titulo': 'A person from the team replies.',
-           'promesa': 'We reply within one business day.', 'promesa_p': 'In Spanish or English. Never a bot.',
-           'wa': 'Message us on WhatsApp', 'correo': 'Write to hola@', 'asunto': 'Zentrix: let’s talk',
-           'otros': 'Other channels', 'soporte': 'App support', 'manuales': 'Manuals',
+    'en': {'ante': 'Contact', 'titulo': 'Tell us how your team works.',
+           'apoyo': 'A real person replies, in Spanish or English, within one business day.',
+           'g1': 'Write to us', 'correo': 'Email', 'wa': 'WhatsApp', 'asunto': 'Zentrix: let’s talk',
+           'g2': 'Already using our apps?', 'soporte': 'Support', 'manual': 'Manual for',
            'dir_t': 'Address', 'llegar': 'Get directions', 'en_google': 'Google Maps', 'en_apple': 'Apple Maps',
            'horario_t': 'Hours', 'horario': 'Monday to Friday, 9:00 to 19:00 (UTC−4)',
            'base_t': 'Team', 'base': 'Isla Margarita, Venezuela, working remotely worldwide',
@@ -341,33 +342,63 @@ def mapa():
             f'<path class="bq-ilu__l" d="M-17-73h34l-{12 * BISEL:.0f} 12h-22z"/></g></svg>')
 
 
-def contacto(lang, h='h3', id_titulo='', detalle=False):
+def _docs(lang):
+    sop = '/en/' if lang == 'en' and (RAIZ / 'en' / 'index.html').exists() else '/'
+    return f'{sop}work/docs/', f'{sop}sales/docs/'
+
+
+def hablemos(lang, id_='contacto', h='h2', ante=None, titulo=None, seccion=True):
+    """Banda de contacto: titular a la izquierda y dos acciones a la derecha. Sin dirección:
+    esa vive solo en /contacto/, en las páginas legales y en el JSON-LD de Organization."""
+    t = CONTACTO_TXT[lang]
+    w_docs, s_docs = _docs(lang)
+    idt = f'{id_}-t'
+    panel = f'''<div class="bq-hablemos oscuro">
+    {zfondo()}
+    <div class="bq-hablemos__texto revela">
+      <span class="antetitulo">{ante or t['ante']}</span>
+      <{h} class="bq-hablemos__t" id="{idt}">{titulo or t['titulo']}</{h}>
+      <p class="bq-hablemos__apoyo">{barra()}<span>{t['apoyo']}</span></p>
+    </div>
+    <div class="bq-hablemos__acciones revela" style="--retardo:.1s">
+      <div class="bq-hablemos__grupo" role="group" aria-labelledby="{id_}-g1">
+        <p class="bq-hablemos__g" id="{id_}-g1">{t['g1']}</p>
+        <div class="bq-hablemos__botones">
+          <a class="bq-btn bq-btn--lima" href="mailto:hola@zentrix.company?subject={quote(t['asunto'])}">{icono('correo')}<span><small>{t['correo']}</small><b>hola@zentrix.company</b></span></a>
+          <a class="bq-btn bq-btn--contorno" href="https://wa.me/584123469712">{icono('whatsapp')}<span><small>{t['wa']}</small><b>+58 412-346 9712</b></span></a>
+        </div>
+      </div>
+      <div class="bq-hablemos__grupo bq-hablemos__grupo--sec" role="group" aria-labelledby="{id_}-g2">
+        <p class="bq-hablemos__g" id="{id_}-g2">{t['g2']}</p>
+        <div class="bq-hablemos__botones bq-hablemos__botones--sec">
+          <a class="bq-btn bq-btn--suave" href="mailto:soporte@zentrix.company"><span><small>{t['soporte']}</small><b>soporte@zentrix.company</b></span></a>
+          <a class="bq-btn bq-btn--chip" href="{w_docs}">{t['manual']} Zentrix Work{FLECHA}</a>
+          <a class="bq-btn bq-btn--chip" href="{s_docs}">{t['manual']} Zentrix Sales{FLECHA}</a>
+        </div>
+      </div>
+    </div>
+  </div>'''
+    if not seccion:
+        return panel
+    return f'''<section class="seccion bq-seccion--hablemos" id="{id_}" aria-labelledby="{idt}">
+  <div class="envoltura">
+  {panel}
+  </div>
+</section>'''
+
+
+def contacto(lang, detalle=True, ante=None, titulo=None):
+    """Bloque de /contacto/: la banda, y debajo el lugar (dirección y mapa) y los datos."""
     t = dict(CONTACTO_TXT[lang])
     if detalle:
         t.update(CONTACTO_DETALLE[lang])
     d = DIRECCION
-    ia = f' id="{id_titulo}"' if id_titulo else ''
-    sop = '/en/' if lang == 'en' and (RAIZ / 'en' / 'index.html').exists() else '/'
-    w_docs, s_docs = f'{sop}work/docs/', f'{sop}sales/docs/'
-    return f'''<div class="bq-contacto">
-  <div class="bq-contacto__panel oscuro revela">
-    {zfondo()}
-    <span class="antetitulo">{t['ante']}</span>
-    <{h} class="bq-contacto__t"{ia}>{t['titulo']}</{h}>
-    <p class="bq-promesa">{barra()}<b>{t['promesa']}</b> <span>{t['promesa_p']}</span></p>
-    <div class="bq-contacto__botones">
-      <a class="bq-canal bq-canal--lima" href="https://wa.me/584123469712">{icono('whatsapp')}<span><b>{t['wa']}</b><small>+58 412-346 9712</small></span></a>
-      <a class="bq-canal" href="mailto:hola@zentrix.company?subject={quote(t['asunto'])}">{icono('correo')}<span><b>{t['correo']}</b><small>hola@zentrix.company</small></span></a>
-    </div>
-    <dl class="bq-contacto__otros">
-      <div><dt>{t['soporte']}</dt><dd><a href="mailto:soporte@zentrix.company">soporte@zentrix.company</a></dd></div>
-      <div><dt>{t['manuales']}</dt><dd><a href="{w_docs}">Zentrix Work</a> · <a href="{s_docs}">Zentrix Sales</a></dd></div>
-    </dl>
-  </div>
-  <div class="bq-contacto__lugar revela" style="--retardo:.1s">
+    return f'''{hablemos(lang, id_='canales', ante=ante, titulo=titulo, seccion=False)}
+<div class="bq-contacto">
+  <div class="bq-contacto__lugar revela">
     <div class="bq-contacto__mapa" role="img" aria-label="{t['mapa']}">{mapa()}</div>
     <div class="bq-contacto__dir">
-      <{h} class="bq-contacto__dt">{icono('lugar')}{t['dir_t']}</{h}>
+      <h3 class="bq-contacto__dt">{icono('lugar')}{t['dir_t']}</h3>
       <address itemscope itemtype="https://schema.org/PostalAddress">
         <span itemprop="streetAddress">{d['calle']}</span><br>
         <span itemprop="addressLocality">{d['ciudad']}</span>, <span itemprop="addressRegion">{d['region']}</span> <span itemprop="postalCode">{d['cp']}</span><br>
@@ -376,7 +407,7 @@ def contacto(lang, h='h3', id_titulo='', detalle=False):
       <p class="bq-contacto__llegar"><b>{t['llegar']}:</b> <a href="{MAPAS['google']}">{t['en_google']}{FLECHA}</a> <a href="{MAPAS['apple']}">{t['en_apple']}{FLECHA}</a></p>
     </div>
   </div>
-  <dl class="bq-datos revela" style="--retardo:.15s">
+  <dl class="bq-datos revela" style="--retardo:.1s">
     <div>{icono('reloj')}<dt>{t['horario_t']}</dt><dd>{t['horario']}</dd></div>
     <div>{icono('idioma')}<dt>{t['idiomas_t']}</dt><dd>{t['idiomas']}</dd></div>
     <div>{icono('lugar')}<dt>{t['base_t']}</dt><dd>{t['base']}</dd></div>
@@ -396,7 +427,7 @@ def _marcador(m, ruta):
     nombre = m.group(1)
     lang = lang_de(ruta)
     if nombre == 'CONTACTO':
-        cuerpo = contacto(lang)
+        cuerpo = hablemos(lang, id_='contact' if lang == 'en' else 'contacto')
     elif nombre == 'ZFONDO':
         cuerpo = zfondo()
     elif nombre == 'FLECHA':

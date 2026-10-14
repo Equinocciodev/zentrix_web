@@ -971,11 +971,7 @@ def pag_contacto(lang):
 
 <section class="seccion" aria-labelledby="canales-t">
   <div class="envoltura">
-    <div class="cabeza revela">
-      <span class="antetitulo">{tx[0]}</span>
-      <h2 id="canales-t">{tx[1]}</h2>
-    </div>
-    {BQ.contacto(lang, detalle=True)}
+    {BQ.contacto(lang, ante=tx[0], titulo=tx[1])}
   </div>
 </section>'''
     return ruta, pagina(ruta, titulo, desc, cuerpo)
