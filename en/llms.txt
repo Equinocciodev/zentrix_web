@@ -1,0 +1,89 @@
+# Zentrix
+
+> Zentrix turns a company's processes into simple tools: apps the team uses in the store and on the street, connected to its management system. It is the new brand of Equinoccio (EQNIO), the software engineering, applied-AI and product team based on Isla Margarita, Nueva Esparta, Venezuela, with clients in Venezuela, Latin America, the United States and Europe.
+
+Slogan: «Technology to work better». eqnio.com redirects to zentrix.company. Spanish version: [llms.txt](https://zentrix.company/llms.txt).
+
+## Products
+
+- [Zentrix Work](https://zentrix.company/en/work/): Store teams
+- [Zentrix Sales](https://zentrix.company/en/sales/): Field sales
+- [Zentrix AI](https://zentrix.company/en/ai/): Applied intelligence
+- [Zentrix Logistics](https://zentrix.company/en/logistics/): Dispatch and delivery · Coming soon
+- [Zentrix Cloud](https://zentrix.company/en/cloud/): Infrastructure
+- [Zentrix Labs](https://zentrix.company/en/labs/): Research
+- [Zentrix Software](https://zentrix.company/en/software/): Odoo® implementation
+- [Traza](https://traza.technology): A Zentrix® product (own site)
+
+## Solutions
+
+- [Odoo in Venezuela](https://zentrix.company/en/solutions/odoo-venezuela/): Implementation with Venezuelan localization
+- [Software development](https://zentrix.company/en/solutions/software-development/): Web and mobile apps built around your process
+- [Technical audit](https://zentrix.company/en/solutions/technical-audit/): Diagnosis, architecture and roadmap
+- [High availability](https://zentrix.company/en/solutions/high-availability-infrastructure/): Infrastructure that keeps running through outages
+- [Payments and digital commerce](https://zentrix.company/en/solutions/payments-and-digital-commerce/): Point of sale, tills and payment gateways
+- [Computer vision](https://zentrix.company/en/solutions/computer-vision/): Real-time video analytics
+- [All solutions, by need and by sector](https://zentrix.company/en/solutions/)
+
+## Company
+
+- [About Zentrix and the team](https://zentrix.company/en/about/): founded in 2024 as Equinoccio, based on Isla Margarita, Venezuela
+- [Customers](https://zentrix.company/en/customers/): Grupo Leiros and GUUAO, where our apps run every day
+- [Resources](https://zentrix.company/en/resources/): manuals, support, privacy and terms of each product
+
+## Team
+
+- Lenin Acosta — Supervisor de Desarrollo
+- Juan Leiros — CTO · Jefe de Innovación
+- Enmanuel Gamero — Tech & Infrastructure Manager
+- Miguel Coronel — Coordinador de Soporte
+- Adrian Alves — Backend Developer · Financial Systems
+- Celmira Genes — Odoo Expert · Consultora
+- Moisés Cárdenas — Ingeniero de Sistemas · UX
+- Alejandro Larez — Planificación · Logística · Estrategia
+
+## Contact
+
+- [Contact page](https://zentrix.company/en/contact/): a person replies in under one business day
+- [Projects and demos: hola@zentrix.company](mailto:hola@zentrix.company)
+- [Support: soporte@zentrix.company](mailto:soporte@zentrix.company)
+- [WhatsApp +58 412-346 9712](https://wa.me/584123469712)
+
+## Manuals
+
+- [Zentrix Work operator manual](https://zentrix.company/en/work/docs/): in Spanish
+- [Zentrix Sales rep manual](https://zentrix.company/en/sales/docs/): in Spanish
+
+## Optional
+
+- [Full text of every page](https://zentrix.company/llms-full.txt)
+- [Zentrix Work privacy policy](https://zentrix.company/en/work/privacy/)
+- [Zentrix Work support](https://zentrix.company/en/work/support/)
+- [Zentrix Work terms](https://zentrix.company/en/work/terms/)
+- [Zentrix Sales privacy policy](https://zentrix.company/en/sales/privacy/)
+- [Zentrix Sales support](https://zentrix.company/en/sales/support/)
+- [Zentrix Sales terms](https://zentrix.company/en/sales/terms/)
+- [Website privacy and cookies](https://zentrix.company/en/privacy/)
+- [Ajustes — Zentrix Work](https://zentrix.company/work/docs/ajustes.html)
+- [Recibir una devolución — Zentrix Work](https://zentrix.company/work/docs/devoluciones.html)
+- [Dudas rápidas — Zentrix Work](https://zentrix.company/work/docs/dudas.html)
+- [Entrar: la primera vez y cada día — Zentrix Work](https://zentrix.company/work/docs/entrar.html)
+- [Entregar en la tienda — Zentrix Work](https://zentrix.company/work/docs/entregar.html)
+- [La llamada — Zentrix Work](https://zentrix.company/work/docs/llamada.html)
+- [Permisos y sonido — Zentrix Work](https://zentrix.company/work/docs/permisos.html)
+- [Preparar un pedido — Zentrix Work](https://zentrix.company/work/docs/preparar.html)
+- [Reparto a domicilio — Zentrix Work](https://zentrix.company/work/docs/reparto.html)
+- [Tu día y tu desempeño — Zentrix Work](https://zentrix.company/work/docs/tu-dia.html)
+- [El turno — Zentrix Work](https://zentrix.company/work/docs/turno.html)
+- [Tus pedidos y tu actividad — Zentrix Sales](https://zentrix.company/sales/docs/actividad.html)
+- [El catálogo — Zentrix Sales](https://zentrix.company/sales/docs/catalogo.html)
+- [Clientes nuevos y correcciones — Zentrix Sales](https://zentrix.company/sales/docs/clientes.html)
+- [Cobrarle a un cliente — Zentrix Sales](https://zentrix.company/sales/docs/cobrar.html)
+- [Hablar con la oficina — Zentrix Sales](https://zentrix.company/sales/docs/conversacion.html)
+- [Dudas rápidas — Zentrix Sales](https://zentrix.company/sales/docs/dudas.html)
+- [Entrar y sincronizar — Zentrix Sales](https://zentrix.company/sales/docs/entrar.html)
+- [Facturas y lo que te deben — Zentrix Sales](https://zentrix.company/sales/docs/facturas.html)
+- [Tu Inicio — Zentrix Sales](https://zentrix.company/sales/docs/inicio.html)
+- [La ruta del día — Zentrix Sales](https://zentrix.company/sales/docs/ruta.html)
+- [Trabajar sin internet — Zentrix Sales](https://zentrix.company/sales/docs/sin-internet.html)
+- [La visita paso a paso — Zentrix Sales](https://zentrix.company/sales/docs/visita.html)

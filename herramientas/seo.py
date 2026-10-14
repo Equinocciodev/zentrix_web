@@ -50,7 +50,7 @@ PAGINAS = {
                 'Zentrix Sales — App de fuerza de ventas y cobranza',
                 'Zentrix Sales, app de fuerza de ventas para Android y iPhone: ruta, visitas, '
                 'pedidos y cobranza de tus vendedores de campo, con o sin señal, conectada a Odoo®.'),
-    '/sales/en/': ('field sales app',
+    '/en/sales/': ('field sales app',
                    'Zentrix Sales — Field sales app for Android and iPhone',
                    'Zentrix Sales is the field sales app for Android and iPhone: route, orders, '
                    'collections and proof of visit for your reps, with or without a signal.'),
@@ -121,26 +121,26 @@ PAGINAS = {
                          'Contacto — Zentrix Sales',
                          'Pide una demostración de Zentrix Sales con tus datos: cuéntanos cómo vende hoy tu '
                          'equipo. O escríbenos por correo, teléfono o WhatsApp, sin compromiso.'),
-    '/sales/en/contact.html': ('field sales app demo',
+    '/en/sales/contact/': ('field sales app demo',
                                'Contact — Zentrix Sales',
                                'Request a Zentrix Sales demo on your own data: tell us how your team sells today. '
                                'Or write to us by email, phone or WhatsApp, no strings attached.'),
     '/sales/privacidad/': (None, 'Política de privacidad — Zentrix Sales',
                            'Qué datos recoge Zentrix Sales, la app de fuerza de ventas, para qué, dónde se '
                            'almacenan, cuánto tiempo se conservan y cómo ejercer tus derechos.'),
-    '/sales/en/privacy.html': (None, 'Privacy policy — Zentrix Sales',
+    '/en/sales/privacy/': (None, 'Privacy policy — Zentrix Sales',
                                'What data Zentrix Sales, the field sales app, collects, why, where it is stored, '
                                'how long it is kept and how to exercise your rights over it.'),
     '/sales/soporte/': (None, 'Soporte — Zentrix Sales',
                         'Soporte de Zentrix Sales: te contesta una persona en español en menos de un día hábil, '
                         'por correo, teléfono o WhatsApp. Y cómo pedir tus datos o borrarlos.'),
-    '/sales/en/support.html': (None, 'Support — Zentrix Sales',
+    '/en/sales/support/': (None, 'Support — Zentrix Sales',
                                'Zentrix Sales support: a person replies in under one business day by email, phone '
                                'or WhatsApp. And how to request access to or deletion of your data.'),
     '/sales/terminos/': (None, 'Términos de servicio — Zentrix Sales',
                          'Términos de servicio de Zentrix Sales, la app de fuerza de ventas de campo para '
                          'Android y iPhone: quién la contrata, quién la usa y qué reglas aplican.'),
-    '/sales/en/terms.html': (None, 'Terms of service — Zentrix Sales',
+    '/en/sales/terms/': (None, 'Terms of service — Zentrix Sales',
                              'Terms of service of Zentrix Sales, the field sales app for Android and iPhone: who '
                              'contracts it, who uses it every day and which rules apply.'),
     # Zentrix Work: legales
@@ -205,6 +205,85 @@ PAGINAS = {
                               'Cómo se enciende el turno en Zentrix Work: elegir tienda y tareas, deslizar para '
                               'encender, pedir una pausa, apagar, y cuándo el turno se apaga solo.'),
 }
+
+# Inglés bajo /en/ (fase 3 del multiidioma)
+PAGINAS.update({
+    '/en/': ('business software and apps in Venezuela',
+        'Zentrix — Business software and apps for Venezuela',
+        'Technology to work better: apps for your store team and field sales force, Odoo® with Venezuelan localization, and custom software built in Venezuela.'),
+    '/en/work/': ('store team app',
+        'Zentrix Work — The app for store and delivery teams',
+        'Zentrix Work, the Android app for store teams: work lands on the phone to pick orders, deliver, run delivery routes and take returns during the shift.'),
+    '/en/ai/': ('AI for business',
+        'Zentrix AI — Applied artificial intelligence for business',
+        'Zentrix AI connects your company’s knowledge and systems to AI agents and assistants that query, analyze and act, with role-based permissions for each user.'),
+    '/en/logistics/': ('dispatch and delivery software',
+        'Zentrix Logistics — Dispatch and delivery, under control',
+        'Zentrix Logistics, coming soon: dispatch, routes, deliveries and incident handling in one place, so you keep every promise you make to your customers.'),
+    '/en/cloud/': ('managed hosting and backups',
+        'Zentrix Cloud — Hosting, monitoring and backups',
+        'Zentrix Cloud takes care of hosting, monitoring and backups for your apps and data, so they stay available and your team can focus on the work itself.'),
+    '/en/labs/': ('product research and prototyping',
+        'Zentrix Labs — Research and new product validation',
+        'Zentrix Labs researches, prototypes and validates new products to expand what we can offer you, testing each idea before it joins the Zentrix suite.'),
+    '/en/software/': ('Odoo implementation Venezuela',
+        'Zentrix Software — Odoo® implementation and customization',
+        'Zentrix Software implements and customizes Odoo® in Venezuela, from diagnosis to adoption, with local tax localization and the software behind our apps.'),
+    '/en/traza/': ('product traceability',
+        'Traza — Traceability for documents, products and assets',
+        'Traza gives your documents, products and assets a verifiable journey: where they came from, where they went, who moved them and where they are now.'),
+    '/en/solutions/': ('software solutions Venezuela',
+        'Solutions — Odoo®, software and infrastructure | Zentrix',
+        'Odoo® with Venezuelan localization, custom software, technical audits, high-availability infrastructure, payments and computer vision, by the Zentrix team.'),
+    '/en/solutions/odoo-venezuela/': ('Odoo partner Venezuela',
+        'Odoo® implementation in Venezuela | Zentrix',
+        'Odoo® implementation with Venezuelan localization: tax books, withholdings, dual currency and inventory to treasury in one system, with training for your team.'),
+    '/en/solutions/software-development/': ('custom software development',
+        'Custom software development | Zentrix',
+        'Custom web and mobile apps built around your process: design and engineering in one team, an architecture that grows and continuous delivery you can try.'),
+    '/en/solutions/technical-audit/': ('technical audit and architecture',
+        'Technical audit and systems architecture | Zentrix',
+        'An honest diagnosis of your systems, a roadmap with reasons, argued technology choices and a second opinion on third-party quotes before you sign anything.'),
+    '/en/solutions/high-availability-infrastructure/': ('high availability infrastructure',
+        'High-availability infrastructure | Zentrix',
+        'Servers on-premises or in the cloud with tested backups, Zero Trust access and containers, designed to keep your operation running through power outages.'),
+    '/en/solutions/payments-and-digital-commerce/': ('POS and payment gateways',
+        'Payments and digital commerce | Zentrix',
+        'Integrated point of sale, tills with shifts and cash counts, payment gateways with automatic reconciliation, and electronic receipts for your customers.'),
+    '/en/solutions/computer-vision/': ('computer vision video analytics',
+        'Computer vision and video analytics | Zentrix',
+        'Real-time video analytics on the cameras you already have: event detection, biometric access control and alerts that reach the person who needs to act.'),
+    '/en/customers/': ('Zentrix customers',
+        'Customers and case studies | Zentrix',
+        'Grupo Leiros and GUUAO run on Zentrix apps every day, in stores, on the street and in the office. Meet the companies and institutions we work alongside.'),
+    '/en/resources/': ('Zentrix manuals and support',
+        'Resources: manuals, support and legal | Zentrix',
+        'Zentrix Work and Zentrix Sales manuals, support pages, privacy policies and terms for every app, plus llms.txt and the sitemap for developers and AI.'),
+    '/en/about/': ('software company Isla Margarita',
+        'About Zentrix — Engineering team in Venezuela',
+        'Zentrix is the new brand of Equinoccio (EQNIO), an engineering, AI and product team on Isla Margarita, Venezuela, working with clients across the Americas.'),
+    '/en/contact/': ('contact Zentrix',
+        'Contact Zentrix — A person replies in one day',
+        'Write to hola@zentrix.company for projects and demos, soporte@zentrix.company for support, or use WhatsApp. A person replies within one business day.'),
+    '/en/work/docs/': ('Zentrix Work manual',
+        'Zentrix Work manual — Step by step for store teams',
+        'The Zentrix Work manual for store teams: signing in, shifts, picking orders with the scanner, delivery, returns and settings. The chapters are in Spanish.'),
+    '/en/sales/docs/': ('Zentrix Sales manual',
+        'Zentrix Sales manual — Step by step for field reps',
+        'The Zentrix Sales manual for field reps: route, visits, orders, collections, invoices and working without a signal. The chapters are written in Spanish.'),
+    '/en/work/privacy/': (None,
+        'Privacy policy — Zentrix Work',
+        'What the Zentrix Work app collects, why, who sees it and for how long, how it is protected, and how to ask for access to your data or for its deletion.'),
+    '/en/work/support/': (None,
+        'Support — Zentrix Work',
+        'Help for Zentrix Work: signing in, common questions about shifts and orders, who to contact at your company, and how to request deletion of your data.'),
+    '/en/work/terms/': (None,
+        'Terms of use — Zentrix Work',
+        'The terms of use of the Zentrix Work app for store staff: what it is for, what you agree to when using it, the data involved and who provides the app.'),
+    '/en/privacy/': (None,
+        'Website privacy — Zentrix',
+        'What zentrix.company measures and with which tool, with no advertising, and how to withdraw cookie consent. The apps have their own privacy policies.'),
+})
 
 # Inglés antiguo de Zentrix Sales (ES, EN), solo mientras no exista /en/: después los
 # hreflang los pone generar.py. x-default apunta a la versión en español.
@@ -343,7 +422,7 @@ def jsonld(ruta, titulo, descripcion, cuerpo, lang):
                                 'query-input': 'required name=search_term_string'},
         })
         return grafo
-    if plantilla in ('/work/', '/sales/') or ruta == '/sales/en/':
+    if plantilla in ('/work/', '/sales/') or ruta in ('/sales/en/', '/en/sales/'):
         work = plantilla == '/work/'
         tiendas = [PLAY_WORK] if work else [PLAY_SALES, APPSTORE_SALES]
         grafo.append({

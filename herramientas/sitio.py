@@ -45,6 +45,7 @@ PARES = [
     ('/recursos/', '/en/resources/'),
     ('/nosotros/', '/en/about/'),
     ('/contacto/', '/en/contact/'),
+    ('/privacidad/', '/en/privacy/'),
     ('/404.html', '/en/404.html'),
 ]
 ES_A_EN = dict(PARES)
