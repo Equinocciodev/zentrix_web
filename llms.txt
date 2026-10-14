@@ -32,7 +32,6 @@ Zentrix (antes Equinoccio, también conocida como EQNIO) es un equipo pequeño d
 - Lenin Acosta — Supervisor de Desarrollo
 - Juan Leiros — CTO · Jefe de Innovación
 - Enmanuel Gamero — Tech & Infrastructure Manager
-- Hugo Mendoza — FinOps · Data Engineer
 - Miguel Coronel — Coordinador de Soporte
 - Adrian Alves — Backend Developer · Financial Systems
 - Celmira Genes — Odoo Expert · Consultora
