@@ -251,19 +251,47 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .pasos { padding-left: 1.4em; }
 .preguntas details { border-bottom: 1px solid var(--borde); }
 
-/* Pie */
-.pie { background: var(--negro); color: var(--texto-osc-2); padding: 64px 0 32px; font-size: .9375rem; }
-.pie a { color: var(--blanco); text-decoration: none; }
-.pie a:hover { text-decoration: underline; }
-.pie__reja { display: grid; gap: 32px; }
-@media (min-width: 768px) { .pie__reja { grid-template-columns: 1.4fr 1fr 1fr 1fr; } }
-.pie__logo { height: 22px; width: auto; margin-bottom: 16px; }
-.pie h2 { font-size: .8125rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--lima); margin: 0 0 12px; }
+/* Pie (lo escribe herramientas/navegacion.py en todas las páginas) */
+.pie { background: var(--negro); color: var(--texto-osc-2); padding: 56px 0 28px; font-size: .9375rem; }
+.pie a { color: var(--blanco); text-decoration: none; text-underline-offset: 3px; transition: color .15s; }
+.pie a:hover { color: var(--lima); }
+.pie :focus-visible { outline: 2px solid var(--lima); outline-offset: 3px; border-radius: 4px; }
 .pie ul { list-style: none; margin: 0; padding: 0; }
-.pie li { margin-bottom: 8px; }
-.pie li a { display: inline-block; padding: 2px 0; }
-.pie__base { border-top: 1px solid var(--borde-osc); margin-top: 48px; padding-top: 24px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; font-size: .875rem; }
+.pie__reja { display: grid; gap: 36px 32px; grid-template-columns: 1fr; grid-template-areas: "marca" "prod" "rec" "legal" "cont"; }
+.pie__marca { grid-area: marca; }
+.pie__col--productos { grid-area: prod; }
+.pie__col--legal { grid-area: legal; }
+.pie__col--contacto { grid-area: cont; }
+.pie__col:not([class*="--"]) { grid-area: rec; }
+.pie__logo { display: block; height: 22px; width: auto; margin-bottom: 12px; }
+.pie__lema { margin: 0 0 20px; max-width: 30ch; }
+.pie__suite { display: flex; flex-wrap: wrap; gap: 6px; }
+.pie__suite img { display: block; width: 22px; height: 22px; border-radius: 22%; }
+.pie h2 { font-size: .8125rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--lima); margin: 0 0 14px; }
+.pie h3 { font-size: .8125rem; font-weight: 600; color: var(--texto-osc-2); margin: 0 0 4px; letter-spacing: .01em; }
+.pie__col li a { display: inline-flex; align-items: center; gap: 10px; min-height: 32px; padding: 2px 0; }
+.pie__productos { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
+.pie__productos img { flex: none; width: 20px; height: 20px; border-radius: 22%; }
+.pie__grupo + .pie__grupo { margin-top: 14px; }
+.pie__enlinea { display: flex; flex-wrap: wrap; align-items: center; }
+.pie__enlinea li:not(:last-child)::after { content: "·"; color: var(--texto-osc-2); margin: 0 8px; }
+.pie__icono { flex: none; width: 18px; height: 18px; color: var(--texto-osc-2); transition: color .15s; }
+.pie a:hover .pie__icono { color: var(--lima); }
+.pie__contacto a { overflow-wrap: break-word; }
+.pie__base { border-top: 1px solid var(--borde-osc); margin-top: 44px; padding-top: 20px; display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between; font-size: .875rem; }
 .pie__base p { margin: 0; }
+.pie__base-der { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
+.pie__idioma { display: inline-flex; border: 1px solid var(--borde-osc); border-radius: 999px; padding: 2px; }
+.pie__idioma a { display: inline-grid; place-items: center; min-width: 40px; min-height: 28px; padding: 0 10px; border-radius: 999px; font-size: .8125rem; font-weight: 700; letter-spacing: .06em; color: var(--texto-osc-2); }
+.pie__idioma a:hover { color: var(--blanco); background: rgba(255, 255, 255, .06); }
+.pie__idioma a[aria-current] { background: var(--lima); color: var(--negro); }
+@media (min-width: 768px) {
+  .pie__reja { grid-template-columns: repeat(3, 1fr); grid-template-areas: "marca marca marca" "prod rec legal" "prod cont cont"; }
+  .pie__productos { grid-template-columns: 1fr; }
+}
+@media (min-width: 1200px) {
+  .pie__reja { grid-template-columns: 1.1fr 1fr .9fr 1.25fr 1.35fr; grid-template-areas: "marca prod rec legal cont"; }
+}
 
 /* 404 */
 .error { text-align: left; }
@@ -404,11 +432,16 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 @keyframes z-corte { to { opacity: 1; transform: none; } }
 
 /* Suite de monogramas */
-.suite { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-@media (min-width: 640px) { .suite { gap: 24px; } }
+.suite { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+@media (min-width: 520px) { .suite { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 640px) { .suite { gap: 16px; } }
+.suite > li { display: grid; }
+.suite__item { align-content: start; }
 .suite__item { display: grid; justify-items: center; gap: 12px; padding: 20px 8px 16px; border-radius: 24px; text-decoration: none; color: var(--texto); background: var(--fondo); transition: transform .35s var(--rebote), background-color .2s, box-shadow .35s var(--facil); }
 .suite__item img { width: min(104px, 100%); height: auto; border-radius: 22%; box-shadow: 0 18px 32px -18px rgba(9, 13, 18, .45); transition: transform .45s var(--rebote); }
-.suite__item span { font-weight: 600; font-size: .9375rem; }
+.suite__item span { font-weight: 600; font-size: .9375rem; text-align: center; line-height: 1.25; }
+.suite__item sup { font-size: .55em; font-weight: 500; }
+.suite__endoso { margin-top: -8px; font-size: .75rem; line-height: 1.3; color: var(--texto-2); text-align: center; }
 .suite__item span b { color: var(--azul); font-weight: 700; }
 .suite__item:hover { transform: translateY(-6px); background: var(--blanco); box-shadow: 0 24px 48px -24px rgba(9, 13, 18, .35); }
 .suite__item:hover img { transform: rotate(-6deg) scale(1.06); }
@@ -553,6 +586,16 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 /* traza: endoso */
 .endoso { display: inline-flex; align-items: center; gap: 8px; font-size: .875rem; color: var(--texto-osc-2); margin-top: 8px; }
 .endoso img { height: 14px; width: auto; }
+.marca-asociada { display: flex; align-items: center; gap: 14px; }
+.marca-asociada__icono { flex: none; width: 40px; height: 40px; border-radius: 22%; }
+.marca-asociada__texto { display: grid; gap: 2px; }
+.marca-asociada .wordmark--traza { font-size: 1.75rem; }
+.marca-asociada .endoso { margin-top: 0; font-size: .8125rem; }
+.marca-asociada .endoso img { height: 12px; }
+.heroe-producto__marca .marca-asociada__icono { width: 56px; height: 56px; }
+.heroe-producto__marca a.marca-asociada { text-decoration: none; color: inherit; }
+.heroe-producto__marca a.marca-asociada:hover .marca-asociada__icono { transform: rotate(-6deg) scale(1.06); }
+.marca-asociada__icono { transition: transform .25s var(--rebote); }
 @media (min-width: 900px) { .proceso--4 { grid-template-columns: repeat(4, 1fr); } }
 
 /* Titulares del héroe en Inter ExtraBold (manual) */
