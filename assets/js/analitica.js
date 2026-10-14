@@ -22,7 +22,7 @@
   var T = en ? {
     titulo: 'Cookies and analytics',
     texto: 'With your permission we measure visits with Google Analytics to improve the site. No advertising, no personal data.',
-    aceptar: 'Accept', rechazar: 'Reject', mas: 'Learn more', mas_url: '/privacidad/#cookies-en',
+    aceptar: 'Accept', rechazar: 'Reject', mas: 'Learn more', mas_url: '/en/privacy/#cookies',
     senal: 'Your browser asks not to be tracked (Do Not Track / Global Privacy Control), so we measure nothing unless you accept here.',
     cerrar: 'Close'
   } : {

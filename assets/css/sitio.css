@@ -792,3 +792,18 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .nav__buscar:empty { display: none; }
 .pie__cookies { margin-left: 12px; color: var(--texto-osc-2) !important; text-decoration: underline !important; text-underline-offset: 3px; }
 .pie__cookies:hover { color: var(--lima) !important; }
+
+/* Aviso de idioma (portada española) */
+.aviso-idioma { position: fixed; z-index: 30; left: 16px; right: 16px; bottom: 16px; margin: 0 auto; max-width: 520px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; padding: 16px 20px; border-radius: 16px; background: var(--negro); color: var(--blanco); box-shadow: 0 24px 48px -16px rgba(9, 13, 18, .5); border: 1px solid var(--borde-osc); }
+.aviso-idioma p { margin: 0; flex: 1 1 200px; }
+.aviso-idioma .boton { min-height: 40px; background: var(--azul-claro); color: var(--negro); }
+.aviso-idioma__cerrar { background: none; border: 0; color: var(--texto-osc-2); font: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; min-height: 40px; }
+.aviso-idioma__cerrar:hover { color: var(--blanco); }
+.aviso-idioma :focus-visible { outline-color: var(--lima); }
+/* Cabecera entre 1100 y 1279 px: más compacta para que quepan buscador, menú e idioma */
+@media (min-width: 1100px) and (max-width: 1279px) {
+  .nav__lista > li > a:not(.boton), .mega > summary { padding: 0 8px; }
+  .nav__idioma > svg { display: none; }
+  .nav { gap: 4px; }
+  .logo--firma img { height: 22px; }
+}

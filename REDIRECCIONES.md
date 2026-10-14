@@ -15,6 +15,12 @@ GitHub Pages no admite redirecciones 301 propias. Por eso cada ruta vieja es una
 | `/infraestructura-alta-disponibilidad.html` | `/soluciones/infraestructura-alta-disponibilidad/` | 14-10-2026 | eqnio.com → zentrix.company: servicio. |
 | `/pagos-y-comercio-digital.html` | `/soluciones/pagos-y-comercio-digital/` | 14-10-2026 | eqnio.com → zentrix.company: servicio. |
 | `/vision-computacional.html` | `/soluciones/vision-computacional/` | 14-10-2026 | eqnio.com → zentrix.company: servicio. |
+| `/sales/en/` | `/en/sales/` | 15-10-2026 | El inglés pasa a /en/, con las mismas rutas que el español. |
+| `/sales/en/index.html` | `/en/sales/` | 15-10-2026 | Ídem. |
+| `/sales/en/privacy.html` | `/en/sales/privacy/` | 15-10-2026 | Ídem. |
+| `/sales/en/terms.html` | `/en/sales/terms/` | 15-10-2026 | Ídem. |
+| `/sales/en/support.html` | `/en/sales/support/` | 15-10-2026 | Ídem. |
+| `/sales/en/contact.html` | `/en/sales/contact/` | 15-10-2026 | Ídem. |
 
 ## eqnio.com → zentrix.company (Cloudflare)
 

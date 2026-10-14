@@ -15,7 +15,7 @@ Es un sitio estático: HTML, una hoja CSS (`assets/css/sitio.css`) y un script p
 | `/sales/` | Zentrix Sales. Google Play `com.leiros.vendoo`, App Store `id6811065669`. |
 | `/sales/docs/` + 12 páginas `.html` | Manual del vendedor, migrado de vendooapp.com/docs. |
 | `/sales/privacidad/` · `/sales/soporte/` · `/sales/terminos/` · `/sales/contacto/` | Política, soporte, términos y contacto con el formulario de demostración (`assets/js/contacto.js` arma el correo). |
-| `/sales/en/` + `privacy.html`, `terms.html`, `support.html`, `contact.html` | Versión en inglés, migrada de vendooapp.com/en. |
+| `/en/…` | Todo el sitio en inglés, con las mismas rutas (ver «Idiomas»). Las antiguas `/sales/en/…` redirigen. |
 | `/ai/` · `/logistics/` · `/cloud/` · `/labs/` · `/software/` | Los otros productos de la Presentación Corporativa: problema, para quién, beneficios, cómo funciona y contacto. Usan solo lo que dice la presentación. Ninguno tiene app publicada, así que no enlazan a tiendas: «Solicita una demostración», o «Próximamente» en Zentrix Logistics. |
 | `/privacidad/` | Privacidad del sitio web: «Cookies y analítica» en español (`#cookies`) y en inglés (`#cookies-en`), en una sola página. Las de las apps siguen en cada producto. |
 | `/traza/` | Presentación breve de Traza®, que tiene sitio propio: el botón principal lleva a <https://traza.technology>. En el menú, la portada y el pie, Traza enlaza directamente a ese sitio (pestaña nueva, con indicador de enlace externo). |
@@ -52,6 +52,16 @@ Dirección A, aprobada por Victor el 14-10-2026: dos letras en minúscula y la b
 - **Autocompletado:** la palabra se completa en gris dentro del campo y se acepta con Tab o →. Arriba salen accesos directos (productos, manuales, privacidad, soporte, soluciones, contacto) cuando lo escrito los nombra. No distingue tildes ni mayúsculas. Con el campo vacío salen las búsquedas recientes (localStorage) y sugerencias.
 - **Analítica:** si existe `window.zxAnalytics.track`, envía `search`, `search_no_results` y `select_content`.
 - **Probar en local:** sobre una copia del repo (el script modifica los HTML): `python3 herramientas/buscador.py && npx -y pagefind@1.5.2 --site . && python3 -m http.server`.
+
+## Idiomas
+
+El español vive en la raíz y el inglés bajo `/en/`, con rutas espejo (`/en/work/`, `/en/solutions/…`, `/en/customers/`, `/en/about/`, `/en/contact/`, `/en/privacy/`…). Los pares están en `PARES` de `herramientas/sitio.py`; `python3 herramientas/generar.py --pares` lista los pares y los huérfanos (debe dar 0).
+
+- Cada página lleva `<html lang>`, su `canonical`, `hreflang` es/en/x-default (x-default = español) y `og:locale` + `og:locale:alternate`; el sitemap repite las alternativas.
+- El selector ES/EN está en la cabecera (también dentro del menú móvil) y en el pie, y lleva a la misma página en el otro idioma. `assets/js/nav.js` recuerda la elección (`localStorage`, `zx-idioma`) y en la portada española, si el navegador está en inglés o se eligió inglés, muestra un aviso discreto; nunca redirige solo.
+- Los manuales (`/work/docs/`, `/sales/docs/`) están en español: `/en/work/docs/` y `/en/sales/docs/` son portadas en inglés que lo explican y enlazan los capítulos. Los capítulos no llevan `hreflang`.
+- Los textos legales en inglés son traducciones de cortesía; la versión vinculante es la española.
+- Las rutas inglesas antiguas de Zentrix Sales (`/sales/en/…`) redirigen a `/en/sales/…` (ver `REDIRECCIONES.md`).
 
 ## Movimiento e ilustraciones
 

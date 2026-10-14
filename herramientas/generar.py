@@ -26,6 +26,7 @@ import agentes  # noqa: E402  — robots.txt, /.well-known/ y <link> para agente
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 MULTI = (RAIZ / 'en' / 'index.html').exists()  # fase 3: el sitio completo en inglés bajo /en/
 SALIDA = {}  # ruta de fichero → contenido (páginas generadas)
+NAV_JS_V = 2
 
 # Inglés anterior a /en/: solo Zentrix Sales, en /sales/en/ (se usa mientras no haya MULTI)
 LEGADO_EN = {
@@ -243,7 +244,7 @@ def pie(ruta):
         f'<li><a href="https://wa.me/584123469712">{SVG_WHATSAPP}<span>WhatsApp +58 412-346 9712</span></a></li>'
         '</ul>\n      </div>\n'
         '    </div>\n    <div class="pie__base">\n'
-        f'      <p>{t["copy"]} <a id="zx-cookies" class="pie__cookies" href="/privacidad/{"#cookies-en" if lang == "en" else "#cookies"}">{"Cookie preferences" if lang == "en" else "Preferencias de cookies"}</a></p>\n'
+        f'      <p>{t["copy"]} <a id="zx-cookies" class="pie__cookies" href="{Lx("/privacidad/", lang)}#cookies">{"Cookie preferences" if lang == "en" else "Preferencias de cookies"}</a></p>\n'
         f'      <div class="pie__base-der">{selector_idioma(ruta, "pie__idioma")}<p>{t["odoo"]}</p></div>\n'
         '    </div>\n  </div>\n</footer>'
     )
@@ -256,11 +257,8 @@ def ajustar_head(s, ruta):
     s = re.sub(r'\n\s*<meta property="og:locale:alternate" content="[^"]*">', '', s)
     if MULTI and not ruta.endswith('404.html'):
         es, en = otro_idioma(ruta)
-        alts = []
-        if es_capitulo_manual(ruta):
-            alts = [('es', ruta), ('x-default', ruta)]
-        else:
-            alts = [('es', es), ('en', en), ('x-default', es)]
+        # Los capítulos de los manuales solo existen en español: sin hreflang.
+        alts = [] if es_capitulo_manual(ruta) else [('es', es), ('en', en), ('x-default', es)]
         bloque = ''.join(f'\n  <link rel="alternate" hreflang="{h}" href="{DOMINIO}{u}">' for h, u in alts)
         s = re.sub(r'(<link rel="canonical" href="[^"]*">)', lambda m: m.group(1) + bloque, s, count=1)
         if not es_capitulo_manual(ruta):
@@ -272,7 +270,8 @@ def ajustar_head(s, ruta):
     if 'classList.add(\'nav-js\')' not in s:
         s = s.replace('</head>', "  <script>document.documentElement.classList.add('nav-js')</script>\n</head>", 1)
     if '/assets/js/nav.js' not in s:
-        s = s.replace('</head>', '  <script src="/assets/js/nav.js?v=1" defer></script>\n</head>', 1)
+        s = s.replace('</head>', f'  <script src="/assets/js/nav.js?v={NAV_JS_V}" defer></script>\n</head>', 1)
+    s = re.sub(r'/assets/js/nav\.js\?v=\d+', f'/assets/js/nav.js?v={NAV_JS_V}', s)
     # Analítica con consentimiento (assets/js/analitica.js). Las redirecciones no pasan por aquí.
     if '/assets/js/analitica.js' not in s:
         grupo = ' data-grupo="error"' if ruta.endswith('404.html') else ''
@@ -336,7 +335,7 @@ def pagina(ruta, titulo, descripcion, cuerpo, og='og.png', logo=None):
   <link rel="preload" href="/assets/fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/inter-800.woff2" as="font" type="font/woff2" crossorigin>
   <script>document.documentElement.classList.add('js')</script>
-  <link rel="stylesheet" href="/assets/css/sitio.css?v=11">
+  <link rel="stylesheet" href="/assets/css/sitio.css?v=12">
   <script src="/assets/js/sitio.js?v=1" defer></script>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Zentrix">
@@ -676,7 +675,7 @@ def pag_recursos(lang):
                 (Lx('/work/terminos/', lang), 'documento', 'Zentrix Work terms', 'The rules for using the app.', None),
                 (Lx('/sales/privacidad/', lang), 'escudo', 'Zentrix Sales privacy', 'What the app collects, why and for how long.', None),
                 (Lx('/sales/terminos/', lang), 'documento', 'Zentrix Sales terms', 'The rules for using the app.', None),
-                ('/privacidad/#cookies-en', 'escudo', 'Website privacy', 'Cookies and analytics on zentrix.company, and how to withdraw consent.', None)]),
+                (Lx('/privacidad/', lang) + '#cookies', 'escudo', 'Website privacy', 'Cookies and analytics on zentrix.company, and how to withdraw consent.', None)]),
             ('desarrolladores', 'For developers and AI', 'Machine-readable documentation.', [
                 ('/llms.txt', 'documento', 'llms.txt', 'Who Zentrix is and what it does, written for language models.', None),
                 ('/sitemap.xml', 'documento', 'sitemap.xml', 'Every page on the site, in both languages.', None)]),
