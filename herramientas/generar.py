@@ -542,6 +542,39 @@ def pag_soluciones(lang):
     return ruta, pagina(ruta, titulo, desc, cuerpo)
 
 
+def extra_sol(d):
+    """Secciones opcionales de una solución: qué cubre (pilares) y preguntas frecuentes
+    (<details> en .preguntas; seo.py las publica como FAQPage)."""
+    out = ''
+    if d.get('cubre'):
+        out += f'''<section class="seccion seccion--gris" aria-labelledby="cubre-t">
+  <div class="envoltura">
+    <div class="cabeza revela">
+      <span class="antetitulo">{d['cubre_a']}</span>
+      <h2 id="cubre-t">{d['cubre_h']}</h2>
+      <p>{d['cubre_p']}</p>
+    </div>
+    {BQ.pilares(d['cubre'])}
+  </div>
+</section>
+
+'''
+    if d.get('faq'):
+        qs = ''.join(f'<details><summary><h3>{q}</h3></summary><p>{r}</p></details>' for q, r in d['faq'])
+        out += f'''<section class="seccion" aria-labelledby="faq-t">
+  <div class="envoltura">
+    <div class="cabeza revela">
+      <span class="antetitulo">{d['faq_a']}</span>
+      <h2 id="faq-t">{d['faq_h']}</h2>
+    </div>
+    <div class="preguntas revela">{qs}</div>
+  </div>
+</section>
+
+'''
+    return out
+
+
 def pag_solucion(clave, slug_es, lang):
     ruta = ruta_pagina(f'/soluciones/{slug_es}/', lang)
     en = lang == 'en'
@@ -594,7 +627,7 @@ def pag_solucion(clave, slug_es, lang):
   </div>
 </section>
 
-{rel}
+{extra_sol(d)}{rel}
 
 <section class="seccion seccion--gris" aria-labelledby="donde-t">
   <div class="envoltura">
