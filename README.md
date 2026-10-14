@@ -2,7 +2,7 @@
 
 Sitio de **Zentrix®** en <https://zentrix.company>: la portada corporativa y las páginas de los dos productos, **Zentrix Work** (antes GUUAO® Work) y **Zentrix Sales** (antes Vendoo), con su privacidad y su soporte. Las URL de privacidad y soporte son las que declaran las apps y las fichas de Google Play y App Store.
 
-Es un sitio estático: HTML, una hoja CSS (`assets/css/sitio.css`) y un script pequeño (`assets/js/sitio.js`) que solo añade movimiento: la aparición de las secciones al hacer scroll (IntersectionObserver) y el conteo de las cifras. No hay paso de compilación ni dependencias. Sin JavaScript todo el contenido se ve igual, y con `prefers-reduced-motion` no se mueve nada. Las páginas de privacidad, términos, soporte y los manuales no cargan el script: se leen enteras sin JavaScript, que es como las revisan Google y Apple.
+Es un sitio estático: HTML, una hoja CSS (`assets/css/sitio.css`) y un script pequeño (`assets/js/sitio.js`) que solo añade movimiento: la aparición de las secciones al hacer scroll (IntersectionObserver) y el conteo de las cifras. No hay paso de compilación ni dependencias. Sin JavaScript todo el contenido se ve igual, y con `prefers-reduced-motion` no se mueve nada. Las páginas de privacidad, términos y los manuales no cargan el script: se leen enteras sin JavaScript, que es como las revisan Google y Apple. `/soporte/` sí lo carga (es una página generada), pero todo su contenido, incluidas las instrucciones de borrado de cuenta, se ve igual sin JavaScript.
 
 ## Rutas
 
@@ -11,10 +11,13 @@ Es un sitio estático: HTML, una hoja CSS (`assets/css/sitio.css`) y un script p
 | `/` | Portada de Zentrix, la marca madre: qué hacemos, los dos productos destacados, cómo trabajamos, las divisiones y el contacto. |
 | `/work/` | Zentrix Work. Google Play: `com.leiros.guuaowork`. |
 | `/work/docs/` + 11 páginas `.html` | Manual del operador, migrado de work.guuao.com/docs. |
-| `/work/privacidad/` · `/work/soporte/` · `/work/terminos/` | Política (anclas `#c1`…`#c11`, Play declara `#c7`), soporte (`#eliminar-datos`) y términos. |
+| `/work/privacidad/` · `/work/terminos/` | Política (anclas `#c1`…`#c11`, Play declara `#c7`) y términos. `/work/soporte/` redirige a `/soporte/#work`. |
 | `/sales/` | Zentrix Sales. Google Play `com.leiros.vendoo`, App Store `id6811065669`. |
 | `/sales/docs/` + 12 páginas `.html` | Manual del vendedor, migrado de vendooapp.com/docs. |
-| `/sales/privacidad/` · `/sales/soporte/` · `/sales/terminos/` · `/sales/contacto/` | Política, soporte, términos y contacto con el formulario de demostración (`assets/js/contacto.js` arma el correo). |
+| `/sales/privacidad/` · `/sales/terminos/` | Política y términos. `/sales/soporte/` y `/sales/contacto/` redirigen a `/soporte/#sales` y a `/contacto/?producto=sales#motivo`. |
+| `/soporte/` | Soporte unificado de la suite (`herramientas/ayuda.py`): buscador (Pagefind, el de la cabecera), chips por producto y una sección por app con preguntas rápidas, acceso, manual, **eliminación de cuenta** y datos de la app. Anclas estables que declaran las tiendas: `#eliminar-cuenta-work` y `#eliminar-cuenta-sales` (en inglés `/en/support/#delete-account-work` y `#delete-account-sales`). Los productos sin app (AI, Logistics, Cloud, Labs, Software) solo llevan a contacto. |
+| `/contacto/` | Contacto unificado: selector de motivo (ventas o demostración, soporte de una app, alianzas, prensa) y producto, que solo cambia el asunto del correo y del WhatsApp (`assets/js/contacto.js`; `?motivo=` y `?producto=` lo preseleccionan). La dirección postal vive aquí. |
+| `/legal/` | Índice de las políticas de privacidad y los términos de cada app y del sitio. El pie lleva aquí («Privacidad» → `#privacidad`, «Términos» → `#terminos`); las URL de las políticas no cambian. |
 | `/en/…` | Todo el sitio en inglés, con las mismas rutas (ver «Idiomas»). Las antiguas `/sales/en/…` redirigen. |
 | `/ai/` · `/logistics/` · `/cloud/` · `/labs/` · `/software/` | Los otros productos de la Presentación Corporativa: problema, para quién, beneficios, cómo funciona y contacto. Usan solo lo que dice la presentación. Ninguno tiene app publicada, así que no enlazan a tiendas: «Solicita una demostración». Zentrix Logistics (desde el 14-10-2026) es la capa logística de la suite, del almacén a la puerta, con lo que ya está en producción en GUUAO y Grupo Leiros y lo que está en desarrollo marcado como tal; su CTA es «Hablemos». |
 | `/privacidad/` | Privacidad del sitio web: «Cookies y analítica» en español (`#cookies`) y en inglés (`#cookies-en`), en una sola página. Las de las apps siguen en cada producto. |
@@ -39,6 +42,7 @@ Dirección A, aprobada por Victor el 14-10-2026: dos letras en minúscula y la b
 - `python3 herramientas/generar.py` escribe; `--check` comprueba que todo está al día; `--pares` lista los pares español/inglés y los huérfanos.
 - `python3 herramientas/enlaces.py` comprueba que ningún enlace interno da 404.
 - El menú móvil y el comportamiento del mega-menú están en `assets/js/nav.js`, que cargan todas las páginas. Sin JavaScript, los `<details>` siguen funcionando.
+- El pie: logo, eslogan (sin la fila de monogramas: ya están en la columna Productos), Productos, Empresa, Recursos, «Legal y soporte» (Soporte, Contacto, Privacidad y Términos; los dos últimos al índice `/legal/`) y Contacto.
 - Huecos para otros módulos: `<div id="zx-buscar">` en la cabecera (buscador) y el enlace `#zx-cookies` en el pie (preferencias de cookies).
 - Lo que viene de eqnio.com (servicios, filosofía, alianzas, equipo con sus fotos y cargos, partners) está en `contenido.py`, reescrito con el tono de Zentrix.
 

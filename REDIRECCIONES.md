@@ -7,8 +7,8 @@ GitHub Pages no admite redirecciones 301 propias. Por eso cada ruta vieja es una
 | `/logistica/` | `/logistics/` | 14-10-2026 | El producto se llama «Zentrix Logistics»: el apellido va en inglés, como los demás. |
 | `/about.html` | `/nosotros/` | 14-10-2026 | eqnio.com → zentrix.company: «Sobre Equinoccio». |
 | `/contact.html` | `/contacto/` | 14-10-2026 | eqnio.com → zentrix.company: contacto. |
-| `/privacy.html` | `/recursos/#legal` | 14-10-2026 | eqnio.com → zentrix.company: la privacidad vive en cada producto. |
-| `/terms.html` | `/recursos/#legal` | 14-10-2026 | eqnio.com → zentrix.company: los términos viven en cada producto. |
+| `/privacy.html` | `/legal/#privacidad` | 14-10-2026 | eqnio.com → zentrix.company: índice de las políticas de privacidad. |
+| `/terms.html` | `/legal/#terminos` | 14-10-2026 | eqnio.com → zentrix.company: índice de los términos. |
 | `/odoo-venezuela.html` | `/soluciones/odoo-venezuela/` | 14-10-2026 | eqnio.com → zentrix.company: servicio. |
 | `/desarrollo-de-software.html` | `/soluciones/desarrollo-de-software/` | 14-10-2026 | eqnio.com → zentrix.company: servicio. |
 | `/auditoria-tecnica.html` | `/soluciones/auditoria-tecnica/` | 14-10-2026 | eqnio.com → zentrix.company: servicio. |
@@ -19,8 +19,14 @@ GitHub Pages no admite redirecciones 301 propias. Por eso cada ruta vieja es una
 | `/sales/en/index.html` | `/en/sales/` | 15-10-2026 | Ídem. |
 | `/sales/en/privacy.html` | `/en/sales/privacy/` | 15-10-2026 | Ídem. |
 | `/sales/en/terms.html` | `/en/sales/terms/` | 15-10-2026 | Ídem. |
-| `/sales/en/support.html` | `/en/sales/support/` | 15-10-2026 | Ídem. |
-| `/sales/en/contact.html` | `/en/sales/contact/` | 15-10-2026 | Ídem. |
+| `/sales/en/support.html` | `/en/support/#sales` | 15-10-2026 | Ídem; desde el 16-10-2026, al soporte unificado. |
+| `/sales/en/contact.html` | `/en/contact/?producto=sales#motivo` | 15-10-2026 | Ídem; desde el 16-10-2026, al contacto unificado. |
+| `/work/soporte/` | `/soporte/#work` | 16-10-2026 | Soporte unificado de la suite. |
+| `/sales/soporte/` | `/soporte/#sales` | 16-10-2026 | Soporte unificado de la suite. |
+| `/sales/contacto/` | `/contacto/?producto=sales#motivo` | 16-10-2026 | Contacto unificado, con el motivo «Ventas o demostración» y Zentrix Sales. |
+| `/en/work/support/` | `/en/support/#work` | 16-10-2026 | Soporte unificado de la suite. |
+| `/en/sales/support/` | `/en/support/#sales` | 16-10-2026 | Soporte unificado de la suite. |
+| `/en/sales/contact/` | `/en/contact/?producto=sales#motivo` | 16-10-2026 | Contacto unificado. |
 
 ## eqnio.com → zentrix.company (Cloudflare)
 

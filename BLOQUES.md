@@ -55,9 +55,9 @@ Banda negra con los logotipos oficiales en blanco y su nombre (Flutter, Next.js,
 
 ### 6. Contacto — `bloques.hablemos(lang)` y `bloques.contacto(lang)`
 
-- **Hablemos** (`hablemos`): la banda que se repite (portada, marcador `<!--BQ:CONTACTO-->`, que genera la sección entera con `id="contacto"`/`"contact"`). Un panel negro con la esquina cortada: a la izquierda el titular grande («Cuéntanos cómo trabaja tu equipo.»), la barra lima y una sola línea de apoyo («Te responde una persona, en español, en menos de un día hábil.»); a la derecha dos grupos de botones reales: **Escríbenos** (correo hola@ en lima y WhatsApp en contorno) y **¿Ya usas nuestras apps?** (soporte@ y los manuales de Work y Sales en pastillas). **No lleva dirección.**
+- **Hablemos** (`hablemos`): la banda que se repite (portada, marcador `<!--BQ:CONTACTO-->`, que genera la sección entera con `id="contacto"`/`"contact"`). Un panel negro con la esquina cortada: a la izquierda el titular grande («Cuéntanos cómo trabaja tu equipo.»), la barra lima y una sola línea de apoyo («Te responde una persona, en español, en menos de un día hábil.»); a la derecha dos grupos de botones reales: **Escríbenos** (correo hola@ en lima y WhatsApp en contorno) y **¿Ya usas nuestras apps?** (soporte@, el centro de soporte y los manuales de Work y Sales en pastillas). **No lleva dirección.**
 - **Contacto** (`contacto`, solo en `/contacto/` y `/en/contact/`): la misma banda con el titular de la página y, debajo, el lugar (mapa estático ilustrado en SVG, sin iframes, y la dirección en tres líneas con microdatos `PostalAddress` y los enlaces a Google Maps y Apple Maps) y los datos (horario, idiomas y dónde está el equipo).
-- **La dirección** se ve solo en `/contacto/`, `/en/contact/` y en las páginas de soporte que la declaran como dirección legal. En el resto vive únicamente en el JSON-LD de Organization (`PostalAddress`). No volver a ponerla en la banda (Victor, 14-10-2026).
+- **La dirección** se ve solo en `/contacto/`, `/en/contact/` y en la ficha de Zentrix Sales de `/soporte/`, que la declara como dirección legal. En el resto vive únicamente en el JSON-LD de Organization (`PostalAddress`). No volver a ponerla en la banda (Victor, 14-10-2026).
 
 ## Manifiesto de la portada — `.bq-manifiesto` (a mano en `index.html` y `en/index.html`)
 
