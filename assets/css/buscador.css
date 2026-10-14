@@ -21,7 +21,7 @@
   border-radius: 6px; padding: 4px 6px; min-width: 22px; text-align: center; display: inline-block;
 }
 .zxb-pastilla[data-tema="oscuro"] { color: rgba(255, 255, 255, .72); background: rgba(255, 255, 255, .06); border-color: rgba(255, 255, 255, .14); }
-.zxb-pastilla[data-tema="oscuro"]:hover { color: #FFFFFF; border-color: rgba(166, 182, 255, .6); }
+.zxb-pastilla[data-tema="oscuro"]:hover { color: #FFFFFF; border-color: rgba(255, 255, 255, .6); }
 .zxb-pastilla[data-tema="oscuro"] kbd { background: transparent; color: rgba(255, 255, 255, .72); border-color: rgba(255, 255, 255, .2); }
 @media (max-width: 899px) {
   .zxb-pastilla { min-width: 0; width: 44px; height: 44px; padding: 0; justify-content: center; background: transparent; border-color: transparent; color: #090D12; border-radius: 12px; }
@@ -46,7 +46,7 @@
 .zxb[data-tema="oscuro"] {
   --zxb-fondo: #090D12; --zxb-texto: #FFFFFF; --zxb-texto-2: rgba(255, 255, 255, .7);
   --zxb-texto-3: rgba(255, 255, 255, .52); --zxb-borde: rgba(255, 255, 255, .09); --zxb-sutil: rgba(255, 255, 255, .05);
-  --zxb-activa: rgba(166, 182, 255, .12); --zxb-marca: rgba(199, 250, 70, .28); --zxb-acento: #A6B6FF;
+  --zxb-activa: rgba(255, 255, 255, .1); --zxb-marca: rgba(199, 250, 70, .28); --zxb-acento: #C7FA46;
   --zxb-velo: rgba(0, 0, 0, .6); --zxb-sombra: 0 32px 80px -24px rgba(0, 0, 0, .8), 0 0 0 1px rgba(255, 255, 255, .08);
   --zxb-esqueleto: rgba(255, 255, 255, .08);
   color-scheme: dark;

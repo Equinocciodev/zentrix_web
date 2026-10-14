@@ -321,7 +321,7 @@ def ajustar_head(s, ruta):
         s = s.replace('</head>', f'  <script src="/assets/js/analitica.js" defer{grupo}></script>\n</head>', 1)
     # Buscador (assets/js/buscador.js) en el hueco #zx-buscar de la cabecera.
     if '/assets/css/buscador.css' not in s:
-        s = s.replace('</head>', '  <link rel="stylesheet" href="/assets/css/buscador.css?v=1">\n</head>', 1)
+        s = s.replace('</head>', '  <link rel="stylesheet" href="/assets/css/buscador.css?v=2">\n</head>', 1)
     if '/assets/js/buscador.js' not in s:
         s = s.replace('</head>', '  <script src="/assets/js/buscador.js?v=1" defer></script>\n</head>', 1)
     return s
@@ -404,9 +404,9 @@ def pagina(ruta, titulo, descripcion, cuerpo, og='og.png', logo=None, css=()):
   <link rel="preload" href="/assets/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/inter-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/fonts/inter-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/geist-var.woff2" as="font" type="font/woff2" crossorigin>
   <script>document.documentElement.classList.add('js')</script>
-  <link rel="stylesheet" href="/assets/css/sitio.css?v=19">
+  <link rel="stylesheet" href="/assets/css/sitio.css?v=20">
   <script src="/assets/js/sitio.js?v=1" defer></script>{''.join(f'{chr(10)}  <link rel="stylesheet" href="{c}">' for c in css)}
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Zentrix">

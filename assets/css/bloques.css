@@ -67,7 +67,7 @@
 .bq-pilar--prota .bq-pilar__num { -webkit-text-stroke-color: rgba(255, 255, 255, .28); left: auto; }
 .bq-pilar--prota:hover .bq-pilar__num { color: var(--lima); -webkit-text-stroke-color: var(--lima); }
 .bq-pilar--prota.bq-brillo::after { background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 30%), rgba(36, 77, 255, .35), transparent 62%); }
-.bq-pilar__arte { position: absolute; right: -6%; bottom: -10%; width: min(62%, 300px); aspect-ratio: 1; color: #A6B6FF; opacity: .9; pointer-events: none; }
+.bq-pilar__arte { position: absolute; right: -6%; bottom: -10%; width: min(62%, 300px); aspect-ratio: 1; color: var(--azul); opacity: 1; pointer-events: none; }
 .bq-pilar__arte .motivo { width: 100%; height: 100%; }
 .bq-pilar--prota h3, .bq-pilar--prota p, .bq-pilar--prota .bq-barra { position: relative; z-index: 1; }
 @media (max-width: 639px) { .bq-pilar__num { font-size: 6.25rem; } .bq-pilar { padding-top: 80px; min-height: 0; }
@@ -95,7 +95,7 @@
 .bq-tesela--prota .bq-tesela__p { color: var(--texto-osc-2); max-width: 34ch; font-size: 1.0625rem; position: relative; z-index: 1; }
 .bq-tesela--prota .bq-tesela__ir { color: var(--lima); margin-top: 8px; position: relative; z-index: 1; }
 .bq-tesela--prota .bq-tesela__arte { position: absolute; inset: 0 0 auto auto; width: 100%; height: 62%; margin: 0; }
-.bq-tesela--prota .bq-motivo { position: absolute; right: -40px; top: -40px; width: 300px; height: 300px; color: #A6B6FF; opacity: .55; }
+.bq-tesela--prota .bq-motivo { position: absolute; right: -40px; top: -40px; width: 300px; height: 300px; color: var(--azul); opacity: .9; }
 .bq-tesela--prota .bq-mock { position: absolute; right: 28px; top: 36px; width: min(68%, 420px); height: auto; transform: rotate(-4deg);
   transition: transform .6s var(--facil, ease); box-shadow: 0 30px 60px -30px rgba(0, 0, 0, .8); }
 .bq-tesela--prota:hover .bq-mock { transform: rotate(-2deg) translateY(-6px); }
@@ -104,10 +104,10 @@
 @media (max-width: 639px) { .bq-tesela--prota { min-height: 420px; } .bq-tesela--prota .bq-mock { width: 86%; right: 16px; top: 24px; } }
 /* sobre azul */
 .bq-bento--azul .bq-tesela { background: rgba(255, 255, 255, .1); color: var(--blanco); }
-.bq-bento--azul .bq-tesela__p { color: var(--blanco); opacity: .92; }
+.bq-bento--azul .bq-tesela__p { color: var(--blanco); } /* opacidad 1: blanco sobre el azul teñido de la tesela, 4,9:1 (AA) */
 .bq-bento--azul .bq-tesela__ir { color: var(--blanco); }
 .bq-bento--azul .bq-ilu { color: var(--blanco); }
-.bq-bento--azul .bq-tesela:not(.bq-tesela--prota):hover { background: rgba(255, 255, 255, .16); }
+.bq-bento--azul .bq-tesela:not(.bq-tesela--prota):hover { background: rgba(255, 255, 255, .14); }
 .bq-bento--azul .bq-brillo::after { background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 30%), rgba(255, 255, 255, .16), transparent 62%); }
 .bq-bento--azul .bq-tesela:focus-visible { outline-color: var(--lima); }
 /* sobre negro */
@@ -145,7 +145,7 @@
 .bq-banda { position: relative; overflow: hidden; padding: 64px 0; background: var(--negro); color: var(--blanco); }
 .bq-banda--azul { background: var(--azul); }
 .bq-banda .bq-zfondo { color: var(--blanco); opacity: .05; left: -10%; right: auto; width: min(70vw, 560px); }
-.bq-banda__arte { position: absolute; right: -150px; top: 50%; width: 460px; height: 460px; transform: translateY(-50%); color: #A6B6FF; opacity: .22; pointer-events: none; }
+.bq-banda__arte { position: absolute; right: -150px; top: 50%; width: 460px; height: 460px; transform: translateY(-50%); color: var(--azul); opacity: .5; pointer-events: none; }
 .bq-banda__arte .motivo { width: 100%; height: 100%; }
 .bq-banda__fila { position: relative; z-index: 1; display: grid; gap: 24px; align-items: center; }
 @media (min-width: 900px) { .bq-banda__fila { grid-template-columns: auto 1fr auto; gap: 40px; } .bq-banda { padding: 80px 0; } }
@@ -418,3 +418,12 @@
 .bq-tesela--azul .bq-tesela__arte img, .bq-tesela--negro .bq-tesela__arte img { width: 72px; height: 72px; border-radius: 16px; box-shadow: 0 0 0 1px rgba(255, 255, 255, .25); }
 .bq-tesela--azul:focus-visible, .bq-tesela--negro:focus-visible { outline-color: var(--lima); }
 .bq-tesela--azul.bq-brillo::after { background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 30%), rgba(255, 255, 255, .18), transparent 62%); }
+
+/* ── Titulares y cifras en Geist ─────────────────────────────────────────── */
+.bq-pilar__num, .bq-pilar--prota h3, .bq-tesela__t, .bq-banda__texto h2, .bq-cierre h2, .bq-ruta__n, .bq-cifra b,
+.bq-hablemos__t, .bq-sector h3, .bq-caso__inicial, .bq-caso h3, .bq-nota h3, .bq-pilares--texto .bq-pilar h3, .bq-manifiesto li::before { font-family: var(--display); }
+.bq-sector h3, .bq-caso h3, .bq-nota h3, .bq-pilares--texto .bq-pilar h3, .bq-tesela--azul .bq-tesela__t, .bq-tesela--negro .bq-tesela__t { font-weight: 700; }
+.bq-pilar--prota h3, .bq-tesela--prota .bq-tesela__t, .bq-banda__texto h2, .bq-cierre h2, .bq-hablemos__t { font-weight: 800; letter-spacing: -.04em; }
+.bq-hablemos__t { line-height: 1.02; }
+.bq-cifra b { letter-spacing: -.05em; }
+.bq-ruta__n, .bq-manifiesto li::before { letter-spacing: -.04em; }

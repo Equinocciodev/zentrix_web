@@ -45,7 +45,7 @@
 
 /* Integración: tres capas apiladas, unidas por un trazo */
 .lg-capas { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; position: relative; }
-.lg-capas::before { content: ""; position: absolute; left: 39px; top: 40px; bottom: 40px; width: 3px; background: linear-gradient(var(--azul-claro), var(--lima)); }
+.lg-capas::before { content: ""; position: absolute; left: 39px; top: 40px; bottom: 40px; width: 3px; background: linear-gradient(var(--azul), var(--lima)); }
 .lg-capa { position: relative; display: grid; grid-template-columns: 80px 1fr; gap: 20px; align-items: start; padding: 24px;
   background: rgba(255, 255, 255, .05); clip-path: polygon(0 0, calc(100% - var(--bq-esquina, 28px)) 0, 100% var(--bq-esquina, 28px), 100% 100%, 0 100%); }
 .lg-capa--logistica { background: var(--lima); color: var(--negro); }
@@ -54,7 +54,7 @@
 .lg-capa__marca { position: relative; z-index: 1; width: 80px; height: 80px; display: grid; place-items: center; }
 .lg-capa__mono { width: 72px; height: 72px; border-radius: 18px; }
 .lg-capa--logistica .lg-capa__mono { box-shadow: 0 0 0 3px var(--negro); }
-.lg-capa__logo { width: 72px; height: 72px; padding: 14px; border-radius: 18px; background: var(--blanco); fill: #714B67; }
+.lg-capa__logo { width: 72px; height: 72px; padding: 14px; border-radius: 18px; background: var(--blanco); fill: var(--negro); }
 .lg-capa h3 { font-size: 1.375rem; font-weight: 800; letter-spacing: -.03em; margin: 2px 0 6px; }
 .lg-capa p { margin: 0; color: var(--texto-osc-2); }
 .lg-capa__ir { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-top: 8px; font-weight: 600; color: var(--lima); text-decoration: none; }

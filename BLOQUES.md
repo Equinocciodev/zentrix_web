@@ -11,8 +11,8 @@ Sistema de bloques de las páginas de zentrix.company. Sustituye las tarjetas bl
 
 ## Reglas comunes
 
-- **Colores:** negro `#090D12`, blanco, azul `#244DFF` y lima `#C7FA46`, y sus transparencias. La lima es acento (barras, CTA con texto negro, números al pasar el ratón sobre fondo oscuro): nunca texto lima sobre blanco.
-- **Tipografía:** Inter. Inter 800 para los números gigantes, las cifras y los titulares de las protagonistas.
+- **Colores:** negro `#090D12`, blanco, azul `#244DFF` y lima `#C7FA46`, y sus transparencias. La lima es acento (barras, CTA con texto negro, números al pasar el ratón sobre fondo oscuro): nunca texto lima sobre blanco. No hay lila: sobre fondo oscuro, el botón principal es lima con texto negro, el secundario va con borde y texto blancos, y los enlaces y el texto de acción van en lima (el azul no llega a AA en texto normal sobre negro). Sobre claro, la acción es azul.
+- **Tipografía:** Geist (`var(--display)`) en 800 para los números gigantes, las cifras y los titulares de las protagonistas; Inter para el texto y la interfaz.
 - **Esquina cortada:** tarjetas, teselas y paneles cortan la esquina superior derecha en diagonal (`--bq-esquina`, 28 px), como el remate de la z.
 - **Barra lima:** `.bq-barra`, 56 × 10 px, con el bisel de los monogramas (73,2 de avance por 64,4 de alto).
 - **Ritmo:** se alternan blanco, gris muy claro (`seccion--gris`), negro (`oscuro`) y azul (`bq-seccion--azul`), sin dos fondos iguales seguidos cuando se puede evitar.
