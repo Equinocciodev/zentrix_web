@@ -9,6 +9,9 @@
 @font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("/assets/fonts/inter-500.woff2") format("woff2"); }
 @font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("/assets/fonts/inter-600.woff2") format("woff2"); }
 @font-face { font-family: "Inter"; font-style: normal; font-weight: 700; font-display: swap; src: url("/assets/fonts/inter-700.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 800; font-display: swap; src: url("/assets/fonts/inter-800.woff2") format("woff2"); }
+/* Reserva con las métricas de Inter: mientras llega la fuente, el texto no salta. */
+@font-face { font-family: "Inter reserva"; src: local("Arial"), local("Helvetica"); size-adjust: 107.4%; ascent-override: 90.2%; descent-override: 22.48%; line-gap-override: 0%; }
 
 :root {
   color-scheme: light;
@@ -42,7 +45,7 @@ body {
   margin: 0;
   background: var(--blanco);
   color: var(--texto);
-  font-family: "Inter", Arial, sans-serif;
+  font-family: "Inter", "Inter reserva", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   font-feature-settings: "calt", "kern";
@@ -551,3 +554,20 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .endoso { display: inline-flex; align-items: center; gap: 8px; font-size: .875rem; color: var(--texto-osc-2); margin-top: 8px; }
 .endoso img { height: 14px; width: auto; }
 @media (min-width: 900px) { .proceso--4 { grid-template-columns: repeat(4, 1fr); } }
+
+/* Titulares del héroe en Inter ExtraBold (manual) */
+.heroe h1 { font-weight: 800; letter-spacing: -0.035em; }
+
+/* Una sola cabecera: firma del producto y subnavegación fina sin logo */
+.logo--firma img { height: 26px; width: auto; }
+.logo--firma .wordmark img { height: 22px; }
+.logo--firma .wordmark__producto { font-size: 1.125rem; }
+@media (max-width: 420px) { .logo--firma img { height: 22px; } .logo--firma .wordmark img { height: 18px; } .logo--firma .wordmark__producto { font-size: 1rem; } }
+.producto-barra--fina { position: sticky; top: 64px; z-index: 4; background: rgba(245, 247, 250, .92); -webkit-backdrop-filter: saturate(1.6) blur(14px); backdrop-filter: saturate(1.6) blur(14px); }
+.producto-barra--fina .envoltura { min-height: 44px; flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scrollbar-width: none; }
+.producto-barra--fina .envoltura::-webkit-scrollbar { display: none; }
+.producto-barra--fina ul { flex-wrap: nowrap; margin-left: -10px; }
+.producto-barra--fina a { min-height: 44px; font-size: .875rem; white-space: nowrap; }
+.logo { text-decoration: none; color: inherit; }
+@media (max-width: 420px) { .nav ul { flex-wrap: nowrap; } .logo--firma .wordmark img { height: 16px; } .logo--firma .wordmark { gap: 6px; } .logo--firma .wordmark__producto { font-size: .9375rem; } }
+.descarga { position: relative; overflow: hidden; }
