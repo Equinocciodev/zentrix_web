@@ -42,6 +42,17 @@ Dirección A, aprobada por Victor el 14-10-2026: dos letras en minúscula y la b
 - Huecos para otros módulos: `<div id="zx-buscar">` en la cabecera (buscador) y el enlace `#zx-cookies` en el pie (preferencias de cookies).
 - Lo que viene de eqnio.com (servicios, filosofía, alianzas, equipo con sus fotos y cargos, partners) está en `contenido.py`, reescrito con el tono de Zentrix.
 
+## Buscador
+
+`assets/js/buscador.js` (con `defer`) llena el hueco `<div id="zx-buscar">` de la cabecera con la pastilla «Buscar… ⌘K» (una lupa en móvil), y `assets/css/buscador.css` le da estilo; los dos los añade `generar.py` al `<head>` de cada página. Se abre con la pastilla, con Cmd/Ctrl+K, con «/» y con `?q=término` en la URL (lo usa el `SearchAction` del JSON-LD). El índice es de **Pagefind** (versión fija 1.5.2) y no se descarga nada de él hasta abrir el buscador.
+
+- **Compilación:** el workflow de Pages ejecuta `python3 herramientas/buscador.py` y luego `npx -y pagefind@1.5.2 --site .`. El script, sobre la copia que se publica, marca el `<main>` de cada página con `data-pagefind-body`, los filtros `producto` y `tipo` (producto, solucion, manual, legal, pagina), el peso de `h1`/`h2` y el nombre del producto en su portada, y escribe `buscador/terminos-<lang>.json` (palabras, títulos y rutas para el autocompletado). Nada de eso se commitea: `pagefind/` y los JSON están en `.gitignore`. `python3 herramientas/buscador.py --check` lista qué entra al índice.
+- **Fuera del índice:** las redirecciones (meta refresh) y las páginas `noindex`, la 404, `/eqnio/`, `/logistica/` y `/sales/en/` cuando ya existe `/en/`. La cabecera, el mega-menú, la barra de producto, el pie, el aviso de cookies y la navegación dentro de `<main>` quedan fuera por `exclude_selectors` en `pagefind.yml`.
+- **Idioma:** Pagefind arma un índice por `<html lang>` y busca solo en el de la página.
+- **Autocompletado:** la palabra se completa en gris dentro del campo y se acepta con Tab o →. Arriba salen accesos directos (productos, manuales, privacidad, soporte, soluciones, contacto) cuando lo escrito los nombra. No distingue tildes ni mayúsculas. Con el campo vacío salen las búsquedas recientes (localStorage) y sugerencias.
+- **Analítica:** si existe `window.zxAnalytics.track`, envía `search`, `search_no_results` y `select_content`.
+- **Probar en local:** sobre una copia del repo (el script modifica los HTML): `python3 herramientas/buscador.py && npx -y pagefind@1.5.2 --site . && python3 -m http.server`.
+
 ## Movimiento e ilustraciones
 
 - La z madre del héroe de la portada se dibuja (trazo) y luego entra la pieza del corte diagonal; la geometría es la del maestro (`zentrix_z_azul.svg`).
