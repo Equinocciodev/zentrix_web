@@ -68,10 +68,10 @@ PAGINAS = {
                'Zentrix Labs — Prototipos y validación de productos',
                'En Zentrix Labs investigamos tu reto, construimos prototipos y los validamos antes de '
                'convertirlos en herramientas para tu equipo. Cuéntanos tu idea.'),
-    '/logistics/': ('gestión de despachos y entregas',
-                    'Zentrix Logistics — Gestión de despachos y entregas',
-                    'Zentrix Logistics, próximamente: despachos, rutas, entregas y gestión de incidencias '
-                    'en un mismo lugar, para cumplir lo que prometiste a tus clientes.'),
+    '/logistics/': ('software de logística y reparto',
+                    'Zentrix Logistics — Software de logística y reparto',
+                    'Software de logística y reparto sobre Odoo®: preparación, despacho y última milla, '
+                    'control de flota de reparto en vivo, cobro contra entrega y devoluciones.'),
     '/software/': ('consultoría Odoo; soporte y desarrollo a medida en Odoo',
                    'Zentrix Software — Consultoría, soporte y desarrollo en Odoo',
                    'Consultoría Odoo, soporte y desarrollo a medida en Odoo: configuramos, integramos y mantenemos '
@@ -219,9 +219,9 @@ PAGINAS.update({
     '/en/ai/': ('AI for business',
         'Zentrix AI — Applied artificial intelligence for business',
         'Zentrix AI connects your company’s knowledge and systems to AI agents and assistants that query, analyze and act, with role-based permissions for each user.'),
-    '/en/logistics/': ('dispatch and delivery software',
-        'Zentrix Logistics — Dispatch and delivery, under control',
-        'Zentrix Logistics, coming soon: dispatch, routes, deliveries and incident handling in one place, so you keep every promise you make to your customers.'),
+    '/en/logistics/': ('logistics and delivery software',
+        'Zentrix Logistics — Logistics and delivery software',
+        'Logistics and delivery software on Odoo®: picking, dispatch and last-mile delivery, live delivery fleet management, cash on delivery and returns.'),
     '/en/cloud/': ('managed hosting and backups',
         'Zentrix Cloud — Hosting, monitoring and backups',
         'Zentrix Cloud takes care of hosting, monitoring and backups for your apps and data, so they stay available and your team can focus on the work itself.'),
@@ -310,7 +310,7 @@ SERVICIOS = {
     '/ai/': ('Zentrix AI', 'Inteligencia artificial aplicada a la empresa'),
     '/cloud/': ('Zentrix Cloud', 'Hospedaje, monitoreo y respaldos de aplicaciones'),
     '/labs/': ('Zentrix Labs', 'Investigación, prototipos y validación de productos'),
-    '/logistics/': ('Zentrix Logistics', 'Gestión de despachos, rutas y entregas'),
+    '/logistics/': ('Zentrix Logistics', 'Software de logística y reparto: despacho y última milla'),
     '/software/': ('Zentrix Software', 'Implementación y personalización de Odoo'),
     '/traza/': ('Traza', 'Trazabilidad de documentos, productos y activos'),
 }
@@ -462,6 +462,29 @@ def jsonld(ruta, titulo, descripcion, cuerpo, lang):
             servicio['areaServed'] = ['Venezuela', 'Latinoamérica']
         if plantilla == '/traza/':
             servicio['sameAs'] = [TRAZA_URL]
+        if plantilla == '/logistics/':
+            # El servicio se presta con un software: la capa logística sobre Odoo® y la app Zentrix Work.
+            servicio['areaServed'] = ['Venezuela', 'Latinoamérica'] if lang == 'es' else ['Venezuela', 'Latin America']
+            servicio['audience'] = {'@type': 'BusinessAudience', 'audienceType': (
+                'Retail, distribución y consumo masivo' if lang == 'es' else 'Retail, distribution and consumer goods')}
+            servicio['isRelatedTo'] = {'@id': url + '#app'}
+            grafo.append({
+                '@type': 'SoftwareApplication', '@id': url + '#app', 'name': 'Zentrix Logistics',
+                'applicationCategory': 'BusinessApplication',
+                'applicationSubCategory': 'Logística y reparto' if lang == 'es' else 'Logistics and delivery',
+                'operatingSystem': 'Web, Android', 'description': descripcion, 'url': url, 'inLanguage': lang,
+                'image': SITIO + '/assets/img/og-logistics.png',
+                'featureList': ([
+                    'Preparación con escáner, bultos en rack y etiqueta por bulto',
+                    'FEFO y control de lotes', 'Lotes de despacho y guías',
+                    'Reparto con flota propia o de terceros', 'Seguimiento en vivo y puesto de control',
+                    'Cobro contra entrega', 'Devoluciones autorizadas'] if lang == 'es' else [
+                    'Scanner-guided picking, parcels on the rack and a label per parcel',
+                    'FEFO and lot control', 'Dispatch batches and dispatch notes',
+                    'Delivery with your own fleet or a third party', 'Live tracking and control room',
+                    'Cash on delivery', 'Authorized returns']),
+                'softwareRequirements': 'Odoo® 19', 'publisher': org_ref(),
+            })
         grafo.append(servicio)
     if ruta.endswith('/dudas.html') or 'class="preguntas' in cuerpo:
         f = faq(cuerpo)

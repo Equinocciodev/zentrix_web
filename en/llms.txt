@@ -9,7 +9,7 @@ Slogan: «Technology to work better». eqnio.com redirects to zentrix.company. S
 - [Zentrix Work](https://zentrix.company/en/work/): Store teams
 - [Zentrix Sales](https://zentrix.company/en/sales/): Field sales
 - [Zentrix AI](https://zentrix.company/en/ai/): Applied intelligence
-- [Zentrix Logistics](https://zentrix.company/en/logistics/): Dispatch and delivery · Coming soon
+- [Zentrix Logistics](https://zentrix.company/en/logistics/): Warehouse to doorstep
 - [Zentrix Cloud](https://zentrix.company/en/cloud/): Infrastructure
 - [Zentrix Labs](https://zentrix.company/en/labs/): Research
 - [Zentrix Software](https://zentrix.company/en/software/): Odoo® implementation
