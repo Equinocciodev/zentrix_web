@@ -1,0 +1,16 @@
+# Configuración de Pagefind (el buscador). La lee `npx pagefind --site .` en el
+# workflow de Pages, después de `python3 herramientas/buscador.py`.
+# Solo se indexa el <main> de cada página (data-pagefind-body); esto, además,
+# deja fuera lo que sea navegación aunque esté dentro.
+exclude_selectors:
+  - ".cabecera"
+  - ".menu-productos"
+  - ".producto-barra"
+  - ".pie"
+  - "#zx-buscar"
+  - ".zx-ck"
+  - "[class*='cookie']"
+  - "[id*='cookie']"
+  - "main nav"
+  - ".saltar"
+  - "svg"

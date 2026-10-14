@@ -276,6 +276,11 @@ def ajustar_head(s, ruta):
     if '/assets/js/analitica.js' not in s:
         grupo = ' data-grupo="error"' if ruta.endswith('404.html') else ''
         s = s.replace('</head>', f'  <script src="/assets/js/analitica.js" defer{grupo}></script>\n</head>', 1)
+    # Buscador (assets/js/buscador.js) en el hueco #zx-buscar de la cabecera.
+    if '/assets/css/buscador.css' not in s:
+        s = s.replace('</head>', '  <link rel="stylesheet" href="/assets/css/buscador.css?v=1">\n</head>', 1)
+    if '/assets/js/buscador.js' not in s:
+        s = s.replace('</head>', '  <script src="/assets/js/buscador.js?v=1" defer></script>\n</head>', 1)
     return s
 
 

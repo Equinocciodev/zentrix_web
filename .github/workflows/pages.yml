@@ -36,6 +36,17 @@ jobs:
           python3 herramientas/llms.py
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      # El buscador: marca el contenido indexable, escribe los términos del
+      # autocompletado y compila el índice de Pagefind en /pagefind/.
+      - name: Índice del buscador (Pagefind)
+        run: |
+          python3 herramientas/buscador.py
+          npx -y pagefind@1.5.2 --site .
+          test -f pagefind/pagefind.js
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

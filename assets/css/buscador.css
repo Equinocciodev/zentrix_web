@@ -1,0 +1,184 @@
+/* Buscador de zentrix.company (assets/js/buscador.js).
+   Solo los colores de la marca y sus transparencias: negro #090D12, blanco,
+   azul #244DFF y lima #C7FA46. */
+
+/* --- Pastilla de la cabecera ------------------------------------------- */
+#zx-buscar { display: flex; align-items: center; margin-left: auto; min-width: 44px; min-height: 44px; }
+.zxb-pastilla {
+  display: inline-flex; align-items: center; gap: 8px; height: 38px; padding: 0 6px 0 12px; margin: 0;
+  font: 500 .875rem/1 "Inter", "Inter reserva", Arial, sans-serif; color: rgba(9, 13, 18, .64);
+  background: rgba(9, 13, 18, .04); border: 1px solid rgba(9, 13, 18, .1); border-radius: 999px;
+  cursor: pointer; white-space: nowrap; min-width: 168px;
+  transition: background-color .15s, border-color .15s, color .15s, box-shadow .15s;
+}
+.zxb-pastilla:hover { background: rgba(36, 77, 255, .06); border-color: rgba(36, 77, 255, .35); color: #090D12; }
+.zxb-pastilla:focus-visible { outline: 2px solid #244DFF; outline-offset: 2px; }
+.zxb-pastilla svg { width: 16px; height: 16px; flex: none; }
+.zxb-pastilla__txt { flex: 1; text-align: left; }
+.zxb-pastilla kbd, .zxb kbd {
+  font: 600 .6875rem/1 "Inter", "Inter reserva", Arial, sans-serif; color: rgba(9, 13, 18, .64);
+  background: #FFFFFF; border: 1px solid rgba(9, 13, 18, .14); border-bottom-width: 2px;
+  border-radius: 6px; padding: 4px 6px; min-width: 22px; text-align: center; display: inline-block;
+}
+.zxb-pastilla[data-tema="oscuro"] { color: rgba(255, 255, 255, .72); background: rgba(255, 255, 255, .06); border-color: rgba(255, 255, 255, .14); }
+.zxb-pastilla[data-tema="oscuro"]:hover { color: #FFFFFF; border-color: rgba(166, 182, 255, .6); }
+.zxb-pastilla[data-tema="oscuro"] kbd { background: transparent; color: rgba(255, 255, 255, .72); border-color: rgba(255, 255, 255, .2); }
+@media (max-width: 899px) {
+  .zxb-pastilla { min-width: 0; width: 44px; height: 44px; padding: 0; justify-content: center; background: transparent; border-color: transparent; color: #090D12; border-radius: 12px; }
+  .zxb-pastilla:hover { background: #F5F7FA; border-color: transparent; }
+  .zxb-pastilla svg { width: 20px; height: 20px; }
+  .zxb-pastilla__txt, .zxb-pastilla kbd { display: none; }
+  .zxb-pastilla[data-tema="oscuro"] { color: #FFFFFF; background: transparent; }
+}
+
+/* --- Ventana -------------------------------------------------------------- */
+.zxb {
+  --zxb-fondo: #FFFFFF; --zxb-texto: #090D12; --zxb-texto-2: rgba(9, 13, 18, .66);
+  --zxb-texto-3: rgba(9, 13, 18, .5); --zxb-borde: rgba(9, 13, 18, .09); --zxb-sutil: rgba(9, 13, 18, .04);
+  --zxb-activa: rgba(36, 77, 255, .07); --zxb-marca: rgba(199, 250, 70, .55); --zxb-acento: #244DFF;
+  --zxb-velo: rgba(9, 13, 18, .42); --zxb-sombra: 0 32px 80px -24px rgba(9, 13, 18, .45), 0 0 0 1px rgba(9, 13, 18, .06);
+  --zxb-esqueleto: rgba(9, 13, 18, .07);
+  position: fixed; inset: 0; z-index: 2147483600; /* sobre el aviso de cookies */ display: flex; justify-content: center; align-items: flex-start;
+  padding: min(12vh, 120px) 16px 16px; font-family: "Inter", "Inter reserva", Arial, sans-serif;
+  color: var(--zxb-texto); -webkit-font-smoothing: antialiased; line-height: 1.45;
+}
+.zxb[hidden] { display: none; }
+.zxb[data-tema="oscuro"] {
+  --zxb-fondo: #090D12; --zxb-texto: #FFFFFF; --zxb-texto-2: rgba(255, 255, 255, .7);
+  --zxb-texto-3: rgba(255, 255, 255, .52); --zxb-borde: rgba(255, 255, 255, .09); --zxb-sutil: rgba(255, 255, 255, .05);
+  --zxb-activa: rgba(166, 182, 255, .12); --zxb-marca: rgba(199, 250, 70, .28); --zxb-acento: #A6B6FF;
+  --zxb-velo: rgba(0, 0, 0, .6); --zxb-sombra: 0 32px 80px -24px rgba(0, 0, 0, .8), 0 0 0 1px rgba(255, 255, 255, .08);
+  --zxb-esqueleto: rgba(255, 255, 255, .08);
+  color-scheme: dark;
+}
+.zxb__velo { position: absolute; inset: 0; background: var(--zxb-velo); -webkit-backdrop-filter: blur(6px) saturate(1.2); backdrop-filter: blur(6px) saturate(1.2); animation: zxb-fundido .16s ease-out both; }
+.zxb__caja {
+  position: relative; width: 100%; max-width: 640px; max-height: min(640px, calc(100vh - min(12vh, 120px) - 32px));
+  display: flex; flex-direction: column; background: var(--zxb-fondo); border-radius: 18px;
+  box-shadow: var(--zxb-sombra); overflow: hidden; animation: zxb-entrada .18s cubic-bezier(.2, .8, .2, 1) both;
+}
+.zxb.zxb--saliendo .zxb__velo { animation: zxb-fundido .12s ease-in reverse both; }
+.zxb.zxb--saliendo .zxb__caja { animation: zxb-salida .12s ease-in both; }
+@keyframes zxb-fundido { from { opacity: 0; } to { opacity: 1; } }
+@keyframes zxb-entrada { from { opacity: 0; transform: translateY(-6px) scale(.985); } to { opacity: 1; transform: none; } }
+@keyframes zxb-salida { to { opacity: 0; transform: translateY(-4px) scale(.985); } }
+
+.zxb-sr { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+
+/* Campo con el autocompletado en gris detrás */
+.zxb__campo { display: flex; align-items: center; gap: 12px; padding: 0 12px 0 18px; border-bottom: 1px solid var(--zxb-borde); min-height: 60px; }
+.zxb__campo > svg { width: 20px; height: 20px; flex: none; color: var(--zxb-acento); }
+.zxb__entrada { position: relative; flex: 1; min-width: 0; display: grid; }
+.zxb__entrada > * { grid-area: 1 / 1; }
+.zxb__input, .zxb__fantasma {
+  font: 500 1.0625rem/1.4 "Inter", "Inter reserva", Arial, sans-serif; letter-spacing: -.005em;
+  padding: 18px 0; margin: 0; border: 0; white-space: pre; overflow: hidden;
+}
+.zxb__input { background: transparent; color: var(--zxb-texto); outline: none; width: 100%; position: relative; caret-color: var(--zxb-acento); }
+.zxb__input::placeholder { color: var(--zxb-texto-3); opacity: 1; }
+.zxb__input::-webkit-search-cancel-button { display: none; }
+.zxb__fantasma { color: transparent; pointer-events: none; user-select: none; text-overflow: clip; }
+.zxb__resto { color: var(--zxb-texto-3); }
+.zxb__tab { display: inline-block; margin-left: 8px; vertical-align: 2px; font-size: .625rem !important; padding: 2px 5px !important; opacity: .9; }
+.zxb__cerrar {
+  flex: none; font: 600 .75rem/1 "Inter", "Inter reserva", Arial, sans-serif; color: var(--zxb-texto-2);
+  background: var(--zxb-sutil); border: 1px solid var(--zxb-borde); border-radius: 8px; padding: 7px 9px; cursor: pointer;
+}
+.zxb__cerrar:hover { color: var(--zxb-texto); }
+.zxb__cerrar:focus-visible, .zxb__borrar:focus-visible { outline: 2px solid var(--zxb-acento); outline-offset: 2px; }
+.zxb__cerrar-movil { display: none; }
+
+/* Lista */
+.zxb__cuerpo { overflow-y: auto; overscroll-behavior: contain; padding: 6px 8px 10px; flex: 1; scroll-padding: 40px 0 8px; }
+.zxb__lista:empty { display: none; }
+.zxb-grupo { padding-top: 6px; }
+.zxb-grupo + .zxb-grupo { margin-top: 2px; border-top: 1px solid var(--zxb-borde); padding-top: 8px; }
+.zxb-grupo__cab {
+  display: flex; align-items: center; gap: 8px; padding: 6px 12px 6px; font-size: .6875rem; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--zxb-texto-3);
+}
+.zxb-grupo__n { font-variant-numeric: tabular-nums; background: var(--zxb-sutil); border-radius: 999px; padding: 2px 7px; letter-spacing: 0; font-weight: 600; }
+.zxb__borrar { margin-left: auto; font: 600 .6875rem/1 "Inter", "Inter reserva", Arial, sans-serif; text-transform: none; letter-spacing: 0; color: var(--zxb-texto-3); background: none; border: 0; padding: 4px 6px; border-radius: 6px; cursor: pointer; }
+.zxb__borrar:hover { color: var(--zxb-texto); background: var(--zxb-sutil); }
+
+.zxb-op {
+  position: relative; display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 12px;
+  color: var(--zxb-texto); text-decoration: none; cursor: pointer; scroll-margin: 8px;
+  transition: background-color .12s;
+}
+.zxb-op::before { content: ""; position: absolute; left: 0; top: 10px; bottom: 10px; width: 3px; border-radius: 3px; background: #C7FA46; transform: scaleY(0); transition: transform .14s cubic-bezier(.2, .8, .2, 1); }
+.zxb-op[aria-selected="true"] { background: var(--zxb-activa); }
+.zxb-op[aria-selected="true"]::before { transform: none; }
+.zxb-op:hover:not([aria-selected="true"]) { background: var(--zxb-sutil); }
+.zxb-op__ico { flex: none; width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; overflow: hidden; background: var(--zxb-sutil); color: var(--zxb-texto-2); }
+.zxb-op__ico img { width: 36px; height: 36px; display: block; }
+.zxb-op__ico svg { width: 18px; height: 18px; }
+.zxb-op__txt { flex: 1; min-width: 0; display: grid; gap: 1px; }
+.zxb-op__tit { font-weight: 600; font-size: .9375rem; letter-spacing: -.005em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.zxb-op__tit b, .zxb-op__tit strong { font-weight: 700; }
+.zxb-op__ruta { font-size: .75rem; color: var(--zxb-texto-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.zxb-op__ext { font-size: .8125rem; color: var(--zxb-texto-2); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-top: 3px; }
+.zxb-op mark { background: var(--zxb-marca); color: inherit; border-radius: 3px; padding: 0 1px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.zxb-op__ir { flex: none; opacity: 0; color: var(--zxb-texto-3); transition: opacity .12s; }
+.zxb-op[aria-selected="true"] .zxb-op__ir { opacity: 1; }
+.zxb-op--simple { padding: 8px 12px; }
+.zxb-op--simple .zxb-op__ico { width: 28px; height: 28px; border-radius: 8px; background: transparent; }
+.zxb-op--simple .zxb-op__ico svg { width: 16px; height: 16px; }
+.zxb-op--simple .zxb-op__tit { font-weight: 500; }
+
+/* Accesos directos: tejas en fila */
+.zxb-atajos { display: flex; flex-wrap: wrap; gap: 8px; padding: 2px 8px 8px; }
+.zxb-atajo {
+  position: relative; display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px 6px 6px; border-radius: 12px;
+  border: 1px solid var(--zxb-borde); color: var(--zxb-texto); text-decoration: none; font-size: .875rem; font-weight: 600;
+  transition: background-color .12s, border-color .12s, transform .12s;
+}
+.zxb-atajo img { width: 28px; height: 28px; border-radius: 8px; }
+.zxb-atajo small { font-weight: 500; color: var(--zxb-texto-3); font-size: .75rem; }
+.zxb-atajo[aria-selected="true"] { background: var(--zxb-activa); border-color: var(--zxb-acento); box-shadow: inset 3px 0 0 #C7FA46; }
+.zxb-atajo:hover:not([aria-selected="true"]) { background: var(--zxb-sutil); }
+
+/* Estados */
+.zxb__vacio { padding: 36px 24px 40px; text-align: center; color: var(--zxb-texto-2); }
+.zxb__vacio b { display: block; color: var(--zxb-texto); font-size: 1rem; margin-bottom: 4px; }
+.zxb__vacio svg { width: 40px; height: 40px; margin: 0 auto 12px; display: block; color: var(--zxb-texto-3); }
+.zxb__vacio a { color: var(--zxb-acento); font-weight: 600; }
+.zxb-esq { display: flex; gap: 12px; align-items: center; padding: 10px 12px; }
+.zxb-esq i { display: block; border-radius: 6px; background: var(--zxb-esqueleto); }
+.zxb-esq > i { width: 36px; height: 36px; border-radius: 10px; flex: none; }
+.zxb-esq span { flex: 1; display: grid; gap: 7px; }
+.zxb-esq span i:nth-child(1) { width: 42%; height: 12px; }
+.zxb-esq span i:nth-child(2) { width: 26%; height: 9px; }
+.zxb-esq span i:nth-child(3) { width: 88%; height: 9px; }
+.zxb-esq i { background-image: linear-gradient(90deg, transparent 0, var(--zxb-sutil) 40%, transparent 80%); background-size: 200% 100%; animation: zxb-brillo 1.1s linear infinite; }
+@keyframes zxb-brillo { from { background-position: 150% 0; } to { background-position: -50% 0; } }
+
+/* Pie con las ayudas de teclado */
+.zxb__pie { display: flex; align-items: center; gap: 16px; padding: 10px 16px; border-top: 1px solid var(--zxb-borde); font-size: .75rem; color: var(--zxb-texto-3); background: var(--zxb-sutil); }
+.zxb__pie span { display: inline-flex; align-items: center; gap: 6px; }
+.zxb__pie kbd { padding: 3px 5px; min-width: 20px; }
+.zxb__pie .zxb__fin { margin-left: auto; }
+.zxb[data-tema="oscuro"] kbd { background: rgba(255, 255, 255, .06); color: rgba(255, 255, 255, .72); border-color: rgba(255, 255, 255, .16); }
+
+/* Móvil: pantalla completa */
+@media (max-width: 640px) {
+  .zxb { padding: 0; }
+  .zxb__caja { max-width: none; max-height: none; height: 100%; height: 100dvh; border-radius: 0; animation-name: zxb-entrada-movil; }
+  .zxb__campo { padding: 0 8px 0 16px; min-height: 56px; }
+  .zxb__input, .zxb__fantasma { font-size: 1rem; padding: 16px 0; }
+  .zxb__cerrar { display: none; }
+  .zxb__cerrar-movil { display: inline-flex; align-items: center; min-height: 44px; padding: 0 8px; font: 600 .9375rem/1 "Inter", "Inter reserva", Arial, sans-serif; color: var(--zxb-acento); background: none; border: 0; cursor: pointer; border-radius: 8px; }
+  .zxb__cerrar-movil:focus-visible { outline: 2px solid var(--zxb-acento); }
+  .zxb__pie { display: none; }
+  .zxb-op { padding: 12px; }
+  .zxb__cuerpo { padding-bottom: max(16px, env(safe-area-inset-bottom)); }
+}
+@keyframes zxb-entrada-movil { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .zxb__velo, .zxb__caja, .zxb.zxb--saliendo .zxb__velo, .zxb.zxb--saliendo .zxb__caja, .zxb-esq i { animation: none !important; }
+  .zxb-op, .zxb-op::before, .zxb-atajo, .zxb-pastilla, .zxb-op__ir { transition: none !important; }
+}
+@media (forced-colors: active) {
+  .zxb-op[aria-selected="true"], .zxb-atajo[aria-selected="true"] { outline: 2px solid Highlight; }
+}
