@@ -1,6 +1,6 @@
 # zentrix_web
 
-Sitio de **zentrix®** en <https://zentrix.company>: la portada corporativa y las páginas de los dos productos, **Zentrix Work** (antes GUUAO® Work) y **Zentrix Sales** (antes Vendoo), con su privacidad y su soporte. Las URL de privacidad y soporte son las que declaran las apps y las fichas de Google Play y App Store.
+Sitio de **Zentrix®** en <https://zentrix.company>: la portada corporativa y las páginas de los dos productos, **Zentrix Work** (antes GUUAO® Work) y **Zentrix Sales** (antes Vendoo), con su privacidad y su soporte. Las URL de privacidad y soporte son las que declaran las apps y las fichas de Google Play y App Store.
 
 Es un sitio estático: HTML, una hoja CSS (`assets/css/sitio.css`) y un script pequeño (`assets/js/sitio.js`) que solo añade movimiento: la aparición de las secciones al hacer scroll (IntersectionObserver) y el conteo de las cifras. No hay paso de compilación ni dependencias. Sin JavaScript todo el contenido se ve igual, y con `prefers-reduced-motion` no se mueve nada. Las páginas de privacidad, términos, soporte y los manuales no cargan el script: se leen enteras sin JavaScript, que es como las revisan Google y Apple.
 
@@ -8,7 +8,7 @@ Es un sitio estático: HTML, una hoja CSS (`assets/css/sitio.css`) y un script p
 
 | Ruta | Página |
 |---|---|
-| `/` | Portada de zentrix, la marca madre: qué hacemos, los dos productos destacados, cómo trabajamos, las divisiones y el contacto. |
+| `/` | Portada de Zentrix, la marca madre: qué hacemos, los dos productos destacados, cómo trabajamos, las divisiones y el contacto. |
 | `/work/` | Zentrix Work. Google Play: `com.leiros.guuaowork`. |
 | `/work/docs/` + 11 páginas `.html` | Manual del operador, migrado de work.guuao.com/docs. |
 | `/work/privacidad/` · `/work/soporte/` · `/work/terminos/` | Política (anclas `#c1`…`#c11`, Play declara `#c7`), soporte (`#eliminar-datos`) y términos. |
@@ -17,7 +17,7 @@ Es un sitio estático: HTML, una hoja CSS (`assets/css/sitio.css`) y un script p
 | `/sales/privacidad/` · `/sales/soporte/` · `/sales/terminos/` · `/sales/contacto/` | Política, soporte, términos y contacto con el formulario de demostración (`assets/js/contacto.js` arma el correo). |
 | `/sales/en/` + `privacy.html`, `terms.html`, `support.html`, `contact.html` | Versión en inglés, migrada de vendooapp.com/en. |
 | `/ai/` · `/logistica/` · `/cloud/` · `/labs/` · `/software/` | Los otros productos de la Presentación Corporativa: problema, para quién, beneficios, cómo funciona y contacto. Usan solo lo que dice la presentación. Ninguno tiene app publicada, así que no enlazan a tiendas: «Solicita una demostración», o «Próximamente» en logística, cuyo nombre comercial está por definir. |
-| `/traza/` | Presentación breve de traza®, que tiene sitio propio: el botón principal lleva a <https://traza.technology>. En el menú, la portada y el pie, traza enlaza directamente a ese sitio (pestaña nueva, con indicador de enlace externo). |
+| `/traza/` | Presentación breve de Traza®, que tiene sitio propio: el botón principal lleva a <https://traza.technology>. En el menú, la portada y el pie, Traza enlaza directamente a ese sitio (pestaña nueva, con indicador de enlace externo). |
 | `/404.html` | Página de error. |
 
 Las páginas de los manuales llevan, además de `sitio.css`, `manual-sales.css` o `manual-work.css`: son las hojas del manual de cada sitio anterior con los tokens de zentrix. Las capturas de los manuales están en `assets/img/sales/` y `assets/img/work/`, y algunas todavía muestran el diseño anterior de las apps.
@@ -28,13 +28,13 @@ Dirección A, aprobada por Victor el 14-10-2026: dos letras en minúscula y la b
 
 - En las páginas de producto la cabecera lleva la firma del producto (monograma + zentrix® + apellido) en lugar del logotipo madre, y enlaza a la portada. Work y Sales tienen debajo una barra fina, sin logo, con sus enlaces (producto, manual, privacidad, soporte).
 - El héroe de cada producto dibuja su monograma en línea (`<!--MONO:slug-->`) para animar la teja, las letras y la barra por separado.
-- traza conserva su símbolo y su wordmark propios (manual, pág. 15) con el endoso «un producto de zentrix®»; no lleva monograma. Logística sigue con el wordmark provisional «zentrix logística» hasta que tenga nombre comercial.
+- Traza conserva su símbolo y su wordmark propios (manual, pág. 15) con el endoso «un producto de Zentrix®»; no lleva monograma. Logística sigue con el wordmark provisional «zentrix logística» hasta que tenga nombre comercial.
 - El logotipo madre, el favicon y la z de la portada no cambian: son la marca madre.
 
 ## Movimiento e ilustraciones
 
 - La z madre del héroe de la portada se dibuja (trazo) y luego entra la pieza del corte diagonal; la geometría es la del maestro (`zentrix_z_azul.svg`).
-- Cada división tiene su motivo, como pide la Presentación Corporativa: capas (software), onda (ai), nube (cloud), prisma (labs), cubos (logística) y anillo (traza); Work lleva el pulso de un aviso y Sales la ruta del día. Son SVG en línea (`<!--MOTIVO:nombre-->`), animados solo con CSS.
+- Cada división tiene su motivo, como pide la Presentación Corporativa: capas (software), onda (ai), nube (cloud), prisma (labs), cubos (logística) y anillo (Traza); Work lleva el pulso de un aviso y Sales la ruta del día. Son SVG en línea (`<!--MOTIVO:nombre-->`), animados solo con CSS.
 - Solo se usan los cuatro colores del manual y sus transparencias. El lima es acento, salvo el fondo del héroe de logística.
 
 ## Correos de contacto
@@ -46,14 +46,14 @@ Los buzones se crearon el 13-10-2026. Las apps todavía llevan los correos anter
 
 ## Nombres
 
-zentrix es la marca madre. En la portada, la navegación, las tarjetas y el pie no se nombran GUUAO ni los nombres anteriores de las apps. GUUAO LLC aparece solo donde la ley lo exige: en privacidad, soporte y términos, como responsable que publica las apps. Las notas de cambio de nombre se quedan en esas mismas páginas.
+Zentrix es la marca madre. En la portada, la navegación, las tarjetas y el pie no se nombran GUUAO ni los nombres anteriores de las apps. GUUAO LLC aparece solo donde la ley lo exige: en privacidad, soporte y términos, como responsable que publica las apps. Las notas de cambio de nombre se quedan en esas mismas páginas.
 
 ## Marca
 
 - Paleta: azul `#244DFF` para la acción, negro `#090D12` para el texto y los fondos inmersivos, y lima `#C7FA46` solo como acento. Nunca se usa lima como texto sobre blanco. Fondo `#F5F7FA`. Sobre negro, la acción va en `#A6B6FF`.
 - Tipografía: Inter 400/500/600/700, recortada a latín, y Inter ExtraBold 800 (4.1 oficial, latín + latín extendido) para los titulares del héroe, servidas desde `assets/fonts/` (licencia OFL en `LICENSE-Inter.txt`). No se cargan fuentes externas. Las páginas con héroe precargan los cinco pesos, porque todos se ven por encima del pliegue (con 4G lento llegan antes del primer pintado); mientras llegan, la reserva «Inter reserva» (Arial con las métricas de Inter) evita saltos.
 - Logos: los SVG maestros de `guuao_work_app` (rama `feat/zentrix-work`, `assets/brand/`) y de `vendoo_app` (rama `feat/zentrix-sales`, `assets/marca/zentrix_sales/`), copiados en `assets/img/logos/`. `zentrix-negro.svg` y `zentrix-blanco.svg` salen del logotipo en `currentColor`.
-- En los textos corridos los productos se escriben «Zentrix Work» y «Zentrix Sales», como el nombre visible de las apps y de las fichas. En los logos van en minúsculas, como pide el manual.
+- En texto (titulares, párrafos, menús, botones, `alt`, `aria-label`, `title`, metadatos, pies, inglés y español) la marca va siempre con mayúscula inicial: «Zentrix», «Zentrix Work», «Zentrix Sales», «Zentrix AI», «Zentrix Cloud», «Zentrix Labs», «Zentrix Software», y «Traza». Solo el logotipo (los SVG y las firmas construidas en HTML que lo imitan, como `zentrix <b>work</b>` en la familia de la portada) va en minúsculas, como pide el manual. URLs, dominios, correos y nombres de archivo no cambian.
 - El contraste cumple AA: azul sobre blanco 5,9:1, texto secundario `#4A5363` sobre `#F5F7FA` 7,2:1, y `#A6B6FF` sobre negro 10:1.
 - Las capturas son de `~/Downloads/zentrix/work_app` y `sales_app` (las «después»), en WebP.
 - Las imágenes Open Graph (`assets/img/og*.png`, 1200×630) se generaron con la paleta y el logo; cada producto tiene la suya (`og-<producto>.png`) con su firma y su monograma, y todas las páginas llevan `og:image` y `twitter:image`.
