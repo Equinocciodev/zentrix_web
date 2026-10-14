@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "zentrix",
+      "type": "skill-md",
+      "description": "Find accurate, current public information about Zentrix (zentrix.company): products, solutions, user manuals, support and contact, and which official pages to cite.",
+      "url": "/.well-known/agent-skills/zentrix/SKILL.md",
+      "digest": "sha256:69ef12c903f204bfd2d4c31883ee7fdc8a30cd464fc63f36cfba51ee943a2f88"
+    }
+  ]
+}

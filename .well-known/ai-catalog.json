@@ -1,0 +1,23 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Zentrix",
+    "identifier": "did:web:zentrix.company"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:zentrix.company:skill:zentrix",
+      "displayName": "Zentrix public information",
+      "type": "application/agent-skills+md",
+      "url": "https://zentrix.company/.well-known/agent-skills/zentrix/SKILL.md",
+      "description": "Find accurate, current public information about Zentrix (zentrix.company): products, solutions, user manuals, support and contact, and which official pages to cite.",
+      "representativeQueries": [
+        "what does Zentrix do",
+        "how do I use Zentrix Work",
+        "Zentrix Sales user manual",
+        "contact Zentrix support",
+        "Odoo implementation in Venezuela"
+      ]
+    }
+  ]
+}
