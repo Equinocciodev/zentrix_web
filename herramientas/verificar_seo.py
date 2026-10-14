@@ -228,6 +228,32 @@ def verificar(base):
     if re.search(r'(?im)^disallow:\s*/\s*$', robots):
         globales.append(('robots.txt', 'Disallow: / bloquea el sitio'))
 
+    # llms.txt: la auditoría «llms-txt» de Lighthouse (H1, al menos un enlace Markdown, ≥ 50
+    # caracteres) y lo que pide https://llmstxt.org (resumen en blockquote, secciones ##
+    # con listas de enlaces). /en/llms.txt solo si existe.
+    for ruta_llms, obligatorio in (('/llms.txt', True), ('/en/llms.txt', False), ('/llms-full.txt', True)):
+        est, _, cuerpo_llms, _ = cli.get(base + ruta_llms)
+        if est != 200:
+            if obligatorio or est != 404:
+                globales.append((ruta_llms, 'HTTP %s' % est))
+            continue
+        t = cuerpo_llms.decode('utf-8', 'replace')
+        if not re.search(r'^\s*#\s+.+', t, re.M):
+            globales.append((ruta_llms, 'sin H1 (# Título)'))
+        if not re.search(r'\[.+\]\(.+\)', t):
+            globales.append((ruta_llms, 'sin enlaces Markdown (Lighthouse: «File does not appear to contain any links»)'))
+        if len(t) < 50:
+            globales.append((ruta_llms, 'demasiado corto'))
+        if ruta_llms != '/llms-full.txt':
+            if not re.search(r'^> .+', t, re.M):
+                globales.append((ruta_llms, 'sin resumen en blockquote (> …)'))
+            if not re.search(r'^- \[[^\]]+\]\([^)]+\)', t, re.M):
+                globales.append((ruta_llms, 'sin listas de enlaces «- [nombre](url)»'))
+            sueltas = [l for l in t.splitlines() if re.match(r'^- ', l) and re.search(r'https?://', l)
+                       and not re.match(r'^- \[[^\]]+\]\(', l)]
+            if sueltas:
+                globales.append((ruta_llms, '%d elementos con URL en texto plano, p. ej. «%s»' % (len(sueltas), sueltas[0][:60])))
+
     estado, _, xml, _ = cli.get(base + '/sitemap.xml')
     en_sitemap = OrderedDict()
     alternas_sitemap = {}
@@ -465,6 +491,7 @@ def informe(base, filas, globales):
     out += ['## Global', '', '| Comprobación | Resultado |', '|---|---|']
     out.append('| robots.txt con `Sitemap:` | %s |' % ('falla' if any(g[0] == 'robots.txt' for g in globales) else 'OK'))
     out.append('| sitemap.xml (XML, lastmod, todas las URL responden) | %s |' % ('falla' if any(g[0] == 'sitemap.xml' for g in globales) else 'OK'))
+    out.append('| llms.txt y llms-full.txt (auditoría llms-txt de Lighthouse + llmstxt.org) | %s |' % ('falla' if any(g[0].endswith('llms.txt') or g[0] == '/llms-full.txt' for g in globales) else 'OK'))
     for g in globales:
         out.append('| %s | falla: %s |' % g)
     out += ['', '## Página por página', '',

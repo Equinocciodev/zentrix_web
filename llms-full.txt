@@ -4,20 +4,18 @@
 
 Datos clave:
 - Productos en producción: Zentrix Work (app Android del equipo de tienda) y Zentrix Sales (app de fuerza de ventas para Android y iPhone, integración nativa con Odoo® 17, 18 y 19).
-- Divisiones: Zentrix AI, Zentrix Logistics (próximamente), Zentrix Cloud, Zentrix Labs y Zentrix Software (implementación de Odoo®). Traza es un producto de Zentrix con sitio propio: https://traza.technology
-- Contacto: hola@zentrix.company (general y Zentrix Sales), soporte@zentrix.company (soporte y Zentrix Work), teléfono y WhatsApp +58 412-346 9712. Responde una persona, en español, en menos de un día hábil.
+- Divisiones: Zentrix AI, Zentrix Logistics (próximamente), Zentrix Cloud, Zentrix Labs y Zentrix Software (implementación de Odoo®). Traza es un producto de Zentrix con sitio propio: [traza.technology](https://traza.technology)
+- Contacto: [hola@zentrix.company](mailto:hola@zentrix.company) (general y Zentrix Sales), [soporte@zentrix.company](mailto:soporte@zentrix.company) (soporte y Zentrix Work), teléfono y [WhatsApp +58 412-346 9712](https://wa.me/584123469712). Responde una persona, en español, en menos de un día hábil.
 - La marca se escribe «Zentrix», «Zentrix Work», «Zentrix Sales», «Zentrix AI», «Zentrix Logistics», «Zentrix Cloud», «Zentrix Labs», «Zentrix Software» y «Traza».
 
-Índice breve: https://zentrix.company/llms.txt
+Índice breve: [llms.txt](https://zentrix.company/llms.txt)
 
 # Zentrix
 
 
 ---
 
-## Clientes — Casos en distribución y comercio | Zentrix
-
-URL: https://zentrix.company/clientes/
+## [Clientes — Casos en distribución y comercio | Zentrix](https://zentrix.company/clientes/)
 
 Grupo Leiros y GUUAO usan las apps de Zentrix cada día en distribución y comercio en Venezuela. Conoce sus casos y las empresas que nos acompañan.
 
@@ -27,7 +25,7 @@ Clientes
 
 Nuestras apps nacieron dentro de operaciones de distribución y comercio en Venezuela, y ahí trabajan cada día: en la tienda, en la calle y en la oficina.
 
-Ver los casosHablemos
+Ver los casos [Hablemos](https://zentrix.company/contacto/)
 
 Casos
 
@@ -41,16 +39,16 @@ GL
 Distribución de licores · Venezuela
 
 Grupo Leiros es aliado de Zentrix desde su origen, cuando todavía nos llamábamos Equinoccio: aporta respaldo institucional, estructura legal y alcance comercial. Su operación de distribución es donde nacieron nuestras apps.
-- Zentrix Sales →
-- Odoo® en Venezuela →
+- [Zentrix Sales →](https://zentrix.company/sales/)
+- [Odoo® en Venezuela →](https://zentrix.company/soluciones/odoo-venezuela/)
 G
 
 ### GUUAO
 Venezuela
 
 GUUAO LLC publica Zentrix Work y Zentrix Sales en las tiendas de aplicaciones. Zentrix Work nació para su equipo de tienda: el pedido suena en el bolsillo, se prepara con el escáner y se entrega con todo registrado.
-- Zentrix Work →
-- Zentrix Sales →
+- [Zentrix Work →](https://zentrix.company/work/)
+- [Zentrix Sales →](https://zentrix.company/sales/)
 
 Partners y aliados
 
@@ -74,14 +72,12 @@ Así los presentaba Equinoccio (EQNIO), el equipo que hoy es Zentrix.
 
 Cuéntanos cómo es tu operación y te mostramos el producto funcionando con tus propios datos.
 
-Solicita una demostraciónContacto
+[Solicita una demostración](mailto:hola@zentrix.company?subject=Zentrix%3A%20quiero%20una%20demostraci%C3%B3n) [Contacto](https://zentrix.company/contacto/)
 
 
 ---
 
-## Contacto — Proyectos, demostraciones y soporte | Zentrix
-
-URL: https://zentrix.company/contacto/
+## [Contacto — Proyectos, demostraciones y soporte | Zentrix](https://zentrix.company/contacto/)
 
 Escribe a hola@zentrix.company por proyectos y demostraciones, a soporte@zentrix.company por soporte, o por WhatsApp. Te responde una persona.
 
@@ -91,23 +87,13 @@ Contacto
 
 Escríbenos por un proyecto, una demostración o una duda. Te responde una persona del equipo en menos de un día hábil, en español o en inglés.
 
-Escribe a hola@zentrix.company
+[Escribe a hola@zentrix.company](mailto:hola@zentrix.company?subject=Zentrix%3A%20hablemos)
 
 Canales
 
 ### Elige cómo prefieres escribirnos.
 
-### Proyectos y demostraciones
-hola@zentrix.company
-Productos, propuestas, alianzas o, simplemente, para ver si encajamos.
-
-### Soporte
-soporte@zentrix.company
-Si ya usas Zentrix Work o Zentrix Sales y algo no funciona.
-
-### WhatsApp
-+58 412-346 9712
-Para una consulta rápida.
+[Proyectos y demostraciones hola@zentrix.company Productos, propuestas, alianzas o, simplemente, para ver si encajamos.](mailto:hola@zentrix.company) [Soporte soporte@zentrix.company Si ya usas Zentrix Work o Zentrix Sales y algo no funciona.](mailto:soporte@zentrix.company) [WhatsApp +58 412-346 9712 Para una consulta rápida.](https://wa.me/584123469712)
 
 Bueno saberlo
 
@@ -128,9 +114,7 @@ Español e inglés.
 
 ---
 
-## Zentrix — Software y apps para empresas en Venezuela
-
-URL: https://zentrix.company/
+## [Zentrix — Software y apps para empresas en Venezuela](https://zentrix.company/)
 
 Tecnología para trabajar mejor: apps para tu equipo de tienda y tu fuerza de ventas, Odoo® con localización venezolana y software a la medida.
 
@@ -151,21 +135,21 @@ Cada solución de Zentrix lleva su monograma: dos letras en minúscula y la barr
 
 Ver todas las soluciones
 
-- zentrix work
+- [zentrix work](https://zentrix.company/work/)
 
-- zentrix sales
+- [zentrix sales](https://zentrix.company/sales/)
 
-- zentrix ai
+- [zentrix ai](https://zentrix.company/ai/)
 
-- zentrix logistics
+- [zentrix logistics](https://zentrix.company/logistics/)
 
-- zentrix cloud
+- [zentrix cloud](https://zentrix.company/cloud/)
 
-- zentrix labs
+- [zentrix labs](https://zentrix.company/labs/)
 
-- zentrix software
+- [zentrix software](https://zentrix.company/software/)
 
-- traza ® (se abre en otra pestaña)un producto de Zentrix®
+- [traza ® (se abre en otra pestaña) un producto de Zentrix®](https://traza.technology)
 
 Zentrix en cifras
 
@@ -200,7 +184,7 @@ Para el equipo de tienda que prepara pedidos, hace entregas y recibe devolucione
 - Tu teléfono descansa: fuera de turno no recibes ni una notificación.
 - El encargado ve todo: quién está de turno, qué atiende y cuánto tarda.
 
-Conocer más sobre Zentrix Work
+[Conocer más sobre Zentrix Work](https://zentrix.company/work/)
 
 ### El problema que resuelve
 
@@ -217,7 +201,7 @@ Para distribuidoras y equipos de venta de campo que visitan clientes, toman pedi
 - Cobras contra facturas abiertas, con la tasa del día y el comprobante.
 - Tu ERP tiene la última palabra: precios e impuestos se recalculan al llegar.
 
-Conocer más sobre Zentrix Sales
+[Conocer más sobre Zentrix Sales](https://zentrix.company/sales/)
 
 Cómo trabajamos contigo
 
@@ -255,30 +239,7 @@ Más soluciones de Zentrix
 
 Además de nuestras dos apps, te ayudamos con inteligencia aplicada, trazabilidad, logística, infraestructura, nuevos productos y la implementación de tu sistema de gestión.
 
-Conectores, asistentes y agentes que ponen la información de tu empresa al servicio de cada decisión.
-
-Solicita una demostraciónConocer más →
-
-Despachos, rutas, entregas y gestión de incidencias, en un mismo lugar. Próximamente.
-
-PróximamenteConocer más →
-
-Hospedaje, monitoreo y respaldos para que tus aplicaciones y tus datos estén siempre disponibles.
-
-Solicita una demostraciónConocer más →
-
-Investigación, prototipos y validación de nuevos productos para ampliar lo que podemos ofrecerte.
-
-InvestigaciónConocer más →
-
-Implementación y personalización de Odoo®, del diagnóstico a la adopción, y el software de nuestros productos.
-
-Solicita una demostraciónConocer más →
-
-traza ® un producto de
-Documentos, productos y activos con un recorrido verificable: identificar, registrar, verificar y consultar. Tiene sitio propio.
-
-traza.technologyIr al sitio (se abre en otra pestaña)
+[Conectores, asistentes y agentes que ponen la información de tu empresa al servicio de cada decisión. Solicita una demostración Conocer más →](https://zentrix.company/ai/) [Despachos, rutas, entregas y gestión de incidencias, en un mismo lugar. Próximamente. Próximamente Conocer más →](https://zentrix.company/logistics/) [Hospedaje, monitoreo y respaldos para que tus aplicaciones y tus datos estén siempre disponibles. Solicita una demostración Conocer más →](https://zentrix.company/cloud/) [Investigación, prototipos y validación de nuevos productos para ampliar lo que podemos ofrecerte. Investigación Conocer más →](https://zentrix.company/labs/) [Implementación y personalización de Odoo®, del diagnóstico a la adopción, y el software de nuestros productos. Solicita una demostración Conocer más →](https://zentrix.company/software/) [traza ® un producto de Documentos, productos y activos con un recorrido verificable: identificar, registrar, verificar y consultar. Tiene sitio propio. traza.technology Ir al sitio (se abre en otra pestaña)](https://traza.technology)
 
 Odoo® conserva su marca y propiedad. Traza® es un producto de Zentrix®.
 
@@ -288,14 +249,14 @@ Soluciones
 
 Implementamos Odoo® con la localización venezolana, desarrollamos software a la medida y operamos la infraestructura que lo sostiene.
 
-- Odoo en VenezuelaImplementación con la localización del país
-- Desarrollo de softwareApps web y móviles a la medida de tu proceso
-- Auditoría técnicaDiagnóstico, arquitectura y hoja de ruta
-- Alta disponibilidadInfraestructura que sigue cuando se va la luz
-- Pagos y comercio digitalPunto de venta, cajas y pasarelas de pago
-- Visión computacionalAnalítica de video en tiempo real
+- [Odoo en Venezuela Implementación con la localización del país](https://zentrix.company/soluciones/odoo-venezuela/)
+- [Desarrollo de software Apps web y móviles a la medida de tu proceso](https://zentrix.company/soluciones/desarrollo-de-software/)
+- [Auditoría técnica Diagnóstico, arquitectura y hoja de ruta](https://zentrix.company/soluciones/auditoria-tecnica/)
+- [Alta disponibilidad Infraestructura que sigue cuando se va la luz](https://zentrix.company/soluciones/infraestructura-alta-disponibilidad/)
+- [Pagos y comercio digital Punto de venta, cajas y pasarelas de pago](https://zentrix.company/soluciones/pagos-y-comercio-digital/)
+- [Visión computacional Analítica de video en tiempo real](https://zentrix.company/soluciones/vision-computacional/)
 
-Ver todas las solucionesConoce a nuestros clientes
+[Ver todas las soluciones](https://zentrix.company/soluciones/) [Conoce a nuestros clientes](https://zentrix.company/clientes/)
 
 Contacto
 
@@ -308,20 +269,20 @@ Te responde una persona, en español, en menos de un día hábil. Si quieres, te
 Para conocer los productos, pedir una demostración o hablar de tu proyecto.
 
 Correo
-hola@zentrix.company
+[hola@zentrix.company](mailto:hola@zentrix.company)
 
 Teléfono y WhatsApp
-+58 412-346 9712
+[+58 412-346 9712](https://wa.me/584123469712)
 
 ### Si ya usas nuestras apps
 
 Accesos, dudas de uso y datos personales. También tienes el manual de cada app.
 
 Soporte
-soporte@zentrix.company
+[soporte@zentrix.company](mailto:soporte@zentrix.company)
 
 Manuales
-Zentrix Work · Zentrix Sales
+[Zentrix Work](https://zentrix.company/work/docs/) · [Zentrix Sales](https://zentrix.company/sales/docs/)
 
 ### Dirección
 
@@ -333,9 +294,7 @@ Menos de un día hábil.
 
 ---
 
-## Nosotros — Ingeniería en Isla Margarita | Zentrix
-
-URL: https://zentrix.company/nosotros/
+## [Nosotros — Ingeniería en Isla Margarita | Zentrix](https://zentrix.company/nosotros/)
 
 Zentrix es la nueva marca de Equinoccio (EQNIO), un equipo de ingeniería, IA y producto con base en Isla Margarita, Venezuela. Conoce al equipo.
 
@@ -345,7 +304,7 @@ Nosotros
 
 Zentrix es la nueva marca de Equinoccio (EQNIO): el equipo de ingeniería, IA y producto que trabaja desde Isla Margarita, Venezuela, para clientes de cualquier lugar.
 
-Conoce al equipoHablemos
+Conoce al equipo [Hablemos](https://zentrix.company/contacto/)
 
 ### Nuestra historia
 
@@ -419,14 +378,12 @@ Aliado en inversión, estructura legal y alcance comercial regional: respaldo in
 
 Cuéntanos tu proyecto. Te responde una persona en menos de un día hábil.
 
-EscríbenosContacto
+[Escríbenos](mailto:hola@zentrix.company?subject=Zentrix%3A%20hablemos) [Contacto](https://zentrix.company/contacto/)
 
 
 ---
 
-## Recursos — Manuales, soporte y documentación | Zentrix
-
-URL: https://zentrix.company/recursos/
+## [Recursos — Manuales, soporte y documentación | Zentrix](https://zentrix.company/recursos/)
 
 Manuales de Zentrix Work y Zentrix Sales, soporte, privacidad y términos de cada app, y documentación para desarrolladores y modelos de IA, en un solo lugar.
 
@@ -442,71 +399,31 @@ Manuales
 
 ### Aprende a usar las apps.
 
-### Manual de Zentrix Work
-Turno, pedidos, preparación, entrega, devoluciones y ajustes, para el equipo de tienda.
-Abrir →
-
-### Manual de Zentrix Sales
-Ruta, visitas, pedidos, cobranza y trabajo sin señal, para el vendedor.
-Abrir →
+[Manual de Zentrix Work Turno, pedidos, preparación, entrega, devoluciones y ajustes, para el equipo de tienda. Abrir →](https://zentrix.company/work/docs/) [Manual de Zentrix Sales Ruta, visitas, pedidos, cobranza y trabajo sin señal, para el vendedor. Abrir →](https://zentrix.company/sales/docs/)
 
 Soporte
 
 ### Cuando algo no funciona.
 
-### Soporte de Zentrix Work
-Acceso, dudas frecuentes y cómo eliminar tus datos.
-Abrir →
-
-### Soporte de Zentrix Sales
-Acceso, dudas frecuentes y cómo eliminar tus datos.
-Abrir →
-
-### Contacto
-Escribe a soporte@ o por WhatsApp: te responde una persona.
-Abrir →
+[Soporte de Zentrix Work Acceso, dudas frecuentes y cómo eliminar tus datos. Abrir →](https://zentrix.company/work/soporte/) [Soporte de Zentrix Sales Acceso, dudas frecuentes y cómo eliminar tus datos. Abrir →](https://zentrix.company/sales/soporte/) [Contacto Escribe a soporte@ o por WhatsApp: te responde una persona. Abrir →](https://zentrix.company/contacto/)
 
 Legal
 
 ### Qué hacemos con los datos, en palabras claras.
 
-### Privacidad de Zentrix Work
-Qué recoge la app, para qué y por cuánto tiempo.
-Abrir →
-
-### Términos de Zentrix Work
-Las reglas de uso de la app.
-Abrir →
-
-### Privacidad de Zentrix Sales
-Qué recoge la app, para qué y por cuánto tiempo.
-Abrir →
-
-### Términos de Zentrix Sales
-Las reglas de uso de la app.
-Abrir →
-
-### Privacidad del sitio web
-Cookies y analítica de zentrix.company, y cómo retirar el consentimiento.
-Abrir →
+[Privacidad de Zentrix Work Qué recoge la app, para qué y por cuánto tiempo. Abrir →](https://zentrix.company/work/privacidad/) [Términos de Zentrix Work Las reglas de uso de la app. Abrir →](https://zentrix.company/work/terminos/) [Privacidad de Zentrix Sales Qué recoge la app, para qué y por cuánto tiempo. Abrir →](https://zentrix.company/sales/privacidad/) [Términos de Zentrix Sales Las reglas de uso de la app. Abrir →](https://zentrix.company/sales/terminos/) [Privacidad del sitio web Cookies y analítica de zentrix.company, y cómo retirar el consentimiento. Abrir →](https://zentrix.company/privacidad/)
 
 Para desarrolladores e IA
 
 ### Documentación que leen las máquinas.
 
-### llms.txt
-Quién es Zentrix y qué hace, escrito para modelos de lenguaje.
-Abrir →
-
-### sitemap.xml
-Todas las páginas del sitio.
-Abrir →
+[llms.txt Quién es Zentrix y qué hace, escrito para modelos de lenguaje. Abrir →](https://zentrix.company/llms.txt) [sitemap.xml Todas las páginas del sitio. Abrir →](https://zentrix.company/sitemap.xml)
 
 ### ¿No encontraste lo que buscabas?
 
 Escríbenos y te ayuda una persona en menos de un día hábil.
 
-EscríbenosContacto
+[Escríbenos](mailto:hola@zentrix.company?subject=Zentrix%3A%20consulta) [Contacto](https://zentrix.company/contacto/)
 
 
 # Productos
@@ -514,9 +431,7 @@ EscríbenosContacto
 
 ---
 
-## Zentrix AI — Inteligencia artificial para empresas
-
-URL: https://zentrix.company/ai/
+## [Zentrix AI — Inteligencia artificial para empresas](https://zentrix.company/ai/)
 
 Zentrix AI conecta el conocimiento y los sistemas de tu empresa con agentes de IA y asistentes para consultar, analizar y actuar, con permisos por rol.
 
@@ -526,7 +441,7 @@ Inteligencia aplicada
 
 Zentrix AI es el supercerebro empresarial: conecta el conocimiento y los sistemas de tu empresa para que puedas consultar, analizar y actuar, siempre con permisos definidos.
 
-Solicita una demostraciónCómo funciona
+[Solicita una demostración](mailto:hola@zentrix.company?subject=Zentrix%20AI%3A%20quiero%20saber%20m%C3%A1s) Cómo funciona
 
 El problema que resuelve
 
@@ -581,16 +496,14 @@ Cada paso tiene un propósito claro, y juntos te dan el control.
 
 ### ¿Hablamos?
 
-Te responde una persona, en español, en menos de un día hábil. Escríbenos a hola@zentrix.company o por WhatsApp +58 412-346 9712.
+Te responde una persona, en español, en menos de un día hábil. Escríbenos a [hola@zentrix.company](mailto:hola@zentrix.company?subject=Zentrix%20AI%3A%20quiero%20saber%20m%C3%A1s) o por [WhatsApp +58 412-346 9712](https://wa.me/584123469712).
 
-Solicita una demostración
+[Solicita una demostración](mailto:hola@zentrix.company?subject=Zentrix%20AI%3A%20quiero%20saber%20m%C3%A1s)
 
 
 ---
 
-## Zentrix Cloud — Hospedaje, monitoreo y respaldos
-
-URL: https://zentrix.company/cloud/
+## [Zentrix Cloud — Hospedaje, monitoreo y respaldos](https://zentrix.company/cloud/)
 
 Zentrix Cloud se ocupa del hospedaje, el monitoreo y los respaldos de tus aplicaciones y tus datos, para que tu operación siga en marcha sin cuidar servidores.
 
@@ -600,7 +513,7 @@ Infraestructura
 
 Zentrix Cloud se ocupa del hospedaje, el monitoreo y los respaldos que sostienen tu operación, para que tu equipo pueda dedicarse a trabajar.
 
-Solicita una demostraciónCómo funciona
+[Solicita una demostración](mailto:hola@zentrix.company?subject=Zentrix%20Cloud%3A%20quiero%20saber%20m%C3%A1s) Cómo funciona
 
 El problema que resuelve
 
@@ -650,16 +563,14 @@ Así trabajamos en Zentrix: desde entender tu operación hasta que tu equipo lo 
 
 ### ¿Hablamos?
 
-Te responde una persona, en español, en menos de un día hábil. Escríbenos a hola@zentrix.company o por WhatsApp +58 412-346 9712.
+Te responde una persona, en español, en menos de un día hábil. Escríbenos a [hola@zentrix.company](mailto:hola@zentrix.company?subject=Zentrix%20Cloud%3A%20quiero%20saber%20m%C3%A1s) o por [WhatsApp +58 412-346 9712](https://wa.me/584123469712).
 
-Solicita una demostración
+[Solicita una demostración](mailto:hola@zentrix.company?subject=Zentrix%20Cloud%3A%20quiero%20saber%20m%C3%A1s)
 
 
 ---
 
-## Zentrix Labs — Prototipos y validación de productos
-
-URL: https://zentrix.company/labs/
+## [Zentrix Labs — Prototipos y validación de productos](https://zentrix.company/labs/)
 
 En Zentrix Labs investigamos tu reto, construimos prototipos y los validamos antes de convertirlos en herramientas para tu equipo. Cuéntanos tu idea.
 
@@ -669,7 +580,7 @@ Investigación
 
 En Zentrix Labs investigamos y validamos nuevos productos: construimos prototipos y los probamos antes de convertirlos en herramientas para tu equipo.
 
-Cuéntanos tu ideaCómo funciona
+[Cuéntanos tu idea](mailto:hola@zentrix.company?subject=Zentrix%20Labs%3A%20tengo%20una%20idea) Cómo funciona
 
 El problema que resuelve
 
@@ -719,16 +630,14 @@ Así trabajamos en Zentrix: desde entender tu operación hasta que tu equipo lo 
 
 ### ¿Hablamos?
 
-Te responde una persona, en español, en menos de un día hábil. Escríbenos a hola@zentrix.company o por WhatsApp +58 412-346 9712.
+Te responde una persona, en español, en menos de un día hábil. Escríbenos a [hola@zentrix.company](mailto:hola@zentrix.company?subject=Zentrix%20Labs%3A%20tengo%20una%20idea) o por [WhatsApp +58 412-346 9712](https://wa.me/584123469712).
 
-Cuéntanos tu idea
+[Cuéntanos tu idea](mailto:hola@zentrix.company?subject=Zentrix%20Labs%3A%20tengo%20una%20idea)
 
 
 ---
 
-## Zentrix Logistics — Gestión de despachos y entregas
-
-URL: https://zentrix.company/logistics/
+## [Zentrix Logistics — Gestión de despachos y entregas](https://zentrix.company/logistics/)
 
 Zentrix Logistics, próximamente: despachos, rutas, entregas y gestión de incidencias en un mismo lugar, para cumplir lo que prometiste a tus clientes.
 
@@ -738,7 +647,7 @@ Zentrix Logistics · Próximamente
 
 Estamos preparando Zentrix Logistics: despachos, rutas, entregas y gestión de incidencias en un mismo lugar.
 
-Avísame cuando esté listaQué incluirá
+[Avísame cuando esté lista](mailto:hola@zentrix.company?subject=Zentrix%20Logistics%3A%20quiero%20saber%20m%C3%A1s) Qué incluirá
 
 Próximamente
 
@@ -770,16 +679,14 @@ Lo que no sale como estaba previsto, atendido.
 
 ### ¿Te interesa? Te avisamos.
 
-Zentrix Logistics llega pronto. Escríbenos a hola@zentrix.company o por WhatsApp +58 412-346 9712.
+Zentrix Logistics llega pronto. Escríbenos a [hola@zentrix.company](mailto:hola@zentrix.company?subject=Zentrix%20Logistics%3A%20quiero%20saber%20m%C3%A1s) o por [WhatsApp +58 412-346 9712](https://wa.me/584123469712).
 
-Avísame cuando esté lista
+[Avísame cuando esté lista](mailto:hola@zentrix.company?subject=Zentrix%20Logistics%3A%20quiero%20saber%20m%C3%A1s)
 
 
 ---
 
-## Zentrix Sales — App de fuerza de ventas y cobranza
-
-URL: https://zentrix.company/sales/
+## [Zentrix Sales — App de fuerza de ventas y cobranza](https://zentrix.company/sales/)
 
 Zentrix Sales, app de fuerza de ventas para Android y iPhone: ruta, visitas, pedidos y cobranza de tus vendedores de campo, con o sin señal, conectada a Odoo®.
 
@@ -789,10 +696,10 @@ Para tu fuerza de ventas · Android y iPhone
 
 Zentrix Sales es la app de fuerza de ventas con la que tu equipo arma su ruta, visita a cada cliente, toma el pedido, cobra y deja constancia de todo desde el teléfono, aunque no haya señal.
 
-Google Play
-App Store
+[Google Play](https://play.google.com/store/apps/details?id=com.leiros.vendoo)
+[App Store](https://apps.apple.com/app/id6811065669)
 
-Pide una demostración con tus datos · English
+[Pide una demostración con tus datos](https://zentrix.company/sales/contacto/#demo) · [English](https://zentrix.company/sales/en/)
 
 Lo de hoy, a la vista.
 
@@ -802,9 +709,9 @@ Cómo funciona
 
 Por la mañana arma su ruta en el teléfono: ordena las paradas y quita la que hoy no toca. En cada cliente, la app lo guía paso a paso. Solo la llegada es obligatoria; lo demás lo registra si hace falta, y el borrador se guarda solo.
 
-Si es su primer día, el manual del vendedor le explica cada pantalla.
+Si es su primer día, el [manual del vendedor](https://zentrix.company/sales/docs/) le explica cada pantalla.
 
-Ver la visita en el manual
+[Ver la visita en el manual](https://zentrix.company/sales/docs/visita.html)
 
 - Check-in Marca la hora y el lugar de llegada.
 
@@ -912,7 +819,7 @@ Zentrix Sales no es otro sistema con su propia verdad: es la forma en que la cal
 
 Con Odoo®, la integración es nativa y está en producción; con los demás sistemas, la construimos a la medida de tu operación. Las marcas pertenecen a sus titulares.
 
-Quiero verlo con mis datos
+[Quiero verlo con mis datos](https://zentrix.company/sales/contacto/#demo)
 
 Seguridad
 
@@ -928,7 +835,7 @@ Precios, saldos, coordenadas, fotos y firmas viajan con tu vendedor. Por eso la 
 
 - Reportes de fallos sin datos personales.
 
-Política de privacidad
+[Política de privacidad](https://zentrix.company/sales/privacidad/)
 
 Casos de uso
 
@@ -944,17 +851,15 @@ La cuenta de cada vendedor la crea su empresa: la app no permite registrarse por
 
 ### Descarga Zentrix Sales
 
-Android 7.0 o superior e iOS 15 o superior. ¿Quieres verlo con tus datos? Pide una demostración o lee el manual del vendedor.
+Android 7.0 o superior e iOS 15 o superior. ¿Quieres verlo con tus datos? [Pide una demostración](https://zentrix.company/sales/contacto/#demo) o lee el [manual del vendedor](https://zentrix.company/sales/docs/).
 
-Google Play
-App Store
+[Google Play](https://play.google.com/store/apps/details?id=com.leiros.vendoo)
+[App Store](https://apps.apple.com/app/id6811065669)
 
 
 ---
 
-## Zentrix Software — Consultoría e integración de Odoo
-
-URL: https://zentrix.company/software/
+## [Zentrix Software — Consultoría e integración de Odoo](https://zentrix.company/software/)
 
 Zentrix Software implementa, configura e integra Odoo® con tus otros sistemas y con Zentrix Work y Zentrix Sales: del diagnóstico a la adopción de tu equipo.
 
@@ -964,7 +869,7 @@ Software empresarial · Implementación de Odoo®
 
 Zentrix Software crea nuestros productos, como Zentrix Work, y se encarga de implementar y personalizar Odoo® en tu empresa: del diagnóstico a la adopción.
 
-Solicita una demostraciónCómo funciona
+[Solicita una demostración](mailto:hola@zentrix.company?subject=Zentrix%20Software%3A%20quiero%20saber%20m%C3%A1s) Cómo funciona
 
 El problema que resuelve
 
@@ -1014,20 +919,18 @@ Así trabajamos en Zentrix: desde entender tu operación hasta que tu equipo lo 
 
 ### ¿Hablamos?
 
-Te responde una persona, en español, en menos de un día hábil. Escríbenos a hola@zentrix.company o por WhatsApp +58 412-346 9712.
+Te responde una persona, en español, en menos de un día hábil. Escríbenos a [hola@zentrix.company](mailto:hola@zentrix.company?subject=Zentrix%20Software%3A%20quiero%20saber%20m%C3%A1s) o por [WhatsApp +58 412-346 9712](https://wa.me/584123469712).
 
-Solicita una demostración
+[Solicita una demostración](mailto:hola@zentrix.company?subject=Zentrix%20Software%3A%20quiero%20saber%20m%C3%A1s)
 
 
 ---
 
-## Traza — Trazabilidad de documentos, productos y activos
-
-URL: https://zentrix.company/traza/
+## [Traza — Trazabilidad de documentos, productos y activos](https://zentrix.company/traza/)
 
 Traza, un producto de Zentrix: trazabilidad de documentos, productos y activos con identidad única, responsables, evidencias e historial completo.
 
-traza ® un producto de (traza.technology, se abre en otra pestaña)
+[traza ® un producto de (traza.technology, se abre en otra pestaña)](https://traza.technology)
 
 Trazabilidad
 
@@ -1035,7 +938,7 @@ Trazabilidad
 
 Con Traza, tus documentos, productos y activos tienen un recorrido verificable: sabes de dónde vienen, por dónde pasaron, quién los movió y dónde están. Traza tiene su propio sitio.
 
-Ir a traza.technology (se abre en otra pestaña)Escríbenos
+[Ir a traza.technology (se abre en otra pestaña)](https://traza.technology) [Escríbenos](mailto:hola@zentrix.company?subject=Traza%3A%20quiero%20saber%20m%C3%A1s)
 
 Qué hace
 
@@ -1059,14 +962,12 @@ Consultas toda la historia, física y digital.
 
 Traza es un producto de Zentrix® con identidad propia. Allí encuentras todo sobre el producto y cómo empezar.
 
-Ir a traza.technology (se abre en otra pestaña)
+[Ir a traza.technology (se abre en otra pestaña)](https://traza.technology)
 
 
 ---
 
-## Zentrix Work — App para el equipo de tienda y reparto
-
-URL: https://zentrix.company/work/
+## [Zentrix Work — App para el equipo de tienda y reparto](https://zentrix.company/work/)
 
 Zentrix Work, la app Android del equipo de tienda: el trabajo llega al teléfono para preparar pedidos, entregar, repartir y recibir devoluciones en su turno.
 
@@ -1076,8 +977,8 @@ Para el equipo de tienda · Android
 
 Te enciendes al llegar a la tienda y el trabajo te llega solo: pedidos para preparar, entregas y devoluciones. Cuando terminas, te apagas y tu teléfono vuelve a ser tuyo.
 
-Descargar en Google Play
-Ver el manual
+[Descargar en Google Play](https://play.google.com/store/apps/details?id=com.leiros.guuaowork)
+[Ver el manual](https://zentrix.company/work/docs/)
 
 Entras una vez. Después, con tu PIN o tu huella.
 
@@ -1087,7 +988,7 @@ Cómo funciona
 
 No tienes que estar pendiente de mensajes ni preguntar qué te toca. La app te avisa, tú decides si lo tomas y, al terminar, todo queda registrado.
 
-Si es tu primer día, el manual te explica cada pantalla con capturas.
+Si es tu primer día, el [manual](https://zentrix.company/work/docs/) te explica cada pantalla con capturas.
 
 - Te enciendes en tu tienda Haces check-in y eliges qué vas a atender hoy: pedidos, entregas o devoluciones.
 
@@ -1151,7 +1052,7 @@ La app corre en tu teléfono personal, así que gasta lo mínimo y solo trabaja 
 
 - Sin publicidad y sin identificador publicitario.
 
-Qué datos usa la app y para qué
+[Qué datos usa la app y para qué](https://zentrix.company/work/privacidad/)
 
 ### Para quién es
 
@@ -1169,10 +1070,10 @@ Para el personal de tienda de las empresas que usan Zentrix Work. No hay registr
 
 ### Descarga Zentrix Work
 
-Para Android. ¿Tienes dudas? Escríbenos a soporte@zentrix.company.
+Para Android. ¿Tienes dudas? Escríbenos a [soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Soporte%20%E2%80%94%20Zentrix%20Work).
 
-Google Play
-Soporte
+[Google Play](https://play.google.com/store/apps/details?id=com.leiros.guuaowork)
+[Soporte](https://zentrix.company/work/soporte/)
 
 
 # Soluciones
@@ -1180,9 +1081,7 @@ Soporte
 
 ---
 
-## Auditoría técnica y arquitectura de sistemas | Zentrix
-
-URL: https://zentrix.company/soluciones/auditoria-tecnica/
+## [Auditoría técnica y arquitectura de sistemas | Zentrix](https://zentrix.company/soluciones/auditoria-tecnica/)
 
 No vendemos horas: te damos dirección. Auditoría, hoja de ruta y decisiones de tecnología para que sepas qué construir, en qué orden y por qué.
 
@@ -1192,7 +1091,7 @@ Solución
 
 No vendemos horas: te damos dirección. Auditoría, hoja de ruta y decisiones de tecnología para que sepas qué construir, en qué orden y por qué.
 
-Pide una propuestaTodas las soluciones
+[Pide una propuesta](mailto:hola@zentrix.company?subject=Zentrix%3A%20Auditor%C3%ADa%20t%C3%A9cnica) [Todas las soluciones](https://zentrix.company/soluciones/)
 
 Qué incluye
 
@@ -1230,24 +1129,22 @@ Dónde trabajamos
 Nuestra base está en Isla Margarita, Nueva Esparta, Venezuela. Trabajamos con empresas de Porlamar, Pampatar y el resto del país, y en remoto con clientes de Latinoamérica, Estados Unidos y Europa.
 
 Otras soluciones
-- Odoo en VenezuelaImplementación con la localización del país
-- Desarrollo de softwareApps web y móviles a la medida de tu proceso
-- Alta disponibilidadInfraestructura que sigue cuando se va la luz
-- Pagos y comercio digitalPunto de venta, cajas y pasarelas de pago
-- Visión computacionalAnalítica de video en tiempo real
+- [Odoo en Venezuela Implementación con la localización del país](https://zentrix.company/soluciones/odoo-venezuela/)
+- [Desarrollo de software Apps web y móviles a la medida de tu proceso](https://zentrix.company/soluciones/desarrollo-de-software/)
+- [Alta disponibilidad Infraestructura que sigue cuando se va la luz](https://zentrix.company/soluciones/infraestructura-alta-disponibilidad/)
+- [Pagos y comercio digital Punto de venta, cajas y pasarelas de pago](https://zentrix.company/soluciones/pagos-y-comercio-digital/)
+- [Visión computacional Analítica de video en tiempo real](https://zentrix.company/soluciones/vision-computacional/)
 
 ### ¿Hablamos de tu proyecto?
 
 Cuéntanos qué necesitas. Te responde una persona en menos de un día hábil, sin compromiso.
 
-EscríbenosContacto
+[Escríbenos](mailto:hola@zentrix.company?subject=Zentrix%3A%20Auditor%C3%ADa%20t%C3%A9cnica) [Contacto](https://zentrix.company/contacto/)
 
 
 ---
 
-## Desarrollo de software a la medida | Zentrix
-
-URL: https://zentrix.company/soluciones/desarrollo-de-software/
+## [Desarrollo de software a la medida | Zentrix](https://zentrix.company/soluciones/desarrollo-de-software/)
 
 Desarrollo de software a la medida: apps web y móviles construidas alrededor de tu proceso, con diseño, arquitectura y desarrollo en un mismo equipo.
 
@@ -1257,7 +1154,7 @@ Solución
 
 De la idea a la pantalla: diseño, arquitectura y desarrollo en un mismo equipo, sin perder contexto entre fases. Producto que escala desde el primer día.
 
-Pide una propuestaTodas las soluciones
+[Pide una propuesta](mailto:hola@zentrix.company?subject=Zentrix%3A%20Desarrollo%20de%20software) [Todas las soluciones](https://zentrix.company/soluciones/)
 
 Qué incluye
 
@@ -1288,7 +1185,7 @@ Tecnología - Flutter
 - FastAPI
 - UI/UX
 
-Producto relacionadoZentrix LabsInvestigación→
+[Producto relacionado Zentrix Labs Investigación →](https://zentrix.company/labs/)
 
 Dónde trabajamos
 
@@ -1297,24 +1194,22 @@ Dónde trabajamos
 Nuestra base está en Isla Margarita, Nueva Esparta, Venezuela. Trabajamos con empresas de Porlamar, Pampatar y el resto del país, y en remoto con clientes de Latinoamérica, Estados Unidos y Europa.
 
 Otras soluciones
-- Odoo en VenezuelaImplementación con la localización del país
-- Auditoría técnicaDiagnóstico, arquitectura y hoja de ruta
-- Alta disponibilidadInfraestructura que sigue cuando se va la luz
-- Pagos y comercio digitalPunto de venta, cajas y pasarelas de pago
-- Visión computacionalAnalítica de video en tiempo real
+- [Odoo en Venezuela Implementación con la localización del país](https://zentrix.company/soluciones/odoo-venezuela/)
+- [Auditoría técnica Diagnóstico, arquitectura y hoja de ruta](https://zentrix.company/soluciones/auditoria-tecnica/)
+- [Alta disponibilidad Infraestructura que sigue cuando se va la luz](https://zentrix.company/soluciones/infraestructura-alta-disponibilidad/)
+- [Pagos y comercio digital Punto de venta, cajas y pasarelas de pago](https://zentrix.company/soluciones/pagos-y-comercio-digital/)
+- [Visión computacional Analítica de video en tiempo real](https://zentrix.company/soluciones/vision-computacional/)
 
 ### ¿Hablamos de tu proyecto?
 
 Cuéntanos qué necesitas. Te responde una persona en menos de un día hábil, sin compromiso.
 
-EscríbenosContacto
+[Escríbenos](mailto:hola@zentrix.company?subject=Zentrix%3A%20Desarrollo%20de%20software) [Contacto](https://zentrix.company/contacto/)
 
 
 ---
 
-## Soluciones — Odoo, software e infraestructura | Zentrix
-
-URL: https://zentrix.company/soluciones/
+## [Soluciones — Odoo, software e infraestructura | Zentrix](https://zentrix.company/soluciones/)
 
 Odoo® en Venezuela, software a la medida, auditoría técnica, infraestructura de alta disponibilidad, pagos y visión computacional, con el equipo de Zentrix.
 
@@ -1324,7 +1219,7 @@ Soluciones
 
 Además de nuestros productos, nuestro equipo diseña, construye y opera sistemas a la medida: Odoo® con la localización venezolana, software, infraestructura, pagos y visión computacional.
 
-Ver solucionesHablemos
+Ver soluciones [Hablemos](https://zentrix.company/contacto/)
 
 Por necesidad
 
@@ -1332,29 +1227,7 @@ Por necesidad
 
 Seis líneas de trabajo, cada una con su página.
 
-### Odoo en Venezuela
-Digitalizamos tu empresa desde adentro: Odoo® adaptado a la realidad fiscal y operativa del país, con los procesos unificados y cada recurso bajo control.
-Conocer más →
-
-### Desarrollo de software
-De la idea a la pantalla: diseño, arquitectura y desarrollo en un mismo equipo, sin perder contexto entre fases. Producto que escala desde el primer día.
-Conocer más →
-
-### Auditoría técnica
-No vendemos horas: te damos dirección. Auditoría, hoja de ruta y decisiones de tecnología para que sepas qué construir, en qué orden y por qué.
-Conocer más →
-
-### Alta disponibilidad
-Sistemas pensados para cuando se va la luz: servidores propios o en la nube, acceso Zero Trust y datos que no se pierden. Tu operación no se detiene.
-Conocer más →
-
-### Pagos y comercio digital
-Del punto de venta físico a la transacción en línea: cajas, pasarelas de pago, comprobantes electrónicos y, cuando el proyecto lo pide, contratos inteligentes en blockchain.
-Conocer más →
-
-### Visión computacional
-Inteligencia artificial que cuida, no que vigila: analítica sobre tus cámaras para proteger personas y espacios en tiempo real, con criterio humano.
-Conocer más →
+[Odoo en Venezuela Digitalizamos tu empresa desde adentro: Odoo® adaptado a la realidad fiscal y operativa del país, con los procesos unificados y cada recurso bajo control. Conocer más →](https://zentrix.company/soluciones/odoo-venezuela/) [Desarrollo de software De la idea a la pantalla: diseño, arquitectura y desarrollo en un mismo equipo, sin perder contexto entre fases. Producto que escala desde el primer día. Conocer más →](https://zentrix.company/soluciones/desarrollo-de-software/) [Auditoría técnica No vendemos horas: te damos dirección. Auditoría, hoja de ruta y decisiones de tecnología para que sepas qué construir, en qué orden y por qué. Conocer más →](https://zentrix.company/soluciones/auditoria-tecnica/) [Alta disponibilidad Sistemas pensados para cuando se va la luz: servidores propios o en la nube, acceso Zero Trust y datos que no se pierden. Tu operación no se detiene. Conocer más →](https://zentrix.company/soluciones/infraestructura-alta-disponibilidad/) [Pagos y comercio digital Del punto de venta físico a la transacción en línea: cajas, pasarelas de pago, comprobantes electrónicos y, cuando el proyecto lo pide, contratos inteligentes en blockchain. Conocer más →](https://zentrix.company/soluciones/pagos-y-comercio-digital/) [Visión computacional Inteligencia artificial que cuida, no que vigila: analítica sobre tus cámaras para proteger personas y espacios en tiempo real, con criterio humano. Conocer más →](https://zentrix.company/soluciones/vision-computacional/)
 
 Por sector
 
@@ -1364,15 +1237,15 @@ Lo que ya hacemos cada día, en producción.
 
 ### Comercio y tiendas
 El pedido entra, el equipo de tienda lo prepara y lo entrega, y la caja cuadra al cierre.
-- Zentrix Work: avisa al equipo de tienda, guía la preparación con el escáner y registra la entrega.
-- Pagos y comercio digital: punto de venta, cajas y pasarelas de pago.
-- Odoo® en Venezuela: inventario, ventas y tesorería con la localización del país.
+- [Zentrix Work](https://zentrix.company/work/): avisa al equipo de tienda, guía la preparación con el escáner y registra la entrega.
+- [Pagos y comercio digital](https://zentrix.company/soluciones/pagos-y-comercio-digital/): punto de venta, cajas y pasarelas de pago.
+- [Odoo® en Venezuela](https://zentrix.company/soluciones/odoo-venezuela/): inventario, ventas y tesorería con la localización del país.
 
 ### Distribución y venta en ruta
 Tus vendedores están en la calle, a veces sin señal, y la oficina necesita saber qué se vendió y qué se cobró.
-- Zentrix Sales: pedidos, visitas y cobranza aunque no haya señal, directo a tu sistema.
-- Zentrix Logistics: despachos, rutas y entregas en un mismo lugar (próximamente).
-- Odoo® en Venezuela: el sistema de gestión que recibe los pedidos y los cobros.
+- [Zentrix Sales](https://zentrix.company/sales/): pedidos, visitas y cobranza aunque no haya señal, directo a tu sistema.
+- [Zentrix Logistics](https://zentrix.company/logistics/): despachos, rutas y entregas en un mismo lugar (próximamente).
+- [Odoo® en Venezuela](https://zentrix.company/soluciones/odoo-venezuela/): el sistema de gestión que recibe los pedidos y los cobros.
 
 Cómo trabajamos
 
@@ -1390,14 +1263,12 @@ El mismo método en cada proyecto, de la primera conversación a la mejora conti
 
 Cuéntanos qué pasa en tu operación. Te responde una persona en menos de un día hábil.
 
-EscríbenosContacto
+[Escríbenos](mailto:hola@zentrix.company?subject=Zentrix%3A%20necesito%20ayuda%20con%20mi%20operaci%C3%B3n) [Contacto](https://zentrix.company/contacto/)
 
 
 ---
 
-## Infraestructura de alta disponibilidad | Zentrix
-
-URL: https://zentrix.company/soluciones/infraestructura-alta-disponibilidad/
+## [Infraestructura de alta disponibilidad | Zentrix](https://zentrix.company/soluciones/infraestructura-alta-disponibilidad/)
 
 Sistemas pensados para cuando se va la luz: servidores propios o en la nube, acceso Zero Trust y datos que no se pierden. Tu operación no se detiene.
 
@@ -1407,7 +1278,7 @@ Solución
 
 Sistemas pensados para cuando se va la luz: servidores propios o en la nube, acceso Zero Trust y datos que no se pierden. Tu operación no se detiene.
 
-Pide una propuestaTodas las soluciones
+[Pide una propuesta](mailto:hola@zentrix.company?subject=Zentrix%3A%20Alta%20disponibilidad) [Todas las soluciones](https://zentrix.company/soluciones/)
 
 Qué incluye
 
@@ -1438,7 +1309,7 @@ Tecnología - Docker
 - Zero Trust
 - Self-hosted
 
-Producto relacionadoZentrix CloudInfraestructura→
+[Producto relacionado Zentrix Cloud Infraestructura →](https://zentrix.company/cloud/)
 
 Dónde trabajamos
 
@@ -1447,24 +1318,22 @@ Dónde trabajamos
 Nuestra base está en Isla Margarita, Nueva Esparta, Venezuela. Trabajamos con empresas de Porlamar, Pampatar y el resto del país, y en remoto con clientes de Latinoamérica, Estados Unidos y Europa.
 
 Otras soluciones
-- Odoo en VenezuelaImplementación con la localización del país
-- Desarrollo de softwareApps web y móviles a la medida de tu proceso
-- Auditoría técnicaDiagnóstico, arquitectura y hoja de ruta
-- Pagos y comercio digitalPunto de venta, cajas y pasarelas de pago
-- Visión computacionalAnalítica de video en tiempo real
+- [Odoo en Venezuela Implementación con la localización del país](https://zentrix.company/soluciones/odoo-venezuela/)
+- [Desarrollo de software Apps web y móviles a la medida de tu proceso](https://zentrix.company/soluciones/desarrollo-de-software/)
+- [Auditoría técnica Diagnóstico, arquitectura y hoja de ruta](https://zentrix.company/soluciones/auditoria-tecnica/)
+- [Pagos y comercio digital Punto de venta, cajas y pasarelas de pago](https://zentrix.company/soluciones/pagos-y-comercio-digital/)
+- [Visión computacional Analítica de video en tiempo real](https://zentrix.company/soluciones/vision-computacional/)
 
 ### ¿Hablamos de tu proyecto?
 
 Cuéntanos qué necesitas. Te responde una persona en menos de un día hábil, sin compromiso.
 
-EscríbenosContacto
+[Escríbenos](mailto:hola@zentrix.company?subject=Zentrix%3A%20Alta%20disponibilidad) [Contacto](https://zentrix.company/contacto/)
 
 
 ---
 
-## Implementación de Odoo en Venezuela | Zentrix
-
-URL: https://zentrix.company/soluciones/odoo-venezuela/
+## [Implementación de Odoo en Venezuela | Zentrix](https://zentrix.company/soluciones/odoo-venezuela/)
 
 Implementación de Odoo® con la localización de Venezuela: libros, retenciones, numeración de documentos y doble moneda, con tu equipo capacitado.
 
@@ -1474,7 +1343,7 @@ Solución
 
 Digitalizamos tu empresa desde adentro: Odoo® adaptado a la realidad fiscal y operativa del país, con los procesos unificados y cada recurso bajo control.
 
-Pide una propuestaTodas las soluciones
+[Pide una propuesta](mailto:hola@zentrix.company?subject=Zentrix%3A%20Odoo%20en%20Venezuela) [Todas las soluciones](https://zentrix.company/soluciones/)
 
 Qué incluye
 
@@ -1505,7 +1374,7 @@ Tecnología - Odoo®
 - Localización Venezuela
 - Trazabilidad
 
-Producto relacionadoZentrix SoftwareImplementación de Odoo®→
+[Producto relacionado Zentrix Software Implementación de Odoo® →](https://zentrix.company/software/)
 
 Dónde trabajamos
 
@@ -1514,24 +1383,22 @@ Dónde trabajamos
 Nuestra base está en Isla Margarita, Nueva Esparta, Venezuela. Trabajamos con empresas de Porlamar, Pampatar y el resto del país, y en remoto con clientes de Latinoamérica, Estados Unidos y Europa.
 
 Otras soluciones
-- Desarrollo de softwareApps web y móviles a la medida de tu proceso
-- Auditoría técnicaDiagnóstico, arquitectura y hoja de ruta
-- Alta disponibilidadInfraestructura que sigue cuando se va la luz
-- Pagos y comercio digitalPunto de venta, cajas y pasarelas de pago
-- Visión computacionalAnalítica de video en tiempo real
+- [Desarrollo de software Apps web y móviles a la medida de tu proceso](https://zentrix.company/soluciones/desarrollo-de-software/)
+- [Auditoría técnica Diagnóstico, arquitectura y hoja de ruta](https://zentrix.company/soluciones/auditoria-tecnica/)
+- [Alta disponibilidad Infraestructura que sigue cuando se va la luz](https://zentrix.company/soluciones/infraestructura-alta-disponibilidad/)
+- [Pagos y comercio digital Punto de venta, cajas y pasarelas de pago](https://zentrix.company/soluciones/pagos-y-comercio-digital/)
+- [Visión computacional Analítica de video en tiempo real](https://zentrix.company/soluciones/vision-computacional/)
 
 ### ¿Hablamos de tu proyecto?
 
 Cuéntanos qué necesitas. Te responde una persona en menos de un día hábil, sin compromiso.
 
-EscríbenosContacto
+[Escríbenos](mailto:hola@zentrix.company?subject=Zentrix%3A%20Odoo%20en%20Venezuela) [Contacto](https://zentrix.company/contacto/)
 
 
 ---
 
-## Pagos y comercio digital — Punto de venta | Zentrix
-
-URL: https://zentrix.company/soluciones/pagos-y-comercio-digital/
+## [Pagos y comercio digital — Punto de venta | Zentrix](https://zentrix.company/soluciones/pagos-y-comercio-digital/)
 
 Pagos y comercio digital: punto de venta integrado, cajas que cuadran, pasarelas de pago con conciliación automática y comprobantes electrónicos.
 
@@ -1541,7 +1408,7 @@ Solución
 
 Del punto de venta físico a la transacción en línea: cajas, pasarelas de pago, comprobantes electrónicos y, cuando el proyecto lo pide, contratos inteligentes en blockchain.
 
-Pide una propuestaTodas las soluciones
+[Pide una propuesta](mailto:hola@zentrix.company?subject=Zentrix%3A%20Pagos%20y%20comercio%20digital) [Todas las soluciones](https://zentrix.company/soluciones/)
 
 Qué incluye
 
@@ -1572,7 +1439,7 @@ Tecnología - Punto de venta
 - Pasarelas de pago
 - Blockchain
 
-Producto relacionadoZentrix WorkEl equipo de tienda→
+[Producto relacionado Zentrix Work El equipo de tienda →](https://zentrix.company/work/)
 
 Dónde trabajamos
 
@@ -1581,24 +1448,22 @@ Dónde trabajamos
 Nuestra base está en Isla Margarita, Nueva Esparta, Venezuela. Trabajamos con empresas de Porlamar, Pampatar y el resto del país, y en remoto con clientes de Latinoamérica, Estados Unidos y Europa.
 
 Otras soluciones
-- Odoo en VenezuelaImplementación con la localización del país
-- Desarrollo de softwareApps web y móviles a la medida de tu proceso
-- Auditoría técnicaDiagnóstico, arquitectura y hoja de ruta
-- Alta disponibilidadInfraestructura que sigue cuando se va la luz
-- Visión computacionalAnalítica de video en tiempo real
+- [Odoo en Venezuela Implementación con la localización del país](https://zentrix.company/soluciones/odoo-venezuela/)
+- [Desarrollo de software Apps web y móviles a la medida de tu proceso](https://zentrix.company/soluciones/desarrollo-de-software/)
+- [Auditoría técnica Diagnóstico, arquitectura y hoja de ruta](https://zentrix.company/soluciones/auditoria-tecnica/)
+- [Alta disponibilidad Infraestructura que sigue cuando se va la luz](https://zentrix.company/soluciones/infraestructura-alta-disponibilidad/)
+- [Visión computacional Analítica de video en tiempo real](https://zentrix.company/soluciones/vision-computacional/)
 
 ### ¿Hablamos de tu proyecto?
 
 Cuéntanos qué necesitas. Te responde una persona en menos de un día hábil, sin compromiso.
 
-EscríbenosContacto
+[Escríbenos](mailto:hola@zentrix.company?subject=Zentrix%3A%20Pagos%20y%20comercio%20digital) [Contacto](https://zentrix.company/contacto/)
 
 
 ---
 
-## Visión computacional y analítica de video | Zentrix
-
-URL: https://zentrix.company/soluciones/vision-computacional/
+## [Visión computacional y analítica de video | Zentrix](https://zentrix.company/soluciones/vision-computacional/)
 
 Inteligencia artificial que cuida, no que vigila: analítica sobre tus cámaras para proteger personas y espacios en tiempo real, con criterio humano.
 
@@ -1608,7 +1473,7 @@ Solución
 
 Inteligencia artificial que cuida, no que vigila: analítica sobre tus cámaras para proteger personas y espacios en tiempo real, con criterio humano.
 
-Pide una propuestaTodas las soluciones
+[Pide una propuesta](mailto:hola@zentrix.company?subject=Zentrix%3A%20Visi%C3%B3n%20computacional) [Todas las soluciones](https://zentrix.company/soluciones/)
 
 Qué incluye
 
@@ -1639,7 +1504,7 @@ Tecnología - Visión computacional
 - Biometría
 - Tiempo real
 
-Producto relacionadoZentrix AIInteligencia aplicada→
+[Producto relacionado Zentrix AI Inteligencia aplicada →](https://zentrix.company/ai/)
 
 Dónde trabajamos
 
@@ -1648,17 +1513,17 @@ Dónde trabajamos
 Nuestra base está en Isla Margarita, Nueva Esparta, Venezuela. Trabajamos con empresas de Porlamar, Pampatar y el resto del país, y en remoto con clientes de Latinoamérica, Estados Unidos y Europa.
 
 Otras soluciones
-- Odoo en VenezuelaImplementación con la localización del país
-- Desarrollo de softwareApps web y móviles a la medida de tu proceso
-- Auditoría técnicaDiagnóstico, arquitectura y hoja de ruta
-- Alta disponibilidadInfraestructura que sigue cuando se va la luz
-- Pagos y comercio digitalPunto de venta, cajas y pasarelas de pago
+- [Odoo en Venezuela Implementación con la localización del país](https://zentrix.company/soluciones/odoo-venezuela/)
+- [Desarrollo de software Apps web y móviles a la medida de tu proceso](https://zentrix.company/soluciones/desarrollo-de-software/)
+- [Auditoría técnica Diagnóstico, arquitectura y hoja de ruta](https://zentrix.company/soluciones/auditoria-tecnica/)
+- [Alta disponibilidad Infraestructura que sigue cuando se va la luz](https://zentrix.company/soluciones/infraestructura-alta-disponibilidad/)
+- [Pagos y comercio digital Punto de venta, cajas y pasarelas de pago](https://zentrix.company/soluciones/pagos-y-comercio-digital/)
 
 ### ¿Hablamos de tu proyecto?
 
 Cuéntanos qué necesitas. Te responde una persona en menos de un día hábil, sin compromiso.
 
-EscríbenosContacto
+[Escríbenos](mailto:hola@zentrix.company?subject=Zentrix%3A%20Visi%C3%B3n%20computacional) [Contacto](https://zentrix.company/contacto/)
 
 
 # English
@@ -1666,9 +1531,7 @@ EscríbenosContacto
 
 ---
 
-## Contact — Zentrix Sales
-
-URL: https://zentrix.company/sales/en/contact.html
+## [Contact — Zentrix Sales](https://zentrix.company/sales/en/contact.html)
 
 Request a Zentrix Sales demo on your own data: tell us how your team sells today. Or write to us by email, phone or WhatsApp, no strings attached.
 
@@ -1691,7 +1554,7 @@ Message
 Show me Zentrix Sales
 Sending opens your email app with the message ready. No strings attached.
 
-The form needs JavaScript to put the email together. Without it, write to us directly at hola@zentrix.company.
+The form needs JavaScript to put the email together. Without it, write to us directly at [hola@zentrix.company](mailto:hola@zentrix.company).
 
 ### An answer in under one business day
 A person replies, not a bot.
@@ -1702,20 +1565,18 @@ Your catalog, your price list and your route.
 ### Integration with your ERP
 With Odoo®, native. With the rest, custom-built.
 
-Or write to us directly: hola@zentrix.company · WhatsApp +58 412-346 9712
+Or write to us directly: [hola@zentrix.company](mailto:hola@zentrix.company) · [WhatsApp +58 412-346 9712](https://wa.me/584123469712)
 
 ### Zentrix Sales support
 
-If you already use the app and need help, or want to see, correct or delete your data, go to the support page.
+If you already use the app and need help, or want to see, correct or delete your data, go to the [support page](https://zentrix.company/sales/en/support.html).
 
-Go to support
+[Go to support](https://zentrix.company/sales/en/support.html)
 
 
 ---
 
-## Zentrix Sales — Field sales app for Android and iPhone
-
-URL: https://zentrix.company/sales/en/
+## [Zentrix Sales — Field sales app for Android and iPhone](https://zentrix.company/sales/en/)
 
 Zentrix Sales is the field sales app for Android and iPhone: route, orders, collections and proof of visit for your reps, with or without a signal.
 
@@ -1725,10 +1586,10 @@ Field sales · Android and iPhone
 
 The app your field sales team uses to build its route, take the order, collect payment and leave proof of every visit. With a signal or without one.
 
-Google Play
-App Store
+[Google Play](https://play.google.com/store/apps/details?id=com.leiros.vendoo)
+[App Store](https://apps.apple.com/app/id6811065669)
 
-Request a demo on your own data · Versión en español
+[Request a demo on your own data](https://zentrix.company/sales/en/contact.html#demo) · [Versión en español](https://zentrix.company/sales/)
 
 Today, at a glance.
 
@@ -1836,19 +1697,17 @@ Each rep's account is created by their company: the app does not allow self sign
 
 ### Get Zentrix Sales
 
-Android 7.0 or later and iOS 15 or later. Want to see it on your own data? Request a demo.
+Android 7.0 or later and iOS 15 or later. Want to see it on your own data? [Request a demo](https://zentrix.company/sales/en/contact.html#demo).
 
-Google Play
-App Store
+[Google Play](https://play.google.com/store/apps/details?id=com.leiros.vendoo)
+[App Store](https://apps.apple.com/app/id6811065669)
 
-Privacy policy · Terms of service · Support · Contact
+[Privacy policy](https://zentrix.company/sales/en/privacy.html) · [Terms of service](https://zentrix.company/sales/en/terms.html) · [Support](https://zentrix.company/sales/en/support.html) · [Contact](https://zentrix.company/sales/en/contact.html)
 
 
 ---
 
-## Privacy policy — Zentrix Sales
-
-URL: https://zentrix.company/sales/en/privacy.html
+## [Privacy policy — Zentrix Sales](https://zentrix.company/sales/en/privacy.html)
 
 What data Zentrix Sales, the field sales app, collects, why, where it is stored, how long it is kept and how to exercise your rights over it.
 
@@ -1856,7 +1715,7 @@ Legal
 
 ### Zentrix Sales privacy policy
 
-This is a courtesy translation. The binding version of this document is the Spanish one, at vendooapp.com/privacidad.html. If the two texts disagree, the Spanish text prevails. It is translated so you can read it, not to create a second binding text.
+This is a courtesy translation. The binding version of this document is the Spanish one, at [vendooapp.com/privacidad.html](https://zentrix.company/sales/privacidad/). If the two texts disagree, the Spanish text prevails. It is translated so you can read it, not to create a second binding text.
 
 Application
 
@@ -1868,11 +1727,11 @@ GUUAO LLC
 
 Download
 
-Google Play (Android) and the App Store (iPhone). Both links are on the Zentrix Sales page.
+Google Play (Android) and the App Store (iPhone). [Both links are on the Zentrix Sales page](https://zentrix.company/sales/en/#download).
 
 Contact
 
-hola@zentrix.company
+[hola@zentrix.company](mailto:hola@zentrix.company)
 
 Published
 
@@ -1908,11 +1767,11 @@ Contents
 
 ### 1. What Zentrix Sales is and who it is for
 
-Zentrix Sales is a working tool for field sales forces, developed and distributed by GUUAO LLC through the app stores of Google — Google Play, for Android — and Apple — the App Store, for iPhone. The two versions are the same app and do the same things; where this document describes something that depends on the operating system, both are named, because they do not always match. Anyone can download it, but without an account it does nothing: credentials are created and handed over by the company that contracts the service, and the app does not allow accounts to be created and has no sign-up. It is not a consumer app.
+Zentrix Sales is a working tool for field sales forces, developed and distributed by GUUAO LLC through the app stores of Google — [Google Play](https://zentrix.company/sales/en/#download), for Android — and Apple — the App Store, for iPhone. The two versions are the same app and do the same things; where this document describes something that depends on the operating system, both are named, because they do not always match. Anyone can download it, but without an account it does nothing: credentials are created and handed over by the company that contracts the service, and the app does not allow accounts to be created and has no sign-up. It is not a consumer app.
 
 There are two kinds of people whose data is processed, and they are worth separating. On one side the rep, an employee of the company that contracted Zentrix Sales, who uses it in the course of their job. On the other, that company's customers — the shops the rep visits — whose information the app downloads so that work can be done, and about whom visits, orders and payments are recorded.
 
-Who is responsible for what. The information the app collects is sent to the management system of the company that contracted Zentrix Sales, which is where it lives and where that company keeps it in accordance with its own policies and with the law. That company decides what commercial data it loads and what it uses it for. GUUAO LLC provides the app and processes that information on that company's behalf, without using it for purposes of its own. For any question about this document or about what the app does on the phone, the point of contact is hola@zentrix.company.
+Who is responsible for what. The information the app collects is sent to the management system of the company that contracted Zentrix Sales, which is where it lives and where that company keeps it in accordance with its own policies and with the law. That company decides what commercial data it loads and what it uses it for. GUUAO LLC provides the app and processes that information on that company's behalf, without using it for purposes of its own. For any question about this document or about what the app does on the phone, the point of contact is [hola@zentrix.company](mailto:hola@zentrix.company).
 
 The data processing described here forms part of the employment relationship between the rep and their employer, and rests on the employer's legitimate interest in organising, coordinating and verifying field sales activity.
 
@@ -2166,13 +2025,13 @@ Outside the company, only with the providers identified in clause 4 — the soft
 
 Information may only be disclosed to other third parties where a competent authority requires it under Venezuelan law.
 
-The website. This policy is about the app. The site zentrix.company, which you are probably reading it on, shows no advertising and only measures visits with Google Analytics if the visitor accepts it in the cookie notice; without that permission it sets no cookies and loads nothing from Google. What is measured and how to withdraw permission is in Cookies and analytics. Like any website, it is served by a hosting provider (GitHub, with Cloudflare in front), which sees the connection's IP address in order to deliver the page.
+The website. This policy is about the app. The site zentrix.company, which you are probably reading it on, shows no advertising and only measures visits with Google Analytics if the visitor accepts it in the cookie notice; without that permission it sets no cookies and loads nothing from Google. What is measured and how to withdraw permission is in [Cookies and analytics](https://zentrix.company/privacidad/#cookies-en). Like any website, it is served by a hosting provider (GitHub, with Cloudflare in front), which sees the connection's IP address in order to deliver the page.
 
 One exception that depends on the rep: the app can generate an order note as a PDF — including the customer's name, the order lines, the prices, the total and, where there was one, their signature — and send it from the phone itself through the apps installed (messaging, for instance). That sending is decided and carried out by the rep, and its destination is outside the app's control. The company instructs its staff to share that document only with the customer it belongs to.
 
 ### 7. Rights: access, correction and deletion
 
-Anyone whose data is processed through Zentrix Sales — reps and the company's customers — may request access, correction or deletion of their data by writing to hola@zentrix.company, putting Data request — Zentrix Sales in the subject line and supplying enough information to identify themselves.
+Anyone whose data is processed through Zentrix Sales — reps and the company's customers — may request access, correction or deletion of their data by writing to [hola@zentrix.company](mailto:hola@zentrix.company), putting Data request — Zentrix Sales in the subject line and supplying enough information to identify themselves.
 
 The request will be answered within a maximum of thirty (30) business days. Deletion may be limited where retention is necessary to meet legal, accounting or tax obligations, or to defend claims; in that case the reason and the period will be stated.
 
@@ -2198,16 +2057,14 @@ Change note (13 October 2026). The app was renamed Zentrix Sales, and this polic
 
 ### 11. Contact
 
-GUUAO LLC hola@zentrix.company
+GUUAO LLC [hola@zentrix.company](mailto:hola@zentrix.company)
 
 Zentrix Sales
 
 
 ---
 
-## Support — Zentrix Sales
-
-URL: https://zentrix.company/sales/en/support.html
+## [Support — Zentrix Sales](https://zentrix.company/sales/en/support.html)
 
 Zentrix Sales support: a person replies in under one business day by email, phone or WhatsApp. And how to request access to or deletion of your data.
 
@@ -2217,9 +2074,9 @@ Zentrix Sales
 
 A person on the Zentrix team replies in under one business day. Our working language is Spanish.
 
-hola@zentrix.company
+[hola@zentrix.company](mailto:hola@zentrix.company?subject=Support%20%E2%80%94%20Zentrix%20Sales)
 
-Phone and WhatsApp: +58 412-346 9712.
+Phone and WhatsApp: [+58 412-346 9712](https://wa.me/584123469712).
 
 ### If you use Zentrix Sales out in the field
 
@@ -2231,7 +2088,7 @@ Adding or removing reps, permissions, companies and warehouses, or the integrati
 
 ### Your data: access, correction and deletion
 
-What the app collects, what for and how long it is kept is in the privacy policy. To request access to, correction or deletion of your data, write to hola@zentrix.company with the subject Data request — Zentrix Sales. We answer within 30 business days; details in clause 7. Signing out does not delete data from the server.
+What the app collects, what for and how long it is kept is in the [privacy policy](https://zentrix.company/sales/en/privacy.html). To request access to, correction or deletion of your data, write to [hola@zentrix.company](mailto:hola@zentrix.company?subject=Data%20request%20%E2%80%94%20Zentrix%20Sales) with the subject Data request — Zentrix Sales. We answer within 30 business days; details in [clause 7](https://zentrix.company/sales/en/privacy.html#c7). Signing out does not delete data from the server.
 
 ### About the app
 
@@ -2239,7 +2096,7 @@ Application
 Zentrix Sales (com.leiros.vendoo). Android 7.0 or later and iOS 15 or later.
 
 Download
-Google Play · App Store
+[Google Play](https://play.google.com/store/apps/details?id=com.leiros.vendoo) · [App Store](https://apps.apple.com/app/id6811065669)
 
 Responsible for the app
 GUUAO LLC
@@ -2248,23 +2105,21 @@ Legal address
 10302 NW South River Drive, Medley, FL 33178, United States
 
 Support email
-hola@zentrix.company
+[hola@zentrix.company](mailto:hola@zentrix.company)
 
 Telephone
-+58 412-346 9712, also on WhatsApp
++58 412-346 9712, also on [WhatsApp](https://wa.me/584123469712)
 
 Response time
 Under one business day.
 
 Documents
-Privacy policy · Terms of service · Contact
+[Privacy policy](https://zentrix.company/sales/en/privacy.html) · [Terms of service](https://zentrix.company/sales/en/terms.html) · [Contact](https://zentrix.company/sales/en/contact.html)
 
 
 ---
 
-## Terms of service — Zentrix Sales
-
-URL: https://zentrix.company/sales/en/terms.html
+## [Terms of service — Zentrix Sales](https://zentrix.company/sales/en/terms.html)
 
 Terms of service of Zentrix Sales, the field sales app for Android and iPhone: who contracts it, who uses it every day and which rules apply.
 
@@ -2272,7 +2127,7 @@ Legal
 
 ### Zentrix Sales terms of service
 
-This is a courtesy translation. The binding version of this document is the Spanish one, at vendooapp.com/terminos.html. If the two texts disagree, the Spanish text prevails. It is translated so you can read it, not to create a second binding text: these clauses are written on Venezuelan law, and clauses 15 and 17 turn on it.
+This is a courtesy translation. The binding version of this document is the Spanish one, at [vendooapp.com/terminos.html](https://zentrix.company/sales/terminos/). If the two texts disagree, the Spanish text prevails. It is translated so you can read it, not to create a second binding text: these clauses are written on Venezuelan law, and clauses 15 and 17 turn on it.
 
 Application
 
@@ -2284,11 +2139,11 @@ GUUAO LLC
 
 Download
 
-Google Play (Android) and the App Store (iPhone). Both links are on the Zentrix Sales page.
+Google Play (Android) and the App Store (iPhone). [Both links are on the Zentrix Sales page](https://zentrix.company/sales/en/#download).
 
 Contact
 
-hola@zentrix.company
+[hola@zentrix.company](mailto:hola@zentrix.company)
 
 Published
 
@@ -2338,9 +2193,9 @@ Contents
 
 ### 1. Purpose and scope
 
-These terms govern the use of Zentrix Sales, the app that GUUAO LLC (“the provider”) develops and distributes through Google Play, for Android, and the App Store, for iPhone. They govern both versions equally, which are the same app.
+These terms govern the use of Zentrix Sales, the app that GUUAO LLC (“the provider”) develops and distributes through [Google Play](https://zentrix.company/sales/en/#download), for Android, and the App Store, for iPhone. They govern both versions equally, which are the same app.
 
-Zentrix Sales is a working tool for field sales forces. It is contracted by a distributor or any other organization with reps out on the street (“the company”) for its commercial staff, and the person using it every day is each of its sales reps (“the rep”). On signing in, the rep acknowledges having read this document and the privacy policy.
+Zentrix Sales is a working tool for field sales forces. It is contracted by a distributor or any other organization with reps out on the street (“the company”) for its commercial staff, and the person using it every day is each of its sales reps (“the rep”). On signing in, the rep acknowledges having read this document and the [privacy policy](https://zentrix.company/sales/en/privacy.html).
 
 Anyone can download it, but without an account it does nothing. The app does not allow accounts to be created and has no sign-up: credentials are created and handed over by the company that contracted the service. Zentrix Sales is not a consumer app, and the rep's use of it forms part of their job: it does not constitute a consumer relationship between the rep and the provider.
 
@@ -2422,7 +2277,7 @@ The supporting documents the rep photographs are identity and tax documents belo
 
 ### 10. Recording field activity
 
-Zentrix Sales records work activity: the time and place of each visit, the route over the working day, the documents the rep produces and the app's failures. That record is the point of the tool, and it is described in detail, with its scope and its retention periods, in the privacy policy, which forms part of these terms.
+Zentrix Sales records work activity: the time and place of each visit, the route over the working day, the documents the rep produces and the app's failures. That record is the point of the tool, and it is described in detail, with its scope and its retention periods, in the [privacy policy](https://zentrix.company/sales/en/privacy.html), which forms part of these terms.
 
 The app explains all of this inside the app itself, before requesting any operating-system permission. The location permission is required in order to record orders and payments; without it those functions are unavailable.
 
@@ -2440,7 +2295,7 @@ Zentrix Sales, its name, its logo, its code and its design belong to GUUAO LLC. 
 
 ### 13. Privacy
 
-The processing of personal data is described in the privacy policy, which is understood to form an integral part of these terms. It also contains the channel and the deadline for requesting access, correction or deletion.
+The processing of personal data is described in the [privacy policy](https://zentrix.company/sales/en/privacy.html), which is understood to form an integral part of these terms. It also contains the channel and the deadline for requesting access, correction or deletion.
 
 ### 14. Suspension and termination of access
 
@@ -2464,13 +2319,13 @@ The provider may amend these terms. The version in force is published at this sa
 
 These terms are governed by and construed in accordance with the laws of the Bolivarian Republic of Venezuela.
 
-In the event of any dispute arising from these terms or from use of the app, the parties shall first seek an amicable settlement, raised in writing to hola@zentrix.company and dealt with within thirty (30) consecutive days. If no agreement is reached within that period, the dispute shall be submitted to the competent courts of the Bolivarian Republic of Venezuela.
+In the event of any dispute arising from these terms or from use of the app, the parties shall first seek an amicable settlement, raised in writing to [hola@zentrix.company](mailto:hola@zentrix.company) and dealt with within thirty (30) consecutive days. If no agreement is reached within that period, the dispute shall be submitted to the competent courts of the Bolivarian Republic of Venezuela.
 
 The above does not displace the labour jurisdiction: disputes between a rep and their employer arising from the employment relationship are governed by Venezuelan labour law and are heard before the competent labour courts, and nothing in this document may alter that.
 
 ### 18. Contact
 
-GUUAO LLC hola@zentrix.company
+GUUAO LLC [hola@zentrix.company](mailto:hola@zentrix.company)
 
 Zentrix Sales
 
@@ -2480,9 +2335,7 @@ Zentrix Sales
 
 ---
 
-## Ajustes — Manual de Zentrix Work
-
-URL: https://zentrix.company/work/docs/ajustes.html
+## [Ajustes — Manual de Zentrix Work](https://zentrix.company/work/docs/ajustes.html)
 
 Los ajustes de Zentrix Work: probar una llamada, vibrar y sonar al trabajar, el flash en la llamada, el tema oscuro o claro y los permisos de la app.
 
@@ -2496,7 +2349,7 @@ Ajustes: lo que suena, lo que se siente y cómo se ve.
 
 «Suena como la de verdad, para saber si la vas a oír.» Se cierra Ajustes y te suena una llamada con la franja «PRUEBA — no es trabajo de verdad». No toca el sistema ni le llega a nadie.
 
-Hazla el primer día, con el teléfono en el bolsillo, donde lo vas a llevar. Si no la oyes, revisa el sonido.
+Hazla el primer día, con el teléfono en el bolsillo, donde lo vas a llevar. Si no la oyes, revisa [el sonido](https://zentrix.company/work/docs/permisos.html#silencio).
 
 ### Que se sienta
 
@@ -2534,9 +2387,7 @@ Ves cada permiso con «Concedido» o su botón. Debajo, «Tu ubicación en el tu
 
 ---
 
-## Recibir una devolución — Manual de Zentrix Work
-
-URL: https://zentrix.company/work/docs/devoluciones.html
+## [Recibir una devolución — Manual de Zentrix Work](https://zentrix.company/work/docs/devoluciones.html)
 
 Cómo se recibe una devolución en Zentrix Work: contar lo que llegó sin pasarse de lo autorizado, la foto obligatoria y la nota si la cuenta no cuadra.
 
@@ -2588,9 +2439,7 @@ Ves «Recepción registrada.» con cuánto recibiste y cuántas fotos. Toca List
 
 ---
 
-## Dudas rápidas — Manual de Zentrix Work
-
-URL: https://zentrix.company/work/docs/dudas.html
+## [Dudas rápidas — Manual de Zentrix Work](https://zentrix.company/work/docs/dudas.html)
 
 Las preguntas más comunes de los operadores de Zentrix Work, resueltas en dos líneas: no suenan los pedidos, olvidé mi PIN, el servidor y el turno.
 
@@ -2600,11 +2449,11 @@ Lo que más se pregunta en la tienda, en dos líneas. Si no está aquí, pregún
 
 ### No me suenan los pedidos
 
-¿Estás encendido? Apagado no suena nunca. Si lo estás, mira si hay un aviso ámbar arriba o un punto rojo en la campana, y haz una llamada de prueba.
+¿Estás encendido? Apagado no suena nunca. Si lo estás, mira si hay un aviso ámbar arriba o un punto rojo en la campana, y haz [una llamada de prueba](https://zentrix.company/work/docs/ajustes.html#probar).
 
 ### Olvidé mi PIN
 
-Toca ¿Olvidaste tu PIN? y entra con tu correo. No pierdes tu turno ni tu trabajo a medias. Paso a paso.
+Toca ¿Olvidaste tu PIN? y entra con tu correo. No pierdes tu turno ni tu trabajo a medias. [Paso a paso](https://zentrix.company/work/docs/entrar.html#olvide-pin).
 
 ### Olvidé mi contraseña
 
@@ -2620,7 +2469,7 @@ No te la autorizaron. Díselo a tu encargado: se arregla en el sistema, no en el
 
 ### Se me apagó el turno solo
 
-El teléfono pasó mucho rato sin dar señales, o cerró la tienda. Los dos relojes. Vuelve a encenderte y sigues.
+El teléfono pasó mucho rato sin dar señales, o cerró la tienda. [Los dos relojes](https://zentrix.company/work/docs/turno.html#solo). Vuelve a encenderte y sigues.
 
 ### Estoy encendido y no me llega nada
 
@@ -2628,7 +2477,7 @@ Puede que no haya trabajo: «Nada pendiente. Cuando entre un pedido, te suena.»
 
 ### Voy a comer. ¿Apago?
 
-No: usa una pausa de 5, 10 o 15 minutos. Tu trabajo empezado sigue siendo tuyo.
+No: usa una [pausa](https://zentrix.company/work/docs/turno.html#pausa) de 5, 10 o 15 minutos. Tu trabajo empezado sigue siendo tuyo.
 
 ### ¿Cierro sesión al terminar el día?
 
@@ -2650,14 +2499,12 @@ Lo mínimo. La pantalla queda encendida solo con una tarea abierta, y apagado no
 
 Avísale a tu encargado. En el nuevo, instala la app y entra con el servidor, tu correo y tu contraseña.
 
-¿Nada de esto? Mira Soporte.
+¿Nada de esto? Mira [Soporte](https://zentrix.company/work/soporte/).
 
 
 ---
 
-## Entrar: la primera vez y cada día — Manual de Zentrix Work
-
-URL: https://zentrix.company/work/docs/entrar.html
+## [Entrar: la primera vez y cada día — Manual de Zentrix Work](https://zentrix.company/work/docs/entrar.html)
 
 Cómo se entra a Zentrix Work: el servidor, el correo y la contraseña una sola vez; después, con tu PIN o tu huella. Y qué hacer si olvidas el PIN.
 
@@ -2728,9 +2575,7 @@ Después del PIN ves los permisos (solo la primera vez) y luego «Hola» con tu 
 
 ---
 
-## Entregar en la tienda — Manual de Zentrix Work
-
-URL: https://zentrix.company/work/docs/entregar.html
+## [Entregar en la tienda — Manual de Zentrix Work](https://zentrix.company/work/docs/entregar.html)
 
 Cómo se entrega un pedido en Zentrix Work: validar el código de retiro, leer los bultos, la foto de la prueba y verificar la edad en pedidos con licor.
 
@@ -2804,14 +2649,12 @@ La foto de la cédula queda con el pedido, a tu nombre. Tómala solo si el clien
 Quedó bien si…
 Ves «Entregado.» y cuánto te tomó. Toca Listo. El pedido ya no vuelve a tu lista.
 
-Cobrar en la puerta y «No pude entregar» son del reparto a domicilio, no del mostrador.
+Cobrar en la puerta y «No pude entregar» son del [reparto a domicilio](https://zentrix.company/work/docs/reparto.html), no del mostrador.
 
 
 ---
 
-## Manual del operador — Zentrix Work
-
-URL: https://zentrix.company/work/docs/
+## [Manual del operador — Zentrix Work](https://zentrix.company/work/docs/)
 
 Cómo se usa Zentrix Work en la tienda, pantalla a pantalla: entrar, encender el turno, atender la llamada, preparar, entregar, repartir o recibir devoluciones.
 
@@ -2856,42 +2699,40 @@ Para que una tarea te suene hacen falta dos cosas: que tu encargado te la autori
 
 ### Empezar aquí
 
-- Entrar: la primera vez y cada díaServidor, correo y contraseña una vez. Después, PIN o huella.
+- [Entrar: la primera vez y cada día Servidor, correo y contraseña una vez. Después, PIN o huella.](https://zentrix.company/work/docs/entrar.html)
 
-- Permisos y sonidoAvisos, ubicación, cámara, y que el teléfono no esté en silencio.
+- [Permisos y sonido Avisos, ubicación, cámara, y que el teléfono no esté en silencio.](https://zentrix.company/work/docs/permisos.html)
 
 ### Tu turno
 
-- El turnoElegir tienda y tareas, deslizar para encender, pausas y apagado.
+- [El turno Elegir tienda y tareas, deslizar para encender, pausas y apagado.](https://zentrix.company/work/docs/turno.html)
 
-- La llamada60 segundos para tomarla o decir «No puedo».
+- [La llamada 60 segundos para tomarla o decir «No puedo».](https://zentrix.company/work/docs/llamada.html)
 
 ### El trabajo
 
-- Preparar un pedidoEscanear, marcar lo que no hay, bultos y rack.
+- [Preparar un pedido Escanear, marcar lo que no hay, bultos y rack.](https://zentrix.company/work/docs/preparar.html)
 
-- Entregar en la tiendaCódigo de retiro, leer los bultos, prueba y edad.
+- [Entregar en la tienda Código de retiro, leer los bultos, prueba y edad.](https://zentrix.company/work/docs/entregar.html)
 
-- Reparto a domicilioCargar paradas, tu viaje, navegar y entregar en la puerta.
+- [Reparto a domicilio Cargar paradas, tu viaje, navegar y entregar en la puerta.](https://zentrix.company/work/docs/reparto.html)
 
-- Recibir una devoluciónContar lo que llegó y dejar la foto.
+- [Recibir una devolución Contar lo que llegó y dejar la foto.](https://zentrix.company/work/docs/devoluciones.html)
 
 ### Consultar
 
-- Tu día y tu desempeñoLo que ya cerraste hoy.
+- [Tu día y tu desempeño Lo que ya cerraste hoy.](https://zentrix.company/work/docs/tu-dia.html)
 
-- AjustesProbar una llamada, vibrar, sonar, flash y tema.
+- [Ajustes Probar una llamada, vibrar, sonar, flash y tema.](https://zentrix.company/work/docs/ajustes.html)
 
-- Dudas rápidasLo que más se pregunta, resuelto en dos líneas.
+- [Dudas rápidas Lo que más se pregunta, resuelto en dos líneas.](https://zentrix.company/work/docs/dudas.html)
 
-¿No encuentras lo tuyo? Pregúntale a tu encargado o mira Soporte.
+¿No encuentras lo tuyo? Pregúntale a tu encargado o mira [Soporte](https://zentrix.company/work/soporte/).
 
 
 ---
 
-## La llamada — Manual de Zentrix Work
-
-URL: https://zentrix.company/work/docs/llamada.html
+## [La llamada — Manual de Zentrix Work](https://zentrix.company/work/docs/llamada.html)
 
 Cuando hay trabajo, Zentrix Work suena como una llamada aunque la pantalla esté apagada. Tienes 60 segundos para tomarla deslizando o decir «No puedo».
 
@@ -2917,7 +2758,7 @@ PARADA NUEVA · Un pedido para llevarle al cliente Yo la llevo
 
 En el medio, el pedido: el código de retiro, el cliente, los bultos y el rack. Abajo, el reloj: «56 s y pasa al siguiente». En los últimos 15 segundos se pone rojo.
 
-La llamada sale aunque el teléfono esté bloqueado, y el flash parpadea si lo tienes encendido en Ajustes.
+La llamada sale aunque el teléfono esté bloqueado, y el flash parpadea si lo tienes encendido en [Ajustes](https://zentrix.company/work/docs/ajustes.html).
 
 ### Si la tomas
 
@@ -2951,7 +2792,7 @@ Si la pantalla principal dice «Hay … llamadas viejas en esta tienda que ya no
 
 ### La llamada de prueba
 
-En Ajustes › Probar una llamada suena una igual a la de verdad, con la franja «PRUEBA — no es trabajo de verdad». No cuenta y no le llega a nadie. Hazla el primer día.
+En [Ajustes › Probar una llamada](https://zentrix.company/work/docs/ajustes.html#probar) suena una igual a la de verdad, con la franja «PRUEBA — no es trabajo de verdad». No cuenta y no le llega a nadie. Hazla el primer día.
 
 Quedó bien si…
 Tomaste la llamada y estás en el trabajo, o dijiste «No puedo» y el teléfono se calló con tu turno encendido.
@@ -2959,9 +2800,7 @@ Tomaste la llamada y estás en el trabajo, o dijiste «No puedo» y el teléfono
 
 ---
 
-## Permisos y sonido — Manual de Zentrix Work
-
-URL: https://zentrix.company/work/docs/permisos.html
+## [Permisos y sonido — Manual de Zentrix Work](https://zentrix.company/work/docs/permisos.html)
 
 Qué permisos pide Zentrix Work y para qué: avisos, ubicación solo en turno y cámara opcional. Y cómo comprobar que tu teléfono de verdad va a sonar.
 
@@ -2990,7 +2829,7 @@ Si no quieres la cámara, toca Seguir sin la cámara. Los códigos y las fechas 
 Lo que dice la app
 «La ubicación se usa solo mientras tu turno está encendido, siempre aproximada, y lo guardado se borra a los 30 días. Con la app cerrada o fuera de turno no se mira dónde estás.»
 
-En el reparto el mapa necesita la ubicación precisa, y solo mientras tengas una parada abierta.
+En el [reparto](https://zentrix.company/work/docs/reparto.html) el mapa necesita la ubicación precisa, y solo mientras tengas una parada abierta.
 
 ### La llamada encima del bloqueo
 
@@ -3020,7 +2859,7 @@ Ojo
 Si apagas las notificaciones de la app, el sistema puede no dejarte encender el turno. El mensaje sale en pantalla, tal cual.
 
 Quedó bien si…
-No hay aviso ámbar arriba. Para estar seguro, haz una llamada de prueba.
+No hay aviso ámbar arriba. Para estar seguro, haz [una llamada de prueba](https://zentrix.company/work/docs/ajustes.html#probar).
 
 ### Si le dijiste «no» a un permiso
 
@@ -3029,9 +2868,7 @@ El teléfono ya no lo vuelve a preguntar. Toca Abrir los ajustes de la app, conc
 
 ---
 
-## Preparar un pedido — Manual de Zentrix Work
-
-URL: https://zentrix.company/work/docs/preparar.html
+## [Preparar un pedido — Manual de Zentrix Work](https://zentrix.company/work/docs/preparar.html)
 
 Cómo se prepara un pedido en Zentrix Work: comenzar, escanear, marcar lo que no hay, preguntar al cliente, contar los bultos, ubicarlos en el rack y validar.
 
@@ -3112,9 +2949,7 @@ Ves «Preparación validada.», cada bulto tiene su etiqueta y su lugar en el ra
 
 ---
 
-## Reparto a domicilio — Manual de Zentrix Work
-
-URL: https://zentrix.company/work/docs/reparto.html
+## [Reparto a domicilio — Manual de Zentrix Work](https://zentrix.company/work/docs/reparto.html)
 
 Cómo se carga el viaje en la tienda, cómo se ordenan las paradas, cómo se navega, se cobra en la puerta y qué hacer si no se puede entregar.
 
@@ -3130,7 +2965,7 @@ Si atiendes Reparto, con el turno encendido ves dos puertas en la pantalla princ
 
 - Mi viaje — «Lo que llevas, en tu orden». Es tu carro: solo lo tuyo.
 
-Una parada nueva también puede llegarte como llamada. Ahí el control dice Yo la llevo.
+Una parada nueva también puede llegarte como [llamada](https://zentrix.company/work/docs/llamada.html). Ahí el control dice Yo la llevo.
 
 Esquema, no captura: cargas en la tienda, repartes en la calle.
 
@@ -3191,7 +3026,7 @@ Viaja solo mientras tengas una parada abierta, con el aviso «Ruta en curso» en
 
 ### En la puerta del cliente
 
-La pantalla de la parada es la misma de entregar en la tienda: código de retiro, bultos, edad si hay licor, cobro y prueba. El botón de abajo siempre dice el paso que falta:
+La pantalla de la parada es la misma de [entregar en la tienda](https://zentrix.company/work/docs/entregar.html): código de retiro, bultos, edad si hay licor, cobro y prueba. El botón de abajo siempre dice el paso que falta:
 
 Leer los bultos → Verificar mayoría de edad → Declarar el cobro → Tomar la foto de la prueba → Entregar
 
@@ -3238,9 +3073,7 @@ Después de Sí, entregar ves «Entregado.» y la parada sale de tu viaje. Te ca
 
 ---
 
-## Tu día y tu desempeño — Manual de Zentrix Work
-
-URL: https://zentrix.company/work/docs/tu-dia.html
+## [Tu día y tu desempeño — Manual de Zentrix Work](https://zentrix.company/work/docs/tu-dia.html)
 
 Qué muestra «Mi trabajo» en Zentrix Work: lo que cerraste hoy o esta semana, cuánto fue a tiempo, tu ritmo de trabajo y tu nivel como operador.
 
@@ -3280,9 +3113,7 @@ Si todavía no hay récord, la tarjeta no aparece. No es un error.
 
 ---
 
-## El turno — Manual de Zentrix Work
-
-URL: https://zentrix.company/work/docs/turno.html
+## [El turno — Manual de Zentrix Work](https://zentrix.company/work/docs/turno.html)
 
 Cómo se enciende el turno en Zentrix Work: elegir tienda y tareas, deslizar para encender, pedir una pausa, apagar, y cuándo el turno se apaga solo.
 
@@ -3357,7 +3188,7 @@ Veinte minutos es «te sacamos de la rifa un rato». Noventa es «se acabó el t
 
 - La campana («Avisos»): mensajes de clientes, pedidos cancelados o pasados de hora, avisos del encargado. Con punto rojo, tu teléfono no va a sonar.
 
-- El engranaje: Ajustes.
+- El engranaje: [Ajustes](https://zentrix.company/work/docs/ajustes.html).
 
 - Tus iniciales o tu foto: «Tu perfil». Ahí ves tu tienda y lo que puedes atender, cambias tu contraseña y cierras sesión.
 
@@ -3367,9 +3198,7 @@ Veinte minutos es «te sacamos de la rifa un rato». Noventa es «se acabó el t
 
 ---
 
-## Tus pedidos y tu actividad — Manual de Zentrix Sales
-
-URL: https://zentrix.company/sales/docs/actividad.html
+## [Tus pedidos y tu actividad — Manual de Zentrix Sales](https://zentrix.company/sales/docs/actividad.html)
 
 La pestaña Actividad de Zentrix Sales: los borradores en «Abiertos», qué significa cada estado de un pedido, tus visitas y tus devoluciones.
 
@@ -3442,7 +3271,7 @@ Cancelar pedido Mientras la oficina no lo haya confirmado. Lo anula y libera la 
 
 Nuevo pedido a este cliente Siempre. Empieza uno desde cero con ese cliente, sin copiar nada.
 
-Conversación En todo pedido que ya llegó a la oficina. Hablar con quien lo está revisando. Ver Hablar con la oficina.
+Conversación En todo pedido que ya llegó a la oficina. Hablar con quien lo está revisando. Ver [Hablar con la oficina](https://zentrix.company/sales/docs/conversacion.html).
 
 No te equivoques en esto
 Cancelar no se deshace. Si el cliente lo quiere después, hay que montarlo de nuevo.
@@ -3528,9 +3357,7 @@ Si algo dice «Por enviar» o «No se pudo enviar», está todavía en tu teléf
 
 ---
 
-## El catálogo — Manual de Zentrix Sales
-
-URL: https://zentrix.company/sales/docs/catalogo.html
+## [El catálogo — Manual de Zentrix Sales](https://zentrix.company/sales/docs/catalogo.html)
 
 Buscar un producto en Zentrix Sales por nombre, código o código de barras, usar el escáner, filtrar, elegir la tarifa y compartir por WhatsApp.
 
@@ -3618,9 +3445,7 @@ Lo que dice Qué pasa Qué hacer
 
 ---
 
-## Clientes nuevos y correcciones — Manual de Zentrix Sales
-
-URL: https://zentrix.company/sales/docs/clientes.html
+## [Clientes nuevos y correcciones — Manual de Zentrix Sales](https://zentrix.company/sales/docs/clientes.html)
 
 Cómo proponer un cliente nuevo desde Zentrix Sales y sugerir la corrección de uno que ya tienes: los pasos, los recaudos y cómo queda la solicitud.
 
@@ -3698,9 +3523,7 @@ Toca cualquier tarjeta para abrirla y ver lo que propusiste, los recaudos que ma
 
 ---
 
-## Cobrarle a un cliente — Manual de Zentrix Sales
-
-URL: https://zentrix.company/sales/docs/cobrar.html
+## [Cobrarle a un cliente — Manual de Zentrix Sales](https://zentrix.company/sales/docs/cobrar.html)
 
 Cómo registrar un cobro en Zentrix Sales: banco, monto, referencia y comprobante, aplicarlo a las facturas y seguir el estado de la solicitud.
 
@@ -3727,7 +3550,7 @@ Hay cinco caminos y todos llegan a la misma pantalla, «Nueva solicitud»:
 
 - La pestaña «Cobranza» de abajo, sub-pestaña «Pagos», y el botón + a la derecha del buscador.
 
-- El botón «Subir pago» de una factura, en Cobranza › Facturas. Así ya entras con el cliente puesto.
+- El botón «Subir pago» de una factura, en [Cobranza › Facturas](https://zentrix.company/sales/docs/facturas.html). Así ya entras con el cliente puesto.
 
 ### El recorrido
 
@@ -3829,9 +3652,7 @@ Al corregir verás el comprobante que ya mandaste. Si no adjuntas uno nuevo, se 
 
 ---
 
-## Hablar con la oficina — Manual de Zentrix Sales
-
-URL: https://zentrix.company/sales/docs/conversacion.html
+## [Hablar con la oficina — Manual de Zentrix Sales](https://zentrix.company/sales/docs/conversacion.html)
 
 Cómo hablar con la oficina desde Zentrix Sales: la conversación de un pedido, una factura, una cobranza o un cliente, con notas internas, menciones y adjuntos.
 
@@ -3847,11 +3668,11 @@ La nota interna va en ámbar y con candado; tu mensaje, en morado.
 
 Busca el botón «Conversación» en el detalle de:
 
-- un pedido, en Actividad;
+- un pedido, en [Actividad](https://zentrix.company/sales/docs/actividad.html);
 
-- una factura, en Pagos › Facturas;
+- una factura, en [Pagos › Facturas](https://zentrix.company/sales/docs/facturas.html);
 
-- una solicitud de cobranza, en Pagos › Solicitudes;
+- una solicitud de cobranza, en [Pagos › Solicitudes](https://zentrix.company/sales/docs/cobrar.html);
 
 - un cliente, en su ficha.
 
@@ -3902,9 +3723,7 @@ Lo que escribas sin señal queda «Por enviar» y sale solo. Dos mensajes son do
 
 ---
 
-## Dudas rápidas — Manual de Zentrix Sales
-
-URL: https://zentrix.company/sales/docs/dudas.html
+## [Dudas rápidas — Manual de Zentrix Sales](https://zentrix.company/sales/docs/dudas.html)
 
 Lo que más se pregunta de Zentrix Sales, en una o dos frases: el PIN, el permiso de ubicación, los precios que cambian, los avisos y el punto de sincronización.
 
@@ -3916,7 +3735,7 @@ Lo que más se pregunta, en una o dos frases.
 
 ### Se cerró la aplicación a mitad de una visita. ¿Perdí el pedido?
 
-No. Quedó guardado a medio armar y lo encuentras en Actividad › Pedidos › «Abiertos»; en su parada dice «En curso». Ábrelo y sigue donde ibas.
+No. Quedó guardado a medio armar y lo encuentras en [Actividad › Pedidos › «Abiertos»](https://zentrix.company/sales/docs/actividad.html#abiertos); en su parada dice «En curso». Ábrelo y sigue donde ibas.
 
 ### ¿Por qué me pide un PIN?
 
@@ -3940,7 +3759,7 @@ Los precios son los del día en que el pedido entra al sistema, no los del día 
 
 ### Me dice que el cliente pasa su límite de crédito. ¿Mando el pedido?
 
-Sí. La aplicación nunca frena un pedido por el crédito: el aviso es para que pidas la autorización ya, con el botón «Pedir autorización», mientras tienes al cliente enfrente. En la oficina el pedido queda «Retenido» hasta que lo aprueben. Está contado en la visita.
+Sí. La aplicación nunca frena un pedido por el crédito: el aviso es para que pidas la autorización ya, con el botón «Pedir autorización», mientras tienes al cliente enfrente. En la oficina el pedido queda «Retenido» hasta que lo aprueben. Está contado en [la visita](https://zentrix.company/sales/docs/visita.html#limite-de-credito).
 
 ### Me salió una pantalla que me pide actualizar.
 
@@ -3972,7 +3791,7 @@ En la pantalla de entrada, «Manejar cuentas». Ahí puedes quitarla de la lista
 
 ### El punto está ámbar todo el día. ¿Está mal?
 
-No. Ámbar es «hay cosas tuyas esperando» o «no hay señal», y en la calle eso es lo normal. Preocúpate solo si está rojo. Está explicado en Trabajar sin internet.
+No. Ámbar es «hay cosas tuyas esperando» o «no hay señal», y en la calle eso es lo normal. Preocúpate solo si está rojo. Está explicado en [Trabajar sin internet](https://zentrix.company/sales/docs/sin-internet.html#el-punto).
 
 ### La cámara no abre y no puedo tomar la foto de la visita.
 
@@ -3991,14 +3810,12 @@ Desde la aplicación tienes Perfil › Acerca de › «Reportar un problema». C
 Ese formulario no te contesta
 Sirve para arreglar la aplicación, y nadie te va a responder por ahí. Si necesitas que alguien te resuelva algo hoy, escribe al soporte.
 
-El soporte de Zentrix Sales —correo, teléfono y WhatsApp— está en la página de contacto.
+El soporte de Zentrix Sales —correo, teléfono y WhatsApp— está en [la página de contacto](https://zentrix.company/sales/contacto/#soporte).
 
 
 ---
 
-## Entrar y sincronizar — Manual de Zentrix Sales
-
-URL: https://zentrix.company/sales/docs/entrar.html
+## [Entrar y sincronizar — Manual de Zentrix Sales](https://zentrix.company/sales/docs/entrar.html)
 
 Cómo entrar a Zentrix Sales la primera vez: el subdominio de tu empresa, tu correo y el PIN. Y por qué conviene sincronizar antes de salir a la calle.
 
@@ -4052,9 +3869,7 @@ En la pantalla de entrada, «Manejar cuentas» te deja quitar una cuenta de la l
 
 ---
 
-## Facturas y lo que te deben — Manual de Zentrix Sales
-
-URL: https://zentrix.company/sales/docs/facturas.html
+## [Facturas y lo que te deben — Manual de Zentrix Sales](https://zentrix.company/sales/docs/facturas.html)
 
 Cómo leer la cartera en Zentrix Sales: «TE DEBEN», «VENCIDO» y «EN REVISIÓN», las tarjetas, las etiquetas, el compromiso de pago y la moneda.
 
@@ -4118,7 +3933,7 @@ Abajo a la izquierda hay tres botones redondos. Mantén el dedo encima y te sale
 
 - Compromiso — anotas cuándo prometió pagar el cliente.
 
-- Subir pago — es el más usado: abre la pantalla de cobranza con esa factura ya marcada.
+- Subir pago — es el más usado: abre [la pantalla de cobranza](https://zentrix.company/sales/docs/cobrar.html) con esa factura ya marcada.
 
 Y a la derecha, «Ver factura →» abre el detalle completo, con el desglose y la conversación con la oficina.
 
@@ -4143,9 +3958,7 @@ Al cliente léele siempre el número grande, el que está en la moneda de su fac
 
 ---
 
-## Manual del vendedor — Zentrix Sales
-
-URL: https://zentrix.company/sales/docs/
+## [Manual del vendedor — Zentrix Sales](https://zentrix.company/sales/docs/)
 
 Cómo se usa Zentrix Sales en la calle, pantalla por pantalla: la ruta, la visita, el pedido, la cobranza y qué pasa cuando no hay señal. Versión 5.2.24.
 
@@ -4206,40 +4019,38 @@ Cada sección es una página corta. Puedes mandarle a alguien el enlace de una s
 
 ### Empezar aquí
 
-- Entrar y sincronizarEl subdominio, el PIN y los dos minutos de la mañana.
+- [Entrar y sincronizar El subdominio, el PIN y los dos minutos de la mañana.](https://zentrix.company/sales/docs/entrar.html)
 
-- Trabajar sin internetEl punto de colores y por qué no se pierde nada.
+- [Trabajar sin internet El punto de colores y por qué no se pierde nada.](https://zentrix.company/sales/docs/sin-internet.html)
 
 ### El día en la calle
 
-- Tu InicioLas tasas, el bloque «Hoy» y los ocho accesos.
+- [Tu Inicio Las tasas, el bloque «Hoy» y los ocho accesos.](https://zentrix.company/sales/docs/inicio.html)
 
-- La ruta del díaPlanificarla, recorrerla y quitar a alguien del día.
+- [La ruta del día Planificarla, recorrerla y quitar a alguien del día.](https://zentrix.company/sales/docs/ruta.html)
 
-- La visita, paso a pasoLos ocho pasos, del check-in a la firma.
+- [La visita, paso a paso Los ocho pasos, del check-in a la firma.](https://zentrix.company/sales/docs/visita.html)
 
 ### Vender y cobrar
 
-- El catálogoBuscar, escanear, filtrar y compartir un producto.
+- [El catálogo Buscar, escanear, filtrar y compartir un producto.](https://zentrix.company/sales/docs/catalogo.html)
 
-- Cobrarle a un clienteEl banco, el monto, la referencia y el comprobante.
+- [Cobrarle a un cliente El banco, el monto, la referencia y el comprobante.](https://zentrix.company/sales/docs/cobrar.html)
 
-- Las facturas y lo que te deben«Cóbrale hoy», lo vencido y lo que está en revisión.
+- [Las facturas y lo que te deben «Cóbrale hoy», lo vencido y lo que está en revisión.](https://zentrix.company/sales/docs/facturas.html)
 
 ### Consultar
 
-- Tus pedidos y tu actividadEn qué estado quedó cada cosa que mandaste.
+- [Tus pedidos y tu actividad En qué estado quedó cada cosa que mandaste.](https://zentrix.company/sales/docs/actividad.html)
 
-- Clientes nuevos y correccionesProponer un cliente y arreglar los datos de uno.
+- [Clientes nuevos y correcciones Proponer un cliente y arreglar los datos de uno.](https://zentrix.company/sales/docs/clientes.html)
 
-- Dudas rápidasLo que más se pregunta, en una o dos frases.
+- [Dudas rápidas Lo que más se pregunta, en una o dos frases.](https://zentrix.company/sales/docs/dudas.html)
 
 
 ---
 
-## Tu Inicio — Manual de Zentrix Sales
-
-URL: https://zentrix.company/sales/docs/inicio.html
+## [Tu Inicio — Manual de Zentrix Sales](https://zentrix.company/sales/docs/inicio.html)
 
 La pantalla que más vas a ver en Zentrix Sales: el saludo, los avisos, tu empresa, las tasas del día, el bloque «Hoy» y los ocho accesos rápidos.
 
@@ -4279,7 +4090,7 @@ Los dos rellenos son los que vas a usar todos los días: Crear pedido y Cobrar.
 Cada botón trae su propio dato debajo —«40 clientes», «1 factura vence hoy», «0 de 3 paradas»— así que sabes qué te espera sin entrar.
 
 Cada número dice qué cuenta
-El bloque «Hoy» dice «Visitas cerradas»: cuenta sólo las que ya completaste. En Actividad › Visitas el chip «Hoy» cuenta también las que tienes abiertas, así que ahí el número puede ser mayor. Los dos son verdad.
+El bloque «Hoy» dice «Visitas cerradas»: cuenta sólo las que ya completaste. En [Actividad › Visitas](https://zentrix.company/sales/docs/actividad.html#visitas) el chip «Hoy» cuenta también las que tienes abiertas, así que ahí el número puede ser mayor. Los dos son verdad.
 
 ### Promociones
 
@@ -4291,7 +4102,7 @@ El material de venta vigente de tu empresa: combos, descuentos y cupones. Es tu 
 
 Para el pedido que rebotó porque no había tanta mercancía como pediste. Pasa cuando lo armas sin señal y al salir el almacén ya no tiene esas cantidades.
 
-Acá bajas cada línea a lo que hay y lo reenvías. Los precios no cambian —son los que le cantaste al cliente— y es el mismo pedido, no uno nuevo, así que no se duplica nada. Está contado entero en Actividad.
+Acá bajas cada línea a lo que hay y lo reenvías. Los precios no cambian —son los que le cantaste al cliente— y es el mismo pedido, no uno nuevo, así que no se duplica nada. Está contado entero en [Actividad](https://zentrix.company/sales/docs/actividad.html#rebotado-por-stock).
 
 ### Sin ubicación
 
@@ -4315,9 +4126,7 @@ Dos cosas que conviene saber de esos números:
 
 ---
 
-## La ruta del día — Manual de Zentrix Sales
-
-URL: https://zentrix.company/sales/docs/ruta.html
+## [La ruta del día — Manual de Zentrix Sales](https://zentrix.company/sales/docs/ruta.html)
 
 Cómo planificar y recorrer tu ruta en Zentrix Sales: asignar clientes a un día, ordenar las paradas por cercanía, navegar y quitar a alguien del día.
 
@@ -4361,14 +4170,12 @@ Desliza la tarjeta o usa el botón «⋮» › «Quitar de la ruta de hoy».
 Es sólo de hoy: sigue siendo tu cliente. Sacar a alguien de tu cartera lo decide la oficina, no se hace desde acá.
 
 Si ya le hiciste check-in
-El pedido a medio armar no se borra: lo sigues encontrando en Actividad › Pedidos › «Abiertos». Lo que se va de la vista es la tarjeta de la ruta, no el trabajo.
+El pedido a medio armar no se borra: lo sigues encontrando en [Actividad › Pedidos › «Abiertos»](https://zentrix.company/sales/docs/actividad.html#abiertos). Lo que se va de la vista es la tarjeta de la ruta, no el trabajo.
 
 
 ---
 
-## Trabajar sin internet — Manual de Zentrix Sales
-
-URL: https://zentrix.company/sales/docs/sin-internet.html
+## [Trabajar sin internet — Manual de Zentrix Sales](https://zentrix.company/sales/docs/sin-internet.html)
 
 En Zentrix Sales nada se pierde sin señal: qué significa cada color del punto de sincronización y qué hacer si algo dice «No se pudo enviar».
 
@@ -4450,9 +4257,7 @@ En el panel también hay «Reintentar los envíos que se rindieron», que los vu
 
 ---
 
-## La visita paso a paso — Manual de Zentrix Sales
-
-URL: https://zentrix.company/sales/docs/visita.html
+## [La visita paso a paso — Manual de Zentrix Sales](https://zentrix.company/sales/docs/visita.html)
 
 Los ocho pasos de una visita en Zentrix Sales: check-in, inventario, pedido, fotos, devoluciones, notas, firma y check-out, con lo que conviene saber.
 
@@ -4555,7 +4360,7 @@ Al lado sale «Pedir autorización», que te arma el mensaje para quien aprueba 
 Las cifras del crédito van en dólares. En la ficha del cliente, bajo «Su cuenta», las ves en orden: Cupo de crédito, Usado, Por facturar (pedidos confirmados que todavía no se facturaron) y Disponible. La cuenta se sigue con el dedo: cupo menos usado menos por facturar da el disponible, y si sale negativo va en rojo.
 
 No te equivoques en esto
-El aviso no te frena. El pedido se manda igual y llega a la oficina; allá queda «Retenido» hasta que lo autoricen. El aviso es para que pidas la autorización de una vez, con el cliente enfrente, y no te enteres días después.
+El aviso no te frena. El pedido se manda igual y llega a la oficina; allá queda [«Retenido»](https://zentrix.company/sales/docs/actividad.html#estados) hasta que lo autoricen. El aviso es para que pidas la autorización de una vez, con el cliente enfrente, y no te enteres días después.
 
 Sin señal usa las cifras guardadas en el teléfono y lo dice: «Cifras de crédito guardadas en el teléfono, sin confirmar con Odoo.»
 
@@ -4591,10 +4396,10 @@ Salen dos pedidos: esta empresa no permite mezclar licor con otros productos en 
 En las empresas que no tienen esa regla, nada de esto pasa.
 
 No te equivoques en esto
-Cada pedido es un documento aparte en la oficina, con su propio número. En Actividad › Pedidos los vas a ver separados, y pueden ir a distinta velocidad: uno puede quedar confirmado y el otro esperando analista.
+Cada pedido es un documento aparte en la oficina, con su propio número. En [Actividad › Pedidos](https://zentrix.company/sales/docs/actividad.html) los vas a ver separados, y pueden ir a distinta velocidad: uno puede quedar confirmado y el otro esperando analista.
 
 No te equivoques en esto
-El precio que ves es una cotización, no la factura. La oficina vuelve a calcular precios e impuestos cuando recibe el pedido, con los del día en que llega. Si el número cambia, la aplicación te avisa después en Actividad › Pedidos.
+El precio que ves es una cotización, no la factura. La oficina vuelve a calcular precios e impuestos cuando recibe el pedido, con los del día en que llega. Si el número cambia, la aplicación te avisa después en [Actividad › Pedidos](https://zentrix.company/sales/docs/actividad.html).
 
 Ojo
 Dos mensajes que vas a ver y significan cosas distintas:
@@ -4650,7 +4455,7 @@ En la oficina Llegó y quedó anotada. El almacén todavía no contó la mercanc
 
 Recibida El almacén ya la revisó y la dio por buena.
 
-La sigues en Actividad › Devoluciones, con su número de referencia, la fecha y cuántas unidades tiene. Cuando la mercancía hay que ir a buscarla al cliente, ahí mismo ves también en qué va el retiro: si lo aprobaron, si ya pasaron a buscarla y si ya salió la nota de crédito. Está contado en Actividad › El retiro de la mercancía.
+La sigues en Actividad › Devoluciones, con su número de referencia, la fecha y cuántas unidades tiene. Cuando la mercancía hay que ir a buscarla al cliente, ahí mismo ves también en qué va el retiro: si lo aprobaron, si ya pasaron a buscarla y si ya salió la nota de crédito. Está contado en [Actividad › El retiro de la mercancía](https://zentrix.company/sales/docs/actividad.html#retiro).
 
 No te equivoques en esto
 Que la mandes no quiere decir que esté recibida. Entre «En la oficina» y «Recibida» está el almacén contando la mercancía, y eso puede tardar días.
@@ -4706,7 +4511,7 @@ Cuando vuelvas a abrir ese cliente, te pregunta «Visita en progreso» y te dice
 
 - «Borrar y empezar de cero» — se bota lo que tenías.
 
-Y las encuentras todas en Actividad › Pedidos › «Abiertos». Cada una te dice cuándo la empezaste y en qué paso quedó.
+Y las encuentras todas en [Actividad › Pedidos › «Abiertos»](https://zentrix.company/sales/docs/actividad.html#abiertos). Cada una te dice cuándo la empezaste y en qué paso quedó.
 
 Ojo
 Si una visita lleva horas abierta y nadie tocó el teléfono, al completarla la aplicación te pregunta «Esta visita lleva mucho abierta» y te deja elegir con qué hora cerrarla: la de tu última actividad o la de ahora. Es para que no te quede una visita de cuatro horas que duró veinte minutos.
@@ -4720,7 +4525,7 @@ Sin señal la visita se cierra igual. Vas a ver «Tu visita quedó guardada — 
 
 En los dos casos, el pedido lo sigues viendo en Actividad › Pedidos y la devolución en Actividad › Devoluciones. Mientras no haya salido del teléfono dice «Por enviar».
 
-Si el cliente te pagó en la visita, toca «Cobrarle», debajo de «Ir al inicio»: se abre la cobranza con ese cliente ya puesto. Ver Cobrarle a un cliente.
+Si el cliente te pagó en la visita, toca «Cobrarle», debajo de «Ir al inicio»: se abre la cobranza con ese cliente ya puesto. Ver [Cobrarle a un cliente](https://zentrix.company/sales/docs/cobrar.html#empezar).
 
 ### Si un pedido rebota y la visita ya está en la oficina
 
@@ -4743,9 +4548,7 @@ Recuerda
 
 ---
 
-## Privacidad del sitio — Zentrix
-
-URL: https://zentrix.company/privacidad/
+## [Privacidad del sitio — Zentrix](https://zentrix.company/privacidad/)
 
 Qué mide zentrix.company y con qué herramienta, sin publicidad, y cómo retirar el consentimiento de cookies. Las apps tienen su propia política.
 
@@ -4753,7 +4556,7 @@ Zentrix
 
 ### Privacidad del sitio web
 
-Esta página trata del sitio zentrix.company. Las apps tienen su propia política: Zentrix Work y Zentrix Sales (in English).
+Esta página trata del sitio zentrix.company. Las apps tienen su propia política: [Zentrix Work](https://zentrix.company/work/privacidad/) y [Zentrix Sales](https://zentrix.company/sales/privacidad/) ( [in English](https://zentrix.company/sales/en/privacy.html)).
 
 ### Cookies y analítica
 
@@ -4765,7 +4568,7 @@ Sin publicidad. El sitio no muestra anuncios ni usa los datos para publicidad: e
 
 Si no aceptas. Hasta que pulses «Aceptar», el sitio no carga nada de Google ni pone cookies. Si rechazas, o si tu navegador envía «Do Not Track» o «Global Privacy Control», no se mide nada. Tu elección se guarda en el almacenamiento local del navegador (zx-consent), no sale de él y no es una cookie.
 
-Cómo retirar el consentimiento. Pulsa «Preferencias de cookies», al pie de cualquier página, y elige «Rechazar»: la medición se detiene y se borran las cookies _ga de este sitio. También puedes borrar los datos del sitio desde tu navegador. Para cualquier duda, escríbenos a hola@zentrix.company.
+Cómo retirar el consentimiento. Pulsa «Preferencias de cookies», al pie de cualquier página, y elige «Rechazar»: la medición se detiene y se borran las cookies _ga de este sitio. También puedes borrar los datos del sitio desde tu navegador. Para cualquier duda, escríbenos a [hola@zentrix.company](mailto:hola@zentrix.company).
 
 ### Cookies and analytics
 
@@ -4777,14 +4580,12 @@ No advertising. The site shows no ads and does not use the data for advertising:
 
 If you do not accept. Until you press «Accept», the site loads nothing from Google and sets no cookies. If you reject, or if your browser sends «Do Not Track» or «Global Privacy Control», nothing is measured. Your choice is kept in the browser's local storage (zx-consent); it never leaves it and it is not a cookie.
 
-How to withdraw consent. Press «Cookie preferences» («Preferencias de cookies»), at the foot of any page, and choose «Reject»: measurement stops and the site's _ga cookies are deleted. You can also clear the site's data from your browser. For any question, write to hola@zentrix.company.
+How to withdraw consent. Press «Cookie preferences» («Preferencias de cookies»), at the foot of any page, and choose «Reject»: measurement stops and the site's _ga cookies are deleted. You can also clear the site's data from your browser. For any question, write to [hola@zentrix.company](mailto:hola@zentrix.company).
 
 
 ---
 
-## Contacto — Zentrix Sales
-
-URL: https://zentrix.company/sales/contacto/
+## [Contacto — Zentrix Sales](https://zentrix.company/sales/contacto/)
 
 Pide una demostración de Zentrix Sales con tus datos: cuéntanos cómo vende hoy tu equipo. O escríbenos por correo, teléfono o WhatsApp, sin compromiso.
 
@@ -4807,7 +4608,7 @@ Mensaje
 Quiero ver Zentrix Sales
 Al enviar se abre tu correo con el mensaje listo. Sin compromiso.
 
-El formulario necesita JavaScript para armar el correo. Sin él, escríbenos directo a hola@zentrix.company.
+El formulario necesita JavaScript para armar el correo. Sin él, escríbenos directo a [hola@zentrix.company](mailto:hola@zentrix.company).
 
 ### Respuesta en menos de un día hábil
 Te contesta una persona, no un bot.
@@ -4818,20 +4619,18 @@ Tu catálogo, tu tarifa y tu ruta.
 ### Integración con tu ERP
 Con Odoo®, nativa. Con los demás, a medida.
 
-O escríbenos directo: hola@zentrix.company · WhatsApp +58 412-346 9712
+O escríbenos directo: [hola@zentrix.company](mailto:hola@zentrix.company) · [WhatsApp +58 412-346 9712](https://wa.me/584123469712)
 
 ### Soporte de Zentrix Sales
 
-Si ya usas la app y necesitas ayuda, o quieres ver, corregir o eliminar tus datos, ve a la página de soporte.
+Si ya usas la app y necesitas ayuda, o quieres ver, corregir o eliminar tus datos, ve a la [página de soporte](https://zentrix.company/sales/soporte/).
 
-Ir al soporte
+[Ir al soporte](https://zentrix.company/sales/soporte/)
 
 
 ---
 
-## Política de privacidad — Zentrix Sales
-
-URL: https://zentrix.company/sales/privacidad/
+## [Política de privacidad — Zentrix Sales](https://zentrix.company/sales/privacidad/)
 
 Qué datos recoge Zentrix Sales, la app de fuerza de ventas, para qué, dónde se almacenan, cuánto tiempo se conservan y cómo ejercer tus derechos.
 
@@ -4849,11 +4648,11 @@ GUUAO LLC
 
 Descarga
 
-Google Play (Android) y App Store (iPhone). Los dos enlaces están en la página de Zentrix Sales.
+Google Play (Android) y App Store (iPhone). [Los dos enlaces están en la página de Zentrix Sales](https://zentrix.company/sales/#descargar).
 
 Contacto
 
-hola@zentrix.company
+[hola@zentrix.company](mailto:hola@zentrix.company)
 
 Publicación
 
@@ -4865,11 +4664,11 @@ Publicación
 
 ### 1. Qué es Zentrix Sales y para quién
 
-Zentrix Sales es una herramienta de trabajo para fuerzas de venta de campo, desarrollada y distribuida por GUUAO LLC a través de las tiendas de aplicaciones de Google —Google Play, para Android— y de Apple —App Store, para iPhone—. Las dos versiones son la misma aplicación y hacen lo mismo; donde este documento describe algo que depende del sistema operativo, se nombran las dos, porque no siempre coinciden. Cualquiera puede descargarla, pero sin una cuenta no hace nada: las credenciales las crea y las entrega la empresa que contrata el servicio, y la aplicación no permite crear cuentas ni registrarse. No es una aplicación de consumo.
+Zentrix Sales es una herramienta de trabajo para fuerzas de venta de campo, desarrollada y distribuida por GUUAO LLC a través de las tiendas de aplicaciones de Google — [Google Play](https://zentrix.company/sales/#descargar), para Android— y de Apple —App Store, para iPhone—. Las dos versiones son la misma aplicación y hacen lo mismo; donde este documento describe algo que depende del sistema operativo, se nombran las dos, porque no siempre coinciden. Cualquiera puede descargarla, pero sin una cuenta no hace nada: las credenciales las crea y las entrega la empresa que contrata el servicio, y la aplicación no permite crear cuentas ni registrarse. No es una aplicación de consumo.
 
 Hay dos figuras cuyos datos se tratan, y conviene separarlas. Por un lado el vendedor, empleado de la empresa que contrató Zentrix Sales, que la usa en el ejercicio de su función laboral. Por otro, los clientes de esa empresa —los comercios que el vendedor visita—, cuya información la aplicación descarga para poder trabajar y sobre los que se registran visitas, pedidos y cobros.
 
-Quién responde de qué. La información que la aplicación recoge se envía al sistema de gestión de la empresa que contrató Zentrix Sales, que es donde vive y donde ella la conserva conforme a sus propias políticas y a la ley. Esa empresa es quien decide qué datos comerciales carga y para qué los usa. GUUAO LLC provee la aplicación y trata esa información por cuenta de ella, sin usarla para fines propios. Para cualquier consulta sobre este documento o sobre lo que la aplicación hace en el teléfono, el punto de contacto es hola@zentrix.company.
+Quién responde de qué. La información que la aplicación recoge se envía al sistema de gestión de la empresa que contrató Zentrix Sales, que es donde vive y donde ella la conserva conforme a sus propias políticas y a la ley. Esa empresa es quien decide qué datos comerciales carga y para qué los usa. GUUAO LLC provee la aplicación y trata esa información por cuenta de ella, sin usarla para fines propios. Para cualquier consulta sobre este documento o sobre lo que la aplicación hace en el teléfono, el punto de contacto es [hola@zentrix.company](mailto:hola@zentrix.company).
 
 El tratamiento de datos que aquí se describe forma parte de la relación de trabajo entre el vendedor y su empleador, y se apoya en el interés legítimo de éste en organizar, coordinar y verificar la actividad comercial de campo.
 
@@ -5123,13 +4922,13 @@ Fuera de la empresa, únicamente con los proveedores identificados en la cláusu
 
 Sólo puede cederse información a otros terceros cuando lo exija una autoridad competente en el marco de la ley venezolana.
 
-El sitio web. Esta política habla de la aplicación. El sitio zentrix.company, desde el que probablemente la estás leyendo, no muestra publicidad y solo mide las visitas con Google Analytics si la persona lo acepta en el aviso de cookies; sin ese permiso no pone cookies ni carga nada de Google. Qué se mide y cómo retirar el permiso está en Cookies y analítica. Como cualquier sitio, lo sirve un proveedor de alojamiento (GitHub, con Cloudflare delante), que ve la dirección IP de la conexión para poder entregar la página.
+El sitio web. Esta política habla de la aplicación. El sitio zentrix.company, desde el que probablemente la estás leyendo, no muestra publicidad y solo mide las visitas con Google Analytics si la persona lo acepta en el aviso de cookies; sin ese permiso no pone cookies ni carga nada de Google. Qué se mide y cómo retirar el permiso está en [Cookies y analítica](https://zentrix.company/privacidad/#cookies). Como cualquier sitio, lo sirve un proveedor de alojamiento (GitHub, con Cloudflare delante), que ve la dirección IP de la conexión para poder entregar la página.
 
 Una excepción que depende del vendedor: la aplicación permite generar una nota de pedido en PDF —que incluye el nombre del cliente, las líneas del pedido, los precios, el total y, si la hubo, su firma— y enviarla desde el propio teléfono a través de las aplicaciones instaladas (por ejemplo, mensajería). Ese envío lo decide y ejecuta el vendedor, y su destino queda fuera del control de la aplicación. La empresa instruye a su personal para que sólo comparta ese documento con el cliente al que corresponde.
 
 ### 7. Derechos: acceso, corrección y eliminación
 
-Cualquier persona cuyos datos sean tratados a través de Zentrix Sales —vendedores y clientes de la empresa— puede solicitar el acceso, la corrección o la eliminación de sus datos escribiendo a hola@zentrix.company, indicando en el asunto Solicitud de datos — Zentrix Sales y aportando información suficiente para identificarse.
+Cualquier persona cuyos datos sean tratados a través de Zentrix Sales —vendedores y clientes de la empresa— puede solicitar el acceso, la corrección o la eliminación de sus datos escribiendo a [hola@zentrix.company](mailto:hola@zentrix.company), indicando en el asunto Solicitud de datos — Zentrix Sales y aportando información suficiente para identificarse.
 
 La solicitud se responderá en un plazo máximo de treinta (30) días hábiles. La eliminación puede estar limitada cuando la conservación sea necesaria para cumplir obligaciones legales, contables o fiscales, o para la defensa de reclamaciones; en ese caso se indicará el motivo y el plazo.
 
@@ -5155,16 +4954,14 @@ Nota de cambio (13 de octubre de 2026). La aplicación pasó a llamarse Zentrix 
 
 ### 11. Contacto
 
-GUUAO LLC hola@zentrix.company
+GUUAO LLC [hola@zentrix.company](mailto:hola@zentrix.company)
 
 Zentrix Sales
 
 
 ---
 
-## Soporte — Zentrix Sales
-
-URL: https://zentrix.company/sales/soporte/
+## [Soporte — Zentrix Sales](https://zentrix.company/sales/soporte/)
 
 Soporte de Zentrix Sales: te contesta una persona en español en menos de un día hábil, por correo, teléfono o WhatsApp. Y cómo pedir tus datos o borrarlos.
 
@@ -5174,9 +4971,9 @@ Zentrix Sales
 
 Te contesta una persona del equipo de Zentrix, en español y en menos de un día hábil.
 
-hola@zentrix.company
+[hola@zentrix.company](mailto:hola@zentrix.company?subject=Soporte%20%E2%80%94%20Zentrix%20Sales)
 
-Teléfono y WhatsApp: +58 412-346 9712.
+Teléfono y WhatsApp: [+58 412-346 9712](https://wa.me/584123469712).
 
 ### Si usas Zentrix Sales en la calle
 
@@ -5184,7 +4981,7 @@ La cuenta te la crea y te la entrega tu empresa: la aplicación no permite regis
 
 Desde la app también puedes escribirnos: en Perfil › Acerca de › Reportar un problema. Cuéntanos qué pasó y con qué cliente por su código, no por su nombre.
 
-Antes de escribir, mira el manual del vendedor: explica pantalla por pantalla qué hace cada cosa.
+Antes de escribir, mira el [manual del vendedor](https://zentrix.company/sales/docs/): explica pantalla por pantalla qué hace cada cosa.
 
 ### Si tu empresa ya usa Zentrix Sales
 
@@ -5192,15 +4989,15 @@ Altas y bajas de vendedores, permisos, empresas y almacenes, o la integración c
 
 ### Tus datos: ver, corregir o eliminar
 
-Qué recoge la aplicación, para qué y cuánto tiempo se guarda está en la política de privacidad. Para pedir el acceso, la corrección o la eliminación de tus datos:
+Qué recoge la aplicación, para qué y cuánto tiempo se guarda está en la [política de privacidad](https://zentrix.company/sales/privacidad/). Para pedir el acceso, la corrección o la eliminación de tus datos:
 
-- Escribe a hola@zentrix.company con el asunto Solicitud de datos — Zentrix Sales.
+- Escribe a [hola@zentrix.company](mailto:hola@zentrix.company?subject=Solicitud%20de%20datos%20%E2%80%94%20Zentrix%20Sales) con el asunto Solicitud de datos — Zentrix Sales.
 
 - Indica tu nombre, tu correo de vendedor o tu RIF si eres cliente de una empresa que usa la app, y qué quieres: ver, corregir o eliminar.
 
 - Te respondemos en un máximo de 30 días hábiles.
 
-Lo que se conserva por obligación legal, y por cuánto tiempo, está en la cláusula 7 de la política. Cerrar sesión no elimina datos del servidor: solo retira las credenciales del teléfono.
+Lo que se conserva por obligación legal, y por cuánto tiempo, está en la [cláusula 7 de la política](https://zentrix.company/sales/privacidad/#c7). Cerrar sesión no elimina datos del servidor: solo retira las credenciales del teléfono.
 
 ### Datos de la app
 
@@ -5208,7 +5005,7 @@ Aplicación
 Zentrix Sales (com.leiros.vendoo). Android 7.0 o superior e iOS 15 o superior.
 
 Descarga
-Google Play · App Store
+[Google Play](https://play.google.com/store/apps/details?id=com.leiros.vendoo) · [App Store](https://apps.apple.com/app/id6811065669)
 
 Responsable
 GUUAO LLC
@@ -5217,23 +5014,21 @@ Dirección legal
 10302 NW South River Drive, Medley, FL 33178, Estados Unidos
 
 Correo de soporte
-hola@zentrix.company
+[hola@zentrix.company](mailto:hola@zentrix.company)
 
 Teléfono
-+58 412-346 9712, también por WhatsApp
++58 412-346 9712, también por [WhatsApp](https://wa.me/584123469712)
 
 Tiempo de respuesta
 Menos de un día hábil.
 
 Documentos
-Política de privacidad · Términos de servicio · Manual del vendedor
+[Política de privacidad](https://zentrix.company/sales/privacidad/) · [Términos de servicio](https://zentrix.company/sales/terminos/) · [Manual del vendedor](https://zentrix.company/sales/docs/)
 
 
 ---
 
-## Términos de servicio — Zentrix Sales
-
-URL: https://zentrix.company/sales/terminos/
+## [Términos de servicio — Zentrix Sales](https://zentrix.company/sales/terminos/)
 
 Términos de servicio de Zentrix Sales, la app de fuerza de ventas de campo para Android y iPhone: quién la contrata, quién la usa y qué reglas aplican.
 
@@ -5251,11 +5046,11 @@ GUUAO LLC
 
 Descarga
 
-Google Play (Android) y App Store (iPhone). Los dos enlaces están en la página de Zentrix Sales.
+Google Play (Android) y App Store (iPhone). [Los dos enlaces están en la página de Zentrix Sales](https://zentrix.company/sales/#descargar).
 
 Contacto
 
-hola@zentrix.company
+[hola@zentrix.company](mailto:hola@zentrix.company)
 
 Publicación
 
@@ -5305,9 +5100,9 @@ Contenido
 
 ### 1. Objeto y alcance
 
-Estos términos rigen el uso de Zentrix Sales, la aplicación que GUUAO LLC (en adelante, «el proveedor») desarrolla y distribuye a través de Google Play, para Android, y de App Store, para iPhone. Rigen igual las dos versiones, que son la misma aplicación.
+Estos términos rigen el uso de Zentrix Sales, la aplicación que GUUAO LLC (en adelante, «el proveedor») desarrolla y distribuye a través de [Google Play](https://zentrix.company/sales/#descargar), para Android, y de App Store, para iPhone. Rigen igual las dos versiones, que son la misma aplicación.
 
-Zentrix Sales es una herramienta de trabajo para fuerzas de venta de campo. La contrata una distribuidora o cualquier otra organización con vendedores en la calle (en adelante, «la empresa») para su personal comercial, y quien la usa cada día es cada uno de sus vendedores (en adelante, «el vendedor»). Al iniciar sesión, el vendedor reconoce haber leído este documento y la política de privacidad.
+Zentrix Sales es una herramienta de trabajo para fuerzas de venta de campo. La contrata una distribuidora o cualquier otra organización con vendedores en la calle (en adelante, «la empresa») para su personal comercial, y quien la usa cada día es cada uno de sus vendedores (en adelante, «el vendedor»). Al iniciar sesión, el vendedor reconoce haber leído este documento y la [política de privacidad](https://zentrix.company/sales/privacidad/).
 
 Cualquiera puede descargarla, pero sin cuenta no hace nada. La aplicación no permite crear cuentas ni registrarse: las credenciales las crea y las entrega la empresa que contrató el servicio. Zentrix Sales no es una aplicación de consumo, y su uso por parte del vendedor forma parte de sus funciones: no constituye una relación de consumo entre el vendedor y el proveedor.
 
@@ -5389,7 +5184,7 @@ Los recaudos que el vendedor fotografía son documentos de identidad y fiscales 
 
 ### 10. Registro de la actividad de campo
 
-Zentrix Sales registra la actividad de trabajo: la hora y el lugar de cada visita, el recorrido durante la jornada, los documentos que el vendedor produce y los fallos de la aplicación. Ese registro es la finalidad de la herramienta y está descrito en detalle, con su alcance y sus plazos, en la política de privacidad, que forma parte de estos términos.
+Zentrix Sales registra la actividad de trabajo: la hora y el lugar de cada visita, el recorrido durante la jornada, los documentos que el vendedor produce y los fallos de la aplicación. Ese registro es la finalidad de la herramienta y está descrito en detalle, con su alcance y sus plazos, en la [política de privacidad](https://zentrix.company/sales/privacidad/), que forma parte de estos términos.
 
 La aplicación informa de todo esto dentro de la propia aplicación, antes de solicitar ningún permiso del sistema. El permiso de ubicación es necesario para registrar pedidos y cobros; sin él esas funciones no están disponibles.
 
@@ -5407,7 +5202,7 @@ Zentrix Sales, su nombre, su logotipo, su código y su diseño pertenecen a GUUA
 
 ### 13. Privacidad
 
-El tratamiento de datos personales está descrito en la política de privacidad, que se entiende parte integrante de estos términos. Ahí están también el canal y el plazo para pedir acceso, corrección o eliminación.
+El tratamiento de datos personales está descrito en la [política de privacidad](https://zentrix.company/sales/privacidad/), que se entiende parte integrante de estos términos. Ahí están también el canal y el plazo para pedir acceso, corrección o eliminación.
 
 ### 14. Suspensión y cese del acceso
 
@@ -5431,22 +5226,20 @@ El proveedor puede modificar estos términos. La versión vigente se publica en 
 
 Estos términos se rigen e interpretan conforme a las leyes de la República Bolivariana de Venezuela.
 
-Ante cualquier controversia derivada de estos términos o del uso de la aplicación, las partes procurarán primero una solución amistosa, planteada por escrito a hola@zentrix.company y atendida dentro de los treinta (30) días continuos siguientes. Si no se alcanza acuerdo en ese plazo, la controversia se someterá a los tribunales competentes de la República Bolivariana de Venezuela.
+Ante cualquier controversia derivada de estos términos o del uso de la aplicación, las partes procurarán primero una solución amistosa, planteada por escrito a [hola@zentrix.company](mailto:hola@zentrix.company) y atendida dentro de los treinta (30) días continuos siguientes. Si no se alcanza acuerdo en ese plazo, la controversia se someterá a los tribunales competentes de la República Bolivariana de Venezuela.
 
 Lo anterior no desplaza a la jurisdicción laboral: los conflictos entre el vendedor y su empleador derivados de la relación de trabajo se rigen por la legislación laboral venezolana y se ventilan ante los tribunales del trabajo competentes, sin que este documento pueda alterarlo.
 
 ### 18. Contacto
 
-GUUAO LLC hola@zentrix.company
+GUUAO LLC [hola@zentrix.company](mailto:hola@zentrix.company)
 
 Zentrix Sales
 
 
 ---
 
-## Política de privacidad — Zentrix Work
-
-URL: https://zentrix.company/work/privacidad/
+## [Política de privacidad — Zentrix Work](https://zentrix.company/work/privacidad/)
 
 Qué datos trata Zentrix Work, la app del equipo de tienda, para qué, dónde se guardan, cuánto tiempo se conservan y cómo pedir su eliminación.
 
@@ -5582,11 +5375,11 @@ Algunos de estos proveedores procesan datos fuera de Venezuela, principalmente e
 
 Fuera de eso, los datos solo se entregan a terceros cuando lo exija una autoridad competente conforme a la ley.
 
-El sitio web. Esta política habla de la app. El sitio zentrix.company, desde el que probablemente la estás leyendo, no muestra publicidad y solo mide las visitas con Google Analytics si la persona lo acepta en el aviso de cookies; sin ese permiso no pone cookies ni carga nada de Google. Qué se mide y cómo retirar el permiso está en Cookies y analítica. Como cualquier sitio, lo sirve un proveedor de alojamiento (GitHub, con Cloudflare delante), que ve la dirección IP de la conexión para poder entregar la página.
+El sitio web. Esta política habla de la app. El sitio zentrix.company, desde el que probablemente la estás leyendo, no muestra publicidad y solo mide las visitas con Google Analytics si la persona lo acepta en el aviso de cookies; sin ese permiso no pone cookies ni carga nada de Google. Qué se mide y cómo retirar el permiso está en [Cookies y analítica](https://zentrix.company/privacidad/#cookies). Como cualquier sitio, lo sirve un proveedor de alojamiento (GitHub, con Cloudflare delante), que ve la dirección IP de la conexión para poder entregar la página.
 
 ### 7. Acceso, corrección y eliminación
 
-Cualquier persona cuyos datos pasen por Zentrix Work, sea operador o cliente, puede pedir ver, corregir o eliminar sus datos. Para eso, escribe a soporte@zentrix.company con el asunto Solicitud de datos — Zentrix Work y los datos necesarios para identificarte. El operador también puede pedírselo a su encargado de tienda.
+Cualquier persona cuyos datos pasen por Zentrix Work, sea operador o cliente, puede pedir ver, corregir o eliminar sus datos. Para eso, escribe a [soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Solicitud%20de%20datos%20%E2%80%94%20Zentrix%20Work) con el asunto Solicitud de datos — Zentrix Work y los datos necesarios para identificarte. El operador también puede pedírselo a su encargado de tienda.
 
 Eliminar la cuenta. La app no permite crear cuentas, así que tampoco se eliminan desde ella: las crea y las cierra la empresa. Cuando un operador pide cerrar su cuenta, o deja la empresa, se le retira el acceso y se eliminan sus datos personales. Solo se conservan los que la ley obliga a guardar, como el registro de quién despachó un pedido ya facturado.
 
@@ -5620,14 +5413,12 @@ Nota de cambio (13 de octubre de 2026). La app pasó a llamarse Zentrix Work, la
 
 ### 11. Contacto
 
-GUUAO LLC soporte@zentrix.company
+GUUAO LLC [soporte@zentrix.company](mailto:soporte@zentrix.company)
 
 
 ---
 
-## Soporte — Zentrix Work
-
-URL: https://zentrix.company/work/soporte/
+## [Soporte — Zentrix Work](https://zentrix.company/work/soporte/)
 
 Soporte de Zentrix Work, la app del equipo de tienda: preguntas frecuentes, cómo contactarnos y cómo eliminar tu cuenta o tus datos de la app.
 
@@ -5637,7 +5428,7 @@ Zentrix Work
 
 Para casi todo, tu primer contacto es tu encargado de tienda: es quien te da de alta, te habilita las tareas y puede cortar el acceso si pierdes el teléfono. Para lo demás, escríbenos.
 
-soporte@zentrix.company
+[soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Soporte%20%E2%80%94%20Zentrix%20Work)
 
 Pon en el asunto Soporte — Zentrix Work y cuéntanos tu correo de la app, tu tienda y qué pasó. Si puedes, agrega una captura.
 
@@ -5679,13 +5470,13 @@ Tu acceso se cierra desde el sistema de la empresa y la app deja de funcionar en
 
 La app no permite crear cuentas, así que tampoco se borran desde ella: la cuenta la crea tu empresa y la cierra tu empresa. Para pedirlo:
 
-- Escribe a soporte@zentrix.company con el asunto Solicitud de datos — Zentrix Work, o díselo a tu encargado.
+- Escribe a [soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Solicitud%20de%20datos%20%E2%80%94%20Zentrix%20Work) con el asunto Solicitud de datos — Zentrix Work, o díselo a tu encargado.
 
 - Indica tu nombre y el correo de tu cuenta, y si quieres ver, corregir o eliminar tus datos.
 
 - Te respondemos en un máximo de 30 días hábiles.
 
-Lo que se borra, lo que se conserva por obligación legal y por cuánto tiempo está en la política de privacidad, cláusula 7. Cerrar sesión o desinstalar la app no borra nada del servidor.
+Lo que se borra, lo que se conserva por obligación legal y por cuánto tiempo está en la [política de privacidad, cláusula 7](https://zentrix.company/work/privacidad/#c7). Cerrar sesión o desinstalar la app no borra nada del servidor.
 
 ### Datos de la app
 
@@ -5693,23 +5484,21 @@ Aplicación
 Zentrix Work (com.leiros.guuaowork), para Android.
 
 Descarga
-Google Play
+[Google Play](https://play.google.com/store/apps/details?id=com.leiros.guuaowork)
 
 Responsable
 GUUAO LLC
 
 Correo de soporte
-soporte@zentrix.company
+[soporte@zentrix.company](mailto:soporte@zentrix.company)
 
 Documentos
-Política de privacidad · Términos de uso · Manual
+[Política de privacidad](https://zentrix.company/work/privacidad/) · [Términos de uso](https://zentrix.company/work/terminos/) · [Manual](https://zentrix.company/work/docs/)
 
 
 ---
 
-## Términos de uso — Zentrix Work
-
-URL: https://zentrix.company/work/terminos/
+## [Términos de uso — Zentrix Work](https://zentrix.company/work/terminos/)
 
 Términos de uso de Zentrix Work, la app Android del equipo de tienda: quién puede usarla, cómo se da la cuenta de operador y qué reglas aplican.
 
@@ -5729,7 +5518,7 @@ Solo personas mayores de edad a las que la empresa les haya dado una cuenta de o
 
 ### 3. Tu cuenta, tu contraseña y tu PIN
 
-Tu cuenta es personal e intransferible. No compartas tu contraseña ni tu PIN y no dejes que otra persona trabaje con tu sesión: cada operación queda registrada a tu nombre. Si pierdes el teléfono o crees que alguien usó tu cuenta, avisa de inmediato a tu encargado o escribe a soporte@zentrix.company.
+Tu cuenta es personal e intransferible. No compartas tu contraseña ni tu PIN y no dejes que otra persona trabaje con tu sesión: cada operación queda registrada a tu nombre. Si pierdes el teléfono o crees que alguien usó tu cuenta, avisa de inmediato a tu encargado o escribe a [soporte@zentrix.company](mailto:soporte@zentrix.company).
 
 ### 4. Uso permitido
 
@@ -5755,7 +5544,7 @@ Hacemos lo posible por que la app esté disponible, pero puede haber cortes, fal
 
 ### 8. Suspensión y fin del acceso
 
-La empresa puede suspender o cerrar tu acceso cuando termine tu relación de trabajo, si incumples estos términos o para proteger la seguridad de clientes y datos. Qué pasa con tus datos después está en la política de privacidad.
+La empresa puede suspender o cerrar tu acceso cuando termine tu relación de trabajo, si incumples estos términos o para proteger la seguridad de clientes y datos. Qué pasa con tus datos después está en la [política de privacidad](https://zentrix.company/work/privacidad/#c7).
 
 ### 9. Propiedad intelectual
 
@@ -5763,7 +5552,7 @@ La app, su diseño y su marca son de GUUAO LLC. Te damos permiso para usarlos so
 
 ### 10. Privacidad
 
-Qué datos usa la app y para qué está en la política de privacidad, que forma parte de estos términos.
+Qué datos usa la app y para qué está en la [política de privacidad](https://zentrix.company/work/privacidad/), que forma parte de estos términos.
 
 ### 11. Responsabilidad
 
@@ -5775,8 +5564,8 @@ Podemos actualizar estos términos. La versión vigente es la publicada en esta 
 
 ### 13. Ley aplicable
 
-Estos términos se rigen por las leyes de la República Bolivariana de Venezuela. Primero intentaremos resolver cualquier diferencia de forma amistosa, escribiendo a soporte@zentrix.company. Si no hay acuerdo en 30 días continuos, la controversia irá a los tribunales competentes de Venezuela. Los conflictos derivados de la relación de trabajo siguen rigiéndose por la legislación laboral venezolana.
+Estos términos se rigen por las leyes de la República Bolivariana de Venezuela. Primero intentaremos resolver cualquier diferencia de forma amistosa, escribiendo a [soporte@zentrix.company](mailto:soporte@zentrix.company). Si no hay acuerdo en 30 días continuos, la controversia irá a los tribunales competentes de Venezuela. Los conflictos derivados de la relación de trabajo siguen rigiéndose por la legislación laboral venezolana.
 
 ### 14. Contacto
 
-GUUAO LLC soporte@zentrix.company
+GUUAO LLC [soporte@zentrix.company](mailto:soporte@zentrix.company)
