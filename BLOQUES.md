@@ -52,15 +52,11 @@ Banda negra con los logotipos oficiales en blanco y su nombre (Flutter, Next.js,
 - **Ruta:** pasos numerados en Inter 800, con un trazo que se dibuja de izquierda a derecha (de arriba abajo en móvil) y conectores con el corte diagonal; el último en lima. **Cómo trabajamos** y **Cómo funciona**.
 - **Cifras:** números enormes que cuentan al aparecer, la barra lima que se estira y separadores inclinados. **Zentrix en cifras** de la portada.
 
-### 6. Contacto — `bloques.contacto(lang)`
+### 6. Contacto — `bloques.hablemos(lang)` y `bloques.contacto(lang)`
 
-Un panel negro con jerarquía clara y un lugar al lado, en vez de tarjetas iguales:
-
-- **Panel:** titular, la promesa destacada con la barra lima («Respondemos en menos de un día hábil»), dos botones grandes con iconos propios (WhatsApp en lima, correo en contorno) y, en una línea, soporte y manuales.
-- **Lugar:** un mapa estático ilustrado en SVG (no es cartografía, ni Google Maps embebido ni iframes) y la dirección en tres líneas con microdatos `PostalAddress`, con los enlaces «Cómo llegar» a Google Maps y Apple Maps.
-- **Datos:** horario, idiomas y dónde está el equipo, en una lista limpia.
-
-Se usa en la portada (`<!--BQ:CONTACTO-->`) y en `/contacto/`. El tiempo de respuesta es un atributo del contacto y va en el panel, no en la dirección.
+- **Hablemos** (`hablemos`): la banda que se repite (portada, marcador `<!--BQ:CONTACTO-->`, que genera la sección entera con `id="contacto"`/`"contact"`). Un panel negro con la esquina cortada: a la izquierda el titular grande («Cuéntanos cómo trabaja tu equipo.»), la barra lima y una sola línea de apoyo («Te responde una persona, en español, en menos de un día hábil.»); a la derecha dos grupos de botones reales: **Escríbenos** (correo hola@ en lima y WhatsApp en contorno) y **¿Ya usas nuestras apps?** (soporte@ y los manuales de Work y Sales en pastillas). **No lleva dirección.**
+- **Contacto** (`contacto`, solo en `/contacto/` y `/en/contact/`): la misma banda con el titular de la página y, debajo, el lugar (mapa estático ilustrado en SVG, sin iframes, y la dirección en tres líneas con microdatos `PostalAddress` y los enlaces a Google Maps y Apple Maps) y los datos (horario, idiomas y dónde está el equipo).
+- **La dirección** se ve solo en `/contacto/`, `/en/contact/` y en las páginas de soporte que la declaran como dirección legal. En el resto vive únicamente en el JSON-LD de Organization (`PostalAddress`). No volver a ponerla en la banda (Victor, 14-10-2026).
 
 ## Cómo añadir un bloque
 
