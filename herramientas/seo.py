@@ -115,30 +115,23 @@ PAGINAS = {
                    'Contacto — Proyectos, demostraciones y soporte | Zentrix',
                    'Escribe a hola@zentrix.company por proyectos y demostraciones, a '
                    'soporte@zentrix.company por soporte, o por WhatsApp. Te responde una persona.'),
+    '/soporte/': ('soporte Zentrix',
+                  'Soporte — Preguntas, acceso y tus datos | Zentrix',
+                  'Soporte de Zentrix Work y Zentrix Sales: preguntas frecuentes, acceso, manuales y cómo '
+                  'eliminar tu cuenta o tus datos. Te responde una persona en un día hábil.'),
+    '/legal/': (None, 'Legal — Privacidad y términos | Zentrix',
+                'Las políticas de privacidad y los términos de Zentrix Work y Zentrix Sales, y la privacidad '
+                'y las cookies del sitio web zentrix.company, en un solo índice.'),
     '/privacidad/': (None, 'Privacidad del sitio — Zentrix',
                      'Qué mide zentrix.company y con qué herramienta, sin publicidad, y cómo retirar el '
                      'consentimiento de cookies. Las apps tienen su propia política.'),
     # Zentrix Sales: contacto, legales y versión en inglés
-    '/sales/contacto/': ('demostración de app de ventas',
-                         'Contacto — Zentrix Sales',
-                         'Pide una demostración de Zentrix Sales con tus datos: cuéntanos cómo vende hoy tu '
-                         'equipo. O escríbenos por correo, teléfono o WhatsApp, sin compromiso.'),
-    '/en/sales/contact/': ('field sales app demo',
-                               'Contact — Zentrix Sales',
-                               'Request a Zentrix Sales demo on your own data: tell us how your team sells today. '
-                               'Or write to us by email, phone or WhatsApp, no strings attached.'),
     '/sales/privacidad/': (None, 'Política de privacidad — Zentrix Sales',
                            'Qué datos recoge Zentrix Sales, la app de fuerza de ventas, para qué, dónde se '
                            'almacenan, cuánto tiempo se conservan y cómo ejercer tus derechos.'),
     '/en/sales/privacy/': (None, 'Privacy policy — Zentrix Sales',
                                'What data Zentrix Sales, the field sales app, collects, why, where it is stored, '
                                'how long it is kept and how to exercise your rights over it.'),
-    '/sales/soporte/': (None, 'Soporte — Zentrix Sales',
-                        'Soporte de Zentrix Sales: te contesta una persona en español en menos de un día hábil, '
-                        'por correo, teléfono o WhatsApp. Y cómo pedir tus datos o borrarlos.'),
-    '/en/sales/support/': (None, 'Support — Zentrix Sales',
-                               'Zentrix Sales support: a person replies in under one business day by email, phone '
-                               'or WhatsApp. And how to request access to or deletion of your data.'),
     '/sales/terminos/': (None, 'Términos de servicio — Zentrix Sales',
                          'Términos de servicio de Zentrix Sales, la app de fuerza de ventas de campo para '
                          'Android y iPhone: quién la contrata, quién la usa y qué reglas aplican.'),
@@ -149,9 +142,6 @@ PAGINAS = {
     '/work/privacidad/': (None, 'Política de privacidad — Zentrix Work',
                           'Qué datos trata Zentrix Work, la app del equipo de tienda, para qué, dónde se '
                           'guardan, cuánto tiempo se conservan y cómo pedir su eliminación.'),
-    '/work/soporte/': (None, 'Soporte — Zentrix Work',
-                       'Soporte de Zentrix Work, la app del equipo de tienda: preguntas frecuentes, cómo '
-                       'contactarnos y cómo eliminar tu cuenta o tus datos de la app.'),
     '/work/terminos/': (None, 'Términos de uso — Zentrix Work',
                         'Términos de uso de Zentrix Work, la app Android del equipo de tienda: quién puede '
                         'usarla, cómo se da la cuenta de operador y qué reglas aplican.'),
@@ -276,12 +266,15 @@ PAGINAS.update({
     '/en/work/privacy/': (None,
         'Privacy policy — Zentrix Work',
         'What the Zentrix Work app collects, why, who sees it and for how long, how it is protected, and how to ask for access to your data or for its deletion.'),
-    '/en/work/support/': (None,
-        'Support — Zentrix Work',
-        'Help for Zentrix Work: signing in, common questions about shifts and orders, who to contact at your company, and how to request deletion of your data.'),
     '/en/work/terms/': (None,
         'Terms of use — Zentrix Work',
         'The terms of use of the Zentrix Work app for store staff: what it is for, what you agree to when using it, the data involved and who provides the app.'),
+    '/en/support/': ('Zentrix support',
+        'Support — Questions, access and your data | Zentrix',
+        'Zentrix Work and Zentrix Sales support: common questions, access, manuals and how to delete your account or your data. A person replies within one business day.'),
+    '/en/legal/': (None,
+        'Legal — Privacy and terms | Zentrix',
+        'The privacy policies and terms of Zentrix Work and Zentrix Sales, plus the privacy and cookie policy of the zentrix.company website, in one index.'),
     '/en/privacy/': (None,
         'Website privacy — Zentrix',
         'What zentrix.company measures and with which tool, with no advertising, and how to withdraw cookie consent. The apps have their own privacy policies.'),
@@ -291,9 +284,7 @@ PAGINAS.update({
 # hreflang los pone generar.py. x-default apunta a la versión en español.
 PARES_LEGADO = [
     ('/sales/', '/sales/en/'),
-    ('/sales/contacto/', '/sales/en/contact.html'),
     ('/sales/privacidad/', '/sales/en/privacy.html'),
-    ('/sales/soporte/', '/sales/en/support.html'),
     ('/sales/terminos/', '/sales/en/terms.html'),
 ]
 
@@ -411,7 +402,7 @@ def faq(cuerpo):
     bloque = re.search(r'<div class="preguntas[^"]*">([\s\S]*?)</div>', main)
     if bloque:  # preguntas en <details><summary>…</summary>respuesta</details>
         qs = [{'@type': 'Question', 'name': texto(q), 'acceptedAnswer': {'@type': 'Answer', 'text': texto(r)}}
-              for q, r in re.findall(r'<details>\s*<summary>([\s\S]*?)</summary>([\s\S]*?)</details>', bloque.group(1))]
+              for q, r in re.findall(r'<details[^>]*>\s*<summary>([\s\S]*?)</summary>([\s\S]*?)</details>', bloque.group(1))]
         return {'@type': 'FAQPage', 'mainEntity': qs} if qs else None
     trozos = re.split(r'(<h2[^>]*>[\s\S]*?</h2>)', main)
     preguntas = []
@@ -486,6 +477,9 @@ def jsonld(ruta, titulo, descripcion, cuerpo, lang):
                 'softwareRequirements': 'Odoo® 19', 'publisher': org_ref(),
             })
         grafo.append(servicio)
+    if plantilla in ('/contacto/', '/contact/'):
+        grafo.append({'@type': 'ContactPage', '@id': url + '#pagina', 'name': nombre, 'url': url, 'inLanguage': lang,
+                      'description': descripcion, 'about': {'@id': ORG_ID}})
     if ruta.endswith('/dudas.html') or 'class="preguntas' in cuerpo:
         f = faq(cuerpo)
         if f:

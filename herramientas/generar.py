@@ -24,6 +24,7 @@ import bloques as BQ  # noqa: E402
 import seo  # noqa: E402  — title, description y JSON-LD (último paso de cada página)
 import sitemap as mapa  # noqa: E402  — sitemap.xml desde el HTML, con lastmod de git
 import agentes  # noqa: E402  — robots.txt, /.well-known/ y <link> para agentes de IA
+import ayuda  # noqa: E402  — /soporte/, /legal/ y el selector de motivo de /contacto/
 
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 MULTI = (RAIZ / 'en' / 'index.html').exists()  # fase 3: el sitio completo en inglés bajo /en/
@@ -80,7 +81,8 @@ def seccion_de(ruta):
             return 'productos', clave
     m = {'/soluciones/': 'soluciones', '/solutions/': 'soluciones', '/clientes/': 'clientes', '/customers/': 'clientes',
          '/recursos/': 'recursos', '/resources/': 'recursos', '/nosotros/': 'nosotros', '/about/': 'nosotros',
-         '/contacto/': 'contacto', '/contact/': 'contacto'}
+         '/contacto/': 'contacto', '/contact/': 'contacto', '/soporte/': 'recursos', '/support/': 'recursos',
+         '/legal/': 'recursos'}
     for k, v in m.items():
         if r.startswith(k):
             return v, None
@@ -183,20 +185,18 @@ def mega_recursos(lang):
         aprende = [it(Lx('/work/docs/', lang), 'libro', t['manual_work'], 'Step by step for store teams' + nota),
                    it(Lx('/sales/docs/', lang), 'libro', t['manual_sales'], 'Step by step for field reps' + nota),
                    it('/llms.txt', 'documento', 'llms.txt', 'Zentrix explained for AI models')]
-        ayuda = [it(Lx('/work/soporte/', lang), 'ayuda', t['soporte_work'], 'Questions, access and your data'),
-                 it(Lx('/sales/soporte/', lang), 'ayuda', t['soporte_sales'], 'Questions, access and your data'),
+        ayuda = [it(Lx('/soporte/', lang), 'ayuda', 'Support center', 'Questions, access, manuals and your data, for every app'),
                  it(Lx('/contacto/', lang), 'correo', t['contacto'], 'A person replies within one business day')]
-        legal = [it(Lx('/work/privacidad/', lang), 'escudo', 'Zentrix Work', 'Privacy and terms'),
-                 it(Lx('/sales/privacidad/', lang), 'escudo', 'Zentrix Sales', 'Privacy and terms')]
+        legal = [it(Lx('/legal/#privacidad', lang), 'escudo', 'Privacy', 'The policy of each app and of the website'),
+                 it(Lx('/legal/#terminos', lang), 'documento', 'Terms', 'The terms of each app')]
     else:
         aprende = [it('/work/docs/', 'libro', t['manual_work'], 'Paso a paso para el equipo de tienda'),
                    it('/sales/docs/', 'libro', t['manual_sales'], 'Paso a paso para el vendedor'),
                    it('/llms.txt', 'documento', 'llms.txt', 'Zentrix explicado para modelos de IA')]
-        ayuda = [it('/work/soporte/', 'ayuda', t['soporte_work'], 'Dudas, acceso y tus datos'),
-                 it('/sales/soporte/', 'ayuda', t['soporte_sales'], 'Dudas, acceso y tus datos'),
+        ayuda = [it('/soporte/', 'ayuda', 'Centro de soporte', 'Dudas, acceso, manuales y tus datos, de cada app'),
                  it('/contacto/', 'correo', t['contacto'], 'Te responde una persona en un día hábil')]
-        legal = [it('/work/privacidad/', 'escudo', 'Zentrix Work', 'Privacidad y términos'),
-                 it('/sales/privacidad/', 'escudo', 'Zentrix Sales', 'Privacidad y términos')]
+        legal = [it('/legal/#privacidad', 'escudo', 'Privacidad', 'La política de cada app y del sitio web'),
+                 it('/legal/#terminos', 'documento', 'Términos', 'Los términos de cada app')]
     return (f'<div class="mega__panel"><div class="envoltura mega__reja mega__reja--recursos">'
             f'<div><p class="mega__titulo">{t["aprende"]}</p><ul class="mega__lista">{"".join(aprende)}</ul></div>'
             f'<div><p class="mega__titulo">{t["ayuda"]}</p><ul class="mega__lista">{"".join(ayuda)}</ul></div>'
@@ -246,7 +246,6 @@ def nav(ruta):
 def pie(ruta):
     lang = lang_de(ruta)
     t = T[lang]
-    suite = ''.join(f'<li>{icono_producto(c, 22)}</li>' for c, *_ in PRODUCTOS)
     prods = []
     for clave, href, nombre, *_ in PRODUCTOS:
         if clave == 'traza':
@@ -260,17 +259,10 @@ def pie(ruta):
     nota = t['nota_es'] if lang == 'en' else ''
     recursos = [(Lx('/recursos/', lang), t['centro'], ''), (Lx('/work/docs/', lang), t['manual_work'] + nota, es_lang),
                 (Lx('/sales/docs/', lang), t['manual_sales'] + nota, es_lang)]
-    legal_def = [('Zentrix Work', [('privacidad', '/work/privacidad/'), ('soporte', '/work/soporte/'), ('terminos', '/work/terminos/')]),
-                 ('Zentrix Sales', [('privacidad', '/sales/privacidad/'), ('soporte', '/sales/soporte/'), ('terminos', '/sales/terminos/'), ('contacto_l', '/sales/contacto/')])]
-    grupos = []
-    for prod, enlaces in legal_def:
-        links = []
-        for k, r in enlaces:
-            href = Lx(r, lang)
-            if not MULTI and lang == 'en' and r in LEGADO_EN:
-                href = LEGADO_EN[r]
-            links.append(f'<li><a href="{href}">{t[k]}</a></li>')
-        grupos.append(f'<div class="pie__grupo"><h3>{prod}</h3><ul class="pie__enlinea">{"".join(links)}</ul></div>')
+    # Legal y soporte: una sola página de soporte y de contacto; privacidad y términos van al índice
+    # /legal/, que lista las políticas de cada app (sus URL no cambian: las declaran las tiendas).
+    legal = [(Lx('/soporte/', lang), t['soporte']), (Lx('/contacto/', lang), t['contacto_l']),
+             (Lx('/legal/#privacidad', lang), t['privacidad']), (Lx('/legal/#terminos', lang), t['terminos'])]
     correo = BQ.icono('correo', 'pie__icono mega-ilu')
     whatsapp = BQ.icono('whatsapp', 'pie__icono mega-ilu')
     return (
@@ -278,7 +270,6 @@ def pie(ruta):
         '      <div class="pie__marca">\n'
         f'        <img class="pie__logo" src="/assets/img/logos/zentrix-blanco.svg" alt="Zentrix" width="110" height="22" loading="lazy">\n'
         f'        <p class="pie__lema">{t["lema"]}</p>\n'
-        f'        <ul class="pie__suite" aria-label="{t["suite"]}">{suite}</ul>\n'
         '      </div>\n'
         '      <div class="pie__col pie__col--productos">\n'
         f'        <h2>{t["productos"]}</h2>\n        <ul class="pie__productos">{"".join(prods)}</ul>\n      </div>\n'
@@ -287,7 +278,7 @@ def pie(ruta):
         '      <div class="pie__col pie__col--recursos">\n'
         f'        <h2>{t["recursos"]}</h2>\n        <ul>{"".join(f"<li><a href=\"{h}\"{x}>{n}</a></li>" for h, n, x in recursos)}</ul>\n      </div>\n'
         '      <div class="pie__col pie__col--legal">\n'
-        f'        <h2>{t["legal"]}</h2>\n        {"".join(grupos)}\n      </div>\n'
+        f'        <h2>{t["legal"]}</h2>\n        <ul>{"".join(f"<li><a href=\"{h}\">{n}</a></li>" for h, n in legal)}</ul>\n      </div>\n'
         '      <div class="pie__col pie__col--contacto">\n'
         f'        <h2>{t["contacto"]}</h2>\n'
         '        <ul class="pie__contacto">'
@@ -386,7 +377,7 @@ def procesar(s, ruta):
 
 
 # ── Plantilla de las páginas generadas ──────────────────────────────────────
-def pagina(ruta, titulo, descripcion, cuerpo, og='og.png', logo=None):
+def pagina(ruta, titulo, descripcion, cuerpo, og='og.png', logo=None, css=()):
     lang = lang_de(ruta)
     loc = 'en_US' if lang == 'en' else 'es_VE'
     saltar = 'Skip to content' if lang == 'en' else 'Saltar al contenido'
@@ -415,8 +406,8 @@ def pagina(ruta, titulo, descripcion, cuerpo, og='og.png', logo=None):
   <link rel="preload" href="/assets/fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/inter-800.woff2" as="font" type="font/woff2" crossorigin>
   <script>document.documentElement.classList.add('js')</script>
-  <link rel="stylesheet" href="/assets/css/sitio.css?v=18">
-  <script src="/assets/js/sitio.js?v=1" defer></script>
+  <link rel="stylesheet" href="/assets/css/sitio.css?v=19">
+  <script src="/assets/js/sitio.js?v=1" defer></script>{''.join(f'{chr(10)}  <link rel="stylesheet" href="{c}">' for c in css)}
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Zentrix">
   <meta property="og:locale" content="{loc}">
@@ -811,8 +802,8 @@ def pag_recursos(lang):
                 (Lx('/work/docs/', lang), 'libro', 'Zentrix Work manual' + nota, 'Shifts, orders, picking, delivery, returns and settings, for store teams.', f'{MONO}/work_icono.svg'),
                 (Lx('/sales/docs/', lang), 'libro', 'Zentrix Sales manual' + nota, 'Route, visits, orders, collections and working offline, for field reps.', f'{MONO}/sales_icono.svg')]),
             ('soporte', 'Support', 'When something doesn’t work.', [
-                (Lx('/work/soporte/', lang), 'ayuda', 'Zentrix Work support', 'Access, common questions and how to delete your data.', None),
-                (Lx('/sales/soporte/', lang), 'ayuda', 'Zentrix Sales support', 'Access, common questions and how to delete your data.', None),
+                (Lx('/soporte/#work', lang), 'ayuda', 'Zentrix Work support', 'Access, common questions and how to delete your account.', None),
+                (Lx('/soporte/#sales', lang), 'ayuda', 'Zentrix Sales support', 'Access, common questions and how to delete your account.', None),
                 (Lx('/contacto/', lang), 'correo', 'Contact', 'Write to support@ or WhatsApp: a person replies.', None)]),
             ('legal', 'Legal', 'What we do with data, in plain words.', [
                 (Lx('/work/privacidad/', lang), 'escudo', 'Zentrix Work privacy', 'What the app collects, why and for how long.', None),
@@ -835,8 +826,8 @@ def pag_recursos(lang):
                 ('/work/docs/', 'libro', 'Manual de Zentrix Work', 'Turno, pedidos, preparación, entrega, devoluciones y ajustes, para el equipo de tienda.', f'{MONO}/work_icono.svg'),
                 ('/sales/docs/', 'libro', 'Manual de Zentrix Sales', 'Ruta, visitas, pedidos, cobranza y trabajo sin señal, para el vendedor.', f'{MONO}/sales_icono.svg')]),
             ('soporte', 'Soporte', 'Cuando algo no funciona.', [
-                ('/work/soporte/', 'ayuda', 'Soporte de Zentrix Work', 'Acceso, dudas frecuentes y cómo eliminar tus datos.', None),
-                ('/sales/soporte/', 'ayuda', 'Soporte de Zentrix Sales', 'Acceso, dudas frecuentes y cómo eliminar tus datos.', None),
+                ('/soporte/#work', 'ayuda', 'Soporte de Zentrix Work', 'Acceso, dudas frecuentes y cómo eliminar tu cuenta.', None),
+                ('/soporte/#sales', 'ayuda', 'Soporte de Zentrix Sales', 'Acceso, dudas frecuentes y cómo eliminar tu cuenta.', None),
                 ('/contacto/', 'correo', 'Contacto', 'Escribe a soporte@ o por WhatsApp: te responde una persona.', None)]),
             ('legal', 'Legal', 'Qué hacemos con los datos, en palabras claras.', [
                 ('/work/privacidad/', 'escudo', 'Privacidad de Zentrix Work', 'Qué recoge la app, para qué y por cuánto tiempo.', None),
@@ -971,12 +962,36 @@ def pag_contacto(lang):
         titulo, desc = 'Contacto — Zentrix', 'Escribe a Zentrix: hola@zentrix.company para proyectos y demostraciones, soporte@zentrix.company para soporte, o por WhatsApp. Te responde una persona en menos de un día hábil.'
     cuerpo = f'''{h}
 
+{ayuda.selector_motivo(lang)}
+
 <section class="seccion" aria-labelledby="canales-t">
   <div class="envoltura">
     {BQ.contacto(lang, ante=tx[0], titulo=tx[1])}
   </div>
 </section>'''
-    return ruta, pagina(ruta, titulo, desc, cuerpo)
+    return ruta, pagina(ruta, titulo, desc, cuerpo, css=('/assets/css/ayuda.css?v=1',))
+
+
+def pag_soporte(lang):
+    """Centro de soporte de toda la suite (herramientas/ayuda.py)."""
+    ruta = ruta_pagina('/soporte/', lang)
+    if lang == 'en':
+        titulo, desc = 'Support — Zentrix', ('Zentrix support: common questions, access, manuals and how to delete your '
+                                              'Zentrix Work or Zentrix Sales account. A person replies within one business day.')
+    else:
+        titulo, desc = 'Soporte — Zentrix', ('Soporte de Zentrix: preguntas frecuentes, acceso, manuales y cómo eliminar tu '
+                                              'cuenta de Zentrix Work o Zentrix Sales. Te responde una persona en un día hábil.')
+    return ruta, pagina(ruta, titulo, desc, ayuda.cuerpo_soporte(lang, sys.modules[__name__]), css=('/assets/css/ayuda.css?v=1',))
+
+
+def pag_legal(lang):
+    """Índice de las políticas de privacidad y los términos de cada app y del sitio."""
+    ruta = ruta_pagina('/legal/', lang)
+    if lang == 'en':
+        titulo, desc = 'Legal — Zentrix', 'Privacy policies and terms of Zentrix Work, Zentrix Sales and the zentrix.company website.'
+    else:
+        titulo, desc = 'Legal — Zentrix', 'Políticas de privacidad y términos de Zentrix Work, Zentrix Sales y el sitio web zentrix.company.'
+    return ruta, pagina(ruta, titulo, desc, ayuda.cuerpo_legal(lang, sys.modules[__name__]), css=('/assets/css/ayuda.css?v=1',))
 
 
 def pag_manual_en(prod):
@@ -1018,8 +1033,8 @@ REDIRECCIONES = [
     ('/logistica/', '/logistics/', '14-10-2026', 'El producto se llama «Zentrix Logistics»: el apellido va en inglés, como los demás.'),
     ('/about.html', '/nosotros/', '14-10-2026', 'eqnio.com → zentrix.company: «Sobre Equinoccio».'),
     ('/contact.html', '/contacto/', '14-10-2026', 'eqnio.com → zentrix.company: contacto.'),
-    ('/privacy.html', '/recursos/#legal', '14-10-2026', 'eqnio.com → zentrix.company: la privacidad vive en cada producto.'),
-    ('/terms.html', '/recursos/#legal', '14-10-2026', 'eqnio.com → zentrix.company: los términos viven en cada producto.'),
+    ('/privacy.html', '/legal/#privacidad', '14-10-2026', 'eqnio.com → zentrix.company: índice de las políticas de privacidad.'),
+    ('/terms.html', '/legal/#terminos', '14-10-2026', 'eqnio.com → zentrix.company: índice de los términos.'),
     ('/odoo-venezuela.html', '/soluciones/odoo-venezuela/', '14-10-2026', 'eqnio.com → zentrix.company: servicio.'),
     ('/desarrollo-de-software.html', '/soluciones/desarrollo-de-software/', '14-10-2026', 'eqnio.com → zentrix.company: servicio.'),
     ('/auditoria-tecnica.html', '/soluciones/auditoria-tecnica/', '14-10-2026', 'eqnio.com → zentrix.company: servicio.'),
@@ -1033,13 +1048,43 @@ if MULTI:
         ('/sales/en/index.html', '/en/sales/', '15-10-2026', 'Ídem.'),
         ('/sales/en/privacy.html', '/en/sales/privacy/', '15-10-2026', 'Ídem.'),
         ('/sales/en/terms.html', '/en/sales/terms/', '15-10-2026', 'Ídem.'),
-        ('/sales/en/support.html', '/en/sales/support/', '15-10-2026', 'Ídem.'),
-        ('/sales/en/contact.html', '/en/sales/contact/', '15-10-2026', 'Ídem.'),
+        ('/sales/en/support.html', '/en/support/#sales', '15-10-2026', 'Ídem; desde el 16-10-2026, al soporte unificado.'),
+        ('/sales/en/contact.html', '/en/contact/?producto=sales#motivo', '15-10-2026', 'Ídem; desde el 16-10-2026, al contacto unificado.'),
+        # Soporte y contacto unificados (16-10-2026). Las fichas de las tiendas y las reglas de Cloudflare
+        # de vendooapp.com apuntan a /sales/soporte/ y /sales/contacto/: siguen respondiendo aquí.
+        ('/work/soporte/', '/soporte/#work', '16-10-2026', 'Soporte unificado de la suite.'),
+        ('/sales/soporte/', '/soporte/#sales', '16-10-2026', 'Soporte unificado de la suite.'),
+        ('/sales/contacto/', '/contacto/?producto=sales#motivo', '16-10-2026', 'Contacto unificado, con el motivo «Ventas o demostración» y Zentrix Sales.'),
+        ('/en/work/support/', '/en/support/#work', '16-10-2026', 'Soporte unificado de la suite.'),
+        ('/en/sales/support/', '/en/support/#sales', '16-10-2026', 'Soporte unificado de la suite.'),
+        ('/en/sales/contact/', '/en/contact/?producto=sales#motivo', '16-10-2026', 'Contacto unificado.'),
     ]
+
+# Anclas de las páginas viejas → ancla (o ruta) nueva. La página de redirección las traduce.
+ALIAS_REDIR = {
+    '/work/soporte/': ayuda.ALIAS['work_es'],
+    '/sales/soporte/': ayuda.ALIAS['sales_es'],
+    '/en/work/support/': ayuda.ALIAS['work_en'],
+    '/en/sales/support/': ayuda.ALIAS['sales_en'],
+    '/sales/en/support.html': ayuda.ALIAS['sales_en'],
+    '/sales/contacto/': {'demo': 'motivo', 'formulario-demo': 'motivo', 'soporte': '/soporte/#sales', 'sop-t': '/soporte/#sales'},
+    '/en/sales/contact/': {'demo': 'motivo', 'formulario-demo': 'motivo', 'support': '/en/support/#sales', 'sop-t': '/en/support/#sales'},
+    '/sales/en/contact.html': {'demo': 'motivo', 'formulario-demo': 'motivo', 'support': '/en/support/#sales', 'sop-t': '/en/support/#sales'},
+}
 
 
 def pagina_redireccion(vieja, nueva):
+    """Meta refresh + location.replace. Conserva la consulta y el ancla de la URL vieja (las
+    anclas viejas se traducen con ALIAS_REDIR) y, si no trae ancla, usa la de la ruta nueva."""
     en = nueva.startswith('/en/')
+    base, _, ancla = nueva.partition('#')
+    base, _, consulta = base.partition('?')
+    alias = json.dumps(ALIAS_REDIR.get(vieja, {}), ensure_ascii=False, sort_keys=True)
+    js = (f'(function(){{var a={alias},h=decodeURIComponent(location.hash.slice(1)),q={consulta!r},'
+          f's=location.search.slice(1),x=h?(a[h]||h):{ancla!r};'
+          f'if(x.charAt(0)==="/"){{location.replace(x);return}}'
+          f'q=q&&s?q+"&"+s:(q||s);location.replace({base!r}+(q?"?"+q:"")+(x?"#"+x:""))}})()')
+    nueva = nueva.replace('&', '&amp;')
     texto = (f'This page has moved to <a href="{nueva}">zentrix.company{nueva}</a>.' if en
              else f'Esta página está ahora en <a href="{nueva}">zentrix.company{nueva}</a>.')
     return f'''<!doctype html>
@@ -1049,9 +1094,9 @@ def pagina_redireccion(vieja, nueva):
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Zentrix</title>
   <meta name="robots" content="noindex, follow">
-  <link rel="canonical" href="{DOMINIO}{nueva}">
+  <link rel="canonical" href="{DOMINIO}{base}">
   <meta http-equiv="refresh" content="0; url={nueva}">
-  <script>location.replace({nueva!r} + location.search + (location.hash || ''))</script>
+  <script>{js}</script>
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <style>body{{margin:0;min-height:100vh;display:grid;place-items:center;font:16px/1.5 system-ui,-apple-system,sans-serif;background:#F5F7FA;color:#090D12;padding:16px;box-sizing:border-box}}a{{color:#244DFF;font-weight:600}}</style>
@@ -1104,9 +1149,9 @@ def llms(lang='es'):
     for prod, nombre in (('work', 'Zentrix Work'), ('sales', 'Zentrix Sales')):
         manuales += [li(f'{t} — {nombre}', DOMINIO + r) for t, r in capitulos(prod)]
     if en:
-        legal = [li('Zentrix Work privacy policy', u('/work/privacidad/')), li('Zentrix Work support', u('/work/soporte/')),
-                 li('Zentrix Work terms', u('/work/terminos/')), li('Zentrix Sales privacy policy', u('/sales/privacidad/')),
-                 li('Zentrix Sales support', u('/sales/soporte/')), li('Zentrix Sales terms', u('/sales/terminos/')),
+        legal = [li('Legal index', u('/legal/'), 'every privacy policy and terms'),
+                 li('Zentrix Work privacy policy', u('/work/privacidad/')), li('Zentrix Work terms', u('/work/terminos/')),
+                 li('Zentrix Sales privacy policy', u('/sales/privacidad/')), li('Zentrix Sales terms', u('/sales/terminos/')),
                  li('Website privacy and cookies', u('/privacidad/'))]
         return f'''# Zentrix
 
@@ -1135,7 +1180,8 @@ Slogan: «Technology to work better». eqnio.com redirects to zentrix.company. S
 
 ## Contact
 
-- [Contact page]({u('/contacto/')}): a person replies in under one business day
+- [Contact page]({u('/contacto/')}): a person replies in under one business day; pick a reason (sales or demo, app support, partnerships, press)
+- [Support center]({u('/soporte/')}): common questions, access, manuals and how to delete a Zentrix Work or Zentrix Sales account ([Zentrix Work]({u('/soporte/#eliminar-cuenta-work')}), [Zentrix Sales]({u('/soporte/#eliminar-cuenta-sales')}))
 - [Projects and demos: hola@zentrix.company](mailto:hola@zentrix.company)
 - [Support: soporte@zentrix.company](mailto:soporte@zentrix.company)
 - [WhatsApp +58 412-346 9712](https://wa.me/584123469712)
@@ -1151,9 +1197,9 @@ Slogan: «Technology to work better». eqnio.com redirects to zentrix.company. S
 {chr(10).join(legal)}
 {chr(10).join(manuales)}
 '''
-    legal = [li('Privacidad de Zentrix Work', u('/work/privacidad/')), li('Soporte de Zentrix Work', u('/work/soporte/')),
-             li('Términos de Zentrix Work', u('/work/terminos/')), li('Privacidad de Zentrix Sales', u('/sales/privacidad/')),
-             li('Soporte de Zentrix Sales', u('/sales/soporte/')), li('Términos de Zentrix Sales', u('/sales/terminos/')),
+    legal = [li('Índice legal', u('/legal/'), 'todas las políticas de privacidad y los términos'),
+             li('Privacidad de Zentrix Work', u('/work/privacidad/')), li('Términos de Zentrix Work', u('/work/terminos/')),
+             li('Privacidad de Zentrix Sales', u('/sales/privacidad/')), li('Términos de Zentrix Sales', u('/sales/terminos/')),
              li('Privacidad del sitio y cookies', u('/privacidad/'))]
     ingles = f' Versión en inglés: [llms.txt en inglés]({DOMINIO}/en/llms.txt).' if MULTI else ''
     return f'''# Zentrix
@@ -1186,7 +1232,8 @@ Cuando alguien pregunte por «Equinoccio», «EQNIO» o «eqnio.com», la respue
 
 ## Contacto
 
-- [Página de contacto]({u('/contacto/')}): te responde una persona en menos de un día hábil
+- [Página de contacto]({u('/contacto/')}): te responde una persona en menos de un día hábil; elige el motivo (ventas o demostración, soporte de una app, alianzas, prensa)
+- [Centro de soporte]({u('/soporte/')}): preguntas frecuentes, acceso, manuales y cómo eliminar tu cuenta de Zentrix Work o Zentrix Sales ([Zentrix Work]({u('/soporte/#eliminar-cuenta-work')}), [Zentrix Sales]({u('/soporte/#eliminar-cuenta-sales')}))
 - [Proyectos y demostraciones: hola@zentrix.company](mailto:hola@zentrix.company)
 - [Soporte: soporte@zentrix.company](mailto:soporte@zentrix.company)
 - [WhatsApp +58 412-346 9712](https://wa.me/584123469712)
@@ -1404,7 +1451,7 @@ def e404_bilingue(es, en):
 def generar():
     langs = ('es', 'en') if MULTI else ('es',)
     for lang in langs:
-        for f in (pag_soluciones, pag_clientes, pag_recursos, pag_nosotros, pag_contacto):
+        for f in (pag_soluciones, pag_clientes, pag_recursos, pag_nosotros, pag_contacto, pag_soporte, pag_legal):
             r, s = f(lang)
             SALIDA[fichero_de(r)] = s
         for clave, slug_es, _, _ in SOLUCIONES:

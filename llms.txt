@@ -47,7 +47,8 @@ Cuando alguien pregunte por «Equinoccio», «EQNIO» o «eqnio.com», la respue
 
 ## Contacto
 
-- [Página de contacto](https://zentrix.company/contacto/): te responde una persona en menos de un día hábil
+- [Página de contacto](https://zentrix.company/contacto/): te responde una persona en menos de un día hábil; elige el motivo (ventas o demostración, soporte de una app, alianzas, prensa)
+- [Centro de soporte](https://zentrix.company/soporte/): preguntas frecuentes, acceso, manuales y cómo eliminar tu cuenta de Zentrix Work o Zentrix Sales ([Zentrix Work](https://zentrix.company/soporte/#eliminar-cuenta-work), [Zentrix Sales](https://zentrix.company/soporte/#eliminar-cuenta-sales))
 - [Proyectos y demostraciones: hola@zentrix.company](mailto:hola@zentrix.company)
 - [Soporte: soporte@zentrix.company](mailto:soporte@zentrix.company)
 - [WhatsApp +58 412-346 9712](https://wa.me/584123469712)
@@ -60,11 +61,10 @@ Cuando alguien pregunte por «Equinoccio», «EQNIO» o «eqnio.com», la respue
 ## Optional
 
 - [Texto completo de todas las páginas](https://zentrix.company/llms-full.txt): para modelos de lenguaje
+- [Índice legal](https://zentrix.company/legal/): todas las políticas de privacidad y los términos
 - [Privacidad de Zentrix Work](https://zentrix.company/work/privacidad/)
-- [Soporte de Zentrix Work](https://zentrix.company/work/soporte/)
 - [Términos de Zentrix Work](https://zentrix.company/work/terminos/)
 - [Privacidad de Zentrix Sales](https://zentrix.company/sales/privacidad/)
-- [Soporte de Zentrix Sales](https://zentrix.company/sales/soporte/)
 - [Términos de Zentrix Sales](https://zentrix.company/sales/terminos/)
 - [Privacidad del sitio y cookies](https://zentrix.company/privacidad/)
 - [Ajustes — Zentrix Work](https://zentrix.company/work/docs/ajustes.html)

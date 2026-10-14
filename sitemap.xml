@@ -50,6 +50,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/labs/"/>
   </url>
   <url>
+    <loc>https://zentrix.company/legal/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/legal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/legal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/legal/"/>
+  </url>
+  <url>
     <loc>https://zentrix.company/logistics/</loc>
     <lastmod>2026-10-14</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/logistics/"/>
@@ -97,6 +104,13 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/soluciones/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/solutions/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/soluciones/"/>
+  </url>
+  <url>
+    <loc>https://zentrix.company/soporte/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/soporte/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/soporte/"/>
   </url>
   <url>
     <loc>https://zentrix.company/traza/</loc>
@@ -155,6 +169,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/labs/"/>
   </url>
   <url>
+    <loc>https://zentrix.company/en/legal/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/legal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/legal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/legal/"/>
+  </url>
+  <url>
     <loc>https://zentrix.company/en/logistics/</loc>
     <lastmod>2026-10-14</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/logistics/"/>
@@ -197,6 +218,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/soluciones/"/>
   </url>
   <url>
+    <loc>https://zentrix.company/en/support/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/soporte/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/soporte/"/>
+  </url>
+  <url>
     <loc>https://zentrix.company/en/traza/</loc>
     <lastmod>2026-10-14</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/traza/"/>
@@ -209,13 +237,6 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/work/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/work/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/work/"/>
-  </url>
-  <url>
-    <loc>https://zentrix.company/sales/contacto/</loc>
-    <lastmod>2026-10-14</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/sales/contacto/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/sales/contact/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/sales/contacto/"/>
   </url>
   <url>
     <loc>https://zentrix.company/sales/docs/</loc>
@@ -278,13 +299,6 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/sales/privacidad/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/sales/privacy/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/sales/privacidad/"/>
-  </url>
-  <url>
-    <loc>https://zentrix.company/sales/soporte/</loc>
-    <lastmod>2026-10-14</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/sales/soporte/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/sales/support/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/sales/soporte/"/>
   </url>
   <url>
     <loc>https://zentrix.company/sales/terminos/</loc>
@@ -394,25 +408,11 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/work/privacidad/"/>
   </url>
   <url>
-    <loc>https://zentrix.company/work/soporte/</loc>
-    <lastmod>2026-10-14</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/work/soporte/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/work/support/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/work/soporte/"/>
-  </url>
-  <url>
     <loc>https://zentrix.company/work/terminos/</loc>
     <lastmod>2026-10-14</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/work/terminos/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/work/terms/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/work/terminos/"/>
-  </url>
-  <url>
-    <loc>https://zentrix.company/en/sales/contact/</loc>
-    <lastmod>2026-10-14</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/sales/contacto/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/sales/contact/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/sales/contacto/"/>
   </url>
   <url>
     <loc>https://zentrix.company/en/sales/docs/</loc>
@@ -427,13 +427,6 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/sales/privacidad/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/sales/privacy/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/sales/privacidad/"/>
-  </url>
-  <url>
-    <loc>https://zentrix.company/en/sales/support/</loc>
-    <lastmod>2026-10-14</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/sales/soporte/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/sales/support/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/sales/soporte/"/>
   </url>
   <url>
     <loc>https://zentrix.company/en/sales/terms/</loc>
@@ -497,13 +490,6 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/work/privacidad/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/work/privacy/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/work/privacidad/"/>
-  </url>
-  <url>
-    <loc>https://zentrix.company/en/work/support/</loc>
-    <lastmod>2026-10-14</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/work/soporte/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/work/support/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/work/soporte/"/>
   </url>
   <url>
     <loc>https://zentrix.company/en/work/terms/</loc>

@@ -32,7 +32,8 @@ The site is mainly in Spanish; Zentrix Sales also has English pages under `https
 - **Traza**: A Zentrix® product. https://traza.technology
 
 User manuals: Zentrix Work at https://zentrix.company/work/docs/ and Zentrix Sales at https://zentrix.company/sales/docs/.
-Support pages: https://zentrix.company/work/soporte/ and https://zentrix.company/sales/soporte/.
+Support center for every app, including how to delete a Zentrix Work or Zentrix Sales account:
+https://zentrix.company/soporte/ (English: https://zentrix.company/en/support/). Privacy policies and terms of each app: https://zentrix.company/legal/.
 
 ## Contact
 

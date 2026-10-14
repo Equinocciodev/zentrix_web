@@ -310,7 +310,7 @@ CONTACTO_TXT = {
     'es': {'ante': 'Contacto', 'titulo': 'Cuéntanos cómo trabaja tu equipo.',
            'apoyo': 'Te responde una persona, en español, en menos de un día hábil.',
            'g1': 'Escríbenos', 'correo': 'Correo', 'wa': 'WhatsApp', 'asunto': 'Zentrix: hablemos',
-           'g2': '¿Ya usas nuestras apps?', 'soporte': 'Soporte', 'manual': 'Manual de',
+           'g2': '¿Ya usas nuestras apps?', 'soporte': 'Soporte', 'manual': 'Manual de', 'centro': 'Centro de soporte',
            'dir_t': 'Dirección', 'llegar': 'Cómo llegar', 'en_google': 'Google Maps', 'en_apple': 'Apple Maps',
            'horario_t': 'Horario', 'horario': 'Lunes a viernes, 9:00 a 19:00 (UTC−4)',
            'base_t': 'Equipo', 'base': 'Isla Margarita, Venezuela, en remoto para todo el mundo',
@@ -318,7 +318,7 @@ CONTACTO_TXT = {
     'en': {'ante': 'Contact', 'titulo': 'Tell us how your team works.',
            'apoyo': 'A real person replies, in Spanish or English, within one business day.',
            'g1': 'Write to us', 'correo': 'Email', 'wa': 'WhatsApp', 'asunto': 'Zentrix: let’s talk',
-           'g2': 'Already using our apps?', 'soporte': 'Support', 'manual': 'Manual for',
+           'g2': 'Already using our apps?', 'soporte': 'Support', 'manual': 'Manual for', 'centro': 'Support center',
            'dir_t': 'Address', 'llegar': 'Get directions', 'en_google': 'Google Maps', 'en_apple': 'Apple Maps',
            'horario_t': 'Hours', 'horario': 'Monday to Friday, 9:00 to 19:00 (UTC−4)',
            'base_t': 'Team', 'base': 'Isla Margarita, Venezuela, working remotely worldwide',
@@ -384,6 +384,7 @@ def hablemos(lang, id_='contacto', h='h2', ante=None, titulo=None, seccion=True)
         <p class="bq-hablemos__g" id="{id_}-g2">{t['g2']}</p>
         <div class="bq-hablemos__botones bq-hablemos__botones--sec">
           <a class="bq-btn bq-btn--suave" href="mailto:soporte@zentrix.company"><span><small>{t['soporte']}</small><b>soporte@zentrix.company</b></span></a>
+          <a class="bq-btn bq-btn--chip" href="{w_docs.replace('work/docs/', 'support/' if lang == 'en' else 'soporte/')}">{t['centro']}{FLECHA}</a>
           <a class="bq-btn bq-btn--chip" href="{w_docs}">{t['manual']} Zentrix Work{FLECHA}</a>
           <a class="bq-btn bq-btn--chip" href="{s_docs}">{t['manual']} Zentrix Sales{FLECHA}</a>
         </div>
