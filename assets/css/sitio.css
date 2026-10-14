@@ -198,6 +198,12 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .oscuro .telefono figcaption { color: var(--texto-osc-2); }
 .oscuro .telefono img { border-color: #2A313D; }
 .nota-capturas { text-align: center; font-size: .875rem; color: var(--texto-2); margin-top: 24px; }
+/* Varias capturas seguidas: en el teléfono, un carril que se desliza de lado (sin scroll horizontal de la página) */
+@media (max-width: 639px) {
+  .capturas--carril { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 calc(-1 * var(--margen)); padding: 4px var(--margen) 16px; scrollbar-width: none; }
+  .capturas--carril::-webkit-scrollbar { display: none; }
+  .capturas--carril .telefono { flex: 0 0 min(240px, 68vw); scroll-snap-align: center; }
+}
 
 /* Descarga */
 .descarga { display: grid; gap: 24px; align-items: center; padding: 32px; border-radius: var(--r-tarjeta); background: var(--azul); color: var(--blanco); }
