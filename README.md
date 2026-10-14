@@ -31,9 +31,15 @@ Dirección A, aprobada por Victor el 14-10-2026: dos letras en minúscula y la b
 - Traza conserva su símbolo y su wordmark propios (manual, pág. 15) con el endoso «un producto de Zentrix®»; no lleva monograma. Su icono es el de traza.technology (el wordmark blanco sobre el anillo de luz azul), recortado en la teja del sistema (radio 22 %): `assets/img/logos/traza/traza_icono-{40,64,192,208,512}.webp` y PNG de 192 y 512. Siempre enlaza a <https://traza.technology> en pestaña nueva, y en la suite, el menú y el pie va al final, como marca asociada.
 - El logotipo madre, el favicon y la z de la portada no cambian: son la marca madre.
 
-## Menú y pie: una sola fuente
+## Generador: cabecera, pie y páginas de sección
 
-El menú «Productos» de la cabecera y el pie de página de las 47 páginas los escribe `herramientas/navegacion.py` (sin dependencias). Tras cambiar un producto, un enlace o un texto del pie, se ejecuta `python3 herramientas/navegacion.py` y se commitea el resultado; `--check` solo comprueba que todas las páginas están al día. Las páginas de `sales/en/` reciben la versión en inglés. El pie lleva la marca con la suite en miniatura, Productos (con su icono; Traza al final, externo), Recursos (los manuales), Legal y soporte agrupado por producto, Contacto, y en la barra inferior el copyright, el selector ES/EN y la nota de Odoo®.
+`herramientas/generar.py` (sin dependencias) es la única fuente de la cabecera con mega-menú (Productos, Soluciones, Clientes, Recursos, Nosotros y Contacto), del pie y de las páginas de sección: `/soluciones/` y una página por solución, `/clientes/`, `/recursos/`, `/nosotros/` y `/contacto/`. Su contenido está en `herramientas/contenido.py` y los datos comunes (productos, soluciones, pares de rutas por idioma) en `herramientas/sitio.py`. También escribe las páginas de redirección (`REDIRECCIONES.md`), `sitemap.xml`, `llms.txt` y `manifest.json`.
+
+- `python3 herramientas/generar.py` escribe; `--check` comprueba que todo está al día; `--pares` lista los pares español/inglés y los huérfanos.
+- `python3 herramientas/enlaces.py` comprueba que ningún enlace interno da 404.
+- El menú móvil y el comportamiento del mega-menú están en `assets/js/nav.js`, que cargan todas las páginas. Sin JavaScript, los `<details>` siguen funcionando.
+- Huecos para otros módulos: `<div id="zx-buscar">` en la cabecera (buscador) y el enlace `#zx-cookies` en el pie (preferencias de cookies).
+- Lo que viene de eqnio.com (servicios, filosofía, alianzas, equipo con sus fotos y cargos, partners) está en `contenido.py`, reescrito con el tono de Zentrix.
 
 ## Movimiento e ilustraciones
 
