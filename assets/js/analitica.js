@@ -176,7 +176,7 @@
       '.zx-ck::before{content:"";position:absolute;left:20px;top:0;width:40px;height:3px;border-radius:0 0 3px 3px;background:#C7FA46}' +
       '.zx-ck__t{margin:0 0 6px;font-size:1rem;font-weight:700;letter-spacing:-.01em;color:#fff}' +
       '.zx-ck__p{margin:0;color:#AEB6C2}' +
-      '.zx-ck__p a{color:#A6B6FF;text-decoration:underline;text-underline-offset:2px}' +
+      '.zx-ck__p a{color:#C7FA46;text-decoration:underline;text-underline-offset:2px}' +
       '.zx-ck__s{margin:10px 0 0;font-size:.8125rem;color:#AEB6C2}' +
       '.zx-ck__b{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}' +
       '.zx-ck button{appearance:none;font:inherit;font-weight:600;font-size:.9375rem;min-height:44px;padding:10px 16px;' +
