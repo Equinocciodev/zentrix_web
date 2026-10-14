@@ -12,7 +12,9 @@
   <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/sitio.css?v=7">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="stylesheet" href="/assets/css/sitio.css?v=8">
+  <script src="/assets/js/sitio.js?v=1" defer></script>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="zentrix">
   <meta property="og:locale" content="es_VE">
@@ -32,7 +34,7 @@
     <a class="logo" href="/" aria-label="zentrix, inicio"><img src="/assets/img/logos/zentrix-negro.svg" alt="zentrix" width="110" height="22"></a>
     <nav class="nav" aria-label="Principal">
       <ul>
-        <li><details class="menu-productos"><summary class="activo">Productos</summary><ul class="menu-productos__lista"><li><a href="/work/" aria-current="page"><b>Zentrix Work</b><span>El equipo de tienda</span></a></li><li><a href="/sales/"><b>Zentrix Sales</b><span>La fuerza de ventas</span></a></li><li><a href="/ai/"><b>zentrix ai</b><span>Inteligencia aplicada</span></a></li><li><a href="/traza/"><b>traza</b><span>Trazabilidad</span></a></li><li><a href="/logistica/"><b>Operación logística</b><span>Próximamente</span></a></li><li><a href="/cloud/"><b>zentrix cloud</b><span>Infraestructura</span></a></li><li><a href="/labs/"><b>zentrix labs</b><span>Investigación</span></a></li><li><a href="/software/"><b>zentrix software</b><span>Implementación de Odoo®</span></a></li></ul></details></li>
+        <li><details class="menu-productos"><summary class="activo">Productos</summary><ul class="menu-productos__lista"><li><a href="/work/" aria-current="page"><img src="/assets/img/logos/monogramas/work_icono.svg" alt="" width="32" height="32"><b>Zentrix Work</b><span>El equipo de tienda</span></a></li><li><a href="/sales/"><img src="/assets/img/logos/monogramas/sales_icono.svg" alt="" width="32" height="32"><b>Zentrix Sales</b><span>La fuerza de ventas</span></a></li><li><a href="/ai/"><img src="/assets/img/logos/monogramas/ai_icono.svg" alt="" width="32" height="32"><b>zentrix ai</b><span>Inteligencia aplicada</span></a></li><li><a href="https://traza.technology" target="_blank" rel="noopener"><span class="menu-productos__motivo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5"/><circle cx="20" cy="12" r="1.2" fill="currentColor"/></svg></span><b>traza<svg class="externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg><span class="sr"> (se abre en otra pestaña)</span></b><span>Trazabilidad · traza.technology</span></a></li><li><a href="/logistica/"><span class="menu-productos__motivo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l7 4v8l-7 4-7-4V7z"/><path d="M5 7l7 4 7-4M12 11v8"/></svg></span><b>Operación logística</b><span>Próximamente</span></a></li><li><a href="/cloud/"><img src="/assets/img/logos/monogramas/cloud_icono.svg" alt="" width="32" height="32"><b>zentrix cloud</b><span>Infraestructura</span></a></li><li><a href="/labs/"><img src="/assets/img/logos/monogramas/labs_icono.svg" alt="" width="32" height="32"><b>zentrix labs</b><span>Investigación</span></a></li><li><a href="/software/"><img src="/assets/img/logos/monogramas/software_icono.svg" alt="" width="32" height="32"><b>zentrix software</b><span>Implementación de Odoo®</span></a></li></ul></details></li>
         <li><a href="/#contacto">Contacto</a></li>
       </ul>
     </nav>
@@ -50,8 +52,8 @@
   </div>
 </nav>
 <main id="principal">
-<section class="oscuro heroe">
-  <img class="heroe__z" src="/assets/img/logos/zentrix_z_azul.svg" alt="" width="520" height="520">
+<section class="oscuro heroe heroe--producto">
+  <div class="heroe__fondo" aria-hidden="true"></div>
   <div class="envoltura">
     <div class="heroe-producto">
       <div class="heroe__texto">
@@ -65,10 +67,16 @@
           <a class="boton boton--alterno" href="/work/docs/">Ver el manual</a>
         </div>
       </div>
+      <div class="heroe-producto__arte">
+        <!--MOTIVO:pulso--><svg class="motivo" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><circle class="linea fina" cx="200" cy="200" r="190"/><circle class="linea fina" cx="200" cy="200" r="130"/><circle class="linea pulso" cx="200" cy="200" r="190"/><circle class="linea pulso pulso--2" cx="200" cy="200" r="190"/><circle class="linea lima pulso pulso--3" cx="200" cy="200" r="190"/></svg><!--/MOTIVO-->
+        <div class="marco">
+          <img class="insignia" src="/assets/img/logos/monogramas/work_icono.svg" alt="" width="88" height="88">
       <figure class="telefono">
         <img src="/assets/img/capturas/work-entrar-720.webp" srcset="/assets/img/capturas/work-entrar-360.webp 360w, /assets/img/capturas/work-entrar-720.webp 720w" sizes="280px" width="720" height="1600" alt="Pantalla de entrada de Zentrix Work: servidor, correo y contraseña, solo la primera vez.">
         <figcaption>Entras una vez. Después, con tu PIN o tu huella.</figcaption>
       </figure>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -76,13 +84,13 @@
 <section class="seccion" aria-labelledby="como-t">
   <div class="envoltura">
     <div class="duo">
-      <div>
+      <div class="revela">
         <span class="antetitulo">Cómo funciona</span>
         <h2 id="como-t">Así es un turno con Zentrix Work.</h2>
         <p class="apagado">No tienes que estar pendiente de mensajes ni preguntar qué te toca. La app te avisa, tú decides si lo tomas y, al terminar, todo queda registrado.</p>
         <p class="apagado">Si es tu primer día, el <a href="/work/docs/">manual</a> te explica cada pantalla con capturas.</p>
       </div>
-      <ol class="pasos-visita">
+      <ol class="pasos-visita revela">
         <li><b>Te enciendes en tu tienda</b> Haces check-in y eliges qué vas a atender hoy: pedidos, entregas o devoluciones.</li>
         <li><b>Te suena un pedido</b> Aunque tengas la pantalla apagada. Ves qué es, el código y cuántos bultos lleva.</li>
         <li><b>Deslizas para tomarlo</b> Tienes 60 segundos. Si no puedes, tocas «No puedo» y pasa a un compañero.</li>
@@ -96,12 +104,12 @@
 
 <section class="seccion seccion--gris" aria-labelledby="hace-t">
   <div class="envoltura">
-    <div class="cabeza">
+    <div class="cabeza revela">
       <span class="antetitulo">Qué te ayuda a hacer</span>
       <h2 id="hace-t">Menos interrupciones, menos errores, más control.</h2>
       <p>Cada función está pensada para el ritmo real de una tienda: mucho movimiento, poco tiempo y el cliente esperando.</p>
     </div>
-    <div class="rejilla rejilla--3">
+    <div class="rejilla rejilla--3 funciones">
       <div class="tarjeta"><div class="tarjeta__icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 8l-9-5-9 5v8l9 5 9-5V8z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg></div><h3>Preparar pedidos</h3><p>Recoges producto por producto con la cámara como escáner, y la app te dice si te falta algo antes de cerrar.</p></div>
       <div class="tarjeta"><div class="tarjeta__icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 6h11v10H3zM14 9h4l3 3v4h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></div><h3>Entregar</h3><p>En el mostrador o a domicilio, bulto por bulto, con la prueba de entrega en el momento.</p></div>
       <div class="tarjeta"><div class="tarjeta__icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 14L4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 0 10h-3"/></svg></div><h3>Recibir devoluciones</h3><p>Recibes solo lo que soporte ya autorizó, así no discutes en el mostrador.</p></div>
@@ -112,10 +120,25 @@
   </div>
 </section>
 
+<section class="seccion oscuro" aria-labelledby="casos-t">
+  <div class="envoltura">
+    <div class="cabeza revela">
+      <span class="antetitulo">Casos de uso</span>
+      <h2 id="casos-t">Un turno, tres tipos de trabajo.</h2>
+      <p>Al encenderte eliges qué vas a atender hoy. Así llega cada uno.</p>
+    </div>
+    <ol class="casos casos--3">
+      <li class="revela"><b>Un pedido para preparar</b>Te suena aunque tengas la pantalla apagada. Lo tomas con un gesto, lo preparas escaneando producto por producto y la app te avisa si falta algo.</li>
+      <li class="revela" style="--retardo:.08s"><b>Una entrega</b>En el mostrador o a domicilio, bulto por bulto, con la prueba de entrega en el momento.</li>
+      <li class="revela" style="--retardo:.16s"><b>Una devolución</b>Recibes solo lo que soporte ya autorizó, así no discutes en el mostrador.</li>
+    </ol>
+  </div>
+</section>
+
 <section class="seccion" aria-labelledby="telefono-t">
   <div class="envoltura">
     <div class="duo">
-      <div>
+      <div class="revela">
         <span class="antetitulo">Tu teléfono</span>
         <h2 id="telefono-t">Es tu teléfono, y lo cuidamos.</h2>
         <p class="apagado">La app corre en tu teléfono personal, así que gasta lo mínimo y solo trabaja mientras tú trabajas.</p>
@@ -142,9 +165,10 @@
   </div>
 </section>
 
-<section class="seccion seccion--gris" aria-labelledby="descarga-t">
+<section class="seccion seccion--gris llamada" aria-labelledby="descarga-t">
   <div class="envoltura">
-    <div class="descarga">
+    <div class="descarga revela">
+      <svg class="descarga__z" viewBox="0 0 110 110" aria-hidden="true" focusable="false"><path fill="#FFFFFF" d="M0 0H110V20.9L8.8 110H0V89.1L64.9 25.3H0ZM19.8 110H110V84.7H47.3Z"/></svg>
       <div>
         <img class="descarga__icono" src="/assets/img/work-icono-512.png" alt="" width="64" height="64" loading="lazy">
         <h2 id="descarga-t">Descarga Zentrix Work</h2>
@@ -168,7 +192,7 @@
       <div>
         <h2>Productos</h2>
         <ul>
-          <li><a href="/work/">Zentrix Work</a></li><li><a href="/sales/">Zentrix Sales</a></li><li><a href="/ai/">zentrix ai</a></li><li><a href="/traza/">traza</a></li><li><a href="/logistica/">Operación logística</a></li><li><a href="/cloud/">zentrix cloud</a></li><li><a href="/labs/">zentrix labs</a></li><li><a href="/software/">zentrix software</a></li>
+          <li><a href="/work/">Zentrix Work</a></li><li><a href="/sales/">Zentrix Sales</a></li><li><a href="/ai/">zentrix ai</a></li><li><a href="https://traza.technology" target="_blank" rel="noopener">traza<svg class="externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg><span class="sr"> (se abre en otra pestaña)</span></a></li><li><a href="/logistica/">Operación logística</a></li><li><a href="/cloud/">zentrix cloud</a></li><li><a href="/labs/">zentrix labs</a></li><li><a href="/software/">zentrix software</a></li>
           <li><a href="/work/docs/">Manual de Zentrix Work</a></li>
           <li><a href="/sales/docs/">Manual de Zentrix Sales</a></li>
           <li><a href="/sales/en/" lang="en">Zentrix Sales in English</a></li>
