@@ -84,6 +84,36 @@
     '<button type="button" class="aviso-idioma__cerrar" lang="es">Seguir en español</button>';
   aviso.querySelector('button').addEventListener('click', function () { guardar('es'); aviso.remove(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && aviso.isConnected) { guardar('es'); aviso.remove(); } });
-  var montar = function () { document.body.appendChild(aviso); };
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', montar); else montar();
+  // Se muestra con la primera interacción (scroll, toque, tecla): así no compite con el
+  // contenido principal en la primera pintura ni cuenta como LCP.
+  var hecho = false;
+  var eventos = ['scroll', 'pointerdown', 'keydown', 'touchstart', 'mousemove'];
+  var montar = function () {
+    if (hecho) return; hecho = true;
+    eventos.forEach(function (ev) { window.removeEventListener(ev, montar, true); });
+    document.body.appendChild(aviso);
+  };
+  eventos.forEach(function (ev) { window.addEventListener(ev, montar, { capture: true, passive: true, once: true }); });
+})();
+
+/* Mega-menú: la tarjeta destacada cambia al pasar (o enfocar) cada producto o solución. */
+(function () {
+  'use strict';
+  document.querySelectorAll('details.mega').forEach(function (d) {
+    var vistas = d.querySelectorAll('.mega-dest__vista');
+    if (!vistas.length) return;
+    function ver(id) {
+      var hay = false;
+      vistas.forEach(function (v) { if (v.getAttribute('data-vista') === id) hay = true; });
+      if (!hay) return;
+      vistas.forEach(function (v) { v.hidden = v.getAttribute('data-vista') !== id; });
+    }
+    var inicial = vistas[0].getAttribute('data-vista');
+    d.querySelectorAll('[data-ver]').forEach(function (a) {
+      var id = a.getAttribute('data-ver');
+      a.addEventListener('mouseenter', function () { ver(id); });
+      a.addEventListener('focus', function () { ver(id); });
+    });
+    d.addEventListener('toggle', function () { if (d.open) ver(inicial); });
+  });
 })();

@@ -28,7 +28,7 @@ import agentes  # noqa: E402  — robots.txt, /.well-known/ y <link> para agente
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 MULTI = (RAIZ / 'en' / 'index.html').exists()  # fase 3: el sitio completo en inglés bajo /en/
 SALIDA = {}  # ruta de fichero → contenido (páginas generadas)
-NAV_JS_V = 2
+NAV_JS_V = 4
 
 # Inglés anterior a /en/: solo Zentrix Sales, en /sales/en/ (se usa mientras no haya MULTI)
 LEGADO_EN = {
@@ -85,41 +85,88 @@ def seccion_de(ruta):
     return None, None
 
 
+def _ilu(clave):
+    """Ilustración de la solución (la misma de los bloques), en línea y con currentColor."""
+    return BQ.ilustracion(clave, 'mega-ilu')
+
+
 def mega_productos(lang, actual):
+    """Panel de productos: la suite a la izquierda y, a la derecha, una tarjeta destacada que
+    cambia al pasar por cada producto (nav.js). Sin JS se ve la tarjeta de la suite."""
     t = T[lang]
-    items = []
-    for clave, href, nombre, d_es, d_en in PRODUCTOS:
+    en = lang == 'en'
+    items, destacados = [], []
+    suite = ''.join(f'<li>{icono_producto(c, 40)}</li>' for c, *_ in PRODUCTOS)
+    destacados.append(
+        f'<div class="mega-dest__vista" data-vista="p-suite">'
+        f'<p class="mega-dest__ante">{"The Zentrix suite" if en else "La suite Zentrix"}</p>'
+        f'<p class="mega-dest__titulo">{"One brand. One app for each job." if en else "Una marca. Una app para cada trabajo."}</p>'
+        f'<ul class="mega-dest__suite">{suite}</ul>'
+        f'<a class="mega-dest__cta" href="{Lx("/#familia", lang)}">{t["ver_productos"]} <span aria-hidden="true">→</span></a></div>')
+    for i, (clave, href, nombre, d_es, d_en) in enumerate(PRODUCTOS):
         if clave == 'traza':
             continue
         cur = ' aria-current="page"' if actual == clave else ''
-        items.append(f'<li><a class="mega__item" href="{Lx(href, lang)}"{cur}>{icono_producto(clave, 36)}'
-                     f'<span><b>{nombre}</b><small>{esc(d_en if lang == "en" else d_es)}</small></span></a></li>')
+        linea = esc(d_en if en else d_es)
+        items.append(f'<li style="--i:{i}"><a class="mega__item mega__item--prod" href="{Lx(href, lang)}" data-ver="p-{clave}"{cur}>'
+                     f'{icono_producto(clave, 40)}<span><b>{nombre}</b><small>{linea}</small></span>'
+                     f'<span class="mega__flecha" aria-hidden="true">→</span></a></li>')
+        destacados.append(
+            f'<div class="mega-dest__vista" data-vista="p-{clave}" hidden>'
+            f'<img class="mega-dest__teja" src="{MONO}/{clave}_icono.svg" alt="" width="104" height="104" loading="lazy" decoding="async">'
+            f'<p class="mega-dest__titulo">{nombre}</p><p class="mega-dest__linea">{linea}</p>'
+            f'<a class="mega-dest__cta" href="{Lx(href, lang)}">{"Learn more" if en else "Conocer más"} <span aria-hidden="true">→</span></a></div>')
     traza = (f'<a class="mega__item mega__item--asociada" href="{TRAZA_URL}" target="_blank" rel="noopener">'
-             f'{icono_producto("traza", 44)}<span><b>Traza{SVG_EXTERNO}<span class="sr">{t["externo"]}</span></b>'
-             f'<small>{"Traceability · a Zentrix® product" if lang == "en" else "Trazabilidad · un producto de Zentrix®"}</small></span></a>')
-    return (f'<div class="mega__panel"><div class="envoltura mega__reja mega__reja--productos">'
-            f'<div><p class="mega__titulo">{t["suite_zentrix"]}</p><ul class="mega__lista mega__lista--2">{"".join(items)}</ul></div>'
-            f'<div class="mega__aparte"><p class="mega__titulo">{t["marca_asociada"]}</p>{traza}'
-            f'<a class="mega__mas" href="{Lx("/#familia", lang)}">{t["ver_productos"]} →</a></div>'
+             f'{icono_producto("traza", 40)}<span><b>Traza{SVG_EXTERNO}<span class="sr">{t["externo"]}</span></b>'
+             f'<small>{"Traceability · a Zentrix® product" if en else "Trazabilidad · un producto de Zentrix®"}</small></span></a>')
+    return (f'<div class="mega__panel"><div class="envoltura mega-reja">'
+            f'<div class="mega-reja__lista"><p class="mega__titulo">{t["suite_zentrix"]}</p>'
+            f'<ul class="mega__lista mega__lista--2 mega__lista--escalonada">{"".join(items)}</ul>'
+            f'<p class="mega__titulo mega__titulo--sep">{t["marca_asociada"]}</p>{traza}</div>'
+            f'<div class="mega-dest">{"".join(destacados)}</div>'
             f'</div></div>')
 
 
 def mega_soluciones(lang):
+    """Panel de soluciones: cada solución con su ilustración; la tarjeta destacada cambia a su
+    ilustración y su frase al pasar por ella. Debajo, los sectores con los monogramas que aplican."""
     t = T[lang]
-    items = []
-    for clave, slug_es, _, icono in SOLUCIONES:
+    en = lang == 'en'
+    items, destacados = [], []
+    destacados.append(
+        f'<div class="mega-dest__vista" data-vista="s-general">'
+        f'<span class="mega-dest__ilus" aria-hidden="true">{"".join(_ilu(k) for k, *_ in SOLUCIONES[:3])}</span>'
+        f'<p class="mega-dest__ante">{"Solutions" if en else "Soluciones"}</p>'
+        f'<p class="mega-dest__titulo">{"From diagnosis to production." if en else "Del diagnóstico a producción."}</p>'
+        f'<p class="mega-dest__linea">{"One team designs, builds and runs it with you." if en else "Un mismo equipo lo diseña, lo construye y lo opera contigo."}</p>'
+        f'<a class="mega-dest__cta" href="{Lx("/contacto/", lang)}">{t["hablemos"]} <span aria-hidden="true">→</span></a></div>')
+    for i, (clave, slug_es, _, _) in enumerate(SOLUCIONES):
         nombre, linea = SOL_TXT[clave][lang]
-        items.append(f'<li><a class="mega__item" href="{Lx(f"/soluciones/{slug_es}/", lang)}">'
-                     f'<span class="mega__icono">{svg_icono(icono)}</span><span><b>{nombre}</b><small>{linea}</small></span></a></li>')
+        href = Lx(f'/soluciones/{slug_es}/', lang)
+        items.append(f'<li style="--i:{i}"><a class="mega__item mega__item--sol" href="{href}" data-ver="s-{clave}">'
+                     f'<span class="mega__ilu">{_ilu(clave)}</span><span><b>{nombre}</b><small>{linea}</small></span>'
+                     f'<span class="mega__flecha" aria-hidden="true">→</span></a></li>')
+        lead = C.SOL[clave][lang]['lead']
+        frase = lead.split(':')[0].split('.')[0]
+        destacados.append(
+            f'<div class="mega-dest__vista" data-vista="s-{clave}" hidden>'
+            f'<span class="mega-dest__ilu" aria-hidden="true">{_ilu(clave)}</span>'
+            f'<p class="mega-dest__titulo">{nombre}</p><p class="mega-dest__linea">{frase}.</p>'
+            f'<a class="mega-dest__cta" href="{href}">{"See the solution" if en else "Ver la solución"} <span aria-hidden="true">→</span></a></div>')
     sectores = []
+    prods = {'retail': ('work', 'sales', 'logistica'), 'distribucion': ('sales', 'logistica')}
     for clave, nombre, linea in SECTORES[lang]:
-        icono = 'tienda' if clave == 'retail' else 'camion'
-        sectores.append(f'<li><a class="mega__item" href="{Lx("/soluciones/#" + clave, lang)}">'
-                        f'<span class="mega__icono">{svg_icono(icono)}</span><span><b>{nombre}</b><small>{linea}</small></span></a></li>')
-    return (f'<div class="mega__panel"><div class="envoltura mega__reja mega__reja--soluciones">'
-            f'<div><p class="mega__titulo">{t["por_necesidad"]}</p><ul class="mega__lista mega__lista--2">{"".join(items)}</ul></div>'
-            f'<div class="mega__aparte"><p class="mega__titulo">{t["por_sector"]}</p><ul class="mega__lista">{"".join(sectores)}</ul>'
+        monos = ''.join(icono_producto(p, 28) for p in prods[clave])
+        sectores.append(f'<li><a class="mega-sector mega-sector--{clave}" href="{Lx("/soluciones/#" + clave, lang)}">'
+                        f'<span class="mega-sector__escena" aria-hidden="true"></span>'
+                        f'<span class="mega-sector__texto"><b>{nombre}</b><small>{linea}</small></span>'
+                        f'<span class="mega-sector__monos">{monos}</span></a></li>')
+    return (f'<div class="mega__panel"><div class="envoltura mega-reja">'
+            f'<div class="mega-reja__lista"><p class="mega__titulo">{t["por_necesidad"]}</p>'
+            f'<ul class="mega__lista mega__lista--2 mega__lista--escalonada">{"".join(items)}</ul>'
+            f'<p class="mega__titulo mega__titulo--sep">{t["por_sector"]}</p><ul class="mega-sectores">{"".join(sectores)}</ul>'
             f'<a class="mega__mas" href="{Lx("/soluciones/", lang)}">{t["ver_soluciones"]} →</a></div>'
+            f'<div class="mega-dest">{"".join(destacados)}</div>'
             f'</div></div>')
 
 
@@ -222,7 +269,8 @@ def pie(ruta):
                 href = LEGADO_EN[r]
             links.append(f'<li><a href="{href}">{t[k]}</a></li>')
         grupos.append(f'<div class="pie__grupo"><h3>{prod}</h3><ul class="pie__enlinea">{"".join(links)}</ul></div>')
-    correo = svg_icono('correo', 'pie__icono')
+    correo = BQ.icono('correo', 'pie__icono mega-ilu')
+    whatsapp = BQ.icono('whatsapp', 'pie__icono mega-ilu')
     return (
         '<footer class="pie">\n  <div class="envoltura">\n    <div class="pie__reja">\n'
         '      <div class="pie__marca">\n'
@@ -243,7 +291,7 @@ def pie(ruta):
         '        <ul class="pie__contacto">'
         f'<li><a href="mailto:hola@zentrix.company">{correo}<span>hola@zentrix.company</span></a></li>'
         f'<li><a href="mailto:soporte@zentrix.company">{correo}<span>soporte@zentrix.company</span></a></li>'
-        f'<li><a href="https://wa.me/584123469712">{SVG_WHATSAPP}<span>WhatsApp +58 412-346 9712</span></a></li>'
+        f'<li><a href="https://wa.me/584123469712">{whatsapp}<span>WhatsApp +58 412-346 9712</span></a></li>'
         '</ul>\n      </div>\n'
         '    </div>\n    <div class="pie__base">\n'
         f'      <p>{t["copy"]} <a id="zx-cookies" class="pie__cookies" href="{Lx("/privacidad/", lang)}#cookies">{"Cookie preferences" if lang == "en" else "Preferencias de cookies"}</a></p>\n'
@@ -365,7 +413,7 @@ def pagina(ruta, titulo, descripcion, cuerpo, og='og.png', logo=None):
   <link rel="preload" href="/assets/fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/inter-800.woff2" as="font" type="font/woff2" crossorigin>
   <script>document.documentElement.classList.add('js')</script>
-  <link rel="stylesheet" href="/assets/css/sitio.css?v=15">
+  <link rel="stylesheet" href="/assets/css/sitio.css?v=16">
   <script src="/assets/js/sitio.js?v=1" defer></script>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Zentrix">
