@@ -142,14 +142,19 @@ def pilares(items, variante='', arte='', etiqueta=''):
     """items: [(titulo, texto)]. variante: '' | 'oscuro' | 'prota' (la primera, en negro con el motivo)."""
     prota = 'prota' in variante
     clases, cols = reja(len(items), prota)
+    if 'texto' in variante:  # textos largos: dos columnas
+        cols = 2
+        clases = ['' for _ in items[:-1]] + (['bq-c2 bq-t2'] if len(items) % 2 else [''])
     lis = []
-    for i, (t, p) in enumerate(items):
+    for i, it in enumerate(items):
+        ante, t, p = it if len(it) == 3 else ('', *it)
+        ante = f'<span class="antetitulo">{ante}</span>' if ante else ''
         es_prota = prota and i == 0
         extra = ' bq-pilar--prota' if es_prota else ''
         arte_html = f'<span class="bq-pilar__arte" aria-hidden="true">{arte}</span>' if es_prota and arte else ''
         lis.append(f'<li class="bq-pilar{extra} bq-brillo revela {clases[i]}" style="--retardo:{(i % 4) * .07:.2f}s">'
                    f'<span class="bq-pilar__num" aria-hidden="true">{i + 1:02d}</span>{arte_html}'
-                   f'{barra()}<h3>{t}</h3><p>{p}</p></li>')
+                   f'{barra()}{ante}<h3>{t}</h3><p>{p}</p></li>')
     mod = ''.join(f' bq-pilares--{v}' for v in variante.split() if v)
     al = f' aria-label="{etiqueta}"' if etiqueta else ''
     return f'<ol class="bq-pilares bq-reja{mod}" style="--cols:{cols}"{al}>{"".join(lis)}</ol>'
@@ -165,7 +170,7 @@ def bento(items, variante='', ir='Conocer más'):
         clases, cols = ['' for _ in items], 1
     lis = []
     for i, x in enumerate(items):
-        p = ' bq-tesela--prota' if x.get('prota') else ''
+        p = ' bq-tesela--prota' if x.get('prota') else (f' bq-tesela--{x["tono"]}' if x.get('tono') else '')
         ext = ' target="_blank" rel="noopener"' if x.get('externo') else ''
         flecha = EXTERNO if x.get('externo') else FLECHA
         texto = f'<p class="bq-tesela__p">{x["texto"]}</p>' if x.get('texto') else ''
@@ -194,6 +199,21 @@ def mock_odoo():
             '<rect x="398" y="28" width="96" height="28" rx="8" fill="#244DFF"/>'
             + filas + barras +
             '<path d="M96 268h398" stroke="#fff" stroke-opacity=".18"/></svg>')
+
+
+def caso(nombre, rubro, texto, enlaces, i=0):
+    """Caso de cliente: inicial gigante en contorno, como los números de los pilares."""
+    inicial = ''.join(w[0] for w in nombre.split()[:2]).upper()
+    links = ''.join(f'<li><a href="{h}">{n}{FLECHA}</a></li>' for h, n in enlaces)
+    return (f'<article class="bq-caso bq-brillo revela" style="--retardo:{i * .08:.2f}s">'
+            f'<span class="bq-caso__inicial" aria-hidden="true">{inicial}</span>'
+            f'<h3>{nombre}</h3><p class="bq-caso__rubro">{rubro}</p>{barra()}<p>{texto}</p>'
+            f'<ul class="bq-caso__enlaces">{links}</ul></article>')
+
+
+def sector(id_, ilu, nombre, texto, lista_html, i=0):
+    return (f'<article class="bq-sector revela" id="{id_}" style="--retardo:{i * .08:.2f}s">{ilustracion(ilu)}'
+            f'<h3>{nombre}</h3><p>{texto}</p>{lista_html}</article>')
 
 
 # ── 3. Stack de tecnología ─────────────────────────────────────────────────
@@ -287,6 +307,14 @@ CONTACTO_TXT = {
 }
 
 
+CONTACTO_DETALLE = {
+    'es': {'horario': 'Lunes a viernes, 9:00 a 19:00 (UTC−4). Lo que llega fuera de horario se atiende el siguiente día hábil.',
+           'base': 'Isla Margarita, Nueva Esparta, Venezuela. Los proyectos se trabajan en remoto, así que la zona horaria no es un problema.'},
+    'en': {'horario': 'Monday to Friday, 9:00 to 19:00 (UTC−4). Messages sent outside these hours are answered the next business day.',
+           'base': 'Isla Margarita, Nueva Esparta, Venezuela. Projects run remotely, so time zones are not a problem.'},
+}
+
+
 def icono(nombre, clase='bq-ico'):
     return ilustracion(nombre, clase)
 
@@ -307,8 +335,10 @@ def mapa():
             f'<path class="bq-ilu__l" d="M-17-73h34l-{12 * BISEL:.0f} 12h-22z"/></g></svg>')
 
 
-def contacto(lang, h='h3', id_titulo=''):
-    t = CONTACTO_TXT[lang]
+def contacto(lang, h='h3', id_titulo='', detalle=False):
+    t = dict(CONTACTO_TXT[lang])
+    if detalle:
+        t.update(CONTACTO_DETALLE[lang])
     d = DIRECCION
     ia = f' id="{id_titulo}"' if id_titulo else ''
     sop = '/en/' if lang == 'en' and (RAIZ / 'en' / 'index.html').exists() else '/'
@@ -422,6 +452,14 @@ def _llamada(m):
     return cierre(id_, h2.group(1), p, botones.strip(), ico.group(1) if ico else '', pie)
 
 
+RE_NOTA = re.compile(r'(aria-labelledby="problema-t">(?:(?!</section>).)*?)<div class="tarjeta(?: revela)?"( style="[^"]*")?>\s*'
+                     r'(<h3>.*?</h3>\s*<p>.*?</p>)\s*</div>', re.S)
+
+
+def _nota(m):
+    return f'{m.group(1)}<div class="bq-nota revela"{m.group(2) or ""}>{zfondo()}{barra()}{m.group(3)}</div>'
+
+
 def aplicar(s, ruta):
     if '<main' not in s:
         return s
@@ -433,6 +471,7 @@ def aplicar(s, ruta):
     s = RE_PROCESO.sub(lambda m: _proceso(m, ruta), s)
     s = RE_CIFRAS.sub(lambda m: _cifras(m, ruta), s)
     s = RE_LLAMADA.sub(_llamada, s)
+    s = RE_NOTA.sub(_nota, s)
     if 'bq-brillo' in s and 'bloques.js' not in s:
         s = s.replace('</head>', f'  {JS}\n</head>', 1)
     return s

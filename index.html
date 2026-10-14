@@ -191,12 +191,12 @@
         <h2 id="quienes-t">Tu negocio marca el objetivo. Nosotros ponemos la tecnología.</h2>
         <p class="apagado">Nuestra misión es convertir procesos complejos en herramientas que las personas puedan usar para trabajar mejor. Queremos ser un referente latinoamericano en software e inteligencia aplicada a la operación de las empresas.</p>
       </div>
-      <ul class="lista-check revela" style="--retardo:.15s">
+      <ol class="bq-manifiesto revela" style="--retardo:.15s">
         <li><strong>Resolvemos problemas reales</strong>, los que tu equipo vive cada día.</li>
         <li><strong>Conectamos la información</strong> entre la calle, la tienda y la oficina.</li>
         <li><strong>Damos control a las personas</strong>: cada quien sabe qué le toca.</li>
         <li><strong>Medimos el resultado</strong> para saber si de verdad mejoró.</li>
-      </ul>
+      </ol>
     </div>
   </div>
 </section>
@@ -266,34 +266,39 @@
       <h2 id="contacto-t">Cuéntanos cómo trabaja tu equipo.</h2>
       <p>Te responde una persona, en español, en menos de un día hábil. Si quieres, te mostramos el producto funcionando con tus propios datos.</p>
     </div>
-    <div class="contacto">
-      <div class="tarjeta">
-        <div class="tarjeta__icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
-        <h3>Escríbenos</h3>
-        <p>Para conocer los productos, pedir una demostración o hablar de tu proyecto.</p>
-        <dl>
-          <dt>Correo</dt><dd><a href="mailto:hola@zentrix.company">hola@zentrix.company</a></dd>
-          <dt>Teléfono y WhatsApp</dt><dd><a href="https://wa.me/584123469712">+58 412-346 9712</a></dd>
-        </dl>
-      </div>
-      <div class="tarjeta">
-        <div class="tarjeta__icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></div>
-        <h3>Si ya usas nuestras apps</h3>
-        <p>Accesos, dudas de uso y datos personales. También tienes el manual de cada app.</p>
-        <dl>
-          <dt>Soporte</dt><dd><a href="mailto:soporte@zentrix.company">soporte@zentrix.company</a></dd>
-          <dt>Manuales</dt><dd><a href="/work/docs/">Zentrix Work</a> · <a href="/sales/docs/">Zentrix Sales</a></dd>
-        </dl>
-      </div>
-      <div class="tarjeta">
-        <div class="tarjeta__icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
-        <h3>Dirección</h3>
-        <p>10302 NW South River Drive, Medley, FL 33178, Estados Unidos.</p>
-        <dl>
-          <dt>Respuesta</dt><dd>Menos de un día hábil.</dd>
-        </dl>
-      </div>
+    <!--BQ:CONTACTO--><div class="bq-contacto">
+  <div class="bq-contacto__panel oscuro revela">
+    <svg class="bq-zfondo" viewBox="0 0 110 110" aria-hidden="true" focusable="false"><path d="M0 0H110V20.9L8.8 110H0V89.1L64.9 25.3H0ZM19.8 110H110V84.7H47.3Z"/></svg>
+    <span class="antetitulo">Escríbenos</span>
+    <h3 class="bq-contacto__t">Una persona del equipo te responde.</h3>
+    <p class="bq-promesa"><span class="bq-barra" aria-hidden="true"></span><b>Respondemos en menos de un día hábil.</b> <span>En español o en inglés. Nunca un bot.</span></p>
+    <div class="bq-contacto__botones">
+      <a class="bq-canal bq-canal--lima" href="https://wa.me/584123469712"><svg class="bq-ico" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><g class="bq-ilu__t"><path d="M520 150a330 330 0 1 1-170 612L150 860l90-190A330 330 0 0 1 520 150Z"/></g><path class="bq-ilu__l" d="M395 448h230l-73 64H395z"/></svg><span><b>Escribir por WhatsApp</b><small>+58 412-346 9712</small></span></a>
+      <a class="bq-canal" href="mailto:hola@zentrix.company?subject=Zentrix%3A%20hablemos"><svg class="bq-ico" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><g class="bq-ilu__t"><path d="M130 230h740v540H130Z"/><path d="M130 270 500 560l370-290"/></g><path class="bq-ilu__l" d="M200 650h230l-73 64H200z"/></svg><span><b>Escribir a hola@</b><small>hola@zentrix.company</small></span></a>
     </div>
+    <dl class="bq-contacto__otros">
+      <div><dt>Soporte de las apps</dt><dd><a href="mailto:soporte@zentrix.company">soporte@zentrix.company</a></dd></div>
+      <div><dt>Manuales</dt><dd><a href="/work/docs/">Zentrix Work</a> · <a href="/sales/docs/">Zentrix Sales</a></dd></div>
+    </dl>
+  </div>
+  <div class="bq-contacto__lugar revela" style="--retardo:.1s">
+    <div class="bq-contacto__mapa" role="img" aria-label="Mapa ilustrado de la zona de la dirección"><svg class="bq-mapa" viewBox="0 0 600 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><rect width="600" height="360" class="bq-mapa__fondo"/><g class="bq-mapa__manzanas"><rect x="84" y="74" width="92" height="62" rx="4"/><rect x="204" y="74" width="112" height="62" rx="4"/><rect x="344" y="74" width="112" height="62" rx="4"/><rect x="84" y="164" width="92" height="72" rx="4"/><rect x="344" y="164" width="112" height="72" rx="4"/><rect x="484" y="164" width="100" height="72" rx="4"/><rect x="204" y="264" width="112" height="80" rx="4"/><rect x="484" y="74" width="100" height="62" rx="4"/></g><g class="bq-mapa__calles"><path d="M70 0V360"/><path d="M190 0V360"/><path d="M330 0V360"/><path d="M470 0V360"/><path d="M0 60H600"/><path d="M0 150H600"/><path d="M0 250H600"/></g><path class="bq-mapa__rio" d="M-20 330C110 300 160 222 262 214S430 262 620 196"/><path class="bq-mapa__ruta" d="M70 360V250H260V196"/><g class="bq-mapa__pin" transform="translate(260 196)"><path d="M0 0-30-38a38 38 0 1 1 60 0Z"/><path class="bq-ilu__l" d="M-17-73h34l-14 12h-22z"/></g></svg></div>
+    <div class="bq-contacto__dir">
+      <h3 class="bq-contacto__dt"><svg class="bq-ico" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><g class="bq-ilu__t"><path d="M500 890 255 575a300 300 0 1 1 490 0Z"/></g><path class="bq-ilu__l" d="M385 330h230l-73 64H385z"/></svg>Dirección</h3>
+      <address itemscope itemtype="https://schema.org/PostalAddress">
+        <span itemprop="streetAddress">10302 NW South River Drive</span><br>
+        <span itemprop="addressLocality">Medley</span>, <span itemprop="addressRegion">FL</span> <span itemprop="postalCode">33178</span><br>
+        <span itemprop="addressCountry" content="US">Estados Unidos</span>
+      </address>
+      <p class="bq-contacto__llegar"><b>Cómo llegar:</b> <a href="https://www.google.com/maps/search/?api=1&query=10302%20NW%20South%20River%20Drive%2C%20Medley%2C%20FL%2033178">Google Maps<svg class="bq-flecha" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="square" aria-hidden="true" focusable="false"><path d="M4 12h14M13 6l6 6-6 6"/></svg></a> <a href="https://maps.apple.com/?q=10302%20NW%20South%20River%20Drive%2C%20Medley%2C%20FL%2033178">Apple Maps<svg class="bq-flecha" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="square" aria-hidden="true" focusable="false"><path d="M4 12h14M13 6l6 6-6 6"/></svg></a></p>
+    </div>
+  </div>
+  <dl class="bq-datos revela" style="--retardo:.15s">
+    <div><svg class="bq-ico" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><g class="bq-ilu__t"><circle cx="500" cy="500" r="340"/><path d="M500 290v242"/></g><path class="bq-ilu__l" d="M500 470h210l-73 64H500z"/></svg><dt>Horario</dt><dd>Lunes a viernes, 9:00 a 19:00 (UTC−4)</dd></div>
+    <div><svg class="bq-ico" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><g class="bq-ilu__t"><circle cx="500" cy="500" r="340"/><path d="M500 160c-200 200-200 480 0 680M500 160c200 200 200 480 0 680M170 500h660"/></g></svg><dt>Idiomas</dt><dd>Español e inglés</dd></div>
+    <div><svg class="bq-ico" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><g class="bq-ilu__t"><path d="M500 890 255 575a300 300 0 1 1 490 0Z"/></g><path class="bq-ilu__l" d="M385 330h230l-73 64H385z"/></svg><dt>Equipo</dt><dd>Isla Margarita, Venezuela, en remoto para todo el mundo</dd></div>
+  </dl>
+</div><!--/BQ:CONTACTO-->
   </div>
 </section>
 </main>

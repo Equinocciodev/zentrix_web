@@ -462,20 +462,14 @@ def ruta_pagina(ruta_es, lang):
 def pag_soluciones(lang):
     ruta = ruta_pagina('/soluciones/', lang)
     en = lang == 'en'
-    tarjetas = []
-    for i, (clave, slug_es, _, icono) in enumerate(SOLUCIONES):
-        d = C.SOL[clave][lang]
-        nombre, linea = SOL_TXT[clave][lang]
-        tarjetas.append(f'<a class="tarjeta tarjeta--enlace revela" style="--retardo:{(i % 3) * .06:.2f}s" href="{r_sol(slug_es, lang)}">'
-                        f'<div class="tarjeta__icono">{svg_icono(icono)}</div><h3>{nombre}</h3><p>{d["lead"]}</p>'
-                        f'<span class="tarjeta__ir">{"Learn more" if en else "Conocer más"} →</span></a>')
+    tarjetas = BQ.bento([{'href': r_sol(slug_es, lang), 'titulo': SOL_TXT[clave][lang][0], 'texto': C.SOL[clave][lang]['lead'],
+                          'arte': (BQ.motivo('capas') + BQ.mock_odoo()) if i == 0 else BQ.ilustracion(clave), 'prota': i == 0}
+                         for i, (clave, slug_es, _, _) in enumerate(SOLUCIONES)], '', 'Learn more' if en else 'Conocer más')
     sectores = []
-    for clave, nombre_corto, _ in SECTORES[lang]:
+    for i, (clave, nombre_corto, _) in enumerate(SECTORES[lang]):
         nombre, texto, items = C.SECTOR_TXT[clave][lang]
-        icono = 'tienda' if clave == 'retail' else 'camion'
         lis = ''.join(f'<li><a href="{Lx(h, lang)}"><b>{n}</b></a>: {d}</li>' for h, n, d in items)
-        sectores.append(f'<article class="sector revela" id="{clave}"><div class="sector__icono">{svg_icono(icono)}</div>'
-                        f'<h3>{nombre}</h3><p>{texto}</p><ul class="lista-check">{lis}</ul></article>')
+        sectores.append(BQ.sector(clave, 'tienda' if clave == 'retail' else 'camion', nombre, texto, f'<ul class="lista-check">{lis}</ul>', i))
     pasos = (['Understand', 'We see how your team works today and what you need to solve.'],
              ['Design', 'We fit the solution to your processes and your rules.'],
              ['Build', 'We configure it, integrate it with your systems and load your data.'],
@@ -486,7 +480,7 @@ def pag_soluciones(lang):
              ['Implementamos', 'La configuramos, la integramos con tus sistemas y cargamos tus datos.'],
              ['Adoptamos', 'Acompañamos a tu equipo hasta que la usa sin pensarlo.'],
              ['Mejoramos', 'Medimos el resultado y seguimos mejorando contigo.'])
-    proceso = ''.join(f'<li><b>{a}</b> {b}</li>' for a, b in pasos)
+    proceso = BQ.pasos(pasos)
     if en:
         h = heroe('Solutions', 'What we do for your operation.',
                   'Beyond our products, our team designs, builds and runs systems made to measure: Odoo® with Venezuelan localization, software, infrastructure, payments and computer vision.',
@@ -518,7 +512,7 @@ def pag_soluciones(lang):
       <h2 id="necesidad-t">{cab1[1]}</h2>
       <p>{cab1[2]}</p>
     </div>
-    <div class="rejilla rejilla--3">{"".join(tarjetas)}</div>
+    {tarjetas}
   </div>
 </section>
 
@@ -540,7 +534,7 @@ def pag_soluciones(lang):
       <h2 id="como-t">{cab3[1]}</h2>
       <p>{cab3[2]}</p>
     </div>
-    <ol class="proceso revela">{proceso}</ol>
+    {proceso}
   </div>
 </section>
 
@@ -665,13 +659,8 @@ def medidas_webp(f):
 def pag_clientes(lang):
     ruta = ruta_pagina('/clientes/', lang)
     en = lang == 'en'
-    casos = []
-    for i, (nombre, rubro, texto, enlaces) in enumerate(C.CASOS[lang]):
-        inicial = ''.join(w[0] for w in nombre.split()[:2]).upper()
-        links = ''.join(f'<li><a href="{Lx(h, lang)}">{n} →</a></li>' for h, n in enlaces)
-        casos.append(f'<article class="caso revela" style="--retardo:{i * .08:.2f}s"><div class="caso__cabeza">'
-                     f'<span class="caso__inicial" aria-hidden="true">{inicial}</span><div><h3>{nombre}</h3><p class="caso__rubro">{rubro}</p></div></div>'
-                     f'<p>{texto}</p><ul class="caso__enlaces">{links}</ul></article>')
+    casos = [BQ.caso(nombre, rubro, texto, [(Lx(h, lang), n) for h, n in enlaces], i)
+             for i, (nombre, rubro, texto, enlaces) in enumerate(C.CASOS[lang])]
     if en:
         h = heroe('Customers', 'Real operations, every day.',
                   'Our apps were born inside distribution and retail operations in Venezuela, and that’s where they work every day: in stores, on the street and in the office.',
@@ -729,10 +718,10 @@ def pag_recursos(lang):
     nota = ' (in Spanish)' if en else ''
 
     def tarjeta(href, icono, titulo, texto, i, img=None):
-        ic = f'<img src="{img}" alt="" width="40" height="40" loading="lazy">' if img else svg_icono(icono)
-        return (f'<a class="tarjeta tarjeta--enlace revela" style="--retardo:{i * .06:.2f}s" href="{href}">'
-                f'<div class="tarjeta__icono{" tarjeta__icono--teja" if img else ""}">{ic}</div><h3>{titulo}</h3><p>{texto}</p>'
-                f'<span class="tarjeta__ir">{"Open" if en else "Abrir"} →</span></a>')
+        arte = (f'<img src="{img}" alt="" width="56" height="56" loading="lazy">' if img
+                else BQ.ilustracion('codigo' if titulo.endswith(('.txt', '.xml')) else icono))
+        tono = ('azul' if 'work' in href else 'negro') if img else None
+        return {'href': href, 'titulo': titulo, 'texto': texto, 'arte': arte, 'tono': tono}
     if en:
         grupos = [
             ('manuales', 'Manuals', 'Learn to use the apps.', [
@@ -783,16 +772,15 @@ def pag_recursos(lang):
         ll = llamada(lang, '¿No encontraste lo que buscabas?', 'Escríbenos y te ayuda una persona en menos de un día hábil.', 'Zentrix: consulta')
     secciones = []
     for n, (gid, ante, h2, items) in enumerate(grupos):
-        gris = ' seccion--gris' if n % 2 else ''
-        tarjetas = ''.join(tarjeta(a, b, c, d, i, e) for i, (a, b, c, d, e) in enumerate(items))
-        rej = 'rejilla--2' if len(items) in (2, 4) else 'rejilla--3'
+        gris = (' oscuro' if gid == 'desarrolladores' else ' seccion--gris') if n % 2 else ''
+        tarjetas = BQ.bento([tarjeta(a, b, c, d, i, e) for i, (a, b, c, d, e) in enumerate(items)], '', 'Open' if en else 'Abrir')
         secciones.append(f'''<section class="seccion{gris}" id="{gid}" aria-labelledby="{gid}-t">
   <div class="envoltura">
     <div class="cabeza revela">
       <span class="antetitulo">{ante}</span>
       <h2 id="{gid}-t">{h2}</h2>
     </div>
-    <div class="rejilla {rej}">{tarjetas}</div>
+    {tarjetas}
   </div>
 </section>''')
     cuerpo = h + '\n\n' + '\n\n'.join(secciones) + '\n\n' + ll
@@ -846,15 +834,14 @@ def pag_nosotros(lang):
         tx = ('Equipo', 'Las personas detrás de Zentrix.', 'Alianzas', 'Con quién construimos.')
         ll = llamada(lang, '¿Quieres trabajar con nosotros?', 'Cuéntanos tu proyecto. Te responde una persona en menos de un día hábil.', 'Zentrix: hablemos')
         titulo, desc = 'Nosotros — Zentrix', 'Zentrix es la nueva marca de Equinoccio (EQNIO), un equipo de ingeniería, IA y producto con base en Isla Margarita, Venezuela. Conoce al equipo.'
-    bl = ''.join(f'<div class="historia__bloque revela" style="--retardo:{(i % 2) * .08:.2f}s"><span class="antetitulo">{a}</span><h3>{b}</h3><p>{c}</p></div>'
-                 for i, (a, b, c) in enumerate(bloques))
-    al = ''.join(f'<div class="tarjeta revela"><h3>{a}</h3><p>{b}</p></div>' for a, b in alianzas)
+    bl = BQ.pilares(bloques, 'texto')
+    al = BQ.pilares(alianzas, 'oscuro')
     cuerpo = f'''{h}
 
 <section class="seccion" aria-labelledby="historia-t">
   <div class="envoltura">
     <h2 id="historia-t" class="sr">{"Our story" if en else "Nuestra historia"}</h2>
-    <div class="historia">{bl}</div>
+    {bl}
   </div>
 </section>
 
@@ -864,17 +851,17 @@ def pag_nosotros(lang):
       <span class="antetitulo">{tx[0]}</span>
       <h2 id="equipo-t">{tx[1]}</h2>
     </div>
-    <ul class="equipo">{equipo}</ul>
+    <ul class="equipo bq-equipo">{equipo}</ul>
   </div>
 </section>
 
-<section class="seccion" aria-labelledby="alianzas-t">
+<section class="seccion oscuro bq-seccion--oscura" aria-labelledby="alianzas-t">
   <div class="envoltura">
     <div class="cabeza revela">
       <span class="antetitulo">{tx[2]}</span>
       <h2 id="alianzas-t">{tx[3]}</h2>
     </div>
-    <div class="rejilla rejilla--2">{al}</div>
+    {al}
   </div>
 </section>
 
@@ -885,38 +872,20 @@ def pag_nosotros(lang):
 def pag_contacto(lang):
     ruta = ruta_pagina('/contacto/', lang)
     en = lang == 'en'
-    correo = svg_icono('correo')
     if en:
         h = heroe('Contact', 'A conversation, not a form.',
                   'Write to us about a project, a demo or a question. A person from the team replies within one business day, in Spanish or English.',
                   '<a class="boton boton--principal" href="mailto:hola@zentrix.company?subject=Zentrix%3A%20let%E2%80%99s%20talk">Write to hola@zentrix.company</a>',
                   arte_iconos(['correo', 'personas', 'ayuda', 'estrella']))
-        canales = [('mailto:hola@zentrix.company', correo, 'Projects and demos', 'hola@zentrix.company', 'Products, proposals, partnerships, or just to see whether we’re a fit.'),
-                   ('mailto:soporte@zentrix.company', svg_icono('ayuda'), 'Support', 'soporte@zentrix.company', 'If you already use Zentrix Work or Zentrix Sales and something isn’t working.'),
-                   ('https://wa.me/584123469712', svg_icono('personas'), 'WhatsApp', '+58 412-346 9712', 'For a quick question.')]
-        datos = [('Response time', 'Within one business day. A person always replies, never a bot.'),
-                 ('Hours', 'Monday to Friday, 9:00 to 19:00 (UTC−4). Messages sent outside these hours are answered the next business day.'),
-                 ('Location', 'Isla Margarita, Nueva Esparta, Venezuela. Projects run remotely, so time zones are not a problem.'),
-                 ('Languages', 'Spanish and English.')]
-        tx = ('Channels', 'Pick how you’d like to reach us.', 'Good to know', 'Before you write.')
+        tx = ('Channels', 'Pick how you’d like to reach us.')
         titulo, desc = 'Contact — Zentrix', 'Write to Zentrix: hola@zentrix.company for projects and demos, soporte@zentrix.company for support, or WhatsApp. A person replies within one business day.'
     else:
         h = heroe('Contacto', 'Una conversación, no un formulario.',
                   'Escríbenos por un proyecto, una demostración o una duda. Te responde una persona del equipo en menos de un día hábil, en español o en inglés.',
                   '<a class="boton boton--principal" href="mailto:hola@zentrix.company?subject=Zentrix%3A%20hablemos">Escribe a hola@zentrix.company</a>',
                   arte_iconos(['correo', 'personas', 'ayuda', 'estrella']))
-        canales = [('mailto:hola@zentrix.company', correo, 'Proyectos y demostraciones', 'hola@zentrix.company', 'Productos, propuestas, alianzas o, simplemente, para ver si encajamos.'),
-                   ('mailto:soporte@zentrix.company', svg_icono('ayuda'), 'Soporte', 'soporte@zentrix.company', 'Si ya usas Zentrix Work o Zentrix Sales y algo no funciona.'),
-                   ('https://wa.me/584123469712', svg_icono('personas'), 'WhatsApp', '+58 412-346 9712', 'Para una consulta rápida.')]
-        datos = [('Tiempo de respuesta', 'Menos de un día hábil. Siempre responde una persona, nunca un bot.'),
-                 ('Horario', 'De lunes a viernes, de 9:00 a 19:00 (UTC−4). Lo que llega fuera de horario se atiende el siguiente día hábil.'),
-                 ('Ubicación', 'Isla Margarita, Nueva Esparta, Venezuela. Los proyectos se trabajan en remoto, así que la zona horaria no es un problema.'),
-                 ('Idiomas', 'Español e inglés.')]
-        tx = ('Canales', 'Elige cómo prefieres escribirnos.', 'Bueno saberlo', 'Antes de escribir.')
+        tx = ('Canales', 'Elige cómo prefieres escribirnos.')
         titulo, desc = 'Contacto — Zentrix', 'Escribe a Zentrix: hola@zentrix.company para proyectos y demostraciones, soporte@zentrix.company para soporte, o por WhatsApp. Te responde una persona en menos de un día hábil.'
-    can = ''.join(f'<a class="tarjeta tarjeta--enlace canal revela" style="--retardo:{i * .06:.2f}s" href="{h_}"><div class="tarjeta__icono">{ic}</div>'
-                  f'<h3>{a}</h3><p class="canal__dato">{b}</p><p>{c}</p></a>' for i, (h_, ic, a, b, c) in enumerate(canales))
-    dl = ''.join(f'<div><dt>{a}</dt><dd>{b}</dd></div>' for a, b in datos)
     cuerpo = f'''{h}
 
 <section class="seccion" aria-labelledby="canales-t">
@@ -925,17 +894,7 @@ def pag_contacto(lang):
       <span class="antetitulo">{tx[0]}</span>
       <h2 id="canales-t">{tx[1]}</h2>
     </div>
-    <div class="rejilla rejilla--3">{can}</div>
-  </div>
-</section>
-
-<section class="seccion seccion--gris" aria-labelledby="datos-t">
-  <div class="envoltura">
-    <div class="cabeza revela">
-      <span class="antetitulo">{tx[2]}</span>
-      <h2 id="datos-t">{tx[3]}</h2>
-    </div>
-    <dl class="datos revela">{dl}</dl>
+    {BQ.contacto(lang, detalle=True)}
   </div>
 </section>'''
     return ruta, pagina(ruta, titulo, desc, cuerpo)
