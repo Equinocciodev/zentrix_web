@@ -286,7 +286,7 @@
 .bq-contacto__llegar .bq-flecha { width: 18px; height: 18px; }
 .bq-datos { grid-column: 1 / -1; margin: 0; display: grid; gap: 1px; background: var(--borde); border-block: 1px solid var(--borde); }
 @media (min-width: 768px) { .bq-datos { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-.bq-datos > div { display: grid; grid-template-columns: auto 1fr; column-gap: 14px; align-items: start; padding: 20px 4px; background: var(--blanco); }
+.bq-datos > div { display: grid; grid-template-columns: auto 1fr; column-gap: 14px; align-items: start; align-content: start; padding: 20px 4px; background: var(--blanco); }
 @media (min-width: 768px) { .bq-datos > div { padding: 24px 24px 24px 0; } .bq-datos > div + div { padding-left: 24px; } }
 .seccion--gris .bq-datos > div { background: var(--fondo); }
 .bq-datos .bq-ico { grid-row: span 2; width: 26px; height: 26px; color: var(--azul); margin-top: 2px; }
@@ -356,3 +356,37 @@
   .bq-tesela:not(.bq-tesela--prota) .bq-ilu { width: 44px; height: 44px; }
   .bq-tesela__ir { padding-top: 8px; }
 }
+
+/* Nota destacada (Para quién es) */
+.bq-nota { position: relative; overflow: hidden; padding: 32px 28px; background: var(--azul); color: var(--blanco);
+  clip-path: polygon(0 0, calc(100% - var(--bq-esquina)) 0, 100% var(--bq-esquina), 100% 100%, 0 100%); }
+.bq-nota .bq-barra { margin-bottom: 18px; }
+.bq-nota h3 { font-size: 1.375rem; font-weight: 800; letter-spacing: -.03em; margin-bottom: 10px; }
+.bq-nota p { margin: 0; color: var(--blanco); font-size: 1.0625rem; }
+.bq-nota .bq-zfondo { color: var(--negro); opacity: .14; width: 300px; right: -90px; }
+.bq-nota > :not(.bq-zfondo) { position: relative; z-index: 1; }
+/* Historia (Nosotros): antetítulo dentro de los pilares */
+.bq-pilar .antetitulo { margin: 0 0 6px; position: relative; }
+.bq-pilares--texto .bq-pilar { min-height: 0; padding-top: 104px; }
+.bq-pilares--texto .bq-pilar h3 { font-size: 1.5rem; font-weight: 800; letter-spacing: -.03em; }
+.bq-pilares--texto .bq-pilar .bq-barra { margin-top: 0; }
+/* Manifiesto (portada, Qué es Zentrix): lista numerada con la barra lima */
+.bq-manifiesto { list-style: none; margin: 0; padding: 0; counter-reset: bq; border-top: 1px solid var(--borde); }
+.bq-manifiesto li { counter-increment: bq; display: grid; grid-template-columns: 64px 1fr; align-items: baseline; gap: 12px; padding: 20px 0;
+  border-bottom: 1px solid var(--borde); font-size: 1.125rem; color: var(--texto-2); position: relative; }
+.bq-manifiesto li::before { content: counter(bq, decimal-leading-zero); font-size: 2.25rem; font-weight: 800; letter-spacing: -.05em; line-height: 1;
+  color: transparent; -webkit-text-stroke: 1.5px var(--azul); transition: color .3s; }
+.bq-manifiesto li::after { content: ""; position: absolute; left: 0; bottom: -1px; width: 0; height: 3px; background: var(--lima); transition: width .5s var(--facil, ease); }
+.bq-manifiesto li:hover::before { color: var(--azul); }
+.bq-manifiesto li:hover::after { width: 64px; }
+.bq-manifiesto strong { color: var(--texto); font-weight: 700; }
+/* Teselas con el color de su producto (manuales) */
+.bq-tesela--azul, .bq-tesela--negro { color: var(--blanco); min-height: 260px; }
+.bq-tesela--azul { background: var(--azul) !important; }
+.bq-tesela--negro { background: var(--negro) !important; }
+.bq-tesela--azul .bq-tesela__p, .bq-tesela--negro .bq-tesela__p { color: var(--blanco); opacity: .9; }
+.bq-tesela--azul .bq-tesela__ir, .bq-tesela--negro .bq-tesela__ir { color: var(--lima); }
+.bq-tesela--azul .bq-tesela__t, .bq-tesela--negro .bq-tesela__t { font-size: 1.75rem; font-weight: 800; letter-spacing: -.035em; }
+.bq-tesela--azul .bq-tesela__arte img, .bq-tesela--negro .bq-tesela__arte img { width: 72px; height: 72px; border-radius: 16px; box-shadow: 0 0 0 1px rgba(255, 255, 255, .25); }
+.bq-tesela--azul:focus-visible, .bq-tesela--negro:focus-visible { outline-color: var(--lima); }
+.bq-tesela--azul.bq-brillo::after { background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 30%), rgba(255, 255, 255, .18), transparent 62%); }
