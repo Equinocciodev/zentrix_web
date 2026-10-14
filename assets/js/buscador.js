@@ -560,6 +560,7 @@
     // Lo que ya está como acceso directo no se repite abajo.
     var yaArriba = atajosPara(q).map(function (a) { return a.url; });
     datos = depurar(q, datos).filter(function (d) { return yaArriba.indexOf(d.url) === -1; });
+    if (!datos.length && yaArriba.length) { montar(nodos, yaArriba.length + ' ' + (yaArriba.length === 1 ? TX.n1 : TX.nN)); return; }
     if (!datos.length) {
       nodos.push(el('div', 'zxb__vacio', SVG.vacio + '<b>' + esc(TX.nada) + ' «' + esc(q) + '»</b>' +
         esc(TX.nadaPista) + ' <a href="mailto:' + TX.correo + '">' + TX.correo + '</a>.'));
