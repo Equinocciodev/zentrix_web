@@ -807,3 +807,10 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
   .nav { gap: 4px; }
   .logo--firma img { height: 22px; }
 }
+
+/* Insignias oficiales de las tiendas: mismo alto, espacio libre alrededor, sin recolorear */
+.tiendas { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.tienda { display: inline-block; line-height: 0; border-radius: 8px; }
+.tienda img { display: block; height: 48px; width: auto; }
+.tienda:focus-visible { outline-offset: 4px; }
+.botones .tiendas + .boton { margin-left: 4px; }

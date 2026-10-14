@@ -11,6 +11,7 @@ El resto de las páginas (productos, legales, manuales) se escriben a mano; de e
 generador solo reescribe el `<nav class="nav">` de la cabecera, el pie y las etiquetas de
 idioma del `<head>`.
 """
+import json
 import pathlib
 import re
 import sys
@@ -289,6 +290,26 @@ RE_PIE = re.compile(r'<footer class="pie">.*?</footer>', re.S)
 
 
 RE_SOL = re.compile(r'<!--SOLUCIONES-->.*?<!--/SOLUCIONES-->', re.S)
+RE_TIENDAS = re.compile(r'<!--TIENDAS:(\w+)-->.*?<!--/TIENDAS-->', re.S)
+TIENDAS = json.loads((RAIZ / 'herramientas' / 'productos.json').read_text(encoding='utf-8'))
+
+
+def insignias(prod, lang):
+    """Insignias oficiales de Google Play y App Store, localizadas, solo de las tiendas donde la
+    app está publicada (herramientas/productos.json). Mismo alto, sin texto propio encima."""
+    d = TIENDAS[prod]
+    en = lang == 'en'
+    out = []
+    if d.get('play'):
+        alt = 'Get it on Google Play' if en else 'Disponible en Google Play'
+        w = 161 if en else 162
+        out.append(f'<a class="tienda" href="{d["play"]}" data-zx-store="play">'
+                   f'<img src="/assets/img/tiendas/google-play-{lang}.png" alt="{alt}" width="{w}" height="48"></a>')
+    if d.get('appstore'):
+        alt = 'Download on the App Store' if en else 'Descárgalo en el App Store'
+        out.append(f'<a class="tienda" href="{d["appstore"]}" data-zx-store="appstore">'
+                   f'<img src="/assets/img/tiendas/app-store-{lang}.svg" alt="{alt}" width="144" height="48"></a>')
+    return f'<!--TIENDAS:{prod}--><span class="tiendas">{"".join(out)}</span><!--/TIENDAS-->'
 
 
 def bloque_soluciones(lang):
@@ -300,6 +321,7 @@ def bloque_soluciones(lang):
 
 def procesar(s, ruta):
     s = RE_SOL.sub(lambda m: bloque_soluciones(lang_de(ruta)), s)
+    s = RE_TIENDAS.sub(lambda m: insignias(m.group(1), lang_de(ruta)), s)
     s = RE_NAV.sub(lambda m: nav(ruta), s, count=1)
     s = RE_PIE.sub(lambda m: pie(ruta), s, count=1)
     return agentes.head(seo.aplicar(ajustar_head(s, ruta), ruta))
