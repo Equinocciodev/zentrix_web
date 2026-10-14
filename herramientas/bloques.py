@@ -23,13 +23,13 @@ from bloques_logos import LOGOS
 
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 MONO = '/assets/img/logos/monogramas'
-CSS_BLOQUEANTE = '<link rel="stylesheet" href="/assets/css/bloques.css?v=1">'
+CSS_BLOQUEANTE = '<link rel="stylesheet" href="/assets/css/bloques.css?v=2">'
 # Los bloques van siempre debajo del héroe: su hoja se carga sin bloquear el primer pintado
 # (media=print + onload, prioridad baja, con <noscript> de respaldo). Ahorra ~0,3 s de LCP en móvil.
-CSS_PRELOAD = ('<link rel="preload" href="/assets/css/bloques.css?v=1" as="style" onload="this.onload=null;this.rel=\'stylesheet\'">'
-               '<noscript><link rel="stylesheet" href="/assets/css/bloques.css?v=1"></noscript>')
-CSS = ('<link rel="stylesheet" href="/assets/css/bloques.css?v=1" media="print" onload="this.media=\'all\'">'
-       '<noscript><link rel="stylesheet" href="/assets/css/bloques.css?v=1"></noscript>')
+CSS_PRELOAD = ('<link rel="preload" href="/assets/css/bloques.css?v=2" as="style" onload="this.onload=null;this.rel=\'stylesheet\'">'
+               '<noscript><link rel="stylesheet" href="/assets/css/bloques.css?v=2"></noscript>')
+CSS = ('<link rel="stylesheet" href="/assets/css/bloques.css?v=2" media="print" onload="this.media=\'all\'">'
+       '<noscript><link rel="stylesheet" href="/assets/css/bloques.css?v=2"></noscript>')
 JS = '<script src="/assets/js/bloques.js?v=1" defer></script>'
 
 # ── Piezas de marca ─────────────────────────────────────────────────────────
