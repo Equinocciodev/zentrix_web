@@ -850,8 +850,9 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 @media (prefers-reduced-motion: reduce) {
   .cinta { -webkit-mask-image: none; mask-image: none; }
   .cinta--aliados { width: 100%; max-width: calc(var(--ancho) + 2 * var(--margen)); margin-left: auto; margin-right: auto; padding: 0 var(--margen); }
-  .cinta--aliados .cinta__pista:first-child { flex: 1; min-width: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); border-top: 1px solid var(--borde-osc); border-left: 1px solid var(--borde-osc); }
-  .cinta--aliados .aliado { border-bottom: 1px solid var(--borde-osc); padding: 20px 16px; }
+  .cinta--aliados .cinta__pista:first-child { flex: 1; min-width: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); border-top: 1px solid var(--borde-osc); border-left: 1px solid var(--borde-osc); }
+  .cinta--aliados .aliado { min-width: 0; border-bottom: 1px solid var(--borde-osc); padding: 20px 16px; }
+  .cinta--aliados .aliado__nombre { white-space: normal; }
   .cinta__pista[aria-hidden="true"] { display: none; }
   .cinta--frases .cinta__pista:first-child { flex-wrap: wrap; justify-content: center; min-width: 0; }
 }

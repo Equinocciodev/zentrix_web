@@ -365,7 +365,7 @@ def pagina(ruta, titulo, descripcion, cuerpo, og='og.png', logo=None):
   <link rel="preload" href="/assets/fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/inter-800.woff2" as="font" type="font/woff2" crossorigin>
   <script>document.documentElement.classList.add('js')</script>
-  <link rel="stylesheet" href="/assets/css/sitio.css?v=14">
+  <link rel="stylesheet" href="/assets/css/sitio.css?v=15">
   <script src="/assets/js/sitio.js?v=1" defer></script>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Zentrix">
