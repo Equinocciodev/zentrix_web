@@ -218,20 +218,35 @@ CASOS = {
     ],
 }
 
+# Partners y aliados: los logos públicos de la cinta de eqnio.com (assets/Gemini_Generated_Image_*.svg
+# y el SVG en línea de GUUAO), pasados a blanco con alfa en assets/img/aliados/. Las etiquetas son
+# las que llevaban allí. Digitel se deja fuera (proyecto cancelado el 02-10).
+# slug, nombre, etiqueta ES, etiqueta EN, mostrar el nombre en texto (cuando el logo no lo dice)
 ALIADOS = [
-    # nombre, rubro ES, rubro EN (tal como los presentaba eqnio.com)
-    ('Grupo Leiros', 'Distribución de licores', 'Beverage distribution'),
-    ('GUUAO', '', ''),
-    ('BrandIA AI', 'Investigación aplicada y agentes de IA', 'Applied research and AI agents'),
-    ('Hetzner', 'Infraestructura en la nube', 'Cloud infrastructure'),
-    ('Odoo', 'ERP y operaciones', 'ERP and operations'),
-    ('Diageo', '', ''),
-    ('Embajada de España en Nueva Esparta', 'Nueva Esparta, Venezuela', 'Nueva Esparta, Venezuela'),
-    ('Sambil Margarita', '', ''),
-    ('Hoteles Sun Sol', 'Hotelería · Margarita', 'Hospitality · Margarita'),
-    ('Movilmax', '', ''),
-    ('Starlink', 'Conectividad satelital', 'Satellite connectivity'),
+    ('leiros', 'Grupo Leiros', 'Distribución de licores', 'Beverage distribution', False),
+    ('guuao', 'GUUAO', '', '', True),
+    ('brandia', 'BrandIA', 'IA aplicada', 'Applied AI', False),
+    ('hetzner', 'Hetzner', 'Infraestructura cloud', 'Cloud infrastructure', False),
+    ('odoo', 'Odoo', 'ERP y operaciones', 'ERP and operations', False),
+    ('diageo', 'Diageo', '', '', False),
+    ('nestle', 'Nestlé', '', '', False),
+    ('embajada-espana', 'Embajada de España', 'Nueva Esparta · VE', 'Nueva Esparta · VE', True),
+    ('sambil', 'Sambil Margarita', '', '', False),
+    ('sunsol', 'Hoteles Sun Sol', 'Hotelería · Margarita', 'Hospitality · Margarita', False),
+    ('rolling-tissue', 'Rolling Tissue LLC', 'Aliado estratégico', 'Strategic ally', False),
+    ('movilmax', 'Movilmax', '', '', False),
+    ('pj-distributors', 'PJ Distributors', 'Aliado estratégico', 'Strategic ally', False),
+    ('starlink', 'Starlink', 'Conectividad satelital', 'Satellite connectivity', False),
 ]
+
+FRASES = {
+    'es': ['Tecnología para trabajar mejor', '24/7 · sin importar las circunstancias', 'Ingeniería con alma',
+           'Más con menos · sin fricción', 'Clase mundial · construido para Venezuela',
+           'Respaldados por BrandIA AI × Grupo Leiros', 'Base · Isla Margarita · Venezuela'],
+    'en': ['Technology to work better', '24/7 · whatever the circumstances', 'Engineering with soul',
+           'More with less · no friction', 'World-class · built for Venezuela',
+           'Backed by BrandIA AI × Grupo Leiros', 'Based on Isla Margarita · Venezuela'],
+}
 
 # ── Equipo (fotos y cargos tal cual en eqnio.com) ───────────────────────────
 EQUIPO = [

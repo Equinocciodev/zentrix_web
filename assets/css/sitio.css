@@ -814,3 +814,42 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .tienda img { display: block; height: 48px; width: auto; }
 .tienda:focus-visible { outline-offset: 4px; }
 .botones .tiendas + .boton { margin-left: 4px; }
+
+/* =====================================================================
+   Cinta de partners y aliados (logos en blanco) y cinta de frases
+   ===================================================================== */
+.seccion--aliados { overflow: hidden; }
+.seccion--aliados .cabeza a { color: var(--azul-claro); font-weight: 600; text-decoration: none; white-space: nowrap; }
+.seccion--aliados .cabeza a:hover { text-decoration: underline; }
+.cinta { position: relative; display: flex; overflow: hidden; margin-top: 8px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.cinta:focus-visible { outline: 2px solid var(--lima); outline-offset: -2px; }
+.cinta__pista { flex: none; display: flex; align-items: center; list-style: none; margin: 0; padding: 0; min-width: max-content; }
+.cinta--aliados .cinta__pista { gap: 0; }
+.aliado { display: grid; justify-items: center; align-content: center; gap: 10px; min-height: 120px; padding: 16px 36px; border-right: 1px solid var(--borde-osc); }
+.aliado__marca { display: flex; align-items: center; gap: 10px; height: 52px; }
+.aliado img { display: block; height: var(--h, 32px); width: auto; max-width: none; opacity: .78; transition: opacity .2s; }
+.aliado:hover img { opacity: 1; }
+.aliado__nombre { font-weight: 700; font-size: 1.0625rem; letter-spacing: -0.01em; color: var(--blanco); white-space: nowrap; }
+.aliado__tag { font-size: .6875rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--texto-osc-2); white-space: nowrap; }
+.cinta--frases { margin-top: 32px; border-top: 1px solid var(--borde-osc); border-bottom: 1px solid var(--borde-osc); }
+.cinta--frases .cinta__pista { gap: 0; }
+.cinta--frases li { display: inline-flex; align-items: center; gap: 18px; padding: 14px 18px; font-size: .75rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--texto-osc-2); white-space: nowrap; }
+.cinta--frases li::after { content: ""; width: 6px; height: 6px; background: var(--lima); transform: rotate(45deg); }
+@media (prefers-reduced-motion: no-preference) {
+  .cinta--aliados .cinta__pista { animation: cinta 46s linear infinite; }
+  .cinta--frases .cinta__pista { animation: cinta 38s linear infinite reverse; }
+  .cinta:hover .cinta__pista, .cinta:focus-within .cinta__pista, .cinta:focus .cinta__pista { animation-play-state: paused; }
+}
+@keyframes cinta { from { transform: translateX(0); } to { transform: translateX(-100%); } }
+/* Movimiento reducido: retícula estática con los mismos logos */
+@media (prefers-reduced-motion: reduce) {
+  .cinta { -webkit-mask-image: none; mask-image: none; }
+  .cinta--aliados { width: 100%; max-width: calc(var(--ancho) + 2 * var(--margen)); margin-left: auto; margin-right: auto; padding: 0 var(--margen); }
+  .cinta--aliados .cinta__pista:first-child { flex: 1; min-width: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); border-top: 1px solid var(--borde-osc); border-left: 1px solid var(--borde-osc); }
+  .cinta--aliados .aliado { border-bottom: 1px solid var(--borde-osc); padding: 20px 16px; }
+  .cinta__pista[aria-hidden="true"] { display: none; }
+  .cinta--frases .cinta__pista:first-child { flex-wrap: wrap; justify-content: center; min-width: 0; }
+}
+@media (max-width: 600px) { .aliado { padding: 14px 24px; min-height: 104px; } }

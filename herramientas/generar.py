@@ -291,6 +291,7 @@ RE_PIE = re.compile(r'<footer class="pie">.*?</footer>', re.S)
 
 
 RE_SOL = re.compile(r'<!--SOLUCIONES-->.*?<!--/SOLUCIONES-->', re.S)
+RE_ALIADOS = re.compile(r'<!--ALIADOS-->.*?<!--/ALIADOS-->', re.S)
 RE_TIENDAS = re.compile(r'<!--TIENDAS:(\w+)-->.*?<!--/TIENDAS-->', re.S)
 TIENDAS = json.loads((RAIZ / 'herramientas' / 'productos.json').read_text(encoding='utf-8'))
 
@@ -327,6 +328,7 @@ def bloque_soluciones(lang):
 def procesar(s, ruta):
     s = RE_SOL.sub(lambda m: bloque_soluciones(lang_de(ruta)), s)
     s = RE_TIENDAS.sub(lambda m: insignias(m.group(1), lang_de(ruta)), s)
+    s = RE_ALIADOS.sub(lambda m: '<!--ALIADOS-->' + cinta_aliados(lang_de(ruta), 'Partners and allies' if lang_de(ruta) == 'en' else 'Partners y aliados') + '<!--/ALIADOS-->', s)
     s = RE_NAV.sub(lambda m: nav(ruta), s, count=1)
     s = RE_PIE.sub(lambda m: pie(ruta), s, count=1)
     s = BQ.aplicar(s, ruta)
@@ -363,7 +365,7 @@ def pagina(ruta, titulo, descripcion, cuerpo, og='og.png', logo=None):
   <link rel="preload" href="/assets/fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/inter-800.woff2" as="font" type="font/woff2" crossorigin>
   <script>document.documentElement.classList.add('js')</script>
-  <link rel="stylesheet" href="/assets/css/sitio.css?v=12">
+  <link rel="stylesheet" href="/assets/css/sitio.css?v=14">
   <script src="/assets/js/sitio.js?v=1" defer></script>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Zentrix">
@@ -622,6 +624,44 @@ def pag_solucion(clave, slug_es, lang):
     return ruta, pagina(ruta, titulo, d['lead'], cuerpo)
 
 
+def cinta_aliados(lang, titulo):
+    """Cinta infinita con los logos de partners y aliados (blanco sobre oscuro), alturas ópticas
+    igualadas: alto = 52 / proporción^0.5, entre 20 y 52 px."""
+    items = []
+    for slug, nombre, tag_es, tag_en, con_nombre in C.ALIADOS:
+        w, h = medidas_webp(RAIZ / 'assets' / 'img' / 'aliados' / f'{slug}.webp')
+        prop = w / h
+        alto = max(20, min(52, round(52 / prop ** 0.5)))
+        ancho = round(alto * prop)
+        tag = tag_en if lang == 'en' else tag_es
+        nom = f'<span class="aliado__nombre">{nombre}</span>' if con_nombre else ''
+        items.append(f'<li class="aliado"><span class="aliado__marca"><img src="/assets/img/aliados/{slug}.webp" alt="{nombre}" '
+                     f'width="{ancho}" height="{alto}" style="--h:{alto}px" loading="lazy" decoding="async">{nom}</span>'
+                     f'{f"<span class=aliado__tag>{tag}</span>" if tag else ""}</li>')
+    lista = ''.join(items)
+    return (f'<div class="cinta cinta--aliados" role="region" aria-label="{titulo}" tabindex="0">'
+            f'<ul class="cinta__pista">{lista}</ul><ul class="cinta__pista" aria-hidden="true">{re.sub(r' alt="[^"]*"', ' alt=""', lista)}</ul></div>')
+
+
+def cinta_frases(lang):
+    lis = ''.join(f'<li>{f}</li>' for f in C.FRASES[lang])
+    return (f'<div class="cinta cinta--frases" aria-hidden="true"><ul class="cinta__pista">{lis}</ul>'
+            f'<ul class="cinta__pista">{lis}</ul></div>')
+
+
+def medidas_webp(f):
+    """Ancho y alto de un WebP sin dependencias (VP8L sin pérdida o VP8X)."""
+    b = f.read_bytes()[:40]
+    if b[12:16] == b'VP8L':
+        bits = int.from_bytes(b[21:25], 'little')
+        return (bits & 0x3FFF) + 1, ((bits >> 14) & 0x3FFF) + 1
+    if b[12:16] == b'VP8X':
+        return int.from_bytes(b[24:27], 'little') + 1, int.from_bytes(b[27:30], 'little') + 1
+    if b[12:16] == b'VP8 ':
+        return int.from_bytes(b[26:28], 'little') & 0x3FFF, int.from_bytes(b[28:30], 'little') & 0x3FFF
+    raise ValueError(f)
+
+
 def pag_clientes(lang):
     ruta = ruta_pagina('/clientes/', lang)
     en = lang == 'en'
@@ -632,15 +672,14 @@ def pag_clientes(lang):
         casos.append(f'<article class="caso revela" style="--retardo:{i * .08:.2f}s"><div class="caso__cabeza">'
                      f'<span class="caso__inicial" aria-hidden="true">{inicial}</span><div><h3>{nombre}</h3><p class="caso__rubro">{rubro}</p></div></div>'
                      f'<p>{texto}</p><ul class="caso__enlaces">{links}</ul></article>')
-    aliados = ''.join(f'<li><b>{n}</b>{f"<span>{(re_ if en else rs)}</span>" if (re_ if en else rs) else ""}</li>' for n, rs, re_ in C.ALIADOS)
     if en:
         h = heroe('Customers', 'Real operations, every day.',
                   'Our apps were born inside distribution and retail operations in Venezuela, and that’s where they work every day: in stores, on the street and in the office.',
                   f'<a class="boton boton--principal" href="#casos-t">See the cases</a><a class="boton boton--alterno" href="{Lx("/contacto/", lang)}">Let’s talk</a>',
                   arte_suite())
         tx = ('Case studies', 'Where Zentrix works.', 'Two companies, the same goal: knowing what happens in the operation and acting in time.',
-              'Partners and allies', 'Companies and institutions we work alongside.',
-              'Equinoccio (EQNIO), the team that is now Zentrix, presented them as its partners and allies.',
+              'Partners and allies', 'Companies that work alongside us.',
+              'Brands and institutions we build, operate and grow with, in Venezuela and beyond.',
               'Want to be the next case?', 'Tell us about your operation and we’ll show you the product working with your own data.', 'Zentrix: I’d like a demo')
         titulo = 'Customers — Zentrix'
         desc = 'Grupo Leiros and GUUAO run on Zentrix. Meet the companies and institutions we work alongside.'
@@ -650,8 +689,8 @@ def pag_clientes(lang):
                   f'<a class="boton boton--principal" href="#casos-t">Ver los casos</a><a class="boton boton--alterno" href="{Lx("/contacto/", lang)}">Hablemos</a>',
                   arte_suite())
         tx = ('Casos', 'Dónde trabaja Zentrix.', 'Dos empresas, un mismo objetivo: saber qué pasa en la operación y actuar a tiempo.',
-              'Partners y aliados', 'Empresas e instituciones que nos acompañan.',
-              'Así los presentaba Equinoccio (EQNIO), el equipo que hoy es Zentrix.',
+              'Partners y aliados', 'Empresas que trabajan a nuestro lado.',
+              'Marcas e instituciones con las que construimos, operamos y crecemos, en Venezuela y fuera de ella.',
               '¿Quieres ser el próximo caso?', 'Cuéntanos cómo es tu operación y te mostramos el producto funcionando con tus propios datos.', 'Zentrix: quiero una demostración')
         titulo = 'Clientes — Zentrix'
         desc = 'Grupo Leiros y GUUAO trabajan con Zentrix. Conoce las empresas e instituciones que nos acompañan.'
@@ -668,15 +707,16 @@ def pag_clientes(lang):
   </div>
 </section>
 
-<section class="seccion oscuro" aria-labelledby="aliados-t">
+<section class="seccion oscuro seccion--aliados" aria-labelledby="aliados-t">
   <div class="envoltura">
     <div class="cabeza revela">
       <span class="antetitulo">{tx[3]}</span>
       <h2 id="aliados-t">{tx[4]}</h2>
       <p>{tx[5]}</p>
     </div>
-    <ul class="aliados revela">{aliados}</ul>
   </div>
+  {cinta_aliados(lang, tx[3])}
+  {cinta_frases(lang)}
 </section>
 
 {llamada(lang, tx[6], tx[7], tx[8], 'Ask for a demo' if en else 'Solicita una demostración')}'''
