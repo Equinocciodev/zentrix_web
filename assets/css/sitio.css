@@ -571,3 +571,5 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .logo { text-decoration: none; color: inherit; }
 @media (max-width: 420px) { .nav ul { flex-wrap: nowrap; } .logo--firma .wordmark img { height: 16px; } .logo--firma .wordmark { gap: 6px; } .logo--firma .wordmark__producto { font-size: .9375rem; } }
 .descarga { position: relative; overflow: hidden; }
+/* Las ilustraciones pequeñas de las tarjetas solo se mueven al pasar el ratón: menos trabajo de estilo y pintura. */
+.producto--oscuro:not(:hover) .producto__motivo * { animation: none !important; }

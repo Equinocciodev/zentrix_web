@@ -24,7 +24,7 @@ Las páginas de los manuales llevan, además de `sitio.css`, `manual-sales.css` 
 
 ## Monogramas de los productos
 
-Dirección A, aprobada por Victor el 14-10-2026: dos letras en minúscula y la barra lima con el corte diagonal de la z. Los SVG están en `assets/img/logos/monogramas/<producto>_{icono,monocromo,firma_positivo,firma_negativo}.svg` para work, sales, ai, cloud, labs y software. `work-icono-512.png` y `sales-icono-512.png` salen de esos SVG con `rsvg-convert`.
+Dirección A, aprobada por Victor el 14-10-2026: dos letras en minúscula y la barra lima con el corte diagonal de la z. Sales usa «sl» (no «sa», 14-10-2026), generado con el mismo constructor que el resto de la suite. Los SVG están en `assets/img/logos/monogramas/<producto>_{icono,monocromo,firma_positivo,firma_negativo}.svg` para work, sales, ai, cloud, labs y software. `work-icono-512.png` y `sales-icono-512.png` salen de esos SVG con `rsvg-convert`.
 
 - En las páginas de producto la cabecera lleva la firma del producto (monograma + zentrix® + apellido) en lugar del logotipo madre, y enlaza a la portada. Work y Sales tienen debajo una barra fina, sin logo, con sus enlaces (producto, manual, privacidad, soporte).
 - El héroe de cada producto dibuja su monograma en línea (`<!--MONO:slug-->`) para animar la teja, las letras y la barra por separado.
@@ -51,7 +51,7 @@ zentrix es la marca madre. En la portada, la navegación, las tarjetas y el pie 
 ## Marca
 
 - Paleta: azul `#244DFF` para la acción, negro `#090D12` para el texto y los fondos inmersivos, y lima `#C7FA46` solo como acento. Nunca se usa lima como texto sobre blanco. Fondo `#F5F7FA`. Sobre negro, la acción va en `#A6B6FF`.
-- Tipografía: Inter 400/500/600/700, recortada a latín, y Inter ExtraBold 800 (4.1 oficial, latín + latín extendido) para los titulares del héroe, servidas desde `assets/fonts/` (licencia OFL en `LICENSE-Inter.txt`). No se cargan fuentes externas. Las páginas con héroe precargan 400 y 800; mientras llegan, la reserva «Inter reserva» (Arial con las métricas de Inter) evita saltos.
+- Tipografía: Inter 400/500/600/700, recortada a latín, y Inter ExtraBold 800 (4.1 oficial, latín + latín extendido) para los titulares del héroe, servidas desde `assets/fonts/` (licencia OFL en `LICENSE-Inter.txt`). No se cargan fuentes externas. Las páginas con héroe precargan los cinco pesos, porque todos se ven por encima del pliegue (con 4G lento llegan antes del primer pintado); mientras llegan, la reserva «Inter reserva» (Arial con las métricas de Inter) evita saltos.
 - Logos: los SVG maestros de `guuao_work_app` (rama `feat/zentrix-work`, `assets/brand/`) y de `vendoo_app` (rama `feat/zentrix-sales`, `assets/marca/zentrix_sales/`), copiados en `assets/img/logos/`. `zentrix-negro.svg` y `zentrix-blanco.svg` salen del logotipo en `currentColor`.
 - En los textos corridos los productos se escriben «Zentrix Work» y «Zentrix Sales», como el nombre visible de las apps y de las fichas. En los logos van en minúsculas, como pide el manual.
 - El contraste cumple AA: azul sobre blanco 5,9:1, texto secundario `#4A5363` sobre `#F5F7FA` 7,2:1, y `#A6B6FF` sobre negro 10:1.
