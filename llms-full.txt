@@ -52,21 +52,51 @@ GUUAO LLC publica Zentrix Work y Zentrix Sales en las tiendas de aplicaciones. Z
 
 Partners y aliados
 
-### Empresas e instituciones que nos acompañan.
+### Empresas que trabajan a nuestro lado.
 
-Así los presentaba Equinoccio (EQNIO), el equipo que hoy es Zentrix.
+Marcas e instituciones con las que construimos, operamos y crecemos, en Venezuela y fuera de ella.
 
-- Grupo LeirosDistribución de licores
+- Distribución de licores
 - GUUAO
-- BrandIA AIInvestigación aplicada y agentes de IA
-- HetznerInfraestructura en la nube
-- OdooERP y operaciones
-- Diageo
-- Embajada de España en Nueva EspartaNueva Esparta, Venezuela
-- Sambil Margarita
-- Hoteles Sun SolHotelería · Margarita
-- Movilmax
-- StarlinkConectividad satelital
+- IA aplicada
+- Infraestructura cloud
+- ERP y operaciones
+
+- Embajada de EspañaNueva Esparta · VE
+
+- Hotelería · Margarita
+- Aliado estratégico
+
+- Aliado estratégico
+- Conectividad satelital
+- Distribución de licores
+- GUUAO
+- IA aplicada
+- Infraestructura cloud
+- ERP y operaciones
+
+- Embajada de EspañaNueva Esparta · VE
+
+- Hotelería · Margarita
+- Aliado estratégico
+
+- Aliado estratégico
+- Conectividad satelital
+
+- Tecnología para trabajar mejor
+- 24/7 · sin importar las circunstancias
+- Ingeniería con alma
+- Más con menos · sin fricción
+- Clase mundial · construido para Venezuela
+- Respaldados por BrandIA AI × Grupo Leiros
+- Base · Isla Margarita · Venezuela
+- Tecnología para trabajar mejor
+- 24/7 · sin importar las circunstancias
+- Ingeniería con alma
+- Más con menos · sin fricción
+- Clase mundial · construido para Venezuela
+- Respaldados por BrandIA AI × Grupo Leiros
+- Base · Isla Margarita · Venezuela
 
 ### ¿Quieres ser el próximo caso?
 
@@ -156,12 +186,42 @@ Zentrix en cifras
 ### Lo que ya está funcionando.
 
 - 2apps en producción: Zentrix Work y Zentrix Sales
-
 - 8productos en la suite: Zentrix Work, Sales, AI, Logistics, Cloud, Labs, Software y Traza
-
 - 12sistemas de gestión con los que conectamos Zentrix Sales
-
 - 5pasos, de entender tu proceso a mejorarlo contigo
+
+Partners y aliados
+
+### Empresas que trabajan a nuestro lado.
+
+Marcas e instituciones con las que construimos, operamos y crecemos, en Venezuela y fuera de ella. [Conoce a nuestros clientes →](https://zentrix.company/clientes/)
+
+- Distribución de licores
+- GUUAO
+- IA aplicada
+- Infraestructura cloud
+- ERP y operaciones
+
+- Embajada de EspañaNueva Esparta · VE
+
+- Hotelería · Margarita
+- Aliado estratégico
+
+- Aliado estratégico
+- Conectividad satelital
+- Distribución de licores
+- GUUAO
+- IA aplicada
+- Infraestructura cloud
+- ERP y operaciones
+
+- Embajada de EspañaNueva Esparta · VE
+
+- Hotelería · Margarita
+- Aliado estratégico
+
+- Aliado estratégico
+- Conectividad satelital
 
 Nuestros productos
 
@@ -209,15 +269,30 @@ Cómo trabajamos contigo
 
 No te dejamos solo con una app instalada. Te acompañamos desde que entendemos cómo trabajas hasta que tu equipo la usa sin pensarlo.
 
-- Entendemos Vemos cómo trabaja hoy tu equipo y dónde se pierde el tiempo.
+- 01
 
-- Diseñamos Ajustamos el producto a tus procesos, tus precios y tus reglas.
+### Entendemos
+Vemos cómo trabaja hoy tu equipo y dónde se pierde el tiempo.
 
-- Implementamos Lo conectamos con tu sistema de gestión y cargamos tus datos.
+- 02
 
-- Acompañamos Formamos a tu equipo y resolvemos dudas en los primeros días.
+### Diseñamos
+Ajustamos el producto a tus procesos, tus precios y tus reglas.
 
-- Mejoramos Medimos cómo se usa y seguimos mejorando contigo.
+- 03
+
+### Implementamos
+Lo conectamos con tu sistema de gestión y cargamos tus datos.
+
+- 04
+
+### Acompañamos
+Formamos a tu equipo y resolvemos dudas en los primeros días.
+
+- 05
+
+### Mejoramos
+Medimos cómo se usa y seguimos mejorando contigo.
 
 Qué es Zentrix
 
@@ -249,12 +324,12 @@ Soluciones
 
 Implementamos Odoo® con la localización venezolana, desarrollamos software a la medida y operamos la infraestructura que lo sostiene.
 
-- [Odoo en Venezuela Implementación con la localización del país](https://zentrix.company/soluciones/odoo-venezuela/)
-- [Desarrollo de software Apps web y móviles a la medida de tu proceso](https://zentrix.company/soluciones/desarrollo-de-software/)
-- [Auditoría técnica Diagnóstico, arquitectura y hoja de ruta](https://zentrix.company/soluciones/auditoria-tecnica/)
-- [Alta disponibilidad Infraestructura que sigue cuando se va la luz](https://zentrix.company/soluciones/infraestructura-alta-disponibilidad/)
-- [Pagos y comercio digital Punto de venta, cajas y pasarelas de pago](https://zentrix.company/soluciones/pagos-y-comercio-digital/)
-- [Visión computacional Analítica de video en tiempo real](https://zentrix.company/soluciones/vision-computacional/)
+- [Odoo en Venezuela Implementación con la localización del país Conocer más](https://zentrix.company/soluciones/odoo-venezuela/)
+- [Desarrollo de software Apps web y móviles a la medida de tu proceso Conocer más](https://zentrix.company/soluciones/desarrollo-de-software/)
+- [Auditoría técnica Diagnóstico, arquitectura y hoja de ruta Conocer más](https://zentrix.company/soluciones/auditoria-tecnica/)
+- [Alta disponibilidad Infraestructura que sigue cuando se va la luz Conocer más](https://zentrix.company/soluciones/infraestructura-alta-disponibilidad/)
+- [Pagos y comercio digital Punto de venta, cajas y pasarelas de pago Conocer más](https://zentrix.company/soluciones/pagos-y-comercio-digital/)
+- [Visión computacional Analítica de video en tiempo real Conocer más](https://zentrix.company/soluciones/vision-computacional/)
 
 [Ver todas las soluciones](https://zentrix.company/soluciones/) [Conoce a nuestros clientes](https://zentrix.company/clientes/)
 
@@ -457,20 +532,32 @@ Qué ganas
 
 ### Lo que Zentrix AI hace por ti.
 
+- 01
+
 ### APIs
 Acceso e integración con tus sistemas.
+
+- 02
 
 ### Conectores
 Tus datos y tus sistemas, unidos.
 
+- 03
+
 ### Agentes de IA
 Tareas que se ejecutan con contexto.
+
+- 04
 
 ### Asistentes
 El conocimiento de tu empresa, disponible.
 
+- 05
+
 ### Acceso por rol
 Cada persona ve y hace solo lo que le corresponde.
+
+- 06
 
 ### Registro de acciones
 Queda constancia de lo que se consultó y se hizo, con supervisión humana según el proceso.
@@ -479,9 +566,20 @@ Casos de uso
 
 ### Cuándo te sirve.
 
-- ConsultarPreguntas por un dato de tu empresa y la respuesta sale de tus propios sistemas.
-- AnalizarJuntas la información repartida para ver resultados sin armarlos a mano.
-- ActuarUn agente ejecuta la tarea sobre tus sistemas, con permisos por rol y supervisión humana.
+- 01
+
+### Consultar
+Preguntas por un dato de tu empresa y la respuesta sale de tus propios sistemas.
+
+- 02
+
+### Analizar
+Juntas la información repartida para ver resultados sin armarlos a mano.
+
+- 03
+
+### Actuar
+Un agente ejecuta la tarea sobre tus sistemas, con permisos por rol y supervisión humana.
 
 Cómo funciona
 
@@ -489,10 +587,25 @@ Cómo funciona
 
 Cada paso tiene un propósito claro, y juntos te dan el control.
 
-- Conectamos tus sistemas Con APIs y conectores, tus datos dejan de estar aislados.
-- Reunimos el conocimiento La información de la empresa queda en un solo lugar: el supercerebro.
-- Consultas y analizas Los asistentes te dan el conocimiento que necesitas para decidir.
-- Actúas con permisos Los agentes ejecutan tareas con contexto, con acceso por rol y supervisión humana.
+- 01
+
+### Conectamos tus sistemas
+Con APIs y conectores, tus datos dejan de estar aislados.
+
+- 02
+
+### Reunimos el conocimiento
+La información de la empresa queda en un solo lugar: el supercerebro.
+
+- 03
+
+### Consultas y analizas
+Los asistentes te dan el conocimiento que necesitas para decidir.
+
+- 04
+
+### Actúas con permisos
+Los agentes ejecutan tareas con contexto, con acceso por rol y supervisión humana.
 
 ### ¿Hablamos?
 
@@ -529,14 +642,22 @@ Qué ganas
 
 ### Lo que Zentrix Cloud hace por ti.
 
+- 01
+
 ### Hospedaje
 Tus aplicaciones y tus datos, alojados.
+
+- 02
 
 ### Monitoreo
 Vigilamos que todo funcione.
 
+- 03
+
 ### Respaldos
 Tu información, respaldada.
+
+- 04
 
 ### Continuidad
 Tu operación sigue en marcha.
@@ -545,9 +666,20 @@ Casos de uso
 
 ### Cuándo te sirve.
 
-- Tus aplicaciones necesitan dónde vivirLas alojamos con sus datos, para que tu equipo las use cada día.
-- No quieres ocuparte de servidoresMantenerlos, vigilarlos y respaldarlos queda de nuestro lado.
-- No puedes detenerteSi algo falla, tu información está respaldada y tu operación sigue en marcha.
+- 01
+
+### Tus aplicaciones necesitan dónde vivir
+Las alojamos con sus datos, para que tu equipo las use cada día.
+
+- 02
+
+### No quieres ocuparte de servidores
+Mantenerlos, vigilarlos y respaldarlos queda de nuestro lado.
+
+- 03
+
+### No puedes detenerte
+Si algo falla, tu información está respaldada y tu operación sigue en marcha.
 
 Cómo funciona
 
@@ -555,11 +687,30 @@ Cómo funciona
 
 Así trabajamos en Zentrix: desde entender tu operación hasta que tu equipo lo usa y seguimos mejorando.
 
-- Entendemos Vemos cómo trabaja hoy tu equipo y qué necesitas resolver.
-- Diseñamos Ajustamos la solución a tus procesos y a tus reglas.
-- Implementamos La configuramos, la integramos con tus sistemas y cargamos tus datos.
-- Adoptamos Acompañamos a tu equipo hasta que la usa sin pensarlo.
-- Mejoramos Medimos el resultado y seguimos mejorando contigo.
+- 01
+
+### Entendemos
+Vemos cómo trabaja hoy tu equipo y qué necesitas resolver.
+
+- 02
+
+### Diseñamos
+Ajustamos la solución a tus procesos y a tus reglas.
+
+- 03
+
+### Implementamos
+La configuramos, la integramos con tus sistemas y cargamos tus datos.
+
+- 04
+
+### Adoptamos
+Acompañamos a tu equipo hasta que la usa sin pensarlo.
+
+- 05
+
+### Mejoramos
+Medimos el resultado y seguimos mejorando contigo.
 
 ### ¿Hablamos?
 
@@ -596,14 +747,22 @@ Qué ganas
 
 ### Lo que Zentrix Labs hace por ti.
 
+- 01
+
 ### Investigación
 Entendemos el problema antes de proponer una solución.
+
+- 02
 
 ### Prototipos
 Algo concreto que puedes ver y probar.
 
+- 03
+
 ### Validación
 Comprobamos que funciona antes de crecer.
+
+- 04
 
 ### Nuevos productos
 Lo que se valida amplía la oferta de zentrix.
@@ -612,9 +771,20 @@ Casos de uso
 
 ### Cuándo te sirve.
 
-- Un reto sin herramientaTu operación tiene una necesidad que ningún producto resuelve: la investigamos contigo.
-- Una idea que quieres ver funcionarHacemos un prototipo concreto que puedes ver y probar.
-- Algo que puede crecerLo que se valida se convierte en producto y amplía lo que Zentrix te ofrece.
+- 01
+
+### Un reto sin herramienta
+Tu operación tiene una necesidad que ningún producto resuelve: la investigamos contigo.
+
+- 02
+
+### Una idea que quieres ver funcionar
+Hacemos un prototipo concreto que puedes ver y probar.
+
+- 03
+
+### Algo que puede crecer
+Lo que se valida se convierte en producto y amplía lo que Zentrix te ofrece.
 
 Cómo funciona
 
@@ -622,11 +792,30 @@ Cómo funciona
 
 Así trabajamos en Zentrix: desde entender tu operación hasta que tu equipo lo usa y seguimos mejorando.
 
-- Entendemos Vemos cómo trabaja hoy tu equipo y qué necesitas resolver.
-- Diseñamos Ajustamos la solución a tus procesos y a tus reglas.
-- Implementamos La configuramos, la integramos con tus sistemas y cargamos tus datos.
-- Adoptamos Acompañamos a tu equipo hasta que la usa sin pensarlo.
-- Mejoramos Medimos el resultado y seguimos mejorando contigo.
+- 01
+
+### Entendemos
+Vemos cómo trabaja hoy tu equipo y qué necesitas resolver.
+
+- 02
+
+### Diseñamos
+Ajustamos la solución a tus procesos y a tus reglas.
+
+- 03
+
+### Implementamos
+La configuramos, la integramos con tus sistemas y cargamos tus datos.
+
+- 04
+
+### Adoptamos
+Acompañamos a tu equipo hasta que la usa sin pensarlo.
+
+- 05
+
+### Mejoramos
+Medimos el resultado y seguimos mejorando contigo.
 
 ### ¿Hablamos?
 
@@ -665,14 +854,22 @@ Qué ganas
 
 ### Lo que Zentrix Logistics hará por ti.
 
+- 01
+
 ### Despachos
 Lo que sale del almacén, organizado.
+
+- 02
 
 ### Rutas
 Cada entrega en su recorrido.
 
+- 03
+
 ### Entregas
 El compromiso con tu cliente, cumplido.
+
+- 04
 
 ### Gestión de incidencias
 Lo que no sale como estaba previsto, atendido.
@@ -732,26 +929,42 @@ Qué te ayuda a hacer
 
 Y todo funciona sin señal: lo que tu equipo registra se guarda en el teléfono y sale solo cuando vuelve la conexión.
 
+- 01
+
 ### Ruta del día
 Tu vendedor ordena sus paradas en el teléfono y nadie se las cambia.
+
+- 02
 
 ### Pedidos
 Con el precio de cada cliente, el stock, el crédito, los impuestos y la firma.
 
+- 03
+
 ### Cobranza
 Registra cada pago contra las facturas abiertas, con la tasa y el comprobante.
+
+- 04
 
 ### Catálogo
 Miles de productos con el precio de cada cliente, y búsqueda por código de barras.
 
+- 05
+
 ### Conversación con la oficina
 Cada pedido o cobro tiene su hilo, sin perder nada en el chat personal.
+
+- 06
 
 ### Avisos
 Cuando la oficina aprueba un cobro o confirma un pedido, el aviso abre el documento.
 
+- 07
+
 ### Objetivo del mes
 Tu vendedor ve primero cómo va, y sabe cuánto le falta.
+
+- 08
 
 ### Varias empresas
 Almacenes, monedas e impuestos de cada empresa, sin mezclarse.
@@ -838,11 +1051,20 @@ Casos de uso
 
 ### Para quien vende en la calle.
 
-- DistribuidorasTienes miles de productos y una lista de precios para cada cliente.
+- 01
 
-- Equipos de venta de campoTus vendedores salen con su ruta y vuelven con pedidos y cobros.
+### Distribuidoras
+Tienes miles de productos y una lista de precios para cada cliente.
 
-- Operaciones con varias empresasManejas varias empresas, almacenes y monedas, cada una con sus impuestos.
+- 02
+
+### Equipos de venta de campo
+Tus vendedores salen con su ruta y vuelven con pedidos y cobros.
+
+- 03
+
+### Operaciones con varias empresas
+Manejas varias empresas, almacenes y monedas, cada una con sus impuestos.
 
 La cuenta de cada vendedor la crea su empresa: la app no permite registrarse por cuenta propia.
 
@@ -879,14 +1101,22 @@ Qué ganas
 
 ### Lo que Zentrix Software hace por ti.
 
+- 01
+
 ### Diagnóstico
 Entendemos tus procesos antes de tocar el sistema.
+
+- 02
 
 ### Configuración
 Odoo® ajustado a tus reglas.
 
+- 03
+
 ### Integraciones
 Conectado con tus otros sistemas y con nuestros productos.
+
+- 04
 
 ### Adopción
 Tu equipo usándolo en el día a día.
@@ -895,9 +1125,20 @@ Casos de uso
 
 ### Cuándo te sirve.
 
-- Empiezas con Odoo®Te acompañamos del diagnóstico a la adopción, sin saltarnos tus procesos.
-- Ya lo usas, pero no se parece a tu empresaLo configuramos con tus reglas para que refleje cómo trabajas.
-- Necesitas conectarloLo integramos con tus otros sistemas y con nuestros productos, como Zentrix Work y Zentrix Sales.
+- 01
+
+### Empiezas con Odoo®
+Te acompañamos del diagnóstico a la adopción, sin saltarnos tus procesos.
+
+- 02
+
+### Ya lo usas, pero no se parece a tu empresa
+Lo configuramos con tus reglas para que refleje cómo trabajas.
+
+- 03
+
+### Necesitas conectarlo
+Lo integramos con tus otros sistemas y con nuestros productos, como Zentrix Work y Zentrix Sales.
 
 Cómo funciona
 
@@ -905,11 +1146,30 @@ Cómo funciona
 
 Así trabajamos en Zentrix: desde entender tu operación hasta que tu equipo lo usa y seguimos mejorando.
 
-- Entendemos Vemos cómo trabaja hoy tu equipo y qué necesitas resolver.
-- Diseñamos Ajustamos la solución a tus procesos y a tus reglas.
-- Implementamos La configuramos, la integramos con tus sistemas y cargamos tus datos.
-- Adoptamos Acompañamos a tu equipo hasta que la usa sin pensarlo.
-- Mejoramos Medimos el resultado y seguimos mejorando contigo.
+- 01
+
+### Entendemos
+Vemos cómo trabaja hoy tu equipo y qué necesitas resolver.
+
+- 02
+
+### Diseñamos
+Ajustamos la solución a tus procesos y a tus reglas.
+
+- 03
+
+### Implementamos
+La configuramos, la integramos con tus sistemas y cargamos tus datos.
+
+- 04
+
+### Adoptamos
+Acompañamos a tu equipo hasta que la usa sin pensarlo.
+
+- 05
+
+### Mejoramos
+Medimos el resultado y seguimos mejorando contigo.
 
 ### ¿Hablamos?
 
@@ -940,14 +1200,22 @@ Qué hace
 
 Para empresas de distribución, comercio, logística, servicios y gestión documental que necesitan saber dónde está cada cosa y por dónde pasó. QR, códigos de barras, RFID e integraciones, según lo que necesite cada caso.
 
+- 01
+
 ### Identidad única
 Cada objeto tiene su origen y su código único.
+
+- 02
 
 ### Responsables claros
 Cada movimiento queda registrado con quién lo hizo.
 
+- 03
+
 ### Evidencias
 Verificas la ubicación y las evidencias de cada paso.
+
+- 04
 
 ### Historial completo
 Consultas toda la historia, física y digital.
@@ -1001,20 +1269,32 @@ Qué te ayuda a hacer
 
 Cada función está pensada para el ritmo real de una tienda: mucho movimiento, poco tiempo y el cliente esperando.
 
+- 01
+
 ### Preparar pedidos
 Recoges producto por producto con la cámara como escáner, y la app te dice si te falta algo antes de cerrar.
+
+- 02
 
 ### Entregar
 En el mostrador o a domicilio, bulto por bulto, con la prueba de entrega en el momento.
 
+- 03
+
 ### Recibir devoluciones
 Recibes solo lo que soporte ya autorizó, así no discutes en el mostrador.
+
+- 04
 
 ### Avisos que sí escuchas
 Si tu teléfono está en silencio, la app te lo dice y te lleva a arreglarlo.
 
+- 05
+
 ### Un turno con principio y fin
 Trabajas mientras estás encendido. Fuera de turno, nada te interrumpe.
+
+- 06
 
 ### Entrar es rápido y seguro
 Entras una vez con tu correo y después con tu PIN o tu huella. El PIN no sale de tu teléfono.
@@ -1025,11 +1305,20 @@ Casos de uso
 
 Al encenderte eliges qué vas a atender hoy. Así llega cada uno.
 
-- Un pedido para prepararTe suena aunque tengas la pantalla apagada. Lo tomas con un gesto, lo preparas escaneando producto por producto y la app te avisa si falta algo.
+- 01
 
-- Una entregaEn el mostrador o a domicilio, bulto por bulto, con la prueba de entrega en el momento.
+### Un pedido para preparar
+Te suena aunque tengas la pantalla apagada. Lo tomas con un gesto, lo preparas escaneando producto por producto y la app te avisa si falta algo.
 
-- Una devoluciónRecibes solo lo que soporte ya autorizó, así no discutes en el mostrador.
+- 02
+
+### Una entrega
+En el mostrador o a domicilio, bulto por bulto, con la prueba de entrega en el momento.
+
+- 03
+
+### Una devolución
+Recibes solo lo que soporte ya autorizó, así no discutes en el mostrador.
 
 Tu teléfono
 
@@ -1089,27 +1378,28 @@ Qué incluye
 
 ### Lo que hacemos, en concreto.
 
-01
+- 01
 
 ### Diagnóstico honesto
 Cómo está tu sistema hoy y cuánto te cuesta mantenerlo.
 
-02
+- 02
 
 ### Hoja de ruta con motivos
 Qué hacer primero y por qué; no una lista de deseos.
 
-03
+- 03
 
 ### Decisiones argumentadas
 Qué tecnología usar, explicado para que puedas decidir.
 
-04
+- 04
 
 ### Segunda opinión
 Revisamos presupuestos y propuestas de terceros antes de que firmes.
 
-Tecnología - Auditoría
+### Tecnología
+- Auditoría
 - Arquitectura
 - Hoja de ruta
 - Stack
@@ -1121,6 +1411,9 @@ Dónde trabajamos
 Nuestra base está en Isla Margarita, Nueva Esparta, Venezuela. Trabajamos con empresas de Porlamar, Pampatar y el resto del país, y en remoto con clientes de Latinoamérica, Estados Unidos y Europa.
 
 Otras soluciones
+
+### Todo lo demás que podemos hacer.
+
 - [Odoo en Venezuela Implementación con la localización del país](https://zentrix.company/soluciones/odoo-venezuela/)
 - [Desarrollo de software Apps web y móviles a la medida de tu proceso](https://zentrix.company/soluciones/desarrollo-de-software/)
 - [Alta disponibilidad Infraestructura que sigue cuando se va la luz](https://zentrix.company/soluciones/infraestructura-alta-disponibilidad/)
@@ -1152,32 +1445,39 @@ Qué incluye
 
 ### Lo que hacemos, en concreto.
 
-01
+- 01
 
 ### Apps web y móviles
 Construidas alrededor del proceso de tu negocio, no al revés.
 
-02
+- 02
 
 ### Diseño en el mismo equipo
 Quien diseña la experiencia trabaja al lado de quien la programa.
 
-03
+- 03
 
 ### Arquitectura para crecer
 Para sumar usuarios y funciones sin rehacer el sistema desde cero.
 
-04
+- 04
 
 ### Lo ves funcionando
 Entregas continuas: el producto se prueba en tus manos, no en presentaciones.
 
-Tecnología - Flutter
+### Tecnología
+- Flutter
 - Next.js
 - FastAPI
 - UI/UX
 
-[Producto relacionado Zentrix Labs Investigación →](https://zentrix.company/labs/)
+Producto relacionado
+
+### Zentrix Labs
+
+Nuevas ideas, probadas antes de llegar a tu operación.
+
+[Conoce Zentrix Labs](https://zentrix.company/labs/)
 
 Dónde trabajamos
 
@@ -1186,6 +1486,9 @@ Dónde trabajamos
 Nuestra base está en Isla Margarita, Nueva Esparta, Venezuela. Trabajamos con empresas de Porlamar, Pampatar y el resto del país, y en remoto con clientes de Latinoamérica, Estados Unidos y Europa.
 
 Otras soluciones
+
+### Todo lo demás que podemos hacer.
+
 - [Odoo en Venezuela Implementación con la localización del país](https://zentrix.company/soluciones/odoo-venezuela/)
 - [Auditoría técnica Diagnóstico, arquitectura y hoja de ruta](https://zentrix.company/soluciones/auditoria-tecnica/)
 - [Alta disponibilidad Infraestructura que sigue cuando se va la luz](https://zentrix.company/soluciones/infraestructura-alta-disponibilidad/)
@@ -1245,11 +1548,30 @@ Cómo trabajamos
 
 El mismo método en cada proyecto, de la primera conversación a la mejora continua.
 
-- Entendemos Vemos cómo trabaja hoy tu equipo y qué necesitas resolver.
-- Diseñamos Ajustamos la solución a tus procesos y a tus reglas.
-- Implementamos La configuramos, la integramos con tus sistemas y cargamos tus datos.
-- Adoptamos Acompañamos a tu equipo hasta que la usa sin pensarlo.
-- Mejoramos Medimos el resultado y seguimos mejorando contigo.
+- 01
+
+### Entendemos
+Vemos cómo trabaja hoy tu equipo y qué necesitas resolver.
+
+- 02
+
+### Diseñamos
+Ajustamos la solución a tus procesos y a tus reglas.
+
+- 03
+
+### Implementamos
+La configuramos, la integramos con tus sistemas y cargamos tus datos.
+
+- 04
+
+### Adoptamos
+Acompañamos a tu equipo hasta que la usa sin pensarlo.
+
+- 05
+
+### Mejoramos
+Medimos el resultado y seguimos mejorando contigo.
 
 ### ¿No sabes por dónde empezar?
 
@@ -1276,32 +1598,39 @@ Qué incluye
 
 ### Lo que hacemos, en concreto.
 
-01
+- 01
 
 ### Servidores y respaldos
 Propios o en la nube, con respaldos que se comprueban.
 
-02
+- 02
 
 ### Zero Trust
 Cada acceso se autentica; nada se da por supuesto.
 
-03
+- 03
 
 ### Fallos que no se contagian
 Contenedores y orquestación para que un error no arrastre al resto.
 
-04
+- 04
 
 ### Hecho para Venezuela
 Diseñado para cortes de energía y de conexión.
 
-Tecnología - Docker
+### Tecnología
+- Docker
 - Kubernetes
 - Zero Trust
 - Self-hosted
 
-[Producto relacionado Zentrix Cloud Infraestructura →](https://zentrix.company/cloud/)
+Producto relacionado
+
+### Zentrix Cloud
+
+Tus aplicaciones y tus datos, siempre disponibles.
+
+[Conoce Zentrix Cloud](https://zentrix.company/cloud/)
 
 Dónde trabajamos
 
@@ -1310,6 +1639,9 @@ Dónde trabajamos
 Nuestra base está en Isla Margarita, Nueva Esparta, Venezuela. Trabajamos con empresas de Porlamar, Pampatar y el resto del país, y en remoto con clientes de Latinoamérica, Estados Unidos y Europa.
 
 Otras soluciones
+
+### Todo lo demás que podemos hacer.
+
 - [Odoo en Venezuela Implementación con la localización del país](https://zentrix.company/soluciones/odoo-venezuela/)
 - [Desarrollo de software Apps web y móviles a la medida de tu proceso](https://zentrix.company/soluciones/desarrollo-de-software/)
 - [Auditoría técnica Diagnóstico, arquitectura y hoja de ruta](https://zentrix.company/soluciones/auditoria-tecnica/)
@@ -1341,32 +1673,39 @@ Qué incluye
 
 ### Lo que hacemos, en concreto.
 
-01
+- 01
 
 ### Primero, tus procesos
 Vemos cómo trabaja de verdad tu empresa antes de configurar nada.
 
-02
+- 02
 
 ### Localización venezolana
 Libros, retenciones, numeración de documentos y la doble moneda, como exige la ley.
 
-03
+- 03
 
 ### Todo en un sistema
 Inventario, compras, ventas y tesorería con trazabilidad de punta a punta.
 
-04
+- 04
 
 ### Tu gente, al día
 Capacitamos a quienes lo van a usar todos los días, y nos quedamos para acompañarlos.
 
-Tecnología - Odoo®
+### Tecnología
+- Odoo®
 - ERP
 - Localización Venezuela
 - Trazabilidad
 
-[Producto relacionado Zentrix Software Implementación de Odoo® →](https://zentrix.company/software/)
+Producto relacionado
+
+### Zentrix Software
+
+Tu sistema de gestión, adaptado a cómo trabajas.
+
+[Conoce Zentrix Software](https://zentrix.company/software/)
 
 Dónde trabajamos
 
@@ -1375,6 +1714,9 @@ Dónde trabajamos
 Nuestra base está en Isla Margarita, Nueva Esparta, Venezuela. Trabajamos con empresas de Porlamar, Pampatar y el resto del país, y en remoto con clientes de Latinoamérica, Estados Unidos y Europa.
 
 Otras soluciones
+
+### Todo lo demás que podemos hacer.
+
 - [Desarrollo de software Apps web y móviles a la medida de tu proceso](https://zentrix.company/soluciones/desarrollo-de-software/)
 - [Auditoría técnica Diagnóstico, arquitectura y hoja de ruta](https://zentrix.company/soluciones/auditoria-tecnica/)
 - [Alta disponibilidad Infraestructura que sigue cuando se va la luz](https://zentrix.company/soluciones/infraestructura-alta-disponibilidad/)
@@ -1406,32 +1748,39 @@ Qué incluye
 
 ### Lo que hacemos, en concreto.
 
-01
+- 01
 
 ### Punto de venta integrado
 La caja de la tienda conectada con el resto de tu sistema.
 
-02
+- 02
 
 ### Cajas bajo control
 Turnos, aperturas, cierres y arqueos que cuadran.
 
-03
+- 03
 
 ### Pasarelas de pago
 Cobros con conciliación automática.
 
-04
+- 04
 
 ### Comprobantes digitales
 Tickets y comprobantes electrónicos para tu cliente.
 
-Tecnología - Punto de venta
+### Tecnología
+- Punto de venta
 - Cajas
 - Pasarelas de pago
 - Blockchain
 
-[Producto relacionado Zentrix Work El equipo de tienda →](https://zentrix.company/work/)
+Producto relacionado
+
+### Zentrix Work
+
+Tu turno, organizado desde el teléfono.
+
+[Conoce Zentrix Work](https://zentrix.company/work/)
 
 Dónde trabajamos
 
@@ -1440,6 +1789,9 @@ Dónde trabajamos
 Nuestra base está en Isla Margarita, Nueva Esparta, Venezuela. Trabajamos con empresas de Porlamar, Pampatar y el resto del país, y en remoto con clientes de Latinoamérica, Estados Unidos y Europa.
 
 Otras soluciones
+
+### Todo lo demás que podemos hacer.
+
 - [Odoo en Venezuela Implementación con la localización del país](https://zentrix.company/soluciones/odoo-venezuela/)
 - [Desarrollo de software Apps web y móviles a la medida de tu proceso](https://zentrix.company/soluciones/desarrollo-de-software/)
 - [Auditoría técnica Diagnóstico, arquitectura y hoja de ruta](https://zentrix.company/soluciones/auditoria-tecnica/)
@@ -1471,32 +1823,39 @@ Qué incluye
 
 ### Lo que hacemos, en concreto.
 
-01
+- 01
 
 ### Tus cámaras de siempre
 Analítica de video sobre las cámaras que ya tienes.
 
-02
+- 02
 
 ### En el momento
 Detección de eventos en tiempo real, no revisión de grabaciones después.
 
-03
+- 03
 
 ### Acceso biométrico
 Control de acceso por reconocimiento.
 
-04
+- 04
 
 ### Avisos a quien actúa
 Las alertas llegan a la persona que tiene que hacer algo.
 
-Tecnología - Visión computacional
+### Tecnología
+- Visión computacional
 - Analítica de video
 - Biometría
 - Tiempo real
 
-[Producto relacionado Zentrix AI Inteligencia aplicada →](https://zentrix.company/ai/)
+Producto relacionado
+
+### Zentrix AI
+
+La información de tu empresa, al servicio de cada decisión.
+
+[Conoce Zentrix AI](https://zentrix.company/ai/)
 
 Dónde trabajamos
 
@@ -1505,6 +1864,9 @@ Dónde trabajamos
 Nuestra base está en Isla Margarita, Nueva Esparta, Venezuela. Trabajamos con empresas de Porlamar, Pampatar y el resto del país, y en remoto con clientes de Latinoamérica, Estados Unidos y Europa.
 
 Otras soluciones
+
+### Todo lo demás que podemos hacer.
+
 - [Odoo en Venezuela Implementación con la localización del país](https://zentrix.company/soluciones/odoo-venezuela/)
 - [Desarrollo de software Apps web y móviles a la medida de tu proceso](https://zentrix.company/soluciones/desarrollo-de-software/)
 - [Auditoría técnica Diagnóstico, arquitectura y hoja de ruta](https://zentrix.company/soluciones/auditoria-tecnica/)
@@ -1638,20 +2000,32 @@ What you get
 
 ### What Zentrix AI does for you.
 
+- 01
+
 ### APIs
 Access to and integration with your systems.
+
+- 02
 
 ### Connectors
 Your data and your systems, brought together.
 
+- 03
+
 ### AI agents
 Tasks carried out with context.
+
+- 04
 
 ### Assistants
 Your company's knowledge, on hand.
 
+- 05
+
 ### Role-based access
 Everyone sees and does only what their role allows.
+
+- 06
 
 ### Action log
 There is a record of what was looked up and what was done, with human oversight where the process calls for it.
@@ -1660,9 +2034,20 @@ Use cases
 
 ### When it helps.
 
-- Look it upAsk about any piece of company data and the answer comes from your own systems.
-- AnalyzeBring scattered information together and see results without building them by hand.
-- ActAn agent carries out the task on your systems, with role-based permissions and human oversight.
+- 01
+
+### Look it up
+Ask about any piece of company data and the answer comes from your own systems.
+
+- 02
+
+### Analyze
+Bring scattered information together and see results without building them by hand.
+
+- 03
+
+### Act
+An agent carries out the task on your systems, with role-based permissions and human oversight.
 
 How it works
 
@@ -1670,10 +2055,25 @@ How it works
 
 Each step has a clear purpose, and together they put you in control.
 
-- We connect your systems With APIs and connectors, your data stops living in silos.
-- We bring the knowledge together Your company's information lives in one place: the super-brain.
-- You look things up and analyze Assistants give you the knowledge you need to decide.
-- You act with permissions Agents carry out tasks with context, with role-based access and human oversight.
+- 01
+
+### We connect your systems
+With APIs and connectors, your data stops living in silos.
+
+- 02
+
+### We bring the knowledge together
+Your company's information lives in one place: the super-brain.
+
+- 03
+
+### You look things up and analyze
+Assistants give you the knowledge you need to decide.
+
+- 04
+
+### You act with permissions
+Agents carry out tasks with context, with role-based access and human oversight.
 
 ### Let's talk
 
@@ -1710,14 +2110,22 @@ What you get
 
 ### What Zentrix Cloud does for you.
 
+- 01
+
 ### Hosting
 Your apps and your data, hosted.
+
+- 02
 
 ### Monitoring
 We keep watch to make sure everything works.
 
+- 03
+
 ### Backups
 Your information, backed up.
+
+- 04
 
 ### Continuity
 Your operation keeps running.
@@ -1726,9 +2134,20 @@ Use cases
 
 ### When it helps.
 
-- Your apps need a homeWe host them along with their data, so your team can use them every day.
-- You don't want to deal with serversMaintaining, monitoring and backing them up is on us.
-- You can't afford to stopIf something fails, your information is backed up and your operation keeps running.
+- 01
+
+### Your apps need a home
+We host them along with their data, so your team can use them every day.
+
+- 02
+
+### You don't want to deal with servers
+Maintaining, monitoring and backing them up is on us.
+
+- 03
+
+### You can't afford to stop
+If something fails, your information is backed up and your operation keeps running.
 
 How it works
 
@@ -1736,11 +2155,30 @@ How it works
 
 This is how we work at Zentrix: from understanding your operation to your team using it day to day, and we keep improving from there.
 
-- Understand We look at how your team works today and what you need to solve.
-- Design We fit the solution to your processes and your rules.
-- Implement We set it up, integrate it with your systems and load your data.
-- Adopt We stay with your team until using it is second nature.
-- Improve We measure the results and keep improving with you.
+- 01
+
+### Understand
+We look at how your team works today and what you need to solve.
+
+- 02
+
+### Design
+We fit the solution to your processes and your rules.
+
+- 03
+
+### Implement
+We set it up, integrate it with your systems and load your data.
+
+- 04
+
+### Adopt
+We stay with your team until using it is second nature.
+
+- 05
+
+### Improve
+We measure the results and keep improving with you.
 
 ### Let's talk
 
@@ -1825,21 +2263,51 @@ GUUAO LLC publishes Zentrix Work and Zentrix Sales on the app stores. Zentrix Wo
 
 Partners and allies
 
-### Companies and institutions we work alongside.
+### Companies that work alongside us.
 
-Equinoccio (EQNIO), the team that is now Zentrix, presented them as its partners and allies.
+Brands and institutions we build, operate and grow with, in Venezuela and beyond.
 
-- Grupo LeirosBeverage distribution
+- Beverage distribution
 - GUUAO
-- BrandIA AIApplied research and AI agents
-- HetznerCloud infrastructure
-- OdooERP and operations
-- Diageo
-- Embajada de España en Nueva EspartaNueva Esparta, Venezuela
-- Sambil Margarita
-- Hoteles Sun SolHospitality · Margarita
-- Movilmax
-- StarlinkSatellite connectivity
+- Applied AI
+- Cloud infrastructure
+- ERP and operations
+
+- Embajada de EspañaNueva Esparta · VE
+
+- Hospitality · Margarita
+- Strategic ally
+
+- Strategic ally
+- Satellite connectivity
+- Beverage distribution
+- GUUAO
+- Applied AI
+- Cloud infrastructure
+- ERP and operations
+
+- Embajada de EspañaNueva Esparta · VE
+
+- Hospitality · Margarita
+- Strategic ally
+
+- Strategic ally
+- Satellite connectivity
+
+- Technology to work better
+- 24/7 · whatever the circumstances
+- Engineering with soul
+- More with less · no friction
+- World-class · built for Venezuela
+- Backed by BrandIA AI × Grupo Leiros
+- Based on Isla Margarita · Venezuela
+- Technology to work better
+- 24/7 · whatever the circumstances
+- Engineering with soul
+- More with less · no friction
+- World-class · built for Venezuela
+- Backed by BrandIA AI × Grupo Leiros
+- Based on Isla Margarita · Venezuela
 
 ### Want to be the next case?
 
@@ -1892,12 +2360,42 @@ Zentrix by the numbers
 ### What's already up and running.
 
 - 2apps in production: Zentrix Work and Zentrix Sales
-
 - 8products in the suite: Zentrix Work, Sales, AI, Logistics, Cloud, Labs, Software and Traza
-
 - 12management systems we connect Zentrix Sales to
-
 - 5steps, from understanding your process to improving it with you
+
+Partners and allies
+
+### Companies that work alongside us.
+
+Brands and institutions we build, operate and grow with, in Venezuela and beyond. [Meet our customers →](https://zentrix.company/en/customers/)
+
+- Beverage distribution
+- GUUAO
+- Applied AI
+- Cloud infrastructure
+- ERP and operations
+
+- Embajada de EspañaNueva Esparta · VE
+
+- Hospitality · Margarita
+- Strategic ally
+
+- Strategic ally
+- Satellite connectivity
+- Beverage distribution
+- GUUAO
+- Applied AI
+- Cloud infrastructure
+- ERP and operations
+
+- Embajada de EspañaNueva Esparta · VE
+
+- Hospitality · Margarita
+- Strategic ally
+
+- Strategic ally
+- Satellite connectivity
 
 Our products
 
@@ -1945,15 +2443,30 @@ How we work with you
 
 We don't just install an app and leave you on your own. We're with you from the moment we learn how you work until your team uses it without thinking twice.
 
-- Understand We look at how your team works today and where time gets lost.
+- 01
 
-- Design We tailor the product to your processes, your prices, and your rules.
+### Understand
+We look at how your team works today and where time gets lost.
 
-- Implement We connect it to your management system and load your data.
+- 02
 
-- Support We train your team and answer questions in the first few days.
+### Design
+We tailor the product to your processes, your prices, and your rules.
 
-- Improve We measure how it's used and keep improving it with you.
+- 03
+
+### Implement
+We connect it to your management system and load your data.
+
+- 04
+
+### Support
+We train your team and answer questions in the first few days.
+
+- 05
+
+### Improve
+We measure how it's used and keep improving it with you.
 
 What Zentrix is
 
@@ -1985,12 +2498,12 @@ Solutions
 
 We implement Odoo® with Venezuelan localization, build custom software and run the infrastructure behind it.
 
-- [Odoo in Venezuela Implementation with Venezuelan localization](https://zentrix.company/en/solutions/odoo-venezuela/)
-- [Software development Web and mobile apps built around your process](https://zentrix.company/en/solutions/software-development/)
-- [Technical audit Diagnosis, architecture and roadmap](https://zentrix.company/en/solutions/technical-audit/)
-- [High availability Infrastructure that keeps running through outages](https://zentrix.company/en/solutions/high-availability-infrastructure/)
-- [Payments and digital commerce Point of sale, tills and payment gateways](https://zentrix.company/en/solutions/payments-and-digital-commerce/)
-- [Computer vision Real-time video analytics](https://zentrix.company/en/solutions/computer-vision/)
+- [Odoo in Venezuela Implementation with Venezuelan localization Learn more](https://zentrix.company/en/solutions/odoo-venezuela/)
+- [Software development Web and mobile apps built around your process Learn more](https://zentrix.company/en/solutions/software-development/)
+- [Technical audit Diagnosis, architecture and roadmap Learn more](https://zentrix.company/en/solutions/technical-audit/)
+- [High availability Infrastructure that keeps running through outages Learn more](https://zentrix.company/en/solutions/high-availability-infrastructure/)
+- [Payments and digital commerce Point of sale, tills and payment gateways Learn more](https://zentrix.company/en/solutions/payments-and-digital-commerce/)
+- [Computer vision Real-time video analytics Learn more](https://zentrix.company/en/solutions/computer-vision/)
 
 [See all solutions](https://zentrix.company/en/solutions/) [Meet our customers](https://zentrix.company/en/customers/)
 
@@ -2056,14 +2569,22 @@ What you get
 
 ### What Zentrix Labs does for you.
 
+- 01
+
 ### Research
 We understand the problem before we propose a solution.
+
+- 02
 
 ### Prototypes
 Something concrete you can see and try.
 
+- 03
+
 ### Validation
 We make sure it works before it grows.
+
+- 04
 
 ### New products
 What gets validated expands what Zentrix offers.
@@ -2072,9 +2593,20 @@ Use cases
 
 ### When it helps.
 
-- A challenge with no toolYour operation has a need no product solves. We research it with you.
-- An idea you want to see workingWe build a concrete prototype you can see and try.
-- Something that can growWhat gets validated becomes a product and expands what Zentrix offers you.
+- 01
+
+### A challenge with no tool
+Your operation has a need no product solves. We research it with you.
+
+- 02
+
+### An idea you want to see working
+We build a concrete prototype you can see and try.
+
+- 03
+
+### Something that can grow
+What gets validated becomes a product and expands what Zentrix offers you.
 
 How it works
 
@@ -2082,11 +2614,30 @@ How it works
 
 This is how we work at Zentrix: from understanding your operation to your team using it every day, and we keep improving from there.
 
-- Understand We see how your team works today and what you need to solve.
-- Design We fit the solution to your processes and your rules.
-- Implement We configure it, connect it to your systems, and load your data.
-- Adopt We stay with your team until using it is second nature.
-- Improve We measure the results and keep improving with you.
+- 01
+
+### Understand
+We see how your team works today and what you need to solve.
+
+- 02
+
+### Design
+We fit the solution to your processes and your rules.
+
+- 03
+
+### Implement
+We configure it, connect it to your systems, and load your data.
+
+- 04
+
+### Adopt
+We stay with your team until using it is second nature.
+
+- 05
+
+### Improve
+We measure the results and keep improving with you.
 
 ### Shall we talk?
 
@@ -2125,14 +2676,22 @@ What you get
 
 ### What Zentrix Logistics will do for you.
 
+- 01
+
 ### Dispatches
 Everything leaving the warehouse, organized.
+
+- 02
 
 ### Routes
 Every delivery on its route.
 
+- 03
+
 ### Deliveries
 Your promise to your customer, kept.
+
+- 04
 
 ### Incident management
 When things don’t go as planned, handled.
@@ -2315,38 +2874,62 @@ What it does
 
 And all of it works with no signal.
 
+- 01
+
 ### Today's route
 Built by the rep, on the phone.
+
+- 02
 
 ### Guided visit
 Eight steps, only one of them required.
 
+- 03
+
 ### Order
 With tax and signature.
+
+- 04
 
 ### Collections
 Against open invoices.
 
+- 05
+
 ### Catalog
 Price per customer.
+
+- 06
 
 ### Barcodes
 Search without typing.
 
+- 07
+
 ### Chat
 With the back office.
+
+- 08
 
 ### Alerts
 They open the document.
 
+- 09
+
 ### Location
 Arrival, close and route.
+
+- 10
 
 ### Target
 The rep sees it first.
 
+- 11
+
 ### PIN and encryption
 One database per rep.
+
+- 12
 
 ### Multi-company
 Prices, stock and tax.
@@ -2403,11 +2986,20 @@ Use cases
 
 ### For the people who sell on the street.
 
-- DistributorsThousands of SKUs and a price list per customer.
+- 01
 
-- Field sales teamsThey leave with their route and come back with orders and payments.
+### Distributors
+Thousands of SKUs and a price list per customer.
 
-- Multi-company operationsSeveral companies, warehouses and currencies, each with its own tax.
+- 02
+
+### Field sales teams
+They leave with their route and come back with orders and payments.
+
+- 03
+
+### Multi-company operations
+Several companies, warehouses and currencies, each with its own tax.
 
 Each rep's account is created by their company: the app does not allow self sign-up.
 
@@ -3071,14 +3663,22 @@ What you get
 
 ### What Zentrix Software does for you.
 
+- 01
+
 ### Assessment
 We understand your processes before we touch the system.
+
+- 02
 
 ### Configuration
 Odoo® set up to fit your rules.
 
+- 03
+
 ### Integrations
 Connected to your other systems and to our products.
+
+- 04
 
 ### Adoption
 Your team using it day to day.
@@ -3087,9 +3687,20 @@ Use cases
 
 ### When it helps.
 
-- You’re starting with Odoo®We’re with you from assessment to adoption, without skipping over your processes.
-- You already use it, but it doesn’t look like your companyWe configure it with your rules so it reflects how you work.
-- You need to connect itWe integrate it with your other systems and with our products, like Zentrix Work and Zentrix Sales.
+- 01
+
+### You’re starting with Odoo®
+We’re with you from assessment to adoption, without skipping over your processes.
+
+- 02
+
+### You already use it, but it doesn’t look like your company
+We configure it with your rules so it reflects how you work.
+
+- 03
+
+### You need to connect it
+We integrate it with your other systems and with our products, like Zentrix Work and Zentrix Sales.
 
 How it works
 
@@ -3097,11 +3708,30 @@ How it works
 
 This is how we work at Zentrix: from understanding your operation to your team using it every day, and we keep improving from there.
 
-- Understand We see how your team works today and what you need to solve.
-- Design We fit the solution to your processes and your rules.
-- Implement We configure it, connect it to your systems, and load your data.
-- Adopt We stay with your team until using it is second nature.
-- Improve We measure the results and keep improving with you.
+- 01
+
+### Understand
+We see how your team works today and what you need to solve.
+
+- 02
+
+### Design
+We fit the solution to your processes and your rules.
+
+- 03
+
+### Implement
+We configure it, connect it to your systems, and load your data.
+
+- 04
+
+### Adopt
+We stay with your team until using it is second nature.
+
+- 05
+
+### Improve
+We measure the results and keep improving with you.
 
 ### Shall we talk?
 
@@ -3128,32 +3758,39 @@ What’s included
 
 ### What we do, concretely.
 
-01
+- 01
 
 ### The cameras you already have
 Video analytics on your existing cameras.
 
-02
+- 02
 
 ### In the moment
 Real-time event detection, not reviewing footage after the fact.
 
-03
+- 03
 
 ### Biometric access
 Access control by recognition.
 
-04
+- 04
 
 ### Alerts to whoever acts
 Alerts reach the person who needs to do something about it.
 
-Technology - Computer vision
+### Technology
+- Computer vision
 - Video analytics
 - Biometrics
 - Real time
 
-[Related product Zentrix AI Applied intelligence →](https://zentrix.company/en/ai/)
+Related product
+
+### Zentrix AI
+
+Your company’s information, serving every decision.
+
+[Discover Zentrix AI](https://zentrix.company/en/ai/)
 
 Where we work
 
@@ -3162,6 +3799,9 @@ Where we work
 Our base is on Isla Margarita, Nueva Esparta, Venezuela. We work with companies across the country, and remotely with clients in Latin America, the United States and Europe.
 
 Other solutions
+
+### Everything else we can do.
+
 - [Odoo in Venezuela Implementation with Venezuelan localization](https://zentrix.company/en/solutions/odoo-venezuela/)
 - [Software development Web and mobile apps built around your process](https://zentrix.company/en/solutions/software-development/)
 - [Technical audit Diagnosis, architecture and roadmap](https://zentrix.company/en/solutions/technical-audit/)
@@ -3193,32 +3833,39 @@ What’s included
 
 ### What we do, concretely.
 
-01
+- 01
 
 ### Servers and backups
 On-premises or in the cloud, with backups that are actually tested.
 
-02
+- 02
 
 ### Zero Trust
 Every access is authenticated; nothing is taken for granted.
 
-03
+- 03
 
 ### Failures that stay contained
 Containers and orchestration so one fault doesn’t drag down the rest.
 
-04
+- 04
 
 ### Built for Venezuela
 Designed for power and connectivity outages.
 
-Technology - Docker
+### Technology
+- Docker
 - Kubernetes
 - Zero Trust
 - Self-hosted
 
-[Related product Zentrix Cloud Infrastructure →](https://zentrix.company/en/cloud/)
+Related product
+
+### Zentrix Cloud
+
+Your applications and your data, always available.
+
+[Discover Zentrix Cloud](https://zentrix.company/en/cloud/)
 
 Where we work
 
@@ -3227,6 +3874,9 @@ Where we work
 Our base is on Isla Margarita, Nueva Esparta, Venezuela. We work with companies across the country, and remotely with clients in Latin America, the United States and Europe.
 
 Other solutions
+
+### Everything else we can do.
+
 - [Odoo in Venezuela Implementation with Venezuelan localization](https://zentrix.company/en/solutions/odoo-venezuela/)
 - [Software development Web and mobile apps built around your process](https://zentrix.company/en/solutions/software-development/)
 - [Technical audit Diagnosis, architecture and roadmap](https://zentrix.company/en/solutions/technical-audit/)
@@ -3286,11 +3936,30 @@ How we work
 
 The same method for every project, from the first conversation to continuous improvement.
 
-- Understand We see how your team works today and what you need to solve.
-- Design We fit the solution to your processes and your rules.
-- Build We configure it, integrate it with your systems and load your data.
-- Adopt We stay with your team until they use it without thinking.
-- Improve We measure the result and keep improving with you.
+- 01
+
+### Understand
+We see how your team works today and what you need to solve.
+
+- 02
+
+### Design
+We fit the solution to your processes and your rules.
+
+- 03
+
+### Build
+We configure it, integrate it with your systems and load your data.
+
+- 04
+
+### Adopt
+We stay with your team until they use it without thinking.
+
+- 05
+
+### Improve
+We measure the result and keep improving with you.
 
 ### Not sure where to start?
 
@@ -3317,32 +3986,39 @@ What’s included
 
 ### What we do, concretely.
 
-01
+- 01
 
 ### Your processes first
 We look at how your company really works before we configure anything.
 
-02
+- 02
 
 ### Venezuelan localization
 Tax books, withholdings, document numbering and dual currency, as the law requires.
 
-03
+- 03
 
 ### One system for everything
 Inventory, purchasing, sales and treasury, traceable end to end.
 
-04
+- 04
 
 ### Your people, up to speed
 We train the people who will use it every day, and we stay to support them.
 
-Technology - Odoo®
+### Technology
+- Odoo®
 - ERP
 - Localización Venezuela
 - Trazabilidad
 
-[Related product Zentrix Software Odoo® implementation →](https://zentrix.company/en/software/)
+Related product
+
+### Zentrix Software
+
+Your management system, adapted to how you work.
+
+[Discover Zentrix Software](https://zentrix.company/en/software/)
 
 Where we work
 
@@ -3351,6 +4027,9 @@ Where we work
 Our base is on Isla Margarita, Nueva Esparta, Venezuela. We work with companies across the country, and remotely with clients in Latin America, the United States and Europe.
 
 Other solutions
+
+### Everything else we can do.
+
 - [Software development Web and mobile apps built around your process](https://zentrix.company/en/solutions/software-development/)
 - [Technical audit Diagnosis, architecture and roadmap](https://zentrix.company/en/solutions/technical-audit/)
 - [High availability Infrastructure that keeps running through outages](https://zentrix.company/en/solutions/high-availability-infrastructure/)
@@ -3382,32 +4061,39 @@ What’s included
 
 ### What we do, concretely.
 
-01
+- 01
 
 ### An integrated point of sale
 Your store’s till connected to the rest of your system.
 
-02
+- 02
 
 ### Tills under control
 Shifts, openings, closings and cash counts that add up.
 
-03
+- 03
 
 ### Payment gateways
 Payments with automatic reconciliation.
 
-04
+- 04
 
 ### Digital receipts
 Electronic tickets and receipts for your customers.
 
-Technology - Point of sale
+### Technology
+- Point of sale
 - Tills
 - Payment gateways
 - Blockchain
 
-[Related product Zentrix Work Store teams →](https://zentrix.company/en/work/)
+Related product
+
+### Zentrix Work
+
+Your shift, organized from your phone.
+
+[Discover Zentrix Work](https://zentrix.company/en/work/)
 
 Where we work
 
@@ -3416,6 +4102,9 @@ Where we work
 Our base is on Isla Margarita, Nueva Esparta, Venezuela. We work with companies across the country, and remotely with clients in Latin America, the United States and Europe.
 
 Other solutions
+
+### Everything else we can do.
+
 - [Odoo in Venezuela Implementation with Venezuelan localization](https://zentrix.company/en/solutions/odoo-venezuela/)
 - [Software development Web and mobile apps built around your process](https://zentrix.company/en/solutions/software-development/)
 - [Technical audit Diagnosis, architecture and roadmap](https://zentrix.company/en/solutions/technical-audit/)
@@ -3447,32 +4136,39 @@ What’s included
 
 ### What we do, concretely.
 
-01
+- 01
 
 ### Web and mobile apps
 Built around your business process, not the other way around.
 
-02
+- 02
 
 ### Design in the same team
 The people who design the experience sit next to the people who build it.
 
-03
+- 03
 
 ### Architecture that grows
 Add users and features without rebuilding the system from scratch.
 
-04
+- 04
 
 ### See it working
 Continuous delivery: you try the product in your own hands, not in slide decks.
 
-Technology - Flutter
+### Technology
+- Flutter
 - Next.js
 - FastAPI
 - UI/UX
 
-[Related product Zentrix Labs Research →](https://zentrix.company/en/labs/)
+Related product
+
+### Zentrix Labs
+
+New ideas, tested before they reach your operation.
+
+[Discover Zentrix Labs](https://zentrix.company/en/labs/)
 
 Where we work
 
@@ -3481,6 +4177,9 @@ Where we work
 Our base is on Isla Margarita, Nueva Esparta, Venezuela. We work with companies across the country, and remotely with clients in Latin America, the United States and Europe.
 
 Other solutions
+
+### Everything else we can do.
+
 - [Odoo in Venezuela Implementation with Venezuelan localization](https://zentrix.company/en/solutions/odoo-venezuela/)
 - [Technical audit Diagnosis, architecture and roadmap](https://zentrix.company/en/solutions/technical-audit/)
 - [High availability Infrastructure that keeps running through outages](https://zentrix.company/en/solutions/high-availability-infrastructure/)
@@ -3512,27 +4211,28 @@ What’s included
 
 ### What we do, concretely.
 
-01
+- 01
 
 ### An honest diagnosis
 Where your system stands today and what it costs you to keep it running.
 
-02
+- 02
 
 ### A roadmap with reasons
 What to do first and why, not a wish list.
 
-03
+- 03
 
 ### Reasoned decisions
 Which technology to use, explained so you can decide.
 
-04
+- 04
 
 ### A second opinion
 We review third-party quotes and proposals before you sign.
 
-Technology - Audit
+### Technology
+- Audit
 - Architecture
 - Roadmap
 - Stack
@@ -3544,6 +4244,9 @@ Where we work
 Our base is on Isla Margarita, Nueva Esparta, Venezuela. We work with companies across the country, and remotely with clients in Latin America, the United States and Europe.
 
 Other solutions
+
+### Everything else we can do.
+
 - [Odoo in Venezuela Implementation with Venezuelan localization](https://zentrix.company/en/solutions/odoo-venezuela/)
 - [Software development Web and mobile apps built around your process](https://zentrix.company/en/solutions/software-development/)
 - [High availability Infrastructure that keeps running through outages](https://zentrix.company/en/solutions/high-availability-infrastructure/)
@@ -3579,14 +4282,22 @@ What it does
 
 For distribution, retail, logistics, services, and document management companies that need to know where everything is and where it's been. QR codes, barcodes, RFID, and integrations, depending on what each case needs.
 
+- 01
+
 ### Unique identity
 Every object has its origin and its own unique code.
+
+- 02
 
 ### Clear accountability
 Every movement is recorded along with who made it.
 
+- 03
+
 ### Evidence
 You verify the location and the evidence for every step.
+
+- 04
 
 ### Complete history
 You see the whole history, physical and digital.
@@ -3673,20 +4384,32 @@ What it helps you do
 
 Every feature is built for the real pace of a store: lots of movement, little time and a customer waiting.
 
+- 01
+
 ### Pick orders
 Pick item by item using your camera as a scanner, and the app tells you if anything is missing before you close.
+
+- 02
 
 ### Deliver
 At the counter or to the door, package by package, with proof of delivery on the spot.
 
+- 03
+
 ### Receive returns
 You only take back what support has already approved, so there's no arguing at the counter.
+
+- 04
 
 ### Alerts you actually hear
 If your phone is on silent, the app tells you and takes you straight to the fix.
 
+- 05
+
 ### A shift with a start and an end
 You work while you're clocked in. Off shift, nothing interrupts you.
+
+- 06
 
 ### Fast, secure sign-in
 Sign in once with your email, then with your PIN or fingerprint. Your PIN never leaves your phone.
@@ -3697,11 +4420,20 @@ Use cases
 
 When you clock in, you choose what you'll handle today. Here's how each one comes in.
 
-- An order to pickIt rings even with your screen off. Take it with a swipe, pick it by scanning item by item, and the app warns you if anything is missing.
+- 01
 
-- A deliveryAt the counter or to the door, package by package, with proof of delivery on the spot.
+### An order to pick
+It rings even with your screen off. Take it with a swipe, pick it by scanning item by item, and the app warns you if anything is missing.
 
-- A returnYou only take back what support has already approved, so there's no arguing at the counter.
+- 02
+
+### A delivery
+At the counter or to the door, package by package, with proof of delivery on the spot.
+
+- 03
+
+### A return
+You only take back what support has already approved, so there's no arguing at the counter.
 
 Your phone
 
