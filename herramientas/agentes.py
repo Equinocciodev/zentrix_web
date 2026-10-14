@@ -73,7 +73,9 @@ User-agent: *
 # Crawlers de IA, nombrados uno a uno (mismo permiso que el resto).
 {ia}{grupo}
 Sitemap: {DOMINIO}/sitemap.xml
-Agentmap: {DOMINIO}{CATALOGO_RUTA}
+# Catálogo para agentes de IA (también enlazado en el <head> de cada página). Va como
+# comentario: «Agentmap» no es una directiva estándar y Lighthouse SEO lo marca como error.
+# Agentmap: {DOMINIO}{CATALOGO_RUTA}
 '''
 
 

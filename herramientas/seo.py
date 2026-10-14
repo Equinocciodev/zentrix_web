@@ -228,16 +228,16 @@ PAGINAS.update({
     '/en/labs/': ('product research and prototyping',
         'Zentrix Labs — Research and new product validation',
         'Zentrix Labs researches, prototypes and validates new products to expand what we can offer you, testing each idea before it joins the Zentrix suite.'),
-    '/en/software/': ('Odoo implementation Venezuela',
-        'Zentrix Software — Odoo® implementation and customization',
-        'Zentrix Software implements and customizes Odoo® in Venezuela, from diagnosis to adoption, with local tax localization and the software behind our apps.'),
+    '/en/software/': ('Odoo consulting and integration',
+        'Zentrix Software — Odoo® consulting and integration',
+        'Zentrix Software implements, configures and integrates Odoo® with your other systems and with Zentrix Work and Zentrix Sales, from diagnosis to adoption.'),
     '/en/traza/': ('product traceability',
         'Traza — Traceability for documents, products and assets',
         'Traza gives your documents, products and assets a verifiable journey: where they came from, where they went, who moved them and where they are now.'),
     '/en/solutions/': ('software solutions Venezuela',
         'Solutions — Odoo®, software and infrastructure | Zentrix',
         'Odoo® with Venezuelan localization, custom software, technical audits, high-availability infrastructure, payments and computer vision, by the Zentrix team.'),
-    '/en/solutions/odoo-venezuela/': ('Odoo partner Venezuela',
+    '/en/solutions/odoo-venezuela/': ('Odoo implementation Venezuela',
         'Odoo® implementation in Venezuela | Zentrix',
         'Odoo® implementation with Venezuelan localization: tax books, withholdings, dual currency and inventory to treasury in one system, with training for your team.'),
     '/en/solutions/software-development/': ('custom software development',
@@ -439,6 +439,8 @@ def jsonld(ruta, titulo, descripcion, cuerpo, lang):
         })
     elif plantilla in SERVICIOS or plantilla in SOLUCIONES or re.match(r'^/solutions/[^/]+/$', plantilla):
         n, tipo = SERVICIOS.get(plantilla) or (nombre, SOLUCIONES.get(plantilla, nombre))
+        if lang == 'en':
+            n, tipo = (SERVICIOS[plantilla][0] if plantilla in SERVICIOS else nombre), nombre
         servicio = {'@type': 'Service', '@id': url + '#servicio', 'name': n, 'serviceType': tipo,
                     'description': descripcion, 'url': url, 'inLanguage': lang, 'provider': org_ref()}
         if plantilla in ('/software/', '/soluciones/odoo-venezuela/', '/solutions/odoo-venezuela/'):

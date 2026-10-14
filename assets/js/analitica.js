@@ -22,13 +22,13 @@
   var T = en ? {
     titulo: 'Cookies and analytics',
     texto: 'With your permission we measure visits with Google Analytics to improve the site. No advertising, no personal data.',
-    aceptar: 'Accept', rechazar: 'Reject', mas: 'Learn more', mas_url: '/en/privacy/#cookies',
+    aceptar: 'Accept', rechazar: 'Reject', mas: 'How we use cookies', mas_url: '/en/privacy/#cookies',
     senal: 'Your browser asks not to be tracked (Do Not Track / Global Privacy Control), so we measure nothing unless you accept here.',
     cerrar: 'Close'
   } : {
     titulo: 'Cookies y analítica',
     texto: 'Si lo permites, medimos las visitas con Google Analytics para mejorar el sitio. Sin publicidad y sin datos personales.',
-    aceptar: 'Aceptar', rechazar: 'Rechazar', mas: 'Más información', mas_url: '/privacidad/#cookies',
+    aceptar: 'Aceptar', rechazar: 'Rechazar', mas: 'Cómo usamos las cookies', mas_url: '/privacidad/#cookies',
     senal: 'Tu navegador pide no ser rastreado (Do Not Track / Global Privacy Control), así que no medimos nada salvo que aceptes aquí.',
     cerrar: 'Cerrar'
   };
