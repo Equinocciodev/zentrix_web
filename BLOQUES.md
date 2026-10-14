@@ -68,3 +68,7 @@ Lista 01–04 con el número en contorno en su columna. Cada `<li>` es un grid d
 1. En una página generada, llama a la función de `bloques.py` desde su `pag_*` en `generar.py`.
 2. En una página escrita a mano, escribe el marcado antiguo (se convierte solo) o un marcador `<!--BQ:NOMBRE--><!--/BQ:NOMBRE-->` y añade su caso en `_marcador()`.
 3. Ejecuta `python3 herramientas/generar.py` y comprueba con `--check`.
+
+## Capturas de las apps
+
+Las capturas reales van en el marco de teléfono de `sitio.css`: `<figure class="telefono">` con WebP de 720×1600 y 360×800 (`srcset`, `sizes="280px"`, `loading="lazy"` salvo en el héroe) y un `figcaption` corto. Varias seguidas van en `<div class="capturas capturas--carril">`: en escritorio se reparten en filas centradas y en el teléfono pasan a un carril que se desliza de lado, sin scroll horizontal de la página. Debajo, `<p class="nota-capturas apagado">` dice que son reales y con datos de prueba. Los originales y los WebP viven fuera del repositorio (`~/Downloads/zentrix/work_app/capturas_reales_1410/` y `~/Downloads/zentrix/web/work_capturas/`).
