@@ -2,7 +2,8 @@
    Marca: azul #244DFF (acción), negro #090D12 (texto y fondos inmersivos),
    lima #C7FA46 solo como acento puntual (nunca texto sobre blanco).
    Inter, escala 4·8·12·16·24·32·48·64, radios 12 (botones) y 16 (tarjetas).
-   Modo claro por defecto, como pide la marca. Sin JavaScript. */
+   Modo claro por defecto, como pide la marca. El contenido se lee entero sin
+   JavaScript; assets/js/sitio.js solo añade movimiento (y nada con reduced-motion). */
 
 @font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/inter-400.woff2") format("woff2"); }
 @font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("/assets/fonts/inter-500.woff2") format("woff2"); }
@@ -64,7 +65,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .saltar:focus { left: 8px; }
 
 /* Cabecera */
-.cabecera { background: var(--blanco); border-bottom: 1px solid var(--borde); position: sticky; top: 0; z-index: 5; }
+.cabecera { background: rgba(255, 255, 255, .9); -webkit-backdrop-filter: saturate(1.6) blur(14px); backdrop-filter: saturate(1.6) blur(14px); border-bottom: 1px solid var(--borde); position: sticky; top: 0; z-index: 5; }
 .cabecera__fila { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; }
 .logo { display: inline-flex; align-items: center; padding: 8px 0; }
 .logo img { height: 22px; width: auto; }
@@ -313,7 +314,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .menu-productos__lista a span { font-size: .8125rem; color: var(--texto-2); font-weight: 400; }
 .menu-productos__lista a[aria-current="page"] b { color: var(--azul); }
 
-/* Wordmark provisional «zentrix <producto>» (se cambia por el isotipo cuando exista) */
+/* Firmas de producto (monograma + zentrix® + apellido) y wordmarks de traza y logística */
 .firma { display: block; align-self: flex-start; height: 36px; width: auto; max-width: 100%; }
 .heroe-producto__marca .firma { height: 40px; }
 .wordmark { display: inline-flex; align-items: flex-end; gap: 8px; line-height: 1; color: var(--negro); }
@@ -335,3 +336,218 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .oscuro .producto--oscuro { color: var(--blanco); text-decoration: none; }
 .menu-productos__lista { justify-content: stretch !important; grid-template-columns: 1fr; text-align: left; }
 .wordmark--traza { align-items: flex-start; gap: 2px; } .wordmark--traza sup { margin-top: .2em; }
+
+/* =====================================================================
+   Rediseño 2026-10: movimiento, suite de monogramas e ilustraciones.
+   Solo los cuatro colores del manual (negro, blanco, azul y lima) y sus
+   transparencias. Todo el movimiento vive dentro de
+   (prefers-reduced-motion: no-preference): con reduced-motion no se mueve nada.
+   ===================================================================== */
+:root { --facil: cubic-bezier(.2, .7, .2, 1); --rebote: cubic-bezier(.34, 1.4, .5, 1); }
+.sr { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.externo { display: inline-block; width: .85em; height: .85em; margin-left: .3em; vertical-align: -.05em; }
+
+/* Menú «Productos» con monogramas */
+.menu-productos__lista { width: min(380px, calc(100% - 2 * var(--margen))); }
+@media (min-width: 720px) { .menu-productos__lista { width: 600px; grid-template-columns: 1fr 1fr !important; } }
+.menu-productos__lista a { grid-template-columns: 32px 1fr; column-gap: 12px !important; align-items: center; }
+.menu-productos__lista a > img, .menu-productos__motivo { grid-row: 1 / span 2; width: 32px; height: 32px; border-radius: 8px; }
+.menu-productos__lista a > b, .menu-productos__lista a > span:not(.menu-productos__motivo) { grid-column: 2; }
+.menu-productos__motivo { display: grid !important; place-items: center; background: var(--fondo); border: 1px solid var(--borde); color: var(--texto-2) !important; }
+.menu-productos__motivo svg { width: 18px; height: 18px; }
+.menu-productos__lista a:hover { background: var(--fondo); }
+.menu-productos__lista a:hover > img { transform: rotate(-6deg) scale(1.06); }
+.menu-productos__lista a > img { transition: transform .25s var(--rebote); }
+
+/* Aparición al hacer scroll */
+@media (prefers-reduced-motion: no-preference) {
+  .js .revela { opacity: 0; transform: translateY(28px); transition: opacity .8s var(--facil), transform .8s var(--facil); transition-delay: var(--retardo, 0s); }
+  .js .revela.visible { opacity: 1; transform: none; }
+}
+
+/* Fondo de los héroes oscuros: retícula + resplandor azul */
+.heroe__fondo { position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(640px 420px at 78% 55%, rgba(36, 77, 255, .38), transparent 70%),
+    linear-gradient(rgba(255, 255, 255, .045) 1px, transparent 1px) 0 0 / 56px 56px,
+    linear-gradient(90deg, rgba(255, 255, 255, .045) 1px, transparent 1px) 0 0 / 56px 56px;
+  -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent); mask-image: linear-gradient(to bottom, #000 55%, transparent); }
+.heroe .raya { transform-origin: left center; }
+@media (prefers-reduced-motion: no-preference) {
+  .heroe .raya { animation: raya 1s var(--facil) .9s both; }
+  .heroe__texto > * { animation: subir .9s var(--facil) both; }
+  .heroe__texto > :nth-child(2) { animation-delay: .08s; } .heroe__texto > :nth-child(3) { animation-delay: .16s; }
+  .heroe__texto > :nth-child(4) { animation-delay: .24s; } .heroe__texto > :nth-child(5) { animation-delay: .32s; }
+  .heroe__texto > :nth-child(6) { animation-delay: .4s; } .heroe__texto > :nth-child(7) { animation-delay: .48s; }
+}
+@keyframes raya { from { transform: scaleX(0); } }
+@keyframes subir { from { opacity: 0; transform: translateY(24px); } }
+
+/* Portada: héroe con la z madre */
+.heroe--inicio { padding: 56px 0 64px; }
+@media (min-width: 768px) { .heroe--inicio { padding: 96px 0 112px; } }
+.heroe-inicio { display: grid; gap: 40px; align-items: center; }
+@media (min-width: 900px) { .heroe-inicio { grid-template-columns: 1.15fr .85fr; gap: 64px; } }
+.heroe-inicio h1 { font-size: clamp(2.25rem, 1.4rem + 4vw, 4.25rem); letter-spacing: -0.035em; line-height: 1.04; }
+.z-madre { width: min(420px, 62vw); height: auto; justify-self: center; overflow: visible; }
+@media (max-width: 899px) { .z-madre { width: 168px; justify-self: start; order: -1; } }
+.z-madre path { fill: var(--azul); }
+@media (prefers-reduced-motion: no-preference) {
+  .z-madre__trazo { stroke: var(--azul); stroke-width: .9; stroke-dasharray: 100; stroke-dashoffset: 100; fill-opacity: 0; animation: z-trazo 1.5s var(--facil) .15s forwards, z-relleno .7s ease 1.25s forwards; }
+  .z-madre__corte { opacity: 0; transform: translate(-30px, 28px); animation: z-corte 1s var(--rebote) 1.55s forwards; }
+}
+@keyframes z-trazo { to { stroke-dashoffset: 0; } }
+@keyframes z-relleno { to { fill-opacity: 1; } }
+@keyframes z-corte { to { opacity: 1; transform: none; } }
+
+/* Suite de monogramas */
+.suite { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+@media (min-width: 640px) { .suite { gap: 24px; } }
+.suite__item { display: grid; justify-items: center; gap: 12px; padding: 20px 8px 16px; border-radius: 24px; text-decoration: none; color: var(--texto); background: var(--fondo); transition: transform .35s var(--rebote), background-color .2s, box-shadow .35s var(--facil); }
+.suite__item img { width: min(104px, 100%); height: auto; border-radius: 22%; box-shadow: 0 18px 32px -18px rgba(9, 13, 18, .45); transition: transform .45s var(--rebote); }
+.suite__item span { font-weight: 600; font-size: .9375rem; }
+.suite__item span b { color: var(--azul); font-weight: 700; }
+.suite__item:hover { transform: translateY(-6px); background: var(--blanco); box-shadow: 0 24px 48px -24px rgba(9, 13, 18, .35); }
+.suite__item:hover img { transform: rotate(-6deg) scale(1.06); }
+@media (prefers-reduced-motion: no-preference) {
+  .js .suite .suite__item { opacity: 0; transform: translateY(24px) scale(.88); }
+  .js .suite.visible .suite__item { animation: brotar .8s var(--rebote) calc(var(--i, 0) * 90ms) forwards; }
+  .js .suite.visible .suite__item:hover { transform: translateY(-6px); }
+}
+@keyframes brotar { to { opacity: 1; transform: none; } }
+
+/* Cifras */
+.cifras { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--borde-osc); border: 1px solid var(--borde-osc); border-radius: var(--r-tarjeta); overflow: hidden; }
+@media (min-width: 900px) { .cifras { grid-template-columns: repeat(4, 1fr); } }
+.cifras li { background: var(--negro); padding: 28px 24px; }
+.cifras b { display: block; font-size: clamp(2.5rem, 2rem + 2.4vw, 3.75rem); font-weight: 700; letter-spacing: -0.04em; line-height: 1; color: var(--blanco); font-variant-numeric: tabular-nums; }
+.cifras b::after { content: ""; display: block; width: 32px; height: 4px; border-radius: 2px; background: var(--lima); margin: 16px 0 12px; }
+.cifras span { color: var(--texto-osc-2); font-size: .9375rem; }
+
+/* Proceso «cómo trabajamos» */
+.proceso { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; counter-reset: paso; position: relative; }
+@media (min-width: 900px) { .proceso { grid-template-columns: repeat(5, 1fr); gap: 24px; padding-top: 8px; } }
+.proceso li { counter-increment: paso; position: relative; padding: 0 0 0 64px; min-height: 48px; color: var(--texto-2); }
+.proceso li b { display: block; color: var(--texto); font-size: 1.125rem; margin-bottom: 4px; }
+.proceso li::before { content: "0" counter(paso); position: absolute; left: 0; top: 0; width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; background: var(--negro); color: var(--blanco); font-weight: 700; font-size: .9375rem; z-index: 1; }
+.proceso li:last-child::before { background: var(--azul); }
+@media (min-width: 900px) {
+  .proceso li { padding: 72px 0 0; }
+  .proceso::before { content: ""; position: absolute; left: 24px; right: 24px; top: 32px; height: 2px; background: linear-gradient(90deg, var(--negro), var(--azul)); transform-origin: left; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .js .proceso.revela { opacity: 1; transform: none; }
+  .js .proceso.revela::before { transform: scaleX(0); transition: transform 1.4s var(--facil) .2s; }
+  .js .proceso.revela.visible::before { transform: none; }
+  .js .proceso.revela li { opacity: 0; transform: translateY(16px); transition: opacity .6s var(--facil), transform .6s var(--facil); }
+  .js .proceso.revela.visible li { opacity: 1; transform: none; }
+  .js .proceso.revela.visible li:nth-child(2) { transition-delay: .2s; } .js .proceso.revela.visible li:nth-child(3) { transition-delay: .4s; }
+  .js .proceso.revela.visible li:nth-child(4) { transition-delay: .6s; } .js .proceso.revela.visible li:nth-child(5) { transition-delay: .8s; }
+}
+
+/* Destacados de la portada con insignia */
+.marco { position: relative; justify-self: center; }
+.marco .insignia { position: absolute; left: -20px; top: 28px; width: 72px; height: 72px; border-radius: 16px; box-shadow: 0 18px 36px -12px rgba(9, 13, 18, .5); z-index: 2; }
+@media (prefers-reduced-motion: no-preference) {
+  .marco .insignia { animation: flotar 6s ease-in-out infinite; }
+  .telefono img { transition: transform .6s var(--facil); }
+  .marco:hover .telefono img { transform: translateY(-6px) rotate(-1deg); }
+}
+@keyframes flotar { 50% { transform: translateY(-8px); } }
+
+/* Héroe de producto con monograma e ilustración */
+.heroe--producto { padding: 48px 0 64px; }
+@media (min-width: 768px) { .heroe--producto { padding: 88px 0 104px; } }
+.heroe-producto__arte { position: relative; display: grid; place-items: center; min-height: 260px; }
+@media (min-width: 900px) { .heroe-producto__arte { min-height: 440px; } }
+.heroe-producto__arte .motivo { position: absolute; inset: 0; width: 100%; height: 100%; color: var(--azul-claro); opacity: .9; }
+.heroe-producto__arte .telefono { position: relative; z-index: 1; }
+.heroe-producto__arte .marco .insignia { width: 88px; height: 88px; border-radius: 20px; left: -28px; }
+.mono { position: relative; z-index: 1; width: clamp(150px, 22vw, 248px); height: auto; overflow: visible; filter: drop-shadow(0 32px 48px rgba(0, 0, 0, .45)); }
+@media (prefers-reduced-motion: no-preference) {
+  .mono__teja { transform-box: fill-box; transform-origin: center; animation: mono-teja 1s var(--rebote) .1s both; }
+  .mono__letras { animation: mono-letras .8s var(--facil) .45s both; }
+  .mono__barra { transform-box: fill-box; animation: mono-barra .8s var(--facil) .9s both; }
+  .heroe-producto__arte .mono { animation: flotar 7s ease-in-out 2s infinite; }
+}
+@keyframes mono-teja { from { opacity: 0; transform: scale(.55) rotate(-10deg); } }
+@keyframes mono-letras { from { opacity: 0; transform: translateY(70px); } }
+@keyframes mono-barra { from { opacity: 0; transform: translateX(-140%); } }
+
+/* Ilustraciones por división (manual: capas, onda, nube, prisma, cubos, anillo) */
+.motivo { overflow: visible; }
+.motivo .linea { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.motivo .fina { stroke-width: 1.25; opacity: .5; }
+.motivo .lima { stroke: var(--lima); }
+.motivo .relleno-azul { fill: var(--azul); }
+.motivo .relleno-lima { fill: var(--lima); }
+.motivo .relleno-blanco { fill: var(--blanco); }
+.motivo .capa { fill: rgba(36, 77, 255, .16); stroke: currentColor; stroke-width: 1.5; }
+.motivo .capa--arriba { fill: var(--azul); stroke: var(--azul-claro); }
+@media (prefers-reduced-motion: no-preference) {
+  .motivo .onda { animation: onda 7s linear infinite; }
+  .motivo .onda--2 { animation-duration: 9s; animation-direction: reverse; }
+  .motivo .onda--3 { animation-duration: 12s; }
+  .motivo .capa-g { animation: capa 5s ease-in-out infinite; }
+  .motivo .capa-g:nth-of-type(2) { animation-delay: .25s; } .motivo .capa-g:nth-of-type(3) { animation-delay: .5s; } .motivo .capa-g:nth-of-type(4) { animation-delay: .75s; }
+  .motivo .giro { transform-box: view-box; transform-origin: 50% 50%; animation: giro 24s linear infinite; }
+  .motivo .giro--lento { animation-duration: 40s; animation-direction: reverse; }
+  .motivo .rayo { stroke-dasharray: 8 14; animation: rayo 1.6s linear infinite; }
+  .motivo .pulso { transform-box: fill-box; transform-origin: center; animation: pulso 3.2s var(--facil) infinite; }
+  .motivo .pulso--2 { animation-delay: 1.07s; } .motivo .pulso--3 { animation-delay: 2.13s; }
+  .motivo .ruta { stroke-dasharray: 6 10; animation: rayo 1.2s linear infinite; }
+  .motivo .cubo { transform-box: fill-box; animation: cubo .9s var(--rebote) both; }
+  .motivo .sube { animation: sube 3s ease-in-out infinite; }
+  .motivo .sube--2 { animation-delay: 1s; } .motivo .sube--3 { animation-delay: 2s; }
+}
+@keyframes onda { to { transform: translateX(-200px); } }
+@keyframes capa { 50% { transform: translateY(-10px); } }
+@keyframes giro { to { transform: rotate(360deg); } }
+@keyframes rayo { to { stroke-dashoffset: -22; } }
+@keyframes pulso { from { opacity: .9; transform: scale(.2); } to { opacity: 0; transform: scale(1); } }
+@keyframes cubo { from { opacity: 0; transform: translateY(-40px); } }
+@keyframes sube { 0% { opacity: 0; transform: translateY(20px); } 30%, 70% { opacity: 1; } 100% { opacity: 0; transform: translateY(-30px); } }
+
+/* Tarjetas de división con ilustración pequeña */
+.producto--oscuro { position: relative; overflow: hidden; }
+.producto__motivo { position: absolute; right: -24px; top: -24px; width: 140px; height: 140px; color: var(--azul-claro); opacity: .22; transition: opacity .3s, transform .6s var(--facil); pointer-events: none; }
+.producto--oscuro:hover .producto__motivo { opacity: .5; transform: rotate(-8deg) scale(1.05); }
+.producto--oscuro > :not(.producto__motivo) { position: relative; }
+
+/* Funciones y casos de uso */
+.funciones .tarjeta { transition: transform .35s var(--facil), box-shadow .35s var(--facil), border-color .2s; }
+.funciones .tarjeta:hover { transform: translateY(-4px); box-shadow: 0 24px 40px -28px rgba(9, 13, 18, .4); border-color: var(--azul); }
+.oscuro .funciones .tarjeta:hover { border-color: var(--azul-claro); }
+.funciones .tarjeta__icono { transition: transform .35s var(--rebote); }
+.funciones .tarjeta:hover .tarjeta__icono { transform: rotate(-8deg) scale(1.08); }
+.casos { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; counter-reset: caso; }
+@media (min-width: 768px) { .casos { grid-template-columns: repeat(2, 1fr); gap: 24px; } }
+@media (min-width: 1100px) { .casos--3 { grid-template-columns: repeat(3, 1fr); } }
+.casos li { counter-increment: caso; position: relative; padding: 24px 24px 24px 24px; border-radius: var(--r-tarjeta); background: var(--negro-2); border: 1px solid var(--borde-osc); color: var(--texto-osc-2); }
+.casos li::before { content: "0" counter(caso); display: block; font-weight: 700; font-size: .8125rem; letter-spacing: .12em; color: var(--lima); margin-bottom: 12px; }
+.casos b { display: block; color: var(--blanco); font-size: 1.125rem; margin-bottom: 6px; }
+
+/* Llamada final */
+.llamada { position: relative; overflow: hidden; }
+.llamada .descarga { position: relative; overflow: hidden; }
+.descarga__z { position: absolute; right: -40px; bottom: -60px; width: 260px; height: auto; opacity: .16; pointer-events: none; }
+.descarga > div { position: relative; }
+.descarga__icono { box-shadow: 0 12px 24px -10px rgba(9, 13, 18, .5); }
+
+/* Logística: el único producto con lima de fondo */
+.heroe--lima { background: var(--lima); color: var(--negro); }
+.heroe--lima .antetitulo { color: var(--negro); }
+.heroe--lima .entradilla, .heroe--lima .apagado { color: #2A313D; }
+.heroe--lima .raya { background: var(--negro); }
+.heroe--lima .boton--principal { background: var(--negro); color: var(--blanco); }
+.heroe--lima .boton--principal:hover { background: #1F2633; }
+.heroe--lima .boton--alterno { border-color: var(--negro); color: var(--negro); }
+.heroe--lima .boton--alterno:hover { background: rgba(9, 13, 18, .08); }
+.heroe--lima :focus-visible { outline-color: var(--negro); }
+.heroe--lima .heroe-producto__arte .motivo { color: var(--negro); opacity: 1; }
+.heroe--lima .etiqueta--pronto { background: var(--negro); color: var(--lima); }
+
+/* traza: endoso */
+.endoso { display: inline-flex; align-items: center; gap: 8px; font-size: .875rem; color: var(--texto-osc-2); margin-top: 8px; }
+.endoso img { height: 14px; width: auto; }
+@media (min-width: 900px) { .proceso--4 { grid-template-columns: repeat(4, 1fr); } }
