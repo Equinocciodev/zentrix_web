@@ -418,6 +418,12 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 }
 @keyframes raya { from { transform: scaleX(0); } }
 @keyframes subir { from { opacity: 0; transform: translateY(24px); } }
+/* El titular y la entradilla del héroe se pintan desde el primer cuadro (sin opacidad 0):
+   son el elemento LCP. Solo se desplazan. */
+@keyframes subir-solido { from { transform: translateY(16px); } }
+@media (prefers-reduced-motion: no-preference) {
+  .heroe__texto > h1, .heroe__texto > .entradilla { animation-name: subir-solido; }
+}
 
 /* Portada: héroe con la z madre */
 .heroe--inicio { padding: 56px 0 64px; }
