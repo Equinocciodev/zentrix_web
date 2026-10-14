@@ -1104,9 +1104,9 @@ Android 7.0 o superior e iOS 15 o superior. ¿Quieres verlo con tus datos? [Pide
 
 ---
 
-## [Zentrix Software — Consultoría e integración de Odoo](https://zentrix.company/software/)
+## [Zentrix Software — Consultoría, soporte y desarrollo en Odoo](https://zentrix.company/software/)
 
-Zentrix Software implementa, configura e integra Odoo® con tus otros sistemas y con Zentrix Work y Zentrix Sales: del diagnóstico a la adopción de tu equipo.
+Consultoría Odoo, soporte y desarrollo a medida en Odoo: configuramos, integramos y mantenemos tu sistema, y lo conectamos con Zentrix Work y Zentrix Sales.
 
 Software empresarial · Implementación de Odoo®
 
@@ -1693,7 +1693,7 @@ Cuéntanos qué necesitas. Te responde una persona en menos de un día hábil, s
 
 ## [Implementación de Odoo en Venezuela | Zentrix](https://zentrix.company/soluciones/odoo-venezuela/)
 
-Implementación de Odoo® con la localización de Venezuela: libros, retenciones, numeración de documentos y doble moneda, con tu equipo capacitado.
+Implementación de Odoo 19 en Venezuela con la localización: factura digital SENIAT, IGTF, retenciones de IVA e ISLR, libros y bolívares y dólares a tasa BCV.
 
 Solución
 
@@ -1732,6 +1732,71 @@ Capacitamos a quienes lo van a usar todos los días, y nos quedamos para acompa�
 - ERP
 - Localización Venezuela
 - Trazabilidad
+
+La localización venezolana de Odoo
+
+### Lo que cubre, módulo a módulo.
+
+La usamos y la mantenemos en producción sobre Odoo 19, en empresas de distribución y comercio en Venezuela.
+
+- 01
+
+### Facturación digital SENIAT
+Odoo envía cada factura, nota de crédito y nota de débito a Soluciones Láser, proveedor autorizado de facturación digital, que le asigna su número de control.
+
+- 02
+
+### IGTF en Odoo
+El 3 % del IGTF se calcula solo en los pagos en divisas, en la facturación y en el punto de venta.
+
+- 03
+
+### Retenciones de IVA e ISLR
+Comprobantes de retención de IVA e ISLR con vista previa antes de generarlos, y el impuesto municipal por actividad económica.
+
+- 04
+
+### Libros de compras y ventas
+Los libros legales de compras y de ventas, con el resumen de IVA por alícuota para la declaración.
+
+- 05
+
+### Bolívares y dólares a la tasa BCV
+Cada documento en las dos monedas a la tasa del BCV, con el diferencial cambiario y los reportes en bolívares y en dólares.
+
+- 06
+
+### Impresora fiscal en el punto de venta
+El punto de venta de Odoo imprime en máquinas fiscales HKA y Bixolon, con el IGTF de los pagos en divisas.
+
+- 07
+
+### Numeración y sucursales
+Número de factura, número de control y notas de entrega, y cada documento con su sucursal.
+
+- 08
+
+### Nómina venezolana (LOTTT)
+Prestaciones sociales, vacaciones, utilidades y liquidación según la LOTTT, el archivo para el banco y el ARC del ISLR.
+
+Preguntas frecuentes
+
+### Odoo en Venezuela, en claro.
+
+### ¿Odoo emite factura digital ante el SENIAT?
+Sí. Con la localización, Odoo transmite cada factura, nota de crédito y nota de débito a Soluciones Láser, proveedor autorizado de facturación digital, que le asigna el número de control.
+
+### ¿Cómo se maneja el IGTF en Odoo?
+Odoo calcula el 3 % del IGTF solo cuando el pago es en divisas, tanto en las facturas como en el punto de venta.
+
+### ¿Puedo llevar Odoo en bolívares y en dólares?
+Sí. Cada documento se registra en las dos monedas a la tasa del BCV, con el diferencial cambiario y los reportes en bolívares y en dólares.
+
+### ¿El punto de venta de Odoo funciona con impresora fiscal?
+Sí. El punto de venta imprime en máquinas fiscales HKA y Bixolon, con el IGTF de los pagos en divisas.
+
+### ¿Qué versión de Odoo implementan?
+Odoo 19, la versión con la que trabaja hoy la localización que mantenemos en producción.
 
 Producto relacionado
 
@@ -3700,9 +3765,9 @@ Zentrix Sales
 
 ---
 
-## [Zentrix Software — Odoo® consulting and integration](https://zentrix.company/en/software/)
+## [Zentrix Software — Odoo consulting, support and development](https://zentrix.company/en/software/)
 
-Zentrix Software implements, configures and integrates Odoo® with your other systems and with Zentrix Work and Zentrix Sales, from diagnosis to adoption.
+Odoo consulting, support and custom development: we configure, integrate and maintain your Odoo® system, and connect it with Zentrix Work and Zentrix Sales.
 
 Business software · Odoo® implementation
 
@@ -4040,7 +4105,7 @@ Tell us what’s happening in your operation. A person replies within one busine
 
 ## [Odoo® implementation in Venezuela | Zentrix](https://zentrix.company/en/solutions/odoo-venezuela/)
 
-Odoo® implementation with Venezuelan localization: tax books, withholdings, dual currency and inventory to treasury in one system, with training for your team.
+Odoo 19 implementation in Venezuela with the Venezuelan localization: SENIAT e-invoicing, IGTF, VAT and income-tax withholdings and Bs/USD at the BCV rate.
 
 Solution
 
@@ -4079,6 +4144,71 @@ We train the people who will use it every day, and we stay to support them.
 - ERP
 - Localización Venezuela
 - Trazabilidad
+
+Venezuelan Odoo localization
+
+### What it covers, module by module.
+
+We run and maintain it in production on Odoo 19, at distribution and retail companies in Venezuela.
+
+- 01
+
+### SENIAT e-invoicing
+Odoo sends every invoice, credit note and debit note to Soluciones Láser, an authorized digital-invoicing provider, which assigns its control number.
+
+- 02
+
+### IGTF in Odoo
+The 3% IGTF tax is applied only to payments in foreign currency, in invoicing and at the point of sale.
+
+- 03
+
+### VAT and income-tax withholdings
+VAT (IVA) and income-tax (ISLR) withholding vouchers with a preview before they are issued, plus the municipal business tax.
+
+- 04
+
+### Purchase and sales books
+The legal purchase and sales books, with the VAT summary by rate for the tax return.
+
+- 05
+
+### Bolívars and dollars at the BCV rate
+Every document in both currencies at the BCV rate, with exchange differences and reports in bolívars and dollars.
+
+- 06
+
+### Fiscal printer at the point of sale
+Odoo Point of Sale prints on HKA and Bixolon fiscal printers, with IGTF on foreign-currency payments.
+
+- 07
+
+### Numbering and branches
+Invoice number, control number and delivery notes, with each document tied to its branch.
+
+- 08
+
+### Venezuelan payroll (LOTTT)
+Severance, vacations, profit sharing and settlements under the LOTTT labor law, the bank file and the ISLR ARC form.
+
+Frequently asked questions
+
+### Odoo in Venezuela, plainly.
+
+### Does Odoo issue SENIAT digital invoices?
+Yes. With the localization, Odoo sends every invoice, credit note and debit note to Soluciones Láser, an authorized digital-invoicing provider, which assigns the control number.
+
+### How does Odoo handle the IGTF tax?
+Odoo applies the 3% IGTF only when the payment is in foreign currency, both on invoices and at the point of sale.
+
+### Can Odoo run in bolívars and dollars?
+Yes. Every document is recorded in both currencies at the BCV rate, with exchange differences and reports in bolívars and dollars.
+
+### Does Odoo Point of Sale work with a fiscal printer?
+Yes. It prints on HKA and Bixolon fiscal printers, with IGTF on foreign-currency payments.
+
+### Which Odoo version do you implement?
+Odoo 19, the version our localization runs on in production today.
 
 Related product
 

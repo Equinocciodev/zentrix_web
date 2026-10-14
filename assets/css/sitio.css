@@ -250,6 +250,9 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .correo-grande { font-size: 1.25rem; font-weight: 700; }
 .pasos { padding-left: 1.4em; }
 .preguntas details { border-bottom: 1px solid var(--borde); }
+.preguntas summary { cursor: pointer; padding: 18px 0; }
+.preguntas summary h3 { display: inline; font-size: 1.0625rem; margin: 0; }
+.preguntas details p { margin: 0 0 18px; max-width: 70ch; }
 
 /* Pie (lo escribe herramientas/navegacion.py en todas las páginas) */
 .pie { background: var(--negro); color: var(--texto-osc-2); padding: 56px 0 28px; font-size: .9375rem; }

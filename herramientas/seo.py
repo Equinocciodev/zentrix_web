@@ -72,10 +72,10 @@ PAGINAS = {
                     'Zentrix Logistics — Gestión de despachos y entregas',
                     'Zentrix Logistics, próximamente: despachos, rutas, entregas y gestión de incidencias '
                     'en un mismo lugar, para cumplir lo que prometiste a tus clientes.'),
-    '/software/': ('consultoría e integración de Odoo',
-                   'Zentrix Software — Consultoría e integración de Odoo',
-                   'Zentrix Software implementa, configura e integra Odoo® con tus otros sistemas y con '
-                   'Zentrix Work y Zentrix Sales: del diagnóstico a la adopción de tu equipo.'),
+    '/software/': ('consultoría Odoo; soporte y desarrollo a medida en Odoo',
+                   'Zentrix Software — Consultoría, soporte y desarrollo en Odoo',
+                   'Consultoría Odoo, soporte y desarrollo a medida en Odoo: configuramos, integramos y mantenemos '
+                   'tu sistema, y lo conectamos con Zentrix Work y Zentrix Sales.'),
     '/traza/': ('trazabilidad de documentos, productos y activos',
                 'Traza — Trazabilidad de documentos, productos y activos',
                 'Traza, un producto de Zentrix: trazabilidad de documentos, productos y activos con '
@@ -85,8 +85,8 @@ PAGINAS = {
                      'Soluciones — Odoo, software e infraestructura | Zentrix', None),
     '/soluciones/odoo-venezuela/': ('implementación de Odoo en Venezuela',
                                     'Implementación de Odoo en Venezuela | Zentrix',
-                                    'Implementación de Odoo® con la localización de Venezuela: libros, retenciones, '
-                                    'numeración de documentos y doble moneda, con tu equipo capacitado.'),
+                                    'Implementación de Odoo 19 en Venezuela con la localización: factura digital SENIAT, '
+                                    'IGTF, retenciones de IVA e ISLR, libros y bolívares y dólares a tasa BCV.'),
     '/soluciones/desarrollo-de-software/': ('desarrollo de software a la medida',
                                             'Desarrollo de software a la medida | Zentrix',
                                             'Desarrollo de software a la medida: apps web y móviles construidas alrededor '
@@ -228,18 +228,18 @@ PAGINAS.update({
     '/en/labs/': ('product research and prototyping',
         'Zentrix Labs — Research and new product validation',
         'Zentrix Labs researches, prototypes and validates new products to expand what we can offer you, testing each idea before it joins the Zentrix suite.'),
-    '/en/software/': ('Odoo consulting and integration',
-        'Zentrix Software — Odoo® consulting and integration',
-        'Zentrix Software implements, configures and integrates Odoo® with your other systems and with Zentrix Work and Zentrix Sales, from diagnosis to adoption.'),
+    '/en/software/': ('Odoo consulting',
+        'Zentrix Software — Odoo consulting, support and development',
+        'Odoo consulting, support and custom development: we configure, integrate and maintain your Odoo® system, and connect it with Zentrix Work and Zentrix Sales.'),
     '/en/traza/': ('product traceability',
         'Traza — Traceability for documents, products and assets',
         'Traza gives your documents, products and assets a verifiable journey: where they came from, where they went, who moved them and where they are now.'),
     '/en/solutions/': ('software solutions Venezuela',
         'Solutions — Odoo®, software and infrastructure | Zentrix',
         'Odoo® with Venezuelan localization, custom software, technical audits, high-availability infrastructure, payments and computer vision, by the Zentrix team.'),
-    '/en/solutions/odoo-venezuela/': ('Odoo implementation Venezuela',
+    '/en/solutions/odoo-venezuela/': ('Odoo implementation in Venezuela',
         'Odoo® implementation in Venezuela | Zentrix',
-        'Odoo® implementation with Venezuelan localization: tax books, withholdings, dual currency and inventory to treasury in one system, with training for your team.'),
+        'Odoo 19 implementation in Venezuela with the Venezuelan localization: SENIAT e-invoicing, IGTF, VAT and income-tax withholdings and Bs/USD at the BCV rate.'),
     '/en/solutions/software-development/': ('custom software development',
         'Custom software development | Zentrix',
         'Custom web and mobile apps built around your process: design and engineering in one team, an architecture that grows and continuous delivery you can try.'),
@@ -337,11 +337,13 @@ def texto(fragmento):
     return re.sub(r' ([.,;:!?»)])', r'\1', s)
 
 
+# La dirección que publica /contacto/ (y las legales). verificar_seo.py comprueba que coincida.
+DIRECCION = {'@type': 'PostalAddress', 'streetAddress': '10302 NW South River Drive', 'addressLocality': 'Medley',
+             'addressRegion': 'FL', 'postalCode': '33178', 'addressCountry': 'US'}
+
+
 def direccion():
-    """La misma dirección que publica /contacto/ (bloques.DIRECCION), como PostalAddress."""
-    from bloques import DIRECCION as d  # import tardío: bloques.py es del dueño de los bloques
-    return {'@type': 'PostalAddress', 'streetAddress': d['calle'], 'addressLocality': d['ciudad'],
-            'addressRegion': d['region'], 'postalCode': d['cp'], 'addressCountry': d['iso']}
+    return dict(DIRECCION)
 
 
 def org_ref():
@@ -406,6 +408,11 @@ def migas(ruta, nombre_pagina, lang):
 def faq(cuerpo):
     m = re.search(r'<main[\s\S]*?</main>', cuerpo)
     main = m.group(0) if m else ''
+    bloque = re.search(r'<div class="preguntas[^"]*">([\s\S]*?)</div>', main)
+    if bloque:  # preguntas en <details><summary>…</summary>respuesta</details>
+        qs = [{'@type': 'Question', 'name': texto(q), 'acceptedAnswer': {'@type': 'Answer', 'text': texto(r)}}
+              for q, r in re.findall(r'<details>\s*<summary>([\s\S]*?)</summary>([\s\S]*?)</details>', bloque.group(1))]
+        return {'@type': 'FAQPage', 'mainEntity': qs} if qs else None
     trozos = re.split(r'(<h2[^>]*>[\s\S]*?</h2>)', main)
     preguntas = []
     for i in range(1, len(trozos) - 1, 2):
@@ -456,7 +463,7 @@ def jsonld(ruta, titulo, descripcion, cuerpo, lang):
         if plantilla == '/traza/':
             servicio['sameAs'] = [TRAZA_URL]
         grafo.append(servicio)
-    if ruta.endswith('/dudas.html'):
+    if ruta.endswith('/dudas.html') or 'class="preguntas' in cuerpo:
         f = faq(cuerpo)
         if f:
             grafo.append(f)
