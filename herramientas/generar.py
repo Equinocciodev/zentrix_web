@@ -20,6 +20,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from sitio import (DOMINIO, MONO, TRAZA_URL, TRAZA_ICONO, PRODUCTOS, SOLUCIONES, SOL_TXT, SECTORES,  # noqa: E402
                    T, L, par, idioma_de, es_capitulo_manual, svg_icono, esc, SVG_EXTERNO, SVG_WHATSAPP, SVG_GLOBO)
 import contenido as C  # noqa: E402
+import bloques as BQ  # noqa: E402
 import seo  # noqa: E402  — title, description y JSON-LD (último paso de cada página)
 import sitemap as mapa  # noqa: E402  — sitemap.xml desde el HTML, con lastmod de git
 import agentes  # noqa: E402  — robots.txt, /.well-known/ y <link> para agentes de IA
@@ -313,10 +314,14 @@ def insignias(prod, lang):
 
 
 def bloque_soluciones(lang):
-    items = ''.join(f'<li><a class="mega__item revela" href="{r_sol(se, lang)}"><span class="mega__icono">{svg_icono(ic)}</span>'
-                    f'<span><b>{SOL_TXT[k][lang][0]}</b><small>{SOL_TXT[k][lang][1]}</small></span></a></li>'
-                    for k, se, _, ic in SOLUCIONES)
-    return f'<!--SOLUCIONES--><ul class="portada-soluciones">{items}</ul><!--/SOLUCIONES-->'
+    """Portada: mosaico de soluciones (bloque bento sobre azul, Odoo como protagonista)."""
+    items = []
+    for i, (k, se, _, _) in enumerate(SOLUCIONES):
+        nombre, linea = SOL_TXT[k][lang]
+        prota = i == 0
+        arte = (BQ.motivo('capas') + BQ.mock_odoo()) if prota else BQ.ilustracion(k)
+        items.append({'href': r_sol(se, lang), 'titulo': nombre, 'texto': linea, 'arte': arte, 'prota': prota})
+    return f'<!--SOLUCIONES-->{BQ.bento(items, "azul", "Learn more" if lang == "en" else "Conocer más")}<!--/SOLUCIONES-->'
 
 
 def procesar(s, ruta):
@@ -324,6 +329,7 @@ def procesar(s, ruta):
     s = RE_TIENDAS.sub(lambda m: insignias(m.group(1), lang_de(ruta)), s)
     s = RE_NAV.sub(lambda m: nav(ruta), s, count=1)
     s = RE_PIE.sub(lambda m: pie(ruta), s, count=1)
+    s = BQ.aplicar(s, ruta)
     return agentes.head(seo.aplicar(ajustar_head(s, ruta), ruta))
 
 
@@ -411,18 +417,9 @@ def llamada(lang, titulo, texto, asunto, boton=None):
     from urllib.parse import quote
     boton = boton or ("Write to us" if lang == 'en' else 'Escríbenos')
     href = f'mailto:hola@zentrix.company?subject={quote(asunto)}'
-    return f'''<section class="seccion llamada" aria-labelledby="llamada-t">
-  <div class="envoltura">
-    <div class="descarga revela">
-      <img class="descarga__z" src="/assets/img/logos/zentrix_z_azul.svg" alt="" width="260" height="260" loading="lazy" aria-hidden="true">
-      <div>
-        <h2 id="llamada-t">{titulo}</h2>
-        <p>{texto}</p>
-      </div>
-      <div class="botones"><a class="boton boton--principal" href="{href}">{boton}</a><a class="boton boton--alterno" href="{Lx('/contacto/', lang)}">{T[lang]['contacto']}</a></div>
-    </div>
-  </div>
-</section>'''
+    botones = (f'<a class="boton boton--principal" href="{href}">{boton}</a>'
+               f'<a class="boton boton--alterno" href="{Lx('/contacto/', lang)}">{T[lang]['contacto']}</a>')
+    return BQ.cierre('llamada-t', titulo, texto, botones)
 
 
 def arte_iconos(nombres):
@@ -435,6 +432,20 @@ def arte_suite():
     celdas = ''.join(f'<span class="mosaico__celda mosaico__celda--teja" style="--i:{i}">{icono_producto(c, 72, lazy=False)}</span>'
                      for i, (c, *_) in enumerate(PRODUCTOS))
     return f'<div class="mosaico">{celdas}</div>'
+
+
+# Beneficio en una línea de cada producto (titular de su página) y su motivo
+BENEFICIO = {
+    'work': {'es': 'Tu turno, organizado desde el teléfono.', 'en': 'Your shift, organized from your phone.'},
+    'sales': {'es': 'Los pedidos de la calle, en tu sistema el mismo día.', 'en': 'Orders from the field, in your system the same day.'},
+    'ai': {'es': 'La información de tu empresa, al servicio de cada decisión.', 'en': 'Your company’s information, serving every decision.'},
+    'cloud': {'es': 'Tus aplicaciones y tus datos, siempre disponibles.', 'en': 'Your applications and your data, always available.'},
+    'labs': {'es': 'Nuevas ideas, probadas antes de llegar a tu operación.', 'en': 'New ideas, tested before they reach your operation.'},
+    'logistica': {'es': 'Del despacho a la entrega, con todo bajo control.', 'en': 'From dispatch to delivery, with everything under control.'},
+    'software': {'es': 'Tu sistema de gestión, adaptado a cómo trabajas.', 'en': 'Your management system, adapted to how you work.'},
+}
+MOTIVO_PRODUCTO = {'work': 'pulso', 'sales': 'ruta', 'ai': 'onda', 'cloud': 'nube', 'labs': 'prisma',
+                   'logistica': 'cubos', 'software': 'capas'}
 
 
 # ── Páginas ─────────────────────────────────────────────────────────────────
@@ -542,20 +553,17 @@ def pag_solucion(clave, slug_es, lang):
     d = s[lang]
     icono = next(i for k, _, _, i in SOLUCIONES if k == clave)
     tags = s.get('tags_en', s['tags']) if en else s['tags']
-    incluye = ''.join(f'<div class="tarjeta revela" style="--retardo:{i * .06:.2f}s"><div class="tarjeta__icono tarjeta__icono--num">0{i + 1}</div>'
-                      f'<h3>{a}</h3><p>{b}</p></div>' for i, (a, b) in enumerate(d['incluye']))
-    chips = ''.join(f'<li>{t}</li>' for t in tags)
-    otras = ''.join(f'<li><a class="mega__item" href="{r_sol(se, lang)}"><span class="mega__icono">{svg_icono(ic)}</span>'
-                    f'<span><b>{SOL_TXT[k][lang][0]}</b><small>{SOL_TXT[k][lang][1]}</small></span></a></li>'
-                    for k, se, _, ic in SOLUCIONES if k != clave)
+    incluye = BQ.pilares(d['incluye'])
+    otras = BQ.bento([{'href': r_sol(se, lang), 'titulo': SOL_TXT[k][lang][0], 'texto': SOL_TXT[k][lang][1],
+                       'arte': BQ.ilustracion(k), 'ir': ''}
+                      for k, se, _, _ in SOLUCIONES if k != clave], 'compacto')
     prod = s['producto']
     rel = ''
     if prod:
         p = next(x for x in PRODUCTOS if x[0] == prod)
-        lin = p[4] if en else p[3]
-        rel = (f'<a class="relacionado revela" href="{Lx(p[1], lang)}">{icono_producto(prod, 56)}<span>'
-               f'<small>{"Related product" if en else "Producto relacionado"}</small><b>{p[2]}</b><span>{lin}</span></span>'
-               f'<span class="relacionado__ir" aria-hidden="true">→</span></a>')
+        rel = BQ.banda('relacionado-t', 'Related product' if en else 'Producto relacionado', p[2],
+                       BENEFICIO[prod][lang], Lx(p[1], lang), (f'Discover {p[2]}' if en else f'Conoce {p[2]}'),
+                       prod, MOTIVO_PRODUCTO.get(prod))
     if en:
         txt = {'ante': 'Solution', 'incluye_a': 'What’s included', 'incluye_h': 'What we do, concretely.',
                'tec': 'Technology', 'donde_a': 'Where we work', 'donde_h': 'From Isla Margarita, for everywhere.',
@@ -585,11 +593,12 @@ def pag_solucion(clave, slug_es, lang):
       <span class="antetitulo">{txt['incluye_a']}</span>
       <h2 id="incluye-t">{txt['incluye_h']}</h2>
     </div>
-    <div class="rejilla rejilla--4 funciones">{incluye}</div>
-    <div class="tecnologia revela"><span class="tecnologia__t">{txt['tec']}</span><ul class="franja">{chips}</ul></div>
-    {rel}
+    {incluye}
+    {BQ.stack(tags, txt['tec'])}
   </div>
 </section>
+
+{rel}
 
 <section class="seccion seccion--gris" aria-labelledby="donde-t">
   <div class="envoltura">
@@ -601,7 +610,8 @@ def pag_solucion(clave, slug_es, lang):
       </div>
       <div class="revela">
         <span class="antetitulo">{txt['otras']}</span>
-        <ul class="mega__lista otras-soluciones">{otras}</ul>
+        <h2 class="bq-sr">{txt['otras_h']}</h2>
+        {otras}
       </div>
     </div>
   </div>
@@ -1186,6 +1196,9 @@ def main():
         if f in SALIDA:
             continue
         escribir(f, procesar(s, ruta))
+    # 2b) ilustraciones e iconos de los bloques como SVG sueltos (bloques.py)
+    for rel, svg in BQ.svgs_sueltos().items():
+        escribir(RAIZ / rel, svg)
     # 3) sitemap, llms.txt, REDIRECCIONES.md, manifest.json
     # El lastmod sale de git y cambia con cada commit: solo se reescribe si cambian las URL.
     actual_mapa = (RAIZ / 'sitemap.xml').read_text(encoding='utf-8') if (RAIZ / 'sitemap.xml').exists() else ''
