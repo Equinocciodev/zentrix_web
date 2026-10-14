@@ -385,10 +385,6 @@ Visión técnica y estratégica del grupo: marca la dirección tecnológica de Z
 Tech & Infrastructure Manager
 Diseña y opera la columna vertebral técnica: infraestructura que no falla y sistemas que escalan.
 
-### Hugo Mendoza
-FinOps · Data Engineer
-Construye las tuberías por donde corre el dato y vigila lo que cuesta moverlo, del origen al modelo que consulta el negocio.
-
 ### Miguel Coronel
 Coordinador de Soporte
 Primer punto de contacto técnico: resuelve con criterio y escala solo lo que merece escalar.
