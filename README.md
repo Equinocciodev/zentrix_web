@@ -19,7 +19,7 @@ Es un sitio estático: HTML, una hoja CSS (`assets/css/sitio.css`) y un script p
 | `/ai/` · `/logistics/` · `/cloud/` · `/labs/` · `/software/` | Los otros productos de la Presentación Corporativa: problema, para quién, beneficios, cómo funciona y contacto. Usan solo lo que dice la presentación. Ninguno tiene app publicada, así que no enlazan a tiendas: «Solicita una demostración», o «Próximamente» en Zentrix Logistics. |
 | `/privacidad/` | Privacidad del sitio web: «Cookies y analítica» en español (`#cookies`) y en inglés (`#cookies-en`), en una sola página. Las de las apps siguen en cada producto. |
 | `/traza/` | Presentación breve de Traza®, que tiene sitio propio: el botón principal lleva a <https://traza.technology>. En el menú, la portada y el pie, Traza enlaza directamente a ese sitio (pestaña nueva, con indicador de enlace externo). |
-| `/404.html` | Página de error. |
+| `/404.html` | Página de error (ver «La 404»). |
 
 Las páginas de los manuales llevan, además de `sitio.css`, `manual-sales.css` o `manual-work.css`: son las hojas del manual de cada sitio anterior con los tokens de zentrix. Las capturas de los manuales están en `assets/img/sales/` y `assets/img/work/`, y algunas todavía muestran el diseño anterior de las apps.
 
@@ -52,6 +52,16 @@ Dirección A, aprobada por Victor el 14-10-2026: dos letras en minúscula y la b
 - **Autocompletado:** la palabra se completa en gris dentro del campo y se acepta con Tab o →. Arriba salen accesos directos (productos, manuales, privacidad, soporte, soluciones, contacto) cuando lo escrito los nombra. No distingue tildes ni mayúsculas. Con el campo vacío salen las búsquedas recientes (localStorage) y sugerencias.
 - **Analítica:** si existe `window.zxAnalytics.track`, envía `search`, `search_no_results` y `select_content`.
 - **Probar en local:** sobre una copia del repo (el script modifica los HTML): `python3 herramientas/buscador.py && npx -y pagefind@1.5.2 --site . && python3 -m http.server`.
+
+## La 404
+
+`generar.py` escribe `/404.html` y `/en/404.html` (`pag_404`). GitHub Pages sirve el mismo `/404.html` para cualquier ruta que no existe, también bajo `/en/`: por eso la española lleva la cabecera, el `<main>` y el pie en inglés dentro de un `<template>`, y un script en línea los cambia antes de pintar cuando la ruta empieza por `/en/` (la URL no cambia y sigue respondiendo 404). Lleva `noindex` y queda fuera del sitemap y del buscador.
+
+- **Ilustración:** el «404» armado con la cuadrícula de cubos de la marca (esquina cortada como la z), en azul; la pieza lima es la que falta y se sale de su hueco. Al pasar el ratón vuelve a su sitio. SVG en línea y CSS (`assets/css/error404.css`); con `prefers-reduced-motion` no se mueve nada.
+- **Sugerencias** (`assets/js/error404.js`): reglas por palabras de la URL (rutas viejas de eqnio.com y vendooapp.com, «sales», «work», «privacidad», «soporte», «docs», soluciones…) y, si no, la ruta más parecida (distancia de edición). Las rutas y títulos los escribe `generar.py` en `#e404-datos`.
+- **Buscador:** el campo abre el buscador del sitio con lo escrito (`window.zxBuscar.abrir`, en `buscador.js`), con su autocompletado; viene relleno con las palabras de la URL. Sin JavaScript lleva a `/?q=…`.
+- **Suite:** los productos con sus monogramas; Work y Sales con manual, privacidad y soporte.
+- Analítica: `page_not_found` (ruta y primera sugerencia) y `select_content` al elegir una sugerencia.
 
 ## Idiomas
 

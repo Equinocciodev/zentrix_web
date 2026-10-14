@@ -6,6 +6,7 @@
      (palabras y títulos para el autocompletado en gris).
    - Se busca solo en el idioma de la página (<html lang>).
    - ?q=término abre el buscador y busca (SearchAction del JSON-LD).
+   - window.zxBuscar.abrir(q) lo abre desde otro campo (el de la 404).
    - Analítica opcional: window.zxAnalytics.track(...). */
 (function () {
   'use strict';
@@ -608,6 +609,9 @@
     }
   });
   pastilla.addEventListener('click', function () { abrir(); });
+
+  /* ---------- API para otros campos (el buscador de la 404) ---------- */
+  W.zxBuscar = { abrir: function (q) { abrir(q != null ? String(q).slice(0, 120) : null); } };
 
   /* ---------- ?q= (SearchAction) ---------- */
   try {

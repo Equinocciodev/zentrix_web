@@ -17,7 +17,7 @@ import re
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-from sitio import (DOMINIO, MONO, TRAZA_URL, TRAZA_ICONO, PRODUCTOS, SOLUCIONES, SOL_TXT, SECTORES,  # noqa: E402
+from sitio import (DOMINIO, MONO, TRAZA_URL, TRAZA_ICONO, PRODUCTOS, PARES, SOLUCIONES, SOL_TXT, SECTORES,  # noqa: E402
                    T, L, par, idioma_de, es_capitulo_manual, svg_icono, esc, SVG_EXTERNO, SVG_WHATSAPP, SVG_GLOBO)
 import contenido as C  # noqa: E402
 import bloques as BQ  # noqa: E402
@@ -46,6 +46,8 @@ def lang_de(ruta):
 
 def otro_idioma(ruta):
     """(ruta ES, ruta EN) para el selector de idioma de esta página."""
+    if ruta.endswith('404.html'):
+        return '/', '/en/'  # desde una 404, el otro idioma empieza en su portada
     if MULTI:
         p = par(ruta)
         if lang_de(ruta) == 'es':
@@ -1225,6 +1227,180 @@ Así `eqnio.com/<ruta>` llega a `zentrix.company/<ruta>`, y las páginas de arri
 
 
 # ── Principal ───────────────────────────────────────────────────────────────
+# ── 404: la pieza que falta ─────────────────────────────────────────────────
+# GitHub Pages sirve un único /404.html para cualquier ruta que no existe, también bajo
+# /en/. Por eso la 404 española lleva dentro, en un <template>, la cabecera, el <main> y
+# el pie en inglés, y un script en línea los cambia antes de pintar si la ruta empieza
+# por /en/ (ver e404_bilingue). /en/404.html es la misma página, ya en inglés.
+E404_JS_V = 1
+E404_CSS_V = 1
+E404_TXT = {
+    'es': {
+        'titulo': 'Página no encontrada — Zentrix',
+        'desc': 'Esta página no existe en zentrix.company. Busca lo que necesitas o empieza por la suite de Zentrix.',
+        'ante': 'Error 404', 'h1': 'Aquí falta una pieza.',
+        'lead': 'La página que buscas no existe o cambió de dirección. Busquemos lo que necesitas.',
+        'pediste': 'Pediste', 'quiza': '¿Buscabas esto?',
+        'buscar_l': 'Buscar en Zentrix', 'buscar_ph': 'Busca productos, manuales o ayuda', 'buscar_b': 'Buscar',
+        'inicio': 'Ir al inicio', 'escribenos': 'Escríbenos',
+        'suite_h': 'O empieza por la suite', 'suite_p': 'Cada producto de Zentrix, a un clic.',
+        'manual': 'Manual', 'privacidad': 'Privacidad', 'soporte': 'Soporte',
+    },
+    'en': {
+        'titulo': 'Page not found — Zentrix',
+        'desc': "This page doesn't exist on zentrix.company. Search for what you need or start with the Zentrix suite.",
+        'ante': 'Error 404', 'h1': 'A piece is missing here.',
+        'lead': "The page you're looking for doesn't exist or has moved. Let's find what you need.",
+        'pediste': 'You asked for', 'quiza': 'Were you looking for this?',
+        'buscar_l': 'Search Zentrix', 'buscar_ph': 'Search products, manuals or help', 'buscar_b': 'Search',
+        'inicio': 'Go to home', 'escribenos': 'Contact us',
+        'suite_h': 'Or start with the suite', 'suite_p': 'Every Zentrix product, one click away.',
+        'manual': 'Manual', 'privacidad': 'Privacy', 'soporte': 'Support',
+    },
+}
+# Dígitos de 3 × 5 cubos: el «404» se arma con la cuadrícula de cubos de la marca.
+E404_DIGITOS = {'4': ('101', '101', '111', '001', '001'), '0': ('111', '101', '101', '101', '111')}
+E404_HUECO = (6, 0)  # columna, fila: la esquina superior derecha del 0 (el corte de la z)
+
+
+def arte_404():
+    """SVG del «404» en cubos con la esquina cortada; el cubo lima es la pieza que falta."""
+    paso, lado = 48, 40
+    cubo = 'M0 0H30L40 10V40H0Z'
+    llenos, vacios = [], []
+    for i, d in enumerate('404'):
+        for fila, bits in enumerate(E404_DIGITOS[d]):
+            for c, b in enumerate(bits):
+                col = i * 4 + c
+                x, y = col * paso, fila * paso
+                if (col, fila) == E404_HUECO:
+                    continue
+                if b == '1':
+                    llenos.append(f'<g transform="translate({x} {y})"><path class="e404-cubo" style="--i:{col + fila}" d="{cubo}"/></g>')
+                else:
+                    vacios.append(f'<rect x="{x + .5}" y="{y + .5}" width="{lado - 1}" height="{lado - 1}" rx="3"/>')
+    hx, hy = E404_HUECO[0] * paso, E404_HUECO[1] * paso
+    return (f'<svg class="e404-arte" viewBox="-8 -120 544 368" role="presentation" aria-hidden="true" focusable="false">'
+            f'<g class="e404-rejilla">{"".join(vacios)}</g>'
+            f'<rect class="e404-hueco" x="{hx + 1}" y="{hy + 1}" width="{lado - 2}" height="{lado - 2}" rx="3"/>'
+            f'{"".join(llenos)}'
+            f'<path class="e404-rastro" d="M{hx + 22} {hy - 6} C {hx + 26} {hy - 30}, {hx + 40} {hy - 44}, {hx + 58} {hy - 52}"/>'
+            f'<g transform="translate({hx} {hy})"><g class="e404-pieza"><path class="e404-pieza__cubo" d="{cubo}"/></g></g>'
+            '</svg>')
+
+
+def datos_404():
+    """Rutas y títulos de cada idioma para las sugerencias de la 404 (assets/js/error404.js)."""
+    def corto(t):
+        return re.sub(r'\s*\|\s*Zentrix$', '', t or '').strip()
+    rutas = {'es': [], 'en': []}
+    for es, en in PARES:
+        if es.endswith('404.html'):
+            continue
+        for lang, r in (('es', es), ('en', en)):
+            t = (seo.PAGINAS.get(r) or (None, None))[1]
+            if t:
+                rutas[lang].append([r, corto(t)])
+    for prod, nombre in (('work', 'Zentrix Work'), ('sales', 'Zentrix Sales')):
+        for t, r in capitulos(prod):
+            rutas['es'].append([r, f'{t} — Manual de {nombre}'])
+    par_ = {es: en for es, en in PARES if not es.endswith('404.html')}
+    return json.dumps({'rutas': rutas, 'par': par_}, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
+
+
+def pag_404(lang):
+    t = E404_TXT[lang]
+    ruta = '/en/404.html' if lang == 'en' else '/404.html'
+    flecha = ('<svg class="e404-flecha" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">'
+              '<path d="M4 10h11m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+    lupa = ('<svg viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false"><circle cx="8.75" cy="8.75" r="5.75" '
+            'stroke="currentColor" stroke-width="1.8"/><path d="m13.2 13.2 4.05 4.05" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>')
+    piezas = []
+    for clave, r_es, nombre, d_es, d_en in PRODUCTOS:
+        desc = d_en if lang == 'en' else d_es
+        externo = clave == 'traza'
+        href = TRAZA_URL if externo else Lx(r_es, lang)
+        extra = (f' target="_blank" rel="noopener"' if externo else '')
+        marca = (f'{SVG_EXTERNO}<span class="sr">{T[lang]["externo"]}</span>' if externo else '')
+        sub = ''
+        prota = clave in ('work', 'sales')
+        if prota:
+            enl = [(f'/{clave}/docs/', t['manual']), (f'/{clave}/privacidad/', t['privacidad']), (f'/{clave}/soporte/', t['soporte'])]
+            sub = ('<ul class="e404-pieza-suite__sub">' + ''.join(
+                f'<li><a href="{Lx(r, lang)}">{txt}<span class="sr"> — {nombre}</span></a></li>' for r, txt in enl) + '</ul>')
+        piezas.append(
+            f'<li class="e404-pieza-suite{" e404-pieza-suite--prota" if prota else ""}" style="--n:{len(piezas)}">'
+            f'{icono_producto(clave, 56 if prota else 44)}'
+            f'<span class="e404-pieza-suite__txt"><a class="e404-pieza-suite__enlace" href="{href}"{extra}>{nombre}{marca}</a>'
+            f'<span class="e404-pieza-suite__desc">{desc}</span></span>{flecha}{sub}<span class="bq-barra" aria-hidden="true"></span></li>')
+    accion = Lx('/', lang)
+    cuerpo = f'''<section class="oscuro e404">
+  <div class="envoltura e404__rejilla">
+    <div class="e404__texto">
+      <p class="antetitulo">{t["ante"]}</p>
+      <h1>{t["h1"]}</h1>
+      <span class="bq-barra e404__barra" aria-hidden="true"></span>
+      <p class="entradilla">{t["lead"]}</p>
+      <p class="e404__pedido" hidden>{t["pediste"]} <code></code></p>
+      <div class="e404__pista" hidden>
+        <p class="e404__pista-t">{t["quiza"]}</p>
+        <ul class="e404__sugerencias"></ul>
+      </div>
+      <form class="e404__buscar" role="search" action="{accion}" method="get">
+        <label class="sr" for="e404-q">{t["buscar_l"]}</label>
+        <span class="e404__lupa">{lupa}</span>
+        <input id="e404-q" name="q" type="search" placeholder="{t["buscar_ph"]}" autocomplete="off" enterkeyhint="search" maxlength="120">
+        <button type="submit">{t["buscar_b"]}</button>
+      </form>
+      <div class="botones">
+        <a class="boton e404__boton-lima" href="{Lx("/", lang)}">{t["inicio"]}</a>
+        <a class="boton e404__boton-borde" href="{Lx("/contacto/", lang)}">{t["escribenos"]}</a>
+      </div>
+    </div>
+    <div class="e404__arte">{arte_404()}</div>
+  </div>
+</section>
+<section class="oscuro e404-suite" aria-labelledby="e404-suite-h">
+  <div class="envoltura">
+    <h2 id="e404-suite-h">{t["suite_h"]}</h2>
+    <p class="apagado">{t["suite_p"]}</p>
+    <ul class="e404-suite__lista">{"".join(piezas)}</ul>
+  </div>
+</section>
+<script type="application/json" id="e404-datos">{datos_404()}</script>'''
+    s = pagina(ruta, t['titulo'], t['desc'], cuerpo)
+    s = s.replace('  <link rel="canonical"', '  <meta name="robots" content="noindex">\n  <link rel="canonical"', 1)
+    s = s.replace('</head>', f'  <link rel="stylesheet" href="/assets/css/error404.css?v={E404_CSS_V}">\n'
+                             f'  <script src="/assets/js/error404.js?v={E404_JS_V}" defer></script>\n</head>', 1)
+    # El buscador del <main> llama a window.zxBuscar (buscador.js ≥ v2).
+    s = s.replace('</head>', '  <script src="/assets/js/buscador.js?v=2" defer></script>\n</head>', 1)
+    return ruta, s
+
+
+def e404_bilingue(es, en):
+    """La 404 española con la versión inglesa dentro: GitHub Pages sirve /404.html también
+    para /en/…, y así la persona ve la página en su idioma sin cambiar de URL."""
+    def tomar(patron, s):
+        m = re.search(patron, s, re.S)
+        return m.group(0) if m else ''
+    partes = ''.join(tomar(p, en) for p in (r'<a class="saltar"[^>]*>.*?</a>', r'<header class="cabecera">.*?</header>',
+                                             r'<main id="principal">.*?</main>', r'<footer class="pie">.*?</footer>'))
+    t = E404_TXT['en']
+    cambio = ('<script>(function(){var h=document.documentElement;'
+              'if(!h.classList.contains("e404-en"))return;'
+              'try{var t=document.getElementById("e404-en").content;'
+              '[".saltar",".cabecera","#principal",".pie"].forEach(function(s){var a=document.querySelector(s),b=t.querySelector(s);if(a&&b)a.replaceWith(b)});'
+              f'document.title={json.dumps(t["titulo"], ensure_ascii=False)};'
+              'var d=document.querySelector(\'meta[name="description"]\');'
+              f'if(d)d.setAttribute("content",{json.dumps(t["desc"], ensure_ascii=False)})'
+              '}finally{h.classList.remove("e404-en")}})()</script>')
+    previo = ('  <script>if(/^\\/en(\\/|$)/.test(location.pathname)){document.documentElement.lang="en";'
+              'document.documentElement.classList.add("e404-en")}</script>\n'
+              '  <style>.e404-en body{visibility:hidden}</style>\n')
+    es = es.replace('  <meta name="robots"', previo + '  <meta name="robots"', 1)
+    return es.replace('</body>', f'<template id="e404-en">{partes}</template>\n{cambio}\n</body>', 1)
+
+
 def generar():
     langs = ('es', 'en') if MULTI else ('es',)
     for lang in langs:
@@ -1240,6 +1416,9 @@ def generar():
             SALIDA[fichero_de(r)] = s
     for vieja, nueva, *_ in REDIRECCIONES:
         SALIDA[fichero_de(vieja)] = pagina_redireccion(vieja, nueva)
+    for lang in langs:
+        r, s = pag_404(lang)
+        SALIDA[fichero_de(r)] = s
 
 
 def main():
@@ -1256,8 +1435,12 @@ def main():
                 f.write_text(contenido, encoding='utf-8')
 
     # 1) páginas generadas
-    for f, s in SALIDA.items():
-        escribir(f, procesar(s, ruta_de(f)) if 'http-equiv="refresh"' not in s else s)
+    procesadas = {f: (procesar(s, ruta_de(f)) if 'http-equiv="refresh"' not in s else s) for f, s in SALIDA.items()}
+    if MULTI:
+        f404 = fichero_de('/404.html')
+        procesadas[f404] = e404_bilingue(procesadas[f404], procesadas[fichero_de('/en/404.html')])
+    for f, s in procesadas.items():
+        escribir(f, s)
     # 2) el resto de páginas: cabecera, pie y head
     rutas = []
     for f in sorted(RAIZ.rglob('*.html')):
