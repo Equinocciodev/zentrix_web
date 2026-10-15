@@ -5372,9 +5372,9 @@ Ojo
 
 ### Cómo se ve
 
-- Oscuro — «Lo recomendado: gasta menos batería.» Viene así.
+- Claro — «Lo recomendado. Se lee bien hasta a pleno sol.» Viene así. Si ya habías elegido otro tema, la app lo respeta.
 
-- Claro — «Para el depósito a pleno sol.»
+- Oscuro — «Gasta menos batería y descansa la vista de noche.»
 
 - Como el teléfono — «Sigue el tema que tenga tu Android.»
 
@@ -5411,6 +5411,8 @@ No te equivoques en esto
 Si arriba dice «Soporte todavía no la autorizó»: «No recibas el producto.»
 
 Las devoluciones las abres desde la llamada o desde el acceso Devoluciones de la pantalla principal.
+
+Una devolución autorizada: el motivo, lo que escribió el cliente y la cuenta, que arranca en lo autorizado.
 
 ### 1. Cuenta lo que te entregaron
 
@@ -5599,6 +5601,8 @@ Antes de bajar un solo bulto, pídele al cliente su código de retiro. Lo tienes
 
 Toca Validar un código en la pantalla principal. Apunta al código del cliente, o escríbelo si te lo dicta, y toca Buscar. La app te dice qué es y te lleva: Ir a la entrega.
 
+Una entrega en el mostrador: el código de retiro en grande y, abajo, el paso que falta.
+
 ### 2. Sigue el botón de abajo
 
 Solo salen los pasos que ese pedido pide, en este orden:
@@ -5607,11 +5611,14 @@ Leer los bultos → Verificar mayoría de edad → Tomar la foto de la prueba �
 
 ### 3. Lee los bultos
 
-- Toca «Leer los bultos». «Apunta a la etiqueta del bulto.» La cuenta sube: «2 de 3 bultos leídos».
+- Toca «Leer los bultos». «Apunta a la etiqueta del bulto.» La cuenta sube: «2 de 3 bultos leídos». Si es uno solo, dice «Lee el bulto.» y «0 de 1 bulto leído».
 
 - Lee todos, uno por uno. Aunque estén juntos. Si una etiqueta no lee, toca A mano y escribe el código.
 
 Si el pedido no tiene etiquetas: «Este pedido no tiene bultos etiquetados: entrégalo con el chequeo manual de siempre.» Cuéntalos a mano.
+
+Si el motorizado ya se lo llevó
+En un pedido de reparto que ya salió, la pantalla dice «El motorizado ya se lo llevó. No tienes que entregar nada más» y quién se lo llevó. Ahí no sale el botón Entregar: la entrega la cierra el motorizado en la puerta del cliente.
 
 ### 4. Pedidos con licor: verifica la edad
 
@@ -5668,7 +5675,23 @@ Cómo se usa Zentrix Work en la tienda, pantalla a pantalla: entrar, encender el
 
 ### Manual del operador
 
-Diseño nuevo. La app estrena la imagen de zentrix. Algunas capturas de este manual todavía muestran el diseño anterior, pero los pasos son los mismos.
+Novedades de la versión 1.1.7. La app se llama Zentrix Work y estrena imagen: tema claro por defecto, letra Inter e icono nuevo.
+
+- La hora prometida es una sola, la del sistema: la lista, el detalle y «Es tuya» dicen lo mismo, en formato «8:19 p. m.». Ver [Preparar un pedido](https://zentrix.company/work/docs/preparar.html#orden).
+
+- La pausa de 15 minutos dice 15, no 16, y debajo de «Desliza para apagar» ahora dice «Al apagarte, tu teléfono deja de sonar.» Ver [El turno](https://zentrix.company/work/docs/turno.html).
+
+- Si enciendes el turno en otro teléfono, el primero se apaga en el acto, en cualquier pantalla.
+
+- Si el motorizado ya se llevó el pedido, ya no sale «Entregar». Ver [Entregar en la tienda](https://zentrix.company/work/docs/entregar.html#edad).
+
+- Los motivos de «No puedo» dependen del tipo de llamada. Ver [La llamada](https://zentrix.company/work/docs/llamada.html#no-puedo).
+
+- «Cómo llegar» ya no cierra la app. Ver [Reparto a domicilio](https://zentrix.company/work/docs/reparto.html#navegar).
+
+- Plurales bien escritos: «1 bulto», «1 Unidad».
+
+Algunas capturas de este manual todavía muestran el diseño anterior, pero los pasos son los mismos.
 
 Zentrix Work es la app del equipo de tienda de tu empresa. Aquí está cómo se usa, pantalla por pantalla, en frases cortas para leer de pie.
 
@@ -5750,7 +5773,7 @@ Con el turno encendido, cuando hay trabajo para ti el teléfono suena, vibra y s
 
 ### Cómo se ve
 
-Una llamada de prueba de entrega. Arriba qué es; en el medio el pedido; abajo el reloj y tus dos opciones.
+Una llamada para preparar un pedido. Arriba qué es; en el medio el pedido; abajo el reloj y tus dos opciones.
 
 Arriba, qué te toca. Cada tarea tiene su verbo:
 
@@ -5764,7 +5787,7 @@ DEVOLUCIÓN · Devolución en la puerta Yo la atiendo
 
 PARADA NUEVA · Un pedido para llevarle al cliente Yo la llevo
 
-En el medio, el pedido: el código de retiro, el cliente, los bultos y el rack. Abajo, el reloj: «56 s y pasa al siguiente». En los últimos 15 segundos se pone rojo.
+En el medio, el pedido: su referencia y el cliente, y en una entrega también el código de retiro, los bultos y el rack. Abajo, el reloj: «45 s y pasa al siguiente». En los últimos 15 segundos se pone rojo.
 
 La llamada sale aunque el teléfono esté bloqueado, y el flash parpadea si lo tienes encendido en [Ajustes](https://zentrix.company/work/docs/ajustes.html).
 
@@ -5772,7 +5795,7 @@ La llamada sale aunque el teléfono esté bloqueado, y el flash parpadea si lo t
 
 - Arrastra el control («Yo lo entrego», «Yo lo hago»…) hasta el otro lado. Se desliza para que un toque en el bolsillo no acepte un trabajo que no vas a hacer.
 
-- Ahora es tuya. La pantalla dice «Es tuya. ¡Dale!» con el pedido y lo que sigue.
+- Ahora es tuya. La pantalla dice «Es tuya. ¡Dale!» con el pedido, cuánto falta para la hora prometida y lo que sigue. Esa hora es la misma que ves en la lista y en el detalle del pedido.
 
 - Toca el botón del trabajo. Preparar el pedido, Abrir la entrega o Abrir la parada. Te lleva a la pantalla donde se hace.
 
@@ -5785,7 +5808,7 @@ La pantalla no se apaga
 
 - Toca «No puedo». Un solo toque. El timbre se calla: «Listo, se la pasamos a otro compañero.»
 
-- Si quieres, di por qué. Puede salir «¿Por qué no puedes? (opcional)» con motivos para tocar. Los manda el sistema. No es obligatorio.
+- Si quieres, di por qué. Puede salir «¿Por qué no puedes? (opcional)» con motivos para tocar. Los manda el sistema según el tipo de llamada: en una de preparar no salen los del reparto, como «El cliente no contesta» o «Problema con la moto». No es obligatorio.
 
 - ¿Te equivocaste? Mientras quede tiempo, toca Me equivoqué, sí puedo.
 
@@ -5892,6 +5915,10 @@ Comenzar preparación → Escanear productos → Preguntar al cliente → ¿En c
 
 La hora del pedido
 Cada pedido lleva una pastilla con su hora: «faltan 12 min» o «18 min tarde». En verde vas a tiempo, en ámbar está por caer, en rojo está atrasado. Atiende primero lo rojo.
+
+Al lado va la hora prometida al cliente: «para las 8:19 p. m.». Es una sola, la que da el sistema, y es la misma en la lista, en el detalle del pedido y en «Es tuya».
+
+Un pedido a medio preparar: lo que falta, la hora prometida y cada producto con su cuenta.
 
 ### 1. Comienza
 
@@ -6011,6 +6038,8 @@ Cuando te detienes, se abre sola. También puedes tocar el aviso «Hay una parad
 
 ### Navegar hasta el cliente
 
+La parada que llevas tú: la dirección con «Cómo llegar» y, abajo, el paso que falta.
+
 - En la parada, toca «Cómo llegar». Está en la tarjeta de la dirección, «A dónde va», con su referencia.
 
 - Toca «Navegar». La guía corre dentro de la app. La primera vez te pide ubicación precisa y aceptar los términos de Google.
@@ -6018,6 +6047,9 @@ Cuando te detienes, se abre sola. También puedes tocar el aviso «Hay una parad
 - Sigue la guía. Si sales de ella, vuelves con Seguir navegando.
 
 Siempre tienes también Abrir en Google Maps.
+
+Si «Cómo llegar» te cerraba la app
+Pasaba en versiones anteriores. Desde la 1.1.7 el mapa abre y la app sigue abierta. Si te sigue pasando, revisa en la tienda que tengas la última versión.
 
 - La ruta es de carro, no de moto: Google todavía no da rutas de dos ruedas en Venezuela.
 
@@ -6127,7 +6159,7 @@ Cómo se enciende el turno en Zentrix Work: elegir tienda y tareas, deslizar par
 
 ### El turno
 
-Encendido, te llega el trabajo de tu tienda. Apagado, tu teléfono jamás suena. Entrar, elegir y deslizar: no toma ni un minuto.
+Encendido, te llega el trabajo de tu tienda. Apagado, tu teléfono no suena. Entrar, elegir y deslizar: no toma ni un minuto.
 
 ### Encender el turno
 
@@ -6146,15 +6178,15 @@ Si el sistema no te deja encender, te dice por qué en un mensaje abajo. Léelo:
 
 ### Con el turno encendido
 
-Tu turno encendido. De arriba abajo: estado, pausa, trabajo pendiente y accesos.
+Tu turno encendido. De arriba abajo: estado, pausa, tarea en curso, trabajo pendiente y accesos.
 
-- «ESTÁS ACTIVO»: tu tienda, desde qué hora y qué atiendes. Debajo, el horario: «cierra a las … · tu turno se apaga al cierre».
+- «ESTÁS ACTIVO»: tu tienda, desde qué hora («desde las 7:34 p. m.») y qué atiendes. Debajo, el horario: «cierra a las … · tu turno se apaga al cierre».
 
-- «AHORA MISMO»: cuántos trabajos hay por hacer. Si algo va tarde, lo ves en rojo como «atrasados». Toca Ver el trabajo para abrir la lista.
+- «AHORA MISMO»: cuántos trabajos hay por hacer y lo próximo, con su pastilla de tiempo («faltan 32 min»). Si algo va tarde, lo ves en rojo como «atrasados». Toca Ver el trabajo para abrir la lista.
 
 - Los accesos: Devoluciones, Validar un código, Mi trabajo de hoy, y si repartes, Paradas y Mi viaje.
 
-Si tienes un trabajo empezado, arriba sale «SIGUE DONDE LO DEJASTE». Tócalo y vuelves a él.
+Si tienes un trabajo empezado, arriba sale «SIGUE DONDE LO DEJASTE». Tócalo y vuelves a él. Si tomaste una llamada y no la has terminado, sale la tarjeta «Tarea en curso», con hace cuánto la tomaste: tócala para volver a ella.
 
 Para cambiar de tienda o de tareas: apágate y enciéndete de nuevo.
 
@@ -6162,13 +6194,13 @@ Para cambiar de tienda o de tareas: apágate y enciéndete de nuevo.
 
 - En «¿Necesitas un rato?», toca 5, 10 o 15 min. «Dejas de recibir trabajo nuevo y vuelves solo. No cierras tu turno ni sueltas lo que tengas empezado.»
 
-- Vuelve solo, o toca «Volver ya». En pausa la app dice EN PAUSA y cuánto te falta.
+- Vuelve solo, o toca «Volver ya». En pausa la app dice EN PAUSA y cuánto te falta, redondeado al minuto: si pediste 15, dice 15, no 16. Al final dice «1 minuto» y luego «menos de un minuto».
 
 Para comer o ir al baño: pausa, no apagues.
 
 ### Apagar al terminar
 
-Arrastra Desliza para apagar, abajo del todo. Suena un tono que baja. Desde ahí: «Apagado, tu teléfono jamás suena.»
+Arrastra Desliza para apagar, abajo del todo. Debajo del control te lo recuerda: «Al apagarte, tu teléfono deja de sonar.» Suena un tono que baja y vuelves al check-in, que dice «Apagado, tu teléfono jamás suena.»
 
 Antes de apagar, cierra lo que tengas empezado.
 
@@ -6186,6 +6218,8 @@ Esquema, no captura: minutos sin que tu teléfono dé señales.
 - A los 90 minutos —o si pasan 90 sin que nadie toque la app— el turno se cierra. Toca hacer check-in otra vez.
 
 - Al cierre de la tienda el turno también se apaga.
+
+- Si enciendes el turno en otro teléfono, el primero se apaga en el acto, en cualquier pantalla en la que estés: suena el tono de apagar y vuelve al check-in con el aviso del sistema. Tu turno vive en un solo teléfono a la vez.
 
 Cuando el sistema te apaga, la pantalla vuelve al check-in y suena el tono de apagar. En la campana puede quedar el aviso.
 
@@ -6210,7 +6244,7 @@ Veinte minutos es «te sacamos de la rifa un rato». Noventa es «se acabó el t
 
 La pestaña Actividad de Zentrix Sales: los borradores en «Abiertos», qué significa cada estado de un pedido, tus visitas y tus devoluciones.
 
-Manual de la versión 5.2.24
+Manual de la versión 5.3.0
 
 ### Tus pedidos y tu actividad
 
@@ -6294,7 +6328,7 @@ Y hay dos cancelaciones distintas, aunque el botón se llame igual:
 
 Cuando armas un pedido sin señal y al salir no hay tanto disponible como pediste, el pedido rebota. Casi nunca está perdido: la oficina te dice cuánto queda de cada producto.
 
-Desde Inicio › Ajuste de stock bajas las cantidades a lo que hay y lo reenvías. Pediste 20 y quedan 6: seis cajas vendidas son mejor que ninguna.
+En el pedido rebotado, aquí en Actividad › Pedidos, toca «Ajustar»: bajas las cantidades a lo que hay y lo reenvías. Pediste 20 y quedan 6: seis cajas vendidas son mejor que ninguna.
 
 - Los precios no cambian. Siguen siendo los que le cantaste al cliente.
 
@@ -6369,7 +6403,7 @@ Si algo dice «Por enviar» o «No se pudo enviar», está todavía en tu teléf
 
 Buscar un producto en Zentrix Sales por nombre, código o código de barras, usar el escáner, filtrar, elegir la tarifa y compartir por WhatsApp.
 
-Manual de la versión 5.2.24
+Manual de la versión 5.3.0
 
 ### El catálogo
 
@@ -6457,7 +6491,7 @@ Lo que dice Qué pasa Qué hacer
 
 Cómo proponer un cliente nuevo desde Zentrix Sales y sugerir la corrección de uno que ya tienes: los pasos, los recaudos y cómo queda la solicitud.
 
-Manual de la versión 5.2.24
+Manual de la versión 5.3.0
 
 ### Clientes nuevos y correcciones
 
@@ -6535,7 +6569,7 @@ Toca cualquier tarjeta para abrirla y ver lo que propusiste, los recaudos que ma
 
 Cómo registrar un cobro en Zentrix Sales: banco, monto, referencia y comprobante, aplicarlo a las facturas y seguir el estado de la solicitud.
 
-Manual de la versión 5.2.24
+Manual de la versión 5.3.0
 
 ### Cobrarle a un cliente
 
@@ -6664,13 +6698,13 @@ Al corregir verás el comprobante que ya mandaste. Si no adjuntas uno nuevo, se 
 
 Cómo hablar con la oficina desde Zentrix Sales: la conversación de un pedido, una factura, una cobranza o un cliente, con notas internas, menciones y adjuntos.
 
-Manual de la versión 5.2.24
+Manual de la versión 5.3.0
 
 ### Hablar con la oficina
 
 Cada pedido, cada factura, cada cobranza y cada cliente tiene su propia conversación con la oficina. No es un chat aparte: está pegada al documento del que estás hablando.
 
-La nota interna va en ámbar y con candado; tu mensaje, en morado.
+La nota interna va en ámbar y con candado; tu mensaje, en el color de la app: azul desde la 5.3.0 (en la captura, el morado del diseño anterior).
 
 ### Dónde está
 
@@ -6735,7 +6769,7 @@ Lo que escribas sin señal queda «Por enviar» y sale solo. Dos mensajes son do
 
 Lo que más se pregunta de Zentrix Sales, en una o dos frases: el PIN, el permiso de ubicación, los precios que cambian, los avisos y el punto de sincronización.
 
-Manual de la versión 5.2.24
+Manual de la versión 5.3.0
 
 ### Dudas rápidas
 
@@ -6815,6 +6849,8 @@ Si un número no te cuadra o algo no se comporta como dice este manual, no lo ad
 
 Desde la aplicación tienes Perfil › Acerca de › «Reportar un problema». Cuenta qué pasó y mándalo: el reporte viaja con la versión exacta, el modelo del teléfono y los últimos pasos que diste — que es justo lo que hay que adivinar cuando el mismo problema llega por WhatsApp.
 
+En Perfil › Acerca de › Soporte tienes la ayuda y el contacto. También puedes escribir a [soporte@zentrix.company](mailto:soporte@zentrix.company), que es además el buzón para cualquier pregunta sobre tus datos personales.
+
 Ese formulario no te contesta
 Sirve para arreglar la aplicación, y nadie te va a responder por ahí. Si necesitas que alguien te resuelva algo hoy, escribe al soporte.
 
@@ -6825,9 +6861,9 @@ El soporte de Zentrix Sales —correo, teléfono y WhatsApp— está en [la pág
 
 ## [Entrar y sincronizar — Manual de Zentrix Sales](https://zentrix.company/sales/docs/entrar.html)
 
-Cómo entrar a Zentrix Sales la primera vez: el subdominio de tu empresa, tu correo y el PIN. Y por qué conviene sincronizar antes de salir a la calle.
+Cómo entrar a Zentrix Sales la primera vez: el dominio de tu empresa, tu correo y el PIN. Y por qué conviene sincronizar antes de salir a la calle.
 
-Manual de la versión 5.2.24
+Manual de la versión 5.3.0
 
 ### Entrar y sincronizar
 
@@ -6835,14 +6871,14 @@ Se hace una sola vez. Después la aplicación te reconoce y entras directo.
 
 ### Entrar la primera vez
 
-- El subdominio Es el nombre corto de tu empresa. Lo escribes solo, sin el.vendooapp.com: eso ya está puesto. Te lo da la oficina.
+- El dominio Es la dirección del sistema de tu empresa, por ejemplo ventas.tuempresa.com. Escríbelo entero, sin https:// ni barras: la aplicación lo completa. Te lo da la oficina. Antes de guardarlo, la aplicación comprueba que ese servidor responde; si no, te avisa y no guarda nada.
 
 - Tu correo y tu contraseña Los mismos con los que entras al sistema de la empresa.
 
 - El PIN, si quieres Cuatro números. Es lo que evita que alguien que agarre tu teléfono desbloqueado entre a Zentrix Sales y vea los precios, las deudas y las direcciones de tus clientes. Puedes tocar «Ahora no» y entrar igual — la aplicación no te lo vuelve a preguntar, y lo activas cuando quieras en Perfil › Cuenta.
 
 De ahí en adelante
-Ya no vuelves a escribir el correo ni el subdominio: la aplicación guarda tu cuenta. Si creaste el PIN, te lo pide cuando pasan 15 minutos sin usarla.
+Ya no vuelves a escribir el correo ni el dominio: la aplicación guarda tu cuenta. Si ya usabas la aplicación antes de la 5.3.0, no tienes que escribir nada: tu dominio quedó guardado. Si creaste el PIN, te lo pide cuando pasan 15 minutos sin usarla.
 
 ### Sincroniza antes de salir
 
@@ -6881,7 +6917,7 @@ En la pantalla de entrada, «Manejar cuentas» te deja quitar una cuenta de la l
 
 Cómo leer la cartera en Zentrix Sales: «TE DEBEN», «VENCIDO» y «EN REVISIÓN», las tarjetas, las etiquetas, el compromiso de pago y la moneda.
 
-Manual de la versión 5.2.24
+Manual de la versión 5.3.0
 
 ### Las facturas y lo que te deben
 
@@ -6968,13 +7004,23 @@ Al cliente léele siempre el número grande, el que está en la moneda de su fac
 
 ## [Manual del vendedor — Zentrix Sales](https://zentrix.company/sales/docs/)
 
-Cómo se usa Zentrix Sales en la calle, pantalla por pantalla: la ruta, la visita, el pedido, la cobranza y qué pasa cuando no hay señal. Versión 5.2.24.
+Cómo se usa Zentrix Sales en la calle, pantalla por pantalla: la ruta, la visita, el pedido, la cobranza y qué pasa cuando no hay señal. Versión 5.3.0.
 
-Manual de la versión 5.2.24
+Manual de la versión 5.3.0
 
 ### Manual del vendedor de Zentrix Sales
 
-Diseño nuevo. La app estrena la imagen de zentrix. Algunas capturas de este manual todavía muestran el diseño anterior, pero los pasos son los mismos.
+Novedades de la versión 5.3.0. La app estrena la marca Zentrix Sales.
+
+- Imagen nueva: icono con la «z» de Zentrix, tema claro por defecto (el oscuro sigue en Perfil), letra Inter y el azul de Zentrix en botones y mensajes. Si ya habías elegido un tema, se respeta.
+
+- Al entrar escribes el dominio entero de tu empresa. Ver [Entrar y sincronizar](https://zentrix.company/sales/docs/entrar.html#entrar).
+
+- En Perfil › Acerca de están el sitio web, Soporte y la política de privacidad. Para dudas sobre tus datos personales escribe a [soporte@zentrix.company](mailto:soporte@zentrix.company).
+
+- Tus pedidos, cobros y datos guardados en el teléfono no cambian, y no tienes que volver a entrar.
+
+Algunas capturas de este manual todavía muestran el diseño anterior, pero los pasos son los mismos.
 
 Cómo se usa la aplicación en la calle, pantalla por pantalla. Está escrito para leerlo desde el teléfono, en el orden que quieras.
 
@@ -7027,7 +7073,7 @@ Cada sección es una página corta. Puedes mandarle a alguien el enlace de una s
 
 ### Empezar aquí
 
-- [Entrar y sincronizar El subdominio, el PIN y los dos minutos de la mañana.](https://zentrix.company/sales/docs/entrar.html)
+- [Entrar y sincronizar El dominio, el PIN y los dos minutos de la mañana.](https://zentrix.company/sales/docs/entrar.html)
 
 - [Trabajar sin internet El punto de colores y por qué no se pierde nada.](https://zentrix.company/sales/docs/sin-internet.html)
 
@@ -7062,7 +7108,7 @@ Cada sección es una página corta. Puedes mandarle a alguien el enlace de una s
 
 La pantalla que más vas a ver en Zentrix Sales: el saludo, los avisos, tu empresa, las tasas del día, el bloque «Hoy» y los ocho accesos rápidos.
 
-Manual de la versión 5.2.24
+Manual de la versión 5.3.0
 
 ### Tu Inicio
 
@@ -7091,9 +7137,9 @@ Si un dato no está bajado, ese renglón no se pinta. La aplicación prefiere no
 
 ### Los ocho accesos
 
-Son Crear pedido, Ruta de hoy, Cobrar, Mis clientes, Promociones, Calendario, Solicitudes de cliente y Ajuste de stock.
+Son Crear pedido, Ruta de hoy, Cobrar, Mis clientes, Promociones, Calendario, Solicitudes de cliente y Sin ubicación.
 
-Los dos rellenos son los que vas a usar todos los días: Crear pedido y Cobrar.
+Los dos rellenos, en azul, son los que vas a usar todos los días: Crear pedido y Ruta de hoy.
 
 Cada botón trae su propio dato debajo —«40 clientes», «1 factura vence hoy», «0 de 3 paradas»— así que sabes qué te espera sin entrar.
 
@@ -7108,7 +7154,7 @@ El material de venta vigente de tu empresa: combos, descuentos y cupones. Es tu 
 
 ### Ajuste de stock
 
-Para el pedido que rebotó porque no había tanta mercancía como pediste. Pasa cuando lo armas sin señal y al salir el almacén ya no tiene esas cantidades.
+No está en el Inicio: se abre con «Ajustar» en el pedido rebotado, en Actividad › Pedidos. Es para el pedido que rebotó porque no había tanta mercancía como pediste. Pasa cuando lo armas sin señal y al salir el almacén ya no tiene esas cantidades.
 
 Acá bajas cada línea a lo que hay y lo reenvías. Los precios no cambian —son los que le cantaste al cliente— y es el mismo pedido, no uno nuevo, así que no se duplica nada. Está contado entero en [Actividad](https://zentrix.company/sales/docs/actividad.html#rebotado-por-stock).
 
@@ -7138,7 +7184,7 @@ Dos cosas que conviene saber de esos números:
 
 Cómo planificar y recorrer tu ruta en Zentrix Sales: asignar clientes a un día, ordenar las paradas por cercanía, navegar y quitar a alguien del día.
 
-Manual de la versión 5.2.24
+Manual de la versión 5.3.0
 
 ### La ruta del día
 
@@ -7187,7 +7233,7 @@ El pedido a medio armar no se borra: lo sigues encontrando en [Actividad › Ped
 
 En Zentrix Sales nada se pierde sin señal: qué significa cada color del punto de sincronización y qué hacer si algo dice «No se pudo enviar».
 
-Manual de la versión 5.2.24
+Manual de la versión 5.3.0
 
 ### Trabajar sin internet
 
@@ -7269,7 +7315,7 @@ En el panel también hay «Reintentar los envíos que se rindieron», que los vu
 
 Los ocho pasos de una visita en Zentrix Sales: check-in, inventario, pedido, fotos, devoluciones, notas, firma y check-out, con lo que conviene saber.
 
-Manual de la versión 5.2.24
+Manual de la versión 5.3.0
 
 ### La visita, paso a paso
 

@@ -159,7 +159,7 @@ PAGINAS = {
                                 'Cómo registrar un cobro en Zentrix Sales: banco, monto, referencia y '
                                 'comprobante, aplicarlo a las facturas y seguir el estado de la solicitud.'),
     '/sales/docs/entrar.html': ('entrar a la app de ventas', None,
-                                'Cómo entrar a Zentrix Sales la primera vez: el subdominio de tu empresa, tu '
+                                'Cómo entrar a Zentrix Sales la primera vez: el dominio de tu empresa, tu '
                                 'correo y el PIN. Y por qué conviene sincronizar antes de salir a la calle.'),
     '/sales/docs/facturas.html': ('cartera de cuentas por cobrar', None,
                                   'Cómo leer la cartera en Zentrix Sales: «TE DEBEN», «VENCIDO» y «EN REVISIÓN», '
