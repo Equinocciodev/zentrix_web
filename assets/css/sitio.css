@@ -238,6 +238,9 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .aviso-marca p { margin: 0; }
 .aviso-marca a { color: var(--lima); }
 .aviso-marca code { background: rgba(255, 255, 255, .14); color: var(--blanco); }
+.aviso-marca ul { margin: 10px 0; padding-left: 20px; }
+.aviso-marca li + li { margin-top: 6px; }
+.aviso-marca em { color: var(--blanco); }
 .ficha { background: var(--fondo); border-radius: var(--r-tarjeta); padding: 24px; margin: 24px 0; }
 .ficha dl { margin: 0; display: grid; gap: 4px 24px; }
 @media (min-width: 640px) { .ficha dl { grid-template-columns: max-content 1fr; } }
