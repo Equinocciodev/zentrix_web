@@ -193,21 +193,21 @@ Cada solución de Zentrix lleva su monograma: dos letras en minúscula y la barr
 
 Ver todas las soluciones
 
-- [zentrix work](https://zentrix.company/work/)
+- [Zentrix Work](https://zentrix.company/work/)
 
-- [zentrix sales](https://zentrix.company/sales/)
+- [Zentrix Sales](https://zentrix.company/sales/)
 
-- [zentrix ai](https://zentrix.company/ai/)
+- [Zentrix AI](https://zentrix.company/ai/)
 
-- [zentrix logistics](https://zentrix.company/logistics/)
+- [Zentrix Logistics](https://zentrix.company/logistics/)
 
-- [zentrix cloud](https://zentrix.company/cloud/)
+- [Zentrix Cloud](https://zentrix.company/cloud/)
 
-- [zentrix labs](https://zentrix.company/labs/)
+- [Zentrix Labs](https://zentrix.company/labs/)
 
-- [zentrix software](https://zentrix.company/software/)
+- [Zentrix Software](https://zentrix.company/software/)
 
-- [traza ® (se abre en otra pestaña) un producto de Zentrix®](https://traza.technology)
+- [Traza ® (se abre en otra pestaña) un producto de Zentrix®](https://traza.technology)
 
 Zentrix en cifras
 
@@ -1398,7 +1398,7 @@ Te enciendes al llegar a la tienda y el trabajo te llega solo: pedidos para prep
 
 [Ver el manual](https://zentrix.company/work/docs/)
 
-Entras una vez. Después, con tu PIN o tu huella.
+Te suena un pedido: lo tomas con un gesto.
 
 Cómo funciona
 
@@ -1476,6 +1476,30 @@ En el mostrador o a domicilio, bulto por bulto, con la prueba de entrega en el m
 
 ### Una devolución
 Recibes solo lo que soporte ya autorizó, así no discutes en el mostrador.
+
+Pantalla por pantalla
+
+### Así se ve un turno, de la llamada a la entrega.
+
+Claro para trabajar al sol, oscuro si lo prefieres.
+
+Te enciendes y eliges qué atiendes.
+
+Te suena un pedido: lo tomas deslizando.
+
+La cola, con lo más urgente arriba.
+
+Preparas producto por producto.
+
+Entregas con el código de retiro.
+
+Armas tu viaje de reparto.
+
+Recibes devoluciones con fotos.
+
+Claro u oscuro, como prefieras.
+
+Capturas reales de la app, con una tienda y clientes de prueba.
 
 Tu teléfono
 
@@ -2598,21 +2622,21 @@ Every Zentrix solution carries its own monogram: two lowercase letters and the b
 
 See all solutions
 
-- [zentrix work](https://zentrix.company/en/work/)
+- [Zentrix Work](https://zentrix.company/en/work/)
 
-- [zentrix sales](https://zentrix.company/en/sales/)
+- [Zentrix Sales](https://zentrix.company/en/sales/)
 
-- [zentrix ai](https://zentrix.company/en/ai/)
+- [Zentrix AI](https://zentrix.company/en/ai/)
 
-- [zentrix logistics](https://zentrix.company/en/logistics/)
+- [Zentrix Logistics](https://zentrix.company/en/logistics/)
 
-- [zentrix cloud](https://zentrix.company/en/cloud/)
+- [Zentrix Cloud](https://zentrix.company/en/cloud/)
 
-- [zentrix labs](https://zentrix.company/en/labs/)
+- [Zentrix Labs](https://zentrix.company/en/labs/)
 
-- [zentrix software](https://zentrix.company/en/software/)
+- [Zentrix Software](https://zentrix.company/en/software/)
 
-- [traza ® (opens in a new tab) a Zentrix® product](https://traza.technology)
+- [Traza ® (opens in a new tab) a Zentrix® product](https://traza.technology)
 
 Zentrix by the numbers
 
@@ -3409,7 +3433,7 @@ Google Play (Android) and the App Store (iPhone). [Both links are on the Zentrix
 
 Contact
 
-[hola@zentrix.company](mailto:hola@zentrix.company)
+[soporte@zentrix.company](mailto:soporte@zentrix.company)
 
 Published
 
@@ -3417,7 +3441,7 @@ Published
 
 Last updated
 
-13 October 2026
+15 October 2026
 
 Contents
 
@@ -3449,7 +3473,7 @@ Zentrix Sales is a working tool for field sales forces, developed and distribute
 
 There are two kinds of people whose data is processed, and they are worth separating. On one side the rep, an employee of the company that contracted Zentrix Sales, who uses it in the course of their job. On the other, that company's customers — the shops the rep visits — whose information the app downloads so that work can be done, and about whom visits, orders and payments are recorded.
 
-Who is responsible for what. The information the app collects is sent to the management system of the company that contracted Zentrix Sales, which is where it lives and where that company keeps it in accordance with its own policies and with the law. That company decides what commercial data it loads and what it uses it for. GUUAO LLC provides the app and processes that information on that company's behalf, without using it for purposes of its own. For any question about this document or about what the app does on the phone, the point of contact is [hola@zentrix.company](mailto:hola@zentrix.company).
+Who is responsible for what. The information the app collects is sent to the management system of the company that contracted Zentrix Sales, which is where it lives and where that company keeps it in accordance with its own policies and with the law. That company decides what commercial data it loads and what it uses it for. GUUAO LLC provides the app and processes that information on that company's behalf, without using it for purposes of its own. For any question about this document or about what the app does on the phone, the point of contact is [soporte@zentrix.company](mailto:soporte@zentrix.company).
 
 The data processing described here forms part of the employment relationship between the rep and their employer, and rests on the employer's legitimate interest in organising, coordinating and verifying field sales activity.
 
@@ -3709,7 +3733,7 @@ One exception that depends on the rep: the app can generate an order note as a P
 
 ### 7. Rights: access, correction and deletion
 
-Anyone whose data is processed through Zentrix Sales — reps and the company's customers — may request access, correction or deletion of their data by writing to [hola@zentrix.company](mailto:hola@zentrix.company), putting Data request — Zentrix Sales in the subject line and supplying enough information to identify themselves.
+Anyone whose data is processed through Zentrix Sales — reps and the company's customers — may request access, correction or deletion of their data by writing to [soporte@zentrix.company](mailto:soporte@zentrix.company), putting Data request — Zentrix Sales in the subject line and supplying enough information to identify themselves.
 
 The request will be answered within a maximum of thirty (30) business days. Deletion may be limited where retention is necessary to meet legal, accounting or tax obligations, or to defend claims; in that case the reason and the period will be stated.
 
@@ -3735,7 +3759,7 @@ Change note (13 October 2026). The app was renamed Zentrix Sales, and this polic
 
 ### 11. Contact
 
-GUUAO LLC [hola@zentrix.company](mailto:hola@zentrix.company)
+GUUAO LLC [soporte@zentrix.company](mailto:soporte@zentrix.company)
 
 Zentrix Sales
 
@@ -4763,7 +4787,7 @@ Adding or removing reps, permissions, companies and warehouses, or the integrati
 
 What the app collects, what for and how long it is kept is in the [privacy policy](https://zentrix.company/en/sales/privacy/). To request access to, correction or deletion of your data:
 
-- Write to [hola@zentrix.company](mailto:hola@zentrix.company?subject=Data%20request%20%E2%80%94%20Zentrix%20Sales) with the subject Data request — Zentrix Sales.
+- Write to [soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Data%20request%20%E2%80%94%20Zentrix%20Sales) with the subject Data request — Zentrix Sales.
 
 - Include your name, your rep email (or your tax ID if you are a customer of a company that uses the app) and what you want: access, correction or deletion.
 
@@ -4920,7 +4944,7 @@ Clock in when you get to the store and the work comes to you: orders to pick, de
 
 [Read the manual](https://zentrix.company/en/work/docs/)
 
-Sign in once. After that, use your PIN or fingerprint.
+An order rings. Swipe to take it.
 
 How it works
 
@@ -4998,6 +5022,30 @@ At the counter or to the door, package by package, with proof of delivery on the
 
 ### A return
 You only take back what support has already approved, so there's no arguing at the counter.
+
+Screen by screen
+
+### A shift, from the call to the handover.
+
+Light for working in the sun, dark if you prefer.
+
+Clock in and choose what you handle.
+
+An order rings: swipe to take it.
+
+The queue, most urgent first.
+
+Prepare item by item.
+
+Hand over with the pickup code.
+
+Build your delivery trip.
+
+Receive returns with photos.
+
+Light or dark, your choice.
+
+Real screenshots of the app (in Spanish), with a test store and test customers.
 
 Your phone
 
@@ -7587,7 +7635,7 @@ Google Play (Android) y App Store (iPhone). [Los dos enlaces están en la págin
 
 Contacto
 
-[hola@zentrix.company](mailto:hola@zentrix.company)
+[soporte@zentrix.company](mailto:soporte@zentrix.company)
 
 Publicación
 
@@ -7595,7 +7643,7 @@ Publicación
 
 Última actualización
 
-13 de octubre de 2026
+15 de octubre de 2026
 
 ### 1. Qué es Zentrix Sales y para quién
 
@@ -7603,7 +7651,7 @@ Zentrix Sales es una herramienta de trabajo para fuerzas de venta de campo, desa
 
 Hay dos figuras cuyos datos se tratan, y conviene separarlas. Por un lado el vendedor, empleado de la empresa que contrató Zentrix Sales, que la usa en el ejercicio de su función laboral. Por otro, los clientes de esa empresa —los comercios que el vendedor visita—, cuya información la aplicación descarga para poder trabajar y sobre los que se registran visitas, pedidos y cobros.
 
-Quién responde de qué. La información que la aplicación recoge se envía al sistema de gestión de la empresa que contrató Zentrix Sales, que es donde vive y donde ella la conserva conforme a sus propias políticas y a la ley. Esa empresa es quien decide qué datos comerciales carga y para qué los usa. GUUAO LLC provee la aplicación y trata esa información por cuenta de ella, sin usarla para fines propios. Para cualquier consulta sobre este documento o sobre lo que la aplicación hace en el teléfono, el punto de contacto es [hola@zentrix.company](mailto:hola@zentrix.company).
+Quién responde de qué. La información que la aplicación recoge se envía al sistema de gestión de la empresa que contrató Zentrix Sales, que es donde vive y donde ella la conserva conforme a sus propias políticas y a la ley. Esa empresa es quien decide qué datos comerciales carga y para qué los usa. GUUAO LLC provee la aplicación y trata esa información por cuenta de ella, sin usarla para fines propios. Para cualquier consulta sobre este documento o sobre lo que la aplicación hace en el teléfono, el punto de contacto es [soporte@zentrix.company](mailto:soporte@zentrix.company).
 
 El tratamiento de datos que aquí se describe forma parte de la relación de trabajo entre el vendedor y su empleador, y se apoya en el interés legítimo de éste en organizar, coordinar y verificar la actividad comercial de campo.
 
@@ -7863,7 +7911,7 @@ Una excepción que depende del vendedor: la aplicación permite generar una nota
 
 ### 7. Derechos: acceso, corrección y eliminación
 
-Cualquier persona cuyos datos sean tratados a través de Zentrix Sales —vendedores y clientes de la empresa— puede solicitar el acceso, la corrección o la eliminación de sus datos escribiendo a [hola@zentrix.company](mailto:hola@zentrix.company), indicando en el asunto Solicitud de datos — Zentrix Sales y aportando información suficiente para identificarse.
+Cualquier persona cuyos datos sean tratados a través de Zentrix Sales —vendedores y clientes de la empresa— puede solicitar el acceso, la corrección o la eliminación de sus datos escribiendo a [soporte@zentrix.company](mailto:soporte@zentrix.company), indicando en el asunto Solicitud de datos — Zentrix Sales y aportando información suficiente para identificarse.
 
 La solicitud se responderá en un plazo máximo de treinta (30) días hábiles. La eliminación puede estar limitada cuando la conservación sea necesaria para cumplir obligaciones legales, contables o fiscales, o para la defensa de reclamaciones; en ese caso se indicará el motivo y el plazo.
 
@@ -7889,7 +7937,7 @@ Nota de cambio (13 de octubre de 2026). La aplicación pasó a llamarse Zentrix 
 
 ### 11. Contacto
 
-GUUAO LLC [hola@zentrix.company](mailto:hola@zentrix.company)
+GUUAO LLC [soporte@zentrix.company](mailto:soporte@zentrix.company)
 
 Zentrix Sales
 
@@ -8221,7 +8269,7 @@ Altas y bajas de vendedores, permisos, empresas y almacenes, o la integración c
 
 Qué recoge la aplicación, para qué y cuánto tiempo se guarda está en la [política de privacidad](https://zentrix.company/sales/privacidad/). Para pedir el acceso, la corrección o la eliminación de tus datos:
 
-- Escribe a [hola@zentrix.company](mailto:hola@zentrix.company?subject=Solicitud%20de%20datos%20%E2%80%94%20Zentrix%20Sales) con el asunto Solicitud de datos — Zentrix Sales.
+- Escribe a [soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Solicitud%20de%20datos%20%E2%80%94%20Zentrix%20Sales) con el asunto Solicitud de datos — Zentrix Sales.
 
 - Indica tu nombre, tu correo de vendedor o tu RIF si eres cliente de una empresa que usa la app, y qué quieres: ver, corregir o eliminar.
 

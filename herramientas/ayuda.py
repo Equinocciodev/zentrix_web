@@ -108,7 +108,7 @@ TX = {
         'sales_emp_t': 'Si tu empresa ya usa Zentrix Sales',
         'sales_emp': 'Altas y bajas de vendedores, permisos, empresas y almacenes, o la integración con tu ERP. Escríbenos desde el correo de la empresa y dinos qué necesitas cambiar.',
         'sales_del_p': 'Qué recoge la aplicación, para qué y cuánto tiempo se guarda está en la <a href="{priv}">política de privacidad</a>. Para pedir el acceso, la corrección o la eliminación de tus datos:',
-        'sales_del_1': 'Escribe a <a href="{m}">hola@zentrix.company</a> con el asunto <em>Solicitud de datos — Zentrix Sales</em>.',
+        'sales_del_1': 'Escribe a <a href="{m}">soporte@zentrix.company</a> con el asunto <em>Solicitud de datos — Zentrix Sales</em>.',
         'sales_del_s': 'Solicitud de datos — Zentrix Sales',
         'sales_del_2': 'Indica tu nombre, tu correo de vendedor o tu RIF si eres cliente de una empresa que usa la app, y qué quieres: <strong>ver</strong>, <strong>corregir</strong> o <strong>eliminar</strong>.',
         'sales_del_f': 'Lo que se conserva por obligación legal, y por cuánto tiempo, está en la <a href="{priv}#c7">cláusula 7 de la política</a>. <strong>Cerrar sesión no elimina datos del servidor:</strong> solo retira las credenciales del teléfono.',
@@ -153,7 +153,7 @@ TX = {
         'sales_emp_t': 'If your company already runs Zentrix Sales',
         'sales_emp': 'Adding or removing reps, permissions, companies and warehouses, or the integration with your ERP. Write from the company address and tell us what you need changed.',
         'sales_del_p': 'What the app collects, what for and how long it is kept is in the <a href="{priv}">privacy policy</a>. To request access to, correction or deletion of your data:',
-        'sales_del_1': 'Write to <a href="{m}">hola@zentrix.company</a> with the subject <em>Data request — Zentrix Sales</em>.',
+        'sales_del_1': 'Write to <a href="{m}">soporte@zentrix.company</a> with the subject <em>Data request — Zentrix Sales</em>.',
         'sales_del_s': 'Data request — Zentrix Sales',
         'sales_del_2': 'Include your name, your rep email (or your tax ID if you are a customer of a company that uses the app) and what you want: <strong>access</strong>, <strong>correction</strong> or <strong>deletion</strong>.',
         'sales_del_f': 'What is kept because of a legal obligation, and for how long, is in <a href="{priv}#c7">clause 7 of the policy</a>. <strong>Signing out does not delete data from the server.</strong>',
@@ -287,7 +287,7 @@ def cuerpo_soporte(lang, G):
     <h3 id="{del_s}" class="ayuda-borrar">{t['eliminar_t']} — Zentrix Sales</h3>
     <p>{t['sales_del_p'].format(priv=L('/sales/privacidad/', lang))}</p>
     <ol class="pasos">
-      <li>{t['sales_del_1'].format(m=mailto('hola@zentrix.company', t['sales_del_s']))}</li>
+      <li>{t['sales_del_1'].format(m=mailto('soporte@zentrix.company', t['sales_del_s']))}</li>
       <li>{t['sales_del_2']}</li>
       <li>{t['del_3']}</li>
     </ol>
