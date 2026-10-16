@@ -2783,21 +2783,9 @@ The gate phone keeps the phone key, the session and each guard’s PIN in Androi
 
 ### 5. How long it is kept
 
-- Photos of the load, cab, container, seals and plate: 24 months. If an incident is open, until it is closed.
+We keep access records, evidence photos and the event log for as long as they are needed for the security of the premises and to meet legal obligations; after that they are deleted or anonymized.
 
-- Photos of invoices and carrier papers: 24 months.
-
-- Record text, signatures and event log: 6 years, as evidence of what came in and went out of the company.
-
-- Incidents and their photos: 24 months.
-
-- Key movements: 12 months.
-
-- Clock-ins and clock-outs: for the duration of the employment relationship plus 5 years; for contractor staff, 24 months.
-
-- Sessions per phone: 12 months.
-
-- Driver data on the phone: 12 hours at most.
+- Driver data on the phone: the gate phone keeps it for 12 hours at most.
 
 - Crash reports: according to the period set at the provider, which does not exceed 90 days.
 
@@ -2805,7 +2793,7 @@ The gate phone keeps the phone key, the session and each guard’s PIN in Androi
 
 - PIN and session: live only on the phone and are deleted when leaving the phone, revoking it or uninstalling the app.
 
-When a period ends, the photo or the data is deleted. The log row may remain, with its fingerprint and the deletion date, so the chain of records stays verifiable. Whatever an authority asks to keep for an open case is kept until the case ends.
+When a photo or a piece of data is deleted, the log row may remain, with its fingerprint and the deletion date, so the chain of records stays verifiable. Whatever an authority asks to keep for an open case is kept until the case ends.
 
 ### 6. Who it is shared with
 
@@ -9577,21 +9565,9 @@ En el teléfono de la garita quedan la llave del teléfono, la sesión y el PIN 
 
 ### 5. Cuánto tiempo se conservan
 
-- Fotos de la carga, la cabina, el contenedor, los precintos y la placa: 24 meses. Si hay un incidente abierto, hasta que se cierre.
+Conservamos los registros de acceso, las fotos de evidencia y el registro de eventos mientras sean necesarios para la seguridad de las instalaciones y para cumplir obligaciones legales; después se eliminan o se anonimizan.
 
-- Fotos de facturas y de los papeles del transportista: 24 meses.
-
-- Texto de las actas, firmas y registro de eventos: 6 años, como respaldo de lo que entró y salió de la empresa.
-
-- Novedades y sus fotos: 24 meses.
-
-- Movimientos de llaves: 12 meses.
-
-- Encendidos y apagados: mientras dure la relación de trabajo y 5 años más; si el vigilante es de una contratista, 24 meses.
-
-- Sesiones por teléfono: 12 meses.
-
-- Datos del chofer en el teléfono: 12 horas como máximo.
+- Datos del chofer en el teléfono: el teléfono de la garita los guarda 12 horas como máximo.
 
 - Reportes de fallos: según el plazo configurado en el proveedor, que no supera los 90 días.
 
@@ -9599,7 +9575,7 @@ En el teléfono de la garita quedan la llave del teléfono, la sesión y el PIN 
 
 - PIN y sesión: viven solo en el teléfono y se borran al salir del teléfono, al revocarlo o al desinstalar la app.
 
-Cuando vence un plazo se borra la foto o el dato. Puede quedar la fila del registro, con su huella y la fecha del borrado, para que la cadena de actas siga siendo verificable. Lo que una autoridad pida conservar para un caso abierto se guarda hasta que el caso termine.
+Al eliminar una foto o un dato puede quedar la fila del registro, con su huella y la fecha del borrado, para que la cadena de actas siga siendo verificable. Lo que una autoridad pida conservar para un caso abierto se guarda hasta que el caso termine.
 
 ### 6. Con quién se comparten
 

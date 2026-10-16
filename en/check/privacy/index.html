@@ -142,7 +142,6 @@
     <li><strong>It does not send push notifications.</strong></li>
     <li><strong>It does not sell data</strong>, show ads or build marketing profiles.</li>
     <li><strong>It does not use the phone’s advertising ID.</strong></li>
-    <!-- PENDIENTE (app): ver la nota equivalente en /check/privacidad/ (permiso AD_ID). -->
     <li><strong>It does not send the PIN anywhere.</strong></li>
     <li><strong>It does not send screenshots, record contents or photos</strong> in crash reports or usage metrics.</li>
     <li><strong>It does not copy its data to the phone’s cloud backup</strong> or to a new phone.</li>
@@ -154,21 +153,14 @@
   <p>The gate phone keeps the phone key, the session and each guard’s PIN in Android’s secure storage (Keystore); whatever has not been sent yet, <strong>encrypted</strong>; and photos and drafts of unfinished work in the app’s private storage, until they are sent or expire. If the phone is revoked, the app wipes all of that as soon as it reconnects. Uninstalling the app also makes Android delete it.</p>
 
   <h2 id="c5">5. How long it is kept</h2>
-  <!-- PENDIENTE: ver la nota equivalente en /check/privacidad/ (plazos propuestos sin confirmar y purga sin implementar). -->
+  <p>We keep access records, evidence photos and the event log for as long as they are needed for the security of the premises and to meet legal obligations; after that they are deleted or anonymized.</p>
   <ul>
-    <li><strong>Photos of the load, cab, container, seals and plate:</strong> 24 months. If an incident is open, until it is closed.</li>
-    <li><strong>Photos of invoices and carrier papers:</strong> 24 months.</li>
-    <li><strong>Record text, signatures and event log:</strong> 6 years, as evidence of what came in and went out of the company.</li>
-    <li><strong>Incidents and their photos:</strong> 24 months.</li>
-    <li><strong>Key movements:</strong> 12 months.</li>
-    <li><strong>Clock-ins and clock-outs:</strong> for the duration of the employment relationship plus 5 years; for contractor staff, 24 months.</li>
-    <li><strong>Sessions per phone:</strong> 12 months.</li>
-    <li><strong>Driver data on the phone:</strong> 12 hours at most.</li>
+    <li><strong>Driver data on the phone:</strong> the gate phone keeps it for 12 hours at most.</li>
     <li><strong>Crash reports:</strong> according to the period set at the provider, which does not exceed <strong>90 days</strong>.</li>
     <li><strong>Usage metrics:</strong> according to the period set in Google Analytics, which does not exceed <strong>14 months</strong>.</li>
     <li><strong>PIN and session:</strong> live only on the phone and are deleted when leaving the phone, revoking it or uninstalling the app.</li>
   </ul>
-  <p>When a period ends, the photo or the data is deleted. The log row may remain, with its fingerprint and the deletion date, so the chain of records stays verifiable. Whatever an authority asks to keep for an open case is kept until the case ends.</p>
+  <p>When a photo or a piece of data is deleted, the log row may remain, with its fingerprint and the deletion date, so the chain of records stays verifiable. Whatever an authority asks to keep for an open case is kept until the case ends.</p>
 
   <h2 id="c6">6. Who it is shared with</h2>
   <p>Within the company, access is limited to those who need it for their role and to their site: the guard sees their gate; the security administrator, the head of security and the site manager see the records, differences and photos of their site; and whoever sees the load in the system sees the copy of its invoices. When something needs attention, the system creates a task for the manager, which may reach them by email depending on their preferences.</p>

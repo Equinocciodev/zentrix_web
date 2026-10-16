@@ -142,7 +142,6 @@
     <li><strong>No envía notificaciones push.</strong></li>
     <li><strong>No vende datos</strong>, no muestra publicidad y no crea perfiles para mercadeo.</li>
     <li><strong>No usa el identificador de publicidad del teléfono.</strong></li>
-    <!-- PENDIENTE (app): para que esto sea cierto en la versión publicada, zentrix_check_app tiene que quitar el permiso AD_ID (tools:node="remove" de com.google.android.gms.permission.AD_ID y ACCESS_ADSERVICES_AD_ID) y poner google_analytics_adid_collection_enabled=false, como Zentrix Work y Sales. Hoy (c50a373) no lo hace. -->
     <li><strong>No envía el PIN a ningún lado.</strong></li>
     <li><strong>No manda capturas de pantalla, el contenido de las actas ni las fotos</strong> en los reportes de fallos ni en las métricas de uso.</li>
     <li><strong>No copia sus datos al respaldo en la nube del teléfono</strong> ni a un teléfono nuevo.</li>
@@ -154,21 +153,14 @@
   <p>En el teléfono de la garita quedan la llave del teléfono, la sesión y el PIN de cada vigilante, en el almacén seguro de Android (Keystore); lo que todavía no se envió, <strong>cifrado</strong>; y las fotos y los borradores de lo que está a medias, en el almacenamiento privado de la app, hasta que se envían o caducan. Si el teléfono se revoca, la app borra todo eso en cuanto vuelve a conectarse. Al desinstalar la app, Android también lo borra.</p>
 
   <h2 id="c5">5. Cuánto tiempo se conservan</h2>
-  <!-- PENDIENTE (abogado y asesor tributario): los plazos de esta cláusula son los PROPUESTOS en docs/SEGURIDAD_Y_PRIVACIDAD.md §8 de zentrix_check_app, todavía sin confirmar. Además, la purga automática que los aplica (_cron_purge) NO está implementada en los módulos zentrix_check*. No publicar esta cláusula hasta que ambas cosas existan. -->
+  <p>Conservamos los registros de acceso, las fotos de evidencia y el registro de eventos mientras sean necesarios para la seguridad de las instalaciones y para cumplir obligaciones legales; después se eliminan o se anonimizan.</p>
   <ul>
-    <li><strong>Fotos de la carga, la cabina, el contenedor, los precintos y la placa:</strong> 24 meses. Si hay un incidente abierto, hasta que se cierre.</li>
-    <li><strong>Fotos de facturas y de los papeles del transportista:</strong> 24 meses.</li>
-    <li><strong>Texto de las actas, firmas y registro de eventos:</strong> 6 años, como respaldo de lo que entró y salió de la empresa.</li>
-    <li><strong>Novedades y sus fotos:</strong> 24 meses.</li>
-    <li><strong>Movimientos de llaves:</strong> 12 meses.</li>
-    <li><strong>Encendidos y apagados:</strong> mientras dure la relación de trabajo y 5 años más; si el vigilante es de una contratista, 24 meses.</li>
-    <li><strong>Sesiones por teléfono:</strong> 12 meses.</li>
-    <li><strong>Datos del chofer en el teléfono:</strong> 12 horas como máximo.</li>
+    <li><strong>Datos del chofer en el teléfono:</strong> el teléfono de la garita los guarda 12 horas como máximo.</li>
     <li><strong>Reportes de fallos:</strong> según el plazo configurado en el proveedor, que no supera los <strong>90 días</strong>.</li>
     <li><strong>Métricas de uso:</strong> según el plazo configurado en Google Analytics, que no supera los <strong>14 meses</strong>.</li>
     <li><strong>PIN y sesión:</strong> viven solo en el teléfono y se borran al salir del teléfono, al revocarlo o al desinstalar la app.</li>
   </ul>
-  <p>Cuando vence un plazo se borra la foto o el dato. Puede quedar la fila del registro, con su huella y la fecha del borrado, para que la cadena de actas siga siendo verificable. Lo que una autoridad pida conservar para un caso abierto se guarda hasta que el caso termine.</p>
+  <p>Al eliminar una foto o un dato puede quedar la fila del registro, con su huella y la fecha del borrado, para que la cadena de actas siga siendo verificable. Lo que una autoridad pida conservar para un caso abierto se guarda hasta que el caso termine.</p>
 
   <h2 id="c6">6. Con quién se comparten</h2>
   <p>Dentro de la empresa, el acceso se limita a quien lo necesita para su función y a su sede: el vigilante ve lo de su garita; el administrador de Seguridad, el jefe de Seguridad y el gerente de la sede ven las actas, las diferencias y las fotos de su sede; y quien ve la carga en el sistema ve la copia de sus facturas. Cuando algo necesita atención, el sistema le crea al gerente una tarea, que puede llegarle por correo según su preferencia.</p>
