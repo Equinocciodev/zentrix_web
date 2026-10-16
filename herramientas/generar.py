@@ -355,9 +355,13 @@ def insignias(prod, lang):
         alt = 'Download on the App Store' if en else 'Descárgalo en el App Store'
         out.append(f'<a class="tienda" href="{d["appstore"]}" data-zx-store="appstore">'
                    f'<img src="/assets/img/tiendas/app-store-{lang}.svg" alt="{alt}" width="144" height="48"></a>')
-    if not out:  # aún sin ficha publicada (Zentrix Check): sin hueco vacío en la fila de botones
+    if not out:  # aún sin ficha publicada: sin hueco vacío en la fila de botones
         return f'<!--TIENDAS:{prod}--><!--/TIENDAS-->'
-    return f'<!--TIENDAS:{prod}--><span class="tiendas">{"".join(out)}</span><!--/TIENDAS-->'
+    extra = ''
+    if d.get('mostrar_id') and d.get('android'):  # ID de la app visible (p. ej. para buscarla o en MDM)
+        etiqueta = 'App ID' if en else 'ID de la app'
+        extra = f'<span class="tienda-id">{etiqueta}: <code>{d["android"]}</code></span>'
+    return f'<!--TIENDAS:{prod}--><span class="tiendas">{"".join(out)}</span>{extra}<!--/TIENDAS-->'
 
 
 def bloque_soluciones(lang):
@@ -411,7 +415,7 @@ def pagina(ruta, titulo, descripcion, cuerpo, og='og.png', logo=None, css=()):
   <link rel="preload" href="/assets/fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/geist-var.woff2" as="font" type="font/woff2" crossorigin>
   <script>document.documentElement.classList.add('js')</script>
-  <link rel="stylesheet" href="/assets/css/sitio.css?v=21">
+  <link rel="stylesheet" href="/assets/css/sitio.css?v=22">
   <script src="/assets/js/sitio.js?v=1" defer></script>{''.join(f'{chr(10)}  <link rel="stylesheet" href="{c}">' for c in css)}
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Zentrix">
