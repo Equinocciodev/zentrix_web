@@ -230,7 +230,7 @@ PAGINAS = {
                                  'cámara opcional. Y cómo comprobar que tu teléfono de verdad va a sonar.'),
     '/work/docs/reparto.html': ('app para repartidores', None, None),
     '/work/docs/tu-dia.html': (None, None,
-                               'Qué muestra «Mi trabajo» en Zentrix Work: lo que cerraste hoy o esta semana, '
+                               'Qué muestra «Mi trabajo de hoy» en Zentrix Work: lo que cerraste hoy o esta semana, '
                                'cuánto fue a tiempo, tu ritmo de trabajo y tu nivel como operador.'),
     '/work/docs/turno.html': (None, None,
                               'Cómo se enciende el turno en Zentrix Work: elegir tienda y tareas, deslizar para '
@@ -250,7 +250,7 @@ PAGINAS.update({
         'Zentrix Check, the Android app for the security gate: guards check every truck against Odoo®, take photos and sign a record that cannot be changed.'),
     '/en/check/docs/': ('Zentrix Check manual',
         'Zentrix Check manual — Step by step for security guards',
-        'The Zentrix Check manual for security guards: signing in, trucks leaving, receipts, keys, assets, incidents and working offline. The chapters are in Spanish.'),
+        'The Zentrix Check manual for security guards, screen by screen: signing in, trucks leaving, receipts, keys, assets, incidents and working without a signal.'),
     '/en/check/privacy/': (None,
         'Privacy policy — Zentrix Check',
         'What the Zentrix Check gate app records, why, who sees it and how it is protected, and how to ask for access to your data, its correction or its deletion.'),
@@ -310,10 +310,10 @@ PAGINAS.update({
         'Write to hola@zentrix.company for projects and demos, soporte@zentrix.company for support, or use WhatsApp. A person replies within one business day.'),
     '/en/work/docs/': ('Zentrix Work manual',
         'Zentrix Work manual — Step by step for store teams',
-        'The Zentrix Work manual for store teams: signing in, shifts, picking orders with the scanner, delivery, returns and settings. The chapters are in Spanish.'),
+        'The Zentrix Work manual for store teams, step by step: signing in, your shift, picking orders with the scanner, delivery runs, returns and settings.'),
     '/en/sales/docs/': ('Zentrix Sales manual',
         'Zentrix Sales manual — Step by step for field reps',
-        'The Zentrix Sales manual for field reps: route, visits, orders, collections, invoices and working without a signal. The chapters are written in Spanish.'),
+        'The Zentrix Sales manual for field reps, screen by screen: your route, the visit, orders, collections, invoices and working without a signal or internet.'),
     '/en/work/privacy/': (None,
         'Privacy policy — Zentrix Work',
         'What the Zentrix Work app collects, why, who sees it and for how long, how it is protected, and how to ask for access to your data or for its deletion.'),
@@ -544,6 +544,20 @@ def jsonld(ruta, titulo, descripcion, cuerpo, lang):
     if plantilla in ('/contacto/', '/contact/'):
         grafo.append({'@type': 'ContactPage', '@id': url + '#pagina', 'name': nombre, 'url': url, 'inLanguage': lang,
                       'description': descripcion, 'about': {'@id': ORG_ID}})
+    prod_manual = re.match(r'^/(work|sales|check)/docs/', plantilla)
+    if prod_manual:
+        # Manuales (portada y capítulos) en los dos idiomas: artículo técnico con su idioma.
+        clave = prod_manual.group(1)
+        app, manual = NOMBRES_SECCION[lang][clave]
+        raiz = ('/en' if lang == 'en' else '') + f'/{clave}/docs/'
+        articulo = {'@type': 'TechArticle', '@id': url + '#articulo', 'headline': nombre,
+                    'description': descripcion, 'url': url, 'inLanguage': lang,
+                    'about': {'@type': 'SoftwareApplication', 'name': app},
+                    'publisher': {'@id': ORG_ID}}
+        if url != SITIO + raiz:
+            articulo['isPartOf'] = {'@type': 'CreativeWork', 'name': f'{manual} — {app}', 'url': SITIO + raiz,
+                                    'inLanguage': lang}
+        grafo.append(articulo)
     if ruta.endswith('/dudas.html') or 'class="preguntas' in cuerpo:
         f = faq(cuerpo)
         if f:

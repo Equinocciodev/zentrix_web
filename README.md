@@ -10,13 +10,13 @@ Es un sitio estático: HTML, una hoja CSS (`assets/css/sitio.css`) y un script p
 |---|---|
 | `/` | Portada de Zentrix, la marca madre: qué hacemos, los dos productos destacados, cómo trabajamos, las divisiones y el contacto. |
 | `/work/` | Zentrix Work. Google Play: `com.leiros.guuaowork`. |
-| `/work/docs/` + 11 páginas `.html` | Manual del operador, migrado de work.guuao.com/docs. |
+| `/work/docs/` + 11 páginas `.html` | Manual del operador, migrado de work.guuao.com/docs. En inglés, `/en/work/docs/` con los mismos ficheros. |
 | `/work/privacidad/` · `/work/terminos/` | Política (anclas `#c1`…`#c11`, Play declara `#c7`) y términos. `/work/soporte/` redirige a `/soporte/#work`. |
 | `/sales/` | Zentrix Sales. Google Play `com.leiros.vendoo`, App Store `id6811065669`. |
-| `/sales/docs/` + 12 páginas `.html` | Manual del vendedor, migrado de vendooapp.com/docs. |
+| `/sales/docs/` + 12 páginas `.html` | Manual del vendedor, migrado de vendooapp.com/docs. En inglés, `/en/sales/docs/` con los mismos ficheros. |
 | `/sales/privacidad/` · `/sales/terminos/` | Política y términos. `/sales/soporte/` y `/sales/contacto/` redirigen a `/soporte/#sales` y a `/contacto/?producto=sales#motivo`. |
 | `/check/` | Zentrix Check, la app de la garita (solo Android, `com.leiros.check`). Sin ficha de Play publicada todavía: `productos.json` no lleva `play` y no se ponen insignias. |
-| `/check/docs/` + capítulos `.html` | Manual del vigilante, escrito a partir de las pantallas de `zentrix_check_app`. |
+| `/check/docs/` + 12 páginas `.html` | Manual del vigilante, escrito a partir de las pantallas de `zentrix_check_app`. En inglés, `/en/check/docs/` con los mismos ficheros. |
 | `/check/privacidad/` · `/check/terminos/` | Política (anclas `#c1`…`#c11`; la app abre `zentrix.company/check/privacidad`) y términos, con la estructura de Work. `/check/soporte/` (la URL de soporte de la app) redirige a `/soporte/#check`. La cláusula 5 (conservación) es general, sin plazos concretos, por decisión de Victor (16-10-2026). |
 | `/soporte/` | Soporte unificado de la suite (`herramientas/ayuda.py`): buscador (Pagefind, el de la cabecera), chips por producto y una sección por app con preguntas rápidas, acceso, manual, **eliminación de cuenta** y datos de la app. Anclas estables que declaran las tiendas: `#eliminar-cuenta-work`, `#eliminar-cuenta-sales` y `#eliminar-cuenta-check` (en inglés `/en/support/#delete-account-work`, `#delete-account-sales` y `#delete-account-check`). Los productos sin app (AI, Logistics, Cloud, Labs, Software) solo llevan a contacto. |
 | `/contacto/` | Contacto unificado: selector de motivo (ventas o demostración, soporte de una app, alianzas, prensa) y producto, que solo cambia el asunto del correo y del WhatsApp (`assets/js/contacto.js`; `?motivo=` y `?producto=` lo preseleccionan). La dirección postal vive aquí. |
@@ -42,7 +42,7 @@ Dirección A, aprobada por Victor el 14-10-2026: dos letras en minúscula y la b
 
 `herramientas/generar.py` (sin dependencias) es la única fuente de la cabecera con mega-menú (Productos, Soluciones, Clientes, Recursos, Nosotros y Contacto), del pie y de las páginas de sección: `/soluciones/` y una página por solución, `/clientes/`, `/recursos/`, `/nosotros/` y `/contacto/`. Su contenido está en `herramientas/contenido.py` y los datos comunes (productos, soluciones, pares de rutas por idioma) en `herramientas/sitio.py`. También escribe las páginas de redirección (`REDIRECCIONES.md`), `sitemap.xml`, `llms.txt` y `manifest.json`.
 
-- `python3 herramientas/generar.py` escribe; `--check` comprueba que todo está al día; `--pares` lista los pares español/inglés y los huérfanos.
+- `python3 herramientas/generar.py` escribe; `--check` comprueba que todo está al día; `--pares` comprueba que todo el sitio es bilingüe y sale con 1 si no (ver «Idiomas»).
 - `python3 herramientas/enlaces.py` comprueba que ningún enlace interno da 404.
 - El menú móvil y el comportamiento del mega-menú están en `assets/js/nav.js`, que cargan todas las páginas. Sin JavaScript, los `<details>` siguen funcionando.
 - El pie: logo, eslogan (sin la fila de monogramas: ya están en la columna Productos), Productos, Empresa, Recursos, «Legal y soporte» (Soporte, Contacto, Privacidad y Términos; los dos últimos al índice `/legal/`) y Contacto.
@@ -72,11 +72,21 @@ Dirección A, aprobada por Victor el 14-10-2026: dos letras en minúscula y la b
 
 ## Idiomas
 
-El español vive en la raíz y el inglés bajo `/en/`, con rutas espejo (`/en/work/`, `/en/solutions/…`, `/en/customers/`, `/en/about/`, `/en/contact/`, `/en/privacy/`…). Los pares están en `PARES` de `herramientas/sitio.py`; `python3 herramientas/generar.py --pares` lista los pares y los huérfanos (debe dar 0).
+**Todo el sitio es bilingüe** (decisión de Victor, 16-10-2026): cada página de contenido existe en español y en inglés. El español vive en la raíz y el inglés bajo `/en/`, con rutas espejo (`/en/work/`, `/en/solutions/…`, `/en/customers/`, `/en/about/`, `/en/contact/`, `/en/privacy/`…). Los pares están en `PARES` de `herramientas/sitio.py`; los capítulos de los manuales no hace falta listarlos: `par()` los empareja por ruta espejo (`/check/docs/llaves.html` ↔ `/en/check/docs/llaves.html`). Las únicas páginas sin par son las redirecciones (meta refresh, `noindex`), que ya llevan cada una a su idioma, y la 404, que es bilingüe (ver «La 404»).
+
+`python3 herramientas/generar.py --pares` es la comprobación, y **sale con 1** si algo falla. Sobre el HTML tal como lo deja el generador, para cada página de contenido mira que:
+
+- su par existe (si no, «HUÉRFANAS»: hay que traducirla o añadir el par a `PARES`);
+- su `<head>` lleva `hreflang` es/en/x-default, se incluye a sí misma y apunta al par;
+- el `hreflang` es recíproco: el par devuelve el enlace;
+- el selector ES/EN de la cabecera y del pie lleva al par, no a la portada del otro idioma;
+- no enlaza a una página del otro idioma que tiene versión en el suyo (salvo a su propio par, como «la versión vinculante es la española» de las legales).
+
+Hasta el 16-10-2026 `--pares` solo miraba la tabla `PARES` y contaba los capítulos de los manuales aparte, «solo en español», así que daba 0 huérfanas con 35 capítulos sin traducir. `verificar_seo.py` también falla ya con una página indexable sin `hreflang`, con un manual sin `TechArticle` o con un `inLanguage` distinto del `lang` de la página.
 
 - Cada página lleva `<html lang>`, su `canonical`, `hreflang` es/en/x-default (x-default = español) y `og:locale` + `og:locale:alternate`; el sitemap repite las alternativas.
-- El selector ES/EN está en la cabecera (también dentro del menú móvil) y en el pie, y lleva a la misma página en el otro idioma. `assets/js/nav.js` recuerda la elección (`localStorage`, `zx-idioma`) y en la portada española, si el navegador está en inglés o se eligió inglés, sugiere el inglés con una píldora pequeña fija bajo la cabecera, con la punta bajo el «EN» del selector (en móvil, bajo la cabecera a la derecha). Nunca coincide con el aviso de cookies: solo aparece cuando ya hay decisión de cookies (en esa visita o en una anterior); cerrarla (× o Esc) se recuerda. Nunca redirige solo.
-- Los manuales (`/work/docs/`, `/sales/docs/`) están en español: `/en/work/docs/` y `/en/sales/docs/` son portadas en inglés que lo explican y enlazan los capítulos. Los capítulos no llevan `hreflang`.
+- El selector ES/EN está en la cabecera (también dentro del menú móvil) y en el pie, y lleva a la misma página en el otro idioma. `assets/js/nav.js` recuerda la elección (`localStorage`, `zx-idioma`) y en cualquier página española con versión inglesa (la de su `<link rel="alternate" hreflang="en">`), si el navegador está en inglés o se eligió inglés, sugiere esa misma página en inglés («View in English →»; en los manuales conserva el ancla) con una píldora pequeña fija bajo la cabecera, con la punta bajo el «EN» del selector (en móvil, bajo la cabecera a la derecha, o bajo la barra de producto si la página la tiene). Nunca coincide con el aviso de cookies: solo aparece cuando ya hay decisión de cookies (en esa visita o en una anterior); cerrarla (× o Esc) se recuerda. Nunca redirige solo.
+- Los manuales de Work, Sales y Check están traducidos enteros (16-10-2026): `/en/<app>/docs/` y cada capítulo con el mismo nombre de fichero, las mismas anclas y las mismas capturas. Se escriben a mano, como los españoles: si cambia un capítulo, se cambia también su traducción. Como las apps solo están en español, los textos de la pantalla se dejan en español, tal como salen, con la traducción al lado: `<span class="boton-app" lang="es">Registrar</span> (Register)` (en Sales, `<strong lang="es">«Sincronizar ahora»</strong> (Sync now)`) y `<em lang="es">«Llave entregada.»</em> (“Key handed over.”)`. Cada página del manual lleva un `TechArticle` con su `inLanguage` en el JSON-LD.
 - Los textos legales en inglés son traducciones de cortesía; la versión vinculante es la española.
 - Las rutas inglesas antiguas de Zentrix Sales (`/sales/en/…`) redirigen a `/en/sales/…` (ver `REDIRECCIONES.md`).
 

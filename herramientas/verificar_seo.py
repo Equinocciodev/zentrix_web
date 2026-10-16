@@ -203,6 +203,13 @@ def validar_jsonld(pag, ruta, url):
                         errores.append('BreadcrumbList: elemento %d incompleto' % i)
                 if items and items[-1].get('item') != url:
                     errores.append('BreadcrumbList: el último no es la página')
+            if 'TechArticle' in t:
+                f = falta('headline', 'url', 'inLanguage')
+                if f:
+                    errores.append('TechArticle sin ' + ', '.join(f))
+            idioma = n.get('inLanguage')
+            if isinstance(idioma, str) and pag.lang and idioma != pag.lang:
+                errores.append('inLanguage «%s» ≠ lang «%s»' % (idioma, pag.lang))
             if 'FAQPage' in t:
                 qs = n.get('mainEntity') or []
                 if not qs or any(not q.get('name') or not (q.get('acceptedAnswer') or {}).get('text') for q in qs):
@@ -217,6 +224,8 @@ def validar_jsonld(pag, ruta, url):
             errores.append('página interior sin BreadcrumbList')
     if ruta in APPS and 'SoftwareApplication' not in encontrados:
         errores.append('app sin SoftwareApplication')
+    if re.match(r'^/(work|sales|check)/docs/', plantilla) and 'TechArticle' not in encontrados:
+        errores.append('manual sin TechArticle')
     if plantilla in SOLUCIONES and 'Service' not in encontrados:
         errores.append('solución sin Service')
     return errores, encontrados
@@ -367,6 +376,9 @@ def verificar(base):
                 e.append('xhtml:link del sitemap ≠ hreflang de la página')
             if not pag.metas.get('og:locale:alternate'):
                 e.append('sin og:locale:alternate')
+        else:
+            # Todo el sitio es bilingüe: una página indexable sin hreflang es una página sin par.
+            e.append('sin hreflang: falta su versión en el otro idioma')
         fila['alternas'] = alt
         if e:
             errores['hreflang'] = e

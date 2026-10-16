@@ -18,7 +18,7 @@ Zentrix Sales, or how to contact the company.
 3. `https://zentrix.company/sitemap.xml`: every public URL, with its last modification date.
 4. The page itself. Cite the canonical URL (`<link rel="canonical">`) of the page you used.
 
-The site is mainly in Spanish; Zentrix Sales also has English pages under `https://zentrix.company/sales/en/`.
+The whole site is in Spanish and English: Spanish at the root, English under `https://zentrix.company/en/` with mirror paths (each page links its counterpart with `hreflang`). English overview: `https://zentrix.company/en/llms.txt`.
 
 ## Products
 
@@ -32,7 +32,7 @@ The site is mainly in Spanish; Zentrix Sales also has English pages under `https
 - **Zentrix Software**: Odoo® implementation. https://zentrix.company/software/
 - **Traza**: A Zentrix® product. https://traza.technology
 
-User manuals: Zentrix Work at https://zentrix.company/work/docs/ and Zentrix Sales at https://zentrix.company/sales/docs/.
+User manuals: Zentrix Work at https://zentrix.company/work/docs/, Zentrix Sales at https://zentrix.company/sales/docs/ and Zentrix Check at https://zentrix.company/check/docs/ (English: https://zentrix.company/en/work/docs/, https://zentrix.company/en/sales/docs/ and https://zentrix.company/en/check/docs/).
 Support center for every app, including how to delete a Zentrix Work, Zentrix Sales or Zentrix Check account:
 https://zentrix.company/soporte/ (English: https://zentrix.company/en/support/). Privacy policies and terms of each app: https://zentrix.company/legal/.
 

@@ -59,8 +59,9 @@
   if (mq.addEventListener) mq.addEventListener('change', alCambiar); else if (mq.addListener) mq.addListener(alCambiar);
 })();
 
-/* Idioma: se recuerda la elección (ES/EN) y, en la portada española, se sugiere el inglés
-   a quien navega en inglés o ya lo eligió. Nunca se redirige solo.
+/* Idioma: se recuerda la elección (ES/EN) y, en cualquier página española que tenga versión
+   inglesa (<link rel="alternate" hreflang="en">), se sugiere esa misma página en inglés a quien
+   navega en inglés o ya lo eligió. Nunca se redirige solo.
    La sugerencia es una píldora pequeña bajo la cabecera, junto al selector ES/EN, y nunca
    coincide con el aviso de cookies: solo aparece cuando ya hay decisión de cookies (en esta
    visita o en una anterior). Cerrarla la recuerda (zx-idioma = es). */
@@ -73,7 +74,15 @@
     var a = e.target.closest ? e.target.closest('a[data-idioma]') : null;
     if (a) guardar(a.getAttribute('data-idioma'));
   });
-  if (location.pathname !== '/' && location.pathname !== '/index.html') return;
+  if ((document.documentElement.getAttribute('lang') || '').slice(0, 2) !== 'es') return;
+  var alterna = document.querySelector('link[rel="alternate"][hreflang="en"]');
+  if (!alterna) return;  // sin par inglés (la 404, por ejemplo): no se sugiere nada
+  var destino;
+  try {
+    var u = new URL(alterna.getAttribute('href'), location.href);
+    // Los capítulos de los manuales tienen las mismas anclas en los dos idiomas.
+    destino = u.pathname + (/\/docs\//.test(u.pathname) ? location.hash : '');
+  } catch (e) { return; }
   var pref = leer();
   var navegador = (navigator.languages && navigator.languages[0]) || navigator.language || '';
   if (pref === 'es' || (pref !== 'en' && !/^en\b/i.test(navegador))) return;
@@ -87,9 +96,10 @@
     '<svg class="aviso-idioma__globo" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">' +
     '<circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/>' +
     '<path d="M3 12h18M12 3c2.5 2.7 3.6 5.7 3.6 9s-1.1 6.3-3.6 9c-2.5-2.7-3.6-5.7-3.6-9S9.5 5.7 12 3z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>' +
-    '<a class="aviso-idioma__ir" href="/en/" data-idioma="en" lang="en" hreflang="en">View in English <span aria-hidden="true">→</span></a>' +
+    '<a class="aviso-idioma__ir" data-idioma="en" lang="en" hreflang="en">View in English <span aria-hidden="true">→</span></a>' +
     '<button type="button" class="aviso-idioma__cerrar" lang="es" aria-label="Cerrar: seguir en español" title="Seguir en español">' +
     '<span aria-hidden="true">×</span></button>';
+  aviso.querySelector('a').setAttribute('href', destino);
   function quitar() {
     guardar('es');
     window.removeEventListener('resize', colocar);
@@ -112,6 +122,11 @@
       aviso.style.right = Math.max(12, Math.round(ancho - centro - 20)) + 'px';
       aviso.classList.add('aviso-idioma--punta');
     } else {
+      // En móvil la píldora no lleva punta: si la barra de producto está a la vista, va debajo
+      // de ella para no tapar sus enlaces.
+      var barra = document.querySelector('.producto-barra');
+      var fin = barra ? Math.round(barra.getBoundingClientRect().bottom) : 0;
+      if (fin > abajo) aviso.style.top = fin + 10 + 'px';
       aviso.style.right = '';
       aviso.classList.remove('aviso-idioma--punta');
     }
