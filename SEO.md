@@ -191,9 +191,11 @@ Otras búsquedas que cubren las páginas como secundarias: «app para vendedores
 - [x] 404 y redirecciones con `noindex`.
 - [x] `sitemap.xml` generado en el despliegue, con `lastmod` de git y alternativas por idioma; `robots.txt` con `Sitemap:`.
 - [x] JSON-LD validado por script (estructura y campos obligatorios por plantilla) y contra el vocabulario de schema.org y los requisitos de Google (`validar_jsonld.py`).
-- [x] Imágenes con `alt`, `width` y `height`; enlaces internos y anclas sin romper.
+- [x] Imágenes con `alt` (vacío en las decorativas), `width` y `height`; `<svg>` en línea con `aria-hidden` o `role="img"` + `aria-label` (`verificar_seo.py` falla si no); enlaces internos y anclas sin romper.
 - [x] `llms.txt` (y `/en/llms.txt`) según llmstxt.org, con enlaces Markdown y `## Optional`; `llms-full.txt` con los enlaces de cada página. Auditoría `llms-txt` de Lighthouse en verde.
-- [x] Lighthouse SEO 100 (texto de enlace descriptivo en el aviso de cookies y `Agentmap` como comentario en `robots.txt`, que Lighthouse marcaba como directiva desconocida).
+- [x] Lighthouse SEO 92: el único fallo es `robots.txt`, que Lighthouse da por «directiva desconocida» en la línea `Content-Signal` (decisión de Victor del 14-10-2026, ver README «Agentes de IA»). Es un estándar de Cloudflare que Google ignora sin error; se deja. Con ella fuera daría 100.
+- [x] Correos en claro (`hola@` y `soporte@` en `mailto:` y en el JSON-LD): a propósito, para que los lean buscadores y modelos (por eso se pide apagar la ofuscación de Cloudflare). Ofuscarlos con JavaScript no protegería nada —están en el JSON-LD— y contradiría esa decisión. Las herramientas que lo marcan como riesgo lo hacen por regla general.
+- [x] Sin `ads.txt`: el sitio no tiene anuncios; no aplica.
 - [ ] Redes sociales: poner en `herramientas/redes.json` las URL de los perfiles que existan (LinkedIn, Instagram, X, YouTube, Facebook) y ejecutar `generar.py`; salen en el pie y en `sameAs`. Vacío = no se pinta nada (Victor).
 - [ ] HSTS en Cloudflare (Victor, abajo).
 - [ ] Desactivar «Email Address Obfuscation» en Cloudflare (Victor, abajo).
@@ -205,6 +207,24 @@ Otras búsquedas que cubren las páginas como secundarias: «app para vendedores
 ### 0. Cloudflare: desactivar «Email Address Obfuscation»
 
 zentrix.company ya pasa por el proxy de Cloudflare, y su ofuscación de correos cambia cada `mailto:` por `/cdn-cgi/l/email-protection#…` (404 sin JavaScript) y el texto del correo por «[email protected]». Los buscadores y los modelos dejan de ver hola@ y soporte@. En Cloudflare, zona `zentrix.company` → **Scrape Shield** (o **Security → Settings**) → **Email Address Obfuscation: Off**. `verificar_seo.py` lo marca como fallo global hasta que se apague.
+
+### 0 bis. Cloudflare: HSTS (Strict-Transport-Security)
+
+GitHub Pages no deja poner cabeceras; HSTS lo pone Cloudflare, que ya hace de proxy (`server: cloudflare`; `http://` ya responde 301 a `https://`). Hoy la respuesta no lleva `Strict-Transport-Security`.
+
+1. Antes: zona `zentrix.company` → **SSL/TLS → Overview** en **Full (strict)**, y **SSL/TLS → Edge Certificates → Always Use HTTPS: On**. Comprueba que todo lo que cuelga del dominio y se abre en un navegador responde por HTTPS (hoy `zentrix.company` y `www`, que redirige).
+2. **SSL/TLS → Edge Certificates → HTTP Strict Transport Security (HSTS) → Enable HSTS** → acepta el aviso.
+3. Primera fase (prudente): **Status: On**, **Max Age: el valor más bajo que ofrezca distinto de 0** (1 mes), **Apply HSTS policy to subdomains (includeSubDomains): Off**, **Preload: Off**, **No-Sniff Header: On**. Guarda.
+4. Comprueba: `curl -sI https://zentrix.company/ | grep -i strict` → `strict-transport-security: max-age=2592000` (y `x-content-type-options: nosniff`).
+5. Tras unas semanas sin problemas: **Max Age 6 o 12 meses**. Activa **includeSubDomains** solo si todos los subdominios que existan o vayan a existir (también los de prueba o de correo web) sirven HTTPS: con HSTS un navegador no volverá a abrirlos por HTTP mientras dure el max-age.
+6. **Preload**: no, hasta decidirlo. Exige 12 meses + includeSubDomains, mete el dominio en la lista de los navegadores y salir de ella tarda meses.
+
+Para volver atrás: Max Age 0 (los navegadores que ya lo vieron lo olvidan con la siguiente visita).
+
+### 0 ter. Cloudflare: caché de navegador y Web Analytics (opcionales)
+
+- GitHub Pages sirve todo con `cache-control: max-age=600` (Lighthouse «cache-insight»). CSS, JS y fuentes llevan `?v=` y se pueden cachear largo: una **Cache Rule** para `/assets/*` con **Browser TTL** de 1 mes (y Edge TTL igual) quitaría casi todas las peticiones en la segunda visita. Las imágenes sin `?v=` tardarían ese mes en refrescarse si se cambian con el mismo nombre.
+- Cloudflare inyecta su beacon de Web Analytics (`static.cloudflareinsights.com/beacon.min.js`, 10 KB, una petición más y ~130 ms de CPU en móvil). Si no se usa —la analítica del sitio es GA4 con consentimiento—, se apaga en **Analytics & Logs → Web Analytics** (o «RUM») de la zona.
 
 ### 1. Google Search Console (verificación por DNS en Cloudflare)
 
