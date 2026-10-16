@@ -765,7 +765,7 @@ Lo que firma el vigilante es la versión que vale. Por eso la app está hecha pa
 
 - Huella en cada foto y en cada paso. Cada evento lleva la huella del anterior: si alguien cambia uno, se nota. Una corrección se agrega como nota; el original se queda.
 
-- El teléfono es una llave. Se da de alta con un código QR y queda sellado a una sede. Si se pierde, se revoca y borra lo que guardaba.
+- Cada vigilante, con su cuenta. Se entra con el correo y la contraseña de la empresa, y el teléfono queda registrado en la sede del vigilante. Si se pierde, el administrador lo bloquea desde Odoo.
 
 - Solo la cámara. Sin ubicación, sin galería y sin contactos. En el PIN, la contraseña y el visor de fotos no se pueden hacer capturas de pantalla.
 
@@ -779,15 +779,15 @@ Lo que firma el vigilante es la versión que vale. Por eso la app está hecha pa
 
 ### Para quién es
 
-Para el personal de seguridad de las empresas que usan Zentrix Check, en el teléfono Android de la garita. No hay registro: el administrador de Seguridad crea la cuenta de cada vigilante y da de alta cada teléfono. Cualquiera puede instalar la app, pero sin ese alta no hace nada.
+Para el personal de seguridad de las empresas que usan Zentrix Check, en el teléfono Android de la garita. No hay registro: el administrador de Seguridad crea la cuenta de cada vigilante, con su correo, y le asigna sus sedes. Cualquiera puede instalar la app, pero sin esa cuenta no hace nada.
 
 ### Cómo empezar
 
-- El administrador de Seguridad genera el código QR del teléfono de la garita.
+- El administrador de Seguridad crea tu cuenta con tu correo y te asigna tu sede.
 
-- Instala Zentrix Check en ese teléfono y lee el código.
+- Instala Zentrix Check en el teléfono de la garita y revisa el servidor de tu empresa, debajo del correo.
 
-- Entra con tu usuario y tu contraseña. Solo la primera vez.
+- Entra con tu correo y tu contraseña. Solo la primera vez en ese teléfono.
 
 - Crea tu PIN, y desde ahí entras con tu nombre y tu PIN.
 
@@ -2580,7 +2580,7 @@ The console opens only on the administrator’s phone. On that phone, at the bot
 
 - Tap «Administrador» (Administrator).
 
-- Enter your username and password, and tap «Entrar» (Sign in). You need a connection.
+- Enter your email and password, and tap «Entrar» (Sign in). You need a connection.
 
 - Enter the code. «Abre tu app de códigos y escribe los 6 números que ves ahora.» (“Open your authenticator app and type the 6 digits you see now.”) You’re signed in as soon as you type the sixth digit.
 
@@ -2589,7 +2589,7 @@ The console always asks for a password and a code. A guard’s PIN doesn’t ope
 
 Message What you do
 
-«Usuario, contraseña o código incorrecto.» (“Wrong username, password or code.”) Check all three. The code changes every few seconds: use the one you see now.
+«Correo, contraseña o código incorrecto.» (“Wrong email, password or code.”) Check all three. The code changes every few seconds: use the one you see now.
 
 «El código venció. Entra otra vez.» (“The code expired. Sign in again.”) Too much time passed between the password and the code. Start again.
 
@@ -2682,7 +2682,7 @@ Talk to the security administrator. The password can’t be changed from the app
 
 ### My name isn’t on «Toca tu nombre» (“Tap your name”)
 
-Tap Otro usuario (Another user) and sign in with your username and password. Only the last 4 people who signed in on this phone are shown.
+Tap Otro usuario (Another user) and sign in with your email and password. Only the last 4 people who signed in on this phone are shown.
 
 ### The keypad says «Espera hasta…» (“Wait until…”)
 
@@ -2822,34 +2822,25 @@ If you were taken off duty and need to keep working, go on duty again and carry 
 
 ## [Signing in — Zentrix Check documentation](https://zentrix.company/en/check/docs/entrar.html)
 
-Signing in to Zentrix Check: how the supervisor sets up the gate phone, your first sign-in, creating your PIN, what to do if you forget it and how to sign out.
+Signing in to Zentrix Check: your company email and password the first time, the server and your site, creating your PIN, what to do if you forget it and how to sign out.
 
 ### Signing in
 
-The supervisor sets up the phone once. The first time, you sign in with your username; after that, with your name and your PIN.
-
-### Setting up the phone (the supervisor does this)
-
-A new phone opens on «Preparar teléfono» (“Set up phone”). If you find it like that, it isn’t yours to set up: the screen says «Llama al supervisor» (“Call the supervisor”).
-
-- Connect it to the gate’s Wi-Fi. It can’t be set up without a connection: «Para registrar el teléfono necesitas conexión. Conéctate al Wi-Fi de la garita.» (“You need a connection to register the phone. Connect to the gate’s Wi-Fi.”)
-
-- In Odoo, generate the enrollment code. It’s under Odoo › Seguridad › Configuración › Teléfonos › Generar código de alta (Odoo › Security › Configuration › Phones › Generate enrollment code). Odoo shows a QR code.
-
-- Tap «Escanear QR» (Scan QR) and point at the QR code in Odoo. You don’t type the enrollment code: you scan it. Meanwhile the app says «Registrando…» (“Registering…”).
-
-- Check «Teléfono listo» (“Phone ready”). Below it you see the post and the site the phone is now sealed to. If they’re right, tap Entrar (Sign in).
-
-One phone, one site
-The QR code seals the phone to one site and one post. Only guards assigned to that site can sign in. To move it to another site, it has to be set up again.
+The first time on each phone, you sign in with your company email and password. After that, with your name and your PIN.
 
 ### Your first time on this phone
 
-- Tap «Otro usuario» (Another user). If nobody has used the phone yet, the app opens straight on «Tu usuario» (“Your username”).
+There’s no code to set up the phone: you sign in with your account, like in any company app. Your account is created by the security administrator.
 
-- Enter your username and tap «Seguir» (Continue). It’s the short username the security administrator gave you. It isn’t your ID number or an email address.
+- Connect to the gate’s Wi-Fi. The first time on a phone you need a connection.
 
-- Enter your password and tap «Entrar» (Sign in). Ver (Show) lets you see what you typed. The password is only asked for this once on this phone. You need a connection.
+- Enter your email. The app opens on «Tu correo» (“Your email”). It’s the email of your account in the company’s system, the one the security administrator gave you. If other guards already use the phone, first tap Otro usuario (Another user).
+
+- Check the server, below the email, and tap «Seguir» (Continue). It’s already filled in. Read The server before changing it.
+
+- Enter your password and tap «Entrar» (Sign in). Ver (Show) lets you see what you typed. The password is only asked for this once on this phone.
+
+- If you work at several sites, choose where you are today. The app asks «¿Dónde estás hoy?» (“Where are you today?”): tap your site. If you have only one, it doesn’t ask. See Your site.
 
 - Create your PIN: six digits. The screen says «Crea tu PIN» (“Create your PIN”) and then «Repite tu PIN» (“Repeat your PIN”). You use that PIN to sign in and also to sign records.
 
@@ -2859,19 +2850,38 @@ If the PIN isn’t accepted, the app tells you why in two words:
 
 - «No son iguales» (“They don’t match”): the second one doesn’t match the first. Enter it again.
 
+### The server
+
+Below the email you see your company’s server: the domain of its Odoo, with nothing before or after it. It comes filled in and you almost never need to touch it.
+
+- Tap the server. «Servidor» (“Server”) opens: «El Odoo de la empresa. Solo el dominio.» (“The company’s Odoo. Just the domain.”)
+
+- Enter the domain the security administrator gave you. Just the domain, in full.
+
+- Tap «Probar y guardar» (Test and save). The app checks that the server answers as Zentrix Check before saving it. If not: «No contesta. Revisa la dirección y la conexión.» (“No answer. Check the address and the connection.”) or «Ese servidor no responde como Zentrix Check. Revisa la dirección.» (“That server doesn’t answer as Zentrix Check. Check the address.”)
+
+The server decides where your password goes
+Only change it if the security administrator asks you to, and type exactly the one they gave you. Once you’re signed in, changing the server means signing out of this phone.
+
+### Your site
+
+Your site comes from your profile in the company’s system: the security administrator assigns you one or more. When you sign in, the phone is registered to that site. You can only sign in at the sites assigned to you.
+
+If you have several, the app remembers the last one and asks «¿Dónde estás hoy?» (“Where are you today?”). To change sites you have to be off duty: «Apágate antes de cambiar de sede.» (“Go off duty before changing sites.”)
+
 ### If you see a message
 
 Message What to do
 
-«Usuario o contraseña incorrectos.» (“Incorrect username or password.”) Check how you typed your username. If it keeps happening, talk to the security administrator.
+«Correo o contraseña incorrectos.» (“Incorrect email or password.”) Check how you typed your email and that the server is your company’s. If it keeps happening, talk to the security administrator.
 
-«Tu usuario no está asignado a esta sede. Habla con el administrador.» (“Your user isn’t assigned to this site. Talk to the administrator.”) Your username exists, but not for this gate. The administrator fixes it.
+«No estás asignado a esta sede. Habla con el administrador.» (“You aren’t assigned to this site. Talk to the administrator.”) Your account exists, but not for this site. The administrator fixes it.
 
 «Para entrar por primera vez en este teléfono necesitas conexión…» (“To sign in for the first time on this phone you need a connection…”) It’s not your password: it’s the signal. Connect to the gate’s Wi-Fi and tap Entrar (Sign in) again.
 
 «Tu contraseña es temporal y todavía no se puede cambiar en la app…» (“Your password is temporary and can’t be changed in the app yet…”) You can’t sign in with a temporary password. Talk to the security administrator.
 
-«Esta cuenta es de administrador…» (“This is an administrator account…”) That account isn’t a guard account. It’s used on the administrator’s phone.
+«Esta cuenta es de administrador…» (“This is an administrator account…”) That account isn’t a guard account. It’s used in the [administrator console](https://zentrix.company/en/check/docs/administrador.html).
 
 ### Every day
 
@@ -2883,7 +2893,7 @@ Tapped the wrong name? Tap No soy yo (Not me), above the keypad.
 
 ### Several guards, one phone
 
-The phone keeps up to 8 profiles and shows the 4 most recent. If your name isn’t there, tap Otro usuario (Another user) and sign in with your username and password, like the first time.
+The phone keeps up to 8 profiles and shows the 4 most recent. If your name isn’t there, tap Otro usuario (Another user) and sign in with your email and password, like the first time.
 
 Everyone signs with their own PIN. Whatever you sign is recorded under your name, even though the phone is shared.
 
@@ -2895,7 +2905,7 @@ Everyone signs with their own PIN. Whatever you sign is recorded under your name
 
 - Before the last attempt: «PIN incorrecto. Si fallas otra vez, tendrás que entrar con tu contraseña.» (“Incorrect PIN. If you get it wrong again, you’ll have to sign in with your password.”)
 
-- Ten mistakes in total: «Borramos tu acceso en este teléfono por seguridad. Entra con tu usuario y tu contraseña.» (“For security, we removed your access on this phone. Sign in with your username and password.”) Your name is removed from the phone. Nothing happens to anyone else.
+- Ten mistakes in total: «Borramos tu acceso en este teléfono por seguridad. Entra con tu correo y tu contraseña.» (“For security, we removed your access on this phone. Sign in with your email and password.”) Your name is removed from the phone. Nothing happens to anyone else.
 
 ### If you forgot your PIN
 
@@ -2918,7 +2928,7 @@ If nobody touches the phone for a few minutes, or the screen turns off, the app 
 
 Making a call from the app doesn’t lock the phone. But if the call lasts longer than those minutes, it asks for your PIN when you come back.
 
-Sometimes the app asks for more: «Por seguridad, entra otra vez con tu usuario y tu contraseña.» (“For security, sign in again with your username and password.”) Your session expired. Sign in with your password and create your PIN.
+Sometimes the app asks for more: «Por seguridad, entra otra vez con tu correo y tu contraseña.» (“For security, sign in again with your email and password.”) Your session expired. Sign in with your password and create your PIN.
 
 ### Signing out of this phone
 
@@ -2941,9 +2951,9 @@ If the update is mandatory, you see «Actualiza Zentrix Check» (“Update Zentr
 
 ### If it says «Teléfono bloqueado» (“Phone blocked”)
 
-Odoo revoked the phone or no longer recognizes it: «Este teléfono fue retirado de Zentrix Check.» (“This phone was removed from Zentrix Check.”) or «Odoo ya no reconoce este teléfono.» (“Odoo no longer recognizes this phone.”) It can’t be used again until it’s set up again. Call the supervisor.
+Odoo revoked the phone or no longer recognizes it: «Este teléfono fue retirado de Zentrix Check.» (“This phone was removed from Zentrix Check.”) or «Odoo ya no reconoce este teléfono.» (“Odoo no longer recognizes this phone.”) It happens, for example, when the administrator blocks a lost phone. It can’t be used until the supervisor checks it. Call them.
 
-If there are entries not yet sent, the screen says so and they aren’t deleted. Preparar de nuevo (Set up again) is for the supervisor only: it sets aside whatever wasn’t sent and asks for a new enrollment QR code.
+If there are entries not yet sent, the screen says so and they aren’t deleted. Preparar de nuevo (Set up again) is for the supervisor only: it sets aside whatever wasn’t sent and takes the phone back to the sign-in screen, to sign in again with email and password.
 
 
 ---
@@ -3090,7 +3100,7 @@ Only sign what you saw with your own eyes. If you filled something in from Odoo 
 
 ### The gate phone
 
-- It’s sealed to one site and one post. The supervisor sets it up once, with a QR code from Odoo.
+- It’s registered to your site. There’s no setup code: you sign in with your email and password, and your site comes from your profile.
 
 - Several guards share it. Each one signs in with their name and their PIN.
 
@@ -3102,7 +3112,7 @@ Only sign what you saw with your own eyes. If you filled something in from Odoo 
 
 ### Who decides what you see
 
-The security administrator creates your user, assigns you to a site and sets up the phones. The server is in charge: if you don’t see something (keys or incidents, for example), it isn’t switched off on your phone. It isn’t switched on for your site. That’s fixed in Odoo, not in the app.
+The security administrator creates your account with your email and assigns your sites. The server is in charge: if you don’t see something (keys or incidents, for example), it isn’t switched off on your phone. It isn’t switched on for your site. That’s fixed in Odoo, not in the app.
 
 The trucks, invoices, products and contacts you see come from Odoo. If something is wrong, report it: the app doesn’t correct it.
 
@@ -3668,7 +3678,7 @@ If a coworker signed on this phone and their session expired, their entries wait
 
 Works without a signal Needs a signal
 
-Signing in with your name and PIN Setting up the phone with the QR code
+Signing in with your name and PIN Signing in for the first time with your email and password
 
 Going on and off duty Signing in with your password (first time, «Olvidé mi PIN» (“I forgot my PIN”), expired session)
 
@@ -3806,7 +3816,7 @@ What the guard signs is the version that counts. That is why the app is built so
 
 - A fingerprint on every photo and every step. Each event carries the fingerprint of the previous one: if someone changes one, it shows. A correction is added as a note; the original stays.
 
-- The phone is a key. It is set up with a QR code and sealed to one site. If it is lost, it is revoked and wipes what it stored.
+- Each guard, with their own account. Guards sign in with their company email and password, and the phone is registered to their site. If it is lost, the administrator blocks it from Odoo.
 
 - Camera only. No location, no gallery and no contacts. Screenshots are blocked on the PIN, password and photo viewer screens.
 
@@ -3820,15 +3830,15 @@ What the guard signs is the version that counts. That is why the app is built so
 
 ### Who it is for
 
-For the security staff of companies that use Zentrix Check, on the gate’s Android phone. There is no sign-up: the security administrator creates each guard’s account and sets up each phone. Anyone can install the app, but without that setup it does nothing.
+For the security staff of companies that use Zentrix Check, on the gate’s Android phone. There is no sign-up: the security administrator creates each guard’s account, with their email, and assigns their sites. Anyone can install the app, but without that account it does nothing.
 
 ### Getting started
 
-- The security administrator generates the QR code for the gate phone.
+- The security administrator creates your account with your email and assigns your site.
 
-- Install Zentrix Check on that phone and scan the code.
+- Install Zentrix Check on the gate phone and check your company’s server, below the email.
 
-- Sign in with your username and password. Only the first time.
+- Sign in with your email and password. Only the first time on that phone.
 
 - Create your PIN; from then on you sign in with your name and your PIN.
 
@@ -3856,7 +3866,7 @@ Last updated: October 16, 2026.
 
 Zentrix Check is the internal work tool of the security staff of the company that uses it (the “company”), at the gate of each site. It is developed and distributed by GUUAO LLC through Google Play, for Android only. Guards use it to record what comes in and goes out: loaded trucks leaving, goods arriving, keys, company equipment and incidents. The app does not move inventory or touch the accounting: it only records what the guard checked.
 
-It is not a consumer app and it does not allow sign-up. Each guard’s account is created by the company’s security administrator, and each phone is set up with a QR code that seals it to one site. Without that, the app does nothing.
+It is not a consumer app and it does not allow sign-up. Each guard’s account is created by the company’s security administrator, with their email, and assigned to their sites. The guard signs in with that email and their password, and the phone is registered to their site. Without that account, the app does nothing.
 
 This policy applies to these people:
 
@@ -3874,7 +3884,7 @@ The processing is part of the employment relationship and of access control to t
 
 Data What it is used for
 
-Name and username Identifying the guard on the gate phone and on every record they sign. The username is that of their account in the company’s system.
+Name and email Identifying the guard on the gate phone and on every record they sign. The email is their username: that of their account in the company’s system, which they use to sign in to the app.
 
 Password Signing in the first time on each phone. It is validated by the company’s server; the app does not store it. What is stored is the session, encrypted on the phone.
 
@@ -3888,7 +3898,7 @@ Log of what they do Every step of every record, with its time and the guard who 
 
 Phone and session data Phone model, Android and app version, and an installation identifier generated by the app. The company’s server also logs the IP address and dates of each session. They show which phone did what, allow cutting off a lost phone and enforcing a minimum app version.
 
-Phone and app integrity When the phone is set up and at sign-in, the app asks Google Play to confirm that the app is genuine and runs on an unaltered phone. See clause 6.
+Phone and app integrity At sign-in, the app asks Google Play to confirm that the app is genuine and runs on an unaltered phone. See clause 6.
 
 Usage and crash data Which screens are used, without any record data, and technical reports when the app fails. Details in clause 6.
 
@@ -3962,7 +3972,7 @@ To work, the app uses these providers. They process data on behalf of the compan
 
 - Google LLC — Google Analytics for Firebase: measures which screens are used, identified by a generic name and without numbers or record data. It receives an app installation identifier and technical data about the phone. It does not receive names, plates, seals, scanned codes or photos.
 
-- Google LLC — Play Integrity API: when the phone is set up and at sign-in, it checks that the app is genuine and the phone is unaltered. It receives technical information about the phone and the app.
+- Google LLC — Play Integrity API: at sign-in, it checks that the app is genuine and the phone is unaltered. It receives technical information about the phone and the app.
 
 - Functional Software, Inc. (Sentry), United States: receives technical reports when the app fails: the error, the app and Android version, the phone model and the server it was connected to. They never include the guard’s name or username, screenshots, record contents, photos or scanned codes.
 
@@ -3990,7 +4000,7 @@ Zentrix Check is a work tool for adults (18 or older) who work in the company’
 
 - All communication with the company’s servers is encrypted (HTTPS/TLS).
 
-- Each phone is sealed to one site with its own key; the server stores only its fingerprint, not the key.
+- Each phone is identified by an identifier unique to the installation and is registered to the guard’s site at sign-in.
 
 - The session, the phone key and the PIN are stored in Android’s secure storage (Keystore). The PIN is stored hashed and never leaves the phone.
 
@@ -4033,7 +4043,7 @@ Zentrix Check is the internal work tool for the security staff of the company th
 
 ### 2. Who may use it
 
-Only adults who have been given a guard or security administrator account by the company. The app does not allow sign-ups. Each phone is set up with a QR code that seals it to one site, and the server checks on every operation who you are, from which phone and at which site.
+Only adults who have been given a guard or security administrator account by the company. The app does not allow sign-ups. You sign in with that account’s email and password, the phone is registered to your site, and the server checks on every operation who you are, from which phone and at which site.
 
 ### 3. Your account, password and PIN
 
@@ -4061,7 +4071,7 @@ The app shows what the company’s system decides. If the server rejects an oper
 
 ### 7. The gate phone
 
-The app is designed for the gate’s Android phone, which the company sets up at a site. The only permission it asks for is the camera; without it you cannot take the record photos. The company can revoke a phone at any time, and the app then wipes what it had stored.
+The app is designed for the gate’s Android phone, which is registered to the guard’s site at sign-in. The only permission it asks for is the camera; without it you cannot take the record photos. The company can revoke a phone at any time, and the app then wipes what it had stored.
 
 ### 8. Availability and versions
 
@@ -7913,22 +7923,22 @@ Documents
 ### Zentrix Check
 The security gate · [Zentrix Check →](https://zentrix.company/en/check/)
 
-For almost everything, your first point of contact is your company’s security administrator: they set up the gate phone, create your account and give you your password. For anything else, write to us.
+For almost everything, your first point of contact is your company’s security administrator: they create your account with your email, assign your site and give you your password. For anything else, write to us.
 
 [soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Support%20%E2%80%94%20Zentrix%20Check)
 
-Put Support — Zentrix Check in the subject line and tell us your username, your site and what happened. Please don’t send us screenshots of records, plates, invoices or personal data.
+Put Support — Zentrix Check in the subject line and tell us your account email, your site and what happened. Please don’t send us screenshots of records, plates, invoices or personal data.
 
 ### Quick questions
 
 ### I don’t have an account. How do I get in?
 There is no sign-up: the app is only for the security staff of companies that use Zentrix Check. Your account is created by your company’s security administrator, for the site where you work.
 
-### How is the gate phone set up?
-With a QR code the administrator generates in the company’s system. Once scanned, the phone is sealed to that site. Without that code the app does nothing.
+### How do I sign in on the gate phone?
+With your company email and password, the first time on each phone; after that, with your name and your PIN. Below the email is your company’s server, already filled in. Your site comes from your profile: there’s no code to set up the phone.
 
 ### I forgot my PIN
-On the PIN screen, tap I forgot my PIN. You sign in again with your username and password and create a new PIN.
+On the PIN screen, tap I forgot my PIN. You sign in again with your email and password and create a new PIN.
 
 ### I forgot my password
 On the sign-in screen, tap I forgot my password: the security administrator gives you one. The password cannot be changed from the phone.
@@ -7937,7 +7947,7 @@ On the sign-in screen, tap I forgot my password: the security administrator give
 Keep working: what you do is stored encrypted on the phone and sent automatically when the signal returns, without duplicates. The app shows how many items are still waiting. The only thing that needs a signal is fetching what the system says about a new load.
 
 ### The gate phone was lost or damaged
-Tell the security administrator right away: they can revoke the phone, and the app wipes what it stored as soon as it reconnects. The new phone is set up with another QR code.
+Tell the security administrator right away: they can block the phone from Odoo, and the app wipes what it stored as soon as it reconnects. On the new phone, each guard signs in with their email and password.
 
 ### I no longer work at the company or at that site
 Your access is closed from the company’s system. The records you signed are kept, because they are the log of what happened at the gate. To request access to or deletion of your personal data, see delete your account or your data.
@@ -7948,7 +7958,7 @@ The app has no sign-up, so accounts aren’t deleted from it either: your compan
 
 - Write to [soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Data%20request%20%E2%80%94%20Zentrix%20Check) with the subject Data request — Zentrix Check, or tell the security administrator.
 
-- Include your name, your username and your site (or, if you don’t use the app, which gate and on what date your vehicle or load went through), and whether you want to see, correct or delete your data.
+- Include your name, your email and your site (or, if you don’t use the app, which gate and on what date your vehicle or load went through), and whether you want to see, correct or delete your data.
 
 - We respond within 30 business days at most.
 
@@ -11703,7 +11713,7 @@ La consola se abre solo en el teléfono del administrador. En ese teléfono, al 
 
 - Toca «Administrador».
 
-- Escribe tu usuario y tu contraseña, y toca «Entrar». Necesitas conexión.
+- Escribe tu correo y tu contraseña, y toca «Entrar». Necesitas conexión.
 
 - Escribe el código. «Abre tu app de códigos y escribe los 6 números que ves ahora.» Entra solo al escribir el sexto número.
 
@@ -11712,7 +11722,7 @@ La consola pide siempre contraseña y código. El PIN de vigilante no la abre. L
 
 Mensaje Qué haces
 
-«Usuario, contraseña o código incorrecto.» Revisa los tres. El código cambia cada pocos segundos: usa el que ves ahora.
+«Correo, contraseña o código incorrecto.» Revisa los tres. El código cambia cada pocos segundos: usa el que ves ahora.
 
 «El código venció. Entra otra vez.» Tardaste mucho entre la contraseña y el código. Empieza de nuevo.
 
@@ -11724,7 +11734,7 @@ Mensaje Qué haces
 
 ### Se cierra sola
 
-A los 5 minutos sin uso, o si se apaga la pantalla, la consola se cierra. Treinta segundos antes avisa: «La consola se cierra en 30 segundos.» Toca Seguir viendo para seguir. Si se cerró, al volver dice «Se cerró la consola por seguridad.» con tu usuario ya escrito.
+A los 5 minutos sin uso, o si se apaga la pantalla, la consola se cierra. Treinta segundos antes avisa: «La consola se cierra en 30 segundos.» Toca Seguir viendo para seguir. Si se cerró, al volver dice «Se cerró la consola por seguridad.» con tu correo ya escrito.
 
 La consola no deja hacer capturas de pantalla.
 
@@ -11805,7 +11815,7 @@ Habla con el administrador de Seguridad. La contraseña no se cambia desde la ap
 
 ### Mi nombre no sale en «Toca tu nombre»
 
-Toca Otro usuario y entra con tu usuario y tu contraseña. Solo salen los 4 últimos que entraron en este teléfono.
+Toca Otro usuario y entra con tu correo y tu contraseña. Solo salen los 4 últimos que entraron en este teléfono.
 
 ### El teclado dice «Espera hasta…»
 
@@ -11945,34 +11955,25 @@ Si te apagaron y tienes que seguir, enciéndete otra vez y sigues.
 
 ## [Entrar — Documentación de Zentrix Check](https://zentrix.company/check/docs/entrar.html)
 
-Cómo se entra a Zentrix Check: el alta del teléfono con el código QR, tu usuario y contraseña una vez, el PIN de cada día y qué hacer si lo olvidas.
+Cómo se entra a Zentrix Check: tu correo y tu contraseña de la empresa la primera vez, el servidor y tu sede, el PIN de cada día y qué hacer si lo olvidas.
 
 ### Entrar
 
-El supervisor prepara el teléfono una vez. Tú entras con tu usuario la primera vez y, después, con tu nombre y tu PIN.
-
-### Preparar el teléfono (lo hace el supervisor)
-
-Un teléfono nuevo abre en «Preparar teléfono». Si lo encuentras así, no es tuyo: la pantalla dice «Llama al supervisor».
-
-- Conéctalo al Wi-Fi de la garita. Sin conexión no se prepara: «Para registrar el teléfono necesitas conexión. Conéctate al Wi-Fi de la garita.»
-
-- En Odoo, genera el código de alta. Está en Odoo › Seguridad › Configuración › Teléfonos › Generar código de alta. Odoo muestra un QR.
-
-- Toca «Escanear QR» y apunta al QR de Odoo. El código de alta no se escribe: se escanea. Mientras tanto la app dice «Registrando…».
-
-- Revisa «Teléfono listo». Debajo sale el puesto y la sede donde quedó sellado. Si es el correcto, toca Entrar.
-
-Un teléfono, una sede
-El QR sella el teléfono a una sede y a un puesto. Solo entran los vigilantes asignados a esa sede. Para moverlo a otra sede, se prepara de nuevo.
+La primera vez en cada teléfono entras con tu correo y tu contraseña de la empresa. Después, con tu nombre y tu PIN.
 
 ### Tu primera vez en este teléfono
 
-- Toca «Otro usuario». Si el teléfono no tiene a nadie todavía, la app ya abre en «Tu usuario».
+No hay que preparar el teléfono con ningún código: entras con tu cuenta, como en cualquier app de la empresa. La cuenta te la crea el administrador de Seguridad.
 
-- Escribe tu usuario y toca «Seguir». Es el usuario corto que te dio el administrador de Seguridad. No es tu cédula ni un correo.
+- Conéctate al Wi-Fi de la garita. La primera vez en un teléfono necesitas conexión.
 
-- Escribe tu contraseña y toca «Entrar». Con Ver ves lo que escribiste. La contraseña solo se pide esta vez en este teléfono. Necesitas conexión.
+- Escribe tu correo. La app abre en «Tu correo». Es el correo de tu cuenta en el sistema de la empresa, el que te dio el administrador de Seguridad. Si el teléfono ya tiene a otros vigilantes, toca antes Otro usuario.
+
+- Revisa el servidor, debajo del correo, y toca «Seguir». Ya viene puesto. Lee El servidor antes de cambiarlo.
+
+- Escribe tu contraseña y toca «Entrar». Con Ver ves lo que escribiste. La contraseña solo se pide esta vez en este teléfono.
+
+- Si trabajas en varias sedes, elige dónde estás hoy. La app pregunta «¿Dónde estás hoy?» y toca tu sede. Si tienes una sola, no pregunta. Mira Tu sede.
 
 - Crea tu PIN: seis números. La pantalla dice «Crea tu PIN» y después «Repite tu PIN». Con ese PIN entras y también firmas.
 
@@ -11982,19 +11983,38 @@ Si el PIN no sirve, la app te lo dice en dos palabras:
 
 - «No son iguales»: el segundo no coincide con el primero. Escríbelo otra vez.
 
+### El servidor
+
+Debajo del correo sale el servidor de tu empresa: el dominio de su Odoo, sin nada delante ni detrás. Viene puesto y casi nunca hay que tocarlo.
+
+- Toca el servidor. Se abre «Servidor»: «El Odoo de la empresa. Solo el dominio.»
+
+- Escribe el dominio que te dio el administrador de Seguridad. Solo el dominio, completo.
+
+- Toca «Probar y guardar». La app comprueba que ese servidor responde como Zentrix Check antes de guardarlo. Si no: «No contesta. Revisa la dirección y la conexión.» o «Ese servidor no responde como Zentrix Check. Revisa la dirección.»
+
+El servidor decide a dónde viaja tu contraseña
+Cámbialo solo si te lo pide el administrador de Seguridad, y escribe exactamente el que te dio. Una vez dentro, para cambiar de servidor hay que salir de este teléfono.
+
+### Tu sede
+
+Tu sede sale de tu ficha en el sistema de la empresa: el administrador de Seguridad te asigna una o varias. Al entrar, el teléfono queda registrado en esa sede. Solo entras en las sedes que tienes asignadas.
+
+Si tienes varias, la app recuerda la última y te pregunta «¿Dónde estás hoy?». Para cambiar de sede tienes que estar apagado: «Apágate antes de cambiar de sede.»
+
 ### Si te sale un mensaje
 
 Mensaje Qué haces
 
-«Usuario o contraseña incorrectos.» Revisa cómo escribiste el usuario. Si sigue, habla con el administrador de Seguridad.
+«Correo o contraseña incorrectos.» Revisa cómo escribiste el correo y que el servidor sea el de tu empresa. Si sigue, habla con el administrador de Seguridad.
 
-«Tu usuario no está asignado a esta sede. Habla con el administrador.» Tu usuario existe, pero no para esta garita. Lo arregla el administrador.
+«No estás asignado a esta sede. Habla con el administrador.» Tu cuenta existe, pero no para esta sede. Lo arregla el administrador.
 
 «Para entrar por primera vez en este teléfono necesitas conexión…» No es tu contraseña: es la señal. Conéctate al Wi-Fi de la garita y toca Entrar otra vez.
 
 «Tu contraseña es temporal y todavía no se puede cambiar en la app…» Con una contraseña temporal no se entra. Habla con el administrador de Seguridad.
 
-«Esta cuenta es de administrador…» Esa cuenta no es de vigilante. Se usa en el teléfono del administrador.
+«Esta cuenta es de administrador…» Esa cuenta no es de vigilante. Se usa en la [consola del administrador](https://zentrix.company/check/docs/administrador.html).
 
 ### Cada día
 
@@ -12006,7 +12026,7 @@ Mensaje Qué haces
 
 ### Varios vigilantes, un teléfono
 
-El teléfono guarda hasta 8 perfiles y muestra los 4 más recientes. Si tu nombre no sale, toca Otro usuario y entra con tu usuario y tu contraseña, como la primera vez.
+El teléfono guarda hasta 8 perfiles y muestra los 4 más recientes. Si tu nombre no sale, toca Otro usuario y entra con tu correo y tu contraseña, como la primera vez.
 
 Cada uno firma con su PIN. Lo que tú firmas queda a tu nombre, aunque el teléfono sea de todos.
 
@@ -12018,7 +12038,7 @@ Cada uno firma con su PIN. Lo que tú firmas queda a tu nombre, aunque el teléf
 
 - Antes del último intento: «PIN incorrecto. Si fallas otra vez, tendrás que entrar con tu contraseña.»
 
-- Diez errores en total: «Borramos tu acceso en este teléfono por seguridad. Entra con tu usuario y tu contraseña.» Tu nombre se borra del teléfono. A los demás no les pasa nada.
+- Diez errores en total: «Borramos tu acceso en este teléfono por seguridad. Entra con tu correo y tu contraseña.» Tu nombre se borra del teléfono. A los demás no les pasa nada.
 
 ### Si olvidaste tu PIN
 
@@ -12041,7 +12061,7 @@ Si nadie toca el teléfono unos minutos, o si se apaga la pantalla, la app se bl
 
 Llamar desde la app no bloquea el teléfono. Pero si la llamada dura más que esos minutos, al volver te pide el PIN.
 
-A veces la app pide más: «Por seguridad, entra otra vez con tu usuario y tu contraseña.» Tu sesión venció. Entra con tu contraseña y crea tu PIN.
+A veces la app pide más: «Por seguridad, entra otra vez con tu correo y tu contraseña.» Tu sesión venció. Entra con tu contraseña y crea tu PIN.
 
 ### Salir de este teléfono
 
@@ -12064,9 +12084,9 @@ Si la versión es obligatoria, sale «Actualiza Zentrix Check» y no te deja seg
 
 ### Si dice «Teléfono bloqueado»
 
-Odoo retiró el teléfono o ya no lo reconoce: «Este teléfono fue retirado de Zentrix Check.» o «Odoo ya no reconoce este teléfono.» No se usa más hasta prepararlo de nuevo. Llama al supervisor.
+Odoo retiró el teléfono o ya no lo reconoce: «Este teléfono fue retirado de Zentrix Check.» o «Odoo ya no reconoce este teléfono.» Pasa, por ejemplo, cuando el administrador bloquea un teléfono perdido. No se usa más hasta que el supervisor lo revise. Llámalo.
 
-Si hay registros sin enviar, la pantalla lo dice y no se borran. Preparar de nuevo es solo para el supervisor: guarda aparte lo que no se envió y pide escanear un QR de alta nuevo.
+Si hay registros sin enviar, la pantalla lo dice y no se borran. Preparar de nuevo es solo para el supervisor: guarda aparte lo que no se envió y deja el teléfono en la entrada, para volver a entrar con correo y contraseña.
 
 
 ---
@@ -12213,7 +12233,7 @@ Firma solo lo que viste con tus ojos. Si llenaste algo con lo de Odoo sin revisa
 
 ### El teléfono de la garita
 
-- Está sellado a una sede y a un puesto. Lo prepara el supervisor con un código QR de Odoo, una sola vez.
+- Queda registrado en tu sede. No se prepara con ningún código: entras con tu correo y tu contraseña, y la sede sale de tu ficha.
 
 - Lo comparten varios vigilantes. Cada uno entra con su nombre y su PIN.
 
@@ -12225,7 +12245,7 @@ Firma solo lo que viste con tus ojos. Si llenaste algo con lo de Odoo sin revisa
 
 ### Quién decide qué ves
 
-El administrador de Seguridad crea tu usuario, te asigna la sede y prepara los teléfonos. El servidor manda: si no ves algo (las llaves o las novedades, por ejemplo), no está apagado en tu teléfono. No está encendido para tu sede. Eso se arregla en Odoo, no en la app.
+El administrador de Seguridad crea tu cuenta con tu correo y te asigna tus sedes. El servidor manda: si no ves algo (las llaves o las novedades, por ejemplo), no está apagado en tu teléfono. No está encendido para tu sede. Eso se arregla en Odoo, no en la app.
 
 Los camiones, las facturas, los productos y los contactos que ves salen de Odoo. Si un dato está mal, avisa: la app no lo corrige.
 
@@ -12791,7 +12811,7 @@ Si un compañero firmó en este teléfono y su sesión venció, sus registros es
 
 Sin señal funciona Necesita señal
 
-Entrar con tu nombre y tu PIN Preparar el teléfono con el QR
+Entrar con tu nombre y tu PIN Entrar por primera vez con tu correo y tu contraseña
 
 Encenderte y apagarte Entrar con tu contraseña (primera vez, «Olvidé mi PIN», sesión vencida)
 
@@ -12828,7 +12848,7 @@ Legal
 
 Zentrix Check es la herramienta de trabajo interna del personal de seguridad de la empresa que la usa (en adelante, «la empresa»), en la garita de cada sede. La desarrolla y la distribuye GUUAO LLC por Google Play, solo para Android. Con ella los vigilantes dejan constancia de lo que entra y sale: camiones que salen cargados, mercancía que llega, llaves, equipos de la empresa y novedades. La app no mueve inventario ni contabilidad: solo registra lo que el vigilante comprobó.
 
-No es una aplicación de consumo y no permite crear cuentas. La cuenta del vigilante la crea el administrador de Seguridad de la empresa, y cada teléfono se da de alta con un código QR que lo deja sellado a una sede. Sin eso la app no hace nada.
+No es una aplicación de consumo y no permite crear cuentas. La cuenta del vigilante la crea el administrador de Seguridad de la empresa, con su correo, y le asigna sus sedes. El vigilante entra con ese correo y su contraseña, y el teléfono queda registrado en su sede. Sin esa cuenta la app no hace nada.
 
 Esta política se aplica a estas personas:
 
@@ -12846,7 +12866,7 @@ El tratamiento forma parte de la relación de trabajo y del control de acceso a 
 
 Dato Para qué se usa
 
-Nombre y usuario Identificar al vigilante en el teléfono de la garita y en cada acta que firma. El usuario es el de su cuenta en el sistema de la empresa.
+Nombre y correo Identificar al vigilante en el teléfono de la garita y en cada acta que firma. El correo es su usuario: el de su cuenta en el sistema de la empresa, con el que entra en la app.
 
 Contraseña Iniciar sesión la primera vez en cada teléfono. La valida el servidor de la empresa; la app no la guarda. Lo que se guarda es la sesión, cifrada en el teléfono.
 
@@ -12860,7 +12880,7 @@ Registro de lo que hace Cada paso de cada acta, con su hora y el vigilante que l
 
 Datos del teléfono y de la sesión Modelo del teléfono, versión de Android y de la app, y un identificador de la instalación generado por la app. El servidor de la empresa registra además la dirección IP y las fechas de cada sesión. Sirven para saber qué teléfono hizo qué, para cortar el acceso de un teléfono perdido y para exigir una versión mínima de la app.
 
-Integridad del teléfono y de la app Al dar de alta el teléfono y al iniciar sesión, la app pide a Google Play una verificación de que la app es la original y corre en un teléfono no alterado. Ver la cláusula 6.
+Integridad del teléfono y de la app Al iniciar sesión, la app pide a Google Play una verificación de que la app es la original y corre en un teléfono no alterado. Ver la cláusula 6.
 
 Datos de uso y de fallos Qué pantallas se usan, sin datos de las actas, y reportes técnicos cuando la app falla. Detalle en la cláusula 6.
 
@@ -12934,7 +12954,7 @@ Para funcionar, la app usa estos proveedores. Tratan los datos por cuenta de la 
 
 - Google LLC — Google Analytics para Firebase: mide qué pantallas se usan, identificadas por su nombre genérico y sin números ni datos de las actas. Recibe un identificador de instalación de la app y datos técnicos del teléfono. No recibe nombres, placas, precintos, códigos escaneados ni fotos.
 
-- Google LLC — Play Integrity API: al dar de alta el teléfono y al iniciar sesión, verifica que la app es la original y que el teléfono no está alterado. Recibe información técnica del teléfono y de la app.
+- Google LLC — Play Integrity API: al iniciar sesión, verifica que la app es la original y que el teléfono no está alterado. Recibe información técnica del teléfono y de la app.
 
 - Functional Software, Inc. (Sentry), Estados Unidos: recibe los reportes técnicos cuando la app falla: el error, la versión de la app y de Android, el modelo del teléfono y el servidor al que estaba conectada. Nunca incluyen el nombre ni el usuario del vigilante, capturas de pantalla, el contenido de las actas, las fotos ni los códigos escaneados.
 
@@ -12962,7 +12982,7 @@ Zentrix Check es una herramienta de trabajo para personas adultas (18 años o m�
 
 - Toda la comunicación con los servidores de la empresa va cifrada (HTTPS/TLS).
 
-- Cada teléfono queda sellado a una sede con una llave propia; el servidor guarda solo su huella, no la llave.
+- Cada teléfono se identifica con un identificador propio de la instalación y queda registrado en la sede del vigilante al entrar.
 
 - La sesión, la llave del teléfono y el PIN se guardan en el almacén seguro de Android (Keystore). El PIN se guarda con un hash y no sale del teléfono.
 
@@ -13005,7 +13025,7 @@ Zentrix Check es la herramienta de trabajo interna del personal de seguridad de 
 
 ### 2. Quién puede usarla
 
-Solo personas mayores de edad a las que la empresa les haya dado una cuenta de vigilante o de administrador de Seguridad. La app no permite registrarse. Cada teléfono se da de alta con un código QR que lo sella a una sede, y el servidor comprueba en cada operación quién eres, desde qué teléfono y en qué sede.
+Solo personas mayores de edad a las que la empresa les haya dado una cuenta de vigilante o de administrador de Seguridad. La app no permite registrarse. Se entra con el correo y la contraseña de esa cuenta, el teléfono queda registrado en tu sede, y el servidor comprueba en cada operación quién eres, desde qué teléfono y en qué sede.
 
 ### 3. Tu cuenta, tu contraseña y tu PIN
 
@@ -13033,7 +13053,7 @@ La app muestra lo que decide el sistema de la empresa. Si el servidor rechaza un
 
 ### 7. El teléfono de la garita
 
-La app está pensada para el teléfono Android de la garita, que la empresa da de alta en una sede. El único permiso que pide es el de la cámara; sin él no puedes tomar las fotos de las actas. La empresa puede revocar un teléfono en cualquier momento, y entonces la app borra lo que tenía guardado.
+La app está pensada para el teléfono Android de la garita, que queda registrado en la sede del vigilante al entrar. El único permiso que pide es el de la cámara; sin él no puedes tomar las fotos de las actas. La empresa puede revocar un teléfono en cualquier momento, y entonces la app borra lo que tenía guardado.
 
 ### 8. Disponibilidad y versiones
 
@@ -13817,22 +13837,22 @@ Documentos
 ### Zentrix Check
 La garita de seguridad · [Zentrix Check →](https://zentrix.company/check/)
 
-Para casi todo, tu primer contacto es el administrador de Seguridad de tu empresa: es quien da de alta el teléfono de la garita, crea tu cuenta y te da tu contraseña. Para lo demás, escríbenos.
+Para casi todo, tu primer contacto es el administrador de Seguridad de tu empresa: es quien crea tu cuenta con tu correo, te asigna tu sede y te da tu contraseña. Para lo demás, escríbenos.
 
 [soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Soporte%20%E2%80%94%20Zentrix%20Check)
 
-Pon en el asunto Soporte — Zentrix Check y cuéntanos tu usuario, tu sede y qué pasó. No nos mandes capturas de actas, placas, facturas ni datos de personas.
+Pon en el asunto Soporte — Zentrix Check y cuéntanos tu correo de la cuenta, tu sede y qué pasó. No nos mandes capturas de actas, placas, facturas ni datos de personas.
 
 ### Preguntas rápidas
 
 ### No tengo cuenta. ¿Cómo entro?
 No hay registro: la app es solo para el personal de seguridad de las empresas que usan Zentrix Check. La cuenta te la crea el administrador de Seguridad de tu empresa, con la sede donde trabajas.
 
-### ¿Cómo se da de alta el teléfono de la garita?
-Con un código QR que el administrador genera en el sistema de la empresa. Al leerlo, el teléfono queda sellado a esa sede. Sin ese código la app no hace nada.
+### ¿Cómo se entra en el teléfono de la garita?
+Con tu correo y tu contraseña de la empresa, la primera vez en cada teléfono; después, con tu nombre y tu PIN. Debajo del correo está el servidor de tu empresa, que ya viene puesto. La sede sale de tu ficha: no hay que dar de alta el teléfono con ningún código.
 
 ### Olvidé mi PIN
-En la pantalla del PIN, toca Olvidé mi PIN. Vuelves a entrar con tu usuario y tu contraseña y creas un PIN nuevo.
+En la pantalla del PIN, toca Olvidé mi PIN. Vuelves a entrar con tu correo y tu contraseña y creas un PIN nuevo.
 
 ### Olvidé mi contraseña
 En la pantalla de entrada, toca Olvidé mi contraseña: te la da el administrador de Seguridad. La contraseña no se cambia desde el teléfono.
@@ -13841,7 +13861,7 @@ En la pantalla de entrada, toca Olvidé mi contraseña: te la da el administrado
 Sigue trabajando: lo que haces se guarda cifrado en el teléfono y se envía solo cuando vuelve la señal, sin duplicados. La app te dice cuántas cosas faltan por enviar. Lo único que necesita señal es traer lo que dice el sistema de una carga nueva.
 
 ### Se perdió o se dañó el teléfono de la garita
-Avísale de inmediato al administrador de Seguridad: puede revocar el teléfono, y la app borra lo que guardaba en cuanto vuelve a conectarse. El teléfono nuevo se da de alta con otro código QR.
+Avísale de inmediato al administrador de Seguridad: puede bloquear el teléfono desde Odoo, y la app borra lo que guardaba en cuanto vuelve a conectarse. En el teléfono nuevo cada vigilante entra con su correo y su contraseña.
 
 ### Dejé de trabajar en la empresa o en esa sede
 Tu acceso se cierra desde el sistema de la empresa. Las actas que firmaste se conservan, porque son el registro de lo que pasó en la garita. Para pedir el acceso o la eliminación de tus datos personales, mira eliminar tu cuenta o tus datos.
@@ -13852,7 +13872,7 @@ La app no permite crear cuentas, así que tampoco se borran desde ella: la cuent
 
 - Escribe a [soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Solicitud%20de%20datos%20%E2%80%94%20Zentrix%20Check) con el asunto Solicitud de datos — Zentrix Check, o díselo al administrador de Seguridad.
 
-- Indica tu nombre, tu usuario y tu sede (o, si no usas la app, en qué garita y en qué fecha pasó tu vehículo o tu carga), y si quieres ver, corregir o eliminar tus datos.
+- Indica tu nombre, tu correo y tu sede (o, si no usas la app, en qué garita y en qué fecha pasó tu vehículo o tu carga), y si quieres ver, corregir o eliminar tus datos.
 
 - Te respondemos en un máximo de 30 días hábiles.
 

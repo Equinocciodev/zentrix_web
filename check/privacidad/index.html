@@ -91,7 +91,7 @@
 
   <h2 id="c1">1. Qué es Zentrix Check y para quién</h2>
   <p>Zentrix Check es la <strong>herramienta de trabajo interna</strong> del personal de seguridad de la empresa que la usa (en adelante, «la empresa»), en la garita de cada sede. La desarrolla y la distribuye <strong>GUUAO LLC</strong> por Google Play, solo para Android. Con ella los vigilantes dejan constancia de lo que entra y sale: camiones que salen cargados, mercancía que llega, llaves, equipos de la empresa y novedades. La app <strong>no mueve inventario ni contabilidad</strong>: solo registra lo que el vigilante comprobó.</p>
-  <p><strong>No es una aplicación de consumo y no permite crear cuentas.</strong> La cuenta del vigilante la crea el administrador de Seguridad de la empresa, y cada teléfono se da de alta con un código QR que lo deja sellado a una sede. Sin eso la app no hace nada.</p>
+  <p><strong>No es una aplicación de consumo y no permite crear cuentas.</strong> La cuenta del vigilante la crea el administrador de Seguridad de la empresa, con su correo, y le asigna sus sedes. El vigilante entra con ese correo y su contraseña, y el teléfono queda registrado en su sede. Sin esa cuenta la app no hace nada.</p>
   <p><strong>Esta política se aplica a estas personas:</strong></p>
   <ul>
     <li><strong>El vigilante:</strong> el empleado de la empresa que usa la app con su cuenta.</li>
@@ -106,14 +106,14 @@
   <div class="tabla-env"><table class="tabla">
     <thead><tr><th scope="col">Dato</th><th scope="col">Para qué se usa</th></tr></thead>
     <tbody>
-      <tr><th scope="row">Nombre y usuario</th><td>Identificar al vigilante en el teléfono de la garita y en cada acta que firma. El usuario es el de su cuenta en el sistema de la empresa.</td></tr>
+      <tr><th scope="row">Nombre y correo</th><td>Identificar al vigilante en el teléfono de la garita y en cada acta que firma. El correo es su usuario: el de su cuenta en el sistema de la empresa, con el que entra en la app.</td></tr>
       <tr><th scope="row">Contraseña</th><td>Iniciar sesión la primera vez en cada teléfono. La valida el servidor de la empresa; <strong>la app no la guarda</strong>. Lo que se guarda es la sesión, cifrada en el teléfono.</td></tr>
       <tr><th scope="row">PIN</th><td>Entrar después con el nombre y el PIN, y <strong>firmar cada acta</strong>. Es un cerrojo local: se guarda con un hash en el teléfono y <strong>nunca sale de él</strong>.</td></tr>
       <tr><th scope="row">Código de doble factor del administrador</th><td>El administrador de Seguridad entra además con un código de un solo uso. Lo valida el servidor de la empresa.</td></tr>
       <tr><th scope="row">Encendido y apagado</th><td>A qué hora se encendió y se apagó el vigilante en la garita, la hora de su última acción, la sede y el puesto. Sirve para saber quién estaba a cargo. <strong>No es un registro de jornada.</strong></td></tr>
       <tr><th scope="row">Registro de lo que hace</th><td>Cada paso de cada acta, con su hora y el vigilante que lo hizo: salidas, recepciones, conteos, diferencias, firmas, llaves, novedades y decisiones. Es la trazabilidad de la garita.</td></tr>
       <tr><th scope="row">Datos del teléfono y de la sesión</th><td>Modelo del teléfono, versión de Android y de la app, y un identificador de la instalación generado por la app. El servidor de la empresa registra además la dirección IP y las fechas de cada sesión. Sirven para saber qué teléfono hizo qué, para cortar el acceso de un teléfono perdido y para exigir una versión mínima de la app.</td></tr>
-      <tr><th scope="row">Integridad del teléfono y de la app</th><td>Al dar de alta el teléfono y al iniciar sesión, la app pide a Google Play una verificación de que la app es la original y corre en un teléfono no alterado. Ver la <a href="#c6">cláusula 6</a>.</td></tr>
+      <tr><th scope="row">Integridad del teléfono y de la app</th><td>Al iniciar sesión, la app pide a Google Play una verificación de que la app es la original y corre en un teléfono no alterado. Ver la <a href="#c6">cláusula 6</a>.</td></tr>
       <tr><th scope="row">Datos de uso y de fallos</th><td>Qué pantallas se usan, sin datos de las actas, y reportes técnicos cuando la app falla. Detalle en la <a href="#c6">cláusula 6</a>.</td></tr>
     </tbody>
   </table></div>
@@ -166,7 +166,7 @@
   <p>Para funcionar, la app usa estos <strong>proveedores</strong>. Tratan los datos por cuenta de la empresa y no para fines propios:</p>
   <ul>
     <li><strong>Google LLC — Google Analytics para Firebase:</strong> mide qué pantallas se usan, identificadas por su nombre genérico y sin números ni datos de las actas. Recibe un identificador de instalación de la app y datos técnicos del teléfono. No recibe nombres, placas, precintos, códigos escaneados ni fotos.</li>
-    <li><strong>Google LLC — Play Integrity API:</strong> al dar de alta el teléfono y al iniciar sesión, verifica que la app es la original y que el teléfono no está alterado. Recibe información técnica del teléfono y de la app.</li>
+    <li><strong>Google LLC — Play Integrity API:</strong> al iniciar sesión, verifica que la app es la original y que el teléfono no está alterado. Recibe información técnica del teléfono y de la app.</li>
     <li><strong>Functional Software, Inc. (Sentry), Estados Unidos:</strong> recibe los reportes técnicos cuando la app falla: el error, la versión de la app y de Android, el modelo del teléfono y el servidor al que estaba conectada. <strong>Nunca</strong> incluyen el nombre ni el usuario del vigilante, capturas de pantalla, el contenido de las actas, las fotos ni los códigos escaneados.</li>
   </ul>
   <p>Algunos de estos proveedores procesan datos fuera de Venezuela, principalmente en los Estados Unidos.</p>
@@ -185,7 +185,7 @@
   <h2 id="c9">9. Seguridad</h2>
   <ul>
     <li>Toda la comunicación con los servidores de la empresa va cifrada (HTTPS/TLS).</li>
-    <li>Cada teléfono queda sellado a una sede con una llave propia; el servidor guarda solo su huella, no la llave.</li>
+    <li>Cada teléfono se identifica con un identificador propio de la instalación y queda registrado en la sede del vigilante al entrar.</li>
     <li>La sesión, la llave del teléfono y el PIN se guardan en el almacén seguro de Android (Keystore). El PIN se guarda con un hash y no sale del teléfono.</li>
     <li>Lo pendiente por enviar se guarda cifrado (AES-256) en el teléfono.</li>
     <li>Cada evento lleva la huella del anterior y cada foto su huella SHA-256: si alguien altera un acta o una foto, se nota.</li>
