@@ -4,7 +4,8 @@
    - Consent Mode v2: analytics_storage denegado hasta aceptar; ad_storage,
      ad_user_data y ad_personalization siempre denegados.
    - Sin elección guardada, «Do Not Track» o «Global Privacy Control» cuentan como rechazo.
-   - El enlace #zx-cookies del pie reabre las preferencias.
+   - El enlace #zx-cookies del pie reabre las preferencias; su X (o Esc) cierra sin cambiar la elección.
+   - Al decidir se emite «zx:consent» en document: la sugerencia de idioma (nav.js) espera a esa decisión.
    - window.zxAnalytics.track(nombre, params): encola antes del consentimiento y descarta si se rechaza.
    Sin datos personales: los enlaces se miden sin consulta (?…) ni texto de formularios. */
 (function () {
@@ -21,14 +22,14 @@
 
   var T = en ? {
     titulo: 'Cookies and analytics',
-    texto: 'With your permission we measure visits with Google Analytics to improve the site. No advertising, no personal data.',
-    aceptar: 'Accept', rechazar: 'Reject', mas: 'How we use cookies', mas_url: '/en/privacy/#cookies',
+    texto: 'We measure visits with Google Analytics only if you accept. No advertising.',
+    aceptar: 'Accept', rechazar: 'Reject', mas: 'Cookie policy', mas_url: '/en/privacy/#cookies',
     senal: 'Your browser asks not to be tracked (Do Not Track / Global Privacy Control), so we measure nothing unless you accept here.',
     cerrar: 'Close'
   } : {
     titulo: 'Cookies y analítica',
-    texto: 'Si lo permites, medimos las visitas con Google Analytics para mejorar el sitio. Sin publicidad y sin datos personales.',
-    aceptar: 'Aceptar', rechazar: 'Rechazar', mas: 'Cómo usamos las cookies', mas_url: '/privacidad/#cookies',
+    texto: 'Medimos las visitas con Google Analytics solo si aceptas. Sin publicidad.',
+    aceptar: 'Aceptar', rechazar: 'Rechazar', mas: 'Política de cookies', mas_url: '/privacidad/#cookies',
     senal: 'Tu navegador pide no ser rastreado (Do Not Track / Global Privacy Control), así que no medimos nada salvo que aceptes aquí.',
     cerrar: 'Cerrar'
   };
@@ -135,6 +136,7 @@
     var antes = estado;
     estado = nuevo;
     guardar(nuevo);
+    try { doc.dispatchEvent(new CustomEvent('zx:consent', { detail: { estado: nuevo } })); } catch (e) { /* nada */ }
     if (nuevo === 'granted') {
       cargar();
     } else {
@@ -168,28 +170,31 @@
     var st = doc.createElement('style');
     st.id = 'zx-ck-css';
     st.textContent =
-      '.zx-ck{position:fixed;z-index:2147483000;left:16px;right:16px;bottom:16px;max-width:560px;margin:0 auto;' +
-      'background:#090D12;color:#fff;border:1px solid rgba(255,255,255,.14);border-radius:16px;' +
-      'box-shadow:0 12px 40px rgba(9,13,18,.35);padding:20px 20px 18px;' +
-      'font:400 .9375rem/1.5 Inter,"Inter reserva",system-ui,-apple-system,"Segoe UI",sans-serif;box-sizing:border-box}' +
+      /* Tarjeta compacta: 380 px en escritorio (abajo a la izquierda), ancho completo con margen en móvil.
+         Rechazar y Aceptar son idénticos: mismo tamaño, mismo color, mismo nivel. */
+      '.zx-ck{position:fixed;z-index:2147483000;left:12px;right:12px;bottom:12px;max-width:400px;margin:0 auto;' +
+      'background:#090D12;color:#fff;border:1px solid #2A313D;border-radius:14px;' +
+      'box-shadow:0 12px 32px -10px rgba(9,13,18,.5);padding:14px 16px;' +
+      'font:400 .8125rem/1.45 Inter,"Inter reserva",system-ui,-apple-system,"Segoe UI",sans-serif;box-sizing:border-box}' +
       '.zx-ck *{box-sizing:border-box}' +
-      '.zx-ck::before{content:"";position:absolute;left:20px;top:0;width:40px;height:3px;border-radius:0 0 3px 3px;background:#C7FA46}' +
-      '.zx-ck__t{margin:0 0 6px;font-size:1rem;font-weight:700;letter-spacing:-.01em;color:#fff}' +
+      '.zx-ck__t{margin:0 0 2px;font-size:.875rem;font-weight:600;letter-spacing:-.005em;color:#fff}' +
+      '.zx-ck[data-reabierto] .zx-ck__t{padding-right:28px}' +
       '.zx-ck__p{margin:0;color:#AEB6C2}' +
-      '.zx-ck__p a{color:#C7FA46;text-decoration:underline;text-underline-offset:2px}' +
-      '.zx-ck__s{margin:10px 0 0;font-size:.8125rem;color:#AEB6C2}' +
-      '.zx-ck__b{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}' +
-      '.zx-ck button{appearance:none;font:inherit;font-weight:600;font-size:.9375rem;min-height:44px;padding:10px 16px;' +
-      'border-radius:12px;cursor:pointer;border:2px solid transparent;transition:background-color .15s,color .15s}' +
-      '.zx-ck__si{background:#244DFF;color:#fff}.zx-ck__si:hover{background:#1B3EE0}' +
-      '.zx-ck__no{background:#fff;color:#090D12}.zx-ck__no:hover{background:#E6E9EF}' +
-      '.zx-ck button:focus-visible,.zx-ck a:focus-visible{outline:3px solid #C7FA46;outline-offset:2px}' +
-      '.zx-ck__x{position:absolute;top:8px;right:8px;width:36px;min-height:36px!important;padding:0!important;' +
-      'background:transparent;color:#AEB6C2;border-radius:10px!important;font-size:1.25rem!important;line-height:1}' +
+      '.zx-ck__p a{color:#fff;text-decoration:underline;text-decoration-color:rgba(255,255,255,.45);text-underline-offset:2px;white-space:nowrap}' +
+      '.zx-ck__p a:hover{text-decoration-color:#C7FA46}' +
+      '.zx-ck__s{margin:8px 0 0;font-size:.75rem;color:#AEB6C2}' +
+      '.zx-ck__b{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}' +
+      '.zx-ck__b button{appearance:none;font:inherit;font-weight:600;font-size:.8125rem;min-height:40px;padding:6px 14px;' +
+      'border-radius:10px;cursor:pointer;background:#fff;color:#090D12;border:1px solid #fff;transition:background-color .15s}' +
+      '.zx-ck__b button:hover{background:#E6E9EF;border-color:#E6E9EF}' +
+      '.zx-ck__b button[aria-pressed=true]{box-shadow:0 0 0 2px #090D12,0 0 0 4px #C7FA46}' +
+      '.zx-ck button:focus-visible,.zx-ck a:focus-visible{outline:2px solid #C7FA46;outline-offset:2px}' +
+      '.zx-ck__x{appearance:none;position:absolute;top:8px;right:8px;width:28px;height:28px;padding:0;border:0;' +
+      'background:transparent;color:#AEB6C2;border-radius:8px;font:400 1.125rem/1 system-ui,sans-serif;cursor:pointer}' +
       '.zx-ck__x:hover{color:#fff;background:rgba(255,255,255,.08)}' +
-      '@media (min-width:768px){.zx-ck{left:24px;right:auto;bottom:24px;margin:0}}' +
-      '@media (prefers-reduced-motion:no-preference){.zx-ck{animation:zx-ck-in .25s ease-out}}' +
-      '@keyframes zx-ck-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}' +
+      '@media (min-width:768px){.zx-ck{left:20px;right:auto;bottom:20px;width:380px;margin:0}.zx-ck__b button{min-height:36px}}' +
+      '@media (prefers-reduced-motion:no-preference){.zx-ck{animation:zx-ck-in .2s ease-out}}' +
+      '@keyframes zx-ck-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}' +
       '@media print{.zx-ck{display:none}}';
     doc.head.appendChild(st);
   }
@@ -217,12 +222,12 @@
     caja.setAttribute('lang', lang);
     if (reabierto) caja.setAttribute('data-reabierto', '1');
     caja.innerHTML =
-      '<h2 class="zx-ck__t" id="zx-ck-t"></h2>' +
+      '<p class="zx-ck__t" id="zx-ck-t"></p>' +
       '<p class="zx-ck__p"><span></span> <a></a></p>' +
       (senal && !guardado ? '<p class="zx-ck__s"></p>' : '') +
       '<div class="zx-ck__b"><button type="button" class="zx-ck__no"></button><button type="button" class="zx-ck__si"></button></div>' +
       (reabierto ? '<button type="button" class="zx-ck__x"><span aria-hidden="true">×</span></button>' : '');
-    caja.querySelector('h2').textContent = T.titulo;
+    caja.querySelector('.zx-ck__t').textContent = T.titulo;
     caja.querySelector('.zx-ck__p span').textContent = T.texto;
     var a = caja.querySelector('.zx-ck__p a');
     a.textContent = T.mas;
@@ -237,7 +242,10 @@
     si.addEventListener('click', function () { decidir('granted'); cerrar(reabierto); });
     var x = caja.querySelector('.zx-ck__x');
     if (x) { x.setAttribute('aria-label', T.cerrar); x.addEventListener('click', function () { cerrar(true); }); }
-    doc.body.appendChild(caja);
+    // Al principio del orden de tabulación (tras «Saltar al contenido»); es fijo, no mueve nada.
+    var saltar = doc.querySelector('body > .saltar');
+    if (saltar && saltar.nextSibling) doc.body.insertBefore(caja, saltar.nextSibling);
+    else doc.body.insertBefore(caja, doc.body.firstChild);
     if (reabierto) {
       doc.addEventListener('keydown', alEscape, true);
       (estado === 'granted' ? si : no).focus();
