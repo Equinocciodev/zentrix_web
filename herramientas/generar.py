@@ -29,7 +29,7 @@ import ayuda  # noqa: E402  — /soporte/, /legal/ y el selector de motivo de /c
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 MULTI = (RAIZ / 'en' / 'index.html').exists()  # fase 3: el sitio completo en inglés bajo /en/
 SALIDA = {}  # ruta de fichero → contenido (páginas generadas)
-NAV_JS_V = 5
+NAV_JS_V = 6
 ANALITICA_JS_V = 2   # sube al cambiar assets/js/analitica.js (aviso de cookies)
 
 # Inglés anterior a /en/: solo Zentrix Sales, en /sales/en/ (se usa mientras no haya MULTI)
@@ -177,16 +177,15 @@ def mega_soluciones(lang):
 
 def mega_recursos(lang):
     t = T[lang]
-    nota = t['nota_es']
 
     def it(href, icono, nombre, linea, extra=''):
         return (f'<li><a class="mega__item" href="{href}"{extra}><span class="mega__icono">{svg_icono(icono)}</span>'
                 f'<span><b>{nombre}</b><small>{linea}</small></span></a></li>')
     if lang == 'en':
-        aprende = [it(Lx('/work/docs/', lang), 'libro', t['manual_work'], 'Step by step for store teams' + nota),
-                   it(Lx('/sales/docs/', lang), 'libro', t['manual_sales'], 'Step by step for field reps' + nota),
-                   it(Lx('/check/docs/', lang), 'libro', t['manual_check'], 'Step by step for security guards' + nota),
-                   it('/llms.txt', 'documento', 'llms.txt', 'Zentrix explained for AI models')]
+        aprende = [it(Lx('/work/docs/', lang), 'libro', t['manual_work'], 'Step by step for store teams'),
+                   it(Lx('/sales/docs/', lang), 'libro', t['manual_sales'], 'Step by step for field reps'),
+                   it(Lx('/check/docs/', lang), 'libro', t['manual_check'], 'Step by step for security guards'),
+                   it(Lx('/', lang) + 'llms.txt', 'documento', 'llms.txt', 'Zentrix explained for AI models')]
         ayuda = [it(Lx('/soporte/', lang), 'ayuda', 'Support center', 'Questions, access, manuals and your data, for every app'),
                  it(Lx('/contacto/', lang), 'correo', t['contacto'], 'A person replies within one business day')]
         legal = [it(Lx('/legal/#privacidad', lang), 'escudo', 'Privacy', 'The policy of each app and of the website'),
@@ -258,11 +257,9 @@ def pie(ruta):
             prods.append(f'<li><a href="{Lx(href, lang)}">{icono_producto(clave, 20)}<span>{nombre}</span></a></li>')
     empresa = [(Lx('/soluciones/', lang), t['soluciones']), (Lx('/clientes/', lang), t['clientes']),
                (Lx('/nosotros/', lang), t['nosotros']), (Lx('/contacto/', lang), t['contacto'])]
-    es_lang = '' if lang == 'es' or not MULTI else ''
-    nota = t['nota_es'] if lang == 'en' else ''
-    recursos = [(Lx('/recursos/', lang), t['centro'], ''), (Lx('/work/docs/', lang), t['manual_work'] + nota, es_lang),
-                (Lx('/sales/docs/', lang), t['manual_sales'] + nota, es_lang),
-                (Lx('/check/docs/', lang), t['manual_check'] + nota, es_lang)]
+    recursos = [(Lx('/recursos/', lang), t['centro'], ''), (Lx('/work/docs/', lang), t['manual_work'], ''),
+                (Lx('/sales/docs/', lang), t['manual_sales'], ''),
+                (Lx('/check/docs/', lang), t['manual_check'], '')]
     # Legal y soporte: una sola página de soporte y de contacto; privacidad y términos van al índice
     # /legal/, que lista las políticas de cada app (sus URL no cambian: las declaran las tiendas).
     legal = [(Lx('/soporte/', lang), t['soporte']), (Lx('/contacto/', lang), t['contacto_l']),
@@ -304,14 +301,12 @@ def ajustar_head(s, ruta):
     s = re.sub(r'\n\s*<meta property="og:locale:alternate" content="[^"]*">', '', s)
     if MULTI and not ruta.endswith('404.html'):
         es, en = otro_idioma(ruta)
-        # Los capítulos de los manuales solo existen en español: sin hreflang.
-        alts = [] if es_capitulo_manual(ruta) else [('es', es), ('en', en), ('x-default', es)]
+        alts = [('es', es), ('en', en), ('x-default', es)]
         bloque = ''.join(f'\n  <link rel="alternate" hreflang="{h}" href="{DOMINIO}{u}">' for h, u in alts)
         s = re.sub(r'(<link rel="canonical" href="[^"]*">)', lambda m: m.group(1) + bloque, s, count=1)
-        if not es_capitulo_manual(ruta):
-            alt = 'en_US' if lang == 'es' else 'es_VE'
-            s = re.sub(r'(<meta property="og:locale" content="[^"]*">)',
-                       lambda m: m.group(1) + f'\n  <meta property="og:locale:alternate" content="{alt}">', s, count=1)
+        alt = 'en_US' if lang == 'es' else 'es_VE'
+        s = re.sub(r'(<meta property="og:locale" content="[^"]*">)',
+                   lambda m: m.group(1) + f'\n  <meta property="og:locale:alternate" content="{alt}">', s, count=1)
     s = re.sub(r'<html lang="[^"]*"', f'<html lang="{lang}"', s, count=1)
     # El menú móvil necesita JS: la clase se pone antes de pintar para que no salte.
     if 'classList.add(\'nav-js\')' not in s:
@@ -801,7 +796,6 @@ def pag_clientes(lang):
 def pag_recursos(lang):
     ruta = ruta_pagina('/recursos/', lang)
     en = lang == 'en'
-    nota = ' (in Spanish)' if en else ''
 
     def tarjeta(href, icono, titulo, texto, i, img=None):
         arte = (f'<img src="{img}" alt="" width="56" height="56" loading="lazy">' if img
@@ -811,9 +805,9 @@ def pag_recursos(lang):
     if en:
         grupos = [
             ('manuales', 'Manuals', 'Learn to use the apps.', [
-                (Lx('/work/docs/', lang), 'libro', 'Zentrix Work manual' + nota, 'Shifts, orders, picking, delivery, returns and settings, for store teams.', f'{MONO}/work_icono.svg'),
-                (Lx('/sales/docs/', lang), 'libro', 'Zentrix Sales manual' + nota, 'Route, visits, orders, collections and working offline, for field reps.', f'{MONO}/sales_icono.svg'),
-                (Lx('/check/docs/', lang), 'libro', 'Zentrix Check manual' + nota, 'Trucks out, receipts, keys, assets, incidents and working offline, for security guards.', f'{MONO}/check_icono.svg')]),
+                (Lx('/work/docs/', lang), 'libro', 'Zentrix Work manual', 'Shifts, orders, picking, delivery, returns and settings, for store teams.', f'{MONO}/work_icono.svg'),
+                (Lx('/sales/docs/', lang), 'libro', 'Zentrix Sales manual', 'Route, visits, orders, collections and working offline, for field reps.', f'{MONO}/sales_icono.svg'),
+                (Lx('/check/docs/', lang), 'libro', 'Zentrix Check manual', 'Trucks out, receipts, keys, assets, incidents and working offline, for security guards.', f'{MONO}/check_icono.svg')]),
             ('soporte', 'Support', 'When something doesn’t work.', [
                 (Lx('/soporte/#work', lang), 'ayuda', 'Zentrix Work support', 'Access, common questions and how to delete your account.', None),
                 (Lx('/soporte/#sales', lang), 'ayuda', 'Zentrix Sales support', 'Access, common questions and how to delete your account.', None),
@@ -1014,50 +1008,6 @@ def pag_legal(lang):
     return ruta, pagina(ruta, titulo, desc, ayuda.cuerpo_legal(lang, sys.modules[__name__]), css=('/assets/css/ayuda.css?v=1',))
 
 
-# Capítulos del manual de Zentrix Check (slug, título en inglés) para su portada en inglés.
-CAPS_CHECK_EN = [('entrar', 'Signing in'), ('encender', 'Clocking in and out'), ('hoy', 'The Today screen'),
-                 ('salida', 'A truck leaving'), ('recepcion', 'Receipts and route returns'),
-                 ('sin-documento', 'Movements without paperwork'), ('llaves', 'Keys'), ('activos', 'Assets and passes'),
-                 ('novedades', 'Incidents and calls'), ('sin-senal', 'Working without a signal'),
-                 ('administrador', 'The administrator console'), ('dudas', 'Questions')]
-
-
-def pag_manual_en(prod):
-    """Portada inglesa de un manual que solo existe en español."""
-    ruta = f'/en/{prod}/docs/'
-    nombre = {'work': 'Zentrix Work', 'sales': 'Zentrix Sales', 'check': 'Zentrix Check'}[prod]
-    if prod == 'check':
-        caps = CAPS_CHECK_EN
-        lead = 'The step-by-step guide for security guards: trucks leaving, receipts, keys, assets, incidents and working without a signal.'
-    elif prod == 'work':
-        caps = [('entrar', 'Signing in'), ('turno', 'Your shift'), ('tu-dia', 'Your day'), ('preparar', 'Picking an order'),
-                ('entregar', 'Delivering'), ('reparto', 'Delivery runs'), ('devoluciones', 'Returns'), ('llamada', 'Calls'),
-                ('permisos', 'Permissions'), ('ajustes', 'Settings'), ('dudas', 'Questions')]
-        lead = 'The step-by-step guide for store teams: shifts, orders, picking with the scanner, delivery and returns.'
-    else:
-        caps = [('entrar', 'Signing in'), ('inicio', 'Home'), ('ruta', 'Your route'), ('visita', 'The visit'), ('clientes', 'Customers'),
-                ('catalogo', 'Catalog'), ('cobrar', 'Collecting payments'), ('facturas', 'Invoices'), ('conversacion', 'Conversations'),
-                ('actividad', 'Activity'), ('sin-internet', 'Working offline'), ('dudas', 'Questions')]
-        lead = 'The step-by-step guide for field reps: route, visits, orders, collections and working without signal.'
-    lis = ''.join(f'<li><a href="/{prod}/docs/{c}.html" hreflang="es" lang="es">{t}</a> <span class="apagado">· {c}.html</span></li>' for c, t in caps)
-    h = heroe(f'{nombre} manual', f'The {nombre} manual.', lead,
-              f'<a class="boton boton--principal" href="/{prod}/docs/" hreflang="es" lang="es">Open the manual (Spanish)</a><a class="boton boton--alterno" href="{L(f"/{prod}/", "en")}">About {nombre}</a>',
-              f'<div class="mosaico mosaico--uno"><span class="mosaico__celda mosaico__celda--teja mosaico__celda--grande">{icono_producto(prod, 140, lazy=False)}</span></div>')
-    cuerpo = f'''{h}
-
-<section class="seccion" aria-labelledby="capitulos-t">
-  <div class="envoltura">
-    <div class="aviso-marca revela"><strong>The manual is written in Spanish.</strong> The app itself is in Spanish too. Your browser can translate any chapter, and if you need help in English, write to <a href="mailto:soporte@zentrix.company">soporte@zentrix.company</a>.</div>
-    <div class="cabeza revela">
-      <span class="antetitulo">Chapters</span>
-      <h2 id="capitulos-t">What’s inside.</h2>
-    </div>
-    <ol class="capitulos revela">{lis}</ol>
-  </div>
-</section>'''
-    return ruta, pagina(ruta, f'{nombre} manual — Zentrix', lead, cuerpo, og=f'og-{prod}.png')
-
-
 # ── Redirecciones ───────────────────────────────────────────────────────────
 REDIRECCIONES = [
     # (ruta vieja, ruta nueva, desde, motivo)
@@ -1157,14 +1107,15 @@ def ruta_de(f):
 
 
 # ── llms.txt (https://llmstxt.org; el sitemap lo escribe herramientas/sitemap.py) ──
-def capitulos(prod):
-    """(título, ruta) de los capítulos del manual, leídos del <title> de cada página."""
+def capitulos(prod, lang='es'):
+    """(título, ruta) de los capítulos del manual en ese idioma, leídos del <title> de cada página."""
+    pre = '/en' if lang == 'en' else ''
     out = []
-    for f in sorted((RAIZ / prod / 'docs').glob('*.html')):
+    for f in sorted((RAIZ / pre.lstrip('/') / prod / 'docs').glob('*.html')):
         if f.name == 'index.html':
             continue
         m = re.search(r'<title>([^<]*)</title>', f.read_text(encoding='utf-8'))
-        out.append(((m.group(1) if m else f.stem).split(' — ')[0].replace('&amp;', '&'), f'/{prod}/docs/{f.name}'))
+        out.append(((m.group(1) if m else f.stem).split(' — ')[0].replace('&amp;', '&'), f'{pre}/{prod}/docs/{f.name}'))
     return out
 
 
@@ -1181,7 +1132,7 @@ def llms(lang='es'):
     equipo = '\n'.join(f'- {n} — {c}' for _, n, c, _, _ in C.EQUIPO)
     manuales = []
     for prod, nombre in (('work', 'Zentrix Work'), ('sales', 'Zentrix Sales'), ('check', 'Zentrix Check')):
-        manuales += [li(f'{t} — {nombre}', DOMINIO + r) for t, r in capitulos(prod)]
+        manuales += [li(f'{t} — {nombre}', DOMINIO + r) for t, r in capitulos(prod, lang)]
     if en:
         legal = [li('Legal index', u('/legal/'), 'every privacy policy and terms'),
                  li('Zentrix Work privacy policy', u('/work/privacidad/')), li('Zentrix Work terms', u('/work/terminos/')),
@@ -1223,9 +1174,9 @@ Slogan: «Technology to work better». eqnio.com redirects to zentrix.company. S
 
 ## Manuals
 
-- [Zentrix Work operator manual]({u('/work/docs/')}): in Spanish
-- [Zentrix Sales rep manual]({u('/sales/docs/')}): in Spanish
-- [Zentrix Check guard manual]({u('/check/docs/')}): in Spanish
+- [Zentrix Work operator manual]({u('/work/docs/')}): shifts, orders, picking, delivery, delivery runs and returns
+- [Zentrix Sales rep manual]({u('/sales/docs/')}): route, visits, orders, collections and working offline
+- [Zentrix Check guard manual]({u('/check/docs/')}): trucks leaving, receipts, keys, assets, incidents and working without a signal
 
 ## Optional
 
@@ -1389,7 +1340,11 @@ def datos_404():
     for prod, nombre in (('work', 'Zentrix Work'), ('sales', 'Zentrix Sales'), ('check', 'Zentrix Check')):
         for t, r in capitulos(prod):
             rutas['es'].append([r, f'{t} — Manual de {nombre}'])
+        for t, r in capitulos(prod, 'en'):
+            rutas['en'].append([r, f'{t} — {nombre} manual'])
     par_ = {es: en for es, en in PARES if not es.endswith('404.html')}
+    for prod in ('work', 'sales', 'check'):
+        par_.update({r: par(r) for _, r in capitulos(prod)})
     return json.dumps({'rutas': rutas, 'par': par_}, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
 
 
@@ -1495,10 +1450,6 @@ def generar():
         for clave, slug_es, _, _ in SOLUCIONES:
             r, s = pag_solucion(clave, slug_es, lang)
             SALIDA[fichero_de(r)] = s
-    if MULTI:
-        for prod in ('work', 'sales', 'check'):
-            r, s = pag_manual_en(prod)
-            SALIDA[fichero_de(r)] = s
     for vieja, nueva, *_ in REDIRECCIONES:
         SALIDA[fichero_de(vieja)] = pagina_redireccion(vieja, nueva)
     for lang in langs:
@@ -1562,34 +1513,79 @@ def main():
         sys.exit(1)
 
 
-def pares():
+def renderizar():
+    """{fichero: HTML final} de todas las páginas, tal como las dejaría `main()` (sin escribir nada)."""
     generar()
-    rutas = set()
-    for f in RAIZ.rglob('*.html'):
-        if any(p.startswith('.') or p == 'herramientas' for p in f.relative_to(RAIZ).parts):
+    out = {f: (procesar(s, ruta_de(f)) if 'http-equiv="refresh"' not in s else s) for f, s in SALIDA.items()}
+    if MULTI:
+        f404 = fichero_de('/404.html')
+        out[f404] = e404_bilingue(out[f404], out[fichero_de('/en/404.html')])
+    for f in sorted(RAIZ.rglob('*.html')):
+        if f in out or any(p.startswith('.') or p == 'herramientas' for p in f.relative_to(RAIZ).parts):
             continue
-        if 'http-equiv="refresh"' in f.read_text(encoding='utf-8'):
+        s = f.read_text(encoding='utf-8')
+        out[f] = s if 'http-equiv="refresh"' in s else procesar(s, ruta_de(f))
+    return out
+
+
+RE_ALT = re.compile(r'<link rel="alternate" hreflang="([^"]+)" href="([^"]+)">')
+RE_SELECTOR = re.compile(r'<a href="([^"]*)" lang="(es|en)" hreflang="\2"[^>]*data-idioma="\2"')
+RE_HREF = re.compile(r'<a\b[^>]*?\shref="(/[^"#?]*)')
+
+
+def pares():
+    """Comprueba que TODO el sitio es bilingüe. Sale con 1 si hay algún fallo:
+
+    - toda página de contenido (no redirección, no la 404) tiene su par en el otro idioma
+      (`par()` de sitio.py: PARES + capítulos de los manuales con ruta espejo) y ese par existe;
+    - su `<head>` lleva hreflang es/en/x-default, se incluye a sí misma y apunta al par;
+    - el hreflang es recíproco: el par devuelve el enlace a esta página;
+    - el selector ES/EN (cabecera y pie) lleva al par, no a la portada del otro idioma;
+    - una página inglesa no enlaza a una página española que tiene versión inglesa (ni al revés).
+
+    Antes solo miraba la tabla PARES y daba por buenos los capítulos «solo en español» y las
+    páginas sin hreflang: por eso decía 0 huérfanas con 35 capítulos sin traducir."""
+    paginas = renderizar()
+    contenido = {}
+    for f, s in paginas.items():
+        r = ruta_de(f)
+        if 'http-equiv="refresh"' in s or r.endswith('404.html'):
             continue
-        rutas.add(ruta_de(f))
-    for f in SALIDA:
-        if 'http-equiv="refresh"' not in SALIDA[f]:
-            rutas.add(ruta_de(f))
-    huerfanas, capitulos, ok = [], [], []
-    for r in sorted(rutas):
+        contenido[r] = s
+    huerfanas, errores, ok = [], [], []
+    for r in sorted(contenido):
+        lang = idioma_de(r)
         p = par(r)
-        if es_capitulo_manual(r):
-            capitulos.append(f'{r} → {p} (capítulo solo en español)')
-        elif p and p in rutas:
-            if idioma_de(r) == 'es':
-                ok.append(f'{r} ↔ {p}')
-        else:
-            huerfanas.append(f'{r} (par esperado: {p})')
+        if not p or p not in contenido:
+            huerfanas.append(f'{r} (par esperado: {p or "ninguno: añádelo a PARES de sitio.py"})')
+            continue
+        if lang == 'es':
+            ok.append(f'{r} ↔ {p}')
+        s = contenido[r]
+        cab = s[:s.index('</head>')]
+        alt = dict(RE_ALT.findall(cab))
+        es, en = (r, p) if lang == 'es' else (p, r)
+        esperado = {'es': DOMINIO + es, 'en': DOMINIO + en, 'x-default': DOMINIO + es}
+        if alt != esperado:
+            errores.append(f'{r}: hreflang {alt or "ausente"} ≠ {esperado}')
+        vuelta = dict(RE_ALT.findall(contenido[p][:contenido[p].index('</head>')]))
+        if vuelta.get(lang) != DOMINIO + r:
+            errores.append(f'{r}: hreflang no recíproco ({p} apunta a {vuelta.get(lang)})')
+        sel = RE_SELECTOR.findall(s)
+        if not sel or any(h != (es if l == 'es' else en) for h, l in sel):
+            errores.append(f'{r}: selector ES/EN {sorted(set(sel))} no lleva a {es} / {en}')
+        cuerpo = s[s.index('<body'):]
+        for h in sorted(set(RE_HREF.findall(cuerpo))):
+            if h in contenido and idioma_de(h) != lang and par(h) in contenido and \
+                    h not in (es, en) and not re.search(r'data-idioma="' + idioma_de(h), cuerpo.split(f'href="{h}"', 1)[1][:200]):
+                errores.append(f'{r}: enlaza a {h} (otro idioma; su par es {par(h)})')
     print(f'pares: {len(ok)}')
     print('\n'.join('  ' + x for x in ok))
-    print(f'capítulos de manual (en inglés llevan a la portada del manual): {len(capitulos)}')
     print(f'HUÉRFANAS: {len(huerfanas)}')
     print('\n'.join('  ' + x for x in huerfanas))
-    return len(huerfanas)
+    print(f'ERRORES de hreflang, selector o enlaces: {len(errores)}')
+    print('\n'.join('  ' + x for x in errores))
+    return len(huerfanas) + len(errores)
 
 
 if __name__ == '__main__':

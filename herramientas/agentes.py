@@ -103,13 +103,13 @@ Zentrix Sales, or how to contact the company.
 3. `{DOMINIO}/sitemap.xml`: every public URL, with its last modification date.
 4. The page itself. Cite the canonical URL (`<link rel="canonical">`) of the page you used.
 
-The site is mainly in Spanish; Zentrix Sales also has English pages under `{DOMINIO}/sales/en/`.
+The whole site is in Spanish and English: Spanish at the root, English under `{DOMINIO}/en/` with mirror paths (each page links its counterpart with `hreflang`). English overview: `{DOMINIO}/en/llms.txt`.
 
 ## Products
 
 {productos}
 
-User manuals: Zentrix Work at {DOMINIO}/work/docs/ and Zentrix Sales at {DOMINIO}/sales/docs/.
+User manuals: Zentrix Work at {DOMINIO}/work/docs/, Zentrix Sales at {DOMINIO}/sales/docs/ and Zentrix Check at {DOMINIO}/check/docs/ (English: {DOMINIO}/en/work/docs/, {DOMINIO}/en/sales/docs/ and {DOMINIO}/en/check/docs/).
 Support center for every app, including how to delete a Zentrix Work, Zentrix Sales or Zentrix Check account:
 {DOMINIO}/soporte/ (English: {DOMINIO}/en/support/). Privacy policies and terms of each app: {DOMINIO}/legal/.
 
