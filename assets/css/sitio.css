@@ -843,6 +843,10 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .tienda img { display: block; height: 48px; width: auto; }
 .tienda:focus-visible { outline-offset: 4px; }
 .botones .tiendas + .boton { margin-left: 4px; }
+/* ID de la app bajo la fila de botones (en .botones va a su propia línea, al final) */
+.tienda-id { display: block; flex-basis: 100%; order: 9; margin-top: 4px; font-size: .8125rem; opacity: .8; }
+.tienda-id code { font-size: inherit; background: transparent; color: inherit; padding: 0; user-select: all; }
+.botones .tienda-id + .boton { margin-left: 4px; }
 
 /* =====================================================================
    Cinta de partners y aliados (logos en blanco) y cinta de frases

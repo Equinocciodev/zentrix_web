@@ -14,6 +14,8 @@
   },
   "check": {
     "nombre": "Zentrix Check",
-    "android": "com.leiros.check"
+    "android": "com.leiros.check",
+    "play": "https://play.google.com/store/apps/details?id=com.leiros.check",
+    "mostrar_id": true
   }
 }
