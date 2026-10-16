@@ -15,6 +15,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/ai/"/>
   </url>
   <url>
+    <loc>https://zentrix.company/check/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/check/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/check/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/check/"/>
+  </url>
+  <url>
     <loc>https://zentrix.company/clientes/</loc>
     <lastmod>2026-10-14</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/clientes/"/>
@@ -107,7 +114,7 @@
   </url>
   <url>
     <loc>https://zentrix.company/soporte/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/soporte/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/support/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/soporte/"/>
@@ -127,6 +134,20 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/work/"/>
   </url>
   <url>
+    <loc>https://zentrix.company/check/privacidad/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/check/privacidad/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/check/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/check/privacidad/"/>
+  </url>
+  <url>
+    <loc>https://zentrix.company/check/terminos/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/check/terminos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/check/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/check/terminos/"/>
+  </url>
+  <url>
     <loc>https://zentrix.company/en/about/</loc>
     <lastmod>2026-10-14</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/nosotros/"/>
@@ -139,6 +160,13 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/ai/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/ai/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/ai/"/>
+  </url>
+  <url>
+    <loc>https://zentrix.company/en/check/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/check/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/check/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/check/"/>
   </url>
   <url>
     <loc>https://zentrix.company/en/cloud/</loc>
@@ -219,7 +247,7 @@
   </url>
   <url>
     <loc>https://zentrix.company/en/support/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/soporte/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/support/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/soporte/"/>
@@ -240,62 +268,62 @@
   </url>
   <url>
     <loc>https://zentrix.company/sales/docs/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/sales/docs/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/sales/docs/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/sales/docs/"/>
   </url>
   <url>
     <loc>https://zentrix.company/sales/docs/actividad.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://zentrix.company/sales/docs/catalogo.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://zentrix.company/sales/docs/clientes.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://zentrix.company/sales/docs/cobrar.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://zentrix.company/sales/docs/conversacion.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://zentrix.company/sales/docs/dudas.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://zentrix.company/sales/docs/entrar.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://zentrix.company/sales/docs/facturas.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://zentrix.company/sales/docs/inicio.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://zentrix.company/sales/docs/ruta.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://zentrix.company/sales/docs/sin-internet.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://zentrix.company/sales/docs/visita.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://zentrix.company/sales/privacidad/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/sales/privacidad/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/sales/privacy/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/sales/privacidad/"/>
@@ -351,18 +379,18 @@
   </url>
   <url>
     <loc>https://zentrix.company/work/docs/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/work/docs/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/work/docs/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/work/docs/"/>
   </url>
   <url>
     <loc>https://zentrix.company/work/docs/ajustes.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://zentrix.company/work/docs/devoluciones.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://zentrix.company/work/docs/dudas.html</loc>
@@ -370,27 +398,27 @@
   </url>
   <url>
     <loc>https://zentrix.company/work/docs/entrar.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://zentrix.company/work/docs/entregar.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://zentrix.company/work/docs/llamada.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://zentrix.company/work/docs/permisos.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://zentrix.company/work/docs/preparar.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://zentrix.company/work/docs/reparto.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://zentrix.company/work/docs/tu-dia.html</loc>
@@ -398,7 +426,7 @@
   </url>
   <url>
     <loc>https://zentrix.company/work/docs/turno.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://zentrix.company/work/privacidad/</loc>
@@ -415,6 +443,27 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/work/terminos/"/>
   </url>
   <url>
+    <loc>https://zentrix.company/en/check/docs/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/check/docs/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/check/docs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/check/docs/"/>
+  </url>
+  <url>
+    <loc>https://zentrix.company/en/check/privacy/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/check/privacidad/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/check/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/check/privacidad/"/>
+  </url>
+  <url>
+    <loc>https://zentrix.company/en/check/terms/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/check/terminos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/check/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/check/terminos/"/>
+  </url>
+  <url>
     <loc>https://zentrix.company/en/sales/docs/</loc>
     <lastmod>2026-10-14</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/sales/docs/"/>
@@ -423,7 +472,7 @@
   </url>
   <url>
     <loc>https://zentrix.company/en/sales/privacy/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://zentrix.company/sales/privacidad/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://zentrix.company/en/sales/privacy/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://zentrix.company/sales/privacidad/"/>
