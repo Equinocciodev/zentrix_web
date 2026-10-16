@@ -736,6 +736,26 @@ El vigilante abre la llegada, revisa el precinto si es un contenedor, compara lo
 ### Algo que sale sin papel
 Una herramienta, una caja, un material. No hay documento, pero queda el registro: qué salió, a qué hora y qué vigilante lo anotó.
 
+Pantalla por pantalla
+
+### Así se ve la garita en el teléfono.
+
+Botones grandes, dibujos y frases cortas, para trabajar de pie y con prisa.
+
+Hoy: lo que sale, llega y sigue adentro.
+
+Comparas el chofer con lo que dice Odoo.
+
+Cuentas la carga, o la llenas y la revisas.
+
+Revisas cada paso antes de firmar.
+
+Una novedad, con un toque.
+
+El administrador solo mira.
+
+Capturas reales de la app, con una sede y datos de prueba. Los textos de la app están en español.
+
 Seguridad y privacidad
 
 ### Un acta que no se puede cambiar.
@@ -2599,6 +2619,26 @@ The guard opens the arrival, checks the seal if it is a container, compares what
 
 ### Something leaving without paperwork
 A tool, a box, some material. There is no document, but there is a record: what left, when and which guard logged it.
+
+Screen by screen
+
+### This is the gate on the phone.
+
+Big buttons, pictures and short sentences, to work standing up and in a hurry.
+
+Today: what leaves, arrives and stays inside.
+
+You compare the driver with what Odoo says.
+
+You count the load, or fill it in and check it.
+
+You review every step before signing.
+
+An incident, in one tap.
+
+The administrator only looks.
+
+Real screenshots of the app, with a test site and test data. The app is in Spanish.
 
 Security and privacy
 
@@ -8359,6 +8399,8 @@ Abajo hay cuatro pestañas: Hoy, Movimientos, Activos y Más. Los datos dicen de
 
 ### Hoy
 
+La consola: solo para mirar. Sede de prueba.
+
 - Mosaicos: Salidas, Llegadas, Retornos, Diferencias y Encendidos, con su número.
 
 - Banda roja, si hay: «1 diferencia crítica abierta» o «Novedades graves abiertas: …». Tócala para ir a ellas.
@@ -8702,6 +8744,8 @@ Hoy es tu lista de trabajo: lo que sale, lo que llega y lo que está adentro de 
 
 ### Lo que ves
 
+La pestaña Salen, con datos de prueba.
+
 - Tres pestañas: Salen, Llegan y Adentro, cada una con su número.
 
 - El botón Escanear, el más grande. Lee guías, productos, etiquetas de activos y llaveros.
@@ -8814,6 +8858,8 @@ La app de la garita: revisas lo que entra y sale, firmas con tu PIN y queda un a
 Zentrix Check es la app de Seguridad para la garita. Con ella revisas los camiones que salen y los que llegan, lo que entra o sale sin papeles, las llaves, los activos y las novedades.
 
 Cada revisión termina con tu firma: tu PIN. Lo firmado queda como un acta y ya no se edita.
+
+Hoy: lo que sale, lo que llega y lo que sigue adentro. Datos de prueba.
 
 ### Seguridad da fe
 
@@ -8972,6 +9018,8 @@ Una novedad es algo que pasó en la garita y no depende de un camión ni de un d
 - «Dilo corto». Dos o tres palabras. Escríbelas o toca el micrófono del teclado y habla. La app no graba audio.
 
 - Firma con tu PIN. Final: «Novedad anotada». Toca Hoy.
+
+Eliges qué pasó tocando un dibujo.
 
 Sin nombres ni cédulas
 No escribas nombres, cédulas ni teléfonos. Si escribes seis números seguidos, la app no te deja seguir: «Sin números largos. No escribas cédulas ni teléfonos.»
@@ -9183,6 +9231,8 @@ Si Odoo todavía no tiene facturas: «Odoo todavía no tiene facturas para esta 
 
 ### 4. Productos
 
+Productos después de «Llenar»: lo llenado no cuenta como escaneado.
+
 Tienes dos caminos. Puedes usar los dos.
 
 - Toca «Llenar». Pone en cada producto la cantidad que dice Odoo. La app avisa «Llenamos 5 con lo de Odoo» y te deja Deshacer unos segundos. Lo llenado queda «Llenado»: no cuenta como revisado.
@@ -9217,6 +9267,8 @@ Llenar es rápido, pero no es revisar. Si firmas con productos en «Llenado», e
 En algunas sedes este paso empieza por «¿Cabina vacía?»: mira detrás de los asientos y en la litera. Las cosas del chofer no cuentan. Si hay cajas o productos, toca No y toma una foto sin personas. Sale «Mercancía en cabina»: es una diferencia crítica.
 
 ### 7. Cerrar y firmar
+
+Revisa y firma: el estado de cada paso antes de firmar.
 
 - Revisa los pasos. «Revisa y firma» muestra una fila por paso con su estado: «Completo», «Falta», «Con salvedad», «Con diferencia» o «Crítica». Toca una fila para corregirla y vuelves aquí.
 
