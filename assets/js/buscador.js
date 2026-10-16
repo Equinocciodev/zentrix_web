@@ -19,6 +19,7 @@
   var M = '/assets/img/logos/monogramas/';
   var ICONOS = {
     'Zentrix Work': M + 'work_icono.svg', 'Zentrix Sales': M + 'sales_icono.svg',
+    'Zentrix Check': M + 'check_icono.svg',
     'Zentrix AI': M + 'ai_icono.svg', 'Zentrix Logistics': M + 'logistica_icono.svg',
     'Zentrix Cloud': M + 'cloud_icono.svg', 'Zentrix Labs': M + 'labs_icono.svg',
     'Zentrix Software': M + 'software_icono.svg', 'Traza': '/assets/img/logos/traza/traza_icono-64.webp',
@@ -54,6 +55,7 @@
   var ATAJOS = LANG === 'en' ? [
     ['Zentrix Work', 'The store team', 'Zentrix Work', ['/en/work/', '/work/'], 'work store team shift'],
     ['Zentrix Sales', 'The sales force', 'Zentrix Sales', ['/en/sales/', '/sales/en/', '/sales/'], 'sales seller vendor'],
+    ['Zentrix Check', 'The security gate', 'Zentrix Check', ['/en/check/', '/check/'], 'check gate security guard access truck'],
     ['Zentrix AI', 'Applied intelligence', 'Zentrix AI', ['/en/ai/', '/ai/'], 'ai artificial intelligence'],
     ['Zentrix Logistics', 'Dispatch and delivery', 'Zentrix Logistics', ['/en/logistics/', '/logistics/'], 'logistics logistica delivery dispatch'],
     ['Zentrix Cloud', 'Infrastructure', 'Zentrix Cloud', ['/en/cloud/', '/cloud/'], 'cloud hosting infrastructure'],
@@ -70,6 +72,7 @@
   ] : [
     ['Zentrix Work', 'El equipo de tienda', 'Zentrix Work', ['/work/'], 'work trabajo tienda equipo turno'],
     ['Zentrix Sales', 'La fuerza de ventas', 'Zentrix Sales', ['/sales/'], 'sales ventas vendedor vendedores'],
+    ['Zentrix Check', 'La garita de seguridad', 'Zentrix Check', ['/check/'], 'check garita seguridad vigilante acceso camión'],
     ['Zentrix AI', 'Inteligencia aplicada', 'Zentrix AI', ['/ai/'], 'ai ia inteligencia artificial'],
     ['Zentrix Logistics', 'Despacho y reparto', 'Zentrix Logistics', ['/logistics/'], 'logistics logística reparto despacho'],
     ['Zentrix Cloud', 'Infraestructura', 'Zentrix Cloud', ['/cloud/'], 'cloud nube hospedaje infraestructura servidores'],
@@ -85,6 +88,8 @@
     ['Soporte de Zentrix Sales', 'Soporte', 'Zentrix Sales', ['/sales/soporte/'], 'soporte ayuda sales eliminar cuenta'],
     ['Privacidad de Zentrix Work', 'Legal', 'Zentrix Work', ['/work/privacidad/'], 'privacidad datos política work'],
     ['Privacidad de Zentrix Sales', 'Legal', 'Zentrix Sales', ['/sales/privacidad/'], 'privacidad datos política sales'],
+    ['Soporte de Zentrix Check', 'Soporte', 'Zentrix Check', ['/soporte/#check'], 'soporte ayuda check garita eliminar cuenta'],
+    ['Privacidad de Zentrix Check', 'Legal', 'Zentrix Check', ['/check/privacidad/'], 'privacidad datos política check garita'],
     ['Soluciones', 'Lo que hacemos', 'Zentrix', ['/soluciones/'], 'soluciones servicios'],
     ['Odoo en Venezuela', 'Implementación', 'Zentrix Software', ['/soluciones/odoo-venezuela/', '/software/'], 'odoo erp implementación localización venezuela'],
     ['Contacto', 'hola@zentrix.company', 'Zentrix', ['/contacto/', '/sales/contacto/', '/#contacto'], 'contacto demostración demo correo whatsapp']

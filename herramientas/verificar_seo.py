@@ -33,7 +33,7 @@ AGENTE = 'zentrix-verificar-seo/1.0'
 REDIRECCIONES = ['/logistica/']
 SOLUCIONES = ['/ai/', '/cloud/', '/labs/', '/logistics/', '/software/', '/traza/']
 DIRECCIONES = set()  # PostalAddress de Organization vistas en el JSON-LD
-APPS = ['/work/', '/sales/', '/sales/en/', '/en/work/', '/en/sales/']
+APPS = ['/work/', '/sales/', '/sales/en/', '/en/work/', '/en/sales/', '/check/', '/en/check/']
 
 
 class Pagina(HTMLParser):

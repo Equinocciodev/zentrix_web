@@ -52,6 +52,10 @@ PAGINAS = {
                 'Zentrix Sales — App de fuerza de ventas y cobranza',
                 'Zentrix Sales, app de fuerza de ventas para Android y iPhone: ruta, visitas, '
                 'pedidos y cobranza de tus vendedores de campo, con o sin señal, conectada a Odoo®.'),
+    '/check/': ('app de control de acceso y garita',
+                'Zentrix Check — App de garita y control de acceso',
+                'Zentrix Check, la app Android de la garita: el vigilante revisa cada camión contra Odoo®, '
+                'toma fotos, precinta y firma un acta que no se puede cambiar, con o sin señal.'),
     '/en/sales/': ('field sales app',
                    'Zentrix Sales — Field sales app for Android and iPhone',
                    'Zentrix Sales is the field sales app for Android and iPhone: route, orders, '
@@ -138,6 +142,17 @@ PAGINAS = {
     '/en/sales/terms/': (None, 'Terms of service — Zentrix Sales',
                              'Terms of service of Zentrix Sales, the field sales app for Android and iPhone: who '
                              'contracts it, who uses it every day and which rules apply.'),
+    '/check/docs/': ('manual del vigilante de garita',
+                     'Manual del vigilante — Zentrix Check',
+                     'Cómo se usa Zentrix Check en la garita, pantalla a pantalla: entrar, encenderse, sacar un camión, '
+                     'recibir mercancía, llaves, activos, novedades y trabajar sin señal.'),
+    # Zentrix Check: legales
+    '/check/privacidad/': (None, 'Política de privacidad — Zentrix Check',
+                           'Qué datos registra Zentrix Check, la app de la garita de seguridad, para qué, dónde '
+                           'se guardan, quién los ve y cómo pedir su acceso, corrección o eliminación.'),
+    '/check/terminos/': (None, 'Términos de uso — Zentrix Check',
+                         'Términos de uso de Zentrix Check, la app Android de la garita: quién puede usarla, '
+                         'cómo se da la cuenta del vigilante y qué reglas aplican a las actas.'),
     # Zentrix Work: legales
     '/work/privacidad/': (None, 'Política de privacidad — Zentrix Work',
                           'Qué datos trata Zentrix Work, la app del equipo de tienda, para qué, dónde se '
@@ -206,6 +221,18 @@ PAGINAS.update({
     '/en/work/': ('store team app',
         'Zentrix Work — The app for store and delivery teams',
         'Zentrix Work, the Android app for store teams: work lands on the phone to pick orders, deliver, run delivery routes and take returns during the shift.'),
+    '/en/check/': ('gate and access control app',
+        'Zentrix Check — Security gate and access control app',
+        'Zentrix Check, the Android app for the security gate: guards check every truck against Odoo®, take photos, seal and sign a record that cannot be changed.'),
+    '/en/check/docs/': ('Zentrix Check manual',
+        'Zentrix Check manual — Step by step for security guards',
+        'The Zentrix Check manual for security guards: signing in, trucks leaving, receipts, keys, assets, incidents and working offline. The chapters are in Spanish.'),
+    '/en/check/privacy/': (None,
+        'Privacy policy — Zentrix Check',
+        'What the Zentrix Check gate app records, why, who sees it and how it is protected, and how to ask for access to your data, its correction or its deletion.'),
+    '/en/check/terms/': (None,
+        'Terms of use — Zentrix Check',
+        'The terms of use of the Zentrix Check app for security guards: what it is for, what you agree to when using it, the records it keeps and who provides it.'),
     '/en/ai/': ('AI for business',
         'Zentrix AI — Applied artificial intelligence for business',
         'Zentrix AI connects your company’s knowledge and systems to AI agents and assistants that query, analyze and act, with role-based permissions for each user.'),
@@ -365,8 +392,10 @@ def organizacion():
 
 NOMBRES_SECCION = {
     'es': {'work': ('Zentrix Work', 'Manual del operador'), 'sales': ('Zentrix Sales', 'Manual del vendedor'),
+           'check': ('Zentrix Check', 'Manual del vigilante'),
            'soluciones': ('Soluciones', None)},
     'en': {'work': ('Zentrix Work', 'Operator manual'), 'sales': ('Zentrix Sales', 'Sales rep manual'),
+           'check': ('Zentrix Check', 'Guard manual'),
            'solutions': ('Solutions', None)},
 }
 
@@ -443,6 +472,17 @@ def jsonld(ruta, titulo, descripcion, cuerpo, lang):
             'installUrl': tiendas, 'sameAs': tiendas,
             'publisher': org_ref(),
         })
+    elif plantilla == '/check/':
+        # Sin URL de tienda hasta que la ficha de Google Play esté publicada (productos.json).
+        app = {
+            '@type': 'SoftwareApplication', '@id': url + '#app', 'name': 'Zentrix Check',
+            'applicationCategory': 'BusinessApplication', 'operatingSystem': 'Android',
+            'description': descripcion, 'url': url, 'inLanguage': lang,
+            'image': SITIO + '/assets/img/check-icono-512.png', 'publisher': org_ref(),
+        }
+        if _TIENDAS['check'].get('play'):
+            app['installUrl'] = app['sameAs'] = [_TIENDAS['check']['play']]
+        grafo.append(app)
     elif plantilla in SERVICIOS or plantilla in SOLUCIONES or re.match(r'^/solutions/[^/]+/$', plantilla):
         n, tipo = SERVICIOS.get(plantilla) or (nombre, SOLUCIONES.get(plantilla, nombre))
         if lang == 'en':

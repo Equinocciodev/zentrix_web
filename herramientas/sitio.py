@@ -30,6 +30,10 @@ PARES = [
     ('/sales/docs/', '/en/sales/docs/'),
     ('/sales/privacidad/', '/en/sales/privacy/'),
     ('/sales/terminos/', '/en/sales/terms/'),
+    ('/check/', '/en/check/'),
+    ('/check/docs/', '/en/check/docs/'),
+    ('/check/privacidad/', '/en/check/privacy/'),
+    ('/check/terminos/', '/en/check/terms/'),
     ('/ai/', '/en/ai/'),
     ('/logistics/', '/en/logistics/'),
     ('/cloud/', '/en/cloud/'),
@@ -62,18 +66,19 @@ def par(ruta):
         return ES_A_EN[ruta]
     if ruta in EN_A_ES:
         return EN_A_ES[ruta]
-    for prod in ('work', 'sales'):
+    for prod in ('work', 'sales', 'check'):
         if ruta.startswith(f'/{prod}/docs/'):
             return f'/en/{prod}/docs/'
     return None
 
 
 def es_capitulo_manual(ruta):
-    return any(ruta.startswith(f'/{p}/docs/') and ruta != f'/{p}/docs/' for p in ('work', 'sales'))
+    return any(ruta.startswith(f'/{p}/docs/') and ruta != f'/{p}/docs/' for p in ('work', 'sales', 'check'))
 
 
 # Anclas que cambian de nombre en inglés (/soporte/ y /legal/)
 ANCLAS_EN = {'eliminar-cuenta-work': 'delete-account-work', 'eliminar-cuenta-sales': 'delete-account-sales',
+             'eliminar-cuenta-check': 'delete-account-check',
              'privacidad': 'privacy', 'terminos': 'terms', 'otros': 'others', 'contactar': 'reach-us'}
 
 
@@ -93,6 +98,7 @@ PRODUCTOS = [
     # clave, ruta ES, nombre, descripción ES, descripción EN
     ('work', '/work/', 'Zentrix Work', 'El equipo de tienda', 'Store teams'),
     ('sales', '/sales/', 'Zentrix Sales', 'La fuerza de ventas', 'Field sales'),
+    ('check', '/check/', 'Zentrix Check', 'La garita de seguridad', 'The security gate'),
     ('ai', '/ai/', 'Zentrix AI', 'Inteligencia aplicada', 'Applied intelligence'),
     ('logistica', '/logistics/', 'Zentrix Logistics', 'Del almacén a la puerta', 'Warehouse to doorstep'),
     ('cloud', '/cloud/', 'Zentrix Cloud', 'Infraestructura', 'Infrastructure'),
@@ -166,6 +172,7 @@ T = {
         'nosotros': 'Nosotros', 'contacto': 'Contacto', 'legal': 'Legal y soporte', 'externo': ' (se abre en otra pestaña)',
         'lema': 'Tecnología para trabajar mejor.', 'suite': 'La suite de Zentrix',
         'manual_work': 'Manual de Zentrix Work', 'manual_sales': 'Manual de Zentrix Sales',
+        'manual_check': 'Manual de Zentrix Check',
         'privacidad': 'Privacidad', 'soporte': 'Soporte', 'terminos': 'Términos', 'contacto_l': 'Contacto',
         'copy': '© 2026 Zentrix®. Todos los derechos reservados.', 'odoo': 'Odoo® conserva su marca y propiedad.',
         'idioma': 'Idioma', 'nota_es': '', 'principal': 'Principal', 'menu': 'Menú', 'cerrar': 'Cerrar el menú',
@@ -175,6 +182,7 @@ T = {
         'llms': 'Zentrix para modelos de IA (llms.txt)', 'centro': 'Centro de recursos',
         'empresa': 'Empresa', 'casos': 'Clientes y casos',
         'soporte_work': 'Soporte de Zentrix Work', 'soporte_sales': 'Soporte de Zentrix Sales',
+        'soporte_check': 'Soporte de Zentrix Check',
         'privacidad_terminos': 'Privacidad y términos', 'hablemos': 'Hablemos',
         'lang_es': 'Español', 'lang_en': 'English',
     },
@@ -183,6 +191,7 @@ T = {
         'nosotros': 'About', 'contacto': 'Contact', 'legal': 'Legal and support', 'externo': ' (opens in a new tab)',
         'lema': 'Technology to work better.', 'suite': 'The Zentrix suite',
         'manual_work': 'Zentrix Work manual', 'manual_sales': 'Zentrix Sales manual',
+        'manual_check': 'Zentrix Check manual',
         'privacidad': 'Privacy', 'soporte': 'Support', 'terminos': 'Terms', 'contacto_l': 'Contact',
         'copy': '© 2026 Zentrix®. All rights reserved.', 'odoo': 'Odoo® remains the property of its owner.',
         'idioma': 'Language', 'nota_es': ' (in Spanish)', 'principal': 'Main', 'menu': 'Menu', 'cerrar': 'Close menu',
@@ -192,6 +201,7 @@ T = {
         'llms': 'Zentrix for AI models (llms.txt)', 'centro': 'Resource center',
         'empresa': 'Company', 'casos': 'Customers and case studies',
         'soporte_work': 'Zentrix Work support', 'soporte_sales': 'Zentrix Sales support',
+        'soporte_check': 'Zentrix Check support',
         'privacidad_terminos': 'Privacy and terms', 'hablemos': "Let's talk",
         'lang_es': 'Español', 'lang_en': 'English',
     },

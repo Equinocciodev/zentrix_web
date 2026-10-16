@@ -29,6 +29,7 @@ import unicodedata
 PRODUCTOS = {
     'work': 'Zentrix Work',
     'sales': 'Zentrix Sales',
+    'check': 'Zentrix Check',
     'ai': 'Zentrix AI',
     'logistics': 'Zentrix Logistics',
     'cloud': 'Zentrix Cloud',
