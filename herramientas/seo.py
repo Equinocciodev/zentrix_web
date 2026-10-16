@@ -152,7 +152,7 @@ PAGINAS = {
                      'Cómo se usa Zentrix Check en la garita, pantalla a pantalla: entrar, sacar un camión, '
                      'recibir mercancía, llaves, activos, novedades y trabajar sin señal.'),
     '/check/docs/entrar.html': (None, None,
-        'Cómo se entra a Zentrix Check: el alta del teléfono con el código QR, tu usuario y contraseña una vez, el PIN de cada día y qué hacer si lo olvidas.'),
+        'Cómo se entra a Zentrix Check: tu correo y tu contraseña de la empresa la primera vez, el servidor y tu sede, el PIN de cada día y qué hacer si lo olvidas.'),
     '/check/docs/encender.html': (None, None,
         'Cómo se enciende y se apaga el vigilante en Zentrix Check: qué cambia al encenderte, cómo apagarte al terminar y qué pasa si dejas el teléfono sin usar.'),
     '/check/docs/hoy.html': (None, None,
