@@ -119,7 +119,7 @@ def mega_productos(lang, actual):
         cur = ' aria-current="page"' if actual == clave else ''
         linea = esc(d_en if en else d_es)
         items.append(f'<li style="--i:{i}"><a class="mega__item mega__item--prod" href="{Lx(href, lang)}" data-ver="p-{clave}"{cur}>'
-                     f'{icono_producto(clave, 40)}<span><b>{nombre}</b><small>{linea}</small></span>'
+                     f'{icono_producto(clave, 40)}<span><span class="mega__nombre">{nombre}</span><small>{linea}</small></span>'
                      f'<span class="mega__flecha" aria-hidden="true">→</span></a></li>')
         destacados.append(
             f'<div class="mega-dest__vista" data-vista="p-{clave}" hidden>'
@@ -127,7 +127,7 @@ def mega_productos(lang, actual):
             f'<p class="mega-dest__titulo">{nombre}</p><p class="mega-dest__linea">{linea}</p>'
             f'<a class="mega-dest__cta" href="{Lx(href, lang)}">{"Learn more" if en else "Conocer más"} <span aria-hidden="true">→</span></a></div>')
     traza = (f'<a class="mega__item mega__item--asociada" href="{TRAZA_URL}" target="_blank" rel="noopener">'
-             f'{icono_producto("traza", 40)}<span><b>Traza{SVG_EXTERNO}<span class="sr">{t["externo"]}</span></b>'
+             f'{icono_producto("traza", 40)}<span><span class="mega__nombre">Traza{SVG_EXTERNO}<span class="sr">{t["externo"]}</span></span>'
              f'<small>{"Traceability · a Zentrix® product" if en else "Trazabilidad · un producto de Zentrix®"}</small></span></a>')
     return (f'<div class="mega__panel"><div class="envoltura mega-reja">'
             f'<div class="mega-reja__lista"><p class="mega__titulo">{t["suite_zentrix"]}</p>'
@@ -154,7 +154,7 @@ def mega_soluciones(lang):
         nombre, linea = SOL_TXT[clave][lang]
         href = Lx(f'/soluciones/{slug_es}/', lang)
         items.append(f'<li style="--i:{i}"><a class="mega__item mega__item--sol" href="{href}" data-ver="s-{clave}">'
-                     f'<span class="mega__ilu">{_ilu(clave)}</span><span><b>{nombre}</b><small>{linea}</small></span>'
+                     f'<span class="mega__ilu">{_ilu(clave)}</span><span><span class="mega__nombre">{nombre}</span><small>{linea}</small></span>'
                      f'<span class="mega__flecha" aria-hidden="true">→</span></a></li>')
         lead = C.SOL[clave][lang]['lead']
         frase = lead.split(':')[0].split('.')[0]
@@ -169,7 +169,7 @@ def mega_soluciones(lang):
         monos = ''.join(icono_producto(p, 28) for p in prods[clave])
         sectores.append(f'<li><a class="mega-sector mega-sector--{clave}" href="{Lx("/soluciones/#" + clave, lang)}">'
                         f'<span class="mega-sector__escena" aria-hidden="true"></span>'
-                        f'<span class="mega-sector__texto"><b>{nombre}</b><small>{linea}</small></span>'
+                        f'<span class="mega-sector__texto"><span class="mega__nombre">{nombre}</span><small>{linea}</small></span>'
                         f'<span class="mega-sector__monos">{monos}</span></a></li>')
     return (f'<div class="mega__panel"><div class="envoltura mega-reja">'
             f'<div class="mega-reja__lista"><p class="mega__titulo">{t["por_necesidad"]}</p>'
@@ -185,7 +185,7 @@ def mega_recursos(lang):
 
     def it(href, icono, nombre, linea, extra=''):
         return (f'<li><a class="mega__item" href="{href}"{extra}><span class="mega__icono">{svg_icono(icono)}</span>'
-                f'<span><b>{nombre}</b><small>{linea}</small></span></a></li>')
+                f'<span><span class="mega__nombre">{nombre}</span><small>{linea}</small></span></a></li>')
     if lang == 'en':
         aprende = [it(Lx('/work/docs/', lang), 'libro', t['manual_work'], 'Step by step for store teams'),
                    it(Lx('/sales/docs/', lang), 'libro', t['manual_sales'], 'Step by step for field reps'),
