@@ -1,5 +1,5 @@
 """Contenido de las páginas que genera `generar.py`: soluciones, clientes, recursos,
-nosotros, contacto y la portada inglesa de los manuales.
+nosotros, contacto y la portada inglesa de la documentación.
 
 Origen: los servicios, la filosofía, las alianzas y el equipo vienen de eqnio.com
 (Equinoccio, hoy Zentrix), reescritos con el tono de Zentrix. Los clientes son solo lo que
