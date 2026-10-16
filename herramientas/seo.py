@@ -37,6 +37,11 @@ PLAY_WORK = _TIENDAS['work']['play']
 PLAY_SALES = _TIENDAS['sales']['play']
 APPSTORE_SALES = _TIENDAS['sales']['appstore']
 TRAZA_URL = 'https://traza.technology'
+# Redes sociales oficiales (herramientas/redes.json): solo las que tienen URL. Las usan el pie
+# (generar.py) y el sameAs de la Organization. No se inventan perfiles.
+NOMBRES_REDES = {'linkedin': 'LinkedIn', 'instagram': 'Instagram', 'x': 'X', 'youtube': 'YouTube', 'facebook': 'Facebook'}
+_REDES_JSON = json.loads((RAIZ / 'herramientas' / 'redes.json').read_text(encoding='utf-8'))
+REDES = [(k, n, _REDES_JSON[k].strip()) for k, n in NOMBRES_REDES.items() if (_REDES_JSON.get(k) or '').strip()]
 
 # ruta → (palabra clave principal, title, description). Title ≤ 60, description 140–160.
 # Cuando el nombre del producto ya lleva «Zentrix», el title no repite «| Zentrix».
@@ -403,7 +408,7 @@ def organizacion():
         'email': 'hola@zentrix.company',
         'telephone': '+58-412-346-9712',
         'address': direccion(),
-        'sameAs': [TRAZA_URL, PLAY_WORK, PLAY_SALES, APPSTORE_SALES],
+        'sameAs': [u for _, _, u in REDES] + [TRAZA_URL, PLAY_WORK, PLAY_SALES, APPSTORE_SALES],
         'contactPoint': [
             {'@type': 'ContactPoint', 'contactType': 'sales', 'email': 'hola@zentrix.company',
              'telephone': '+58-412-346-9712', 'url': 'https://wa.me/584123469712',

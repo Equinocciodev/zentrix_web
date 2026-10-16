@@ -171,7 +171,7 @@ Otras búsquedas que cubren las páginas como secundarias: «app para vendedores
 
 | Plantilla | JSON-LD |
 |---|---|
-| Portada (`/`, `/en/`) | `Organization` (nombre, logo 512×512, url, eslogan, `PostalAddress` de /contacto/, `sameAs`: traza.technology, Google Play de Zentrix Work y Zentrix Sales, App Store de Zentrix Sales; `contactPoint`: ventas hola@zentrix.company + teléfono/WhatsApp +58 412-346 9712, soporte soporte@zentrix.company) y `WebSite` con `SearchAction` → `https://zentrix.company/?q={search_term_string}`. |
+| Portada (`/`, `/en/`) | `Organization` (nombre, logo 512×512, url, eslogan, `PostalAddress` de /contacto/, `sameAs`: los perfiles de `herramientas/redes.json` que tengan URL, traza.technology, Google Play de Zentrix Work y Zentrix Sales, App Store de Zentrix Sales; `contactPoint`: ventas hola@zentrix.company + teléfono/WhatsApp +58 412-346 9712, soporte soporte@zentrix.company) y `WebSite` con `SearchAction` → `https://zentrix.company/?q={search_term_string}`. |
 | Apps (`/work/`, `/sales/`, `/check/` y en inglés) | `SoftwareApplication` (BusinessApplication, Android / Android e iOS, enlaces a las tiendas, editor Zentrix) + `BreadcrumbList`. Sin `aggregateRating` ni `offers`: no hay datos publicados, y no se inventan. Google exige `offers.price` y `aggregateRating` o `review` para el resultado enriquecido de apps, así que estas páginas no lo tendrán y Search Console puede listarlas como «no válidas» en «Aplicaciones de software»: no es un error del marcado (schema.org lo valida) y no afecta a la indexación. `validar_jsonld.py` lo da como aviso. |
 | Productos de servicio (`/ai/`, `/cloud/`, `/labs/`, `/logistics/`, `/software/`, `/traza/`) y cada solución (`/soluciones/*/`) | `Service` (nombre, tipo, descripción, proveedor Zentrix; `areaServed` Venezuela y Latinoamérica solo en Odoo; sin `inLanguage`, que schema.org no admite en `Service`) + `BreadcrumbList`. |
 | Zentrix Logistics (`/logistics/`, `/en/logistics/`) | `Service` (tipo «Software de logística y reparto: despacho y última milla», `areaServed` Venezuela y Latinoamérica, `audience` retail, distribución y consumo masivo, `isRelatedTo` → la app) + `SoftwareApplication` (`#app`: BusinessApplication, «Web, Android», `featureList` con los siete módulos, `softwareRequirements` Odoo® 19, sin `offers` ni valoraciones) + `BreadcrumbList`. Es servicio y software a la vez: se implanta sobre el Odoo del cliente y su equipo trabaja desde Zentrix Work. |
@@ -194,6 +194,8 @@ Otras búsquedas que cubren las páginas como secundarias: «app para vendedores
 - [x] Imágenes con `alt`, `width` y `height`; enlaces internos y anclas sin romper.
 - [x] `llms.txt` (y `/en/llms.txt`) según llmstxt.org, con enlaces Markdown y `## Optional`; `llms-full.txt` con los enlaces de cada página. Auditoría `llms-txt` de Lighthouse en verde.
 - [x] Lighthouse SEO 100 (texto de enlace descriptivo en el aviso de cookies y `Agentmap` como comentario en `robots.txt`, que Lighthouse marcaba como directiva desconocida).
+- [ ] Redes sociales: poner en `herramientas/redes.json` las URL de los perfiles que existan (LinkedIn, Instagram, X, YouTube, Facebook) y ejecutar `generar.py`; salen en el pie y en `sameAs`. Vacío = no se pinta nada (Victor).
+- [ ] HSTS en Cloudflare (Victor, abajo).
 - [ ] Desactivar «Email Address Obfuscation» en Cloudflare (Victor, abajo).
 - [ ] Search Console y Bing Webmaster (Victor, abajo).
 - [ ] Cambio de dirección de eqnio.com (Victor, abajo).

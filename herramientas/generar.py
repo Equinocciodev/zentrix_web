@@ -249,6 +249,16 @@ def nav(ruta):
     )
 
 
+def redes_sociales(lang):
+    """Enlaces a los perfiles oficiales (herramientas/redes.json). Sin ninguno definido no se pinta nada."""
+    if not seo.REDES:
+        return ''
+    ext = ' (opens in a new tab)' if lang == 'en' else ' (se abre en otra pestaña)'
+    lis = ''.join(f'<li><a href="{esc(u)}" target="_blank" rel="noopener me">{n}<span class="sr">{ext}</span></a></li>'
+                  for _, n, u in seo.REDES)
+    return f'        <ul class="pie__redes" aria-label="{"Zentrix on social media" if lang == "en" else "Zentrix en redes sociales"}">{lis}</ul>\n'
+
+
 # ── Pie ─────────────────────────────────────────────────────────────────────
 def pie(ruta):
     lang = lang_de(ruta)
@@ -276,6 +286,7 @@ def pie(ruta):
         '      <div class="pie__marca">\n'
         f'        <img class="pie__logo" src="/assets/img/logos/zentrix-blanco.svg" alt="Zentrix" width="110" height="22" loading="lazy">\n'
         f'        <p class="pie__lema">{t["lema"]}</p>\n'
+        f'{redes_sociales(lang)}'
         '      </div>\n'
         '      <div class="pie__col pie__col--productos">\n'
         f'        <h2>{t["productos"]}</h2>\n        <ul class="pie__productos">{"".join(prods)}</ul>\n      </div>\n'
@@ -345,6 +356,7 @@ def ajustar_head(s, ruta):
 RE_PRECARGA_INTER = re.compile(r'(\n\s*)?<link rel="preload" href="/assets/fonts/inter-[0-9a-z]+\.woff2"[^>]*>')
 PRECARGA_INTER = '<link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>'
 
+
 def fuentes(s):
     """Inter 400–700 es un solo woff2 variable (assets/fonts/inter-var.woff2): las páginas que
     precargaban Inter precargan solo ese, en el sitio de la primera precarga."""
@@ -354,6 +366,8 @@ def fuentes(s):
         vistas.append(1)
         return (m.group(1) or '') + PRECARGA_INTER if len(vistas) == 1 else ''
     return RE_PRECARGA_INTER.sub(una, s)
+
+
 RE_NAV = re.compile(r'<nav class="nav"[^>]*>.*?</nav>', re.S)
 RE_PIE = re.compile(r'<footer class="pie">.*?</footer>', re.S)
 
@@ -412,6 +426,8 @@ def primera_imagen_sin_lazy(s, ruta):
     if 'fetchpriority=' not in img:
         img = img.replace('<img', '<img fetchpriority="high"', 1)
     return s[:m.start()] + img + s[m.end():]
+
+
 def procesar(s, ruta):
     s = primera_imagen_sin_lazy(s, ruta)
     s = RE_SOL.sub(lambda m: bloque_soluciones(lang_de(ruta)), s)

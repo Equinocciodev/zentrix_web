@@ -1,0 +1,8 @@
+{
+  "_nota": "Perfiles oficiales de Zentrix en redes sociales. Solo se pintan (pie de todas las páginas y sameAs de la Organization en el JSON-LD) los que tienen URL. Deja \"\" los que no existen; no se inventan. Tras cambiarlo: python3 herramientas/generar.py",
+  "linkedin": "",
+  "instagram": "",
+  "x": "",
+  "youtube": "",
+  "facebook": ""
+}

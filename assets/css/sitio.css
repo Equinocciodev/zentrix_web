@@ -980,6 +980,7 @@ h3 { font-weight: 700; letter-spacing: -0.012em; }
   .pie li > a, .pie__cookies { display: inline-flex; align-items: center; min-height: 48px; min-width: 48px; }
   .aliado__tag { font-size: .75rem; }
 }
+
 /* Buscador: la pastilla de la cabecera (assets/js/buscador.js). La ventana está en buscador.css. */
 #zx-buscar { display: flex; align-items: center; margin-left: auto; min-width: 48px; min-height: 48px; }
 .zxb-pastilla {
@@ -1009,8 +1010,14 @@ h3 { font-weight: 700; letter-spacing: -0.012em; }
   .zxb-pastilla[data-tema="oscuro"] { color: #FFFFFF; background: transparent; }
 }
 
+
 /* Rendimiento (INP): las animaciones se pausan en las secciones fuera de la pantalla (sitio.js) y en
    la página de detrás mientras el buscador está abierto (buscador.js). Se ve igual: solo dejan de
    pintarse fotogramas que nadie ve. */
 .zx-fuera, .zx-fuera *, .zx-fuera *::before, .zx-fuera *::after,
 .zx-quieto main *, .zx-quieto main *::before, .zx-quieto main *::after { animation-play-state: paused !important; }
+
+/* Redes sociales del pie (herramientas/redes.json): solo aparecen las que tienen URL. */
+.pie__redes { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 16px 0 0; }
+.pie__redes a { display: inline-flex; align-items: center; min-height: 48px; font-size: .875rem; color: var(--texto-osc-2); }
+.pie__redes a:hover { color: var(--lima); }
