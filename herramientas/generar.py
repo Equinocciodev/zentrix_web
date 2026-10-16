@@ -29,7 +29,8 @@ import ayuda  # noqa: E402  — /soporte/, /legal/ y el selector de motivo de /c
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 MULTI = (RAIZ / 'en' / 'index.html').exists()  # fase 3: el sitio completo en inglés bajo /en/
 SALIDA = {}  # ruta de fichero → contenido (páginas generadas)
-NAV_JS_V = 4
+NAV_JS_V = 5
+ANALITICA_JS_V = 2   # sube al cambiar assets/js/analitica.js (aviso de cookies)
 
 # Inglés anterior a /en/: solo Zentrix Sales, en /sales/en/ (se usa mientras no haya MULTI)
 LEGADO_EN = {
@@ -321,7 +322,8 @@ def ajustar_head(s, ruta):
     # Analítica con consentimiento (assets/js/analitica.js). Las redirecciones no pasan por aquí.
     if '/assets/js/analitica.js' not in s:
         grupo = ' data-grupo="error"' if ruta.endswith('404.html') else ''
-        s = s.replace('</head>', f'  <script src="/assets/js/analitica.js" defer{grupo}></script>\n</head>', 1)
+        s = s.replace('</head>', f'  <script src="/assets/js/analitica.js?v={ANALITICA_JS_V}" defer{grupo}></script>\n</head>', 1)
+    s = re.sub(r'/assets/js/analitica\.js(\?v=\d+)?"', f'/assets/js/analitica.js?v={ANALITICA_JS_V}"', s)
     # Buscador (assets/js/buscador.js) en el hueco #zx-buscar de la cabecera.
     if '/assets/css/buscador.css' not in s:
         s = s.replace('</head>', '  <link rel="stylesheet" href="/assets/css/buscador.css?v=2">\n</head>', 1)
@@ -415,7 +417,7 @@ def pagina(ruta, titulo, descripcion, cuerpo, og='og.png', logo=None, css=()):
   <link rel="preload" href="/assets/fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/geist-var.woff2" as="font" type="font/woff2" crossorigin>
   <script>document.documentElement.classList.add('js')</script>
-  <link rel="stylesheet" href="/assets/css/sitio.css?v=22">
+  <link rel="stylesheet" href="/assets/css/sitio.css?v=23">
   <script src="/assets/js/sitio.js?v=1" defer></script>{''.join(f'{chr(10)}  <link rel="stylesheet" href="{c}">' for c in css)}
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Zentrix">

@@ -822,13 +822,19 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .pie__cookies { margin-left: 12px; color: var(--texto-osc-2) !important; text-decoration: underline !important; text-underline-offset: 3px; }
 .pie__cookies:hover { color: var(--lima) !important; }
 
-/* Aviso de idioma (portada española) */
-.aviso-idioma { position: fixed; z-index: 30; left: 16px; right: 16px; bottom: 16px; margin: 0 auto; max-width: 520px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; padding: 16px 20px; border-radius: 16px; background: var(--negro); color: var(--blanco); box-shadow: 0 24px 48px -16px rgba(9, 13, 18, .5); border: 1px solid var(--borde-osc); }
-.aviso-idioma p { margin: 0; flex: 1 1 200px; }
-.aviso-idioma .boton { min-height: 40px; background: var(--lima); color: var(--negro); }
-.aviso-idioma__cerrar { background: none; border: 0; color: var(--texto-osc-2); font: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; min-height: 40px; }
-.aviso-idioma__cerrar:hover { color: var(--blanco); }
-.aviso-idioma :focus-visible { outline-color: var(--lima); }
+/* Sugerencia de idioma (portada española): píldora fija bajo la cabecera, junto al selector ES/EN.
+   Fija para no mover el contenido (sin CLS); nav.js la coloca y solo la muestra tras la decisión de cookies. */
+.aviso-idioma { position: fixed; z-index: 15; top: 74px; right: 16px; display: inline-flex; align-items: center; gap: 2px; padding: 3px 3px 3px 12px; border-radius: 999px; background: var(--blanco); color: var(--texto); border: 1px solid var(--borde); box-shadow: 0 8px 24px -10px rgba(9, 13, 18, .45); font-size: .8125rem; line-height: 1.2; }
+.aviso-idioma__globo { flex: none; color: var(--texto-2); margin-right: 4px; }
+.aviso-idioma__ir { display: inline-flex; align-items: center; gap: 4px; min-height: 30px; padding: 0 6px; border-radius: 999px; color: var(--azul); font-weight: 600; text-decoration: none; }
+.aviso-idioma__ir:hover { text-decoration: underline; text-underline-offset: 3px; }
+.aviso-idioma__cerrar { display: inline-grid; place-items: center; width: 30px; height: 30px; padding: 0; border: 0; border-radius: 999px; background: none; color: var(--texto-2); font: 400 1.125rem/1 system-ui, sans-serif; cursor: pointer; }
+.aviso-idioma__cerrar:hover { background: var(--fondo); color: var(--texto); }
+.aviso-idioma :focus-visible { outline: 2px solid var(--azul); outline-offset: 1px; }
+.aviso-idioma--punta::before { content: ""; position: absolute; top: -6px; right: 16px; width: 10px; height: 10px; background: var(--blanco); border-left: 1px solid var(--borde); border-top: 1px solid var(--borde); transform: rotate(45deg); }
+@media (prefers-reduced-motion: no-preference) { .aviso-idioma { animation: aviso-idioma-in .2s ease-out; } }
+@keyframes aviso-idioma-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+@media print { .aviso-idioma { display: none; } }
 /* Cabecera entre 1100 y 1279 px: más compacta para que quepan buscador, menú e idioma */
 @media (min-width: 1100px) and (max-width: 1279px) {
   .nav__lista > li > a:not(.boton), .mega > summary { padding: 0 8px; }

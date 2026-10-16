@@ -60,7 +60,10 @@
 })();
 
 /* Idioma: se recuerda la elección (ES/EN) y, en la portada española, se sugiere el inglés
-   con un aviso discreto a quien navega en inglés o ya lo eligió. Nunca se redirige solo. */
+   a quien navega en inglés o ya lo eligió. Nunca se redirige solo.
+   La sugerencia es una píldora pequeña bajo la cabecera, junto al selector ES/EN, y nunca
+   coincide con el aviso de cookies: solo aparece cuando ya hay decisión de cookies (en esta
+   visita o en una anterior). Cerrarla la recuerda (zx-idioma = es). */
 (function () {
   'use strict';
   var CLAVE = 'zx-idioma';
@@ -74,26 +77,74 @@
   var pref = leer();
   var navegador = (navigator.languages && navigator.languages[0]) || navigator.language || '';
   if (pref === 'es' || (pref !== 'en' && !/^en\b/i.test(navegador))) return;
+
   var aviso = document.createElement('div');
   aviso.className = 'aviso-idioma';
   aviso.setAttribute('role', 'region');
-  aviso.setAttribute('aria-label', 'Language');
+  aviso.setAttribute('aria-label', 'Language suggestion');
   aviso.setAttribute('lang', 'en');
-  aviso.innerHTML = '<p>This site is also available in English.</p>' +
-    '<a class="boton boton--principal" href="/en/" data-idioma="en" hreflang="en">View in English</a>' +
-    '<button type="button" class="aviso-idioma__cerrar" lang="es">Seguir en español</button>';
-  aviso.querySelector('button').addEventListener('click', function () { guardar('es'); aviso.remove(); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && aviso.isConnected) { guardar('es'); aviso.remove(); } });
+  aviso.innerHTML =
+    '<svg class="aviso-idioma__globo" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">' +
+    '<circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/>' +
+    '<path d="M3 12h18M12 3c2.5 2.7 3.6 5.7 3.6 9s-1.1 6.3-3.6 9c-2.5-2.7-3.6-5.7-3.6-9S9.5 5.7 12 3z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>' +
+    '<a class="aviso-idioma__ir" href="/en/" data-idioma="en" lang="en" hreflang="en">View in English <span aria-hidden="true">→</span></a>' +
+    '<button type="button" class="aviso-idioma__cerrar" lang="es" aria-label="Cerrar: seguir en español" title="Seguir en español">' +
+    '<span aria-hidden="true">×</span></button>';
+  function quitar() {
+    guardar('es');
+    window.removeEventListener('resize', colocar);
+    aviso.remove();
+  }
+  aviso.querySelector('button').addEventListener('click', quitar);
+  aviso.addEventListener('keydown', function (e) { if (e.key === 'Escape') { e.stopPropagation(); quitar(); } });
+
+  // Fija bajo la cabecera (no mueve el contenido) y, si el selector ES/EN está a la vista,
+  // con la punta bajo el «EN».
+  function colocar() {
+    var cab = document.querySelector('.cabecera');
+    var abajo = cab ? Math.round(cab.getBoundingClientRect().bottom) : 64;
+    aviso.style.top = Math.max(abajo, 0) + 10 + 'px';
+    var en = document.querySelector('.cabecera .idioma a[hreflang="en"]');
+    var r = en && en.offsetParent ? en.getBoundingClientRect() : null;
+    var ancho = document.documentElement.clientWidth;
+    if (r && r.width) {
+      var centro = r.left + r.width / 2;
+      aviso.style.right = Math.max(12, Math.round(ancho - centro - 20)) + 'px';
+      aviso.classList.add('aviso-idioma--punta');
+    } else {
+      aviso.style.right = '';
+      aviso.classList.remove('aviso-idioma--punta');
+    }
+  }
+  var hecho = false;
+  function montar() {
+    if (hecho || leer() === 'es') return;
+    hecho = true;
+    document.body.appendChild(aviso);
+    colocar();
+    window.addEventListener('resize', colocar);
+  }
+  // Primero el consentimiento: si el aviso de cookies está pendiente, se espera a la decisión.
+  function cuandoHayaDecision(fn) {
+    var a = window.zxAnalytics;
+    if (a && typeof a.consent === 'function' && a.consent() === null) {
+      document.addEventListener('zx:consent', function () { window.setTimeout(fn, 600); }, { once: true });
+    } else {
+      fn();
+    }
+  }
   // Se muestra con la primera interacción (scroll, toque, tecla): así no compite con el
   // contenido principal en la primera pintura ni cuenta como LCP.
-  var hecho = false;
   var eventos = ['scroll', 'pointerdown', 'keydown', 'touchstart', 'mousemove'];
-  var montar = function () {
-    if (hecho) return; hecho = true;
-    eventos.forEach(function (ev) { window.removeEventListener(ev, montar, true); });
-    document.body.appendChild(aviso);
+  var listo = false;
+  var alInteractuar = function () {
+    if (listo) return; listo = true;
+    eventos.forEach(function (ev) { window.removeEventListener(ev, alInteractuar, true); });
+    // analitica.js también es «defer»: se mira el consentimiento cuando ya se ha ejecutado.
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { cuandoHayaDecision(montar); });
+    else cuandoHayaDecision(montar);
   };
-  eventos.forEach(function (ev) { window.addEventListener(ev, montar, { capture: true, passive: true, once: true }); });
+  eventos.forEach(function (ev) { window.addEventListener(ev, alInteractuar, { capture: true, passive: true }); });
 })();
 
 /* Mega-menú: la tarjeta destacada cambia al pasar (o enfocar) cada producto o solución. */
