@@ -154,7 +154,9 @@
     SVG.lupa + '<span class="zxb-pastilla__txt">' + esc(TX.buscar) + '</span><kbd>' + atajoTxt + '</kbd>');
   pastilla.type = 'button';
   pastilla.setAttribute('aria-haspopup', 'dialog');
-  pastilla.setAttribute('aria-label', TX.etiqueta + ' (' + atajoTxt + ')');
+  // El nombre accesible empieza por el texto visible («Buscar… ⌘K»), como pide WCAG 2.5.3; la
+  // ventana ya se anuncia como «Buscar en Zentrix». En móvil el texto se oculta y queda este nombre.
+  pastilla.setAttribute('aria-label', TX.buscar.replace('…', '') + ' (' + atajoTxt + ')');
   pastilla.setAttribute('aria-keyshortcuts', (MAC ? 'Meta+K' : 'Control+K') + ' /');
   if (fondoOscuro(hueco)) pastilla.setAttribute('data-tema', 'oscuro');
   hueco.appendChild(pastilla);

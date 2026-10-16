@@ -749,7 +749,8 @@ def cinta_aliados(lang, titulo):
         ancho = round(alto * prop)
         tag = tag_en if lang == 'en' else tag_es
         nom = f'<span class="aliado__nombre">{nombre}</span>' if con_nombre else ''
-        items.append(f'<li class="aliado"><span class="aliado__marca"><img src="/assets/img/aliados/{slug}.webp" alt="{nombre}" '
+        alt = '' if con_nombre else nombre  # con el nombre escrito al lado, el logo es decorativo (alt redundante)
+        items.append(f'<li class="aliado"><span class="aliado__marca"><img src="/assets/img/aliados/{slug}.webp" alt="{alt}" '
                      f'width="{ancho}" height="{alto}" style="--h:{alto}px" loading="lazy" decoding="async">{nom}</span>'
                      f'{f"<span class=aliado__tag>{tag}</span>" if tag else ""}</li>')
     lista = ''.join(items)
