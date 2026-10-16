@@ -428,7 +428,35 @@ def primera_imagen_sin_lazy(s, ruta):
     return s[:m.start()] + img + s[m.end():]
 
 
+# ── Barra de producto (Work, Sales y Check) ────────────────────────────────
+# Una sola forma en todas las páginas de cada app y en los dos idiomas: Producto · Documentación ·
+# Privacidad · Soporte (Product · Documentation · Privacy · Support). La escribe el generador; antes
+# se copiaba a mano y /en/sales/ se había quedado con otra (Product · Privacy · Terms · Support · Contact).
+RE_BARRA = re.compile(r'<nav class="producto-barra[^"]*"[^>]*>[\s\S]*?</nav>')
+RE_RUTA_APP = re.compile(r'^/(?:en/)?(work|sales|check)/')
+NOMBRE_APP = {'work': 'Zentrix Work', 'sales': 'Zentrix Sales', 'check': 'Zentrix Check'}
+
+
+def barra_producto(ruta):
+    app = RE_RUTA_APP.match(ruta).group(1)
+    lang = lang_de(ruta)
+    en = lang == 'en'
+    items = [(f'/{app}/', 'Product' if en else 'Producto', lambda r: r in (f'/{app}/', f'/en/{app}/')),
+             (f'/{app}/docs/', 'Documentation' if en else 'Documentación', lambda r: '/docs/' in r),
+             (f'/{app}/privacidad/', 'Privacy' if en else 'Privacidad', lambda r: r.rstrip('/').endswith(('/privacidad', '/privacy'))),
+             (f'/soporte/', 'Support' if en else 'Soporte', lambda r: False)]
+    lis = []
+    for href, texto, actual in items:
+        url = Lx(href, lang) + (f'#{app}' if href == '/soporte/' else '')
+        cur = ' aria-current="page"' if actual(ruta) else ''
+        lis.append(f'      <li><a href="{url}"{cur}>{texto}</a></li>')
+    return (f'<nav class="producto-barra producto-barra--fina" aria-label="{NOMBRE_APP[app]}">\n'
+            '  <div class="envoltura">\n    <ul>\n' + '\n'.join(lis) + '\n    </ul>\n  </div>\n</nav>')
+
+
 def procesar(s, ruta):
+    if RE_RUTA_APP.match(ruta) and RE_BARRA.search(s):
+        s = RE_BARRA.sub(lambda m: barra_producto(ruta), s, count=1)
     s = primera_imagen_sin_lazy(s, ruta)
     s = RE_SOL.sub(lambda m: bloque_soluciones(lang_de(ruta)), s)
     s = RE_TIENDAS.sub(lambda m: insignias(m.group(1), lang_de(ruta)), s)
@@ -1597,7 +1625,8 @@ def pares():
     - su `<head>` lleva hreflang es/en/x-default, se incluye a sí misma y apunta al par;
     - el hreflang es recíproco: el par devuelve el enlace a esta página;
     - el selector ES/EN (cabecera y pie) lleva al par, no a la portada del otro idioma;
-    - una página inglesa no enlaza a una página española que tiene versión inglesa (ni al revés).
+    - una página inglesa no enlaza a una página española que tiene versión inglesa (ni al revés);
+    - las páginas de Work, Sales y Check llevan la barra de producto de `barra_producto()`.
 
     Antes solo miraba la tabla PARES y daba por buenos los capítulos «solo en español» y las
     páginas sin hreflang: por eso decía 0 huérfanas con 35 capítulos sin traducir."""
@@ -1630,6 +1659,12 @@ def pares():
         sel = RE_SELECTOR.findall(s)
         if not sel or any(h != (es if l == 'es' else en) for h, l in sel):
             errores.append(f'{r}: selector ES/EN {sorted(set(sel))} no lleva a {es} / {en}')
+        if RE_RUTA_APP.match(r):  # barra de producto: la misma en las dos lenguas (barra_producto)
+            m = RE_BARRA.search(s)
+            if not m:
+                errores.append(f'{r}: sin barra de producto')
+            elif m.group(0) != barra_producto(r):
+                errores.append(f'{r}: barra de producto distinta de la de las demás apps')
         cuerpo = s[s.index('<body'):]
         for h in sorted(set(RE_HREF.findall(cuerpo))):
             if h in contenido and idioma_de(h) != lang and par(h) in contenido and \
