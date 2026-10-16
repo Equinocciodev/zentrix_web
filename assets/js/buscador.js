@@ -263,6 +263,7 @@
     raiz.classList.remove('zxb--saliendo');
     raiz.hidden = false;
     H.style.overflow = 'hidden';
+    H.classList.add('zx-quieto'); // la página de detrás no anima mientras la tapa la ventana (INP)
     pastilla.setAttribute('aria-expanded', 'true');
     cargarPagefind(); cargarTerminos();
     input.value = q != null ? q : '';
@@ -281,6 +282,7 @@
     var fin = function () { if (!abierto) { raiz.hidden = true; raiz.classList.remove('zxb--saliendo'); } };
     if (rm) fin(); else { raiz.classList.add('zxb--saliendo'); setTimeout(fin, 120); }
     H.style.overflow = '';
+    H.classList.remove('zx-quieto');
     var destino = opener && D.contains(opener) ? opener : pastilla;
     try { destino.focus({ preventScroll: true }); } catch (e) { pastilla.focus(); }
   }

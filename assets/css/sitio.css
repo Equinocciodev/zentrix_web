@@ -5,10 +5,9 @@
    Modo claro por defecto, como pide la marca. El contenido se lee entero sin
    JavaScript; assets/js/sitio.js solo añade movimiento (y nada con reduced-motion). */
 
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/inter-400.woff2") format("woff2"); }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("/assets/fonts/inter-500.woff2") format("woff2"); }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("/assets/fonts/inter-600.woff2") format("woff2"); }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 700; font-display: swap; src: url("/assets/fonts/inter-700.woff2") format("woff2"); }
+/* Inter 400–700: un solo woff2 variable (Inter 4.001, eje wght 400–700, opsz 14, el mismo recorte de
+   latín que los estáticos de antes): una petición en lugar de cuatro, 30 KB en lugar de 98 KB. */
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 400 700; font-display: swap; src: url("/assets/fonts/inter-var.woff2") format("woff2"); }
 @font-face { font-family: "Inter"; font-style: normal; font-weight: 800; font-display: swap; src: url("/assets/fonts/inter-800.woff2") format("woff2"); }
 /* Reserva con las métricas de Inter: mientras llega la fuente, el texto no salta. */
 @font-face { font-family: "Inter reserva"; src: local("Arial"), local("Helvetica"); size-adjust: 107.4%; ascent-override: 90.2%; descent-override: 22.48%; line-gap-override: 0%; }
@@ -970,3 +969,38 @@ h3 { font-weight: 700; letter-spacing: -0.012em; }
 .antetitulo { font-family: var(--display); font-weight: 600; letter-spacing: .1em; }
 /* Rótulos pequeños con forma de titular: siguen en Inter, son interfaz. */
 .pie h2, .pie h3, .indice > p, .indice > h2, .destacado h3 { font-family: inherit; }
+
+/* Buscador: la pastilla de la cabecera (assets/js/buscador.js). La ventana está en buscador.css. */
+#zx-buscar { display: flex; align-items: center; margin-left: auto; min-width: 48px; min-height: 48px; }
+.zxb-pastilla {
+  display: inline-flex; align-items: center; gap: 8px; height: 38px; padding: 0 6px 0 12px; margin: 0;
+  font: 500 .875rem/1 "Inter", "Inter reserva", Arial, sans-serif; color: rgba(9, 13, 18, .64);
+  background: rgba(9, 13, 18, .04); border: 1px solid rgba(9, 13, 18, .1); border-radius: 999px;
+  cursor: pointer; white-space: nowrap; min-width: 168px;
+  transition: background-color .15s, border-color .15s, color .15s, box-shadow .15s;
+}
+.zxb-pastilla:hover { background: rgba(36, 77, 255, .06); border-color: rgba(36, 77, 255, .35); color: #090D12; }
+.zxb-pastilla:focus-visible { outline: 2px solid #244DFF; outline-offset: 2px; }
+.zxb-pastilla svg { width: 16px; height: 16px; flex: none; }
+.zxb-pastilla__txt { flex: 1; text-align: left; }
+.zxb-pastilla kbd, .zxb kbd {
+  font: 600 .6875rem/1 "Inter", "Inter reserva", Arial, sans-serif; color: rgba(9, 13, 18, .64);
+  background: #FFFFFF; border: 1px solid rgba(9, 13, 18, .14); border-bottom-width: 2px;
+  border-radius: 6px; padding: 4px 6px; min-width: 22px; text-align: center; display: inline-block;
+}
+.zxb-pastilla[data-tema="oscuro"] { color: rgba(255, 255, 255, .72); background: rgba(255, 255, 255, .06); border-color: rgba(255, 255, 255, .14); }
+.zxb-pastilla[data-tema="oscuro"]:hover { color: #FFFFFF; border-color: rgba(255, 255, 255, .6); }
+.zxb-pastilla[data-tema="oscuro"] kbd { background: transparent; color: rgba(255, 255, 255, .72); border-color: rgba(255, 255, 255, .2); }
+@media (max-width: 899px) {
+  .zxb-pastilla { min-width: 0; width: 48px; height: 48px; padding: 0; justify-content: center; background: transparent; border-color: transparent; color: #090D12; border-radius: 12px; }
+  .zxb-pastilla:hover { background: #F5F7FA; border-color: transparent; }
+  .zxb-pastilla svg { width: 20px; height: 20px; }
+  .zxb-pastilla__txt, .zxb-pastilla kbd { display: none; }
+  .zxb-pastilla[data-tema="oscuro"] { color: #FFFFFF; background: transparent; }
+}
+
+/* Rendimiento (INP): las animaciones se pausan en las secciones fuera de la pantalla (sitio.js) y en
+   la página de detrás mientras el buscador está abierto (buscador.js). Se ve igual: solo dejan de
+   pintarse fotogramas que nadie ve. */
+.zx-fuera, .zx-fuera *, .zx-fuera *::before, .zx-fuera *::after,
+.zx-quieto main *, .zx-quieto main *::before, .zx-quieto main *::after { animation-play-state: paused !important; }

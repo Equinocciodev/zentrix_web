@@ -2,34 +2,8 @@
    Solo los colores de la marca y sus transparencias: negro #090D12, blanco,
    azul #244DFF y lima #C7FA46. */
 
-/* --- Pastilla de la cabecera ------------------------------------------- */
-#zx-buscar { display: flex; align-items: center; margin-left: auto; min-width: 44px; min-height: 44px; }
-.zxb-pastilla {
-  display: inline-flex; align-items: center; gap: 8px; height: 38px; padding: 0 6px 0 12px; margin: 0;
-  font: 500 .875rem/1 "Inter", "Inter reserva", Arial, sans-serif; color: rgba(9, 13, 18, .64);
-  background: rgba(9, 13, 18, .04); border: 1px solid rgba(9, 13, 18, .1); border-radius: 999px;
-  cursor: pointer; white-space: nowrap; min-width: 168px;
-  transition: background-color .15s, border-color .15s, color .15s, box-shadow .15s;
-}
-.zxb-pastilla:hover { background: rgba(36, 77, 255, .06); border-color: rgba(36, 77, 255, .35); color: #090D12; }
-.zxb-pastilla:focus-visible { outline: 2px solid #244DFF; outline-offset: 2px; }
-.zxb-pastilla svg { width: 16px; height: 16px; flex: none; }
-.zxb-pastilla__txt { flex: 1; text-align: left; }
-.zxb-pastilla kbd, .zxb kbd {
-  font: 600 .6875rem/1 "Inter", "Inter reserva", Arial, sans-serif; color: rgba(9, 13, 18, .64);
-  background: #FFFFFF; border: 1px solid rgba(9, 13, 18, .14); border-bottom-width: 2px;
-  border-radius: 6px; padding: 4px 6px; min-width: 22px; text-align: center; display: inline-block;
-}
-.zxb-pastilla[data-tema="oscuro"] { color: rgba(255, 255, 255, .72); background: rgba(255, 255, 255, .06); border-color: rgba(255, 255, 255, .14); }
-.zxb-pastilla[data-tema="oscuro"]:hover { color: #FFFFFF; border-color: rgba(255, 255, 255, .6); }
-.zxb-pastilla[data-tema="oscuro"] kbd { background: transparent; color: rgba(255, 255, 255, .72); border-color: rgba(255, 255, 255, .2); }
-@media (max-width: 899px) {
-  .zxb-pastilla { min-width: 0; width: 44px; height: 44px; padding: 0; justify-content: center; background: transparent; border-color: transparent; color: #090D12; border-radius: 12px; }
-  .zxb-pastilla:hover { background: #F5F7FA; border-color: transparent; }
-  .zxb-pastilla svg { width: 20px; height: 20px; }
-  .zxb-pastilla__txt, .zxb-pastilla kbd { display: none; }
-  .zxb-pastilla[data-tema="oscuro"] { color: #FFFFFF; background: transparent; }
-}
+/* La pastilla de la cabecera está en sitio.css: se pinta con la página; esta hoja (la ventana)
+   se carga sin bloquear el render. */
 
 /* --- Ventana -------------------------------------------------------------- */
 .zxb {
