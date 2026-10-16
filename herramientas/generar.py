@@ -30,8 +30,11 @@ RAIZ = pathlib.Path(__file__).resolve().parent.parent
 MULTI = (RAIZ / 'en' / 'index.html').exists()  # fase 3: el sitio completo en inglés bajo /en/
 SALIDA = {}  # ruta de fichero → contenido (páginas generadas)
 NAV_JS_V = 6
-SITIO_CSS_V = 24     # sube al cambiar assets/css/sitio.css
-BUSCADOR_JS_V = 3    # sube al cambiar assets/js/buscador.js
+SITIO_JS_V = 2       # sube al cambiar assets/js/sitio.js
+SITIO_CSS_V = 25     # sube al cambiar assets/css/sitio.css
+BUSCADOR_CSS_V = 3   # sube al cambiar assets/css/buscador.css
+MANUAL_CSS_V = 2     # sube al cambiar assets/css/manual-work.css o manual-sales.css
+BUSCADOR_JS_V = 4    # sube al cambiar assets/js/buscador.js
 ANALITICA_JS_V = 2   # sube al cambiar assets/js/analitica.js (aviso de cookies)
 
 # Inglés anterior a /en/: solo Zentrix Sales, en /sales/en/ (se usa mientras no haya MULTI)
@@ -116,7 +119,7 @@ def mega_productos(lang, actual):
         cur = ' aria-current="page"' if actual == clave else ''
         linea = esc(d_en if en else d_es)
         items.append(f'<li style="--i:{i}"><a class="mega__item mega__item--prod" href="{Lx(href, lang)}" data-ver="p-{clave}"{cur}>'
-                     f'{icono_producto(clave, 40)}<span><b>{nombre}</b><small>{linea}</small></span>'
+                     f'{icono_producto(clave, 40)}<span><span class="mega__nombre">{nombre}</span><small>{linea}</small></span>'
                      f'<span class="mega__flecha" aria-hidden="true">→</span></a></li>')
         destacados.append(
             f'<div class="mega-dest__vista" data-vista="p-{clave}" hidden>'
@@ -124,7 +127,7 @@ def mega_productos(lang, actual):
             f'<p class="mega-dest__titulo">{nombre}</p><p class="mega-dest__linea">{linea}</p>'
             f'<a class="mega-dest__cta" href="{Lx(href, lang)}">{"Learn more" if en else "Conocer más"} <span aria-hidden="true">→</span></a></div>')
     traza = (f'<a class="mega__item mega__item--asociada" href="{TRAZA_URL}" target="_blank" rel="noopener">'
-             f'{icono_producto("traza", 40)}<span><b>Traza{SVG_EXTERNO}<span class="sr">{t["externo"]}</span></b>'
+             f'{icono_producto("traza", 40)}<span><span class="mega__nombre">Traza{SVG_EXTERNO}<span class="sr">{t["externo"]}</span></span>'
              f'<small>{"Traceability · a Zentrix® product" if en else "Trazabilidad · un producto de Zentrix®"}</small></span></a>')
     return (f'<div class="mega__panel"><div class="envoltura mega-reja">'
             f'<div class="mega-reja__lista"><p class="mega__titulo">{t["suite_zentrix"]}</p>'
@@ -151,7 +154,7 @@ def mega_soluciones(lang):
         nombre, linea = SOL_TXT[clave][lang]
         href = Lx(f'/soluciones/{slug_es}/', lang)
         items.append(f'<li style="--i:{i}"><a class="mega__item mega__item--sol" href="{href}" data-ver="s-{clave}">'
-                     f'<span class="mega__ilu">{_ilu(clave)}</span><span><b>{nombre}</b><small>{linea}</small></span>'
+                     f'<span class="mega__ilu">{_ilu(clave)}</span><span><span class="mega__nombre">{nombre}</span><small>{linea}</small></span>'
                      f'<span class="mega__flecha" aria-hidden="true">→</span></a></li>')
         lead = C.SOL[clave][lang]['lead']
         frase = lead.split(':')[0].split('.')[0]
@@ -166,7 +169,7 @@ def mega_soluciones(lang):
         monos = ''.join(icono_producto(p, 28) for p in prods[clave])
         sectores.append(f'<li><a class="mega-sector mega-sector--{clave}" href="{Lx("/soluciones/#" + clave, lang)}">'
                         f'<span class="mega-sector__escena" aria-hidden="true"></span>'
-                        f'<span class="mega-sector__texto"><b>{nombre}</b><small>{linea}</small></span>'
+                        f'<span class="mega-sector__texto"><span class="mega__nombre">{nombre}</span><small>{linea}</small></span>'
                         f'<span class="mega-sector__monos">{monos}</span></a></li>')
     return (f'<div class="mega__panel"><div class="envoltura mega-reja">'
             f'<div class="mega-reja__lista"><p class="mega__titulo">{t["por_necesidad"]}</p>'
@@ -182,7 +185,7 @@ def mega_recursos(lang):
 
     def it(href, icono, nombre, linea, extra=''):
         return (f'<li><a class="mega__item" href="{href}"{extra}><span class="mega__icono">{svg_icono(icono)}</span>'
-                f'<span><b>{nombre}</b><small>{linea}</small></span></a></li>')
+                f'<span><span class="mega__nombre">{nombre}</span><small>{linea}</small></span></a></li>')
     if lang == 'en':
         aprende = [it(Lx('/work/docs/', lang), 'libro', t['manual_work'], 'Step by step for store teams'),
                    it(Lx('/sales/docs/', lang), 'libro', t['manual_sales'], 'Step by step for field reps'),
@@ -246,6 +249,16 @@ def nav(ruta):
     )
 
 
+def redes_sociales(lang):
+    """Enlaces a los perfiles oficiales (herramientas/redes.json). Sin ninguno definido no se pinta nada."""
+    if not seo.REDES:
+        return ''
+    ext = ' (opens in a new tab)' if lang == 'en' else ' (se abre en otra pestaña)'
+    lis = ''.join(f'<li><a href="{esc(u)}" target="_blank" rel="noopener me">{n}<span class="sr">{ext}</span></a></li>'
+                  for _, n, u in seo.REDES)
+    return f'        <ul class="pie__redes" aria-label="{"Zentrix on social media" if lang == "en" else "Zentrix en redes sociales"}">{lis}</ul>\n'
+
+
 # ── Pie ─────────────────────────────────────────────────────────────────────
 def pie(ruta):
     lang = lang_de(ruta)
@@ -273,6 +286,7 @@ def pie(ruta):
         '      <div class="pie__marca">\n'
         f'        <img class="pie__logo" src="/assets/img/logos/zentrix-blanco.svg" alt="Zentrix" width="110" height="22" loading="lazy">\n'
         f'        <p class="pie__lema">{t["lema"]}</p>\n'
+        f'{redes_sociales(lang)}'
         '      </div>\n'
         '      <div class="pie__col pie__col--productos">\n'
         f'        <h2>{t["productos"]}</h2>\n        <ul class="pie__productos">{"".join(prods)}</ul>\n      </div>\n'
@@ -317,18 +331,41 @@ def ajustar_head(s, ruta):
         s = s.replace('</head>', f'  <script src="/assets/js/nav.js?v={NAV_JS_V}" defer></script>\n</head>', 1)
     s = re.sub(r'/assets/js/nav\.js\?v=\d+', f'/assets/js/nav.js?v={NAV_JS_V}', s)
     s = re.sub(r'/assets/css/sitio\.css\?v=\d+', f'/assets/css/sitio.css?v={SITIO_CSS_V}', s)
+    s = re.sub(r'/assets/css/manual-(work|sales)\.css\?v=\d+', lambda m: f'/assets/css/manual-{m.group(1)}.css?v={MANUAL_CSS_V}', s)
+    s = re.sub(r'/assets/js/sitio\.js\?v=\d+', f'/assets/js/sitio.js?v={SITIO_JS_V}', s)
+    s = fuentes(s)
     # Analítica con consentimiento (assets/js/analitica.js). Las redirecciones no pasan por aquí.
     if '/assets/js/analitica.js' not in s:
         grupo = ' data-grupo="error"' if ruta.endswith('404.html') else ''
         s = s.replace('</head>', f'  <script src="/assets/js/analitica.js?v={ANALITICA_JS_V}" defer{grupo}></script>\n</head>', 1)
     s = re.sub(r'/assets/js/analitica\.js(\?v=\d+)?"', f'/assets/js/analitica.js?v={ANALITICA_JS_V}"', s)
     # Buscador (assets/js/buscador.js) en el hueco #zx-buscar de la cabecera.
+    # La pastilla de la cabecera está en sitio.css; buscador.css (la ventana) no bloquea el render:
+    # solo hace falta al abrir el buscador, que necesita JavaScript.
+    css_buscador = (f'<link rel="stylesheet" href="/assets/css/buscador.css?v={BUSCADOR_CSS_V}" '
+                    'media="print" onload="this.media=\'all\'">')
+    s = re.sub(r'<link rel="stylesheet" href="/assets/css/buscador\.css[^"]*"[^>]*>', lambda m: css_buscador, s)
     if '/assets/css/buscador.css' not in s:
-        s = s.replace('</head>', '  <link rel="stylesheet" href="/assets/css/buscador.css?v=2">\n</head>', 1)
+        s = s.replace('</head>', f'  {css_buscador}\n</head>', 1)
     if '/assets/js/buscador.js' not in s:
         s = s.replace('</head>', f'  <script src="/assets/js/buscador.js?v={BUSCADOR_JS_V}" defer></script>\n</head>', 1)
     s = re.sub(r'/assets/js/buscador\.js\?v=\d+', f'/assets/js/buscador.js?v={BUSCADOR_JS_V}', s)
     return s
+
+
+RE_PRECARGA_INTER = re.compile(r'(\n\s*)?<link rel="preload" href="/assets/fonts/inter-[0-9a-z]+\.woff2"[^>]*>')
+PRECARGA_INTER = '<link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>'
+
+
+def fuentes(s):
+    """Inter 400–700 es un solo woff2 variable (assets/fonts/inter-var.woff2): las páginas que
+    precargaban Inter precargan solo ese, en el sitio de la primera precarga."""
+    vistas = []
+
+    def una(m):
+        vistas.append(1)
+        return (m.group(1) or '') + PRECARGA_INTER if len(vistas) == 1 else ''
+    return RE_PRECARGA_INTER.sub(una, s)
 
 
 RE_NAV = re.compile(r'<nav class="nav"[^>]*>.*?</nav>', re.S)
@@ -376,7 +413,23 @@ def bloque_soluciones(lang):
     return f'<!--SOLUCIONES-->{BQ.bento(items, "azul", "Learn more" if lang == "en" else "Conocer más")}<!--/SOLUCIONES-->'
 
 
+def primera_imagen_sin_lazy(s, ruta):
+    """En la documentación la primera captura es el LCP en móvil: no se carga en diferido y va con
+    prioridad alta (Lighthouse «lcp-lazy-loaded»). Las demás siguen con loading="lazy"."""
+    if '/docs/' not in ruta or '<main' not in s:
+        return s
+    i = s.index('<main')
+    m = re.compile(r'<img\b[^>]*>').search(s, i)
+    if not m:
+        return s
+    img = re.sub(r'\s+loading="lazy"', '', m.group(0))
+    if 'fetchpriority=' not in img:
+        img = img.replace('<img', '<img fetchpriority="high"', 1)
+    return s[:m.start()] + img + s[m.end():]
+
+
 def procesar(s, ruta):
+    s = primera_imagen_sin_lazy(s, ruta)
     s = RE_SOL.sub(lambda m: bloque_soluciones(lang_de(ruta)), s)
     s = RE_TIENDAS.sub(lambda m: insignias(m.group(1), lang_de(ruta)), s)
     s = RE_ALIADOS.sub(lambda m: '<!--ALIADOS-->' + cinta_aliados(lang_de(ruta), 'Partners and allies' if lang_de(ruta) == 'en' else 'Partners y aliados') + '<!--/ALIADOS-->', s)
@@ -411,13 +464,11 @@ def pagina(ruta, titulo, descripcion, cuerpo, og='og.png', logo=None, css=()):
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#244DFF">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="preload" href="/assets/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/fonts/inter-600.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/geist-var.woff2" as="font" type="font/woff2" crossorigin>
   <script>document.documentElement.classList.add('js')</script>
   <link rel="stylesheet" href="/assets/css/sitio.css?v={SITIO_CSS_V}">
-  <script src="/assets/js/sitio.js?v=1" defer></script>{''.join(f'{chr(10)}  <link rel="stylesheet" href="{c}">' for c in css)}
+  <script src="/assets/js/sitio.js?v={SITIO_JS_V}" defer></script>{''.join(f'{chr(10)}  <link rel="stylesheet" href="{c}">' for c in css)}
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Zentrix">
   <meta property="og:locale" content="{loc}">
@@ -714,7 +765,8 @@ def cinta_aliados(lang, titulo):
         ancho = round(alto * prop)
         tag = tag_en if lang == 'en' else tag_es
         nom = f'<span class="aliado__nombre">{nombre}</span>' if con_nombre else ''
-        items.append(f'<li class="aliado"><span class="aliado__marca"><img src="/assets/img/aliados/{slug}.webp" alt="{nombre}" '
+        alt = '' if con_nombre else nombre  # con el nombre escrito al lado, el logo es decorativo (alt redundante)
+        items.append(f'<li class="aliado"><span class="aliado__marca"><img src="/assets/img/aliados/{slug}.webp" alt="{alt}" '
                      f'width="{ancho}" height="{alto}" style="--h:{alto}px" loading="lazy" decoding="async">{nom}</span>'
                      f'{f"<span class=aliado__tag>{tag}</span>" if tag else ""}</li>')
     lista = ''.join(items)

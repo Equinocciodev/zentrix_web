@@ -10,7 +10,8 @@ HTTP 200; title (≤ 60, único); description (140–160, única); canonical = U
 hreflang es/en/x-default recíprocos; Open Graph (title, description, url, locale, imagen
 1200×630 que existe) y `og:locale:alternate` si hay traducción; `twitter:card`;
 `theme-color`, favicon y manifest; un solo `<h1>` y sin saltos de nivel; JSON-LD válido
-con los campos obligatorios de su plantilla; `alt`, `width` y `height` en cada imagen;
+con los campos obligatorios de su plantilla; `alt` (vacío si es decorativa), `width` y `height` en cada
+imagen, y cada `<svg>` en línea oculto (`aria-hidden`) o nombrado (`role="img"` + `aria-label`);
 enlaces internos y anclas sin romper. Además: la 404 responde 404 con `noindex`, las
 redirecciones llevan `noindex` y ninguna página indexable falta en el sitemap.
 
@@ -49,6 +50,7 @@ class Pagina(HTMLParser):
         self.encabezados = []
         self._h = None
         self.imgs = []
+        self.svgs = []  # <svg> en línea de primer nivel
         self.hrefs = []
         self.ids = set()
         self.jsonld = []
@@ -61,6 +63,8 @@ class Pagina(HTMLParser):
         if tag == 'html':
             self.lang = a.get('lang')
         elif tag == 'svg':
+            if not self._svg:
+                self.svgs.append(a)
             self._svg += 1
         elif tag == 'title' and not self._svg and not self.titulo:
             self._en_titulo = True
@@ -435,6 +439,9 @@ def verificar(base):
                 e.append('sin alt: %s' % src)
             if not im.get('width') or not im.get('height'):
                 e.append('sin width/height: %s' % src)
+        for sv in pag.svgs:  # un SVG en línea es una imagen: o se oculta o se nombra
+            if sv.get('aria-hidden') != 'true' and not (sv.get('role') == 'img' and (sv.get('aria-label') or sv.get('aria-labelledby'))):
+                e.append('svg sin aria-hidden="true" ni role="img" con aria-label: class="%s"' % sv.get('class', ''))
         if e:
             errores['Imágenes'] = e[:5] + (['… y %d más' % (len(e) - 5)] if len(e) > 5 else [])
 

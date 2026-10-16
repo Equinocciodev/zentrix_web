@@ -23,6 +23,15 @@
     window.requestAnimationFrame(paso);
   }
 
+  // Las animaciones infinitas solo corren en las secciones que se ven: fuera de la pantalla se pausan
+  // (.zx-fuera en sitio.css). Menos trabajo de pintado mientras se lee, se toca o se escribe (INP).
+  if (!reducido && 'IntersectionObserver' in window) {
+    var vigia = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) { e.target.classList.toggle('zx-fuera', !e.isIntersecting); });
+    }, { rootMargin: '200px 0px' });
+    document.querySelectorAll('main > section, main > div > section, .pie').forEach(function (s) { vigia.observe(s); });
+  }
+
   if (reducido || !('IntersectionObserver' in window)) {
     elementos.forEach(function (el) { el.classList.add('visible'); });
     return;

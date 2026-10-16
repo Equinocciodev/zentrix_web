@@ -154,7 +154,9 @@
     SVG.lupa + '<span class="zxb-pastilla__txt">' + esc(TX.buscar) + '</span><kbd>' + atajoTxt + '</kbd>');
   pastilla.type = 'button';
   pastilla.setAttribute('aria-haspopup', 'dialog');
-  pastilla.setAttribute('aria-label', TX.etiqueta + ' (' + atajoTxt + ')');
+  // El nombre accesible empieza por el texto visible («Buscar… ⌘K»), como pide WCAG 2.5.3; la
+  // ventana ya se anuncia como «Buscar en Zentrix». En móvil el texto se oculta y queda este nombre.
+  pastilla.setAttribute('aria-label', TX.buscar.replace('…', '') + ' (' + atajoTxt + ')');
   pastilla.setAttribute('aria-keyshortcuts', (MAC ? 'Meta+K' : 'Control+K') + ' /');
   if (fondoOscuro(hueco)) pastilla.setAttribute('data-tema', 'oscuro');
   hueco.appendChild(pastilla);
@@ -263,6 +265,7 @@
     raiz.classList.remove('zxb--saliendo');
     raiz.hidden = false;
     H.style.overflow = 'hidden';
+    H.classList.add('zx-quieto'); // la página de detrás no anima mientras la tapa la ventana (INP)
     pastilla.setAttribute('aria-expanded', 'true');
     cargarPagefind(); cargarTerminos();
     input.value = q != null ? q : '';
@@ -281,6 +284,7 @@
     var fin = function () { if (!abierto) { raiz.hidden = true; raiz.classList.remove('zxb--saliendo'); } };
     if (rm) fin(); else { raiz.classList.add('zxb--saliendo'); setTimeout(fin, 120); }
     H.style.overflow = '';
+    H.classList.remove('zx-quieto');
     var destino = opener && D.contains(opener) ? opener : pastilla;
     try { destino.focus({ preventScroll: true }); } catch (e) { pastilla.focus(); }
   }

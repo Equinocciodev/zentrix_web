@@ -322,7 +322,7 @@
 .bq-acciones .boton { min-height: 56px; padding: 0 26px; font-size: 1.0625rem; }
 .bq-seccion--azul .bq-acciones .boton--principal { background: var(--blanco); color: var(--negro); }
 .bq-seccion--azul .bq-acciones .boton--principal:hover { background: var(--lima); }
-.bq-enlace { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-weight: 600; text-decoration: none; }
+.bq-enlace { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; font-weight: 600; text-decoration: none; }
 .bq-seccion--azul .bq-enlace { color: var(--blanco); }
 
 /* Sectores (soluciones por sector) */

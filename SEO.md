@@ -10,6 +10,7 @@ Cómo está montado el SEO del sitio, qué palabra clave trabaja cada página y 
 | `herramientas/generar.py` | Cabecera, pie, páginas de sección, `hreflang` y `og:locale:alternate`, `llms.txt`, redirecciones (dueño: estructura y multiidioma). | Tras cualquier cambio de contenido: `python3 herramientas/generar.py`. |
 | `herramientas/sitemap.py` | `sitemap.xml` desde el HTML: páginas indexables (sin `noindex` ni redirección), `loc` = canonical, `lastmod` del último commit de cada archivo y `xhtml:link` de sus `hreflang`. | En cada despliegue (workflow de Pages, con `fetch-depth: 0`) y desde `generar.py` si cambian las URL. |
 | `herramientas/llms.py` | `llms-full.txt`: el texto visible de cada página indexable, agrupado. `llms.txt` (el índice) lo escribe `generar.py` y enlaza a este. | En cada despliegue y a mano. |
+| `herramientas/validar_jsonld.py` | El JSON-LD de cada página contra el vocabulario de schema.org (tipos y propiedades por herencia), `@id` coherentes en todo el sitio, URLs absolutas y los requisitos de Google por tipo. Sale con 1 si hay errores; lo que solo impide un resultado enriquecido (apps sin valoraciones) es aviso. | Tras tocar `seo.py` y antes de fusionar; `--url https://zentrix.company / /check/` contra producción. |
 | `herramientas/verificar_seo.py` | Verificación del sitio publicado, página por página y en los dos idiomas. Sale con 1 si algo falla. | Antes de fusionar (contra una copia local) y después de cada despliegue (contra producción). |
 
 ```sh
@@ -34,7 +35,7 @@ Otras búsquedas que cubren las páginas como secundarias: «app para vendedores
 | `/check/docs/administrador.html` | — | Consola del administrador — Documentación de Zentrix Check | La consola del administrador de Seguridad en Zentrix Check: el código para entrar, el día de la sede, las actas, las diferencias y las fotos, solo para mirar. | TechArticle, BreadcrumbList |
 | `/check/docs/dudas.html` | — | Dudas rápidas — Documentación de Zentrix Check | Dudas rápidas de Zentrix Check resueltas en dos líneas: el PIN, la contraseña, el teléfono de la garita, la señal, las diferencias y quién te ayuda. | TechArticle, FAQPage, BreadcrumbList |
 | `/check/docs/encender.html` | — | Encender y apagar — Documentación de Zentrix Check | Cómo se enciende y se apaga el vigilante en Zentrix Check: qué cambia al encenderte, cómo apagarte al terminar y qué pasa si dejas el teléfono sin usar. | TechArticle, BreadcrumbList |
-| `/check/docs/entrar.html` | — | Entrar — Documentación de Zentrix Check | Cómo se entra a Zentrix Check: el alta del teléfono con el código QR, tu usuario y contraseña una vez, el PIN de cada día y qué hacer si lo olvidas. | TechArticle, BreadcrumbList |
+| `/check/docs/entrar.html` | — | Entrar — Documentación de Zentrix Check | Cómo se entra a Zentrix Check: tu correo y tu contraseña de la empresa la primera vez, el servidor y tu sede, el PIN de cada día y qué hacer si lo olvidas. | TechArticle, BreadcrumbList |
 | `/check/docs/hoy.html` | — | La pantalla Hoy — Documentación de Zentrix Check | La pantalla Hoy de Zentrix Check: las pestañas Salen, Llegan y Adentro, la barra de abajo, el menú Más y el escáner que abre cualquier camión, llave o activo. | TechArticle, BreadcrumbList |
 | `/check/docs/` | documentación para el vigilante de garita | Documentación para el vigilante — Zentrix Check | Cómo se usa Zentrix Check en la garita, pantalla a pantalla: entrar, sacar un camión, recibir mercancía, llaves, activos, novedades y trabajar sin señal. | TechArticle, BreadcrumbList |
 | `/check/docs/llaves.html` | — | Llaves — Documentación de Zentrix Check | Cómo se controlan las llaves con Zentrix Check: el llavero con código QR, quién se lleva cada llave, cuándo vuelve y qué hacer si una llave no regresa a tiempo. | TechArticle, BreadcrumbList |
@@ -55,7 +56,7 @@ Otras búsquedas que cubren las páginas como secundarias: «app para vendedores
 | `/en/check/docs/administrador.html` | — | The administrator console — Zentrix Check documentation | The Zentrix Check console for the security administrator: sign in with a code, then view the site’s day, records, differences, assets and keys. It is read-only. | TechArticle, BreadcrumbList |
 | `/en/check/docs/dudas.html` | — | Quick answers — Zentrix Check documentation | Quick answers to what guards ask most at the gate with Zentrix Check: a forgotten PIN, going off duty, liquor differences, signing by mistake and no signal. | TechArticle, FAQPage, BreadcrumbList |
 | `/en/check/docs/encender.html` | — | Going on and off duty — Zentrix Check documentation | There are no shifts in Zentrix Check: go on duty when you start at the gate, lock the phone when a coworker needs it, and go off duty when you head home. | TechArticle, BreadcrumbList |
-| `/en/check/docs/entrar.html` | — | Signing in — Zentrix Check documentation | Signing in to Zentrix Check: how the supervisor sets up the gate phone, your first sign-in, creating your PIN, what to do if you forget it and how to sign out. | TechArticle, BreadcrumbList |
+| `/en/check/docs/entrar.html` | — | Signing in — Zentrix Check documentation | Signing in to Zentrix Check: your company email and password the first time, the server and your site, your PIN, and what to do if you forget it. | TechArticle, BreadcrumbList |
 | `/en/check/docs/hoy.html` | — | The Today screen — Zentrix Check documentation | The Today screen in Zentrix Check: what’s leaving, what’s arriving and what’s inside the site, the Scan button, the Register tab and the More menu. | TechArticle, BreadcrumbList |
 | `/en/check/docs/` | Zentrix Check documentation | Zentrix Check documentation — For security guards | The Zentrix Check documentation for security guards, screen by screen: signing in, trucks leaving, receipts, keys, assets, incidents and working offline. | TechArticle, BreadcrumbList |
 | `/en/check/docs/llaves.html` | — | Keys — Zentrix Check documentation | How keys are tracked with Zentrix Check: the key ring with its QR code, who takes each key, when it comes back and what to do if a key isn’t returned on time. | TechArticle, BreadcrumbList |
@@ -170,12 +171,12 @@ Otras búsquedas que cubren las páginas como secundarias: «app para vendedores
 
 | Plantilla | JSON-LD |
 |---|---|
-| Portada (`/`, `/en/`) | `Organization` (nombre, logo 512×512, url, eslogan, `PostalAddress` de /contacto/, `sameAs`: traza.technology, Google Play de Zentrix Work y Zentrix Sales, App Store de Zentrix Sales; `contactPoint`: ventas hola@zentrix.company + teléfono/WhatsApp +58 412-346 9712, soporte soporte@zentrix.company) y `WebSite` con `SearchAction` → `https://zentrix.company/?q={search_term_string}`. |
-| Apps (`/work/`, `/sales/`, `/sales/en/`) | `SoftwareApplication` (BusinessApplication, Android / Android e iOS, enlaces a las tiendas, editor Zentrix) + `BreadcrumbList`. Sin `aggregateRating` ni `offers`: no hay datos publicados, y no se inventan (por eso Google no mostrará estrellas ni precio). |
-| Productos de servicio (`/ai/`, `/cloud/`, `/labs/`, `/logistics/`, `/software/`, `/traza/`) y cada solución (`/soluciones/*/`) | `Service` (nombre, tipo, descripción, proveedor Zentrix; `areaServed` Venezuela y Latinoamérica solo en Odoo) + `BreadcrumbList`. |
+| Portada (`/`, `/en/`) | `Organization` (nombre, logo 512×512, url, eslogan, `PostalAddress` de /contacto/, `sameAs`: los perfiles de `herramientas/redes.json` que tengan URL, traza.technology, Google Play de Zentrix Work y Zentrix Sales, App Store de Zentrix Sales; `contactPoint`: ventas hola@zentrix.company + teléfono/WhatsApp +58 412-346 9712, soporte soporte@zentrix.company) y `WebSite` con `SearchAction` → `https://zentrix.company/?q={search_term_string}`. |
+| Apps (`/work/`, `/sales/`, `/check/` y en inglés) | `SoftwareApplication` (BusinessApplication, Android / Android e iOS, enlaces a las tiendas, editor Zentrix) + `BreadcrumbList`. Sin `aggregateRating` ni `offers`: no hay datos publicados, y no se inventan. Google exige `offers.price` y `aggregateRating` o `review` para el resultado enriquecido de apps, así que estas páginas no lo tendrán y Search Console puede listarlas como «no válidas» en «Aplicaciones de software»: no es un error del marcado (schema.org lo valida) y no afecta a la indexación. `validar_jsonld.py` lo da como aviso. |
+| Productos de servicio (`/ai/`, `/cloud/`, `/labs/`, `/logistics/`, `/software/`, `/traza/`) y cada solución (`/soluciones/*/`) | `Service` (nombre, tipo, descripción, proveedor Zentrix; `areaServed` Venezuela y Latinoamérica solo en Odoo; sin `inLanguage`, que schema.org no admite en `Service`) + `BreadcrumbList`. |
 | Zentrix Logistics (`/logistics/`, `/en/logistics/`) | `Service` (tipo «Software de logística y reparto: despacho y última milla», `areaServed` Venezuela y Latinoamérica, `audience` retail, distribución y consumo masivo, `isRelatedTo` → la app) + `SoftwareApplication` (`#app`: BusinessApplication, «Web, Android», `featureList` con los siete módulos, `softwareRequirements` Odoo® 19, sin `offers` ni valoraciones) + `BreadcrumbList`. Es servicio y software a la vez: se implanta sobre el Odoo del cliente y su equipo trabaja desde Zentrix Work. |
 | Documentación, legales, secciones | `BreadcrumbList` (Inicio › producto › documentación › página). |
-| Documentación (portada y capítulos, ES/EN) | `TechArticle` con `inLanguage` (y `isPartOf` en los capítulos). |
+| Documentación (portada y capítulos, ES/EN) | `TechArticle` con `inLanguage`, `author` y `publisher` (la `Organization`), `image` (la Open Graph del producto), `about` → el `SoftwareApplication` de la app por su `@id` (`/work/#app`…) y, en los capítulos, `isPartOf` → la portada de la documentación por su `@id`. |
 | Contacto (`/contacto/`, `/en/contact/`) | `ContactPage` (sobre la `Organization`) + `BreadcrumbList`. |
 | Soporte (`/soporte/`, `/en/support/`) | `FAQPage` solo con las preguntas rápidas reales de Zentrix Work (`<details>` en `.preguntas`) + `BreadcrumbList`. |
 | Dudas rápidas de la documentación y la solución Odoo (ES/EN) | `FAQPage` con las preguntas y respuestas reales de la página (`<h2>` en la documentación, `<details>` en `.preguntas`) + `BreadcrumbList`. |
@@ -189,10 +190,14 @@ Otras búsquedas que cubren las páginas como secundarias: «app para vendedores
 - [x] Un solo `<h1>` y sin saltos de nivel.
 - [x] 404 y redirecciones con `noindex`.
 - [x] `sitemap.xml` generado en el despliegue, con `lastmod` de git y alternativas por idioma; `robots.txt` con `Sitemap:`.
-- [x] JSON-LD validado por script (estructura y campos obligatorios por plantilla).
-- [x] Imágenes con `alt`, `width` y `height`; enlaces internos y anclas sin romper.
+- [x] JSON-LD validado por script (estructura y campos obligatorios por plantilla) y contra el vocabulario de schema.org y los requisitos de Google (`validar_jsonld.py`).
+- [x] Imágenes con `alt` (vacío en las decorativas), `width` y `height`; `<svg>` en línea con `aria-hidden` o `role="img"` + `aria-label` (`verificar_seo.py` falla si no); enlaces internos y anclas sin romper.
 - [x] `llms.txt` (y `/en/llms.txt`) según llmstxt.org, con enlaces Markdown y `## Optional`; `llms-full.txt` con los enlaces de cada página. Auditoría `llms-txt` de Lighthouse en verde.
-- [x] Lighthouse SEO 100 (texto de enlace descriptivo en el aviso de cookies y `Agentmap` como comentario en `robots.txt`, que Lighthouse marcaba como directiva desconocida).
+- [x] Lighthouse SEO 92: el único fallo es `robots.txt`, que Lighthouse da por «directiva desconocida» en la línea `Content-Signal` (decisión de Victor del 14-10-2026, ver README «Agentes de IA»). Es un estándar de Cloudflare que Google ignora sin error; se deja. Con ella fuera daría 100.
+- [x] Correos en claro (`hola@` y `soporte@` en `mailto:` y en el JSON-LD): a propósito, para que los lean buscadores y modelos (por eso se pide apagar la ofuscación de Cloudflare). Ofuscarlos con JavaScript no protegería nada —están en el JSON-LD— y contradiría esa decisión. Las herramientas que lo marcan como riesgo lo hacen por regla general.
+- [x] Sin `ads.txt`: el sitio no tiene anuncios; no aplica.
+- [ ] Redes sociales: poner en `herramientas/redes.json` las URL de los perfiles que existan (LinkedIn, Instagram, X, YouTube, Facebook) y ejecutar `generar.py`; salen en el pie y en `sameAs`. Vacío = no se pinta nada (Victor).
+- [ ] HSTS en Cloudflare (Victor, abajo).
 - [ ] Desactivar «Email Address Obfuscation» en Cloudflare (Victor, abajo).
 - [ ] Search Console y Bing Webmaster (Victor, abajo).
 - [ ] Cambio de dirección de eqnio.com (Victor, abajo).
@@ -202,6 +207,24 @@ Otras búsquedas que cubren las páginas como secundarias: «app para vendedores
 ### 0. Cloudflare: desactivar «Email Address Obfuscation»
 
 zentrix.company ya pasa por el proxy de Cloudflare, y su ofuscación de correos cambia cada `mailto:` por `/cdn-cgi/l/email-protection#…` (404 sin JavaScript) y el texto del correo por «[email protected]». Los buscadores y los modelos dejan de ver hola@ y soporte@. En Cloudflare, zona `zentrix.company` → **Scrape Shield** (o **Security → Settings**) → **Email Address Obfuscation: Off**. `verificar_seo.py` lo marca como fallo global hasta que se apague.
+
+### 0 bis. Cloudflare: HSTS (Strict-Transport-Security)
+
+GitHub Pages no deja poner cabeceras; HSTS lo pone Cloudflare, que ya hace de proxy (`server: cloudflare`; `http://` ya responde 301 a `https://`). Hoy la respuesta no lleva `Strict-Transport-Security`.
+
+1. Antes: zona `zentrix.company` → **SSL/TLS → Overview** en **Full (strict)**, y **SSL/TLS → Edge Certificates → Always Use HTTPS: On**. Comprueba que todo lo que cuelga del dominio y se abre en un navegador responde por HTTPS (hoy `zentrix.company` y `www`, que redirige).
+2. **SSL/TLS → Edge Certificates → HTTP Strict Transport Security (HSTS) → Enable HSTS** → acepta el aviso.
+3. Primera fase (prudente): **Status: On**, **Max Age: el valor más bajo que ofrezca distinto de 0** (1 mes), **Apply HSTS policy to subdomains (includeSubDomains): Off**, **Preload: Off**, **No-Sniff Header: On**. Guarda.
+4. Comprueba: `curl -sI https://zentrix.company/ | grep -i strict` → `strict-transport-security: max-age=2592000` (y `x-content-type-options: nosniff`).
+5. Tras unas semanas sin problemas: **Max Age 6 o 12 meses**. Activa **includeSubDomains** solo si todos los subdominios que existan o vayan a existir (también los de prueba o de correo web) sirven HTTPS: con HSTS un navegador no volverá a abrirlos por HTTP mientras dure el max-age.
+6. **Preload**: no, hasta decidirlo. Exige 12 meses + includeSubDomains, mete el dominio en la lista de los navegadores y salir de ella tarda meses.
+
+Para volver atrás: Max Age 0 (los navegadores que ya lo vieron lo olvidan con la siguiente visita).
+
+### 0 ter. Cloudflare: caché de navegador y Web Analytics (opcionales)
+
+- GitHub Pages sirve todo con `cache-control: max-age=600` (Lighthouse «cache-insight»). CSS, JS y fuentes llevan `?v=` y se pueden cachear largo: una **Cache Rule** para `/assets/*` con **Browser TTL** de 1 mes (y Edge TTL igual) quitaría casi todas las peticiones en la segunda visita. Las imágenes sin `?v=` tardarían ese mes en refrescarse si se cambian con el mismo nombre.
+- Cloudflare inyecta su beacon de Web Analytics (`static.cloudflareinsights.com/beacon.min.js`, 10 KB, una petición más y ~130 ms de CPU en móvil). Si no se usa —la analítica del sitio es GA4 con consentimiento—, se apaga en **Analytics & Logs → Web Analytics** (o «RUM») de la zona.
 
 ### 1. Google Search Console (verificación por DNS en Cloudflare)
 
