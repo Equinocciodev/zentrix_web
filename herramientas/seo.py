@@ -230,7 +230,7 @@ PAGINAS = {
                                  'cámara opcional. Y cómo comprobar que tu teléfono de verdad va a sonar.'),
     '/work/docs/reparto.html': ('app para repartidores', None, None),
     '/work/docs/tu-dia.html': (None, None,
-                               'Qué muestra «Mi trabajo» en Zentrix Work: lo que cerraste hoy o esta semana, '
+                               'Qué muestra «Mi trabajo de hoy» en Zentrix Work: lo que cerraste hoy o esta semana, '
                                'cuánto fue a tiempo, tu ritmo de trabajo y tu nivel como operador.'),
     '/work/docs/turno.html': (None, None,
                               'Cómo se enciende el turno en Zentrix Work: elegir tienda y tareas, deslizar para '
