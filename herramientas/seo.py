@@ -512,7 +512,7 @@ def jsonld(ruta, titulo, descripcion, cuerpo, lang):
         if lang == 'en':
             n, tipo = (SERVICIOS[plantilla][0] if plantilla in SERVICIOS else nombre), nombre
         servicio = {'@type': 'Service', '@id': url + '#servicio', 'name': n, 'serviceType': tipo,
-                    'description': descripcion, 'url': url, 'inLanguage': lang, 'provider': org_ref()}
+                    'description': descripcion, 'url': url, 'provider': org_ref()}  # Service no tiene inLanguage
         if plantilla in ('/software/', '/soluciones/odoo-venezuela/', '/solutions/odoo-venezuela/'):
             servicio['areaServed'] = ['Venezuela', 'Latinoamérica']
         if plantilla == '/traza/':
@@ -548,15 +548,17 @@ def jsonld(ruta, titulo, descripcion, cuerpo, lang):
     if prod_manual:
         # Documentación (portada y capítulos) en los dos idiomas: artículo técnico con su idioma.
         clave = prod_manual.group(1)
-        app, manual = NOMBRES_SECCION[lang][clave]
+        app = NOMBRES_SECCION[lang][clave][0]
         raiz = ('/en' if lang == 'en' else '') + f'/{clave}/docs/'
+        pref = '/en' if lang == 'en' else ''
         articulo = {'@type': 'TechArticle', '@id': url + '#articulo', 'headline': nombre,
                     'description': descripcion, 'url': url, 'inLanguage': lang,
-                    'about': {'@type': 'SoftwareApplication', 'name': app},
-                    'publisher': {'@id': ORG_ID}}
+                    # La app es el mismo nodo que define su página (/work/#app…), con el mismo tipo y nombre.
+                    'about': {'@type': 'SoftwareApplication', '@id': f'{SITIO}{pref}/{clave}/#app', 'name': app},
+                    'image': f'{SITIO}/assets/img/og-{clave}.png',
+                    'author': org_ref(), 'publisher': org_ref()}
         if url != SITIO + raiz:
-            articulo['isPartOf'] = {'@type': 'CreativeWork', 'name': f'{manual} — {app}', 'url': SITIO + raiz,
-                                    'inLanguage': lang}
+            articulo['isPartOf'] = {'@id': SITIO + raiz + '#articulo'}  # la portada de la documentación
         grafo.append(articulo)
     if ruta.endswith('/dudas.html') or 'class="preguntas' in cuerpo:
         f = faq(cuerpo)

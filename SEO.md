@@ -10,6 +10,7 @@ Cómo está montado el SEO del sitio, qué palabra clave trabaja cada página y 
 | `herramientas/generar.py` | Cabecera, pie, páginas de sección, `hreflang` y `og:locale:alternate`, `llms.txt`, redirecciones (dueño: estructura y multiidioma). | Tras cualquier cambio de contenido: `python3 herramientas/generar.py`. |
 | `herramientas/sitemap.py` | `sitemap.xml` desde el HTML: páginas indexables (sin `noindex` ni redirección), `loc` = canonical, `lastmod` del último commit de cada archivo y `xhtml:link` de sus `hreflang`. | En cada despliegue (workflow de Pages, con `fetch-depth: 0`) y desde `generar.py` si cambian las URL. |
 | `herramientas/llms.py` | `llms-full.txt`: el texto visible de cada página indexable, agrupado. `llms.txt` (el índice) lo escribe `generar.py` y enlaza a este. | En cada despliegue y a mano. |
+| `herramientas/validar_jsonld.py` | El JSON-LD de cada página contra el vocabulario de schema.org (tipos y propiedades por herencia), `@id` coherentes en todo el sitio, URLs absolutas y los requisitos de Google por tipo. Sale con 1 si hay errores; lo que solo impide un resultado enriquecido (apps sin valoraciones) es aviso. | Tras tocar `seo.py` y antes de fusionar; `--url https://zentrix.company / /check/` contra producción. |
 | `herramientas/verificar_seo.py` | Verificación del sitio publicado, página por página y en los dos idiomas. Sale con 1 si algo falla. | Antes de fusionar (contra una copia local) y después de cada despliegue (contra producción). |
 
 ```sh
@@ -171,11 +172,11 @@ Otras búsquedas que cubren las páginas como secundarias: «app para vendedores
 | Plantilla | JSON-LD |
 |---|---|
 | Portada (`/`, `/en/`) | `Organization` (nombre, logo 512×512, url, eslogan, `PostalAddress` de /contacto/, `sameAs`: traza.technology, Google Play de Zentrix Work y Zentrix Sales, App Store de Zentrix Sales; `contactPoint`: ventas hola@zentrix.company + teléfono/WhatsApp +58 412-346 9712, soporte soporte@zentrix.company) y `WebSite` con `SearchAction` → `https://zentrix.company/?q={search_term_string}`. |
-| Apps (`/work/`, `/sales/`, `/sales/en/`) | `SoftwareApplication` (BusinessApplication, Android / Android e iOS, enlaces a las tiendas, editor Zentrix) + `BreadcrumbList`. Sin `aggregateRating` ni `offers`: no hay datos publicados, y no se inventan (por eso Google no mostrará estrellas ni precio). |
-| Productos de servicio (`/ai/`, `/cloud/`, `/labs/`, `/logistics/`, `/software/`, `/traza/`) y cada solución (`/soluciones/*/`) | `Service` (nombre, tipo, descripción, proveedor Zentrix; `areaServed` Venezuela y Latinoamérica solo en Odoo) + `BreadcrumbList`. |
+| Apps (`/work/`, `/sales/`, `/check/` y en inglés) | `SoftwareApplication` (BusinessApplication, Android / Android e iOS, enlaces a las tiendas, editor Zentrix) + `BreadcrumbList`. Sin `aggregateRating` ni `offers`: no hay datos publicados, y no se inventan. Google exige `offers.price` y `aggregateRating` o `review` para el resultado enriquecido de apps, así que estas páginas no lo tendrán y Search Console puede listarlas como «no válidas» en «Aplicaciones de software»: no es un error del marcado (schema.org lo valida) y no afecta a la indexación. `validar_jsonld.py` lo da como aviso. |
+| Productos de servicio (`/ai/`, `/cloud/`, `/labs/`, `/logistics/`, `/software/`, `/traza/`) y cada solución (`/soluciones/*/`) | `Service` (nombre, tipo, descripción, proveedor Zentrix; `areaServed` Venezuela y Latinoamérica solo en Odoo; sin `inLanguage`, que schema.org no admite en `Service`) + `BreadcrumbList`. |
 | Zentrix Logistics (`/logistics/`, `/en/logistics/`) | `Service` (tipo «Software de logística y reparto: despacho y última milla», `areaServed` Venezuela y Latinoamérica, `audience` retail, distribución y consumo masivo, `isRelatedTo` → la app) + `SoftwareApplication` (`#app`: BusinessApplication, «Web, Android», `featureList` con los siete módulos, `softwareRequirements` Odoo® 19, sin `offers` ni valoraciones) + `BreadcrumbList`. Es servicio y software a la vez: se implanta sobre el Odoo del cliente y su equipo trabaja desde Zentrix Work. |
 | Documentación, legales, secciones | `BreadcrumbList` (Inicio › producto › documentación › página). |
-| Documentación (portada y capítulos, ES/EN) | `TechArticle` con `inLanguage` (y `isPartOf` en los capítulos). |
+| Documentación (portada y capítulos, ES/EN) | `TechArticle` con `inLanguage`, `author` y `publisher` (la `Organization`), `image` (la Open Graph del producto), `about` → el `SoftwareApplication` de la app por su `@id` (`/work/#app`…) y, en los capítulos, `isPartOf` → la portada de la documentación por su `@id`. |
 | Contacto (`/contacto/`, `/en/contact/`) | `ContactPage` (sobre la `Organization`) + `BreadcrumbList`. |
 | Soporte (`/soporte/`, `/en/support/`) | `FAQPage` solo con las preguntas rápidas reales de Zentrix Work (`<details>` en `.preguntas`) + `BreadcrumbList`. |
 | Dudas rápidas de la documentación y la solución Odoo (ES/EN) | `FAQPage` con las preguntas y respuestas reales de la página (`<h2>` en la documentación, `<details>` en `.preguntas`) + `BreadcrumbList`. |
@@ -189,7 +190,7 @@ Otras búsquedas que cubren las páginas como secundarias: «app para vendedores
 - [x] Un solo `<h1>` y sin saltos de nivel.
 - [x] 404 y redirecciones con `noindex`.
 - [x] `sitemap.xml` generado en el despliegue, con `lastmod` de git y alternativas por idioma; `robots.txt` con `Sitemap:`.
-- [x] JSON-LD validado por script (estructura y campos obligatorios por plantilla).
+- [x] JSON-LD validado por script (estructura y campos obligatorios por plantilla) y contra el vocabulario de schema.org y los requisitos de Google (`validar_jsonld.py`).
 - [x] Imágenes con `alt`, `width` y `height`; enlaces internos y anclas sin romper.
 - [x] `llms.txt` (y `/en/llms.txt`) según llmstxt.org, con enlaces Markdown y `## Optional`; `llms-full.txt` con los enlaces de cada página. Auditoría `llms-txt` de Lighthouse en verde.
 - [x] Lighthouse SEO 100 (texto de enlace descriptivo en el aviso de cookies y `Agentmap` como comentario en `robots.txt`, que Lighthouse marcaba como directiva desconocida).
