@@ -125,7 +125,7 @@ Elige el motivo y, si quieres, el producto: preparamos el asunto del correo o de
 
 Motivo Ventas o demostración Soporte de una app Alianzas Prensa
 
-Producto Varios o ninguno en concreto Zentrix Work Zentrix Sales Zentrix AI Zentrix Logistics Zentrix Cloud Zentrix Labs Zentrix Software
+Producto Varios o ninguno en concreto Zentrix Work Zentrix Sales Zentrix Check Zentrix AI Zentrix Logistics Zentrix Cloud Zentrix Labs Zentrix Software
 Demostración con tus datos: tu catálogo, tu tarifa y tu ruta. Integración con tu ERP: con Odoo®, nativa; con los demás, a medida.
 Si ya usas una app, mira antes el [centro de soporte](https://zentrix.company/soporte/): preguntas frecuentes, acceso y cómo eliminar tu cuenta.
 Partners, integradores y proveedores: cuéntanos qué propones.
@@ -197,6 +197,8 @@ Ver todas las soluciones
 
 - [Zentrix Sales](https://zentrix.company/sales/)
 
+- [Zentrix Check](https://zentrix.company/check/)
+
 - [Zentrix AI](https://zentrix.company/ai/)
 
 - [Zentrix Logistics](https://zentrix.company/logistics/)
@@ -214,7 +216,7 @@ Zentrix en cifras
 ### Lo que ya está funcionando.
 
 - 2apps en producción: Zentrix Work y Zentrix Sales
-- 8productos en la suite: Zentrix Work, Sales, AI, Logistics, Cloud, Labs, Software y Traza
+- 9productos en la suite: Zentrix Work, Sales, Check, AI, Logistics, Cloud, Labs, Software y Traza
 - 12sistemas de gestión con los que conectamos Zentrix Sales
 - 5pasos, de entender tu proceso a mejorarlo contigo
 
@@ -493,6 +495,7 @@ Manuales
 
 - [Manual de Zentrix Work Turno, pedidos, preparación, entrega, devoluciones y ajustes, para el equipo de tienda. Abrir](https://zentrix.company/work/docs/)
 - [Manual de Zentrix Sales Ruta, visitas, pedidos, cobranza y trabajo sin señal, para el vendedor. Abrir](https://zentrix.company/sales/docs/)
+- [Manual de Zentrix Check Salidas de camión, recepciones, llaves, activos, novedades y trabajo sin señal, para el vigilante. Abrir](https://zentrix.company/check/docs/)
 
 Soporte
 
@@ -500,6 +503,7 @@ Soporte
 
 - [Soporte de Zentrix Work Acceso, dudas frecuentes y cómo eliminar tu cuenta. Abrir](https://zentrix.company/soporte/#work)
 - [Soporte de Zentrix Sales Acceso, dudas frecuentes y cómo eliminar tu cuenta. Abrir](https://zentrix.company/soporte/#sales)
+- [Soporte de Zentrix Check Acceso, dudas frecuentes y cómo eliminar tu cuenta. Abrir](https://zentrix.company/soporte/#check)
 - [Contacto Escribe a soporte@ o por WhatsApp: te responde una persona. Abrir](https://zentrix.company/contacto/)
 
 Legal
@@ -510,6 +514,8 @@ Legal
 - [Términos de Zentrix Work Las reglas de uso de la app. Abrir](https://zentrix.company/work/terminos/)
 - [Privacidad de Zentrix Sales Qué recoge la app, para qué y por cuánto tiempo. Abrir](https://zentrix.company/sales/privacidad/)
 - [Términos de Zentrix Sales Las reglas de uso de la app. Abrir](https://zentrix.company/sales/terminos/)
+- [Privacidad de Zentrix Check Qué registra la app en la garita, para qué y por cuánto tiempo. Abrir](https://zentrix.company/check/privacidad/)
+- [Términos de Zentrix Check Las reglas de uso de la app. Abrir](https://zentrix.company/check/terminos/)
 - [Privacidad del sitio web Cookies y analítica de zentrix.company, y cómo retirar el consentimiento. Abrir](https://zentrix.company/privacidad/)
 
 Para desarrolladores e IA
@@ -637,6 +643,138 @@ Los agentes ejecutan tareas con contexto, con acceso por rol y supervisión huma
 Te responde una persona, en español, en menos de un día hábil. Escríbenos a [hola@zentrix.company](mailto:hola@zentrix.company?subject=Zentrix%20AI%3A%20quiero%20saber%20m%C3%A1s) o por [WhatsApp +58 412-346 9712](https://wa.me/584123469712).
 
 [Solicita una demostración](mailto:hola@zentrix.company?subject=Zentrix%20AI%3A%20quiero%20saber%20m%C3%A1s)
+
+
+---
+
+## [Zentrix Check — App de garita y control de acceso](https://zentrix.company/check/)
+
+Zentrix Check, la app Android de la garita: el vigilante revisa cada camión contra Odoo®, toma fotos y firma un acta que no se puede cambiar, con o sin señal.
+
+Para la garita de seguridad · Android
+
+### La garita da fe de lo que entra y sale.
+
+El vigilante revisa cada camión contra lo que dice Odoo®, toma las fotos y firma con su PIN. Queda un acta que nadie puede cambiar, aunque en la garita no haya señal.
+
+Cómo funciona
+
+Cómo funciona
+
+### Así sale un camión con Zentrix Check.
+
+La app no pregunta qué lleva el camión: lo trae del sistema de la empresa y le pide al vigilante que lo confirme con sus ojos. Seguridad da fe; no mueve inventario ni toca la contabilidad.
+
+Cada paso queda con su hora, su foto y el nombre de quien lo hizo.
+
+- Te enciendes en la garita Entras con tu nombre y tu PIN. La pantalla «Hoy» te muestra lo que sale, lo que llega y lo que sigue adentro.
+
+- Confirmas el camión y el chofer Fotografías la placa y comparas la cédula del chofer con lo que dice Odoo. Si no coinciden, queda anotado.
+
+- Guía y facturas Escaneas la guía de despacho y cada factura. Si la carga lleva licor, también su guía de circulación.
+
+- Cuentas la carga Escaneas producto por producto, o llenas con lo de Odoo, que no cuenta como revisado. Cada diferencia se clasifica por gravedad, y si es crítica la app te pide llamar al supervisor.
+
+- Foto de la carga y candado Una foto con las puertas abiertas y, antes de cerrar, el candado. En algunas sedes, también la cabina.
+
+- Firmas y tocas «Salió» Con tu PIN. El acta queda cerrada, con la huella de cada foto.
+
+Qué te ayuda a hacer
+
+### Todo lo que pasa por la garita, con constancia.
+
+Pensada para el ritmo de una garita: camiones esperando, papeles en la mano y, muchas veces, sin señal.
+
+- 01
+
+### Salidas de camión
+Placa y chofer, guía y facturas, la carga contra Odoo, la foto de la carga, el candado y la firma. Lo que no cuadra queda dicho y con su gravedad.
+
+- 02
+
+### Recepciones y retornos
+La mercancía que llega, contra lo esperado y la factura del proveedor; los contenedores, con la revisión de su precinto. Los camiones que vuelven de ruta se concilian solos.
+
+- 03
+
+### Lo que pasa sin papeles
+Si entra o sale algo que no tiene documento en el sistema, también queda registrado: qué, cuándo y qué vigilante lo anotó.
+
+- 04
+
+### Llaves y activos
+El llavero con código QR dice quién se llevó cada llave y cuándo volvió. Los equipos de la empresa salen y regresan con un pase que aprueba el gerente.
+
+- 05
+
+### Novedades y decisiones
+Un incidente en pocas palabras, con foto si hace falta. Y cuando hay que decidir en el sitio, «¿Quién autorizó?» anota a quién se llamó y a qué hora.
+
+- 06
+
+### Funciona sin señal
+Lo que hace el vigilante se guarda cifrado en el teléfono y se envía solo cuando vuelve la conexión, en orden y sin duplicados.
+
+Casos de uso
+
+### Una garita, tres momentos del día.
+
+Así se ve cada uno desde el teléfono del vigilante.
+
+- 01
+
+### Un camión que sale cargado
+La carga ya está en el sistema. El vigilante la confirma, cuenta, fotografía, revisa el candado y firma. Si algo falta, la app dice cuánto y de qué, y si es grave pide llamar al supervisor antes de dejarlo salir.
+
+- 02
+
+### Un proveedor que entrega
+El vigilante abre la llegada, revisa el precinto si es un contenedor, compara lo que llega con lo esperado y fotografía la factura del proveedor. La diferencia queda escrita antes de que la mercancía entre.
+
+- 03
+
+### Algo que sale sin papel
+Una herramienta, una caja, un material. No hay documento, pero queda el registro: qué salió, a qué hora y qué vigilante lo anotó.
+
+Seguridad y privacidad
+
+### Un acta que no se puede cambiar.
+
+Lo que firma el vigilante es la versión que vale. Por eso la app está hecha para que nadie pueda reescribirla después, ni siquiera desde la oficina.
+
+- Huella en cada foto y en cada paso. Cada evento lleva la huella del anterior: si alguien cambia uno, se nota. Una corrección se agrega como nota; el original se queda.
+
+- El teléfono es una llave. Se da de alta con un código QR y queda sellado a una sede. Si se pierde, se revoca y borra lo que guardaba.
+
+- Solo la cámara. Sin ubicación, sin galería y sin contactos. En el PIN, la contraseña y el visor de fotos no se pueden hacer capturas de pantalla.
+
+- Cifrado en el teléfono. Lo pendiente por enviar va cifrado, y el PIN nunca sale del teléfono.
+
+- El administrador solo mira. Ve el día, las actas, las diferencias y las fotos de su sede, pero no puede cambiar lo que firmó el vigilante.
+
+- Sin publicidad y sin identificador publicitario.
+
+[Qué datos registra la app y para qué](https://zentrix.company/check/privacidad/)
+
+### Para quién es
+
+Para el personal de seguridad de las empresas que usan Zentrix Check, en el teléfono Android de la garita. No hay registro: el administrador de Seguridad crea la cuenta de cada vigilante y da de alta cada teléfono. Cualquiera puede instalar la app, pero sin ese alta no hace nada.
+
+### Cómo empezar
+
+- El administrador de Seguridad genera el código QR del teléfono de la garita.
+
+- Instala Zentrix Check en ese teléfono y lee el código.
+
+- Entra con tu usuario y tu contraseña. Solo la primera vez.
+
+- Crea tu PIN, y desde ahí entras con tu nombre y tu PIN.
+
+### Zentrix Check, para Android
+
+Se instala desde Google Play en el teléfono de la garita. ¿Tienes dudas? Escríbenos a [soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Soporte%20%E2%80%94%20Zentrix%20Check).
+
+[Soporte](https://zentrix.company/soporte/#check)
 
 
 ---
@@ -2339,6 +2477,440 @@ A real person gets back to you, in Spanish or English, within one business day. 
 
 ---
 
+## [Zentrix Check manual — Step by step for security guards](https://zentrix.company/en/check/docs/)
+
+The Zentrix Check manual for security guards: signing in, trucks leaving, receipts, keys, assets, incidents and working offline. The chapters are in Spanish.
+
+Zentrix Check manual
+
+### The Zentrix Check manual.
+
+The step-by-step guide for security guards: trucks leaving, receipts, keys, assets, incidents and working without a signal.
+
+[Open the manual (Spanish)](https://zentrix.company/check/docs/) [About Zentrix Check](https://zentrix.company/en/check/)
+
+The manual is written in Spanish. The app itself is in Spanish too. Your browser can translate any chapter, and if you need help in English, write to [soporte@zentrix.company](mailto:soporte@zentrix.company).
+
+Chapters
+
+### What’s inside.
+
+- [Signing in](https://zentrix.company/check/docs/entrar.html) · entrar.html
+- [Clocking in and out](https://zentrix.company/check/docs/encender.html) · encender.html
+- [The Today screen](https://zentrix.company/check/docs/hoy.html) · hoy.html
+- [A truck leaving](https://zentrix.company/check/docs/salida.html) · salida.html
+- [Receipts and route returns](https://zentrix.company/check/docs/recepcion.html) · recepcion.html
+- [Movements without paperwork](https://zentrix.company/check/docs/sin-documento.html) · sin-documento.html
+- [Keys](https://zentrix.company/check/docs/llaves.html) · llaves.html
+- [Assets and passes](https://zentrix.company/check/docs/activos.html) · activos.html
+- [Incidents and calls](https://zentrix.company/check/docs/novedades.html) · novedades.html
+- [Working without a signal](https://zentrix.company/check/docs/sin-senal.html) · sin-senal.html
+- [The administrator console](https://zentrix.company/check/docs/administrador.html) · administrador.html
+- [Questions](https://zentrix.company/check/docs/dudas.html) · dudas.html
+
+
+---
+
+## [Zentrix Check — Security gate and access control app](https://zentrix.company/en/check/)
+
+Zentrix Check, the Android app for the security gate: guards check every truck against Odoo®, take photos and sign a record that cannot be changed.
+
+For the security gate · Android
+
+### The gate vouches for what comes in and goes out.
+
+The guard checks every truck against what Odoo® says, takes the photos and signs with a PIN. The result is a record nobody can change, even when the gate has no signal.
+
+How it works
+
+How it works
+
+### How a truck leaves with Zentrix Check.
+
+The app doesn’t ask what the truck carries: it brings that from the company’s system and asks the guard to confirm it with their own eyes. Security vouches; it doesn’t move inventory or touch the books.
+
+Every step is stored with its time, its photo and the name of the person who did it.
+
+- You clock in at the gate You sign in with your name and your PIN. The “Today” screen shows what is leaving, what is arriving and what is still inside.
+
+- You confirm the truck and the driver You photograph the plate and compare the driver’s ID with what Odoo says. If they don’t match, it is noted.
+
+- Delivery note and invoices You scan the delivery note and each invoice. If the load carries liquor, its transport permit too.
+
+- You count the load Scan product by product, or fill it in from Odoo, which doesn’t count as checked. Every difference gets a severity, and if it is critical the app asks you to call the supervisor.
+
+- Photo of the load and padlock A photo with the doors open and, before closing, the padlock. At some sites, the cab too.
+
+- You sign and tap “Left” With your PIN. The record is closed, with the fingerprint of every photo.
+
+What it helps you do
+
+### Everything that goes through the gate, on record.
+
+Built for the pace of a gate: trucks waiting, paperwork in hand and, often, no signal.
+
+- 01
+
+### Outbound trucks
+Plate and driver, delivery note and invoices, the load against Odoo, the photo of the load, the padlock and the signature. Whatever doesn’t match is written down, with its severity.
+
+- 02
+
+### Receipts and returns
+Incoming goods, against what was expected and the supplier’s invoice; containers, with a check of their seal. Trucks coming back from their route are reconciled automatically.
+
+- 03
+
+### Movements without paperwork
+If something comes in or goes out with no document in the system, it is recorded anyway: what, when and which guard logged it.
+
+- 04
+
+### Keys and assets
+The QR key ring shows who took each key and when it came back. Company equipment leaves and returns with a pass the manager approves.
+
+- 05
+
+### Incidents and decisions
+An incident in a few words, with a photo if needed. And when a decision has to be made on site, “Who authorized it?” notes who was called and when.
+
+- 06
+
+### Works without a signal
+What the guard does is stored encrypted on the phone and sent automatically when the connection returns, in order and without duplicates.
+
+Use cases
+
+### One gate, three moments of the day.
+
+This is how each one looks from the guard’s phone.
+
+- 01
+
+### A loaded truck leaving
+The load is already in the system. The guard confirms it, counts, photographs, checks the padlock and signs. If something is missing, the app says how much and of what, and if it is serious it asks to call the supervisor before letting the truck go.
+
+- 02
+
+### A supplier delivering
+The guard opens the arrival, checks the seal if it is a container, compares what arrives with what was expected and photographs the supplier’s invoice. The difference is written down before the goods come in.
+
+- 03
+
+### Something leaving without paperwork
+A tool, a box, some material. There is no document, but there is a record: what left, when and which guard logged it.
+
+Security and privacy
+
+### A record that cannot be changed.
+
+What the guard signs is the version that counts. That is why the app is built so nobody can rewrite it later, not even from the office.
+
+- A fingerprint on every photo and every step. Each event carries the fingerprint of the previous one: if someone changes one, it shows. A correction is added as a note; the original stays.
+
+- The phone is a key. It is set up with a QR code and sealed to one site. If it is lost, it is revoked and wipes what it stored.
+
+- Camera only. No location, no gallery and no contacts. Screenshots are blocked on the PIN, password and photo viewer screens.
+
+- Encrypted on the phone. Whatever is waiting to be sent is encrypted, and the PIN never leaves the phone.
+
+- The administrator only looks. They see the day, the records, the differences and the photos of their site, but cannot change what the guard signed.
+
+- No advertising and no advertising ID.
+
+[What data the app records and why](https://zentrix.company/en/check/privacy/)
+
+### Who it is for
+
+For the security staff of companies that use Zentrix Check, on the gate’s Android phone. There is no sign-up: the security administrator creates each guard’s account and sets up each phone. Anyone can install the app, but without that setup it does nothing.
+
+### Getting started
+
+- The security administrator generates the QR code for the gate phone.
+
+- Install Zentrix Check on that phone and scan the code.
+
+- Sign in with your username and password. Only the first time.
+
+- Create your PIN; from then on you sign in with your name and your PIN.
+
+### Zentrix Check, for Android
+
+It is installed from Google Play on the gate phone. Questions? Write to [soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Support%20%E2%80%94%20Zentrix%20Check).
+
+[Support](https://zentrix.company/en/support/#check)
+
+
+---
+
+## [Privacy policy — Zentrix Check](https://zentrix.company/en/check/privacy/)
+
+What the Zentrix Check gate app records, why, who sees it and how it is protected, and how to ask for access to your data, its correction or its deletion.
+
+Legal
+
+### Zentrix Check privacy policy
+
+Last updated: October 16, 2026.
+
+### 1. What Zentrix Check is and who it is for
+
+Zentrix Check is the internal work tool of the security staff of the company that uses it (the “company”), at the gate of each site. It is developed and distributed by GUUAO LLC through Google Play, for Android only. Guards use it to record what comes in and goes out: loaded trucks leaving, goods arriving, keys, company equipment and incidents. The app does not move inventory or touch the accounting: it only records what the guard checked.
+
+It is not a consumer app and it does not allow sign-up. Each guard’s account is created by the company’s security administrator, and each phone is set up with a QR code that seals it to one site. Without that, the app does nothing.
+
+This policy applies to these people:
+
+- The guard: the employee of the company, or of its security contractor, who uses the app with their account.
+
+- The security administrator: who reviews the day, the records and the photos of their site from the app. They can only look; they cannot change what the guard signed.
+
+- People whose data goes through the gate even if they don’t use the app: drivers and carriers, those named on the invoices and papers that travel with a load, employees who take a key or a piece of equipment, and the site contacts the guard may call.
+
+The processing is part of the employment relationship and of access control to the company’s premises. The app does not show a consent dialog: recording who checked what, and when, is the very purpose of the tool. The only permission the phone asks for is the camera, and it is Android that asks.
+
+### 2. What data is collected and why
+
+### About the guard and the administrator
+
+Data What it is used for
+
+Name and username Identifying the guard on the gate phone and on every record they sign. The username is that of their account in the company’s system.
+
+Password Signing in the first time on each phone. It is validated by the company’s server; the app does not store it. What is stored is the session, encrypted on the phone.
+
+PIN Signing in afterwards with name and PIN, and signing every record. It is a local lock: it is stored hashed on the phone and never leaves it.
+
+Administrator’s two-factor code The security administrator also signs in with a one-time code, validated by the company’s server.
+
+Clock-in and clock-out When the guard clocked in and out at the gate, the time of their last action, the site and the post. It shows who was in charge. It is not a working-time record.
+
+Log of what they do Every step of every record, with its time and the guard who did it: departures, receipts, counts, differences, signatures, keys, incidents and decisions. It is the gate’s audit trail.
+
+Phone and session data Phone model, Android and app version, and an installation identifier generated by the app. The company’s server also logs the IP address and dates of each session. They show which phone did what, allow cutting off a lost phone and enforcing a minimum app version.
+
+Phone and app integrity When the phone is set up and at sign-in, the app asks Google Play to confirm that the app is genuine and runs on an unaltered phone. See clause 6.
+
+Usage and crash data Which screens are used, without any record data, and technical reports when the app fails. Details in clause 6.
+
+### About people whose data goes through the gate
+
+Data What it is used for
+
+Vehicle plate and photo of the plate Confirming that the vehicle leaving or arriving is the one the system expects. The plate comes from the company’s dispatch; the guard only types it if it doesn’t match or is missing.
+
+Driver’s name and the last 4 digits of their ID Confirming that the driver is the assigned one. They come from the company’s system; the app never shows the full ID number and keeps it on the phone for 12 hours at most.
+
+Photos of the load, cab, container and seals Recording the condition of the load and the vehicle on departure or arrival. They are photos of things: the app asks that no people appear.
+
+Photos of invoices and carrier papers Recording the documents that travel with the load. They may show the name, tax ID or ID number, address and amounts of customers, suppliers and drivers. They are stored with the same restricted access as the records.
+
+Who takes a key or a piece of equipment The employee, picked from the company’s list, and the time out and back. Never their ID number. If the person is not on the list, their name is not written down.
+
+Text and photos of an incident Two or three words about what happened and, if needed, up to three photos of things. The app asks not to write names or ID numbers and masks any run of six digits.
+
+Site contacts and logged calls The role, schedule and work phone of the people the guard may call (supervisor, manager, dispatch). When the guard calls from the app, who and when is noted; the call is not recorded and its duration is not stored.
+
+### 3. What the app does NOT do
+
+- It does not use location. The app doesn’t even ask for that permission.
+
+- It does not read the phone’s gallery, contacts, messages or files. Photos are taken with the camera from within the app.
+
+- It does not record audio. The app may read prompts aloud with the voices already installed on the phone, without downloading anything. If the guard dictates with the keyboard’s microphone, that dictation is handled by the phone’s keyboard, not by Zentrix Check.
+
+- It does not use facial recognition or biometric data, and it does not ask for photos of people or identity documents.
+
+- It does not send push notifications.
+
+- It does not sell data, show ads or build marketing profiles.
+
+- It does not use the phone’s advertising ID.
+
+- It does not send the PIN anywhere.
+
+- It does not send screenshots, record contents or photos in crash reports or usage metrics.
+
+- It does not copy its data to the phone’s cloud backup or to a new phone.
+
+- It does not allow changing a signed record. A correction is added as a note and the original is kept.
+
+### 4. Where it is stored
+
+The data is stored on the company’s servers, in its management system (Odoo), together with the rest of the information about each load. The app talks to them over HTTPS only.
+
+The gate phone keeps the phone key, the session and each guard’s PIN in Android’s secure storage (Keystore); whatever has not been sent yet, encrypted; and photos and drafts of unfinished work in the app’s private storage, until they are sent or expire. If the phone is revoked, the app wipes all of that as soon as it reconnects. Uninstalling the app also makes Android delete it.
+
+### 5. How long it is kept
+
+- Photos of the load, cab, container, seals and plate: 24 months. If an incident is open, until it is closed.
+
+- Photos of invoices and carrier papers: 24 months.
+
+- Record text, signatures and event log: 6 years, as evidence of what came in and went out of the company.
+
+- Incidents and their photos: 24 months.
+
+- Key movements: 12 months.
+
+- Clock-ins and clock-outs: for the duration of the employment relationship plus 5 years; for contractor staff, 24 months.
+
+- Sessions per phone: 12 months.
+
+- Driver data on the phone: 12 hours at most.
+
+- Crash reports: according to the period set at the provider, which does not exceed 90 days.
+
+- Usage metrics: according to the period set in Google Analytics, which does not exceed 14 months.
+
+- PIN and session: live only on the phone and are deleted when leaving the phone, revoking it or uninstalling the app.
+
+When a period ends, the photo or the data is deleted. The log row may remain, with its fingerprint and the deletion date, so the chain of records stays verifiable. Whatever an authority asks to keep for an open case is kept until the case ends.
+
+### 6. Who it is shared with
+
+Within the company, access is limited to those who need it for their role and to their site: the guard sees their gate; the security administrator, the head of security and the site manager see the records, differences and photos of their site; and whoever sees the load in the system sees the copy of its invoices. When something needs attention, the system creates a task for the manager, which may reach them by email depending on their preferences.
+
+To work, the app uses these providers. They process data on behalf of the company and not for their own purposes:
+
+- Google LLC — Google Analytics for Firebase: measures which screens are used, identified by a generic name and without numbers or record data. It receives an app installation identifier and technical data about the phone. It does not receive names, plates, seals, scanned codes or photos.
+
+- Google LLC — Play Integrity API: when the phone is set up and at sign-in, it checks that the app is genuine and the phone is unaltered. It receives technical information about the phone and the app.
+
+- Functional Software, Inc. (Sentry), United States: receives technical reports when the app fails: the error, the app and Android version, the phone model and the server it was connected to. They never include the guard’s name or username, screenshots, record contents, photos or scanned codes.
+
+Some of these providers process data outside Venezuela, mainly in the United States.
+
+Beyond that, data is only handed to third parties when a competent authority requires it under the law.
+
+The website. This policy is about the app. The zentrix.company website, where you are probably reading it, shows no ads and only measures visits with Google Analytics if the person accepts it in the cookie notice; without that permission it sets no cookies and loads nothing from Google. What is measured and how to withdraw permission is in [Cookies and analytics](https://zentrix.company/en/privacy/#cookies). Like any website, it is served by a hosting provider (GitHub, with Cloudflare in front), which sees the connection’s IP address in order to deliver the page.
+
+### 7. Access, correction and deletion
+
+Anyone whose data goes through Zentrix Check, guard or not, can ask to see, correct or delete their data. To do so, write to [soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Data%20request%20%E2%80%94%20Zentrix%20Check) with the subject Data request — Zentrix Check and the details needed to identify you. Guards can also ask the security administrator.
+
+Deleting the account. The app does not allow creating accounts, so they are not deleted from it either: the company creates and closes them. When a guard asks to close their account, or leaves the company, their access is removed and their personal data that does not need to be kept is deleted. The records they signed are kept, because they are the log of what came in and went out of the company; a mistake in them is corrected with a note, not by rewriting them.
+
+We reply within 30 business days at most. If something cannot be deleted because of a legal, accounting or tax obligation, or an ongoing claim or investigation, we tell you why and for how long.
+
+Leaving the phone, forgetting the PIN or uninstalling the app does not delete anything from the server. It only removes the session from the phone. To delete data, use the channel above.
+
+### 8. Minors
+
+Zentrix Check is a work tool for adults (18 or older) who work in the company’s security. It is not aimed at minors and does not knowingly collect data from minors. The app instructs guards never to photograph minors.
+
+### 9. Security
+
+- All communication with the company’s servers is encrypted (HTTPS/TLS).
+
+- Each phone is sealed to one site with its own key; the server stores only its fingerprint, not the key.
+
+- The session, the phone key and the PIN are stored in Android’s secure storage (Keystore). The PIN is stored hashed and never leaves the phone.
+
+- Whatever is waiting to be sent is stored encrypted (AES-256) on the phone.
+
+- Each event carries the fingerprint of the previous one and each photo its SHA-256 fingerprint: if someone alters a record or a photo, it shows.
+
+- Screenshots are blocked on the PIN, password and photo viewer screens.
+
+- On every operation, the server checks who the guard is, from which phone and at which site. What the phone says is not enough.
+
+- Access for a guard or a phone can be withdrawn at any time. When a phone is revoked, the app wipes what it stored.
+
+No security measure is absolute, and we keep working to improve them.
+
+### 10. Changes to this policy
+
+If the data the app handles changes, this page will be updated and the date at the top will change. Important changes will also be announced to security staff through the company’s internal channels.
+
+### 11. Contact
+
+GUUAO LLC [soporte@zentrix.company](mailto:soporte@zentrix.company)
+
+
+---
+
+## [Terms of use — Zentrix Check](https://zentrix.company/en/check/terms/)
+
+The terms of use of the Zentrix Check app for security guards: what it is for, what you agree to when using it, the records it keeps and who provides it.
+
+Legal
+
+### Zentrix Check terms of use
+
+Last updated: October 16, 2026.
+
+### 1. What it is and who provides it
+
+Zentrix Check is the internal work tool for the security staff of the company that uses it (“the company” from here on), provided by GUUAO LLC. By using it, you accept these terms. Your employment relationship is governed by your contract, or by that of the security contractor you work for, and by labor law; these terms only cover the use of the app.
+
+### 2. Who may use it
+
+Only adults who have been given a guard or security administrator account by the company. The app does not allow sign-ups. Each phone is set up with a QR code that seals it to one site, and the server checks on every operation who you are, from which phone and at which site.
+
+### 3. Your account, password and PIN
+
+Your account is personal and non-transferable. Your PIN is your signature: every record you close is signed in your name. Don’t share your password or PIN, don’t let anyone else work with your profile, and leave the phone when you finish. If you think someone used your account, or the gate phone is lost, tell the security administrator right away or write to [soporte@zentrix.company](mailto:soporte@zentrix.company).
+
+### 4. Permitted use
+
+- Use the app only for the company’s gate control: departures, receipts, movements, keys, assets and incidents.
+
+- Record what you actually see. Confirming a count, a plate or a seal without checking it is a serious breach.
+
+- Photograph things, not people. Never photograph minors. Don’t write names or ID numbers in incidents.
+
+- What you see in the app (plates, drivers, invoices, loads and photos) is confidential. Don’t copy it, screenshot it, share it or use it outside your work at the gate.
+
+- Don’t try to bypass the app’s or the server’s controls, or use the app at a site or on a phone that isn’t yours to use.
+
+### 5. Records are not changed
+
+A signed record is final: neither you, nor the administrator, nor anyone in the office can rewrite it. If you made a mistake, the correction is added as a note with its reason, and the original is kept. The app does not validate inventory or accounting: it records what you checked, and the company makes the decisions about the goods.
+
+### 6. The server decides
+
+The app shows what the company’s system decides. If the server rejects an operation, the app shows you the reason as it arrives and does not work around it. Without a signal, what you do is stored on the phone and sent automatically later; the server receives it in order and verifies it.
+
+### 7. The gate phone
+
+The app is designed for the gate’s Android phone, which the company sets up at a site. The only permission it asks for is the camera; without it you cannot take the record photos. The company can revoke a phone at any time, and the app then wipes what it had stored.
+
+### 8. Availability and versions
+
+We do our best to keep the app available, but there may be outages, failures or maintenance. The company may require a minimum version: if your version is blocked, the app tells you and it has to be updated from Google Play to continue.
+
+### 9. Suspension and end of access
+
+The company may suspend or close your access when your employment or your assignment to the site ends, if you breach these terms, or to protect the security of the premises and the data. What happens to your data afterwards is in the [privacy policy](https://zentrix.company/en/check/privacy/).
+
+### 10. Intellectual property
+
+The app, its design and its brand belong to GUUAO LLC. We give you permission to use them only while you work with the app and for what is described here.
+
+### 11. Privacy
+
+What data the app records and why is in the [privacy policy](https://zentrix.company/en/check/privacy/), which is part of these terms.
+
+### 12. Liability
+
+The app is offered as a work tool, as is. To the extent permitted by law, GUUAO LLC is not liable for indirect damages arising from failures of the app, the phone or the network. Nothing here limits the rights labor law gives you.
+
+### 13. Changes
+
+We may update these terms. The version in force is the one published on this page, with its date at the top. Important changes will be announced through the company’s internal channels.
+
+### 14. Governing law
+
+These terms are governed by the laws of the Bolivarian Republic of Venezuela. We will first try to settle any disagreement amicably, by writing to [soporte@zentrix.company](mailto:soporte@zentrix.company). If there is no agreement within 30 calendar days, the dispute will go to the competent courts of Venezuela. Disputes arising from the employment relationship are governed by labor law.
+
+### 15. Contact
+
+GUUAO LLC [soporte@zentrix.company](mailto:soporte@zentrix.company)
+
+
+---
+
 ## [Zentrix Cloud — Hosting, monitoring and backups](https://zentrix.company/en/cloud/)
 
 Zentrix Cloud takes care of hosting, monitoring and backups for your apps and data, so they stay available and your team can focus on the work itself.
@@ -2464,7 +3036,7 @@ Pick a reason and, if you like, a product: we fill in the email or WhatsApp subj
 
 Reason Sales or a demo Support for an app Partnerships Press
 
-Product Several or none in particular Zentrix Work Zentrix Sales Zentrix AI Zentrix Logistics Zentrix Cloud Zentrix Labs Zentrix Software
+Product Several or none in particular Zentrix Work Zentrix Sales Zentrix Check Zentrix AI Zentrix Logistics Zentrix Cloud Zentrix Labs Zentrix Software
 A demo on your own data: your catalog, your price list and your route. ERP integration: native with Odoo®, custom with the rest.
 If you already use an app, check the [support center](https://zentrix.company/en/support/) first: common questions, access and how to delete your account.
 Partners, integrators and suppliers: tell us what you have in mind.
@@ -2626,6 +3198,8 @@ See all solutions
 
 - [Zentrix Sales](https://zentrix.company/en/sales/)
 
+- [Zentrix Check](https://zentrix.company/en/check/)
+
 - [Zentrix AI](https://zentrix.company/en/ai/)
 
 - [Zentrix Logistics](https://zentrix.company/en/logistics/)
@@ -2643,7 +3217,7 @@ Zentrix by the numbers
 ### What's already up and running.
 
 - 2apps in production: Zentrix Work and Zentrix Sales
-- 8products in the suite: Zentrix Work, Sales, AI, Logistics, Cloud, Labs, Software and Traza
+- 9products in the suite: Zentrix Work, Sales, Check, AI, Logistics, Cloud, Labs, Software and Traza
 - 12management systems we connect Zentrix Sales to
 - 5steps, from understanding your process to improving it with you
 
@@ -2930,12 +3504,14 @@ Each app has its own privacy policy and terms, because each one handles differen
 
 - [Zentrix Work What the store team app collects, why and for how long. →](https://zentrix.company/en/work/privacy/)
 - [Zentrix Sales What the field sales app collects, why and for how long. →](https://zentrix.company/en/sales/privacy/)
+- [Zentrix Check What the gate app records, why and who sees it. →](https://zentrix.company/en/check/privacy/)
 - [Website and cookies What zentrix.company measures, with consent, and how to withdraw it. →](https://zentrix.company/en/privacy/)
 
 ### Terms
 
 - [Zentrix Work Terms of use of the app. →](https://zentrix.company/en/work/terms/)
 - [Zentrix Sales Terms of service of the app. →](https://zentrix.company/en/sales/terms/)
+- [Zentrix Check Terms of use of the app. →](https://zentrix.company/en/check/terms/)
 
 The English texts are courtesy translations; the Spanish version is the binding one.
 
@@ -2946,6 +3522,8 @@ To see, correct or delete your account or your data in an app, follow the instru
 - [Delete your Zentrix Work account](https://zentrix.company/en/support/#delete-account-work)
 
 - [Delete your Zentrix Sales account](https://zentrix.company/en/support/#delete-account-sales)
+
+- [Delete your Zentrix Check account](https://zentrix.company/en/support/#delete-account-check)
 
 
 ---
@@ -3182,6 +3760,7 @@ Manuals
 
 - [Zentrix Work manual (in Spanish) Shifts, orders, picking, delivery, returns and settings, for store teams. Open](https://zentrix.company/en/work/docs/)
 - [Zentrix Sales manual (in Spanish) Route, visits, orders, collections and working offline, for field reps. Open](https://zentrix.company/en/sales/docs/)
+- [Zentrix Check manual (in Spanish) Trucks out, receipts, keys, assets, incidents and working offline, for security guards. Open](https://zentrix.company/en/check/docs/)
 
 Support
 
@@ -3189,6 +3768,7 @@ Support
 
 - [Zentrix Work support Access, common questions and how to delete your account. Open](https://zentrix.company/en/support/#work)
 - [Zentrix Sales support Access, common questions and how to delete your account. Open](https://zentrix.company/en/support/#sales)
+- [Zentrix Check support Access, common questions and how to delete your account. Open](https://zentrix.company/en/support/#check)
 - [Contact Write to support@ or WhatsApp: a person replies. Open](https://zentrix.company/en/contact/)
 
 Legal
@@ -3199,6 +3779,8 @@ Legal
 - [Zentrix Work terms The rules for using the app. Open](https://zentrix.company/en/work/terms/)
 - [Zentrix Sales privacy What the app collects, why and for how long. Open](https://zentrix.company/en/sales/privacy/)
 - [Zentrix Sales terms The rules for using the app. Open](https://zentrix.company/en/sales/terms/)
+- [Zentrix Check privacy What the app records at the gate, why and for how long. Open](https://zentrix.company/en/check/privacy/)
+- [Zentrix Check terms The rules for using the app. Open](https://zentrix.company/en/check/terms/)
 - [Website privacy Cookies and analytics on zentrix.company, and how to withdraw consent. Open](https://zentrix.company/en/privacy/#cookies)
 
 For developers and AI
@@ -4690,6 +5272,7 @@ Search the site Search
 
 - Work
 - Sales
+- Check
 - AI
 - Logistics
 - Cloud
@@ -4697,7 +5280,7 @@ Search the site Search
 - Software
 - [Traza (opens in a new tab)](https://traza.technology)
 
-Delete your account: Zentrix Work · Delete your account: Zentrix Sales
+Delete your account: Zentrix Work · Delete your account: Zentrix Sales · Delete your account: Zentrix Check
 
 ### Zentrix Work
 Store teams · [Zentrix Work →](https://zentrix.company/en/work/)
@@ -4812,6 +5395,66 @@ Response time
 Under one business day.
 Documents
 [Privacy policy](https://zentrix.company/en/sales/privacy/) · [Terms of service](https://zentrix.company/en/sales/terms/) · [Field rep manual](https://zentrix.company/en/sales/docs/)
+
+### Zentrix Check
+The security gate · [Zentrix Check →](https://zentrix.company/en/check/)
+
+For almost everything, your first point of contact is your company’s security administrator: they set up the gate phone, create your account and give you your password. For anything else, write to us.
+
+[soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Support%20%E2%80%94%20Zentrix%20Check)
+
+Put Support — Zentrix Check in the subject line and tell us your username, your site and what happened. Please don’t send us screenshots of records, plates, invoices or personal data.
+
+### Quick questions
+
+### I don’t have an account. How do I get in?
+There is no sign-up: the app is only for the security staff of companies that use Zentrix Check. Your account is created by your company’s security administrator, for the site where you work.
+
+### How is the gate phone set up?
+With a QR code the administrator generates in the company’s system. Once scanned, the phone is sealed to that site. Without that code the app does nothing.
+
+### I forgot my PIN
+On the PIN screen, tap I forgot my PIN. You sign in again with your username and password and create a new PIN.
+
+### I forgot my password
+On the sign-in screen, tap I forgot my password: the security administrator gives you one. The password cannot be changed from the phone.
+
+### There is no signal at the gate
+Keep working: what you do is stored encrypted on the phone and sent automatically when the signal returns, without duplicates. The app shows how many items are still waiting. The only thing that needs a signal is fetching what the system says about a new load.
+
+### The gate phone was lost or damaged
+Tell the security administrator right away: they can revoke the phone, and the app wipes what it stored as soon as it reconnects. The new phone is set up with another QR code.
+
+### I no longer work at the company or at that site
+Your access is closed from the company’s system. The records you signed are kept, because they are the log of what happened at the gate. To request access to or deletion of your personal data, see delete your account or your data.
+
+### Delete your account or your data — Zentrix Check
+
+The app has no sign-up, so accounts aren’t deleted from it either: your company creates and closes them. To request access to, correction or deletion of your data:
+
+- Write to [soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Data%20request%20%E2%80%94%20Zentrix%20Check) with the subject Data request — Zentrix Check, or tell the security administrator.
+
+- Include your name, your username and your site (or, if you don’t use the app, which gate and on what date your vehicle or load went through), and whether you want to see, correct or delete your data.
+
+- We respond within 30 business days at most.
+
+What is deleted, what is kept because of a legal obligation and for how long is in [clause 7 of the privacy policy](https://zentrix.company/en/check/privacy/#c7). Leaving the phone or uninstalling the app doesn’t delete anything from the server, and signed records cannot be changed: if something is wrong, it is corrected with a note.
+
+### Manual
+
+The [guard manual](https://zentrix.company/en/check/docs/) (in Spanish) explains setting up the phone, a truck leaving, receipts, keys, assets and what to do without a signal step by step.
+
+### About the app
+Application
+Zentrix Check (com.leiros.check), Android only.
+Download
+Google Play (coming soon)
+Responsible for the app
+GUUAO LLC
+Support email
+[soporte@zentrix.company](mailto:soporte@zentrix.company)
+Documents
+[Privacy policy](https://zentrix.company/en/check/privacy/) · [Terms of use](https://zentrix.company/en/check/terms/) · [Manual](https://zentrix.company/en/check/docs/)
 
 The rest of the suite
 
@@ -7597,7 +8240,1455 @@ Recuerda
 «Enviado» no es «aprobado». Que la visita llegue a la oficina no quiere decir que el pedido ya esté confirmado ni despachado. Eso lo decide tu analista.
 
 
+# Manual de Zentrix Check
+
+
+---
+
+## [Activos — Manual de Zentrix Check](https://zentrix.company/check/docs/activos.html)
+
+Cómo salen y regresan los activos con Zentrix Check: la etiqueta QR, el pase que aprueba el gerente, la salida, el regreso y lo que vuelve incompleto.
+
+### Activos
+
+Laptops, radios, herramientas: cada activo tiene su etiqueta. Sale con el pase que aprueba el gerente de sede.
+
+### Qué es un activo
+
+Un bien de la empresa que no es mercancía: una laptop, una radio, una herramienta, un mueble. Cada uno lleva una etiqueta con código. Las etiquetas las imprime la oficina en Odoo y las pega el almacén. Tú no pegas etiquetas.
+
+Para salir, el activo necesita un pase. El pase lo pide la oficina y lo aprueba el gerente de sede en Odoo. Tú no apruebas pases: los ves.
+
+### Cuando un activo sale
+
+- Toca «Registrar» › «Sale» › «Activo». O toca Escanear en Hoy. El marco dice «Apunta a la etiqueta del activo».
+
+- Escanea la etiqueta del activo. Siempre la del activo. Escanear solo el pase no basta: «Es el pase. Escanea la etiqueta de cada activo.»
+
+- Mira lo que dice la pantalla. El título te dice si puede salir. Sigue la tabla de abajo.
+
+La pantalla dice Qué haces
+
+«Con pase», en verde, con el tipo (Reparación, Con regreso, Préstamo o Sin regreso) y cuándo vuelve Toca Sale y firma con tu PIN.
+
+«Sin pase»: «Este activo no tiene pase de salida. Lo aprueba el gerente de sede en Odoo.» Toca Llamar al gerente de sede. Si lo aprueba, toca Revisar: dice «Ya tiene pase» o «Sigue sin pase». Si el gerente dice que salga igual, toca Sale con observación.
+
+«No lo dejes salir»: «Figuraba como perdido…» o «Está dado de baja…» Llama al gerente de sede. Solo después de la llamada aparece Sale con observación.
+
+Sale con observación abre «¿Quién autorizó?»: toca a la persona o Nadie, y firma. El acta dice «Queda como diferencia para el gerente de sede.» El gerente la tiene que ratificar en Odoo.
+
+### Varios activos en un pase
+
+Escanea la etiqueta de cada uno. Al firmar uno, la app dice cuáles faltan: «De este pase faltan: …». Toca Escanear para el siguiente.
+
+### Si el activo no tiene etiqueta
+
+En el visor, toca Sin etiqueta.
+
+- Si sale: «Sin etiqueta. Llama al gerente de sede. Si dice que salga, toca Sale con observación.» Se anota como [salida sin documento](https://zentrix.company/check/docs/sin-documento.html) con el motivo Activo, y queda como diferencia.
+
+- Si entra: «No tiene etiqueta. Toca Registrar y tómale una foto.»
+
+### Cuando vuelve
+
+- Escanea su etiqueta. Desde Hoy, o en Hoy › Adentro › «Activos de la empresa fuera».
+
+- «¿Cómo vuelve?» Bien ya viene marcado. Si viene Dañado o Incompleto, tócalo y toma una foto.
+
+- Toca «Firmar» y escribe tu PIN. Final: «Acta firmada».
+
+Un activo que no volvió a tiempo sale en Adentro con «Debía volver …» en ámbar.
+
+### Si te sale un mensaje
+
+Mensaje Qué haces
+
+«No es un activo» Escaneaste otra cosa. Apunta a la etiqueta del activo.
+
+«No lo conocemos» · «No lo dejes salir. Llama al supervisor.» Odoo no conoce esa etiqueta, o es una etiqueta vieja. No lo dejes salir y llama.
+
+«No se registró» Odoo no aceptó la salida. Lee el mensaje que trae: lo escribe Odoo.
+
+
+---
+
+## [Consola del administrador — Manual de Zentrix Check](https://zentrix.company/check/docs/administrador.html)
+
+La consola del administrador de Seguridad en Zentrix Check: el código para entrar, el día de la sede, las actas, las diferencias y las fotos, solo para mirar.
+
+### Consola del administrador
+
+Para el administrador de Seguridad: ver el día de la sede, las actas, las diferencias y los activos. Solo se mira; nada se cambia desde aquí.
+
+### Entrar a la consola
+
+La consola se abre solo en el teléfono del administrador. En ese teléfono, al pie de «Toca tu nombre», sale el enlace Administrador. En los teléfonos de la garita no aparece.
+
+- Toca «Administrador».
+
+- Escribe tu usuario y tu contraseña, y toca «Entrar». Necesitas conexión.
+
+- Escribe el código. «Abre tu app de códigos y escribe los 6 números que ves ahora.» Entra solo al escribir el sexto número.
+
+Aquí no hay PIN
+La consola pide siempre contraseña y código. El PIN de vigilante no la abre. La app de códigos se configura antes, en tu cuenta de Odoo.
+
+Mensaje Qué haces
+
+«Usuario, contraseña o código incorrecto.» Revisa los tres. El código cambia cada pocos segundos: usa el que ves ahora.
+
+«El código venció. Entra otra vez.» Tardaste mucho entre la contraseña y el código. Empieza de nuevo.
+
+«Este teléfono no está autorizado para administrar.» Ese teléfono no es de administrador. Usa el tuyo.
+
+«Para entrar como administrador necesitas conexión.» Busca señal.
+
+«No tienes sedes asignadas. Habla con el administrador general.» Tu cuenta no tiene sedes. Se asignan en Odoo.
+
+### Se cierra sola
+
+A los 5 minutos sin uso, o si se apaga la pantalla, la consola se cierra. Treinta segundos antes avisa: «La consola se cierra en 30 segundos.» Toca Seguir viendo para seguir. Si se cerró, al volver dice «Se cerró la consola por seguridad.» con tu usuario ya escrito.
+
+La consola no deja hacer capturas de pantalla.
+
+### Solo consulta
+
+Arriba dice «Solo consulta». «La consola solo muestra. Las diferencias las resuelve el gerente de sede en Odoo.» Ningún botón cambia nada: ni actas, ni diferencias, ni pases, ni usuarios. Todo eso se hace en Odoo.
+
+Abajo hay cuatro pestañas: Hoy, Movimientos, Activos y Más. Los datos dicen de qué hora son: «Datos de las …. Para actualizar, tira hacia abajo.»
+
+### Hoy
+
+- Mosaicos: Salidas, Llegadas, Retornos, Diferencias y Encendidos, con su número.
+
+- Banda roja, si hay: «1 diferencia crítica abierta» o «Novedades graves abiertas: …». Tócala para ir a ellas.
+
+- Operadores: los vigilantes del día, en orden alfabético, encendidos o apagados. No hay rankings. Si nadie: «Nadie está encendido ahora.»
+
+### El día de un vigilante
+
+Toca un operador. «Su día» muestra una barra de 0 a 24 h con los tramos en que estuvo encendido y por qué se apagó («Apagado a mano», «apagado automático», «Pasó a otro teléfono»…). Debajo, sus actas, lo que registró sin documento y los activos. Al pie: «Encendido no es registro de jornada.»
+
+### Movimientos
+
+«Recibido y despachado»: todas las actas del día. Filtra con Todas, Salidas, Llegadas, Retornos o Sin documento, y por empresa con Empresa ▾.
+
+Toca un acta para ver el detalle, paso por paso:
+
+- Camión y chofer, Documentos y candado, cabina y contenedor si hubo: cada respuesta, y si coincidió con Odoo.
+
+- Productos: cómo se llenó cada uno. El nivel del acta lo resume: «Todo escaneado o contado», «Escaneo parcial» o «Sin revisar: llenado con lo de Odoo». Si se firmó así, dice «Firmado con salvedad».
+
+- Facturas: escaneada, con foto, no viene o agregada en la garita.
+
+- Fotos: toca una para verla.
+
+- Diferencias: «La resuelve el gerente de sede en Odoo».
+
+- Salida de un camión con crítica: «Autorizó …», «Salió sin autorización», «Salió sin anotar» o «Todavía no sale».
+
+### Diferencias
+
+En Más › Diferencias abiertas, o desde el mosaico de Hoy. Dos pestañas: Abiertas y Resueltas. Cada una dice si es «Diferencia crítica» o «Diferencia». Se cierran en Odoo; aquí pasan a «Resuelta en Odoo».
+
+### Activos
+
+Mosaicos Fuera, Vencidos, Pases hoy y Sin etiqueta, que filtran la lista, y Buscar. Toca un activo para ver su ficha: empresa, área, responsable, marca y serie, quién lo lleva, quién aprobó el pase y su historial. «El alta, el responsable y los pases se manejan en Odoo.»
+
+### Más
+
+- Diferencias abiertas.
+
+- Novedades de hoy: Todas o Graves, cada una Abierta o Atendida. «La atiende el gerente de sede en Odoo.»
+
+- Llaves afuera: quién lleva cada llave y desde qué hora, las incompletas y las que volvieron sin escanear.
+
+- Salir de la consola y Acerca de Zentrix Check.
+
+
+---
+
+## [Dudas rápidas — Manual de Zentrix Check](https://zentrix.company/check/docs/dudas.html)
+
+Dudas rápidas de Zentrix Check resueltas en dos líneas: el PIN, la contraseña, el teléfono de la garita, la señal, las diferencias y quién te ayuda.
+
+### Dudas rápidas
+
+Las preguntas de siempre, con su respuesta corta y el enlace al paso a paso.
+
+### Olvidé mi PIN
+
+Toca tu nombre y Olvidé mi PIN. Entras con tu contraseña y creas otro. Necesitas señal. [Paso a paso](https://zentrix.company/check/docs/entrar.html#olvide-pin).
+
+### Olvidé mi contraseña
+
+Habla con el administrador de Seguridad. La contraseña no se cambia desde la app. [Más](https://zentrix.company/check/docs/entrar.html#olvide-contrasena).
+
+### Mi nombre no sale en «Toca tu nombre»
+
+Toca Otro usuario y entra con tu usuario y tu contraseña. Solo salen los 4 últimos que entraron en este teléfono.
+
+### El teclado dice «Espera hasta…»
+
+Fallaste el PIN cinco veces seguidas. Espera la hora que dice, o toca Olvidé mi PIN. [Cómo funciona](https://zentrix.company/check/docs/entrar.html#pin-errado).
+
+### Se bloqueó solo
+
+Pasaron unos minutos sin tocarlo o se apagó la pantalla. Toca tu nombre, escribe tu PIN y sigues donde estabas. Sigues encendido.
+
+### Me voy a casa. ¿Qué hago?
+
+Apágate: Más › Encendido › Apagarme. No salgas del teléfono: eso borra tu nombre. [Apagarte](https://zentrix.company/check/docs/encender.html#apagar).
+
+### Un compañero necesita el teléfono un momento
+
+Más › Bloquear. Sigues encendido y él entra con su PIN. [Bloquear](https://zentrix.company/check/docs/encender.html#bloquear).
+
+### El camión lleva licor de más o de menos
+
+Es una diferencia crítica. Llama al supervisor antes de dejar salir. La app no retiene el camión: tú llamas, anotas quién autorizó y firmas. [Diferencias](https://zentrix.company/check/docs/salida.html#diferencias).
+
+### ¿Puedo tocar «Llenar» y firmar?
+
+Puedes, pero el acta queda Con salvedad: dice que firmaste productos sin revisarlos. Escanea lo que puedas. [Productos](https://zentrix.company/check/docs/salida.html#productos).
+
+### Toco un camión y dice que lo revisa otra persona
+
+Otro vigilante lo empezó. Solo él lo puede terminar. Si se fue, avisa al supervisor.
+
+### Firmé y me equivoqué
+
+Un acta firmada no se edita. Avisa al supervisor: la corrección se hace en Odoo.
+
+### Llegó un camión que no está en la lista
+
+En Llegan, Otro camión. Llama al supervisor antes de dejarlo entrar. [Más](https://zentrix.company/check/docs/recepcion.html#otro-camion).
+
+### No hay señal
+
+Sigue trabajando. Lo que firmas queda con ✓ y se envía solo. Para empezar un camión nuevo sí hace falta señal. [Sin señal](https://zentrix.company/check/docs/sin-senal.html).
+
+### En Por enviar dice «Odoo no aceptó este registro»
+
+Lee el mensaje que trae: lo escribe Odoo. Si no sabes qué hacer, llama al supervisor. [Más](https://zentrix.company/check/docs/sin-senal.html#rechazado).
+
+### Toco llamar y dice que no hay teléfono cargado
+
+Busca a la persona en persona y avisa al administrador que falta el número. Mira también Más › Teléfonos.
+
+### No veo Llave o Novedad en Registrar
+
+Tu sede no las tiene encendidas. Eso lo decide el administrador en Odoo, no el teléfono.
+
+### No entiendo qué me pide una pantalla
+
+Toca el botón Escuchar de esa pantalla: la app te lo dice en voz alta. Para que hable siempre, Más › Hablar siempre.
+
+### Dice «Teléfono bloqueado»
+
+Odoo retiró el teléfono. No se usa hasta que el supervisor lo prepare de nuevo. Lo que no se envió no se borra. [Más](https://zentrix.company/check/docs/entrar.html#telefono-bloqueado).
+
+### ¿La app sabe dónde estoy?
+
+No. Solo usa la cámara, para fotos y códigos. No pide tu ubicación.
+
+¿Nada de esto? Mira [Soporte](https://zentrix.company/soporte/#check).
+
+
+---
+
+## [Encender y apagar — Manual de Zentrix Check](https://zentrix.company/check/docs/encender.html)
+
+Cómo se enciende y se apaga el vigilante en Zentrix Check: qué cambia al encenderte, cómo apagarte al terminar y qué pasa si dejas el teléfono sin usar.
+
+### Encender y apagar
+
+No hay turnos. Te enciendes cuando empiezas a trabajar y te apagas cuando te vas.
+
+### Encenderte
+
+Después del PIN, si estás apagado, la app pregunta «¿Empiezas a trabajar?».
+
+- Toca el botón grande. Dice «Toca aquí para encenderte». Se pone verde y arriba sale «Encendido» con la hora: «Desde las …».
+
+- Toca «Volver a Hoy». Ya puedes trabajar.
+
+Junto a la perilla ves si Odoo ya lo sabe: ✓ guardado en el teléfono, ✓✓ recibido por Odoo. Sin señal también te enciendes: se envía cuando vuelve.
+
+Si hay otros vigilantes encendidos en este mismo teléfono, sus iniciales salen debajo del botón.
+
+No hay turnos
+Nadie te asigna un horario en la app. Encendido quiere decir «estoy trabajando en esta garita». Lo dice la pantalla, abajo: «Encendido no es registro de jornada: se guardan la hora de encenderte, la de tu última acción y la de apagarte.»
+
+### Si estás apagado en Hoy
+
+Arriba de Hoy sale la banda «Estás apagado» con el botón Encender. Tócalo y te lleva al botón grande.
+
+Si empiezas a revisar un camión estando apagado y Odoo pide que estés encendido, la app te enciende sola.
+
+### Dejar el teléfono a otro compañero
+
+Si un compañero va a usar el teléfono un rato y tú sigues trabajando, no te apagues: bloquea.
+
+- Toca «Más» y después «Bloquear». La app dice «Bloqueado. Sigues encendido.»
+
+- Tu compañero toca su nombre y su PIN. Cuando vuelvas, tocas tu nombre y tu PIN y sigues en la pantalla donde estabas.
+
+### Apagarte al irte
+
+- Toca «Más» y después «Encendido». Ves el botón grande en verde.
+
+- Toca el botón. Sale la hoja «¿Te apagas?» con «Vuelves con tu PIN».
+
+- Mira lo que dejas pendiente. Si tienes verificaciones en pausa, registros sin documento a medias o registros sin enviar, salen ahí con su número. Lo que está sin enviar se envía solo cuando haya señal, aunque te apagues.
+
+- Toca «Apagarme». Suena un tono y la app dice «Te apagaste a las …». El teléfono queda en «Toca tu nombre» para el siguiente.
+
+En la misma hoja: Bloquear te deja encendido y bloquea, y Seguir cierra la hoja sin cambiar nada.
+
+Apagarte no es salir del teléfono
+Para terminar el día, apágate. Tu nombre sigue en el teléfono y mañana entras con tu PIN. [Salir de este teléfono](https://zentrix.company/check/docs/entrar.html#salir) borra tu nombre y te pide la contraseña la próxima vez.
+
+### Qué pasa si no se usa
+
+- A los pocos minutos sin tocarlo, el teléfono se bloquea. Sigues encendido. Vuelves con tu PIN.
+
+- Si pasas mucho tiempo sin hacer nada, el sistema te puede apagar solo. Cuenta lo que haces tú, no que el teléfono esté prendido. El administrador lo ve como «Apagado automático».
+
+- Si te enciendes en otro teléfono, en el primero quedas apagado. Una persona está encendida en un solo teléfono a la vez.
+
+- Desde la oficina te pueden apagar. Queda como «Apagado por el administrador».
+
+Si te apagaron y tienes que seguir, enciéndete otra vez y sigues.
+
+
+---
+
+## [Entrar — Manual de Zentrix Check](https://zentrix.company/check/docs/entrar.html)
+
+Cómo se entra a Zentrix Check: el alta del teléfono con el código QR, tu usuario y contraseña una vez, el PIN de cada día y qué hacer si lo olvidas.
+
+### Entrar
+
+El supervisor prepara el teléfono una vez. Tú entras con tu usuario la primera vez y, después, con tu nombre y tu PIN.
+
+### Preparar el teléfono (lo hace el supervisor)
+
+Un teléfono nuevo abre en «Preparar teléfono». Si lo encuentras así, no es tuyo: la pantalla dice «Llama al supervisor».
+
+- Conéctalo al Wi-Fi de la garita. Sin conexión no se prepara: «Para registrar el teléfono necesitas conexión. Conéctate al Wi-Fi de la garita.»
+
+- En Odoo, genera el código de alta. Está en Odoo › Seguridad › Configuración › Teléfonos › Generar código de alta. Odoo muestra un QR.
+
+- Toca «Escanear QR» y apunta al QR de Odoo. El código de alta no se escribe: se escanea. Mientras tanto la app dice «Registrando…».
+
+- Revisa «Teléfono listo». Debajo sale el puesto y la sede donde quedó sellado. Si es el correcto, toca Entrar.
+
+Un teléfono, una sede
+El QR sella el teléfono a una sede y a un puesto. Solo entran los vigilantes asignados a esa sede. Para moverlo a otra sede, se prepara de nuevo.
+
+### Tu primera vez en este teléfono
+
+- Toca «Otro usuario». Si el teléfono no tiene a nadie todavía, la app ya abre en «Tu usuario».
+
+- Escribe tu usuario y toca «Seguir». Es el usuario corto que te dio el administrador de Seguridad. No es tu cédula ni un correo.
+
+- Escribe tu contraseña y toca «Entrar». Con Ver ves lo que escribiste. La contraseña solo se pide esta vez en este teléfono. Necesitas conexión.
+
+- Crea tu PIN: seis números. La pantalla dice «Crea tu PIN» y después «Repite tu PIN». Con ese PIN entras y también firmas.
+
+Si el PIN no sirve, la app te lo dice en dos palabras:
+
+- «Muy fácil»: no uses números seguidos (123456) ni el mismo número repetido (000000).
+
+- «No son iguales»: el segundo no coincide con el primero. Escríbelo otra vez.
+
+### Si te sale un mensaje
+
+Mensaje Qué haces
+
+«Usuario o contraseña incorrectos.» Revisa cómo escribiste el usuario. Si sigue, habla con el administrador de Seguridad.
+
+«Tu usuario no está asignado a esta sede. Habla con el administrador.» Tu usuario existe, pero no para esta garita. Lo arregla el administrador.
+
+«Para entrar por primera vez en este teléfono necesitas conexión…» No es tu contraseña: es la señal. Conéctate al Wi-Fi de la garita y toca Entrar otra vez.
+
+«Tu contraseña es temporal y todavía no se puede cambiar en la app…» Con una contraseña temporal no se entra. Habla con el administrador de Seguridad.
+
+«Esta cuenta es de administrador…» Esa cuenta no es de vigilante. Se usa en el teléfono del administrador.
+
+### Cada día
+
+- En «Toca tu nombre», toca tu nombre. Salen los últimos que entraron en este teléfono, con sus iniciales.
+
+- Escribe tu PIN. Si quedaste encendido, la app te lo recuerda: «Sigues encendido desde las …» y pasas directo a Hoy. Si no, te pregunta «¿Empiezas a trabajar?». Mira [Encender y apagar](https://zentrix.company/check/docs/encender.html).
+
+¿Tocaste el nombre equivocado? Toca No soy yo, encima del teclado.
+
+### Varios vigilantes, un teléfono
+
+El teléfono guarda hasta 8 perfiles y muestra los 4 más recientes. Si tu nombre no sale, toca Otro usuario y entra con tu usuario y tu contraseña, como la primera vez.
+
+Cada uno firma con su PIN. Lo que tú firmas queda a tu nombre, aunque el teléfono sea de todos.
+
+### Si fallas el PIN
+
+- Cada error: «PIN incorrecto» y los puntos tiemblan.
+
+- Cinco errores seguidos: el teclado espera. Sale el reloj con «Espera hasta …». La espera crece: 5, 15 y 60 minutos.
+
+- Antes del último intento: «PIN incorrecto. Si fallas otra vez, tendrás que entrar con tu contraseña.»
+
+- Diez errores en total: «Borramos tu acceso en este teléfono por seguridad. Entra con tu usuario y tu contraseña.» Tu nombre se borra del teléfono. A los demás no les pasa nada.
+
+### Si olvidaste tu PIN
+
+- Toca tu nombre y después «Olvidé mi PIN». Está encima del teclado.
+
+- Escribe tu contraseña. Necesitas conexión.
+
+- Crea un PIN nuevo. Seis números, dos veces.
+
+### Si olvidaste tu contraseña
+
+Toca Olvidé mi contraseña. La app dice: «Pide al administrador de Seguridad una temporal.» Habla con él: la contraseña no se cambia desde el teléfono.
+
+La temporal no entra en la app
+Si escribes una contraseña temporal, la app no te deja seguir: «Tu contraseña es temporal y todavía no se puede cambiar en la app.» Pídele al administrador que te diga cómo dejarla definitiva.
+
+### Cuando se bloquea solo
+
+Si nadie toca el teléfono unos minutos, o si se apaga la pantalla, la app se bloquea. Al volver ves «Se bloqueó por seguridad. Tu trabajo sigue donde lo dejaste.» Escribe tu PIN y sigues en la misma pantalla. Los minutos los fija la sede.
+
+Llamar desde la app no bloquea el teléfono. Pero si la llamada dura más que esos minutos, al volver te pide el PIN.
+
+A veces la app pide más: «Por seguridad, entra otra vez con tu usuario y tu contraseña.» Tu sesión venció. Entra con tu contraseña y crea tu PIN.
+
+### Salir de este teléfono
+
+Hazlo solo si ya no vas a trabajar en esta garita. Para irte a casa, basta con [apagarte](https://zentrix.company/check/docs/encender.html#apagar).
+
+- Toca «Más» y después «Acerca de». Abajo sale el enlace Salir de este teléfono.
+
+- Lee «¿Salir del teléfono?». Dice «Vuelves con contraseña» y, si tienes algo a medias, cuántas verificaciones o registros se borran.
+
+- Toca «Sí, salir». La app te apaga, envía lo que pueda («Saliendo…») y borra tu nombre del teléfono. Al final: «Saliste de este teléfono.»
+
+Lo a medias se pierde
+Una verificación o un registro sin documento que no firmaste se borra al salir. Lo que ya firmaste no: espera en el teléfono hasta que se envíe.
+
+### Si te pide actualizar
+
+Cuando hay una versión nueva, la app avisa: «Hay una versión nueva de Zentrix Check. Se descarga mientras trabajas.» Toca Actualizar y sigue trabajando. Cuando diga «La actualización está lista», toca Instalar y reiniciar: la app se cierra unos segundos y vuelve sola.
+
+Si la versión es obligatoria, sale «Actualiza Zentrix Check» y no te deja seguir: «Sin actualizar no puedes seguir trabajando.» Toca Actualizar en Play. Si Google Play no abre, búscala en la tienda como Zentrix Check.
+
+### Si dice «Teléfono bloqueado»
+
+Odoo retiró el teléfono o ya no lo reconoce: «Este teléfono fue retirado de Zentrix Check.» o «Odoo ya no reconoce este teléfono.» No se usa más hasta prepararlo de nuevo. Llama al supervisor.
+
+Si hay registros sin enviar, la pantalla lo dice y no se borran. Preparar de nuevo es solo para el supervisor: guarda aparte lo que no se envió y pide escanear un QR de alta nuevo.
+
+
+---
+
+## [La pantalla Hoy — Manual de Zentrix Check](https://zentrix.company/check/docs/hoy.html)
+
+La pantalla Hoy de Zentrix Check: las pestañas Salen, Llegan y Adentro, la barra de abajo, el menú Más y el escáner que abre cualquier camión, llave o activo.
+
+### La pantalla Hoy
+
+Hoy es tu lista de trabajo: lo que sale, lo que llega y lo que está adentro de la sede.
+
+### Lo que ves
+
+- Tres pestañas: Salen, Llegan y Adentro, cada una con su número.
+
+- El botón Escanear, el más grande. Lee guías, productos, etiquetas de activos y llaveros.
+
+- La barra de abajo: Hoy, Registrar y Más.
+
+La lista se actualiza sola cada minuto mientras la miras. Abajo, en pequeño, dice de qué hora son los datos: «Actualizado …». Para actualizar ya, tira de la lista hacia abajo o toca el icono de actualizar.
+
+Si no hay señal, ves «Sin señal», «Datos de las …» y Intentar de nuevo. La lista que ves es la última que llegó.
+
+### Salen
+
+Los camiones que Odoo tiene para salir hoy de la sede. Una tarjeta por placa, con la hora y la ruta. Si un camión lleva varias cargas, la tarjeta dice cuántas.
+
+- Arriba, «Seguir»: lo que tú dejaste a medias. Dice en qué paso vas («Paso 3 de 7», «Sigue en: …») y a qué hora empezaste. Tócala para volver.
+
+- Firmado pero sin salir: la tarjeta dice «Lista para salir» y «Falta: Salió». Cuando el camión cruce la reja, toca Salió.
+
+- Lo que revisa otra persona sale atenuado, con su nombre. Si lo tocas, la app te dice quién: «La está revisando … en otro teléfono.» No lo puedes tocar.
+
+- Lo ya revisado va abajo, atenuado, con su marca.
+
+Si no hay nada: «Nada por salir». Cómo se revisa un camión: [Salida de camión](https://zentrix.company/check/docs/salida.html).
+
+### Llegan
+
+Lo que Odoo espera recibir hoy: camiones de proveedores y contenedores, con la hora en que se esperan. Tócalo para [recibirlo](https://zentrix.company/check/docs/recepcion.html).
+
+Al final de la lista hay dos mosaicos:
+
+- Vuelve: un camión de reparto que regresa de su ruta. Sale solo si hay camiones en ruta, con cuántos esperan. [Retorno de ruta](https://zentrix.company/check/docs/recepcion.html#retorno).
+
+- Otro camión: llegó un camión que no está en la lista. La app dice «Llama al supervisor antes de dejarlo entrar.» Llama y, si entra, toca Registrar llegada.
+
+Si no hay nada: «Nada por llegar».
+
+### Adentro
+
+Lo que está adentro de la sede o fuera y tiene que volver. Toca uno cuando salga o vuelva.
+
+Grupo Qué es
+
+«Entró y aún no sale» Objetos de terceros o artículos que entraron sin documento.
+
+«Afuera» Lo que salió sin documento y debe volver. Si se pasó la hora, dice «Debía volver …».
+
+«Activos de la empresa fuera» Activos con etiqueta que salieron. [Activos](https://zentrix.company/check/docs/activos.html).
+
+«Llaves afuera» Llaves entregadas, con quién las lleva y desde qué hora. [Llaves](https://zentrix.company/check/docs/llaves.html).
+
+«Pases aprobados hoy» Activos que el gerente ya autorizó a salir.
+
+Si no hay nada: «Nada adentro».
+
+### Escanear desde Hoy
+
+Toca Escanear y apunta al código. La app sabe qué es:
+
+Escaneas Pasa esto
+
+La guía de una carga que sale Abre ese camión.
+
+La guía de un camión de reparto que vuelve Abre su retorno.
+
+La etiqueta de un activo Abre el activo.
+
+El código de un llavero Abre esa llave.
+
+Un producto Dice su nombre y te deja elegir Sale o Entra sin documento.
+
+Algo que Odoo no conoce «No lo conocemos». Si es un camión que no está en Salen, llama al supervisor antes de dejarlo salir.
+
+Si la carga ya tiene acta de hoy, la app te lo dice: «Esta carga ya tiene acta de hoy». Si Odoo la cambió después de firmar: «Cambió en Odoo después del acta. Llama al supervisor antes de dejarla salir.»
+
+La primera vez, Android pide permiso para la cámara. Si lo negaste, la app dice «La app no puede usar la cámara.» Toca Dar permiso y, en Permisos, activa Cámara.
+
+### Registrar
+
+La segunda pestaña de abajo. Ahí registras lo que no está en Odoo: Entra, Sale, De tercero, Novedad, Llave y Otro camión. Novedad y Llave salen solo si están encendidas para tu sede. Mira [Sin documento](https://zentrix.company/check/docs/sin-documento.html), [Novedades](https://zentrix.company/check/docs/novedades.html) y [Llaves](https://zentrix.company/check/docs/llaves.html).
+
+### El menú Más
+
+- Llamar al supervisor: abre el marcador con su teléfono de trabajo.
+
+- Teléfonos: los contactos de la sede, de día y de noche. [Teléfonos](https://zentrix.company/check/docs/novedades.html#telefonos).
+
+- Bloquear: bloquea y sigues encendido.
+
+- Por enviar: lo que falta por llegar a Odoo. [Sin señal](https://zentrix.company/check/docs/sin-senal.html).
+
+- Encendido: encenderte o apagarte.
+
+- Hablar siempre: la app dice en voz alta qué hacer en cada pantalla, sin tocar Escuchar.
+
+- Acerca de: la versión y Salir de este teléfono.
+
+
+---
+
+## [Manual del vigilante — Zentrix Check](https://zentrix.company/check/docs/)
+
+Cómo se usa Zentrix Check en la garita, pantalla a pantalla: entrar, sacar un camión, recibir mercancía, llaves, activos, novedades y trabajar sin señal.
+
+### Manual del vigilante
+
+La app de la garita: revisas lo que entra y sale, firmas con tu PIN y queda un acta que nadie cambia.
+
+### Qué es
+
+Zentrix Check es la app de Seguridad para la garita. Con ella revisas los camiones que salen y los que llegan, lo que entra o sale sin papeles, las llaves, los activos y las novedades.
+
+Cada revisión termina con tu firma: tu PIN. Lo firmado queda como un acta y ya no se edita.
+
+### Seguridad da fe
+
+Tú comparas lo que ves contra lo que trae Odoo y lo dejas escrito. No mueves inventario ni contabilidad. Lo dice la app en Acerca de: «Seguridad da fe: la app no mueve inventario ni contabilidad.»
+
+- Si algo no cuadra, queda como diferencia en el acta.
+
+- La diferencia la resuelve la oficina en Odoo, no tú.
+
+- La app no retiene camiones ni personas. Cuando algo es grave, te dice a quién llamar. Decide el supervisor.
+
+Lo que firmas es lo que revisaste
+Firma solo lo que viste con tus ojos. Si llenaste algo con lo de Odoo sin revisarlo, el acta lo dice: queda «Con salvedad».
+
+### El teléfono de la garita
+
+- Está sellado a una sede y a un puesto. Lo prepara el supervisor con un código QR de Odoo, una sola vez.
+
+- Lo comparten varios vigilantes. Cada uno entra con su nombre y su PIN.
+
+- Solo usa la cámara. Para fotos y para escanear códigos. No pide tu ubicación.
+
+- Funciona sin señal. Lo que firmas se guarda en el teléfono y se envía solo cuando vuelve la señal.
+
+- Te lo puede decir en voz alta. Toca Escuchar en cualquier pantalla y la app dice qué hacer.
+
+### Quién decide qué ves
+
+El administrador de Seguridad crea tu usuario, te asigna la sede y prepara los teléfonos. El servidor manda: si no ves algo (las llaves o las novedades, por ejemplo), no está apagado en tu teléfono. No está encendido para tu sede. Eso se arregla en Odoo, no en la app.
+
+Los camiones, las facturas, los productos y los contactos que ves salen de Odoo. Si un dato está mal, avisa: la app no lo corrige.
+
+Dicho simple
+Odoo dice qué debería pasar. Tú dices qué pasó. El acta guarda las dos cosas.
+
+### El manual
+
+### Empezar aquí
+
+- [Entrar Preparar el teléfono, tu primera entrada, tu PIN y cómo salir](https://zentrix.company/check/docs/entrar.html)
+
+### Tu turno
+
+- [Encender y apagar Encenderte al llegar, bloquear, apagarte al irte](https://zentrix.company/check/docs/encender.html)
+
+- [La pantalla Hoy Salen, Llegan, Adentro, el botón Escanear y el menú Más](https://zentrix.company/check/docs/hoy.html)
+
+### El trabajo
+
+- [Salida de camión Revisar un camión que sale, paso a paso, hasta «Salió»](https://zentrix.company/check/docs/salida.html)
+
+- [Recepción y retorno Recibir mercancía, contenedores y camiones que vuelven de ruta](https://zentrix.company/check/docs/recepcion.html)
+
+- [Sin documento Anotar lo que entra o sale fuera de Odoo y su regreso](https://zentrix.company/check/docs/sin-documento.html)
+
+- [Llaves Entregar una llave, quién se la lleva y su regreso](https://zentrix.company/check/docs/llaves.html)
+
+- [Activos Activos con etiqueta: pases del gerente, salidas y regresos](https://zentrix.company/check/docs/activos.html)
+
+- [Novedades y llamadas Anotar novedades, llamar a tiempo y anotar quién autorizó](https://zentrix.company/check/docs/novedades.html)
+
+### Consultar
+
+- [Sin señal Trabajar sin conexión: la cola, ✓ y ✓✓, y qué necesita señal](https://zentrix.company/check/docs/sin-senal.html)
+
+- [Consola del administrador Consola de solo lectura: el día, actas, diferencias y activos](https://zentrix.company/check/docs/administrador.html)
+
+- [Dudas rápidas Respuestas cortas a lo que más se pregunta en la garita](https://zentrix.company/check/docs/dudas.html)
+
+¿No encuentras lo tuyo? Pregúntale al administrador de Seguridad o mira [Soporte](https://zentrix.company/soporte/#check).
+
+
+---
+
+## [Llaves — Manual de Zentrix Check](https://zentrix.company/check/docs/llaves.html)
+
+Cómo se controlan las llaves con Zentrix Check: el llavero con código QR, quién se lleva cada llave, cuándo vuelve y qué hacer si una llave no regresa a tiempo.
+
+### Llaves
+
+Cada llavero tiene su etiqueta con código. Lo escaneas cuando sale y cuando vuelve, y firmas con tu PIN.
+
+### Antes de empezar
+
+Las llaves se encienden por sede. Si en Registrar no ves el mosaico Llave, tu sede todavía no las usa.
+
+Cada llavero lleva una etiqueta con un código que imprime la oficina en Odoo. El código se escanea, no se escribe. Escrito a mano no sirve: «Escanea el llavero. Escribir el código no sirve.»
+
+### Entregar una llave
+
+- Toca «Registrar» › «Llave», o «Escanear» en Hoy. Dentro del marco dice «Apunta al llavero».
+
+- Escanea la etiqueta del llavero. Sale la llave con su nombre.
+
+- «¿Quién la lleva?» Toca su nombre. La lista viene de Odoo. Arriba salen los que más se la llevan.
+
+- Firma con tu PIN. Final: «Salió». La voz dice «Llave entregada.»
+
+### Si la persona no está en la lista
+
+Toca Otra persona. La app dice «Llama al supervisor antes de entregarla». Si el supervisor dice que sí, toca Sale igual y firma. No se escribe el nombre: queda como «Otra persona» y la oficina recibe el aviso.
+
+### Recibir una llave
+
+- Escanea el llavero. Desde Registrar, desde Hoy, o en Hoy › Adentro › «Llaves afuera», tocando la llave y Escanear.
+
+- «¿Vienen todas?» Si el llavero tiene varias llaves, cuéntalas y toca Sí o No. Con No, tómale una foto al llavero y toca Siguiente.
+
+- Toca «Firmar» y escribe tu PIN. Final: «Volvió». La voz dice «Llave devuelta.»
+
+Un llavero que vuelve incompleto queda marcado «Incompleto» hasta que la oficina lo resuelva.
+
+### Si el llavero no tiene etiqueta
+
+En el visor, toca Sin etiqueta. La app dice «El llavero no tiene etiqueta. Llama al supervisor.»
+
+Para recibir una llave sin etiqueta, búscala en Hoy › Adentro › «Llaves afuera» y regístrala desde ahí con Sin etiqueta. Queda como regreso sin verificar.
+
+### Si te sale un mensaje
+
+Mensaje Qué haces
+
+«No es llavero» Ese código es de otra cosa. Toca Otra vez y apunta al llavero.
+
+«No la conocemos» Odoo no conoce ese llavero. Llama al supervisor.
+
+«Escanea el llavero» Escribiste el código. Escanéalo con la cámara.
+
+### Llaves afuera
+
+En Hoy › Adentro, «Llaves afuera» muestra cada llave entregada, quién la lleva y desde qué hora. Si lleva mucho tiempo afuera, la hora sale en ámbar y dice «hace muchas horas». Es solo un aviso: no hay que hacer nada en la app.
+
+
+---
+
+## [Novedades y llamadas — Manual de Zentrix Check](https://zentrix.company/check/docs/novedades.html)
+
+Cómo se registra una novedad en Zentrix Check, qué hacer si es grave, los teléfonos de la sede y cómo se anota a quién llamaste con «¿Quién autorizó?».
+
+### Novedades y llamadas
+
+Lo que pasa en la garita y no es un camión se anota como novedad. Y cuando algo es grave, la app te dice a quién llamar.
+
+### Anotar una novedad
+
+Una novedad es algo que pasó en la garita y no depende de un camión ni de un documento: se fue la luz, una puerta dañada, un intruso, un robo. Las novedades se encienden por sede: si no ves el mosaico Novedad en Registrar, tu sede no las usa todavía.
+
+- Toca «Registrar» › «Novedad».
+
+- «¿Qué pasó?» Toca el dibujo. Los tipos los carga Odoo para tu sede.
+
+- «¿Es grave?» Toca Sí o No. Grave es, por ejemplo, un robo o alguien adentro.
+
+- Toma fotos, si sirven. Hasta tres, y solo de cosas: sin personas. Puedes seguir sin foto.
+
+- «Dilo corto». Dos o tres palabras. Escríbelas o toca el micrófono del teclado y habla. La app no graba audio.
+
+- Firma con tu PIN. Final: «Novedad anotada». Toca Hoy.
+
+Sin nombres ni cédulas
+No escribas nombres, cédulas ni teléfonos. Si escribes seis números seguidos, la app no te deja seguir: «Sin números largos. No escribas cédulas ni teléfonos.»
+
+Si Odoo no tiene tipos cargados: «Odoo no tiene tipos de novedad en esta sede. Llama al supervisor.»
+
+### Novedad grave
+
+Con Sí en «¿Es grave?», la pantalla se pone roja: «Novedad grave» y «Llama al supervisor ahora». Llama desde ahí mismo.
+
+Cuando la novedad llega a Odoo, Odoo avisa al gerente de sede. El final lo confirma con «Gerente avisado». La app no avisa: avisa Odoo, cuando se envía.
+
+### Llamar desde la app
+
+En las pantallas de cuidado hay botones de llamada: Llamar al supervisor, Llamar a Despacho y Llamar al gerente de sede. Debajo ves a quién llamas y su teléfono de trabajo.
+
+- La app no llama sola: abre el marcador del teléfono con el número puesto.
+
+- Si no contesta, al volver sale Llamar al siguiente: … con el próximo de la lista.
+
+- Primero los del horario de ahora, día o noche. Los del otro horario van después.
+
+- La llamada queda anotada con la hora: «Llamaste a las …».
+
+Mensaje Qué haces
+
+«No hay teléfono cargado para el supervisor. Búscalo antes de dejar salir.» Búscalo en persona. Avísale al administrador que falta el número.
+
+«Sin señal: no pudimos traer el teléfono del supervisor…» Búscalo en persona, o mira en Teléfonos.
+
+«No se pudo abrir el marcador. Marca a mano: …» Marca ese número en el teléfono.
+
+### Teléfonos
+
+En Más › Teléfonos están los contactos de la sede: supervisores, gerentes y Despacho, con su teléfono de trabajo. Dos pestañas: Día y Noche. Abre en la del horario de ahora. Toca un contacto para llamarlo.
+
+Funciona sin señal: el teléfono guarda la última lista. En la «i» dice cuándo se actualizó. Si pasa un mes sin que se actualice, la lista se borra. Si no hay ninguno: «Sin teléfonos». Busca al supervisor en persona.
+
+### «¿Quién autorizó?»
+
+Cuando algo sale con una diferencia crítica (un camión) o sin pase (un activo), la app pregunta quién te autorizó. Lo que eliges queda en el acta con la hora.
+
+- Llama primero. Usa los botones de llamada. Los que llamaste salen arriba en la lista, con la hora.
+
+- Toca a la persona que autorizó. Solo salen contactos que pueden autorizar. Despacho no autoriza.
+
+- Si nadie autorizó, toca «Nadie». Siempre está al final.
+
+- Firma con tu PIN.
+
+Decide el supervisor
+«La app no retiene el camión: decide el supervisor.» Tú llamas y anotas lo que te dijeron. La responsabilidad de la decisión no es tuya.
+
+
+---
+
+## [Recepción y retorno — Manual de Zentrix Check](https://zentrix.company/check/docs/recepcion.html)
+
+Cómo se recibe mercancía con Zentrix Check: fotos al llegar, el precinto de un contenedor, la factura del proveedor, el conteo y los retornos de ruta.
+
+### Recepción y retorno
+
+Lo que llega con factura del proveedor se recibe en pasos. El camión de reparto que vuelve se revisa sin contar.
+
+### Recibir mercancía
+
+- En Hoy › Llegan, toca la llegada. Se abre «Llegada» con la empresa y los pasos. Si es un contenedor, dice «Revisa el precinto primero».
+
+- Toca «Empezar». La app trae lo de Odoo. Sin señal, toca Intentar de nuevo cuando la haya.
+
+Los pasos son: Fotos al llegar · Precinto · Factura del proveedor · Productos · Contenedor vacío · Fotos de lo recibido · Cerrar. El precinto y el contenedor vacío salen solo con contenedores (el contenedor vacío, solo si la sede lo pide).
+
+### Fotos al llegar
+
+«Toma una foto del camión entero, con la placa.» Si es un contenedor: «Toma una foto del contenedor cerrado, con su precinto.» Va antes del precinto, para que se vea entero.
+
+### Precinto (contenedores)
+
+- Tómale una foto al precinto donde se lea el número.
+
+- Escanea o escribe su número. «Escríbelo como lo ves. La oficina lo compara con lo declarado.»
+
+- Mira el contenedor por fuera, antes de cortar. Si la sede lo pide, la app pregunta por las puertas, las cerraduras y por debajo del contenedor: sin huecos, soldaduras nuevas ni arreglos.
+
+- Revisa el precinto. «¿Está entero?», «¿Se lee el número?», «¿Firme al girar?», «¿Aguanta al halar?». Toca Sí o No en cada una.
+
+- Córtalo con el chofer mirando. La app pregunta «¿Chofer presente?».
+
+Si algo falla: «El precinto no pasó la revisión». Es crítica: «Llama al supervisor: él decide qué se hace con el contenedor.»
+
+### Factura del proveedor
+
+«Tómale foto a la factura del proveedor. Si no la trae, toca No trae.»
+
+- Trae factura: foto, y después escanea o escribe su número.
+
+- No trae factura: toca No trae y tómale foto a la nota de entrega o a la guía del transportista. Si tampoco trae papel, toca Sin papel. Queda como diferencia y la oficina la resuelve en Odoo.
+
+### Productos
+
+Igual que en la salida: escaneas cada producto, cuentas cajas y sueltas, y anotas lo que sobra o falta. [Cómo se hace](https://zentrix.company/check/docs/salida.html#productos).
+
+### Contenedor vacío
+
+«Cuando terminen de descargar, ¿el contenedor ya está vacío?»
+
+- Sí: la app pregunta por el piso, las paredes, el techo y el fondo. Si algo está mal, tómale una foto al problema.
+
+- No (todavía no está vacío): «No se revisa por dentro. Queda anotado.»
+
+### Fotos de lo recibido y firma
+
+«Toma una foto de lo recibido en el andén.» Después revisa los pasos y firma con tu PIN, como en la [salida](https://zentrix.company/check/docs/salida.html#cerrar). Al final toca Hoy.
+
+Diferencia crítica al recibir
+«Anota la diferencia en la guía del transportista antes de que se vaya, y tómale foto.» Esa foto queda en el acta.
+
+Si la llegada ya tiene acta, la app lo dice: «Esta recepción ya se registró.» Si Odoo la cambió después: «Cambió en Odoo después del acta. Hay que revisarla otra vez.»
+
+### Llega un camión que no está en la lista
+
+En Llegan, toca Otro camión. «Llama al supervisor antes de dejarlo entrar.» Si entra, toca Registrar llegada y anótalo como [algo que entra sin documento](https://zentrix.company/check/docs/sin-documento.html).
+
+### Retorno de ruta
+
+Un camión de reparto que salió con su carga vuelve a la sede. Se revisa sin contar: solo miras si trae algo de vuelta.
+
+- En Hoy › Llegan, toca «Vuelve». Sale «¿Cuál camión?»: los camiones en ruta, con la placa y la hora de salida. Con muchos, filtra escribiendo la placa. También puedes tocar Escanear y apuntar a la guía.
+
+- Toca la placa y responde «¿Es este camión?».
+
+- «¿Es el chofer?» Pídele la cédula.
+
+- «¿Trae mercancía?» Abre la puerta, mira y toca Sí o No.
+
+- Toma la foto. Si viene vacío: «Abre las puertas y toma una foto del camión vacío, con la placa.» Si trae algo: «Antes de bajar nada, toma una foto de lo que vuelve, con las puertas abiertas.»
+
+- Firma con tu PIN. «Acta firmada. Toca Hoy.»
+
+Si dices que viene vacío y Odoo espera mercancía, la app pregunta «¿Seguro vacío?» con «Odoo espera mercancía». Toca Revisar para mirar otra vez, o Sí, vacío.
+
+Si no hay camiones en ruta, la lista dice «Nadie en ruta». Si llega uno igual, toca Otro camión.
+
+
+---
+
+## [Salida de camión — Manual de Zentrix Check](https://zentrix.company/check/docs/salida.html)
+
+Cómo sale un camión con Zentrix Check: placa y chofer, guía y facturas, conteo, foto, candado, firma con tu PIN y qué hacer con las diferencias.
+
+### Salida de camión
+
+Siete pasos, de la placa a la firma. Revisas contra lo que dice Odoo y firmas con tu PIN.
+
+### Abrir el camión
+
+- En Hoy › Salen, toca el camión. O toca Escanear y apunta a la guía. Se abre «Salida» con la placa y los pasos dibujados.
+
+- Responde «¿Lleva otra carga?». Si Odoo tiene otra carga para la misma placa, la app pregunta antes de empezar. Toca Sí o No. Mientras falte una respuesta, no hay Empezar.
+
+- Toca «Empezar». La app trae lo de Odoo («Trayendo lo de Odoo…») y abre el primer paso.
+
+Antes de empezar también puedes agregar a mano otra carga con Otra carga, o quitar una agregada por error con Quitar. Si Odoo tiene esa carga en otra placa, la app pregunta «¿Va en este camión?».
+
+Lo que Odoo trae (empresa, ruta, andén, órdenes, facturas, productos) está en la «i», arriba. El supervisor te lo puede pedir por teléfono.
+
+Para empezar necesitas señal
+Si no la hay: «Sin señal: no pudimos traer lo de Odoo para esta carga. Busca señal y toca «Intentar de nuevo».» Una vez empezado, sigues sin señal.
+
+### Los siete pasos
+
+Arriba siempre ves la barra de pasos. Toca un paso para ir a él. Los pasos son: Camión y chofer · Documentos · Facturas · Productos · Fotos · Candado · Cerrar.
+
+### 1. Camión y chofer
+
+- Tómale una foto a la placa. Toca Tomar foto.
+
+- «¿Es esta placa?» Mira la foto y toca Sí o No. Con No, escribe la placa que ves en el camión (por ejemplo, AB123CD).
+
+- «¿Es el chofer?» Pídele la cédula al chofer y compárala con lo que dice Odoo. Si Odoo no tiene chofer, la app dice «Odoo sin chofer» y «Avisa a Despacho».
+
+- «¿Todo igual?» Mira la empresa, la ruta y el andén. Si algo es distinto, tócalo y avisa a Despacho.
+
+Si la placa no es la de Odoo, queda «La placa no coincide con Odoo». Es una diferencia crítica: llama al supervisor.
+
+### 2. Documentos
+
+- Escanea el código de barras de la guía de despacho. Si no se lee, tómale foto y responde «¿Dice este número?».
+
+- Si no es la guía de esta carga. Toca Es otra y llama a Despacho, o Otra vez para repetir.
+
+- Si el chofer no la trae. Toca No trae. Llama a Despacho y sigue.
+
+Si la carga lleva licor, la app pregunta además «¿Trae la guía?» (la guía de circulación del licor):
+
+- Sí: escribe o escanea su número y tómale foto. Después: «¿Placa y chofer?» (¿son los del camión?) y «¿Es original?». Fotocopia no vale.
+
+- No: «Licor sin guía de circulación. Llama al supervisor antes de dejar salir y avisa a Despacho.»
+
+### 3. Facturas
+
+- Toca «Escanear facturas» y escanea cada una. Si no se lee, tómale foto. La lista dice cuántas van: «3 de 5 listas».
+
+- Si el chofer trae una factura que no está en la lista. Toca Factura nueva: foto primero, después su número.
+
+- Si una no viene. Márcala «No viene». Si aparece después, toca Apareció.
+
+Si Odoo todavía no tiene facturas: «Odoo todavía no tiene facturas para esta carga. Fotografía las que trae el chofer.»
+
+### 4. Productos
+
+Tienes dos caminos. Puedes usar los dos.
+
+- Toca «Llenar». Pone en cada producto la cantidad que dice Odoo. La app avisa «Llenamos 5 con lo de Odoo» y te deja Deshacer unos segundos. Lo llenado queda «Llenado»: no cuenta como revisado.
+
+- Toca «Escanear» y escanea cada producto. El número grande cuenta solo lo escaneado: «Escaneados 3 de 5». Al terminar: «Todo escaneado».
+
+Toca una fila para ver ese producto. Ahí puedes contar cajas y sueltas y tocar Guardar:
+
+- Si tu cuenta es distinta a la de Odoo, la app pregunta «¿Contaste bien?» con lo que dice Odoo y lo que contaste tú. Toca Sí, son … o Contar otra vez.
+
+- Si no hay ninguno: «¿No está ninguna?» → Sí, no está o Buscar de nuevo.
+
+- Si no tiene código: tómale una foto. Queda «Llenado · con foto».
+
+Al escanear algo que no va en la carga, la app pregunta si lo anotas como sobrante (Anotar o No anotar). Si no lo conoce: «No lo conocemos». Si va en el camión, toca A mano y agrégalo con su foto.
+
+El verde se gana escaneando
+Llenar es rápido, pero no es revisar. Si firmas con productos en «Llenado», el acta dice «Con salvedad» y cuántos firmaste así. Escanea lo que puedas.
+
+### 5. Fotos
+
+«Toma una foto de la carga dentro del camión, con las puertas abiertas.» Toca Tomar foto. Puedes tomar Otra.
+
+### 6. Candado
+
+«¿Le pusieron candado a las puertas?» Toca Sí o No.
+
+- Sí: puedes tomar una foto (no es obligatoria) y tocas Siguiente.
+
+- No: la app ofrece llamar a Despacho. Queda como observación.
+
+En algunas sedes este paso empieza por «¿Cabina vacía?»: mira detrás de los asientos y en la litera. Las cosas del chofer no cuentan. Si hay cajas o productos, toca No y toma una foto sin personas. Sale «Mercancía en cabina»: es una diferencia crítica.
+
+### 7. Cerrar y firmar
+
+- Revisa los pasos. «Revisa y firma» muestra una fila por paso con su estado: «Completo», «Falta», «Con salvedad», «Con diferencia» o «Crítica». Toca una fila para corregirla y vuelves aquí.
+
+- Toca «Firmar». Sale la hoja con la placa, las actas y, si hay, la salvedad: «Firmo lo que revisé. … como «Llenado» (cantidad de Odoo, sin revisarlos uno por uno)».
+
+- Escribe tu PIN. La hoja dice «…, firma con tu PIN». Al terminar: «Acta firmada».
+
+- Cuando el camión cruce la reja, toca «Salió». La app pregunta «¿Ya salió?». Si todavía está en la reja, toca Todavía no: el camión queda en Salen como «Lista para salir» y tocas Salió después.
+
+Junto al acta ves ✓ («Acta guardada en el teléfono», se enviará sola) o ✓✓ («Acta recibida por Odoo»). Un acta firmada ya no se edita.
+
+### Las diferencias
+
+Lo que no cuadra contra Odoo queda como diferencia. Odoo la clasifica en tres niveles:
+
+Nivel En la app Qué haces
+
+S1 · crítica Rojo: «Diferencia crítica», «Crítica» Llama al supervisor antes de dejar salir.
+
+S2 · mayor «Con diferencia» Firma igual. Si la app lo pide, avisa a Despacho.
+
+S3 · menor «Con observación» Firma igual. Queda anotada.
+
+Son críticas, entre otras: licor de menos o de más, licor sin guía de circulación, la placa distinta y mercancía en la cabina. Cuando aparece una, la pantalla se pone roja a pantalla completa con la causa («Licor sin guía», «Placa distinta», «Faltan productos»…) y «Llama al supervisor antes de dejar salir». Toca Llamar al supervisor y después Entendido.
+
+La app no retiene el camión
+«La app no retiene el camión: decide el supervisor.» Tú llamas, anotas y firmas. La diferencia que vale es la que calcula Odoo, y la resuelve la oficina.
+
+### «¿Quién autorizó?»
+
+Si el acta tiene una diferencia crítica y tocas Salió, la app pregunta «¿Quién autorizó?».
+
+- Toca a la persona que te autorizó. Arriba salen los que llamaste desde la app, con la hora de la llamada. Después, los contactos del horario de ahora.
+
+- Si nadie autorizó, toca «Nadie». Va siempre al final. La app dice: «Nadie autorizó. Llama al supervisor. Si el camión sale igual, toca Salió.»
+
+- Firma con tu PIN. Queda anotado quién autorizó (o que nadie) y la hora. Odoo avisa al gerente de sede.
+
+Más sobre los contactos: [Novedades y llamadas](https://zentrix.company/check/docs/novedades.html#quien-autorizo).
+
+### Si te interrumpen
+
+Puedes dejar el camión a medias. Queda arriba en Hoy, en la tarjeta «Seguir». Si la app se cierra, lo registrado está guardado: «La app se cerró. Lo que ya registraste está guardado y se envía solo.» Toca Seguir.
+
+
+---
+
+## [Sin documento — Manual de Zentrix Check](https://zentrix.company/check/docs/sin-documento.html)
+
+Cómo se registra en Zentrix Check lo que entra o sale sin documento en Odoo: qué es, los artículos con su foto y qué queda en el registro de la garita.
+
+### Sin documento
+
+Lo que entra o sale sin estar en Odoo también se anota: qué es, por qué, cuántos y si vuelve.
+
+### Empezar un registro
+
+Toca Registrar, abajo. Elige un dibujo:
+
+- Sale: algo sale de la sede sin documento.
+
+- Entra: algo entra sin documento.
+
+- De tercero: un objeto de otra empresa que entra, por ejemplo la herramienta de un técnico.
+
+También puedes empezar desde Hoy: escanea un producto y toca Sale o Entra.
+
+### El motivo
+
+La app pregunta «¿Por qué sale?» o «¿Por qué entra?». Toca un motivo y Siguiente.
+
+Sale Entra
+
+Activo · Préstamo · Mantenimiento · Desecho · Devolución · Muestra · Donación · Otro Activo · Mantenimiento · Muestra · Préstamo · Donación · Otro
+
+Activo es un bien de la empresa con etiqueta: te lleva a escanear su etiqueta. Mira [Activos](https://zentrix.company/check/docs/activos.html).
+
+En De tercero, la pregunta es «¿De qué empresa?». Escribe solo la empresa. Si no tiene, toca Siguiente.
+
+### Los artículos
+
+- Toca «Escanear» y escanea cada artículo. Si está en el catálogo, el nombre sale solo.
+
+- Si no tiene código, toca «A mano». Primero la foto (es obligatoria). Después «¿Qué es?»: escríbelo o díctalo con el micrófono del teclado. Al final «¿Cuántos?»: elige Unidad, Caja, Bulto, Kg u Otro y la cantidad.
+
+- Toca una fila para cambiar la cantidad con − y +, o para Quitar.
+
+No escribas nombres ni cédulas
+En la descripción y en la empresa, solo qué es y de quién es la empresa. Nunca datos de personas.
+
+Mensaje Qué pasa
+
+«No conocemos este código. Agrégalo a mano.» Agrégalo con A mano, con su foto.
+
+«Escribiste el código. Agrégalo con su foto.» Un código escrito no cuenta como escaneado: lleva foto.
+
+«Este artículo es un producto del inventario. Avisamos al administrador.» Un producto de Odoo saliendo sin documento. Queda como diferencia.
+
+Licor que sale sin documento Diferencia crítica: «Llama al supervisor antes de dejar salir y avisa a Despacho.»
+
+### Regreso y firma
+
+- Toca «Firmar». Si falta, la app pregunta antes «¿Regresa?» (lo que sale) o «¿Se lo llevan?» (lo que entra).
+
+- Con Sí, elige el día. «¿Cuándo?»: Hoy, Mañana, Una semana u Otro día, y antes de qué hora. Si la hora ya pasó, la app dice «Esa hora ya pasó. Elige otra.»
+
+- Escribe tu PIN. La hoja dice «Firma este registro». Al terminar: «Acta firmada». Toca Hoy.
+
+Lo que tiene que volver queda en Hoy › Adentro: en «Afuera» lo que salió y en «Entró y aún no sale» lo que entró.
+
+### Si lo dejas a medias
+
+Si sales sin firmar: «Guardamos este registro. Lo sigues desde Registrar.» En Registrar, arriba, sale «Registro sin terminar» con Seguir y Descartar. Si descartas por error, toca Deshacer.
+
+### Cuando sale o vuelve
+
+- En Hoy › Adentro, toca lo que sale o vuelve.
+
+- Toca «Salió» o «Volvió».
+
+- Responde «¿Igual que entró?» o «¿Igual que salió?». Con No, escribe «¿Qué cambió?» en pocas palabras, sin nombres ni cédulas.
+
+- Firma con tu PIN. «Salida registrada.» o «Regreso registrado.»
+
+Si se pasó la hora, la fila dice «Debía volver …».
+
+
+---
+
+## [Sin señal — Manual de Zentrix Check](https://zentrix.company/check/docs/sin-senal.html)
+
+Cómo trabaja Zentrix Check sin señal en la garita: qué se guarda cifrado en el teléfono, cómo ver lo que falta por enviar y qué necesita conexión.
+
+### Sin señal
+
+En la garita la señal va y viene. Lo que firmas se guarda en el teléfono y se envía solo cuando vuelve.
+
+### Cómo sabes si hay señal
+
+Arriba de la pantalla, la barra de estado te lo dice:
+
+- «Sin señal · tu trabajo se guarda en el teléfono.»
+
+- «3 por enviar»: hay registros esperando.
+
+- «Al día»: todo llegó a Odoo.
+
+- «Necesita atención»: Odoo rechazó algo. Míralo en Por enviar.
+
+### ✓ y ✓✓
+
+Marca Quiere decir
+
+✓ «Guardado ✓»: está en el teléfono, firmado. Se envía solo.
+
+✓✓ «En Odoo ✓✓»: Odoo ya lo recibió.
+
+Las ves junto al encendido, en cada acta firmada y en Por enviar. Con ✓ ya puedes seguir: lo firmado no se pierde aunque se apague el teléfono.
+
+### Por enviar
+
+Toca Más › Por enviar.
+
+- Arriba: cuántos faltan por enviar, o «Al día» si no falta nada.
+
+- Después: una fila por camión, registro sin documento, novedad, llave o activo, con su ✓ o ✓✓. Tócala para ver cada registro.
+
+- Las fotos van aparte: «fotos esperando para subir». Pesan más y suben después.
+
+La cola se envía sola. Si algo quedó trabado, sale Enviar ahora. Si no, el único botón es Hoy.
+
+Nada se borra de aquí. Ni al apagarte, ni al salir del teléfono, ni si el teléfono queda bloqueado.
+
+### Si Odoo no acepta algo
+
+La fila dice «Odoo no aceptó este registro.» (o «Odoo no aceptó esta foto.») y debajo el mensaje de Odoo, tal cual. Léelo: dice qué pasó. Toca Llamar al supervisor si no sabes qué hacer. No se vuelve a firmar.
+
+### Registros de un compañero
+
+Si un compañero firmó en este teléfono y su sesión venció, sus registros esperan. En la «i» dice «Esperando a …» y «Se enviarán cuando vuelva a entrar aquí.» Pídele que entre con su nombre y su PIN.
+
+### Qué necesita señal
+
+Sin señal funciona Necesita señal
+
+Entrar con tu nombre y tu PIN Preparar el teléfono con el QR
+
+Encenderte y apagarte Entrar con tu contraseña (primera vez, «Olvidé mi PIN», sesión vencida)
+
+Seguir un camión ya empezado y firmarlo Empezar un camión, una recepción o un retorno («Trayendo lo de Odoo…»)
+
+Tomar fotos Actualizar la lista de Hoy
+
+Registros sin documento y novedades Las respuestas de Odoo (por ejemplo, «Gerente avisado»)
+
+Ver Teléfonos (la última lista guardada) La consola del administrador
+
+Sin señal, Hoy muestra la última lista que llegó, con «Datos de las …». Lo que pasó después en Odoo no lo ves hasta que vuelva la señal.
+
+Dicho simple
+Lo que empiezas con señal lo terminas sin ella. Lo que firmas llega solo. Si ves ✓, ya está a salvo.
+
+
 # Legal, soporte y contacto
+
+
+---
+
+## [Política de privacidad — Zentrix Check](https://zentrix.company/check/privacidad/)
+
+Qué datos registra Zentrix Check, la app de la garita de seguridad, para qué, dónde se guardan, quién los ve y cómo pedir su acceso, corrección o eliminación.
+
+Legal
+
+### Política de privacidad de Zentrix Check
+
+Última actualización: 16 de octubre de 2026.
+
+### 1. Qué es Zentrix Check y para quién
+
+Zentrix Check es la herramienta de trabajo interna del personal de seguridad de la empresa que la usa (en adelante, «la empresa»), en la garita de cada sede. La desarrolla y la distribuye GUUAO LLC por Google Play, solo para Android. Con ella los vigilantes dejan constancia de lo que entra y sale: camiones que salen cargados, mercancía que llega, llaves, equipos de la empresa y novedades. La app no mueve inventario ni contabilidad: solo registra lo que el vigilante comprobó.
+
+No es una aplicación de consumo y no permite crear cuentas. La cuenta del vigilante la crea el administrador de Seguridad de la empresa, y cada teléfono se da de alta con un código QR que lo deja sellado a una sede. Sin eso la app no hace nada.
+
+Esta política se aplica a estas personas:
+
+- El vigilante: el empleado de la empresa, o de la contratista de seguridad, que usa la app con su cuenta.
+
+- El administrador de Seguridad: quien consulta desde la app el día, las actas y las fotos de su sede. Solo mira; no puede cambiar lo que firmó el vigilante.
+
+- Las personas cuyos datos pasan por la garita aunque no usen la app: choferes y transportistas, quienes figuran en las facturas y en los papeles que acompañan una carga, los empleados que retiran una llave o un equipo, y los contactos de la sede a los que el vigilante puede llamar.
+
+El tratamiento forma parte de la relación de trabajo y del control de acceso a las instalaciones de la empresa. La app no muestra un diálogo de consentimiento: dejar constancia de quién revisó qué, y cuándo, es la función misma de la herramienta. El único permiso que pide el teléfono es el de la cámara, y lo pide Android.
+
+### 2. Qué datos se recogen y para qué
+
+### Del vigilante y del administrador
+
+Dato Para qué se usa
+
+Nombre y usuario Identificar al vigilante en el teléfono de la garita y en cada acta que firma. El usuario es el de su cuenta en el sistema de la empresa.
+
+Contraseña Iniciar sesión la primera vez en cada teléfono. La valida el servidor de la empresa; la app no la guarda. Lo que se guarda es la sesión, cifrada en el teléfono.
+
+PIN Entrar después con el nombre y el PIN, y firmar cada acta. Es un cerrojo local: se guarda con un hash en el teléfono y nunca sale de él.
+
+Código de doble factor del administrador El administrador de Seguridad entra además con un código de un solo uso. Lo valida el servidor de la empresa.
+
+Encendido y apagado A qué hora se encendió y se apagó el vigilante en la garita, la hora de su última acción, la sede y el puesto. Sirve para saber quién estaba a cargo. No es un registro de jornada.
+
+Registro de lo que hace Cada paso de cada acta, con su hora y el vigilante que lo hizo: salidas, recepciones, conteos, diferencias, firmas, llaves, novedades y decisiones. Es la trazabilidad de la garita.
+
+Datos del teléfono y de la sesión Modelo del teléfono, versión de Android y de la app, y un identificador de la instalación generado por la app. El servidor de la empresa registra además la dirección IP y las fechas de cada sesión. Sirven para saber qué teléfono hizo qué, para cortar el acceso de un teléfono perdido y para exigir una versión mínima de la app.
+
+Integridad del teléfono y de la app Al dar de alta el teléfono y al iniciar sesión, la app pide a Google Play una verificación de que la app es la original y corre en un teléfono no alterado. Ver la cláusula 6.
+
+Datos de uso y de fallos Qué pantallas se usan, sin datos de las actas, y reportes técnicos cuando la app falla. Detalle en la cláusula 6.
+
+### De las personas cuyos datos pasan por la garita
+
+Dato Para qué se usa
+
+Placa del vehículo y foto de la placa Confirmar que el vehículo que sale o llega es el que espera el sistema. La placa la trae la empresa desde el despacho; el vigilante solo la escribe si no coincide o falta.
+
+Nombre del chofer y los últimos 4 dígitos de su cédula Confirmar que el chofer es el asignado. Vienen del sistema de la empresa; la app nunca muestra la cédula completa y la guarda en el teléfono por un máximo de 12 horas.
+
+Fotos de la carga, la cabina, el contenedor y los precintos Dejar constancia del estado de la carga y del vehículo al salir o al llegar. Son fotos de cosas: la app pide que no salgan personas.
+
+Fotos de facturas y de los papeles del transportista Dejar constancia de los documentos que acompañan la carga. Pueden mostrar el nombre, el RIF o la cédula, la dirección y los montos de clientes, proveedores y choferes. Se guardan con el mismo acceso restringido que las actas.
+
+Quién se lleva una llave o un equipo El empleado, elegido de la lista de la empresa, y la hora de salida y de regreso. Nunca su cédula. Si la persona no está en la lista, no se escribe su nombre.
+
+Texto y fotos de una novedad Dos o tres palabras sobre lo que pasó y, si hace falta, hasta tres fotos de cosas. La app pide no escribir nombres ni cédulas y tapa cualquier número de seis cifras seguidas.
+
+Contactos de la sede y llamadas anotadas El rol, el horario y el teléfono de trabajo de las personas a las que el vigilante puede llamar (supervisor, gerente, despacho). Cuando el vigilante llama desde la app, se anota a quién y a qué hora; no se graba la llamada ni se guarda su duración.
+
+### 3. Lo que la app NO hace
+
+- No usa la ubicación. La app ni siquiera pide ese permiso.
+
+- No lee la galería, los contactos, los mensajes ni los archivos del teléfono. Las fotos se toman con la cámara desde la app.
+
+- No graba audio. La app puede leer avisos en voz alta con las voces ya instaladas en el teléfono, sin descargar nada. Si el vigilante dicta con el micrófono del teclado, ese dictado lo procesa el teclado del teléfono, no Zentrix Check.
+
+- No usa reconocimiento facial ni datos biométricos, y no pide fotos de personas ni de documentos de identidad.
+
+- No envía notificaciones push.
+
+- No vende datos, no muestra publicidad y no crea perfiles para mercadeo.
+
+- No usa el identificador de publicidad del teléfono.
+
+- No envía el PIN a ningún lado.
+
+- No manda capturas de pantalla, el contenido de las actas ni las fotos en los reportes de fallos ni en las métricas de uso.
+
+- No copia sus datos al respaldo en la nube del teléfono ni a un teléfono nuevo.
+
+- No permite cambiar un acta firmada. Una corrección se agrega como nota y el original se conserva.
+
+### 4. Dónde se guardan
+
+Los datos se guardan en los servidores de la empresa, en su sistema de gestión (Odoo), junto con el resto de la información de cada carga. La app se comunica con ellos solo por HTTPS.
+
+En el teléfono de la garita quedan la llave del teléfono, la sesión y el PIN de cada vigilante, en el almacén seguro de Android (Keystore); lo que todavía no se envió, cifrado; y las fotos y los borradores de lo que está a medias, en el almacenamiento privado de la app, hasta que se envían o caducan. Si el teléfono se revoca, la app borra todo eso en cuanto vuelve a conectarse. Al desinstalar la app, Android también lo borra.
+
+### 5. Cuánto tiempo se conservan
+
+- Fotos de la carga, la cabina, el contenedor, los precintos y la placa: 24 meses. Si hay un incidente abierto, hasta que se cierre.
+
+- Fotos de facturas y de los papeles del transportista: 24 meses.
+
+- Texto de las actas, firmas y registro de eventos: 6 años, como respaldo de lo que entró y salió de la empresa.
+
+- Novedades y sus fotos: 24 meses.
+
+- Movimientos de llaves: 12 meses.
+
+- Encendidos y apagados: mientras dure la relación de trabajo y 5 años más; si el vigilante es de una contratista, 24 meses.
+
+- Sesiones por teléfono: 12 meses.
+
+- Datos del chofer en el teléfono: 12 horas como máximo.
+
+- Reportes de fallos: según el plazo configurado en el proveedor, que no supera los 90 días.
+
+- Métricas de uso: según el plazo configurado en Google Analytics, que no supera los 14 meses.
+
+- PIN y sesión: viven solo en el teléfono y se borran al salir del teléfono, al revocarlo o al desinstalar la app.
+
+Cuando vence un plazo se borra la foto o el dato. Puede quedar la fila del registro, con su huella y la fecha del borrado, para que la cadena de actas siga siendo verificable. Lo que una autoridad pida conservar para un caso abierto se guarda hasta que el caso termine.
+
+### 6. Con quién se comparten
+
+Dentro de la empresa, el acceso se limita a quien lo necesita para su función y a su sede: el vigilante ve lo de su garita; el administrador de Seguridad, el jefe de Seguridad y el gerente de la sede ven las actas, las diferencias y las fotos de su sede; y quien ve la carga en el sistema ve la copia de sus facturas. Cuando algo necesita atención, el sistema le crea al gerente una tarea, que puede llegarle por correo según su preferencia.
+
+Para funcionar, la app usa estos proveedores. Tratan los datos por cuenta de la empresa y no para fines propios:
+
+- Google LLC — Google Analytics para Firebase: mide qué pantallas se usan, identificadas por su nombre genérico y sin números ni datos de las actas. Recibe un identificador de instalación de la app y datos técnicos del teléfono. No recibe nombres, placas, precintos, códigos escaneados ni fotos.
+
+- Google LLC — Play Integrity API: al dar de alta el teléfono y al iniciar sesión, verifica que la app es la original y que el teléfono no está alterado. Recibe información técnica del teléfono y de la app.
+
+- Functional Software, Inc. (Sentry), Estados Unidos: recibe los reportes técnicos cuando la app falla: el error, la versión de la app y de Android, el modelo del teléfono y el servidor al que estaba conectada. Nunca incluyen el nombre ni el usuario del vigilante, capturas de pantalla, el contenido de las actas, las fotos ni los códigos escaneados.
+
+Algunos de estos proveedores procesan datos fuera de Venezuela, principalmente en los Estados Unidos.
+
+Fuera de eso, los datos solo se entregan a terceros cuando lo exija una autoridad competente conforme a la ley.
+
+El sitio web. Esta política habla de la app. El sitio zentrix.company, desde el que probablemente la estás leyendo, no muestra publicidad y solo mide las visitas con Google Analytics si la persona lo acepta en el aviso de cookies; sin ese permiso no pone cookies ni carga nada de Google. Qué se mide y cómo retirar el permiso está en [Cookies y analítica](https://zentrix.company/privacidad/#cookies). Como cualquier sitio, lo sirve un proveedor de alojamiento (GitHub, con Cloudflare delante), que ve la dirección IP de la conexión para poder entregar la página.
+
+### 7. Acceso, corrección y eliminación
+
+Cualquier persona cuyos datos pasen por Zentrix Check, sea vigilante o no, puede pedir ver, corregir o eliminar sus datos. Para eso, escribe a [soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Solicitud%20de%20datos%20%E2%80%94%20Zentrix%20Check) con el asunto Solicitud de datos — Zentrix Check y los datos necesarios para identificarte. El vigilante también puede pedírselo al administrador de Seguridad.
+
+Eliminar la cuenta. La app no permite crear cuentas, así que tampoco se eliminan desde ella: las crea y las cierra la empresa. Cuando un vigilante pide cerrar su cuenta, o deja la empresa, se le retira el acceso y se eliminan sus datos personales que no haga falta conservar. Las actas que firmó se conservan, porque son el registro de lo que entró y salió de la empresa; un error en ellas se corrige con una nota, no reescribiéndolas.
+
+Respondemos en un máximo de 30 días hábiles. Si algo no se puede eliminar por una obligación legal, contable o fiscal, o por un reclamo o una investigación en curso, te decimos el motivo y el plazo.
+
+Salir del teléfono, olvidar el PIN o desinstalar la app no elimina nada del servidor. Solo retira la sesión del teléfono. Para eliminar datos hay que usar el canal de arriba.
+
+### 8. Menores de edad
+
+Zentrix Check es una herramienta de trabajo para personas adultas (18 años o más) que trabajan en la seguridad de la empresa. No está dirigida a menores de edad y no recoge a sabiendas datos de menores. La app indica que nunca se fotografíe a menores de edad.
+
+### 9. Seguridad
+
+- Toda la comunicación con los servidores de la empresa va cifrada (HTTPS/TLS).
+
+- Cada teléfono queda sellado a una sede con una llave propia; el servidor guarda solo su huella, no la llave.
+
+- La sesión, la llave del teléfono y el PIN se guardan en el almacén seguro de Android (Keystore). El PIN se guarda con un hash y no sale del teléfono.
+
+- Lo pendiente por enviar se guarda cifrado (AES-256) en el teléfono.
+
+- Cada evento lleva la huella del anterior y cada foto su huella SHA-256: si alguien altera un acta o una foto, se nota.
+
+- En las pantallas del PIN, la contraseña y el visor de fotos no se pueden hacer capturas de pantalla.
+
+- En cada operación, el servidor comprueba quién es el vigilante, desde qué teléfono y en qué sede. Lo que diga el teléfono no alcanza.
+
+- El acceso de un vigilante o de un teléfono se puede retirar en cualquier momento. Al revocar un teléfono, la app borra lo que guardaba.
+
+Ninguna medida de seguridad es absoluta, y trabajamos de forma continua en mejorarlas.
+
+### 10. Cambios en esta política
+
+Si cambian los datos que trata la app, esta página se actualizará y cambiará la fecha del principio. Los cambios importantes se avisarán también al personal de seguridad por los canales internos de la empresa.
+
+### 11. Contacto
+
+GUUAO LLC [soporte@zentrix.company](mailto:soporte@zentrix.company)
+
+
+---
+
+## [Términos de uso — Zentrix Check](https://zentrix.company/check/terminos/)
+
+Términos de uso de Zentrix Check, la app Android de la garita: quién puede usarla, cómo se da la cuenta del vigilante y qué reglas aplican a las actas.
+
+Legal
+
+### Términos de uso de Zentrix Check
+
+Última actualización: 16 de octubre de 2026.
+
+### 1. Qué es y quién la ofrece
+
+Zentrix Check es la herramienta de trabajo interna del personal de seguridad de la empresa que la usa (en adelante, «la empresa»), provista por GUUAO LLC. Al usarla aceptas estos términos. La relación de trabajo se rige por tu contrato, o por el de la contratista de seguridad para la que trabajas, y por la ley laboral; estos términos solo tratan del uso de la app.
+
+### 2. Quién puede usarla
+
+Solo personas mayores de edad a las que la empresa les haya dado una cuenta de vigilante o de administrador de Seguridad. La app no permite registrarse. Cada teléfono se da de alta con un código QR que lo sella a una sede, y el servidor comprueba en cada operación quién eres, desde qué teléfono y en qué sede.
+
+### 3. Tu cuenta, tu contraseña y tu PIN
+
+Tu cuenta es personal e intransferible. Tu PIN es tu firma: cada acta que cierras queda firmada a tu nombre. No compartas tu contraseña ni tu PIN, no dejes que otra persona trabaje con tu perfil y sal del teléfono cuando termines. Si crees que alguien usó tu cuenta, o si el teléfono de la garita se pierde, avisa de inmediato al administrador de Seguridad o escribe a [soporte@zentrix.company](mailto:soporte@zentrix.company).
+
+### 4. Uso permitido
+
+- Usa la app solo para el control de la garita de la empresa: salidas, recepciones, movimientos, llaves, activos y novedades.
+
+- Registra lo que ves de verdad. Confirmar un conteo, una placa o un precinto sin comprobarlo es una falta grave.
+
+- Fotografía cosas, no personas. Nunca fotografíes a menores de edad. No escribas nombres ni cédulas en las novedades.
+
+- Lo que ves en la app (placas, choferes, facturas, cargas y fotos) es confidencial. No lo copies, no le hagas captura, no lo compartas y no lo uses fuera de tu trabajo en la garita.
+
+- No intentes saltarte los controles de la app ni del servidor, ni usar la app en una sede o un teléfono que no te corresponden.
+
+### 5. Las actas no se cambian
+
+Un acta firmada es definitiva: ni tú, ni el administrador, ni nadie en la oficina puede reescribirla. Si te equivocaste, la corrección se agrega como una nota con su motivo, y el original se conserva. La app no valida inventario ni contabilidad: deja constancia de lo que comprobaste, y las decisiones sobre la mercancía las toma la empresa.
+
+### 6. El servidor manda
+
+La app muestra lo que decide el sistema de la empresa. Si el servidor rechaza una operación, la app te muestra el motivo tal como llega y no lo esquiva. Sin señal, lo que haces se guarda en el teléfono y se envía solo después; el servidor lo recibe en orden y lo verifica.
+
+### 7. El teléfono de la garita
+
+La app está pensada para el teléfono Android de la garita, que la empresa da de alta en una sede. El único permiso que pide es el de la cámara; sin él no puedes tomar las fotos de las actas. La empresa puede revocar un teléfono en cualquier momento, y entonces la app borra lo que tenía guardado.
+
+### 8. Disponibilidad y versiones
+
+Hacemos lo posible por que la app esté disponible, pero puede haber cortes, fallos o mantenimiento. La empresa puede exigir una versión mínima: si tu versión queda bloqueada, la app te lo dice y hay que actualizarla desde Google Play para seguir.
+
+### 9. Suspensión y fin del acceso
+
+La empresa puede suspender o cerrar tu acceso cuando termine tu relación de trabajo o tu asignación a la sede, si incumples estos términos o para proteger la seguridad de las instalaciones y de los datos. Qué pasa con tus datos después está en la [política de privacidad](https://zentrix.company/check/privacidad/).
+
+### 10. Propiedad intelectual
+
+La app, su diseño y su marca son de GUUAO LLC. Te damos permiso para usarlos solo mientras trabajes con la app y para lo descrito aquí.
+
+### 11. Privacidad
+
+Qué datos registra la app y para qué está en la [política de privacidad](https://zentrix.company/check/privacidad/), que forma parte de estos términos.
+
+### 12. Responsabilidad
+
+La app se ofrece como herramienta de trabajo, en el estado en que se encuentra. En la medida en que la ley lo permita, GUUAO LLC no responde por daños indirectos derivados de fallos de la app, del teléfono o de la red. Nada de esto limita los derechos que te da la ley laboral.
+
+### 13. Cambios
+
+Podemos actualizar estos términos. La versión vigente es la publicada en esta página, con su fecha al principio. Los cambios importantes se avisarán por los canales internos de la empresa.
+
+### 14. Ley aplicable
+
+Estos términos se rigen por las leyes de la República Bolivariana de Venezuela. Primero intentaremos resolver cualquier diferencia de forma amistosa, escribiendo a [soporte@zentrix.company](mailto:soporte@zentrix.company). Si no hay acuerdo en 30 días continuos, la controversia irá a los tribunales competentes de Venezuela. Los conflictos derivados de la relación de trabajo se rigen por la ley laboral.
+
+### 15. Contacto
+
+GUUAO LLC [soporte@zentrix.company](mailto:soporte@zentrix.company)
 
 
 ---
@@ -7616,12 +9707,14 @@ Cada app tiene su propia política de privacidad y sus términos, porque cada un
 
 - [Zentrix Work Qué recoge la app del equipo de tienda, para qué y por cuánto tiempo. →](https://zentrix.company/work/privacidad/)
 - [Zentrix Sales Qué recoge la app de fuerza de ventas, para qué y por cuánto tiempo. →](https://zentrix.company/sales/privacidad/)
+- [Zentrix Check Qué registra la app de la garita, para qué y quién lo ve. →](https://zentrix.company/check/privacidad/)
 - [Sitio web y cookies Qué mide zentrix.company, con consentimiento, y cómo retirarlo. →](https://zentrix.company/privacidad/)
 
 ### Términos
 
 - [Zentrix Work Términos de uso de la app. →](https://zentrix.company/work/terminos/)
 - [Zentrix Sales Términos de servicio de la app. →](https://zentrix.company/sales/terminos/)
+- [Zentrix Check Términos de uso de la app. →](https://zentrix.company/check/terminos/)
 
 ### Tus datos
 
@@ -7630,6 +9723,8 @@ Para ver, corregir o eliminar tu cuenta o tus datos de una app, sigue las instru
 - [Eliminar tu cuenta de Zentrix Work](https://zentrix.company/soporte/#eliminar-cuenta-work)
 
 - [Eliminar tu cuenta de Zentrix Sales](https://zentrix.company/soporte/#eliminar-cuenta-sales)
+
+- [Eliminar tu cuenta de Zentrix Check](https://zentrix.company/soporte/#eliminar-cuenta-check)
 
 
 ---
@@ -8217,6 +10312,7 @@ Buscar en el sitio Buscar
 
 - Work
 - Sales
+- Check
 - AI
 - Logistics
 - Cloud
@@ -8224,7 +10320,7 @@ Buscar en el sitio Buscar
 - Software
 - [Traza (se abre en otra pestaña)](https://traza.technology)
 
-Eliminar tu cuenta: Zentrix Work · Eliminar tu cuenta: Zentrix Sales
+Eliminar tu cuenta: Zentrix Work · Eliminar tu cuenta: Zentrix Sales · Eliminar tu cuenta: Zentrix Check
 
 ### Zentrix Work
 El equipo de tienda · [Zentrix Work →](https://zentrix.company/work/)
@@ -8340,6 +10436,66 @@ Tiempo de respuesta
 Menos de un día hábil.
 Documentos
 [Política de privacidad](https://zentrix.company/sales/privacidad/) · [Términos de servicio](https://zentrix.company/sales/terminos/) · [Manual del vendedor](https://zentrix.company/sales/docs/)
+
+### Zentrix Check
+La garita de seguridad · [Zentrix Check →](https://zentrix.company/check/)
+
+Para casi todo, tu primer contacto es el administrador de Seguridad de tu empresa: es quien da de alta el teléfono de la garita, crea tu cuenta y te da tu contraseña. Para lo demás, escríbenos.
+
+[soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Soporte%20%E2%80%94%20Zentrix%20Check)
+
+Pon en el asunto Soporte — Zentrix Check y cuéntanos tu usuario, tu sede y qué pasó. No nos mandes capturas de actas, placas, facturas ni datos de personas.
+
+### Preguntas rápidas
+
+### No tengo cuenta. ¿Cómo entro?
+No hay registro: la app es solo para el personal de seguridad de las empresas que usan Zentrix Check. La cuenta te la crea el administrador de Seguridad de tu empresa, con la sede donde trabajas.
+
+### ¿Cómo se da de alta el teléfono de la garita?
+Con un código QR que el administrador genera en el sistema de la empresa. Al leerlo, el teléfono queda sellado a esa sede. Sin ese código la app no hace nada.
+
+### Olvidé mi PIN
+En la pantalla del PIN, toca Olvidé mi PIN. Vuelves a entrar con tu usuario y tu contraseña y creas un PIN nuevo.
+
+### Olvidé mi contraseña
+En la pantalla de entrada, toca Olvidé mi contraseña: te la da el administrador de Seguridad. La contraseña no se cambia desde el teléfono.
+
+### No hay señal en la garita
+Sigue trabajando: lo que haces se guarda cifrado en el teléfono y se envía solo cuando vuelve la señal, sin duplicados. La app te dice cuántas cosas faltan por enviar. Lo único que necesita señal es traer lo que dice el sistema de una carga nueva.
+
+### Se perdió o se dañó el teléfono de la garita
+Avísale de inmediato al administrador de Seguridad: puede revocar el teléfono, y la app borra lo que guardaba en cuanto vuelve a conectarse. El teléfono nuevo se da de alta con otro código QR.
+
+### Dejé de trabajar en la empresa o en esa sede
+Tu acceso se cierra desde el sistema de la empresa. Las actas que firmaste se conservan, porque son el registro de lo que pasó en la garita. Para pedir el acceso o la eliminación de tus datos personales, mira eliminar tu cuenta o tus datos.
+
+### Eliminar tu cuenta o tus datos — Zentrix Check
+
+La app no permite crear cuentas, así que tampoco se borran desde ella: la cuenta la crea y la cierra tu empresa. Para pedir el acceso, la corrección o la eliminación de tus datos:
+
+- Escribe a [soporte@zentrix.company](mailto:soporte@zentrix.company?subject=Solicitud%20de%20datos%20%E2%80%94%20Zentrix%20Check) con el asunto Solicitud de datos — Zentrix Check, o díselo al administrador de Seguridad.
+
+- Indica tu nombre, tu usuario y tu sede (o, si no usas la app, en qué garita y en qué fecha pasó tu vehículo o tu carga), y si quieres ver, corregir o eliminar tus datos.
+
+- Te respondemos en un máximo de 30 días hábiles.
+
+Lo que se borra, lo que se conserva por obligación legal y por cuánto tiempo está en la [política de privacidad, cláusula 7](https://zentrix.company/check/privacidad/#c7). Salir del teléfono o desinstalar la app no borra nada del servidor, y las actas firmadas no se pueden cambiar: si un dato está mal, se corrige con una nota.
+
+### Manual
+
+El [manual del vigilante](https://zentrix.company/check/docs/) explica paso a paso el alta del teléfono, la salida de un camión, las recepciones, las llaves, los activos y qué hacer sin señal.
+
+### Datos de la app
+Aplicación
+Zentrix Check (com.leiros.check), solo para Android.
+Descarga
+Google Play (próximamente)
+Responsable
+GUUAO LLC
+Correo de soporte
+[soporte@zentrix.company](mailto:soporte@zentrix.company)
+Documentos
+[Política de privacidad](https://zentrix.company/check/privacidad/) · [Términos de uso](https://zentrix.company/check/terminos/) · [Manual](https://zentrix.company/check/docs/)
 
 Resto de la suite
 

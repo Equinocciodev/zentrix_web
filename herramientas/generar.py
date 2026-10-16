@@ -1012,7 +1012,7 @@ def pag_legal(lang):
 CAPS_CHECK_EN = [('entrar', 'Signing in'), ('encender', 'Clocking in and out'), ('hoy', 'The Today screen'),
                  ('salida', 'A truck leaving'), ('recepcion', 'Receipts and route returns'),
                  ('sin-documento', 'Movements without paperwork'), ('llaves', 'Keys'), ('activos', 'Assets and passes'),
-                 ('novedades', 'Incidents and decisions'), ('sin-senal', 'Working without a signal'),
+                 ('novedades', 'Incidents and calls'), ('sin-senal', 'Working without a signal'),
                  ('administrador', 'The administrator console'), ('dudas', 'Questions')]
 
 
