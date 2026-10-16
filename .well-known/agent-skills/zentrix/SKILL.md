@@ -1,6 +1,6 @@
 ---
 name: zentrix
-description: Find accurate, current public information about Zentrix (zentrix.company): products, solutions, user manuals, support and contact, and which official pages to cite.
+description: Find accurate, current public information about Zentrix (zentrix.company): products, solutions, user documentation, support and contact, and which official pages to cite.
 ---
 
 # Zentrix: public information for agents
@@ -32,7 +32,7 @@ The whole site is in Spanish and English: Spanish at the root, English under `ht
 - **Zentrix Software**: Odoo® implementation. https://zentrix.company/software/
 - **Traza**: A Zentrix® product. https://traza.technology
 
-User manuals: Zentrix Work at https://zentrix.company/work/docs/, Zentrix Sales at https://zentrix.company/sales/docs/ and Zentrix Check at https://zentrix.company/check/docs/ (English: https://zentrix.company/en/work/docs/, https://zentrix.company/en/sales/docs/ and https://zentrix.company/en/check/docs/).
+User documentation: Zentrix Work at https://zentrix.company/work/docs/, Zentrix Sales at https://zentrix.company/sales/docs/ and Zentrix Check at https://zentrix.company/check/docs/ (English: https://zentrix.company/en/work/docs/, https://zentrix.company/en/sales/docs/ and https://zentrix.company/en/check/docs/).
 Support center for every app, including how to delete a Zentrix Work, Zentrix Sales or Zentrix Check account:
 https://zentrix.company/soporte/ (English: https://zentrix.company/en/support/). Privacy policies and terms of each app: https://zentrix.company/legal/.
 

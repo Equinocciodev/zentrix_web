@@ -109,10 +109,10 @@ PAGINAS = {
                    'Clientes — Casos en distribución y comercio | Zentrix',
                    'Grupo Leiros y GUUAO usan las apps de Zentrix cada día en distribución y comercio en '
                    'Venezuela. Conoce sus casos y las empresas que nos acompañan.'),
-    '/recursos/': ('manuales y documentación de Zentrix',
-                   'Recursos — Manuales, soporte y documentación | Zentrix',
-                   'Manuales de Zentrix Work y Zentrix Sales, soporte, privacidad y términos de cada app, '
-                   'y documentación para desarrolladores y modelos de IA, en un solo lugar.'),
+    '/recursos/': ('documentación de Zentrix',
+                   'Recursos — Documentación, soporte y legal | Zentrix',
+                   'Documentación de Zentrix Work, Sales y Check, soporte, privacidad y términos de cada app, '
+                   'y archivos para desarrolladores y modelos de IA, en un solo lugar.'),
     '/nosotros/': ('empresa de software en Isla Margarita, Venezuela',
                    'Nosotros — Ingeniería en Isla Margarita | Zentrix', None),
     '/contacto/': ('contacto Zentrix',
@@ -121,8 +121,8 @@ PAGINAS = {
                    'soporte@zentrix.company por soporte, o por WhatsApp. Te responde una persona.'),
     '/soporte/': ('soporte Zentrix',
                   'Soporte — Preguntas, acceso y tus datos | Zentrix',
-                  'Soporte de Zentrix Work y Zentrix Sales: preguntas frecuentes, acceso, manuales y cómo '
-                  'eliminar tu cuenta o tus datos. Te responde una persona en un día hábil.'),
+                  'Soporte de Zentrix Work, Sales y Check: preguntas frecuentes, acceso, documentación y cómo '
+                  'eliminar tu cuenta o tus datos. Te responde una persona.'),
     '/legal/': (None, 'Legal — Privacidad y términos | Zentrix',
                 'Las políticas de privacidad y los términos de Zentrix Work y Zentrix Sales, y la privacidad '
                 'y las cookies del sitio web zentrix.company, en un solo índice.'),
@@ -142,8 +142,8 @@ PAGINAS = {
     '/en/sales/terms/': (None, 'Terms of service — Zentrix Sales',
                              'Terms of service of Zentrix Sales, the field sales app for Android and iPhone: who '
                              'contracts it, who uses it every day and which rules apply.'),
-    '/check/docs/': ('manual del vigilante de garita',
-                     'Manual del vigilante — Zentrix Check',
+    '/check/docs/': ('documentación para el vigilante de garita',
+                     'Documentación para el vigilante — Zentrix Check',
                      'Cómo se usa Zentrix Check en la garita, pantalla a pantalla: entrar, sacar un camión, '
                      'recibir mercancía, llaves, activos, novedades y trabajar sin señal.'),
     '/check/docs/entrar.html': (None, None,
@@ -184,9 +184,9 @@ PAGINAS = {
     '/work/terminos/': (None, 'Términos de uso — Zentrix Work',
                         'Términos de uso de Zentrix Work, la app Android del equipo de tienda: quién puede '
                         'usarla, cómo se da la cuenta de operador y qué reglas aplican.'),
-    # Manuales: palabras clave de cola larga, sin pisar a las páginas de producto
-    '/sales/docs/': ('manual de app para vendedores',
-                     'Manual del vendedor — Zentrix Sales',
+    # Documentación: palabras clave de cola larga, sin pisar a las páginas de producto
+    '/sales/docs/': ('documentación de app para vendedores',
+                     'Documentación para el vendedor — Zentrix Sales',
                      None),
     '/sales/docs/catalogo.html': ('catálogo de productos en la app de ventas', None,
                                   'Buscar un producto en Zentrix Sales por nombre, código o código de barras, '
@@ -209,8 +209,8 @@ PAGINAS = {
     '/sales/docs/visita.html': ('visita al cliente paso a paso', None,
                                 'Los ocho pasos de una visita en Zentrix Sales: check-in, inventario, pedido, '
                                 'fotos, devoluciones, notas, firma y check-out, con lo que conviene saber.'),
-    '/work/docs/': ('manual del operador de tienda',
-                    'Manual del operador — Zentrix Work',
+    '/work/docs/': ('documentación para el operador de tienda',
+                    'Documentación para el operador — Zentrix Work',
                     'Cómo se usa Zentrix Work en la tienda, pantalla a pantalla: entrar, encender '
                     'el turno, atender la llamada, preparar, entregar, repartir o recibir devoluciones.'),
     '/work/docs/ajustes.html': (None, None,
@@ -248,9 +248,9 @@ PAGINAS.update({
     '/en/check/': ('gate and access control app',
         'Zentrix Check — Security gate and access control app',
         'Zentrix Check, the Android app for the security gate: guards check every truck against Odoo®, take photos and sign a record that cannot be changed.'),
-    '/en/check/docs/': ('Zentrix Check manual',
-        'Zentrix Check manual — Step by step for security guards',
-        'The Zentrix Check manual for security guards, screen by screen: signing in, trucks leaving, receipts, keys, assets, incidents and working without a signal.'),
+    '/en/check/docs/': ('Zentrix Check documentation',
+        'Zentrix Check documentation — For security guards',
+        'The Zentrix Check documentation for security guards, screen by screen: signing in, trucks leaving, receipts, keys, assets, incidents and working offline.'),
     '/en/check/privacy/': (None,
         'Privacy policy — Zentrix Check',
         'What the Zentrix Check gate app records, why, who sees it and how it is protected, and how to ask for access to your data, its correction or its deletion.'),
@@ -299,21 +299,21 @@ PAGINAS.update({
     '/en/customers/': ('Zentrix customers',
         'Customers and case studies | Zentrix',
         'Grupo Leiros and GUUAO run on Zentrix apps every day, in stores, on the street and in the office. Meet the companies and institutions we work alongside.'),
-    '/en/resources/': ('Zentrix manuals and support',
-        'Resources: manuals, support and legal | Zentrix',
-        'Zentrix Work and Zentrix Sales manuals, support pages, privacy policies and terms for every app, plus llms.txt and the sitemap for developers and AI.'),
+    '/en/resources/': ('Zentrix documentation and support',
+        'Resources: documentation, support and legal | Zentrix',
+        'Zentrix Work and Zentrix Sales documentation, support pages, privacy policies and terms for every app, plus llms.txt and the sitemap for developers and AI.'),
     '/en/about/': ('software company Isla Margarita',
         'About Zentrix — Engineering team in Venezuela',
         'Zentrix is the new brand of Equinoccio (EQNIO), an engineering, AI and product team on Isla Margarita, Venezuela, working with clients across the Americas.'),
     '/en/contact/': ('contact Zentrix',
         'Contact Zentrix — A person replies in one day',
         'Write to hola@zentrix.company for projects and demos, soporte@zentrix.company for support, or use WhatsApp. A person replies within one business day.'),
-    '/en/work/docs/': ('Zentrix Work manual',
-        'Zentrix Work manual — Step by step for store teams',
-        'The Zentrix Work manual for store teams, step by step: signing in, your shift, picking orders with the scanner, delivery runs, returns and settings.'),
-    '/en/sales/docs/': ('Zentrix Sales manual',
-        'Zentrix Sales manual — Step by step for field reps',
-        'The Zentrix Sales manual for field reps, screen by screen: your route, the visit, orders, collections, invoices and working without a signal or internet.'),
+    '/en/work/docs/': ('Zentrix Work documentation',
+        'Zentrix Work documentation — For store teams',
+        'The Zentrix Work documentation for store teams, step by step: signing in, your shift, picking orders with the scanner, delivery runs, returns and settings.'),
+    '/en/sales/docs/': ('Zentrix Sales documentation',
+        'Zentrix Sales documentation — For field reps',
+        'The Zentrix Sales documentation for field reps, screen by screen: your route, the visit, orders, collections, invoices and working without a signal or internet.'),
     '/en/work/privacy/': (None,
         'Privacy policy — Zentrix Work',
         'What the Zentrix Work app collects, why, who sees it and for how long, how it is protected, and how to ask for access to your data or for its deletion.'),
@@ -322,7 +322,7 @@ PAGINAS.update({
         'The terms of use of the Zentrix Work app for store staff: what it is for, what you agree to when using it, the data involved and who provides the app.'),
     '/en/support/': ('Zentrix support',
         'Support — Questions, access and your data | Zentrix',
-        'Zentrix Work and Zentrix Sales support: common questions, access, manuals and how to delete your account or your data. A person replies within one business day.'),
+        'Zentrix Work, Sales and Check support: common questions, access, documentation and how to delete your account or your data. A person replies within a day.'),
     '/en/legal/': (None,
         'Legal — Privacy and terms | Zentrix',
         'The privacy policies and terms of Zentrix Work and Zentrix Sales, plus the privacy and cookie policy of the zentrix.company website, in one index.'),
@@ -415,17 +415,17 @@ def organizacion():
 
 
 NOMBRES_SECCION = {
-    'es': {'work': ('Zentrix Work', 'Manual del operador'), 'sales': ('Zentrix Sales', 'Manual del vendedor'),
-           'check': ('Zentrix Check', 'Manual del vigilante'),
+    'es': {'work': ('Zentrix Work', 'Documentación para el operador'), 'sales': ('Zentrix Sales', 'Documentación para el vendedor'),
+           'check': ('Zentrix Check', 'Documentación para el vigilante'),
            'soluciones': ('Soluciones', None)},
-    'en': {'work': ('Zentrix Work', 'Operator manual'), 'sales': ('Zentrix Sales', 'Sales rep manual'),
-           'check': ('Zentrix Check', 'Guard manual'),
+    'en': {'work': ('Zentrix Work', 'Operator documentation'), 'sales': ('Zentrix Sales', 'Sales rep documentation'),
+           'check': ('Zentrix Check', 'Guard documentation'),
            'solutions': ('Solutions', None)},
 }
 
 
 def migas(ruta, nombre_pagina, lang):
-    """Inicio › sección › (manual) › página, según la ruta."""
+    """Inicio › sección › (documentación) › página, según la ruta."""
     if ruta.startswith('/sales/en/'):  # inglés antiguo de Zentrix Sales
         items = [('Home', '/'), ('Zentrix Sales', '/sales/en/')]
     else:
@@ -546,7 +546,7 @@ def jsonld(ruta, titulo, descripcion, cuerpo, lang):
                       'description': descripcion, 'about': {'@id': ORG_ID}})
     prod_manual = re.match(r'^/(work|sales|check)/docs/', plantilla)
     if prod_manual:
-        # Manuales (portada y capítulos) en los dos idiomas: artículo técnico con su idioma.
+        # Documentación (portada y capítulos) en los dos idiomas: artículo técnico con su idioma.
         clave = prod_manual.group(1)
         app, manual = NOMBRES_SECCION[lang][clave]
         raiz = ('/en' if lang == 'en' else '') + f'/{clave}/docs/'

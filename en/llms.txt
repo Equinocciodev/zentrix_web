@@ -30,7 +30,7 @@ Slogan: «Technology to work better». eqnio.com redirects to zentrix.company. S
 
 - [About Zentrix and the team](https://zentrix.company/en/about/): founded in 2024 as Equinoccio, based on Isla Margarita, Venezuela
 - [Customers](https://zentrix.company/en/customers/): Grupo Leiros and GUUAO, where our apps run every day
-- [Resources](https://zentrix.company/en/resources/): manuals, support, privacy and terms of each product
+- [Resources](https://zentrix.company/en/resources/): documentation, support, privacy and terms of each product
 
 ## Team
 
@@ -46,16 +46,16 @@ Slogan: «Technology to work better». eqnio.com redirects to zentrix.company. S
 ## Contact
 
 - [Contact page](https://zentrix.company/en/contact/): a person replies in under one business day; pick a reason (sales or demo, app support, partnerships, press)
-- [Support center](https://zentrix.company/en/support/): common questions, access, manuals and how to delete a Zentrix Work, Zentrix Sales or Zentrix Check account ([Zentrix Work](https://zentrix.company/en/support/#delete-account-work), [Zentrix Sales](https://zentrix.company/en/support/#delete-account-sales), [Zentrix Check](https://zentrix.company/en/support/#delete-account-check))
+- [Support center](https://zentrix.company/en/support/): common questions, access, documentation and how to delete a Zentrix Work, Zentrix Sales or Zentrix Check account ([Zentrix Work](https://zentrix.company/en/support/#delete-account-work), [Zentrix Sales](https://zentrix.company/en/support/#delete-account-sales), [Zentrix Check](https://zentrix.company/en/support/#delete-account-check))
 - [Projects and demos: hola@zentrix.company](mailto:hola@zentrix.company)
 - [Support: soporte@zentrix.company](mailto:soporte@zentrix.company)
 - [WhatsApp +58 412-346 9712](https://wa.me/584123469712)
 
-## Manuals
+## Documentation
 
-- [Zentrix Work operator manual](https://zentrix.company/en/work/docs/): shifts, orders, picking, delivery, delivery runs and returns
-- [Zentrix Sales rep manual](https://zentrix.company/en/sales/docs/): route, visits, orders, collections and working offline
-- [Zentrix Check guard manual](https://zentrix.company/en/check/docs/): trucks leaving, receipts, keys, assets, incidents and working without a signal
+- [Zentrix Work operator documentation](https://zentrix.company/en/work/docs/): shifts, orders, picking, delivery, delivery runs and returns
+- [Zentrix Sales rep documentation](https://zentrix.company/en/sales/docs/): route, visits, orders, collections and working offline
+- [Zentrix Check guard documentation](https://zentrix.company/en/check/docs/): trucks leaving, receipts, keys, assets, incidents and working without a signal
 
 ## Optional
 
@@ -86,7 +86,7 @@ Slogan: «Technology to work better». eqnio.com redirects to zentrix.company. S
 - [Talking to the office — Zentrix Sales](https://zentrix.company/en/sales/docs/conversacion.html)
 - [Quick answers — Zentrix Sales](https://zentrix.company/en/sales/docs/dudas.html)
 - [Signing in and syncing — Zentrix Sales](https://zentrix.company/en/sales/docs/entrar.html)
-- [Invoices and what customers owe — Zentrix Sales](https://zentrix.company/en/sales/docs/facturas.html)
+- [Invoices and what’s owed — Zentrix Sales](https://zentrix.company/en/sales/docs/facturas.html)
 - [Your Home screen — Zentrix Sales](https://zentrix.company/en/sales/docs/inicio.html)
 - [Today’s route — Zentrix Sales](https://zentrix.company/en/sales/docs/ruta.html)
 - [Working offline — Zentrix Sales](https://zentrix.company/en/sales/docs/sin-internet.html)

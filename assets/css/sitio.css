@@ -637,6 +637,8 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .producto-barra--fina { position: sticky; top: 64px; z-index: 4; background: rgba(245, 247, 250, .92); -webkit-backdrop-filter: saturate(1.6) blur(14px); backdrop-filter: saturate(1.6) blur(14px); }
 .producto-barra--fina .envoltura { min-height: 44px; flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scrollbar-width: none; }
 .producto-barra--fina .envoltura::-webkit-scrollbar { display: none; }
+/* «Documentación» es más larga que «Manual»: en móvil la barra fina cabe sin desplazarse. */
+@media (max-width: 480px) { .producto-barra--fina ul { gap: 0; } .producto-barra--fina a { padding: 0 5px; } .producto-barra--fina li:first-child a { padding-left: 10px; } }
 .producto-barra--fina ul { flex-wrap: nowrap; margin-left: -10px; }
 .producto-barra--fina a { min-height: 44px; font-size: .875rem; white-space: nowrap; }
 .logo { text-decoration: none; color: inherit; }

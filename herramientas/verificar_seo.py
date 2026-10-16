@@ -225,7 +225,7 @@ def validar_jsonld(pag, ruta, url):
     if ruta in APPS and 'SoftwareApplication' not in encontrados:
         errores.append('app sin SoftwareApplication')
     if re.match(r'^/(work|sales|check)/docs/', plantilla) and 'TechArticle' not in encontrados:
-        errores.append('manual sin TechArticle')
+        errores.append('documentación sin TechArticle')
     if plantilla in SOLUCIONES and 'Service' not in encontrados:
         errores.append('solución sin Service')
     return errores, encontrados

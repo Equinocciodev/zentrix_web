@@ -60,7 +60,7 @@ def idioma_de(ruta):
 
 
 def par(ruta):
-    """Ruta equivalente en el otro idioma. Los capítulos de los manuales tienen rutas espejo:
+    """Ruta equivalente en el otro idioma. Los capítulos de la documentación tienen rutas espejo:
     `/work/docs/turno.html` ↔ `/en/work/docs/turno.html` (mismo nombre de fichero y mismas anclas)."""
     if ruta in ES_A_EN:
         return ES_A_EN[ruta]
@@ -174,8 +174,8 @@ T = {
         'productos': 'Productos', 'soluciones': 'Soluciones', 'clientes': 'Clientes', 'recursos': 'Recursos',
         'nosotros': 'Nosotros', 'contacto': 'Contacto', 'legal': 'Legal y soporte', 'externo': ' (se abre en otra pestaña)',
         'lema': 'Tecnología para trabajar mejor.', 'suite': 'La suite de Zentrix',
-        'manual_work': 'Manual de Zentrix Work', 'manual_sales': 'Manual de Zentrix Sales',
-        'manual_check': 'Manual de Zentrix Check',
+        'manual_work': 'Documentación de Zentrix Work', 'manual_sales': 'Documentación de Zentrix Sales',
+        'manual_check': 'Documentación de Zentrix Check',
         'privacidad': 'Privacidad', 'soporte': 'Soporte', 'terminos': 'Términos', 'contacto_l': 'Contacto',
         'copy': '© 2026 Zentrix®. Todos los derechos reservados.', 'odoo': 'Odoo® conserva su marca y propiedad.',
         'idioma': 'Idioma', 'principal': 'Principal', 'menu': 'Menú', 'cerrar': 'Cerrar el menú',
@@ -193,8 +193,8 @@ T = {
         'productos': 'Products', 'soluciones': 'Solutions', 'clientes': 'Customers', 'recursos': 'Resources',
         'nosotros': 'About', 'contacto': 'Contact', 'legal': 'Legal and support', 'externo': ' (opens in a new tab)',
         'lema': 'Technology to work better.', 'suite': 'The Zentrix suite',
-        'manual_work': 'Zentrix Work manual', 'manual_sales': 'Zentrix Sales manual',
-        'manual_check': 'Zentrix Check manual',
+        'manual_work': 'Zentrix Work documentation', 'manual_sales': 'Zentrix Sales documentation',
+        'manual_check': 'Zentrix Check documentation',
         'privacidad': 'Privacy', 'soporte': 'Support', 'terminos': 'Terms', 'contacto_l': 'Contact',
         'copy': '© 2026 Zentrix®. All rights reserved.', 'odoo': 'Odoo® remains the property of its owner.',
         'idioma': 'Language', 'principal': 'Main', 'menu': 'Menu', 'cerrar': 'Close menu',

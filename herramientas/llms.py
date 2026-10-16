@@ -38,9 +38,9 @@ GRUPOS = [
     ('Productos', lambda r: r in PRODUCTOS),
     ('Soluciones', lambda r: r.startswith('/soluciones/')),
     ('English', lambda r: r.startswith('/sales/en/') or r.startswith('/en/')),
-    ('Manual de Zentrix Work', lambda r: r.startswith('/work/docs/')),
-    ('Manual de Zentrix Sales', lambda r: r.startswith('/sales/docs/')),
-    ('Manual de Zentrix Check', lambda r: r.startswith('/check/docs/')),
+    ('Documentación de Zentrix Work', lambda r: r.startswith('/work/docs/')),
+    ('Documentación de Zentrix Sales', lambda r: r.startswith('/sales/docs/')),
+    ('Documentación de Zentrix Check', lambda r: r.startswith('/check/docs/')),
     ('Legal, soporte y contacto', lambda r: True),
 ]
 

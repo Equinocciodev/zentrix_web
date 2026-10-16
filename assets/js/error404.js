@@ -99,7 +99,7 @@
     var out = [];
     var prod = primero(PROD), tema = primero(TEMA);
     if (prod === 'work' || prod === 'sales') {
-      // Un capítulo del manual con nombre parecido va primero (/sales/cobrar-viejo → cobrar.html).
+      // Un capítulo de la documentación con nombre parecido va primero (/sales/cobrar-viejo → cobrar.html).
       out = out.concat(mejores(function (r) { return r.indexOf('/' + prod + '/docs/') === 0 && /\.html$/.test(r); }, 1, .7));
       if (tema === 'docs') {
         out.push('/' + prod + '/docs/');

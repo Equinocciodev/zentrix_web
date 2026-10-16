@@ -38,7 +38,7 @@ CRAWLERS_IA = [
 SKILL_NOMBRE = 'zentrix'
 SKILL_RUTA = f'/.well-known/agent-skills/{SKILL_NOMBRE}/SKILL.md'
 SKILL_DESC = ('Find accurate, current public information about Zentrix (zentrix.company): products, '
-              'solutions, user manuals, support and contact, and which official pages to cite.')
+              'solutions, user documentation, support and contact, and which official pages to cite.')
 CATALOGO_RUTA = '/.well-known/ai-catalog.json'
 
 # <link> del <head> (equivalentes a las cabeceras Link que pone Cloudflare)
@@ -109,7 +109,7 @@ The whole site is in Spanish and English: Spanish at the root, English under `{D
 
 {productos}
 
-User manuals: Zentrix Work at {DOMINIO}/work/docs/, Zentrix Sales at {DOMINIO}/sales/docs/ and Zentrix Check at {DOMINIO}/check/docs/ (English: {DOMINIO}/en/work/docs/, {DOMINIO}/en/sales/docs/ and {DOMINIO}/en/check/docs/).
+User documentation: Zentrix Work at {DOMINIO}/work/docs/, Zentrix Sales at {DOMINIO}/sales/docs/ and Zentrix Check at {DOMINIO}/check/docs/ (English: {DOMINIO}/en/work/docs/, {DOMINIO}/en/sales/docs/ and {DOMINIO}/en/check/docs/).
 Support center for every app, including how to delete a Zentrix Work, Zentrix Sales or Zentrix Check account:
 {DOMINIO}/soporte/ (English: {DOMINIO}/en/support/). Privacy policies and terms of each app: {DOMINIO}/legal/.
 
@@ -150,7 +150,7 @@ def ai_catalog():
             'representativeQueries': [
                 'what does Zentrix do',
                 'how do I use Zentrix Work',
-                'Zentrix Sales user manual',
+                'Zentrix Sales user documentation',
                 'contact Zentrix support',
                 'Odoo implementation in Venezuela',
             ],

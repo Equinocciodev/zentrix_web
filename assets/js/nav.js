@@ -80,7 +80,7 @@
   var destino;
   try {
     var u = new URL(alterna.getAttribute('href'), location.href);
-    // Los capítulos de los manuales tienen las mismas anclas en los dos idiomas.
+    // Los capítulos de la documentación tienen las mismas anclas en los dos idiomas.
     destino = u.pathname + (/\/docs\//.test(u.pathname) ? location.hash : '');
   } catch (e) { return; }
   var pref = leer();

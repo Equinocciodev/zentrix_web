@@ -7,7 +7,7 @@ redirección, el sitemap y llms.txt.
     python3 herramientas/generar.py --check  # solo comprueba (sale con 1 si algo difiere)
     python3 herramientas/generar.py --pares  # lista pares ES/EN y huérfanos
 
-El resto de las páginas (productos, legales, manuales) se escriben a mano; de ellas el
+El resto de las páginas (productos, legales, documentación) se escriben a mano; de ellas el
 generador solo reescribe el `<nav class="nav">` de la cabecera, el pie y las etiquetas de
 idioma del `<head>`.
 """
@@ -30,6 +30,8 @@ RAIZ = pathlib.Path(__file__).resolve().parent.parent
 MULTI = (RAIZ / 'en' / 'index.html').exists()  # fase 3: el sitio completo en inglés bajo /en/
 SALIDA = {}  # ruta de fichero → contenido (páginas generadas)
 NAV_JS_V = 6
+SITIO_CSS_V = 24     # sube al cambiar assets/css/sitio.css
+BUSCADOR_JS_V = 3    # sube al cambiar assets/js/buscador.js
 ANALITICA_JS_V = 2   # sube al cambiar assets/js/analitica.js (aviso de cookies)
 
 # Inglés anterior a /en/: solo Zentrix Sales, en /sales/en/ (se usa mientras no haya MULTI)
@@ -186,7 +188,7 @@ def mega_recursos(lang):
                    it(Lx('/sales/docs/', lang), 'libro', t['manual_sales'], 'Step by step for field reps'),
                    it(Lx('/check/docs/', lang), 'libro', t['manual_check'], 'Step by step for security guards'),
                    it(Lx('/', lang) + 'llms.txt', 'documento', 'llms.txt', 'Zentrix explained for AI models')]
-        ayuda = [it(Lx('/soporte/', lang), 'ayuda', 'Support center', 'Questions, access, manuals and your data, for every app'),
+        ayuda = [it(Lx('/soporte/', lang), 'ayuda', 'Support center', 'Questions, access, documentation and your data, for every app'),
                  it(Lx('/contacto/', lang), 'correo', t['contacto'], 'A person replies within one business day')]
         legal = [it(Lx('/legal/#privacidad', lang), 'escudo', 'Privacy', 'The policy of each app and of the website'),
                  it(Lx('/legal/#terminos', lang), 'documento', 'Terms', 'The terms of each app')]
@@ -195,7 +197,7 @@ def mega_recursos(lang):
                    it('/sales/docs/', 'libro', t['manual_sales'], 'Paso a paso para el vendedor'),
                    it('/check/docs/', 'libro', t['manual_check'], 'Paso a paso para el vigilante'),
                    it('/llms.txt', 'documento', 'llms.txt', 'Zentrix explicado para modelos de IA')]
-        ayuda = [it('/soporte/', 'ayuda', 'Centro de soporte', 'Dudas, acceso, manuales y tus datos, de cada app'),
+        ayuda = [it('/soporte/', 'ayuda', 'Centro de soporte', 'Dudas, acceso, documentación y tus datos, de cada app'),
                  it('/contacto/', 'correo', t['contacto'], 'Te responde una persona en un día hábil')]
         legal = [it('/legal/#privacidad', 'escudo', 'Privacidad', 'La política de cada app y del sitio web'),
                  it('/legal/#terminos', 'documento', 'Términos', 'Los términos de cada app')]
@@ -314,6 +316,7 @@ def ajustar_head(s, ruta):
     if '/assets/js/nav.js' not in s:
         s = s.replace('</head>', f'  <script src="/assets/js/nav.js?v={NAV_JS_V}" defer></script>\n</head>', 1)
     s = re.sub(r'/assets/js/nav\.js\?v=\d+', f'/assets/js/nav.js?v={NAV_JS_V}', s)
+    s = re.sub(r'/assets/css/sitio\.css\?v=\d+', f'/assets/css/sitio.css?v={SITIO_CSS_V}', s)
     # Analítica con consentimiento (assets/js/analitica.js). Las redirecciones no pasan por aquí.
     if '/assets/js/analitica.js' not in s:
         grupo = ' data-grupo="error"' if ruta.endswith('404.html') else ''
@@ -323,7 +326,8 @@ def ajustar_head(s, ruta):
     if '/assets/css/buscador.css' not in s:
         s = s.replace('</head>', '  <link rel="stylesheet" href="/assets/css/buscador.css?v=2">\n</head>', 1)
     if '/assets/js/buscador.js' not in s:
-        s = s.replace('</head>', '  <script src="/assets/js/buscador.js?v=1" defer></script>\n</head>', 1)
+        s = s.replace('</head>', f'  <script src="/assets/js/buscador.js?v={BUSCADOR_JS_V}" defer></script>\n</head>', 1)
+    s = re.sub(r'/assets/js/buscador\.js\?v=\d+', f'/assets/js/buscador.js?v={BUSCADOR_JS_V}', s)
     return s
 
 
@@ -412,7 +416,7 @@ def pagina(ruta, titulo, descripcion, cuerpo, og='og.png', logo=None, css=()):
   <link rel="preload" href="/assets/fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/geist-var.woff2" as="font" type="font/woff2" crossorigin>
   <script>document.documentElement.classList.add('js')</script>
-  <link rel="stylesheet" href="/assets/css/sitio.css?v=23">
+  <link rel="stylesheet" href="/assets/css/sitio.css?v={SITIO_CSS_V}">
   <script src="/assets/js/sitio.js?v=1" defer></script>{''.join(f'{chr(10)}  <link rel="stylesheet" href="{c}">' for c in css)}
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Zentrix">
@@ -804,10 +808,10 @@ def pag_recursos(lang):
         return {'href': href, 'titulo': titulo, 'texto': texto, 'arte': arte, 'tono': tono}
     if en:
         grupos = [
-            ('manuales', 'Manuals', 'Learn to use the apps.', [
-                (Lx('/work/docs/', lang), 'libro', 'Zentrix Work manual', 'Shifts, orders, picking, delivery, returns and settings, for store teams.', f'{MONO}/work_icono.svg'),
-                (Lx('/sales/docs/', lang), 'libro', 'Zentrix Sales manual', 'Route, visits, orders, collections and working offline, for field reps.', f'{MONO}/sales_icono.svg'),
-                (Lx('/check/docs/', lang), 'libro', 'Zentrix Check manual', 'Trucks out, receipts, keys, assets, incidents and working offline, for security guards.', f'{MONO}/check_icono.svg')]),
+            ('manuales', 'Documentation', 'Learn to use the apps.', [
+                (Lx('/work/docs/', lang), 'libro', 'Zentrix Work documentation', 'Shifts, orders, picking, delivery, returns and settings, for store teams.', f'{MONO}/work_icono.svg'),
+                (Lx('/sales/docs/', lang), 'libro', 'Zentrix Sales documentation', 'Route, visits, orders, collections and working offline, for field reps.', f'{MONO}/sales_icono.svg'),
+                (Lx('/check/docs/', lang), 'libro', 'Zentrix Check documentation', 'Trucks out, receipts, keys, assets, incidents and working offline, for security guards.', f'{MONO}/check_icono.svg')]),
             ('soporte', 'Support', 'When something doesn’t work.', [
                 (Lx('/soporte/#work', lang), 'ayuda', 'Zentrix Work support', 'Access, common questions and how to delete your account.', None),
                 (Lx('/soporte/#sales', lang), 'ayuda', 'Zentrix Sales support', 'Access, common questions and how to delete your account.', None),
@@ -826,16 +830,16 @@ def pag_recursos(lang):
                 ('/sitemap.xml', 'documento', 'sitemap.xml', 'Every page on the site, in both languages.', None)]),
         ]
         h = heroe('Resources', 'Everything you need, in one place.',
-                  'Manuals, support, privacy and terms for every product, plus documentation for developers and AI models.',
-                  '<a class="boton boton--principal" href="#manuales-t">See the manuals</a>', arte_iconos(['libro', 'ayuda', 'escudo', 'documento']))
-        titulo, desc = 'Resources — Zentrix', 'Zentrix Work and Zentrix Sales manuals, support, privacy, terms and documentation for AI models.'
+                  'Documentation, support, privacy and terms for every product, plus machine-readable files for developers and AI models.',
+                  '<a class="boton boton--principal" href="#manuales-t">See the documentation</a>', arte_iconos(['libro', 'ayuda', 'escudo', 'documento']))
+        titulo, desc = 'Resources — Zentrix', 'Documentation for Zentrix Work, Zentrix Sales and Zentrix Check, support, privacy, terms and files for AI models.'
         ll = llamada(lang, 'Didn’t find what you were looking for?', 'Write to us and a person will help you within one business day.', 'Zentrix: question')
     else:
         grupos = [
-            ('manuales', 'Manuales', 'Aprende a usar las apps.', [
-                ('/work/docs/', 'libro', 'Manual de Zentrix Work', 'Turno, pedidos, preparación, entrega, devoluciones y ajustes, para el equipo de tienda.', f'{MONO}/work_icono.svg'),
-                ('/sales/docs/', 'libro', 'Manual de Zentrix Sales', 'Ruta, visitas, pedidos, cobranza y trabajo sin señal, para el vendedor.', f'{MONO}/sales_icono.svg'),
-                ('/check/docs/', 'libro', 'Manual de Zentrix Check', 'Salidas de camión, recepciones, llaves, activos, novedades y trabajo sin señal, para el vigilante.', f'{MONO}/check_icono.svg')]),
+            ('manuales', 'Documentación', 'Aprende a usar las apps.', [
+                ('/work/docs/', 'libro', 'Documentación de Zentrix Work', 'Turno, pedidos, preparación, entrega, devoluciones y ajustes, para el equipo de tienda.', f'{MONO}/work_icono.svg'),
+                ('/sales/docs/', 'libro', 'Documentación de Zentrix Sales', 'Ruta, visitas, pedidos, cobranza y trabajo sin señal, para el vendedor.', f'{MONO}/sales_icono.svg'),
+                ('/check/docs/', 'libro', 'Documentación de Zentrix Check', 'Salidas de camión, recepciones, llaves, activos, novedades y trabajo sin señal, para el vigilante.', f'{MONO}/check_icono.svg')]),
             ('soporte', 'Soporte', 'Cuando algo no funciona.', [
                 ('/soporte/#work', 'ayuda', 'Soporte de Zentrix Work', 'Acceso, dudas frecuentes y cómo eliminar tu cuenta.', None),
                 ('/soporte/#sales', 'ayuda', 'Soporte de Zentrix Sales', 'Acceso, dudas frecuentes y cómo eliminar tu cuenta.', None),
@@ -854,9 +858,9 @@ def pag_recursos(lang):
                 ('/sitemap.xml', 'documento', 'sitemap.xml', 'Todas las páginas del sitio.', None)]),
         ]
         h = heroe('Recursos', 'Todo lo que necesitas, en un lugar.',
-                  'Manuales, soporte, privacidad y términos de cada producto, y documentación para desarrolladores y modelos de IA.',
-                  '<a class="boton boton--principal" href="#manuales-t">Ver los manuales</a>', arte_iconos(['libro', 'ayuda', 'escudo', 'documento']))
-        titulo, desc = 'Recursos — Zentrix', 'Manuales de Zentrix Work y Zentrix Sales, soporte, privacidad, términos y documentación para modelos de IA.'
+                  'Documentación, soporte, privacidad y términos de cada producto, y archivos legibles por máquina para desarrolladores y modelos de IA.',
+                  '<a class="boton boton--principal" href="#manuales-t">Ver la documentación</a>', arte_iconos(['libro', 'ayuda', 'escudo', 'documento']))
+        titulo, desc = 'Recursos — Zentrix', 'Documentación de Zentrix Work, Zentrix Sales y Zentrix Check, soporte, privacidad, términos y archivos para modelos de IA.'
         ll = llamada(lang, '¿No encontraste lo que buscabas?', 'Escríbenos y te ayuda una persona en menos de un día hábil.', 'Zentrix: consulta')
     secciones = []
     for n, (gid, ante, h2, items) in enumerate(grupos):
@@ -990,10 +994,10 @@ def pag_soporte(lang):
     """Centro de soporte de toda la suite (herramientas/ayuda.py)."""
     ruta = ruta_pagina('/soporte/', lang)
     if lang == 'en':
-        titulo, desc = 'Support — Zentrix', ('Zentrix support: common questions, access, manuals and how to delete your '
+        titulo, desc = 'Support — Zentrix', ('Zentrix support: common questions, access, documentation and how to delete your '
                                               'Zentrix Work or Zentrix Sales account. A person replies within one business day.')
     else:
-        titulo, desc = 'Soporte — Zentrix', ('Soporte de Zentrix: preguntas frecuentes, acceso, manuales y cómo eliminar tu '
+        titulo, desc = 'Soporte — Zentrix', ('Soporte de Zentrix: preguntas frecuentes, acceso, documentación y cómo eliminar tu '
                                               'cuenta de Zentrix Work o Zentrix Sales. Te responde una persona en un día hábil.')
     return ruta, pagina(ruta, titulo, desc, ayuda.cuerpo_soporte(lang, sys.modules[__name__]), css=('/assets/css/ayuda.css?v=1',))
 
@@ -1108,7 +1112,7 @@ def ruta_de(f):
 
 # ── llms.txt (https://llmstxt.org; el sitemap lo escribe herramientas/sitemap.py) ──
 def capitulos(prod, lang='es'):
-    """(título, ruta) de los capítulos del manual en ese idioma, leídos del <title> de cada página."""
+    """(título, ruta) de los capítulos de la documentación en ese idioma, leídos del <title> de cada página."""
     pre = '/en' if lang == 'en' else ''
     out = []
     for f in sorted((RAIZ / pre.lstrip('/') / prod / 'docs').glob('*.html')):
@@ -1158,7 +1162,7 @@ Slogan: «Technology to work better». eqnio.com redirects to zentrix.company. S
 
 - [About Zentrix and the team]({u('/nosotros/')}): founded in 2024 as Equinoccio, based on Isla Margarita, Venezuela
 - [Customers]({u('/clientes/')}): Grupo Leiros and GUUAO, where our apps run every day
-- [Resources]({u('/recursos/')}): manuals, support, privacy and terms of each product
+- [Resources]({u('/recursos/')}): documentation, support, privacy and terms of each product
 
 ## Team
 
@@ -1167,16 +1171,16 @@ Slogan: «Technology to work better». eqnio.com redirects to zentrix.company. S
 ## Contact
 
 - [Contact page]({u('/contacto/')}): a person replies in under one business day; pick a reason (sales or demo, app support, partnerships, press)
-- [Support center]({u('/soporte/')}): common questions, access, manuals and how to delete a Zentrix Work, Zentrix Sales or Zentrix Check account ([Zentrix Work]({u('/soporte/#eliminar-cuenta-work')}), [Zentrix Sales]({u('/soporte/#eliminar-cuenta-sales')}), [Zentrix Check]({u('/soporte/#eliminar-cuenta-check')}))
+- [Support center]({u('/soporte/')}): common questions, access, documentation and how to delete a Zentrix Work, Zentrix Sales or Zentrix Check account ([Zentrix Work]({u('/soporte/#eliminar-cuenta-work')}), [Zentrix Sales]({u('/soporte/#eliminar-cuenta-sales')}), [Zentrix Check]({u('/soporte/#eliminar-cuenta-check')}))
 - [Projects and demos: hola@zentrix.company](mailto:hola@zentrix.company)
 - [Support: soporte@zentrix.company](mailto:soporte@zentrix.company)
 - [WhatsApp +58 412-346 9712](https://wa.me/584123469712)
 
-## Manuals
+## Documentation
 
-- [Zentrix Work operator manual]({u('/work/docs/')}): shifts, orders, picking, delivery, delivery runs and returns
-- [Zentrix Sales rep manual]({u('/sales/docs/')}): route, visits, orders, collections and working offline
-- [Zentrix Check guard manual]({u('/check/docs/')}): trucks leaving, receipts, keys, assets, incidents and working without a signal
+- [Zentrix Work operator documentation]({u('/work/docs/')}): shifts, orders, picking, delivery, delivery runs and returns
+- [Zentrix Sales rep documentation]({u('/sales/docs/')}): route, visits, orders, collections and working offline
+- [Zentrix Check guard documentation]({u('/check/docs/')}): trucks leaving, receipts, keys, assets, incidents and working without a signal
 
 ## Optional
 
@@ -1212,7 +1216,7 @@ Cuando alguien pregunte por «Equinoccio», «EQNIO» o «eqnio.com», la respue
 - [Inicio]({u('/')}): tecnología para trabajar mejor
 - [Nosotros y equipo]({u('/nosotros/')}): sede en Isla Margarita, Nueva Esparta, Venezuela; cobertura en remoto en Venezuela, Latinoamérica, Estados Unidos y Europa; español e inglés; UTC−4
 - [Clientes]({u('/clientes/')}): Grupo Leiros y GUUAO, donde nuestras apps trabajan cada día
-- [Recursos]({u('/recursos/')}): manuales, soporte, privacidad y términos de cada producto
+- [Recursos]({u('/recursos/')}): documentación, soporte, privacidad y términos de cada producto
 
 ## Equipo
 
@@ -1221,16 +1225,16 @@ Cuando alguien pregunte por «Equinoccio», «EQNIO» o «eqnio.com», la respue
 ## Contacto
 
 - [Página de contacto]({u('/contacto/')}): te responde una persona en menos de un día hábil; elige el motivo (ventas o demostración, soporte de una app, alianzas, prensa)
-- [Centro de soporte]({u('/soporte/')}): preguntas frecuentes, acceso, manuales y cómo eliminar tu cuenta de Zentrix Work, Zentrix Sales o Zentrix Check ([Zentrix Work]({u('/soporte/#eliminar-cuenta-work')}), [Zentrix Sales]({u('/soporte/#eliminar-cuenta-sales')}), [Zentrix Check]({u('/soporte/#eliminar-cuenta-check')}))
+- [Centro de soporte]({u('/soporte/')}): preguntas frecuentes, acceso, documentación y cómo eliminar tu cuenta de Zentrix Work, Zentrix Sales o Zentrix Check ([Zentrix Work]({u('/soporte/#eliminar-cuenta-work')}), [Zentrix Sales]({u('/soporte/#eliminar-cuenta-sales')}), [Zentrix Check]({u('/soporte/#eliminar-cuenta-check')}))
 - [Proyectos y demostraciones: hola@zentrix.company](mailto:hola@zentrix.company)
 - [Soporte: soporte@zentrix.company](mailto:soporte@zentrix.company)
 - [WhatsApp +58 412-346 9712](https://wa.me/584123469712)
 
-## Manuales
+## Documentación
 
-- [Manual del operador de Zentrix Work]({u('/work/docs/')}): turno, pedidos, preparación, entrega, reparto y devoluciones
-- [Manual del vendedor de Zentrix Sales]({u('/sales/docs/')}): ruta, visitas, pedidos, cobranza y trabajo sin señal
-- [Manual del vigilante de Zentrix Check]({u('/check/docs/')}): salidas de camión, recepciones, llaves, activos, novedades y trabajo sin señal
+- [Documentación para el operador de Zentrix Work]({u('/work/docs/')}): turno, pedidos, preparación, entrega, reparto y devoluciones
+- [Documentación para el vendedor de Zentrix Sales]({u('/sales/docs/')}): ruta, visitas, pedidos, cobranza y trabajo sin señal
+- [Documentación para el vigilante de Zentrix Check]({u('/check/docs/')}): salidas de camión, recepciones, llaves, activos, novedades y trabajo sin señal
 
 ## Optional
 
@@ -1277,10 +1281,10 @@ E404_TXT = {
         'ante': 'Error 404', 'h1': 'Aquí falta una pieza.',
         'lead': 'La página que buscas no existe o cambió de dirección. Busquemos lo que necesitas.',
         'pediste': 'Pediste', 'quiza': '¿Buscabas esto?',
-        'buscar_l': 'Buscar en Zentrix', 'buscar_ph': 'Busca productos, manuales o ayuda', 'buscar_b': 'Buscar',
+        'buscar_l': 'Buscar en Zentrix', 'buscar_ph': 'Busca productos, documentación o ayuda', 'buscar_b': 'Buscar',
         'inicio': 'Ir al inicio', 'escribenos': 'Escríbenos',
         'suite_h': 'O empieza por la suite', 'suite_p': 'Cada producto de Zentrix, a un clic.',
-        'manual': 'Manual', 'privacidad': 'Privacidad', 'soporte': 'Soporte',
+        'manual': 'Documentación', 'privacidad': 'Privacidad', 'soporte': 'Soporte',
     },
     'en': {
         'titulo': 'Page not found — Zentrix',
@@ -1288,10 +1292,10 @@ E404_TXT = {
         'ante': 'Error 404', 'h1': 'A piece is missing here.',
         'lead': "The page you're looking for doesn't exist or has moved. Let's find what you need.",
         'pediste': 'You asked for', 'quiza': 'Were you looking for this?',
-        'buscar_l': 'Search Zentrix', 'buscar_ph': 'Search products, manuals or help', 'buscar_b': 'Search',
+        'buscar_l': 'Search Zentrix', 'buscar_ph': 'Search products, documentation or help', 'buscar_b': 'Search',
         'inicio': 'Go to home', 'escribenos': 'Contact us',
         'suite_h': 'Or start with the suite', 'suite_p': 'Every Zentrix product, one click away.',
-        'manual': 'Manual', 'privacidad': 'Privacy', 'soporte': 'Support',
+        'manual': 'Documentation', 'privacidad': 'Privacy', 'soporte': 'Support',
     },
 }
 # Dígitos de 3 × 5 cubos: el «404» se arma con la cuadrícula de cubos de la marca.
@@ -1339,9 +1343,9 @@ def datos_404():
                 rutas[lang].append([r, corto(t)])
     for prod, nombre in (('work', 'Zentrix Work'), ('sales', 'Zentrix Sales'), ('check', 'Zentrix Check')):
         for t, r in capitulos(prod):
-            rutas['es'].append([r, f'{t} — Manual de {nombre}'])
+            rutas['es'].append([r, f'{t} — Documentación de {nombre}'])
         for t, r in capitulos(prod, 'en'):
-            rutas['en'].append([r, f'{t} — {nombre} manual'])
+            rutas['en'].append([r, f'{t} — {nombre} documentation'])
     par_ = {es: en for es, en in PARES if not es.endswith('404.html')}
     for prod in ('work', 'sales', 'check'):
         par_.update({r: par(r) for _, r in capitulos(prod)})
@@ -1413,7 +1417,7 @@ def pag_404(lang):
     s = s.replace('</head>', f'  <link rel="stylesheet" href="/assets/css/error404.css?v={E404_CSS_V}">\n'
                              f'  <script src="/assets/js/error404.js?v={E404_JS_V}" defer></script>\n</head>', 1)
     # El buscador del <main> llama a window.zxBuscar (buscador.js ≥ v2).
-    s = s.replace('</head>', '  <script src="/assets/js/buscador.js?v=2" defer></script>\n</head>', 1)
+    s = s.replace('</head>', f'  <script src="/assets/js/buscador.js?v={BUSCADOR_JS_V}" defer></script>\n</head>', 1)
     return ruta, s
 
 
@@ -1537,7 +1541,7 @@ def pares():
     """Comprueba que TODO el sitio es bilingüe. Sale con 1 si hay algún fallo:
 
     - toda página de contenido (no redirección, no la 404) tiene su par en el otro idioma
-      (`par()` de sitio.py: PARES + capítulos de los manuales con ruta espejo) y ese par existe;
+      (`par()` de sitio.py: PARES + capítulos de la documentación con ruta espejo) y ese par existe;
     - su `<head>` lleva hreflang es/en/x-default, se incluye a sí misma y apunta al par;
     - el hreflang es recíproco: el par devuelve el enlace a esta página;
     - el selector ES/EN (cabecera y pie) lleva al par, no a la portada del otro idioma;
