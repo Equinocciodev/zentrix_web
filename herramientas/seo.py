@@ -52,6 +52,10 @@ PAGINAS = {
                 'Zentrix Sales — App de fuerza de ventas y cobranza',
                 'Zentrix Sales, app de fuerza de ventas para Android y iPhone: ruta, visitas, '
                 'pedidos y cobranza de tus vendedores de campo, con o sin señal, conectada a Odoo®.'),
+    '/check/': ('app de control de acceso y garita',
+                'Zentrix Check — App de garita y control de acceso',
+                'Zentrix Check, la app Android de la garita: el vigilante revisa cada camión contra Odoo®, '
+                'toma fotos y firma un acta que no se puede cambiar, con o sin señal.'),
     '/en/sales/': ('field sales app',
                    'Zentrix Sales — Field sales app for Android and iPhone',
                    'Zentrix Sales is the field sales app for Android and iPhone: route, orders, '
@@ -138,6 +142,41 @@ PAGINAS = {
     '/en/sales/terms/': (None, 'Terms of service — Zentrix Sales',
                              'Terms of service of Zentrix Sales, the field sales app for Android and iPhone: who '
                              'contracts it, who uses it every day and which rules apply.'),
+    '/check/docs/': ('manual del vigilante de garita',
+                     'Manual del vigilante — Zentrix Check',
+                     'Cómo se usa Zentrix Check en la garita, pantalla a pantalla: entrar, sacar un camión, '
+                     'recibir mercancía, llaves, activos, novedades y trabajar sin señal.'),
+    '/check/docs/entrar.html': (None, None,
+        'Cómo se entra a Zentrix Check: el alta del teléfono con el código QR, tu usuario y contraseña una vez, el PIN de cada día y qué hacer si lo olvidas.'),
+    '/check/docs/encender.html': (None, None,
+        'Cómo se enciende y se apaga el vigilante en Zentrix Check: qué cambia al encenderte, cómo apagarte al terminar y qué pasa si dejas el teléfono sin usar.'),
+    '/check/docs/hoy.html': (None, None,
+        'La pantalla Hoy de Zentrix Check: las pestañas Salen, Llegan y Adentro, la barra de abajo, el menú Más y el escáner que abre cualquier camión, llave o activo.'),
+    '/check/docs/salida.html': (None, None,
+        'Cómo sale un camión con Zentrix Check: placa y chofer, guía y facturas, conteo, foto, candado, firma con tu PIN y qué hacer con las diferencias.'),
+    '/check/docs/recepcion.html': (None, None,
+        'Cómo se recibe mercancía con Zentrix Check: fotos al llegar, el precinto de un contenedor, la factura del proveedor, el conteo y los retornos de ruta.'),
+    '/check/docs/sin-documento.html': (None, None,
+        'Cómo se registra en Zentrix Check lo que entra o sale sin documento en Odoo: qué es, los artículos con su foto y qué queda en el registro de la garita.'),
+    '/check/docs/llaves.html': (None, None,
+        'Cómo se controlan las llaves con Zentrix Check: el llavero con código QR, quién se lleva cada llave, cuándo vuelve y qué hacer si una llave no regresa a tiempo.'),
+    '/check/docs/activos.html': (None, None,
+        'Cómo salen y regresan los activos con Zentrix Check: la etiqueta QR, el pase que aprueba el gerente, la salida, el regreso y lo que vuelve incompleto.'),
+    '/check/docs/novedades.html': (None, None,
+        'Cómo se registra una novedad en Zentrix Check, qué hacer si es grave, los teléfonos de la sede y cómo se anota a quién llamaste con «¿Quién autorizó?».'),
+    '/check/docs/sin-senal.html': (None, None,
+        'Cómo trabaja Zentrix Check sin señal en la garita: qué se guarda cifrado en el teléfono, cómo ver lo que falta por enviar y qué necesita conexión.'),
+    '/check/docs/administrador.html': (None, None,
+        'La consola del administrador de Seguridad en Zentrix Check: el código para entrar, el día de la sede, las actas, las diferencias y las fotos, solo para mirar.'),
+    '/check/docs/dudas.html': (None, None,
+        'Dudas rápidas de Zentrix Check resueltas en dos líneas: el PIN, la contraseña, el teléfono de la garita, la señal, las diferencias y quién te ayuda.'),
+    # Zentrix Check: legales
+    '/check/privacidad/': (None, 'Política de privacidad — Zentrix Check',
+                           'Qué datos registra Zentrix Check, la app de la garita de seguridad, para qué, dónde '
+                           'se guardan, quién los ve y cómo pedir su acceso, corrección o eliminación.'),
+    '/check/terminos/': (None, 'Términos de uso — Zentrix Check',
+                         'Términos de uso de Zentrix Check, la app Android de la garita: quién puede usarla, '
+                         'cómo se da la cuenta del vigilante y qué reglas aplican a las actas.'),
     # Zentrix Work: legales
     '/work/privacidad/': (None, 'Política de privacidad — Zentrix Work',
                           'Qué datos trata Zentrix Work, la app del equipo de tienda, para qué, dónde se '
@@ -206,6 +245,18 @@ PAGINAS.update({
     '/en/work/': ('store team app',
         'Zentrix Work — The app for store and delivery teams',
         'Zentrix Work, the Android app for store teams: work lands on the phone to pick orders, deliver, run delivery routes and take returns during the shift.'),
+    '/en/check/': ('gate and access control app',
+        'Zentrix Check — Security gate and access control app',
+        'Zentrix Check, the Android app for the security gate: guards check every truck against Odoo®, take photos and sign a record that cannot be changed.'),
+    '/en/check/docs/': ('Zentrix Check manual',
+        'Zentrix Check manual — Step by step for security guards',
+        'The Zentrix Check manual for security guards: signing in, trucks leaving, receipts, keys, assets, incidents and working offline. The chapters are in Spanish.'),
+    '/en/check/privacy/': (None,
+        'Privacy policy — Zentrix Check',
+        'What the Zentrix Check gate app records, why, who sees it and how it is protected, and how to ask for access to your data, its correction or its deletion.'),
+    '/en/check/terms/': (None,
+        'Terms of use — Zentrix Check',
+        'The terms of use of the Zentrix Check app for security guards: what it is for, what you agree to when using it, the records it keeps and who provides it.'),
     '/en/ai/': ('AI for business',
         'Zentrix AI — Applied artificial intelligence for business',
         'Zentrix AI connects your company’s knowledge and systems to AI agents and assistants that query, analyze and act, with role-based permissions for each user.'),
@@ -365,8 +416,10 @@ def organizacion():
 
 NOMBRES_SECCION = {
     'es': {'work': ('Zentrix Work', 'Manual del operador'), 'sales': ('Zentrix Sales', 'Manual del vendedor'),
+           'check': ('Zentrix Check', 'Manual del vigilante'),
            'soluciones': ('Soluciones', None)},
     'en': {'work': ('Zentrix Work', 'Operator manual'), 'sales': ('Zentrix Sales', 'Sales rep manual'),
+           'check': ('Zentrix Check', 'Guard manual'),
            'solutions': ('Solutions', None)},
 }
 
@@ -443,6 +496,17 @@ def jsonld(ruta, titulo, descripcion, cuerpo, lang):
             'installUrl': tiendas, 'sameAs': tiendas,
             'publisher': org_ref(),
         })
+    elif plantilla == '/check/':
+        # Sin URL de tienda hasta que la ficha de Google Play esté publicada (productos.json).
+        app = {
+            '@type': 'SoftwareApplication', '@id': url + '#app', 'name': 'Zentrix Check',
+            'applicationCategory': 'BusinessApplication', 'operatingSystem': 'Android',
+            'description': descripcion, 'url': url, 'inLanguage': lang,
+            'image': SITIO + '/assets/img/check-icono-512.png', 'publisher': org_ref(),
+        }
+        if _TIENDAS['check'].get('play'):
+            app['installUrl'] = app['sameAs'] = [_TIENDAS['check']['play']]
+        grafo.append(app)
     elif plantilla in SERVICIOS or plantilla in SOLUCIONES or re.match(r'^/solutions/[^/]+/$', plantilla):
         n, tipo = SERVICIOS.get(plantilla) or (nombre, SOLUCIONES.get(plantilla, nombre))
         if lang == 'en':

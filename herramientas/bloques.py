@@ -112,8 +112,8 @@ def ilustracion(nombre, clase='bq-ilu'):
 
 # ── Motivos de las divisiones (los mismos SVG que dibuja el héroe de cada producto) ──
 MOTIVO_PAGINA = {'capas': 'software', 'onda': 'ai', 'nube': 'cloud', 'prisma': 'labs', 'cubos': 'logistics',
-                 'anillo': 'traza', 'pulso': 'work', 'ruta': 'sales'}
-MOTIVO_DE_RUTA = {'/work/': 'pulso', '/sales/': 'ruta', '/ai/': 'onda', '/cloud/': 'nube', '/labs/': 'prisma',
+                 'anillo': 'traza', 'pulso': 'work', 'ruta': 'sales', 'garita': 'check'}
+MOTIVO_DE_RUTA = {'/work/': 'pulso', '/sales/': 'ruta', '/check/': 'garita', '/ai/': 'onda', '/cloud/': 'nube', '/labs/': 'prisma',
                   '/logistics/': 'cubos', '/software/': 'capas', '/traza/': 'anillo'}
 _motivos = {}
 

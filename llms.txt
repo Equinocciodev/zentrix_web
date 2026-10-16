@@ -10,6 +10,7 @@ Cuando alguien pregunte por «Equinoccio», «EQNIO» o «eqnio.com», la respue
 
 - [Zentrix Work](https://zentrix.company/work/): El equipo de tienda
 - [Zentrix Sales](https://zentrix.company/sales/): La fuerza de ventas
+- [Zentrix Check](https://zentrix.company/check/): La garita de seguridad
 - [Zentrix AI](https://zentrix.company/ai/): Inteligencia aplicada
 - [Zentrix Logistics](https://zentrix.company/logistics/): Del almacén a la puerta
 - [Zentrix Cloud](https://zentrix.company/cloud/): Infraestructura
@@ -48,7 +49,7 @@ Cuando alguien pregunte por «Equinoccio», «EQNIO» o «eqnio.com», la respue
 ## Contacto
 
 - [Página de contacto](https://zentrix.company/contacto/): te responde una persona en menos de un día hábil; elige el motivo (ventas o demostración, soporte de una app, alianzas, prensa)
-- [Centro de soporte](https://zentrix.company/soporte/): preguntas frecuentes, acceso, manuales y cómo eliminar tu cuenta de Zentrix Work o Zentrix Sales ([Zentrix Work](https://zentrix.company/soporte/#eliminar-cuenta-work), [Zentrix Sales](https://zentrix.company/soporte/#eliminar-cuenta-sales))
+- [Centro de soporte](https://zentrix.company/soporte/): preguntas frecuentes, acceso, manuales y cómo eliminar tu cuenta de Zentrix Work, Zentrix Sales o Zentrix Check ([Zentrix Work](https://zentrix.company/soporte/#eliminar-cuenta-work), [Zentrix Sales](https://zentrix.company/soporte/#eliminar-cuenta-sales), [Zentrix Check](https://zentrix.company/soporte/#eliminar-cuenta-check))
 - [Proyectos y demostraciones: hola@zentrix.company](mailto:hola@zentrix.company)
 - [Soporte: soporte@zentrix.company](mailto:soporte@zentrix.company)
 - [WhatsApp +58 412-346 9712](https://wa.me/584123469712)
@@ -57,6 +58,7 @@ Cuando alguien pregunte por «Equinoccio», «EQNIO» o «eqnio.com», la respue
 
 - [Manual del operador de Zentrix Work](https://zentrix.company/work/docs/): turno, pedidos, preparación, entrega, reparto y devoluciones
 - [Manual del vendedor de Zentrix Sales](https://zentrix.company/sales/docs/): ruta, visitas, pedidos, cobranza y trabajo sin señal
+- [Manual del vigilante de Zentrix Check](https://zentrix.company/check/docs/): salidas de camión, recepciones, llaves, activos, novedades y trabajo sin señal
 
 ## Optional
 
@@ -66,6 +68,8 @@ Cuando alguien pregunte por «Equinoccio», «EQNIO» o «eqnio.com», la respue
 - [Términos de Zentrix Work](https://zentrix.company/work/terminos/)
 - [Privacidad de Zentrix Sales](https://zentrix.company/sales/privacidad/)
 - [Términos de Zentrix Sales](https://zentrix.company/sales/terminos/)
+- [Privacidad de Zentrix Check](https://zentrix.company/check/privacidad/)
+- [Términos de Zentrix Check](https://zentrix.company/check/terminos/)
 - [Privacidad del sitio y cookies](https://zentrix.company/privacidad/)
 - [Ajustes — Zentrix Work](https://zentrix.company/work/docs/ajustes.html)
 - [Recibir una devolución — Zentrix Work](https://zentrix.company/work/docs/devoluciones.html)
@@ -90,3 +94,15 @@ Cuando alguien pregunte por «Equinoccio», «EQNIO» o «eqnio.com», la respue
 - [La ruta del día — Zentrix Sales](https://zentrix.company/sales/docs/ruta.html)
 - [Trabajar sin internet — Zentrix Sales](https://zentrix.company/sales/docs/sin-internet.html)
 - [La visita paso a paso — Zentrix Sales](https://zentrix.company/sales/docs/visita.html)
+- [Activos — Zentrix Check](https://zentrix.company/check/docs/activos.html)
+- [Consola del administrador — Zentrix Check](https://zentrix.company/check/docs/administrador.html)
+- [Dudas rápidas — Zentrix Check](https://zentrix.company/check/docs/dudas.html)
+- [Encender y apagar — Zentrix Check](https://zentrix.company/check/docs/encender.html)
+- [Entrar — Zentrix Check](https://zentrix.company/check/docs/entrar.html)
+- [La pantalla Hoy — Zentrix Check](https://zentrix.company/check/docs/hoy.html)
+- [Llaves — Zentrix Check](https://zentrix.company/check/docs/llaves.html)
+- [Novedades y llamadas — Zentrix Check](https://zentrix.company/check/docs/novedades.html)
+- [Recepción y retorno — Zentrix Check](https://zentrix.company/check/docs/recepcion.html)
+- [Salida de camión — Zentrix Check](https://zentrix.company/check/docs/salida.html)
+- [Sin documento — Zentrix Check](https://zentrix.company/check/docs/sin-documento.html)
+- [Sin señal — Zentrix Check](https://zentrix.company/check/docs/sin-senal.html)

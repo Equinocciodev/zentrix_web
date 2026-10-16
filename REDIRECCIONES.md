@@ -26,6 +26,8 @@ GitHub Pages no admite redirecciones 301 propias. Por eso cada ruta vieja es una
 | `/sales/contacto/` | `/contacto/?producto=sales#motivo` | 16-10-2026 | Contacto unificado, con el motivo «Ventas o demostración» y Zentrix Sales. |
 | `/en/work/support/` | `/en/support/#work` | 16-10-2026 | Soporte unificado de la suite. |
 | `/en/sales/support/` | `/en/support/#sales` | 16-10-2026 | Soporte unificado de la suite. |
+| `/check/soporte/` | `/soporte/#check` | 16-10-2026 | Soporte unificado de la suite; es la URL de soporte que abre la app. |
+| `/en/check/support/` | `/en/support/#check` | 16-10-2026 | Soporte unificado de la suite. |
 | `/en/sales/contact/` | `/en/contact/?producto=sales#motivo` | 16-10-2026 | Contacto unificado. |
 
 ## eqnio.com → zentrix.company (Cloudflare)

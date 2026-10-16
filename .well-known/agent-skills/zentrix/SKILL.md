@@ -24,6 +24,7 @@ The site is mainly in Spanish; Zentrix Sales also has English pages under `https
 
 - **Zentrix Work**: Store teams. https://zentrix.company/work/
 - **Zentrix Sales**: Field sales. https://zentrix.company/sales/
+- **Zentrix Check**: The security gate. https://zentrix.company/check/
 - **Zentrix AI**: Applied intelligence. https://zentrix.company/ai/
 - **Zentrix Logistics**: Warehouse to doorstep. https://zentrix.company/logistics/
 - **Zentrix Cloud**: Infrastructure. https://zentrix.company/cloud/
@@ -32,7 +33,7 @@ The site is mainly in Spanish; Zentrix Sales also has English pages under `https
 - **Traza**: A Zentrix® product. https://traza.technology
 
 User manuals: Zentrix Work at https://zentrix.company/work/docs/ and Zentrix Sales at https://zentrix.company/sales/docs/.
-Support center for every app, including how to delete a Zentrix Work or Zentrix Sales account:
+Support center for every app, including how to delete a Zentrix Work, Zentrix Sales or Zentrix Check account:
 https://zentrix.company/soporte/ (English: https://zentrix.company/en/support/). Privacy policies and terms of each app: https://zentrix.company/legal/.
 
 ## Contact

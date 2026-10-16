@@ -32,7 +32,7 @@ Datos clave:
 - La marca se escribe «Zentrix», «Zentrix Work», «Zentrix Sales», «Zentrix AI», «Zentrix Logistics», «Zentrix Cloud», «Zentrix Labs», «Zentrix Software» y «Traza».
 """
 
-PRODUCTOS = ('/work/', '/sales/', '/ai/', '/logistics/', '/cloud/', '/labs/', '/software/', '/traza/')
+PRODUCTOS = ('/work/', '/sales/', '/check/', '/ai/', '/logistics/', '/cloud/', '/labs/', '/software/', '/traza/')
 GRUPOS = [
     ('Zentrix', lambda r: r in ('/', '/nosotros/', '/clientes/', '/contacto/', '/recursos/')),
     ('Productos', lambda r: r in PRODUCTOS),
@@ -40,6 +40,7 @@ GRUPOS = [
     ('English', lambda r: r.startswith('/sales/en/') or r.startswith('/en/')),
     ('Manual de Zentrix Work', lambda r: r.startswith('/work/docs/')),
     ('Manual de Zentrix Sales', lambda r: r.startswith('/sales/docs/')),
+    ('Manual de Zentrix Check', lambda r: r.startswith('/check/docs/')),
     ('Legal, soporte y contacto', lambda r: True),
 ]
 

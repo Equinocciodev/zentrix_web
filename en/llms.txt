@@ -8,6 +8,7 @@ Slogan: «Technology to work better». eqnio.com redirects to zentrix.company. S
 
 - [Zentrix Work](https://zentrix.company/en/work/): Store teams
 - [Zentrix Sales](https://zentrix.company/en/sales/): Field sales
+- [Zentrix Check](https://zentrix.company/en/check/): The security gate
 - [Zentrix AI](https://zentrix.company/en/ai/): Applied intelligence
 - [Zentrix Logistics](https://zentrix.company/en/logistics/): Warehouse to doorstep
 - [Zentrix Cloud](https://zentrix.company/en/cloud/): Infrastructure
@@ -45,7 +46,7 @@ Slogan: «Technology to work better». eqnio.com redirects to zentrix.company. S
 ## Contact
 
 - [Contact page](https://zentrix.company/en/contact/): a person replies in under one business day; pick a reason (sales or demo, app support, partnerships, press)
-- [Support center](https://zentrix.company/en/support/): common questions, access, manuals and how to delete a Zentrix Work or Zentrix Sales account ([Zentrix Work](https://zentrix.company/en/support/#delete-account-work), [Zentrix Sales](https://zentrix.company/en/support/#delete-account-sales))
+- [Support center](https://zentrix.company/en/support/): common questions, access, manuals and how to delete a Zentrix Work, Zentrix Sales or Zentrix Check account ([Zentrix Work](https://zentrix.company/en/support/#delete-account-work), [Zentrix Sales](https://zentrix.company/en/support/#delete-account-sales), [Zentrix Check](https://zentrix.company/en/support/#delete-account-check))
 - [Projects and demos: hola@zentrix.company](mailto:hola@zentrix.company)
 - [Support: soporte@zentrix.company](mailto:soporte@zentrix.company)
 - [WhatsApp +58 412-346 9712](https://wa.me/584123469712)
@@ -54,6 +55,7 @@ Slogan: «Technology to work better». eqnio.com redirects to zentrix.company. S
 
 - [Zentrix Work operator manual](https://zentrix.company/en/work/docs/): in Spanish
 - [Zentrix Sales rep manual](https://zentrix.company/en/sales/docs/): in Spanish
+- [Zentrix Check guard manual](https://zentrix.company/en/check/docs/): in Spanish
 
 ## Optional
 
@@ -63,6 +65,8 @@ Slogan: «Technology to work better». eqnio.com redirects to zentrix.company. S
 - [Zentrix Work terms](https://zentrix.company/en/work/terms/)
 - [Zentrix Sales privacy policy](https://zentrix.company/en/sales/privacy/)
 - [Zentrix Sales terms](https://zentrix.company/en/sales/terms/)
+- [Zentrix Check privacy policy](https://zentrix.company/en/check/privacy/)
+- [Zentrix Check terms](https://zentrix.company/en/check/terms/)
 - [Website privacy and cookies](https://zentrix.company/en/privacy/)
 - [Ajustes — Zentrix Work](https://zentrix.company/work/docs/ajustes.html)
 - [Recibir una devolución — Zentrix Work](https://zentrix.company/work/docs/devoluciones.html)
@@ -87,3 +91,15 @@ Slogan: «Technology to work better». eqnio.com redirects to zentrix.company. S
 - [La ruta del día — Zentrix Sales](https://zentrix.company/sales/docs/ruta.html)
 - [Trabajar sin internet — Zentrix Sales](https://zentrix.company/sales/docs/sin-internet.html)
 - [La visita paso a paso — Zentrix Sales](https://zentrix.company/sales/docs/visita.html)
+- [Activos — Zentrix Check](https://zentrix.company/check/docs/activos.html)
+- [Consola del administrador — Zentrix Check](https://zentrix.company/check/docs/administrador.html)
+- [Dudas rápidas — Zentrix Check](https://zentrix.company/check/docs/dudas.html)
+- [Encender y apagar — Zentrix Check](https://zentrix.company/check/docs/encender.html)
+- [Entrar — Zentrix Check](https://zentrix.company/check/docs/entrar.html)
+- [La pantalla Hoy — Zentrix Check](https://zentrix.company/check/docs/hoy.html)
+- [Llaves — Zentrix Check](https://zentrix.company/check/docs/llaves.html)
+- [Novedades y llamadas — Zentrix Check](https://zentrix.company/check/docs/novedades.html)
+- [Recepción y retorno — Zentrix Check](https://zentrix.company/check/docs/recepcion.html)
+- [Salida de camión — Zentrix Check](https://zentrix.company/check/docs/salida.html)
+- [Sin documento — Zentrix Check](https://zentrix.company/check/docs/sin-documento.html)
+- [Sin señal — Zentrix Check](https://zentrix.company/check/docs/sin-senal.html)

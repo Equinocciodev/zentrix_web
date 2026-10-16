@@ -6,8 +6,8 @@ inglés), reorganizado en una sola página. Esas rutas viejas redirigen aquí (v
 generar.py), con sus anclas antiguas traducidas por ALIAS.
 
 Las anclas de borrado de cuenta son estables: las declaran las fichas de Google Play y App Store.
-    ES: /soporte/#eliminar-cuenta-work   /soporte/#eliminar-cuenta-sales
-    EN: /en/support/#delete-account-work /en/support/#delete-account-sales
+    ES: /soporte/#eliminar-cuenta-work   /soporte/#eliminar-cuenta-sales   /soporte/#eliminar-cuenta-check
+    EN: /en/support/#delete-account-work /en/support/#delete-account-sales /en/support/#delete-account-check
 """
 from urllib.parse import quote
 
@@ -16,8 +16,12 @@ from sitio import MONO, TRAZA_URL, TRAZA_ICONO, SVG_EXTERNO
 WA = 'https://wa.me/584123469712'
 WA_TXT = '+58 412-346 9712'
 
+# Las apps con soporte propio en /soporte/ (las tres primeras de SUITE); el resto, tarjetas.
+CON_APP = 3
+
 # Las monogramas de la suite (orden del mega-menú). (clave del monograma, ancla, nombre, ruta ES)
 SUITE = [('work', 'work', 'Zentrix Work', '/work/'), ('sales', 'sales', 'Zentrix Sales', '/sales/'),
+         ('check', 'check', 'Zentrix Check', '/check/'),
          ('ai', 'ai', 'Zentrix AI', '/ai/'), ('logistica', 'logistics', 'Zentrix Logistics', '/logistics/'),
          ('cloud', 'cloud', 'Zentrix Cloud', '/cloud/'), ('labs', 'labs', 'Zentrix Labs', '/labs/'),
          ('software', 'software', 'Zentrix Software', '/software/')]
@@ -80,13 +84,48 @@ WORK_FAQ = {
     ],
 }
 
+CHECK_FAQ = {
+    'es': [
+        ('check-sin-cuenta', 'No tengo cuenta. ¿Cómo entro?',
+         'No hay registro: la app es solo para el personal de seguridad de las empresas que usan Zentrix Check. La cuenta te la crea el <strong>administrador de Seguridad</strong> de tu empresa, con la sede donde trabajas.'),
+        ('check-telefono', '¿Cómo se da de alta el teléfono de la garita?',
+         'Con un <strong>código QR</strong> que el administrador genera en el sistema de la empresa. Al leerlo, el teléfono queda sellado a esa sede. Sin ese código la app no hace nada.'),
+        ('check-pin', 'Olvidé mi PIN',
+         'En la pantalla del PIN, toca <strong>Olvidé mi PIN</strong>. Vuelves a entrar con tu usuario y tu contraseña y creas un PIN nuevo.'),
+        ('check-contrasena', 'Olvidé mi contraseña',
+         'En la pantalla de entrada, toca <strong>Olvidé mi contraseña</strong>: te la da el administrador de Seguridad. La contraseña no se cambia desde el teléfono.'),
+        ('check-sin-senal', 'No hay señal en la garita',
+         'Sigue trabajando: lo que haces se guarda <strong>cifrado en el teléfono</strong> y se envía solo cuando vuelve la señal, sin duplicados. La app te dice cuántas cosas faltan por enviar. Lo único que necesita señal es traer lo que dice el sistema de una carga nueva.'),
+        ('check-telefono-perdido', 'Se perdió o se dañó el teléfono de la garita',
+         'Avísale de inmediato al administrador de Seguridad: puede <strong>revocar el teléfono</strong>, y la app borra lo que guardaba en cuanto vuelve a conectarse. El teléfono nuevo se da de alta con otro código QR.'),
+        ('check-dejo-empresa', 'Dejé de trabajar en la empresa o en esa sede',
+         'Tu acceso se cierra desde el sistema de la empresa. Las actas que firmaste se conservan, porque son el registro de lo que pasó en la garita. Para pedir el acceso o la eliminación de tus datos personales, mira <a href="#eliminar-cuenta-check">eliminar tu cuenta o tus datos</a>.'),
+    ],
+    'en': [
+        ('check-sin-cuenta', 'I don’t have an account. How do I get in?',
+         'There is no sign-up: the app is only for the security staff of companies that use Zentrix Check. Your account is created by your company’s <strong>security administrator</strong>, for the site where you work.'),
+        ('check-telefono', 'How is the gate phone set up?',
+         'With a <strong>QR code</strong> the administrator generates in the company’s system. Once scanned, the phone is sealed to that site. Without that code the app does nothing.'),
+        ('check-pin', 'I forgot my PIN',
+         'On the PIN screen, tap <strong>I forgot my PIN</strong>. You sign in again with your username and password and create a new PIN.'),
+        ('check-contrasena', 'I forgot my password',
+         'On the sign-in screen, tap <strong>I forgot my password</strong>: the security administrator gives you one. The password cannot be changed from the phone.'),
+        ('check-sin-senal', 'There is no signal at the gate',
+         'Keep working: what you do is stored <strong>encrypted on the phone</strong> and sent automatically when the signal returns, without duplicates. The app shows how many items are still waiting. The only thing that needs a signal is fetching what the system says about a new load.'),
+        ('check-telefono-perdido', 'The gate phone was lost or damaged',
+         'Tell the security administrator right away: they can <strong>revoke the phone</strong>, and the app wipes what it stored as soon as it reconnects. The new phone is set up with another QR code.'),
+        ('check-dejo-empresa', 'I no longer work at the company or at that site',
+         'Your access is closed from the company’s system. The records you signed are kept, because they are the log of what happened at the gate. To request access to or deletion of your personal data, see <a href="#delete-account-check">delete your account or your data</a>.'),
+    ],
+}
+
 TX = {
     'es': {
         'ante': 'Soporte', 'h1': '¿En qué te ayudamos?',
         'lead': 'Preguntas frecuentes, acceso, manuales y tus datos, de todas las apps de Zentrix en un solo lugar. Si no lo encuentras, te responde una persona en menos de un día hábil.',
         'buscar_l': 'Buscar en el sitio', 'buscar_ph': 'Busca: PIN, contraseña, cuenta…', 'buscar_b': 'Buscar',
         'elige': 'Elige tu producto', 'chips_l': 'Ir al soporte de cada producto', 'eliminar_atajo': 'Eliminar tu cuenta',
-        'eliminar_atajo_t': 'Instrucciones de Zentrix Work y Zentrix Sales para pedir el borrado de tu cuenta y tus datos.',
+        'eliminar_atajo_t': 'Instrucciones de Zentrix Work, Zentrix Sales y Zentrix Check para pedir el borrado de tu cuenta y tus datos.',
         'work_lead': 'Para casi todo, tu primer contacto es <strong>tu encargado de tienda</strong>: es quien te da de alta, te habilita las tareas y puede cortar el acceso si pierdes el teléfono. Para lo demás, escríbenos.',
         'work_mail_s': 'Soporte — Zentrix Work',
         'work_mail_p': 'Pon en el asunto <em>Soporte — Zentrix Work</em> y cuéntanos tu correo de la app, tu tienda y qué pasó. Si puedes, agrega una captura.',
@@ -112,6 +151,17 @@ TX = {
         'sales_del_s': 'Solicitud de datos — Zentrix Sales',
         'sales_del_2': 'Indica tu nombre, tu correo de vendedor o tu RIF si eres cliente de una empresa que usa la app, y qué quieres: <strong>ver</strong>, <strong>corregir</strong> o <strong>eliminar</strong>.',
         'sales_del_f': 'Lo que se conserva por obligación legal, y por cuánto tiempo, está en la <a href="{priv}#c7">cláusula 7 de la política</a>. <strong>Cerrar sesión no elimina datos del servidor:</strong> solo retira las credenciales del teléfono.',
+        'check_lead': 'Para casi todo, tu primer contacto es <strong>el administrador de Seguridad</strong> de tu empresa: es quien da de alta el teléfono de la garita, crea tu cuenta y te da tu contraseña. Para lo demás, escríbenos.',
+        'check_mail_s': 'Soporte — Zentrix Check',
+        'check_mail_p': 'Pon en el asunto <em>Soporte — Zentrix Check</em> y cuéntanos tu usuario, tu sede y qué pasó. <strong>No nos mandes capturas de actas, placas, facturas ni datos de personas.</strong>',
+        'check_del_p': 'La app no permite crear cuentas, así que tampoco se borran desde ella: la cuenta la crea y la cierra tu empresa. Para pedir el acceso, la corrección o la eliminación de tus datos:',
+        'check_del_1': 'Escribe a <a href="{m}">soporte@zentrix.company</a> con el asunto <em>Solicitud de datos — Zentrix Check</em>, o díselo al administrador de Seguridad.',
+        'check_del_s': 'Solicitud de datos — Zentrix Check',
+        'check_del_2': 'Indica tu nombre, tu usuario y tu sede (o, si no usas la app, en qué garita y en qué fecha pasó tu vehículo o tu carga), y si quieres <strong>ver</strong>, <strong>corregir</strong> o <strong>eliminar</strong> tus datos.',
+        'check_del_f': 'Lo que se borra, lo que se conserva por obligación legal y por cuánto tiempo está en la <a href="{priv}#c7">política de privacidad, cláusula 7</a>. <strong>Salir del teléfono o desinstalar la app no borra nada del servidor</strong>, y las actas firmadas no se pueden cambiar: si un dato está mal, se corrige con una nota.',
+        'check_app': 'Zentrix Check (<code>com.leiros.check</code>), solo para Android.',
+        'check_manual': 'El <a href="{docs}">manual del vigilante</a> explica paso a paso el alta del teléfono, la salida de un camión, las recepciones, las llaves, los activos y qué hacer sin señal.',
+        'check_desc': 'Google Play (próximamente)',
         'ficha': 'Datos de la app', 'f_app': 'Aplicación', 'f_desc': 'Descarga', 'f_resp': 'Responsable', 'f_dir': 'Dirección legal',
         'f_correo': 'Correo de soporte', 'f_tel': 'Teléfono', 'f_resp_t': 'Tiempo de respuesta', 'f_docs': 'Documentos',
         'work_app': 'Zentrix Work (<code>com.leiros.guuaowork</code>), para Android.',
@@ -132,7 +182,7 @@ TX = {
         'lead': 'Common questions, access, manuals and your data for every Zentrix app, in one place. If you can’t find it, a person replies within one business day.',
         'buscar_l': 'Search the site', 'buscar_ph': 'Search: PIN, password, delete account…', 'buscar_b': 'Search',
         'elige': 'Pick your product', 'chips_l': 'Go to each product’s support', 'eliminar_atajo': 'Delete your account',
-        'eliminar_atajo_t': 'Zentrix Work and Zentrix Sales instructions to request deletion of your account and data.',
+        'eliminar_atajo_t': 'Zentrix Work, Zentrix Sales and Zentrix Check instructions to request deletion of your account and data.',
         'work_lead': 'For almost everything, your first point of contact is <strong>your store manager</strong>: they set up your account, enable your tasks and can cut off access if you lose your phone. For anything else, write to us.',
         'work_mail_s': 'Support — Zentrix Work',
         'work_mail_p': 'Put <em>Support — Zentrix Work</em> in the subject line and tell us the email you use in the app, your store and what happened. If you can, add a screenshot.',
@@ -157,6 +207,17 @@ TX = {
         'sales_del_s': 'Data request — Zentrix Sales',
         'sales_del_2': 'Include your name, your rep email (or your tax ID if you are a customer of a company that uses the app) and what you want: <strong>access</strong>, <strong>correction</strong> or <strong>deletion</strong>.',
         'sales_del_f': 'What is kept because of a legal obligation, and for how long, is in <a href="{priv}#c7">clause 7 of the policy</a>. <strong>Signing out does not delete data from the server.</strong>',
+        'check_lead': 'For almost everything, your first point of contact is <strong>your company’s security administrator</strong>: they set up the gate phone, create your account and give you your password. For anything else, write to us.',
+        'check_mail_s': 'Support — Zentrix Check',
+        'check_mail_p': 'Put <em>Support — Zentrix Check</em> in the subject line and tell us your username, your site and what happened. <strong>Please don’t send us screenshots of records, plates, invoices or personal data.</strong>',
+        'check_del_p': 'The app has no sign-up, so accounts aren’t deleted from it either: your company creates and closes them. To request access to, correction or deletion of your data:',
+        'check_del_1': 'Write to <a href="{m}">soporte@zentrix.company</a> with the subject <em>Data request — Zentrix Check</em>, or tell the security administrator.',
+        'check_del_s': 'Data request — Zentrix Check',
+        'check_del_2': 'Include your name, your username and your site (or, if you don’t use the app, which gate and on what date your vehicle or load went through), and whether you want to <strong>see</strong>, <strong>correct</strong> or <strong>delete</strong> your data.',
+        'check_del_f': 'What is deleted, what is kept because of a legal obligation and for how long is in <a href="{priv}#c7">clause 7 of the privacy policy</a>. <strong>Leaving the phone or uninstalling the app doesn’t delete anything from the server</strong>, and signed records cannot be changed: if something is wrong, it is corrected with a note.',
+        'check_app': 'Zentrix Check (<code>com.leiros.check</code>), Android only.',
+        'check_manual': 'The <a href="{docs}">guard manual</a> (in Spanish) explains setting up the phone, a truck leaving, receipts, keys, assets and what to do without a signal step by step.',
+        'check_desc': 'Google Play (coming soon)',
         'ficha': 'About the app', 'f_app': 'Application', 'f_desc': 'Download', 'f_resp': 'Responsible for the app', 'f_dir': 'Legal address',
         'f_correo': 'Support email', 'f_tel': 'Telephone', 'f_resp_t': 'Response time', 'f_docs': 'Documents',
         'work_app': 'Zentrix Work (<code>com.leiros.guuaowork</code>), for Android.',
@@ -194,10 +255,15 @@ def _ficha(lang, prod, G):
     t = TX[lang]
     L = G.Lx
     tiendas = G.TIENDAS[prod]
-    descargas = [f'<a href="{tiendas["play"]}" data-zx-store="play">Google Play</a>']
+    descargas = ([f'<a href="{tiendas["play"]}" data-zx-store="play">Google Play</a>'] if tiendas.get('play')
+                 else [t.get(f'{prod}_desc', 'Google Play')])
     if tiendas.get('appstore'):
         descargas.append(f'<a href="{tiendas["appstore"]}" data-zx-store="appstore">App Store</a>')
-    if prod == 'work':
+    if prod == 'check':
+        filas = [(t['f_app'], t['check_app']), (t['f_desc'], ' · '.join(descargas)), (t['f_resp'], 'GUUAO LLC'),
+                 (t['f_correo'], '<a href="mailto:soporte@zentrix.company">soporte@zentrix.company</a>'),
+                 (t['f_docs'], f'<a href="{L("/check/privacidad/", lang)}">{t["priv"]}</a> · <a href="{L("/check/terminos/", lang)}">{t["term_w"]}</a> · <a href="{L("/check/docs/", lang)}">{t["man_w"]}</a>')]
+    elif prod == 'work':
         filas = [(t['f_app'], t['work_app']), (t['f_desc'], ' · '.join(descargas)), (t['f_resp'], 'GUUAO LLC'),
                  (t['f_correo'], '<a href="mailto:soporte@zentrix.company">soporte@zentrix.company</a>'),
                  (t['f_docs'], f'<a href="{L("/work/privacidad/", lang)}">{t["priv"]}</a> · <a href="{L("/work/terminos/", lang)}">{t["term_w"]}</a> · <a href="{L("/work/docs/", lang)}">{t["man_w"]}</a>')]
@@ -224,6 +290,7 @@ def cuerpo_soporte(lang, G):
     ruta = L('/soporte/', lang)
     del_w = 'delete-account-work' if en else 'eliminar-cuenta-work'
     del_s = 'delete-account-sales' if en else 'eliminar-cuenta-sales'
+    del_c = 'delete-account-check' if en else 'eliminar-cuenta-check'
     otros, contactar = ('others', 'reach-us') if en else ('otros', 'contactar')
     lineas = {c: (d_en if en else d_es) for c, _, _, d_es, d_en in G.PRODUCTOS}
 
@@ -244,7 +311,7 @@ def cuerpo_soporte(lang, G):
   <div class="envoltura">
     <h2 class="ayuda-selector__t" id="elige-t">{t['elige']}</h2>
     <ul class="ayuda-chips" aria-label="{t['chips_l']}">{''.join(chips)}</ul>
-    <p class="ayuda-atajo"><a href="#{del_w}">{t['eliminar_atajo']}: Zentrix Work</a> · <a href="#{del_s}">{t['eliminar_atajo']}: Zentrix Sales</a></p>
+    <p class="ayuda-atajo"><a href="#{del_w}">{t['eliminar_atajo']}: Zentrix Work</a> · <a href="#{del_s}">{t['eliminar_atajo']}: Zentrix Sales</a> · <a href="#{del_c}">{t['eliminar_atajo']}: Zentrix Check</a></p>
   </div>
 </section>'''
 
@@ -296,14 +363,37 @@ def cuerpo_soporte(lang, G):
   </div></div>
 </section>'''
 
+    faq_c = ''.join(f'<details id="{i}"><summary><h3>{q}</h3></summary><p>{a}</p></details>' for i, q, a in CHECK_FAQ[lang])
+    check = f'''<section class="seccion seccion--gris ayuda-prod" id="check" aria-labelledby="check-t">
+  <div class="envoltura"><div class="doc">
+    {_cabeza_prod('check', 'Zentrix Check', lineas['check'], L('/check/', lang))}
+    <p>{t['check_lead']}</p>
+    <p class="correo-grande"><a href="{mailto('soporte@zentrix.company', t['check_mail_s'])}">soporte@zentrix.company</a></p>
+    <p>{t['check_mail_p']}</p>
+    <h3 id="preguntas-check">{t['preguntas']}</h3>
+    <div class="preguntas">{faq_c}</div>
+    <h3 id="{del_c}" class="ayuda-borrar">{t['eliminar_t']} — Zentrix Check</h3>
+    <p>{t['check_del_p']}</p>
+    <ol class="pasos">
+      <li>{t['check_del_1'].format(m=mailto('soporte@zentrix.company', t['check_del_s']))}</li>
+      <li>{t['check_del_2']}</li>
+      <li>{t['del_3']}</li>
+    </ol>
+    <p>{t['check_del_f'].format(priv=L('/check/privacidad/', lang))}</p>
+    <h3 id="manual-check">{t['manual']}</h3>
+    <p>{t['check_manual'].format(docs=L('/check/docs/', lang))}</p>
+    {_ficha(lang, 'check', G)}
+  </div></div>
+</section>'''
+
     tarjetas = []
-    for clave, ancla, nombre, href in SUITE[2:]:
+    for clave, ancla, nombre, href in SUITE[CON_APP:]:
         linea = lineas[clave]
         contacto = L('/contacto/', lang).split('#')[0] + f'?motivo=soporte&amp;producto={ancla}#motivo'
         tarjetas.append(f'<li class="ayuda-otro" id="{ancla}">{mono(clave, 48)}<div><h3>{nombre}</h3>'
                         f'<p>{linea}. <a href="{L(href, lang)}">{nombre} →</a></p>'
                         f'<a class="ayuda-otro__cta" href="{contacto}">{t["otros_cta"]}</a></div></li>')
-    resto = f'''<section class="seccion seccion--gris" id="{otros}" aria-labelledby="{otros}-t">
+    resto = f'''<section class="seccion" id="{otros}" aria-labelledby="{otros}-t">
   <div class="envoltura">
     <div class="cabeza">
       <span class="antetitulo">{t['otros_ante']}</span>
@@ -320,7 +410,7 @@ def cuerpo_soporte(lang, G):
                f'<a class="boton boton--alterno" href="{L("/contacto/", lang)}">{t["todas"]}</a>')
     cierre = G.BQ.cierre(contactar + '-t', t['contactar_t'], t['contactar_p'], botones).replace(
         '<section ', f'<section id="{contactar}" ', 1)
-    return '\n\n'.join([h, selector, work, sales, resto, cierre, SCRIPT_SOPORTE])
+    return '\n\n'.join([h, selector, work, sales, check, resto, cierre, SCRIPT_SOPORTE])
 
 
 # ── /legal/ ─────────────────────────────────────────────────────────────────
@@ -330,22 +420,28 @@ LEGAL_TX = {
            'priv_t': 'Políticas de privacidad', 'term_t': 'Términos',
            'items_priv': [('/work/privacidad/', 'work', 'Zentrix Work', 'Qué recoge la app del equipo de tienda, para qué y por cuánto tiempo.'),
                           ('/sales/privacidad/', 'sales', 'Zentrix Sales', 'Qué recoge la app de fuerza de ventas, para qué y por cuánto tiempo.'),
+                          ('/check/privacidad/', 'check', 'Zentrix Check', 'Qué registra la app de la garita, para qué y quién lo ve.'),
                           ('/privacidad/', None, 'Sitio web y cookies', 'Qué mide zentrix.company, con consentimiento, y cómo retirarlo.')],
            'items_term': [('/work/terminos/', 'work', 'Zentrix Work', 'Términos de uso de la app.'),
-                          ('/sales/terminos/', 'sales', 'Zentrix Sales', 'Términos de servicio de la app.')],
+                          ('/sales/terminos/', 'sales', 'Zentrix Sales', 'Términos de servicio de la app.'),
+                          ('/check/terminos/', 'check', 'Zentrix Check', 'Términos de uso de la app.')],
            'datos_t': 'Tus datos', 'datos_p': 'Para ver, corregir o eliminar tu cuenta o tus datos de una app, sigue las instrucciones de su página de soporte:',
            'del_w': 'Eliminar tu cuenta de Zentrix Work', 'del_s': 'Eliminar tu cuenta de Zentrix Sales',
+           'del_c': 'Eliminar tu cuenta de Zentrix Check',
            'nota': ''},
     'en': {'ante': 'Legal', 'h1': 'Privacy and terms.',
            'lead': 'Each app has its own privacy policy and terms, because each one handles different data. Here they all are, plus the one for this website.',
            'priv_t': 'Privacy policies', 'term_t': 'Terms',
            'items_priv': [('/work/privacidad/', 'work', 'Zentrix Work', 'What the store team app collects, why and for how long.'),
                           ('/sales/privacidad/', 'sales', 'Zentrix Sales', 'What the field sales app collects, why and for how long.'),
+                          ('/check/privacidad/', 'check', 'Zentrix Check', 'What the gate app records, why and who sees it.'),
                           ('/privacidad/', None, 'Website and cookies', 'What zentrix.company measures, with consent, and how to withdraw it.')],
            'items_term': [('/work/terminos/', 'work', 'Zentrix Work', 'Terms of use of the app.'),
-                          ('/sales/terminos/', 'sales', 'Zentrix Sales', 'Terms of service of the app.')],
+                          ('/sales/terminos/', 'sales', 'Zentrix Sales', 'Terms of service of the app.'),
+                          ('/check/terminos/', 'check', 'Zentrix Check', 'Terms of use of the app.')],
            'datos_t': 'Your data', 'datos_p': 'To see, correct or delete your account or your data in an app, follow the instructions on its support page:',
            'del_w': 'Delete your Zentrix Work account', 'del_s': 'Delete your Zentrix Sales account',
+           'del_c': 'Delete your Zentrix Check account',
            'nota': '<p class="apagado">The English texts are courtesy translations; the Spanish version is the binding one.</p>'},
 }
 
@@ -383,6 +479,7 @@ def cuerpo_legal(lang, G):
     <ul>
       <li><a href="{L('/soporte/#eliminar-cuenta-work', lang)}">{t['del_w']}</a></li>
       <li><a href="{L('/soporte/#eliminar-cuenta-sales', lang)}">{t['del_s']}</a></li>
+      <li><a href="{L('/soporte/#eliminar-cuenta-check', lang)}">{t['del_c']}</a></li>
     </ul>
   </div></div>
 </section>'''

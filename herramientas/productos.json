@@ -11,5 +11,9 @@
     "ios": "com.leiros.vendoo",
     "play": "https://play.google.com/store/apps/details?id=com.leiros.vendoo",
     "appstore": "https://apps.apple.com/us/app/vendoo/id6811065669"
+  },
+  "check": {
+    "nombre": "Zentrix Check",
+    "android": "com.leiros.check"
   }
 }
