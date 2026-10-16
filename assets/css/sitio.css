@@ -970,6 +970,16 @@ h3 { font-weight: 700; letter-spacing: -0.012em; }
 /* Rótulos pequeños con forma de titular: siguen en Inter, son interfaz. */
 .pie h2, .pie h3, .indice > p, .indice > h2, .destacado h3 { font-family: inherit; }
 
+/* Objetivos táctiles de 48 × 48 px en pantallas estrechas (táctiles): cabecera, barra de producto,
+   selector de idioma y enlaces del pie. En escritorio no cambia nada. */
+@media (max-width: 899px) {
+  .nav-js .nav__abrir { width: 48px; height: 48px; }
+  .logo { min-height: 48px; }
+  .idioma a, .pie__idioma a { min-width: 48px; min-height: 48px; }
+  .producto-barra a, .producto-barra--fina a { min-height: 48px; }
+  .pie li > a, .pie__cookies { display: inline-flex; align-items: center; min-height: 48px; min-width: 48px; }
+  .aliado__tag { font-size: .75rem; }
+}
 /* Buscador: la pastilla de la cabecera (assets/js/buscador.js). La ventana está en buscador.css. */
 #zx-buscar { display: flex; align-items: center; margin-left: auto; min-width: 48px; min-height: 48px; }
 .zxb-pastilla {

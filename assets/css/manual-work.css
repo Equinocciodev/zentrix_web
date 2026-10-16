@@ -290,3 +290,12 @@ body.manual-zx .seccion--manual { padding-top: 32px; }
   .manual__arbol, .manual__aqui, .saltos, .cabecera, .pie { display: none; }
   .manual { display: block; }
 }
+
+/* Móvil: el texto de los pasos y las respuestas a 16 px, y el índice lateral y las migas con
+   objetivos táctiles de 48 px. */
+@media (max-width: 899px) {
+  .manual-pasos p, .pregunta p { font-size: 1rem; }
+  .arbol a { min-height: 48px; align-items: center; }
+  .miga a { display: inline-flex; align-items: center; min-height: 48px; }
+  .aqui a { display: flex; align-items: center; min-height: 48px; }
+}
