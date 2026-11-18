@@ -386,7 +386,9 @@ def insignias(prod, lang):
         alt = 'Get it on Google Play' if en else 'Disponible en Google Play'
         w = 161 if en else 162
         out.append(f'<a class="tienda" href="{d["play"]}" data-zx-store="play">'
-                   f'<img src="/assets/img/tiendas/google-play-{lang}.png" alt="{alt}" width="{w}" height="48"></a>')
+                   f'<img src="/assets/img/tiendas/google-play-{lang}-2x.webp" '
+                   f'srcset="/assets/img/tiendas/google-play-{lang}-2x.webp 2x, /assets/img/tiendas/google-play-{lang}-3x.webp 3x" '
+                   f'alt="{alt}" width="{w}" height="48"></a>')
     if d.get('appstore'):
         alt = 'Download on the App Store' if en else 'Descárgalo en el App Store'
         out.append(f'<a class="tienda" href="{d["appstore"]}" data-zx-store="appstore">'
