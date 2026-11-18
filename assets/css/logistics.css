@@ -3,8 +3,7 @@
 
 /* Estado de cada módulo: en producción (lima) o en desarrollo (contorno) */
 .lg-estados { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; position: relative; z-index: 1; }
-.lg-estado { display: inline-flex; align-items: center; gap: 6px; font-size: .75rem; font-weight: 700; letter-spacing: .02em;
-  text-transform: uppercase; padding: 4px 10px 4px 8px; border-radius: 999px; line-height: 1.3; vertical-align: middle; }
+.lg-estado { display: inline-flex; align-items: center; gap: 6px; font-size: .75rem; font-weight: 700; letter-spacing: 0; padding: 4px 10px 4px 8px; border-radius: 999px; line-height: 1.3; vertical-align: middle; }
 .lg-estado::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; flex: none; }
 .lg-estado--prod { background: var(--lima); color: var(--negro); }
 .lg-estado--dev { background: transparent; color: var(--texto-2); box-shadow: inset 0 0 0 1.5px currentColor; }
@@ -85,5 +84,4 @@
   .bq-tesela--prota:has(.lg-monitor) { justify-content: flex-start; min-height: 0; }
   .bq-tesela--prota .bq-tesela__arte:has(.lg-monitor) { position: relative; inset: auto; width: 100%; height: auto; margin: 0 0 20px; }
   .bq-tesela--prota .lg-monitor { position: relative; right: auto; top: auto; width: 100%; max-width: 480px; transform: none; }
-  .bq-tesela--prota:hover .lg-monitor { transform: translateY(-4px); }
 }

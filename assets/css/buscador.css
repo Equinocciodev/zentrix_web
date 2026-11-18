@@ -91,7 +91,7 @@
 .zxb-grupo + .zxb-grupo { margin-top: 2px; border-top: 1px solid var(--zxb-borde); padding-top: 8px; }
 .zxb-grupo__cab {
   display: flex; align-items: center; gap: 8px; padding: 6px 12px 6px; font-size: .6875rem; font-weight: 700;
-  letter-spacing: .08em; text-transform: uppercase; color: var(--zxb-texto-3);
+  letter-spacing: 0; color: var(--zxb-texto-3);
 }
 .zxb-grupo__n { font-variant-numeric: tabular-nums; background: var(--zxb-sutil); border-radius: 999px; padding: 2px 7px; letter-spacing: 0; font-weight: 600; }
 .zxb__borrar { margin-left: auto; font: 600 .6875rem/1 "Inter", "Inter reserva", Arial, sans-serif; text-transform: none; letter-spacing: 0; color: var(--zxb-texto-3); background: none; border: 0; padding: 4px 6px; border-radius: 6px; cursor: pointer; }

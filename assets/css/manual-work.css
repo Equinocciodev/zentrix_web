@@ -81,7 +81,7 @@ body.manual-zx .seccion--manual { padding-top: 32px; }
    partida en vendoo). */
 .carril__rotulo {
   display: block; font-size: .72rem; font-weight: 600;
-  letter-spacing: .12em; text-transform: uppercase;
+  letter-spacing: 0;
   color: var(--texto-2); margin: 0 0 10px; padding-inline: 12px;
 }
 .manual__aqui .carril__rotulo { padding-inline: 14px; }
@@ -92,8 +92,7 @@ body.manual-zx .seccion--manual { padding-top: 32px; }
 .arbol li { margin: 0; }
 .arbol li:not(.arbol__grupo) { counter-increment: cap; }
 .arbol__grupo {
-  font-size: .7rem; font-weight: 700; letter-spacing: .1em;
-  text-transform: uppercase; color: var(--texto-2);
+  font-size: .7rem; font-weight: 700; letter-spacing: 0; color: var(--texto-2);
   padding: 0 10px 5px 12px; margin-top: 16px;
 }
 .arbol li:first-child.arbol__grupo { margin-top: 0; }
@@ -222,7 +221,7 @@ body.manual-zx .seccion--manual { padding-top: 32px; }
 .manual__cuerpo .nota { margin: 22px 0; }
 .nota__rotulo {
   display: block; font-size: .72rem; font-weight: 700;
-  letter-spacing: .11em; text-transform: uppercase;
+  letter-spacing: 0;
   color: var(--acento); margin-bottom: 6px;
 }
 .nota--aviso, .nota--clave, .nota--listo {
@@ -244,7 +243,7 @@ body.manual-zx .seccion--manual { padding-top: 32px; }
 .manual-tabla { overflow-x: auto; margin: 0 0 1.4em; }
 .manual-tabla table { border-collapse: collapse; width: 100%; min-width: 300px; font-size: .92rem; }
 .manual-tabla th, .manual-tabla td { text-align: left; vertical-align: top; padding: 9px 12px; border-bottom: 1px solid var(--borde); }
-.manual-tabla th { font-weight: 600; font-size: .8rem; letter-spacing: .05em; text-transform: uppercase; color: var(--texto-2); }
+.manual-tabla th { font-weight: 600; font-size: .8rem; letter-spacing: 0; color: var(--texto-2); }
 .manual-tabla tbody tr:last-child td { border-bottom: 0; }
 
 /* ---------- Preguntas ---------- */
@@ -265,7 +264,7 @@ body.manual-zx .seccion--manual { padding-top: 32px; }
   background: var(--superficie); color: var(--texto);
 }
 .salto:hover { border-color: var(--acento); }
-.salto span { display: block; font-size: .74rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--texto-2); margin-bottom: 3px; }
+.salto span { display: block; font-size: .74rem; font-weight: 600; letter-spacing: 0; color: var(--texto-2); margin-bottom: 3px; }
 .salto b { font-weight: 600; font-size: .98rem; }
 .salto--sig { text-align: right; }
 @media (min-width: 620px) { .salto--sig:only-child { grid-column: 2; } }
@@ -275,7 +274,7 @@ body.manual-zx .seccion--manual { padding-top: 32px; }
 .manual-indice { display: grid; gap: 12px; margin: 0 0 26px; padding: 0; list-style: none; }
 .manual__cuerpo .manual-indice { padding-left: 0; }
 .manual__cuerpo .manual-indice li { margin: 0; }
-.manual__cuerpo h3.manual-grupo { font-size: .76rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; color: var(--texto-2); margin: 26px 0 10px; }
+.manual__cuerpo h3.manual-grupo { font-size: .76rem; font-weight: 700; letter-spacing: 0; color: var(--texto-2); margin: 26px 0 10px; }
 @media (min-width: 620px) { .manual-indice { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .manual-indice a {
   display: block; height: 100%; padding: 15px 18px; text-decoration: none;

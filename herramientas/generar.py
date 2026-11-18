@@ -474,6 +474,22 @@ def barra_producto(ruta):
             '  <div class="envoltura">\n    <ul>\n' + '\n'.join(lis) + '\n    </ul>\n  </div>\n</nav>')
 
 
+# Los titulares (h1–h3) no llevan punto final (unslop, 18-11-2026): «Tu turno, organizado desde el
+# teléfono», no «…teléfono.». Los puntos de dentro se quedan («La marca madre firma. El apellido
+# identifica»), y también «…» y los de abreviaturas. Se aplica a todas las páginas al generar.
+RE_TITULAR = re.compile(r'(<h([1-3])\b[^>]*>)(.*?)(</h\2>)', re.S)
+RE_PUNTO_FINAL = re.compile(r'(?<![.\s])\.((?:\s*</(?:span|em|strong|b|a|i)>)*\s*)$')
+
+
+def sin_punto_final(s):
+    def titular(m):
+        cuerpo = m.group(3)
+        if re.search(r'\b(?:etc|S\.A|C\.A|Inc|Ltd)\.(?:\s*</[a-z]+>)*\s*$', cuerpo):
+            return m.group(0)
+        return m.group(1) + RE_PUNTO_FINAL.sub(r'\1', cuerpo) + m.group(4)
+    return RE_TITULAR.sub(titular, s)
+
+
 def procesar(s, ruta):
     if RE_RUTA_APP.match(ruta) and RE_BARRA.search(s):
         s = RE_BARRA.sub(lambda m: barra_producto(ruta), s, count=1)
@@ -484,6 +500,7 @@ def procesar(s, ruta):
     s = RE_NAV.sub(lambda m: nav(ruta), s, count=1)
     s = RE_PIE.sub(lambda m: pie(ruta), s, count=1)
     s = BQ.aplicar(s, ruta)
+    s = sin_punto_final(s)
     return agentes.head(seo.aplicar(ajustar_head(s, ruta), ruta))
 
 
@@ -1552,7 +1569,7 @@ def e404_bilingue(es, en):
 # así que se pueden cambiar sin tocar nada más), Pagefind (WebAssembly) y GA4 con consentimiento.
 # Ningún atributo on…= en línea: la CSP los bloquearía.
 CSP_FUENTES = ("'self'", "'wasm-unsafe-eval'")
-CSP_TERCEROS = ('https://*.googletagmanager.com', 'https://static.cloudflareinsights.com')
+CSP_TERCEROS = ('https://*.googletagmanager.com',)  # Cloudflare Web Analytics, apagado el 18-11-2026
 RE_CSP = re.compile(r'\n?[ \t]*<meta http-equiv="Content-Security-Policy"[^>]*>')
 RE_ESPECULACION = re.compile(r'\n?[ \t]*<script type="speculationrules">.*?</script>', re.S)
 RE_SCRIPT_EN_LINEA = re.compile(r'<script(\s[^>]*)?>(.*?)</script>', re.S)
@@ -1572,10 +1589,37 @@ def _sha256(texto):
     return "'sha256-" + base64.b64encode(hashlib.sha256(texto.encode('utf-8')).digest()).decode() + "'"
 
 
+# Assets versionados: cada /assets/img/, /assets/css/ y /assets/js/ de los atributos del HTML lleva
+# ?v=<8 del SHA-256 del fichero>. Cloudflare los sirve con un año de caché en el navegador (regla
+# «zentrix: caché de assets»): al cambiar un fichero cambia su ?v= y el nuevo llega solo, sin subir
+# números a mano (las constantes *_V de arriba ya no deciden la URL final). Hay que volver a generar
+# tras tocar un asset (--check lo detecta). No se tocan las URL absolutas (og:image, JSON-LD) ni las
+# fuentes: su URL tiene que ser idéntica a la de @font-face en sitio.css (una fuente nueva, con
+# otro nombre de fichero).
+RE_ETIQUETA = re.compile(r'<[a-zA-Z][^>]*>')
+RE_URL_IMG = re.compile(r'(?<=["\s,])(/assets/(?:img|css|js)/[^"\s?,#]+)(?:\?v=[\w.-]+)?')
+_HUELLAS = {}
+
+
+def _huella(ruta):
+    if ruta not in _HUELLAS:
+        f = RAIZ / ruta.lstrip('/')
+        _HUELLAS[ruta] = hashlib.sha256(f.read_bytes()).hexdigest()[:8] if f.is_file() else None
+    return _HUELLAS[ruta]
+
+
+def versionar_imagenes(s):
+    def url(m):
+        h = _huella(m.group(1))
+        return f'{m.group(1)}?v={h}' if h else m.group(0)
+    return RE_ETIQUETA.sub(lambda t: RE_URL_IMG.sub(url, t.group(0)), s)
+
+
 def seguridad(s):
     """Idempotente: quita la CSP y las reglas de precarga anteriores y las vuelve a poner."""
     if '<head>' not in s:
         return s
+    s = versionar_imagenes(s)
     s = RE_CSP.sub('', s)
     s = RE_ESPECULACION.sub('', s)
     s = re.sub(r'(<script src="/assets/js/buscador\.js\?v=\d+")(?: data-css="[^"]*")?',
