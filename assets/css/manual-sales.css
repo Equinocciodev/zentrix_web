@@ -12,7 +12,8 @@ body.manual-zx {
 body.manual-zx .seccion--manual { padding-top: 32px; }
 
 /* Del sitio anterior de la app (vendoo_web/assets/css/estilo.css): el manual. */
-(el navegador deriva `aspect-ratio: auto 1080 / 2400` de ahí), así que el
+/* Las capturas llevan width y height en el <img>
+   (el navegador deriva `aspect-ratio: auto 1080 / 2400` de ahí), así que el
    hueco se reserva antes de que la imagen llegue y sin repetirlo acá. Un
    `aspect-ratio` explícito más `object-fit: cover` encima era redundante y es
    una cosa menos que WebKit pueda calcular distinto. */

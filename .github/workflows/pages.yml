@@ -47,6 +47,13 @@ jobs:
           python3 herramientas/buscador.py
           npx -y pagefind@1.5.2 --site .
           test -f pagefind/pagefind.js
+      # Sobre la copia que se publica (el repo sigue legible): minifica CSS y JS y pone en línea el
+      # CSS crítico de cada página; la hoja completa carga sin bloquear (herramientas/optimizar.cjs).
+      # Las dependencias van fuera del sitio para que no se publiquen.
+      - name: CSS crítico y minificado
+        run: |
+          npm install --prefix "$RUNNER_TEMP/opt" --no-audit --no-fund beasties@0.5.5 esbuild@0.28.2
+          NODE_PATH="$RUNNER_TEMP/opt/node_modules" node herramientas/optimizar.cjs
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
