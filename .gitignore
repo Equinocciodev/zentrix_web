@@ -3,3 +3,7 @@ buscador/terminos-*.json
 __pycache__/
 .DS_Store
 *.pyc
+
+# Secretos locales (token de Cloudflare): nunca al repo
+.env
+.env.*

@@ -24,7 +24,7 @@ const Beasties = require('beasties').default || require('beasties');
 const RAIZ = process.cwd();
 const SIEMPRE = [
   /(^|[\s,>+~(])\.js\b/, /\.nav-js\b/, /\.nav--abierta\b/, /\.visible\b/, /\.zx-/, /\.zxb-pastilla/,
-  /\.zx-ck/, /\.aviso-idioma/, /\.e404-en\b/, /\[open\]/, /\[hidden\]/, /aria-expanded/, /\.sr\b/,
+  /\.zx-ck/, /\.e404-en\b/, /\[open\]/, /\[hidden\]/, /aria-expanded/, /\.sr\b/,
 ];
 
 function archivos(dir, ext, out = []) {
@@ -69,7 +69,16 @@ async function critico() {
     if (html.includes('http-equiv="refresh"') || !/<link rel="stylesheet" href="\/assets\/css\//.test(html)) continue;
     // bloques.css ya se carga sin bloquear (data-asincrona, con su <noscript>): beasties no la toca.
     html = html.replace(/<link rel="stylesheet" href="\/assets\/css\/bloques\.css[^"]*"[^>]*>/g, (m) => m.replace('<link ', '<link data-beasties-skip '));
+    // Se analiza la página entera (limitarlo a la «primera pantalla» con data-beasties-container
+    // cambiaba el primer pintado en las páginas de producto y la documentación). Pero los paneles
+    // del mega-menú no cuentan: un <details> cerrado oculta su contenido sin CSS, y sus reglas eran
+    // casi un tercio del CSS crítico (el HTML crecía ~10 KB comprimido y el primer pintado tardaba más). Se apartan antes de analizar y se devuelven después.
+    const paneles = [];
+    html = html.replace(/(<details class="mega"[^>]*>\s*<summary[\s\S]*?<\/summary>)([\s\S]*?)(<\/details>)/g,
+      (m, a, panel, z) => { paneles.push(panel); return `${a}<!--ZXMEGA${paneles.length - 1}-->${z}`; });
     let out = await b.process(html);
+    out = out.replace(/<!--ZXMEGA(\d+)-->/g, (m, k) => paneles[+k]);
+    if (/ZXMEGA/.test(out)) throw new Error('panel del mega-menú sin devolver en ' + f);
     out = out.replace(/<link data-beasties-skip /g, '<link ');
     // media-script deja data-beasties-media en los <link> y un <script> en línea que los activa:
     // se cambian por <link media="print" data-asincrona> (lo activa nav.js) y el script se quita,
