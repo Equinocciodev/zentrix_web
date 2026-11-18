@@ -11,6 +11,8 @@
 (function () {
   'use strict';
   var D = document, W = window, H = D.documentElement;
+  // La URL de buscador.css (con su ?v=) la escribe el generador en data-css del <script>.
+  var CSS_URL = (D.currentScript && D.currentScript.getAttribute('data-css')) || '/assets/css/buscador.css';
   if (W.__zxBuscador) return;
   W.__zxBuscador = true;
 
@@ -162,8 +164,9 @@
   hueco.appendChild(pastilla);
 
   /* ---------- estado ---------- */
-  var raiz, caja, input, eco, resto, lista, estado, cerrarBtn;
-  var abierto = false, opener = null, activa = -1, opciones = [];
+  var raiz, input, eco, resto, lista, estado, cerrarBtn;
+  var abierto = false, activa = -1, opciones = [];
+  var cssListo = false;
   var pf = null, pfPromesa = null, pfError = false;
   var terminos = null, terminosPromesa = null, rutasExisten = null;
   var seq = 0, temporizador = 0, temporizadorAnalitica = 0, sugerencia = '', ultimoTermino = '';
@@ -205,12 +208,37 @@
     return terminosPromesa;
   }
 
-  /* ---------- ventana ---------- */
+  /* ---------- hoja de la ventana ----------
+     buscador.css solo hace falta al abrir: se pide en un momento libre tras la carga (o al acercar el
+     puntero o el foco a la pastilla) y la ventana espera a que esté. Así no hay `onload=` en el HTML. */
+  var cssPromesa = null;
+  function cargarCss() {
+    if (cssPromesa) return cssPromesa;
+    var ya = D.querySelector('link[href^="/assets/css/buscador.css"]');
+    if (ya && ya.sheet) { cssPromesa = Promise.resolve(); return cssPromesa; }
+    var link = ya || el('link');
+    cssPromesa = new Promise(function (ok) {
+      link.addEventListener('load', function () { ok(); });
+      link.addEventListener('error', function () { ok(); });
+      setTimeout(ok, 3000); // red lenta: se abre igual
+    });
+    if (!ya) {
+      link.rel = 'stylesheet';
+      link.href = CSS_URL;
+      D.head.appendChild(link);
+    }
+    return cssPromesa;
+  }
+
+  /* ---------- ventana ----------
+     <dialog> modal nativo: el navegador pone la capa superior, deja inerte la página de detrás,
+     encierra el foco, cierra con Esc y con el gesto atrás, y devuelve el foco a quien lo abrió.
+     closedby="any" la cierra al pulsar fuera (con respaldo donde no existe). */
   function construir() {
-    raiz = el('div', 'zxb'); raiz.hidden = true;
+    raiz = el('dialog', 'zxb');
+    raiz.setAttribute('closedby', 'any');
+    raiz.setAttribute('aria-label', TX.etiqueta);
     raiz.innerHTML =
-      '<div class="zxb__velo" data-cerrar></div>' +
-      '<div class="zxb__caja" role="dialog" aria-modal="true" aria-label="' + esc(TX.etiqueta) + '">' +
         '<div class="zxb__campo">' + SVG.lupa +
           '<div class="zxb__entrada">' +
             '<span class="zxb__fantasma" aria-hidden="true"><span class="zxb__eco"></span><span class="zxb__resto"></span></span>' +
@@ -228,10 +256,8 @@
           '<span><kbd>↵</kbd>' + esc(TX.abrir) + '</span>' +
           '<span><kbd>tab</kbd>' + esc(TX.completar) + '</span>' +
           '<span class="zxb__fin"><kbd>esc</kbd>' + esc(TX.salir) + '</span>' +
-        '</div>' +
-      '</div>';
+        '</div>';
     D.body.appendChild(raiz);
-    caja = raiz.querySelector('.zxb__caja');
     input = raiz.querySelector('.zxb__input');
     eco = raiz.querySelector('.zxb__eco');
     resto = raiz.querySelector('.zxb__resto');
@@ -252,19 +278,30 @@
     input.addEventListener('input', function () { alEscribir(false); });
     input.addEventListener('keydown', teclas);
     input.addEventListener('select', pintarFantasma);
-    caja.addEventListener('keydown', function (e) { if (e.key === 'Tab') atrapar(e); if (e.key === 'Escape') { e.preventDefault(); cerrar(); } });
+    // Tab con una sugerencia en gris la acepta; si no, el foco sigue su curso (el modal ya lo encierra).
+    raiz.addEventListener('keydown', function (e) { if (e.key === 'Tab') atrapar(e); });
+    // Esc, el gesto atrás y el clic fuera los cierra el navegador: aquí solo se recoge.
+    raiz.addEventListener('close', alCerrar);
+    if (!('closedBy' in HTMLDialogElement.prototype)) {
+      // Respaldo de closedby="any" (Safari): pulsar y soltar fuera de la caja la cierra.
+      var fuera = function (e) {
+        var r = raiz.getBoundingClientRect();
+        return e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom;
+      };
+      var pulsoFuera = false;
+      raiz.addEventListener('pointerdown', function (e) { pulsoFuera = fuera(e); });
+      raiz.addEventListener('pointerup', function (e) { if (pulsoFuera && fuera(e)) cerrar(); });
+    }
   }
 
   function abrir(q) {
+    if (!cssListo) { cargarCss().then(function () { cssListo = true; abrir(q); }); return; }
     if (!raiz) construir();
     if (abierto) { if (q != null) { input.value = q; alEscribir(true); } input.focus(); return; }
     abierto = true;
-    opener = D.activeElement && D.activeElement !== D.body ? D.activeElement : pastilla;
     raiz.setAttribute('data-tema', paginaOscura() ? 'oscuro' : 'claro');
     input.placeholder = W.matchMedia && W.matchMedia('(max-width: 640px)').matches ? TX.etiqueta : TX.placeholder;
-    raiz.classList.remove('zxb--saliendo');
-    raiz.hidden = false;
-    H.style.overflow = 'hidden';
+    raiz.showModal();
     H.classList.add('zx-quieto'); // la página de detrás no anima mientras la tapa la ventana (INP)
     pastilla.setAttribute('aria-expanded', 'true');
     cargarPagefind(); cargarTerminos();
@@ -275,27 +312,20 @@
   }
 
   function cerrar() {
+    if (abierto && raiz.open) raiz.close(); // dispara «close» → alCerrar
+  }
+
+  function alCerrar() {
     if (!abierto) return;
     abierto = false;
     clearTimeout(temporizador);
     enviarBusqueda();
     pastilla.setAttribute('aria-expanded', 'false');
-    var rm = W.matchMedia && W.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var fin = function () { if (!abierto) { raiz.hidden = true; raiz.classList.remove('zxb--saliendo'); } };
-    if (rm) fin(); else { raiz.classList.add('zxb--saliendo'); setTimeout(fin, 120); }
-    H.style.overflow = '';
     H.classList.remove('zx-quieto');
-    var destino = opener && D.contains(opener) ? opener : pastilla;
-    try { destino.focus({ preventScroll: true }); } catch (e) { pastilla.focus(); }
   }
 
   function atrapar(e) {
-    if (!e.shiftKey && sugerencia && D.activeElement === input) { e.preventDefault(); aceptar(); return; }
-    var f = Array.prototype.filter.call(caja.querySelectorAll('input, button'), function (n) { return n.offsetParent !== null; });
-    if (!f.length) return;
-    var i = f.indexOf(D.activeElement);
-    if (e.shiftKey && i <= 0) { e.preventDefault(); f[f.length - 1].focus(); }
-    else if (!e.shiftKey && i === f.length - 1) { e.preventDefault(); f[0].focus(); }
+    if (!e.shiftKey && sugerencia && D.activeElement === input) { e.preventDefault(); aceptar(); }
   }
 
   /* ---------- autocompletado en gris ---------- */
@@ -618,6 +648,10 @@
     }
   });
   pastilla.addEventListener('click', function () { abrir(); });
+  // La hoja de la ventana se pide antes de que haga falta: al acercarse a la pastilla o en un rato libre.
+  pastilla.addEventListener('pointerenter', cargarCss);
+  pastilla.addEventListener('focus', cargarCss);
+  if (W.requestIdleCallback) W.addEventListener('load', function () { W.requestIdleCallback(cargarCss, { timeout: 4000 }); });
 
   /* ---------- API para otros campos (el buscador de la 404 y el de /soporte/) ---------- */
   W.zxBuscar = { abrir: function (q) { abrir(q != null ? String(q).slice(0, 120) : null); } };

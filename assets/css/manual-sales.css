@@ -82,14 +82,14 @@ blockquote.cita footer { margin-top: 10px; font-size: .86rem; color: var(--tinta
      de estirarse a las dos filas; `sticky` lo pasea dentro del área, que sí
      las abarca. El `top` es el alto de la cabecera pegajosa, el mismo número
      del `scroll-margin-top` de más arriba. */
-  .manual__arbol { position: sticky; top: 84px; align-self: start; max-height: calc(100vh - 104px); overflow-y: auto; padding-inline: 4px; }
+  .manual__arbol { position: sticky; top: 84px; align-self: start; max-height: calc(100vh - 104px); max-height: calc(100dvh - 104px); overflow-y: auto; padding-inline: 4px; }
 }
 /* Tres columnas. El corte es 1260 y no 1080 por medición: a 1080 el texto
    quedaba en 360 px —menos que un teléfono— y las tres columnas dejaban de
    ayudar para empezar a estorbar. */
 @media (min-width: 1260px) {
   .manual { grid-template-columns: 15rem minmax(0, 1fr) 14rem; grid-template-areas: "arbol cabeza aqui" "arbol cuerpo aqui"; }
-  .manual__aqui { position: sticky; top: 84px; align-self: start; max-height: calc(100vh - 104px); overflow-y: auto; padding-inline: 4px; }
+  .manual__aqui { position: sticky; top: 84px; align-self: start; max-height: calc(100vh - 104px); max-height: calc(100dvh - 104px); overflow-y: auto; padding-inline: 4px; }
 }
 
 /* --- El árbol: las doce secciones del manual ---------------------------- */

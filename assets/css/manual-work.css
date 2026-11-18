@@ -63,14 +63,14 @@ body.manual-zx .seccion--manual { padding-top: 32px; }
   .manual { grid-template-columns: 15rem minmax(0, 1fr); grid-template-areas: "arbol cabeza" "arbol aqui" "arbol cuerpo"; }
   .manual__arbol {
     position: sticky; top: calc(var(--cabecera) + 20px); align-self: start;
-    max-height: calc(100vh - var(--cabecera) - 40px); overflow-y: auto; padding-inline: 4px;
+    max-height: calc(100vh - var(--cabecera) - 40px); max-height: calc(100dvh - var(--cabecera) - 40px); overflow-y: auto; padding-inline: 4px;
   }
 }
 @media (min-width: 1260px) {
   .manual { grid-template-columns: 15rem minmax(0, 1fr) 14rem; grid-template-areas: "arbol cabeza aqui" "arbol cuerpo aqui"; }
   .manual__aqui {
     position: sticky; top: calc(var(--cabecera) + 20px); align-self: start;
-    max-height: calc(100vh - var(--cabecera) - 40px); overflow-y: auto; padding-inline: 4px;
+    max-height: calc(100vh - var(--cabecera) - 40px); max-height: calc(100dvh - var(--cabecera) - 40px); overflow-y: auto; padding-inline: 4px;
   }
 }
 

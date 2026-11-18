@@ -542,7 +542,7 @@ def selector_motivo(lang):
       <h2 id="motivo-t">{t['h2']}</h2>
       <p>{t['p']}</p>
     </div>
-    <form class="motivo" id="motivo-form" onsubmit="return false">
+    <form class="motivo" id="motivo-form">
       <fieldset class="motivo__grupo"><legend>{t['motivo']}</legend><div class="motivo__ops">{radios}</div></fieldset>
       <label class="campo motivo__producto">{t['producto']}<select name="producto">{opciones}</select></label>
       {notas}
@@ -554,4 +554,4 @@ def selector_motivo(lang):
     </form>
   </div>
 </section>
-<script src="/assets/js/contacto.js?v=2" defer></script>'''
+<script src="/assets/js/contacto.js?v=3" defer></script>'''

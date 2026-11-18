@@ -3,39 +3,61 @@
    azul #244DFF y lima #C7FA46. */
 
 /* La pastilla de la cabecera está en sitio.css: se pinta con la página; esta hoja (la ventana)
-   se carga sin bloquear el render. */
+   la pide buscador.js antes de abrir, sin bloquear el render. */
 
-/* --- Ventana -------------------------------------------------------------- */
+/* --- Ventana: <dialog> modal nativo (capa superior, sobre el aviso de cookies) ---------- */
 .zxb {
   --zxb-fondo: #FFFFFF; --zxb-texto: #090D12; --zxb-texto-2: rgba(9, 13, 18, .66);
   --zxb-texto-3: rgba(9, 13, 18, .5); --zxb-borde: rgba(9, 13, 18, .09); --zxb-sutil: rgba(9, 13, 18, .04);
   --zxb-activa: rgba(36, 77, 255, .07); --zxb-marca: rgba(199, 250, 70, .55); --zxb-acento: #244DFF;
-  --zxb-velo: rgba(9, 13, 18, .42); --zxb-sombra: 0 32px 80px -24px rgba(9, 13, 18, .45), 0 0 0 1px rgba(9, 13, 18, .06);
+  --zxb-sombra: 0 32px 80px -24px rgba(9, 13, 18, .45), 0 0 0 1px rgba(9, 13, 18, .06);
   --zxb-esqueleto: rgba(9, 13, 18, .07);
-  position: fixed; inset: 0; z-index: 2147483600; /* sobre el aviso de cookies */ display: flex; justify-content: center; align-items: flex-start;
-  padding: min(12vh, 120px) 16px 16px; font-family: "Inter", "Inter reserva", Arial, sans-serif;
+  position: fixed; inset: 0; margin: min(12vh, 120px) auto auto; padding: 0; border: 0;
+  width: calc(100% - 32px); max-width: 640px; max-height: min(640px, calc(100dvh - min(12vh, 120px) - 32px));
+  flex-direction: column; background: var(--zxb-fondo); border-radius: 18px;
+  box-shadow: var(--zxb-sombra); overflow: hidden;
+  font-family: "Inter", "Inter reserva", Arial, sans-serif;
   color: var(--zxb-texto); -webkit-font-smoothing: antialiased; line-height: 1.45;
+  /* Salida: transición al estado cerrado (display y overlay discretos para la capa superior). */
+  opacity: 0;
+  transition-property: opacity, transform, display, overlay;
+  transition-duration: .12s;
+  transition-timing-function: ease-in;
+  transition-behavior: allow-discrete;
 }
-.zxb[hidden] { display: none; }
+/* display solo con [open]: sin él, el estado cerrado dejaría de ocultarla. */
+.zxb[open] {
+  display: flex; opacity: 1;
+  transition-duration: .18s; transition-timing-function: cubic-bezier(.2, .8, .2, 1);
+  @starting-style { opacity: 0; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .zxb { transform: translateY(-4px) scale(.985); }
+  .zxb[open] { transform: none; @starting-style { transform: translateY(-6px) scale(.985); } }
+}
 .zxb[data-tema="oscuro"] {
   --zxb-fondo: #090D12; --zxb-texto: #FFFFFF; --zxb-texto-2: rgba(255, 255, 255, .7);
   --zxb-texto-3: rgba(255, 255, 255, .52); --zxb-borde: rgba(255, 255, 255, .09); --zxb-sutil: rgba(255, 255, 255, .05);
   --zxb-activa: rgba(255, 255, 255, .1); --zxb-marca: rgba(199, 250, 70, .28); --zxb-acento: #C7FA46;
-  --zxb-velo: rgba(0, 0, 0, .6); --zxb-sombra: 0 32px 80px -24px rgba(0, 0, 0, .8), 0 0 0 1px rgba(255, 255, 255, .08);
+  --zxb-sombra: 0 32px 80px -24px rgba(0, 0, 0, .8), 0 0 0 1px rgba(255, 255, 255, .08);
   --zxb-esqueleto: rgba(255, 255, 255, .08);
   color-scheme: dark;
 }
-.zxb__velo { position: absolute; inset: 0; background: var(--zxb-velo); -webkit-backdrop-filter: blur(6px) saturate(1.2); backdrop-filter: blur(6px) saturate(1.2); animation: zxb-fundido .16s ease-out both; }
-.zxb__caja {
-  position: relative; width: 100%; max-width: 640px; max-height: min(640px, calc(100vh - min(12vh, 120px) - 32px));
-  display: flex; flex-direction: column; background: var(--zxb-fondo); border-radius: 18px;
-  box-shadow: var(--zxb-sombra); overflow: hidden; animation: zxb-entrada .18s cubic-bezier(.2, .8, .2, 1) both;
+/* El velo es el ::backdrop. Los colores van escritos: no todos los navegadores heredan
+   las variables del <dialog> en su ::backdrop. */
+.zxb::backdrop {
+  background-color: rgba(9, 13, 18, 0);
+  -webkit-backdrop-filter: blur(6px) saturate(1.2); backdrop-filter: blur(6px) saturate(1.2);
+  transition-property: background-color, display, overlay;
+  transition-duration: .12s;
+  transition-behavior: allow-discrete;
 }
-.zxb.zxb--saliendo .zxb__velo { animation: zxb-fundido .12s ease-in reverse both; }
-.zxb.zxb--saliendo .zxb__caja { animation: zxb-salida .12s ease-in both; }
-@keyframes zxb-fundido { from { opacity: 0; } to { opacity: 1; } }
-@keyframes zxb-entrada { from { opacity: 0; transform: translateY(-6px) scale(.985); } to { opacity: 1; transform: none; } }
-@keyframes zxb-salida { to { opacity: 0; transform: translateY(-4px) scale(.985); } }
+.zxb[open]::backdrop { background-color: rgba(9, 13, 18, .42); transition-duration: .16s; @starting-style { background-color: rgba(9, 13, 18, 0); } }
+.zxb[data-tema="oscuro"][open]::backdrop { background-color: rgba(0, 0, 0, .6); @starting-style { background-color: rgba(0, 0, 0, 0); } }
+/* La página de detrás no se desplaza: el gesto de scroll no pasa ni desde la ventana ni desde el velo
+   (sin tocar el overflow de <html>, que movía el ancho de la página y la posición de scroll). */
+.zxb:modal { overscroll-behavior: contain; }
+.zxb::backdrop { overflow: hidden; overscroll-behavior: contain; }
 
 .zxb-sr { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
 
@@ -136,8 +158,7 @@
 
 /* Móvil: pantalla completa */
 @media (max-width: 640px) {
-  .zxb { padding: 0; }
-  .zxb__caja { max-width: none; max-height: none; height: 100%; height: 100dvh; border-radius: 0; animation-name: zxb-entrada-movil; }
+  .zxb { margin: 0; width: 100%; max-width: none; height: 100%; height: 100dvh; max-height: none; border-radius: 0; }
   .zxb__campo { padding: 0 8px 0 16px; min-height: 56px; }
   .zxb__input, .zxb__fantasma { font-size: 1rem; padding: 16px 0; }
   .zxb__cerrar { display: none; }
@@ -147,10 +168,14 @@
   .zxb-op { padding: 12px; }
   .zxb__cuerpo { padding-bottom: max(16px, env(safe-area-inset-bottom)); }
 }
-@keyframes zxb-entrada-movil { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@media (max-width: 640px) and (prefers-reduced-motion: no-preference) {
+  .zxb { transform: translateY(12px); }
+  .zxb[open] { transform: none; @starting-style { transform: translateY(12px); } }
+}
 
 @media (prefers-reduced-motion: reduce) {
-  .zxb__velo, .zxb__caja, .zxb.zxb--saliendo .zxb__velo, .zxb.zxb--saliendo .zxb__caja, .zxb-esq i { animation: none !important; }
+  .zxb, .zxb[open], .zxb::backdrop, .zxb[open]::backdrop { transition-duration: .1s; }
+  .zxb-esq i { animation: none !important; }
   .zxb-op, .zxb-op::before, .zxb-atajo, .zxb-pastilla, .zxb-op__ir { transition: none !important; }
 }
 @media (forced-colors: active) {
