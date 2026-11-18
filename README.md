@@ -146,6 +146,12 @@ Lo que antes se llamaba «Manual» es la **«Documentación»** de cada app (en 
 
 El sitio se publica con **GitHub Pages** desde **GitHub Actions**: `.github/workflows/pages.yml` es la plantilla oficial «Static HTML» y se dispara con cada push a `main` o a mano. No se publica con Cloudflare Pages; Cloudflare solo lleva el DNS.
 
+Antes de subir, el workflow optimiza **la copia que se publica** (el repo no cambia) con `herramientas/optimizar.cjs`:
+
+- Minifica `assets/css/*.css` y `assets/js/*.js` con esbuild (`target: esnext`, no reescribe CSS moderno).
+- CSS crítico con beasties: cada página lleva en un `<style>` las reglas de `sitio.css` (y `manual-*.css`) que usa, más todas las `@font-face` (Geist se usa vía `var(--display)` y beasties no la vería). La hoja completa pasa a `<link media="print" data-asincrona>`, que activa `nav.js`, con `<noscript>` de respaldo: sin `onload=` ni scripts en línea nuevos para la CSP. Las clases que pone JavaScript (`.js`, `.nav-js`, `.visible`, `.zx-…`, la pastilla del buscador, el aviso de cookies…) van siempre en el CSS crítico (`SIEMPRE`); **una clase nueva que se añada solo desde JS y afecte a la primera pantalla hay que sumarla ahí**.
+- Probar en local, sobre una copia: lo del buscador (arriba) y después `npm install --prefix /tmp/opt beasties@0.5.5 esbuild@0.28.2 && NODE_PATH=/tmp/opt/node_modules node herramientas/optimizar.cjs`.
+
 Ajustes de Pages del repo, ya configurados: Source = GitHub Actions, dominio personalizado `zentrix.company` (verificado) y Enforce HTTPS. El fichero `CNAME` contiene `zentrix.company`.
 
 DNS en Cloudflare (cuenta de GitHub Pages: la organización **Equinocciodev**, es decir, `equinocciodev.github.io`):

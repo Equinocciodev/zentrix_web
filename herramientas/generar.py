@@ -35,7 +35,7 @@ NAV_JS_V = 7
 SITIO_JS_V = 2       # sube al cambiar assets/js/sitio.js
 SITIO_CSS_V = 26     # sube al cambiar assets/css/sitio.css
 BUSCADOR_CSS_V = 4   # sube al cambiar assets/css/buscador.css
-MANUAL_CSS_V = 3     # sube al cambiar assets/css/manual-work.css o manual-sales.css
+MANUAL_CSS_V = 4     # sube al cambiar assets/css/manual-work.css o manual-sales.css
 BUSCADOR_JS_V = 5    # sube al cambiar assets/js/buscador.js
 ANALITICA_JS_V = 2   # sube al cambiar assets/js/analitica.js (aviso de cookies)
 
