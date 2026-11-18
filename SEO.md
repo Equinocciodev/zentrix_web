@@ -193,7 +193,7 @@ Otras búsquedas que cubren las páginas como secundarias: «app para vendedores
 - [x] JSON-LD validado por script (estructura y campos obligatorios por plantilla) y contra el vocabulario de schema.org y los requisitos de Google (`validar_jsonld.py`).
 - [x] Imágenes con `alt` (vacío en las decorativas), `width` y `height`; `<svg>` en línea con `aria-hidden` o `role="img"` + `aria-label` (`verificar_seo.py` falla si no); enlaces internos y anclas sin romper.
 - [x] `llms.txt` (y `/en/llms.txt`) según llmstxt.org, con enlaces Markdown y `## Optional`; `llms-full.txt` con los enlaces de cada página. Auditoría `llms-txt` de Lighthouse en verde.
-- [x] Lighthouse SEO 92: el único fallo es `robots.txt`, que Lighthouse da por «directiva desconocida» en la línea `Content-Signal` (decisión de Victor del 14-10-2026, ver README «Agentes de IA»). Es un estándar de Cloudflare que Google ignora sin error; se deja. Con ella fuera daría 100.
+- [x] Lighthouse SEO 100: la línea `Content-Signal` de `robots.txt`, que Lighthouse daba por «directiva desconocida» (92), se quitó el 18-11-2026 (decisión de Victor); queda en comentario.
 - [x] Correos en claro (`hola@` y `soporte@` en `mailto:` y en el JSON-LD): a propósito, para que los lean buscadores y modelos (por eso se pide apagar la ofuscación de Cloudflare). Ofuscarlos con JavaScript no protegería nada —están en el JSON-LD— y contradiría esa decisión. Las herramientas que lo marcan como riesgo lo hacen por regla general.
 - [x] Sin `ads.txt`: el sitio no tiene anuncios; no aplica.
 - [ ] Redes sociales: poner en `herramientas/redes.json` las URL de los perfiles que existan (LinkedIn, Instagram, X, YouTube, Facebook) y ejecutar `generar.py`; salen en el pie y en `sameAs`. Vacío = no se pinta nada (Victor).

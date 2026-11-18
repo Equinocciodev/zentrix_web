@@ -1,7 +1,6 @@
 """Sistema de bloques de contenido de zentrix.company (documentado en BLOQUES.md).
 
-Seis variantes con prefijo `bq-`, todas con su CSS en assets/css/bloques.css y un JS mínimo
-(assets/js/bloques.js, solo el brillo que sigue al cursor):
+Seis variantes con prefijo `bq-`, todas con su CSS en assets/css/bloques.css (sin JS propio):
 
     1. pilares()  · tarjetas con número gigante recortado y la barra lima con el corte de la z
     2. bento()    · mosaico de enlaces con una tarjeta protagonista e ilustración propia
@@ -34,7 +33,6 @@ CSS_ONLOAD = ('<link rel="stylesheet" href="/assets/css/bloques.css?v=4" media="
               '<noscript><link rel="stylesheet" href="/assets/css/bloques.css?v=4"></noscript>')
 CSS = ('<link rel="stylesheet" href="/assets/css/bloques.css?v=4" media="print" data-asincrona>'
        '<noscript><link rel="stylesheet" href="/assets/css/bloques.css?v=4"></noscript>')
-JS = '<script src="/assets/js/bloques.js?v=1" defer></script>'
 
 # ── Piezas de marca ─────────────────────────────────────────────────────────
 # Corte diagonal de la z: la barra lima de los monogramas termina en un bisel de 48,7°
@@ -175,7 +173,7 @@ def pilares(items, variante='', arte='', etiqueta=''):
         es_prota = prota and i == 0
         extra = ' bq-pilar--prota' if es_prota else ''
         arte_html = f'<span class="bq-pilar__arte" aria-hidden="true">{arte}</span>' if es_prota and arte else ''
-        lis.append(f'<li class="bq-pilar{extra} bq-brillo revela {clases[i]}" style="--retardo:{(i % 4) * .07:.2f}s">'
+        lis.append(f'<li class="bq-pilar{extra} revela {clases[i]}" style="--retardo:{(i % 4) * .07:.2f}s">'
                    f'<span class="bq-pilar__num" aria-hidden="true">{i + 1:02d}</span>{arte_html}'
                    f'{barra()}{ante}<h3>{t}</h3><p>{p}</p></li>')
     mod = ''.join(f' bq-pilares--{v}' for v in variante.split() if v)
@@ -197,7 +195,7 @@ def bento(items, variante='', ir='Conocer más'):
         ext = ' target="_blank" rel="noopener"' if x.get('externo') else ''
         flecha = EXTERNO if x.get('externo') else FLECHA
         texto = f'<p class="bq-tesela__p">{x["texto"]}</p>' if x.get('texto') else ''
-        lis.append(f'<li class="{clases[i]}"><a class="bq-tesela{p} bq-brillo revela" style="--retardo:{(i % 3) * .07:.2f}s" '
+        lis.append(f'<li class="{clases[i]}"><a class="bq-tesela{p} revela" style="--retardo:{(i % 3) * .07:.2f}s" '
                    f'href="{x["href"]}"{ext}><span class="bq-tesela__arte" aria-hidden="true">{x["arte"]}</span>'
                    f'<h3 class="bq-tesela__t">{x["titulo"]}</h3>{texto}{x.get("extra", "")}'
                    f'<span class="bq-tesela__ir">{x.get("ir", ir)}{flecha}</span></a></li>')
@@ -228,7 +226,7 @@ def caso(nombre, rubro, texto, enlaces, i=0):
     """Caso de cliente: inicial gigante en contorno, como los números de los pilares."""
     inicial = ''.join(w[0] for w in nombre.split()[:2]).upper()
     links = ''.join(f'<li><a href="{h}">{n}{FLECHA}</a></li>' for h, n in enlaces)
-    return (f'<article class="bq-caso bq-brillo revela" style="--retardo:{i * .08:.2f}s">'
+    return (f'<article class="bq-caso revela" style="--retardo:{i * .08:.2f}s">'
             f'<span class="bq-caso__inicial" aria-hidden="true">{inicial}</span>'
             f'<h3>{nombre}</h3><p class="bq-caso__rubro">{rubro}</p>{barra()}<p>{texto}</p>'
             f'<ul class="bq-caso__enlaces">{links}</ul></article>')
@@ -529,8 +527,9 @@ def aplicar(s, ruta):
     s = RE_CIFRAS.sub(lambda m: _cifras(m, ruta), s)
     s = RE_LLAMADA.sub(_llamada, s)
     s = RE_NOTA.sub(_nota, s)
-    if 'bq-brillo' in s and 'bloques.js' not in s:
-        s = s.replace('</head>', f'  {JS}\n</head>', 1)
+    # El brillo que seguía al cursor (bloques.js, .bq-brillo) se quitó el 18-11-2026 (unslop).
+    s = s.replace(' bq-brillo', '')
+    s = re.sub(r'\n?[ \t]*<script src="/assets/js/bloques\.js[^"]*" defer></script>', '', s)
     return s
 
 

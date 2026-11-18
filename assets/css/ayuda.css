@@ -11,7 +11,7 @@
 
 /* ── Chips de producto ── */
 .ayuda-selector { padding-block: 40px; }
-.ayuda-selector__t { font-size: .8125rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--texto-2); margin: 0 0 16px; }
+.ayuda-selector__t { font-size: .8125rem; font-weight: 700; letter-spacing: 0; color: var(--texto-2); margin: 0 0 16px; }
 .ayuda-chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
 .ayuda-chip { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 8px 16px 8px 8px; border: 1px solid var(--borde);
   border-radius: 999px; background: var(--blanco); color: var(--texto); font-weight: 600; text-decoration: none;

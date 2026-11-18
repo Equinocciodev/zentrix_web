@@ -80,8 +80,7 @@
 @media (prefers-reduced-motion: no-preference) {
   .e404-cubo { animation: e404-cae .6s var(--rebote) backwards; animation-delay: calc(var(--i) * 45ms); }
   .e404-pieza { animation: e404-sale .9s var(--facil) .75s backwards; }
-  .e404-pieza__cubo { animation: e404-flota 4.6s ease-in-out 1.7s infinite; }
-  .e404-rastro { animation: e404-aparece .4s 1.4s backwards, e404-hormigas 1.4s linear 1.4s infinite; }
+  .e404-rastro { animation: e404-aparece .4s 1.4s backwards; }
   .e404-hueco { animation: e404-aparece .4s .8s backwards; }
   /* Al pasar el ratón la pieza vuelve a su sitio. */
   @media (hover: hover) {
@@ -152,8 +151,6 @@
   .e404-pieza-suite:nth-child(even) { --dx: 12px; --dy: 30px; --r: 6deg; }
   .e404-pieza-suite:nth-child(3n) { --dx: 4px; --dy: 18px; --r: -9deg; }
   @media (hover: hover) {
-    .e404-pieza-suite:hover { transform: translateY(-6px); }
-    .e404-pieza-suite:hover img { transform: rotate(-8deg) scale(1.06); }
     .e404-pieza-suite:hover > .e404-flecha { transform: translateX(4px); }
   }
 }

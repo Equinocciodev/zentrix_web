@@ -2,8 +2,8 @@
 
 Lo llama `generar.py` y escribe:
 
-- `robots.txt`: reglas para crawlers (incluidos los de IA, nombrados uno a uno) y la línea
-  `Content-Signal` (https://contentsignals.org/), cuyo valor es la constante `CONTENT_SIGNAL`.
+- `robots.txt`: reglas para crawlers (incluidos los de IA, nombrados uno a uno). `Content-Signal`
+  (constante `CONTENT_SIGNAL`) va solo en comentario desde el 18-11-2026.
 - `/.well-known/agent-skills/index.json` y `/.well-known/agent-skills/zentrix/SKILL.md`
   (Agent Skills Discovery v0.2.0): una skill para que un agente encuentre y cite bien la
   información pública de Zentrix. El `digest` se calcula aquí.
@@ -58,15 +58,14 @@ def head(s):
 
 
 def robots():
-    grupo = f'Content-Signal: {CONTENT_SIGNAL}\nAllow: /\n'
+    grupo = 'Allow: /\n'
     ia = ''.join(f'User-agent: {ua}\n' for ua in CRAWLERS_IA)
     return f'''# robots.txt de zentrix.company. Lo escribe herramientas/agentes.py: no se edita a mano.
 #
-# Content-Signal (https://contentsignals.org/) declara para qué se puede usar el contenido:
-#   search   = indexarlo y mostrarlo en resultados de búsqueda (con enlace y extracto);
-#   ai-input = usarlo como entrada de un modelo para responder en el momento (RAG, grounding);
-#   ai-train = entrenar o ajustar modelos de IA.
-# Valor decidido por Zentrix el 14-10-2026: se permite todo.
+# Se permite todo, también a los crawlers de IA. La línea Content-Signal
+# (https://contentsignals.org/) se quitó el 18-11-2026 (decisión de Victor): Lighthouse SEO la da
+# por «directiva desconocida». Queda como referencia, en comentario:
+# Content-Signal: {CONTENT_SIGNAL}
 
 User-agent: *
 {grupo}

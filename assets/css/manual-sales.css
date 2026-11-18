@@ -102,7 +102,7 @@ blockquote.cita footer { margin-top: 10px; font-size: .86rem; color: var(--tinta
    enlaces de abajo. */
 .carril__rotulo {
   display: block; font-size: .72rem; font-weight: 600;
-  letter-spacing: .12em; text-transform: uppercase;
+  letter-spacing: 0;
   color: var(--tinta-suave); margin: 0 0 10px; padding-inline: 12px;
 }
 .manual__aqui .carril__rotulo { padding-inline: 14px; }
@@ -116,8 +116,7 @@ blockquote.cita footer { margin-top: 10px; font-size: .86rem; color: var(--tinta
 .arbol li { margin: 0; }
 .arbol li:not(.arbol__grupo) { counter-increment: cap; }
 .arbol__grupo {
-  font-size: .7rem; font-weight: 700; letter-spacing: .1em;
-  text-transform: uppercase; color: var(--tinta-suave);
+  font-size: .7rem; font-weight: 700; letter-spacing: 0; color: var(--tinta-suave);
   padding: 0 10px 5px 12px; margin-top: 16px;
 }
 .arbol li:first-child.arbol__grupo { margin-top: 0; }
@@ -230,7 +229,7 @@ blockquote.cita footer { margin-top: 10px; font-size: .86rem; color: var(--tinta
   text-align: left; vertical-align: top; padding: 9px 12px;
   border-bottom: 1px solid var(--borde-suave);
 }
-.manual-tabla th { font-weight: 600; font-size: .82rem; letter-spacing: .04em; text-transform: uppercase; color: var(--tinta-suave); }
+.manual-tabla th { font-weight: 600; font-size: .82rem; letter-spacing: 0; color: var(--tinta-suave); }
 .manual-tabla tbody tr:last-child td { border-bottom: 0; }
 /* En móvil la etiqueta en negrita sin cortes se comía el ancho y dejaba
    las otras dos columnas en ~75 px, una palabra por línea: ahí sí parte. */
@@ -245,7 +244,7 @@ blockquote.cita footer { margin-top: 10px; font-size: .86rem; color: var(--tinta
 .manual__cuerpo .nota, .manual__cabeza .nota { margin: 22px 0; }
 .nota__rotulo {
   display: block; font-size: .72rem; font-weight: 700;
-  letter-spacing: .11em; text-transform: uppercase;
+  letter-spacing: 0;
   color: var(--acento); margin-bottom: 6px;
 }
 .nota--aviso .nota__rotulo { color: var(--alerta); }
@@ -289,14 +288,14 @@ blockquote.cita footer { margin-top: 10px; font-size: .86rem; color: var(--tinta
   background: var(--superficie); color: var(--tinta);
 }
 .salto:hover { border-color: var(--acento); text-decoration: none; }
-.salto span { display: block; font-size: .74rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--tinta-suave); margin-bottom: 3px; }
+.salto span { display: block; font-size: .74rem; font-weight: 600; letter-spacing: 0; color: var(--tinta-suave); margin-bottom: 3px; }
 .salto b { font-weight: 600; font-size: .98rem; }
 .salto--sig { text-align: right; }
 .salto--sig:only-child { grid-column: 2; }
 
 /* --- La portada del manual ------------------------------------------------ */
 .manual-indice { display: grid; gap: 12px; margin: 0 0 26px; padding: 0; list-style: none; }
-.manual__cuerpo h3.manual-grupo { font-size: .76rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; color: var(--tinta-suave); margin: 26px 0 10px; }
+.manual__cuerpo h3.manual-grupo { font-size: .76rem; font-weight: 700; letter-spacing: 0; color: var(--tinta-suave); margin: 26px 0 10px; }
 @media (min-width: 620px) { .manual-indice { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .manual-indice a {
   display: block; height: 100%; padding: 15px 18px; text-decoration: none;
@@ -333,3 +332,6 @@ blockquote.cita footer { margin-top: 10px; font-size: .86rem; color: var(--tinta
   .miga a { display: inline-flex; align-items: center; min-height: 48px; }
   .aqui a { display: flex; align-items: center; min-height: 48px; }
 }
+
+/* Icono de línea junto a un rótulo (el candado de la nota interna): a la altura del texto. */
+.manual-tabla .icono-linea { vertical-align: -2px; margin-left: 2px; color: var(--tinta-suave); }
