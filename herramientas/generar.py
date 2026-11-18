@@ -11,6 +11,8 @@ El resto de las páginas (productos, legales, documentación) se escriben a mano
 generador solo reescribe el `<nav class="nav">` de la cabecera, el pie y las etiquetas de
 idioma del `<head>`.
 """
+import base64
+import hashlib
 import json
 import pathlib
 import re
@@ -29,12 +31,12 @@ import ayuda  # noqa: E402  — /soporte/, /legal/ y el selector de motivo de /c
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 MULTI = (RAIZ / 'en' / 'index.html').exists()  # fase 3: el sitio completo en inglés bajo /en/
 SALIDA = {}  # ruta de fichero → contenido (páginas generadas)
-NAV_JS_V = 6
+NAV_JS_V = 7
 SITIO_JS_V = 2       # sube al cambiar assets/js/sitio.js
-SITIO_CSS_V = 25     # sube al cambiar assets/css/sitio.css
-BUSCADOR_CSS_V = 3   # sube al cambiar assets/css/buscador.css
-MANUAL_CSS_V = 2     # sube al cambiar assets/css/manual-work.css o manual-sales.css
-BUSCADOR_JS_V = 4    # sube al cambiar assets/js/buscador.js
+SITIO_CSS_V = 26     # sube al cambiar assets/css/sitio.css
+BUSCADOR_CSS_V = 4   # sube al cambiar assets/css/buscador.css
+MANUAL_CSS_V = 3     # sube al cambiar assets/css/manual-work.css o manual-sales.css
+BUSCADOR_JS_V = 5    # sube al cambiar assets/js/buscador.js
 ANALITICA_JS_V = 2   # sube al cambiar assets/js/analitica.js (aviso de cookies)
 
 # Inglés anterior a /en/: solo Zentrix Sales, en /sales/en/ (se usa mientras no haya MULTI)
@@ -239,10 +241,10 @@ def nav(ruta):
         f'<button class="nav__abrir" type="button" aria-expanded="false" aria-controls="nav-panel">'
         f'<span class="nav__hamburguesa" aria-hidden="true"></span><span class="sr">{t["menu"]}</span></button>'
         f'<div class="nav__panel" id="nav-panel"><ul class="nav__lista">'
-        f'<li><details class="mega"><summary{act("productos")}>{t["productos"]}</summary>{mega_productos(lang, actual)}</details></li>'
-        f'<li><details class="mega"><summary{act("soluciones")}>{t["soluciones"]}</summary>{mega_soluciones(lang)}</details></li>'
+        f'<li><details class="mega" name="mega"><summary{act("productos")}>{t["productos"]}</summary>{mega_productos(lang, actual)}</details></li>'
+        f'<li><details class="mega" name="mega"><summary{act("soluciones")}>{t["soluciones"]}</summary>{mega_soluciones(lang)}</details></li>'
         f'<li><a href="{Lx("/clientes/", lang)}"{cur("clientes")}>{t["clientes"]}</a></li>'
-        f'<li><details class="mega"><summary{act("recursos")}>{t["recursos"]}</summary>{mega_recursos(lang)}</details></li>'
+        f'<li><details class="mega" name="mega"><summary{act("recursos")}>{t["recursos"]}</summary>{mega_recursos(lang)}</details></li>'
         f'<li><a href="{Lx("/nosotros/", lang)}"{cur("nosotros")}>{t["nosotros"]}</a></li>'
         f'<li class="nav__cta"><a class="boton boton--principal" href="{Lx("/contacto/", lang)}"{cur("contacto")}>{t["contacto"]}</a></li>'
         f'{idioma}</ul></div></nav>'
@@ -340,13 +342,9 @@ def ajustar_head(s, ruta):
         s = s.replace('</head>', f'  <script src="/assets/js/analitica.js?v={ANALITICA_JS_V}" defer{grupo}></script>\n</head>', 1)
     s = re.sub(r'/assets/js/analitica\.js(\?v=\d+)?"', f'/assets/js/analitica.js?v={ANALITICA_JS_V}"', s)
     # Buscador (assets/js/buscador.js) en el hueco #zx-buscar de la cabecera.
-    # La pastilla de la cabecera está en sitio.css; buscador.css (la ventana) no bloquea el render:
-    # solo hace falta al abrir el buscador, que necesita JavaScript.
-    css_buscador = (f'<link rel="stylesheet" href="/assets/css/buscador.css?v={BUSCADOR_CSS_V}" '
-                    'media="print" onload="this.media=\'all\'">')
-    s = re.sub(r'<link rel="stylesheet" href="/assets/css/buscador\.css[^"]*"[^>]*>', lambda m: css_buscador, s)
-    if '/assets/css/buscador.css' not in s:
-        s = s.replace('</head>', f'  {css_buscador}\n</head>', 1)
+    # La pastilla de la cabecera está en sitio.css; buscador.css (la ventana) ya no va en el <head>:
+    # la pide buscador.js antes de abrir (URL en data-css, ver seguridad()). Sin `onload=` en línea.
+    s = re.sub(r'\n?[ \t]*<link rel="stylesheet" href="/assets/css/buscador\.css[^"]*"[^>]*>', '', s)
     if '/assets/js/buscador.js' not in s:
         s = s.replace('</head>', f'  <script src="/assets/js/buscador.js?v={BUSCADOR_JS_V}" defer></script>\n</head>', 1)
     s = re.sub(r'/assets/js/buscador\.js\?v=\d+', f'/assets/js/buscador.js?v={BUSCADOR_JS_V}', s)
@@ -413,19 +411,39 @@ def bloque_soluciones(lang):
     return f'<!--SOLUCIONES-->{BQ.bento(items, "azul", "Learn more" if lang == "en" else "Conocer más")}<!--/SOLUCIONES-->'
 
 
-def primera_imagen_sin_lazy(s, ruta):
-    """En la documentación la primera captura es el LCP en móvil: no se carga en diferido y va con
-    prioridad alta (Lighthouse «lcp-lazy-loaded»). Las demás siguen con loading="lazy"."""
-    if '/docs/' not in ruta or '<main' not in s:
-        return s
-    i = s.index('<main')
-    m = re.compile(r'<img\b[^>]*>').search(s, i)
-    if not m:
-        return s
-    img = re.sub(r'\s+loading="lazy"', '', m.group(0))
+RE_HEROE = re.compile(r'<section class="[^"]*\bheroe\b[^"]*">.*?</section>', re.S)
+RE_IMG = re.compile(r'<img\b[^>]*>')
+
+
+def prioridad_lcp(img):
+    """La imagen candidata a LCP: nunca en diferido y con prioridad alta."""
+    img = re.sub(r'\s+loading="lazy"', '', img)
     if 'fetchpriority=' not in img:
         img = img.replace('<img', '<img fetchpriority="high"', 1)
-    return s[:m.start()] + img + s[m.end():]
+    return img
+
+
+def primera_imagen_sin_lazy(s, ruta):
+    """La imagen grande que se ve al abrir la página es el LCP: no se carga en diferido y va con
+    prioridad alta (Lighthouse «lcp-lazy-loaded»). En la documentación es la primera captura del
+    <main>; en el resto, la primera captura (webp, avif o jpg de 300 px o más) del héroe, no las
+    insignias de las tiendas ni los monogramas. Las demás imágenes siguen con loading="lazy"."""
+    if '<main' not in s:
+        return s
+    if '/docs/' in ruta:
+        m = RE_IMG.search(s, s.index('<main'))
+    else:
+        h = RE_HEROE.search(s, s.index('<main'))
+        m = None
+        if h:
+            for c in RE_IMG.finditer(s, h.start(), h.end()):
+                ancho = re.search(r'\swidth="(\d+)"', c.group(0))
+                if re.search(r'\ssrc="[^"]+\.(?:webp|avif|jpe?g)"', c.group(0)) and ancho and int(ancho.group(1)) >= 300:
+                    m = c
+                    break
+    if not m:
+        return s
+    return s[:m.start()] + prioridad_lcp(m.group(0)) + s[m.end():]
 
 
 # ── Barra de producto (Work, Sales y Check) ────────────────────────────────
@@ -1525,6 +1543,62 @@ def e404_bilingue(es, en):
     return es.replace('</body>', f'<template id="e404-en">{partes}</template>\n{cambio}\n</body>', 1)
 
 
+# ── Último paso de cada página: CSP, precarga de la página siguiente y buscador.css ──
+# GitHub Pages no deja poner cabeceras, así que la Content-Security-Policy va en un <meta> (sin
+# report-to ni frame-ancestors, que en <meta> no valen). Solo restringe los scripts, que es lo que
+# protege de un XSS: los propios (/assets/js/), los en línea por su hash SHA-256 (se recalculan aquí,
+# así que se pueden cambiar sin tocar nada más), Pagefind (WebAssembly) y GA4 con consentimiento.
+# Ningún atributo on…= en línea: la CSP los bloquearía.
+CSP_FUENTES = ("'self'", "'wasm-unsafe-eval'")
+CSP_TERCEROS = ('https://*.googletagmanager.com', 'https://static.cloudflareinsights.com')
+RE_CSP = re.compile(r'\n?[ \t]*<meta http-equiv="Content-Security-Policy"[^>]*>')
+RE_ESPECULACION = re.compile(r'\n?[ \t]*<script type="speculationrules">.*?</script>', re.S)
+RE_SCRIPT_EN_LINEA = re.compile(r'<script(\s[^>]*)?>(.*?)</script>', re.S)
+# Precarga (prefetch) de las páginas del sitio cuando el puntero se posa en un enlace o se empieza
+# a pulsar (eagerness «moderate»): la página siguiente abre casi al instante. Fuera el índice del
+# buscador, los ficheros que no son páginas y los enlaces marcados nofollow o .sin-precarga.
+ESPECULACION = json.dumps({'prefetch': [{
+    'where': {'and': [
+        {'href_matches': '/*'},
+        {'not': {'href_matches': '/pagefind/*'}},
+        {'not': {'href_matches': '/*.(pdf|png|jpg|webp|svg|zip|txt|xml|json)'}},
+        {'not': {'selector_matches': '[rel~=nofollow], .sin-precarga, [download]'}}]},
+    'eagerness': 'moderate'}]}, separators=(',', ':'))
+
+
+def _sha256(texto):
+    return "'sha256-" + base64.b64encode(hashlib.sha256(texto.encode('utf-8')).digest()).decode() + "'"
+
+
+def seguridad(s):
+    """Idempotente: quita la CSP y las reglas de precarga anteriores y las vuelve a poner."""
+    if '<head>' not in s:
+        return s
+    s = RE_CSP.sub('', s)
+    s = RE_ESPECULACION.sub('', s)
+    s = re.sub(r'(<script src="/assets/js/buscador\.js\?v=\d+")(?: data-css="[^"]*")?',
+               lambda m: f'{m.group(1)} data-css="/assets/css/buscador.css?v={BUSCADOR_CSS_V}"', s)
+    if 'http-equiv="refresh"' not in s:
+        s = s.replace('</head>', f'  <script type="speculationrules">{ESPECULACION}</script>\n</head>', 1)
+    hashes = []
+    for m in RE_SCRIPT_EN_LINEA.finditer(s):
+        attrs = m.group(1) or ''
+        if ' src=' in attrs:
+            continue
+        tipo = re.search(r'\stype="([^"]*)"', attrs)
+        if tipo and tipo.group(1) not in ('text/javascript', 'module', 'speculationrules'):
+            continue  # JSON-LD y datos: no se ejecutan
+        h = _sha256(m.group(2))
+        if h not in hashes:
+            hashes.append(h)
+    politica = (f"script-src {' '.join(CSP_FUENTES + tuple(hashes) + CSP_TERCEROS)}; "
+                "object-src 'none'; base-uri 'self'; form-action 'self'")
+    meta = f'<meta http-equiv="Content-Security-Policy" content="{politica}">'
+    if '<meta charset="utf-8">' in s:
+        return s.replace('<meta charset="utf-8">', f'<meta charset="utf-8">\n  {meta}', 1)
+    return s.replace('<head>', f'<head>\n  {meta}', 1)
+
+
 def generar():
     langs = ('es', 'en') if MULTI else ('es',)
     for lang in langs:
@@ -1560,7 +1634,7 @@ def main():
         f404 = fichero_de('/404.html')
         procesadas[f404] = e404_bilingue(procesadas[f404], procesadas[fichero_de('/en/404.html')])
     for f, s in procesadas.items():
-        escribir(f, s)
+        escribir(f, seguridad(s))
     # 2) el resto de páginas: cabecera, pie y head
     rutas = []
     for f in sorted(RAIZ.rglob('*.html')):
@@ -1568,13 +1642,15 @@ def main():
             continue
         s = SALIDA.get(f) or f.read_text(encoding='utf-8')
         if 'http-equiv="refresh"' in s:
+            if f not in SALIDA:
+                escribir(f, seguridad(s))
             continue
         ruta = ruta_de(f)
         if ruta != '/404.html' and ruta != '/en/404.html':
             rutas.append(ruta)
         if f in SALIDA:
             continue
-        escribir(f, procesar(s, ruta))
+        escribir(f, seguridad(procesar(s, ruta)))
     # 2b) ilustraciones e iconos de los bloques como SVG sueltos (bloques.py)
     for rel, svg in BQ.svgs_sueltos().items():
         escribir(RAIZ / rel, svg)
@@ -1609,7 +1685,7 @@ def renderizar():
             continue
         s = f.read_text(encoding='utf-8')
         out[f] = s if 'http-equiv="refresh"' in s else procesar(s, ruta_de(f))
-    return out
+    return {f: seguridad(s) for f, s in out.items()}
 
 
 RE_ALT = re.compile(r'<link rel="alternate" hreflang="([^"]+)" href="([^"]+)">')

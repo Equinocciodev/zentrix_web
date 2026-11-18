@@ -36,5 +36,7 @@
     if (p0) { var v = p0.replace(/[^a-z]/g, ''); if (sel.querySelector('option[value="' + v + '"]')) sel.value = v; }
   } catch (e) { /* nada */ }
   f.addEventListener('change', pintar);
+  // El formulario solo elige motivo y producto: los envíos son los enlaces de correo y WhatsApp.
+  f.addEventListener('submit', function (e) { e.preventDefault(); });
   pintar();
 })();

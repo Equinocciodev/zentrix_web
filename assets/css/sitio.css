@@ -59,6 +59,8 @@ a:hover { text-decoration-thickness: 2px; }
 :focus-visible { outline: 2px solid var(--azul); outline-offset: 3px; border-radius: 4px; }
 .oscuro :focus-visible { outline-color: var(--lima); }
 h1, h2, h3 { line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 16px; text-wrap: balance; }
+/* Párrafos y listas sin una palabra sola en la última línea. */
+p, li, blockquote, figcaption, dd { text-wrap: pretty; }
 h1 { font-size: clamp(2rem, 1.4rem + 3vw, 3.5rem); font-weight: 700; }
 h2 { font-size: clamp(1.5rem, 1.2rem + 1.4vw, 2.25rem); font-weight: 700; }
 h3 { font-size: 1.125rem; font-weight: 700; letter-spacing: -0.01em; }
@@ -408,6 +410,13 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .menu-productos__lista a:hover > img { transform: rotate(-6deg) scale(1.06); }
 .menu-productos__lista a > img { transition: transform .25s var(--rebote); }
 
+/* Transición entre páginas del sitio: fundido corto del navegador, solo si no se pide menos movimiento.
+   Donde no existe, la navegación es la de siempre. */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+  ::view-transition-group(root) { animation-duration: .2s; }
+}
+
 /* Aparición al hacer scroll */
 @media (prefers-reduced-motion: no-preference) {
   .js .revela { opacity: 0; transform: translateY(28px); transition: opacity .8s var(--facil), transform .8s var(--facil); transition-delay: var(--retardo, 0s); }
@@ -425,9 +434,15 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 @media (prefers-reduced-motion: no-preference) {
   .heroe .raya { animation: raya 1s var(--facil) .9s both; }
   .heroe__texto > * { animation: subir .9s var(--facil) both; }
-  .heroe__texto > :nth-child(2) { animation-delay: .08s; } .heroe__texto > :nth-child(3) { animation-delay: .16s; }
-  .heroe__texto > :nth-child(4) { animation-delay: .24s; } .heroe__texto > :nth-child(5) { animation-delay: .32s; }
-  .heroe__texto > :nth-child(6) { animation-delay: .4s; } .heroe__texto > :nth-child(7) { animation-delay: .48s; }
+  /* Escalonado por posición: sibling-index() donde existe; si no, las reglas :nth-child de respaldo. */
+  @supports (animation-delay: calc(sibling-index() * 0.1s)) {
+    .heroe__texto > * { animation-delay: calc((sibling-index() - 1) * .08s); }
+  }
+  @supports not (animation-delay: calc(sibling-index() * 0.1s)) {
+    .heroe__texto > :nth-child(2) { animation-delay: .08s; } .heroe__texto > :nth-child(3) { animation-delay: .16s; }
+    .heroe__texto > :nth-child(4) { animation-delay: .24s; } .heroe__texto > :nth-child(5) { animation-delay: .32s; }
+    .heroe__texto > :nth-child(6) { animation-delay: .4s; } .heroe__texto > :nth-child(7) { animation-delay: .48s; }
+  }
 }
 @keyframes raya { from { transform: scaleX(0); } }
 @keyframes subir { from { opacity: 0; transform: translateY(24px); } }
@@ -501,8 +516,13 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
   .js .proceso.revela.visible::before { transform: none; }
   .js .proceso.revela li { opacity: 0; transform: translateY(16px); transition: opacity .6s var(--facil), transform .6s var(--facil); }
   .js .proceso.revela.visible li { opacity: 1; transform: none; }
-  .js .proceso.revela.visible li:nth-child(2) { transition-delay: .2s; } .js .proceso.revela.visible li:nth-child(3) { transition-delay: .4s; }
-  .js .proceso.revela.visible li:nth-child(4) { transition-delay: .6s; } .js .proceso.revela.visible li:nth-child(5) { transition-delay: .8s; }
+  @supports (animation-delay: calc(sibling-index() * 0.1s)) {
+    .js .proceso.revela.visible li { transition-delay: calc((sibling-index() - 1) * .2s); }
+  }
+  @supports not (animation-delay: calc(sibling-index() * 0.1s)) {
+    .js .proceso.revela.visible li:nth-child(2) { transition-delay: .2s; } .js .proceso.revela.visible li:nth-child(3) { transition-delay: .4s; }
+    .js .proceso.revela.visible li:nth-child(4) { transition-delay: .6s; } .js .proceso.revela.visible li:nth-child(5) { transition-delay: .8s; }
+  }
 }
 
 /* Destacados de la portada con insignia */
@@ -549,7 +569,11 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
   .motivo .onda--2 { animation-duration: 9s; animation-direction: reverse; }
   .motivo .onda--3 { animation-duration: 12s; }
   .motivo .capa-g { animation: capa 5s ease-in-out infinite; }
-  .motivo .capa-g:nth-of-type(2) { animation-delay: .25s; } .motivo .capa-g:nth-of-type(3) { animation-delay: .5s; } .motivo .capa-g:nth-of-type(4) { animation-delay: .75s; }
+  /* Las capas son los primeros hijos del <svg>: su posición entre hermanos es su orden. */
+  @supports (animation-delay: calc(sibling-index() * 0.1s)) { .motivo .capa-g { animation-delay: calc((sibling-index() - 1) * .25s); } }
+  @supports not (animation-delay: calc(sibling-index() * 0.1s)) {
+    .motivo .capa-g:nth-of-type(2) { animation-delay: .25s; } .motivo .capa-g:nth-of-type(3) { animation-delay: .5s; } .motivo .capa-g:nth-of-type(4) { animation-delay: .75s; }
+  }
   .motivo .giro { transform-box: view-box; transform-origin: 50% 50%; animation: giro 24s linear infinite; }
   .motivo .giro--lento { animation-duration: 40s; animation-direction: reverse; }
   .motivo .rayo { stroke-dasharray: 8 14; animation: rayo 1.6s linear infinite; }
@@ -685,7 +709,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 .idioma a[aria-current] { background: var(--negro); color: var(--blanco); }
 
 @media (min-width: 1100px) {
-  .mega__panel { position: absolute; left: 0; right: 0; top: 100%; border-top: 1px solid var(--borde); border-bottom: 1px solid var(--borde); box-shadow: 0 24px 48px -24px rgba(9, 13, 18, .25); max-height: calc(100vh - 64px); overflow: auto; }
+  .mega__panel { position: absolute; left: 0; right: 0; top: 100%; border-top: 1px solid var(--borde); border-bottom: 1px solid var(--borde); box-shadow: 0 24px 48px -24px rgba(9, 13, 18, .25); max-height: calc(100vh - 64px); max-height: calc(100dvh - 64px); overflow: auto; }
   .mega__reja { display: grid; gap: 32px; padding-top: 28px; padding-bottom: 28px; }
   .mega__reja--productos, .mega__reja--soluciones { grid-template-columns: 2fr 1fr; }
   .mega__reja--recursos { grid-template-columns: 1fr 1fr 1fr; }
